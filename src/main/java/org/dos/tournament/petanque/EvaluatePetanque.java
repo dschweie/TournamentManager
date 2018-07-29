@@ -70,10 +70,10 @@ public class EvaluatePetanque
     System.out.println("\nRunde 3:\n" + _tournament.getMatchdayAsString(3));
     _tournament.generateNextMatchday();
     System.out.println("\nRunde 4:\n" + _tournament.getMatchdayAsString(4));
-//    _tournament.generateNextMatchday();
-//    System.out.println("\nRunde 5:\n" + _tournament.getMatchdayAsString(5));
-//    _tournament.generateNextMatchday();
-//    System.out.println("\nRunde 6:\n" + _tournament.getMatchdayAsString(6));
+    _tournament.generateNextMatchday();
+    System.out.println("\nRunde 5:\n" + _tournament.getMatchdayAsString(5));
+    _tournament.generateNextMatchday();
+    System.out.println("\nRunde 6:\n" + _tournament.getMatchdayAsString(6));
 //    _tournament.generateNextMatchday();
 //    System.out.println("\nRunde 7:\n" + _tournament.getMatchdayAsString(7));
   }
