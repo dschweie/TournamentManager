@@ -2,7 +2,7 @@ package org.dos.tournament.petanque;
 
 import org.dos.tournament.competition.DefaultCompetitorResult;
 import org.dos.tournament.petanque.team.Doublette;
-import org.dos.tournament.petanque.tournament.SuperMeleeClubChampionship;
+import org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship;
 import org.dos.tournament.petanque.tournament.partie.CompetitorPartieResult;
 import org.dos.tournament.petanque.tournament.partie.Partie;
 import org.dos.tournament.player.Attendee;
@@ -68,6 +68,10 @@ public class EvaluatePetanque
     System.out.println("\nRunde 2:\n" + _tournament.getMatchdayAsString(2));
     _tournament.generateNextMatchday();
     System.out.println("\nRunde 3:\n" + _tournament.getMatchdayAsString(3));
+   
+    _tournament.getCompetitorByParticipantIdCode("  4").inactivateParticipant();
+    _tournament.getCompetitorByParticipantIdCode("  8").inactivateParticipant();
+    _tournament.getCompetitorByParticipantIdCode("  2").inactivateParticipant();
     _tournament.generateNextMatchday();
     System.out.println("\nRunde 4:\n" + _tournament.getMatchdayAsString(4));
     _tournament.generateNextMatchday();

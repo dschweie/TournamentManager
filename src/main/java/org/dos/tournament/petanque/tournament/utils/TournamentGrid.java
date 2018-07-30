@@ -2,8 +2,8 @@ package org.dos.tournament.petanque.tournament.utils;
 
 import java.util.Vector;
 
-import org.dos.tournament.petanque.tournament.SuperMelee;
 import org.dos.tournament.petanque.tournament.matchday.Matchday;
+import org.dos.tournament.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.petanque.tournament.partie.Partie;
 
 public class TournamentGrid

@@ -1,4 +1,4 @@
-package org.dos.tournament.petanque.tournament;
+package org.dos.tournament.petanque.tournament.movement;
 
 import java.util.Vector;
 
@@ -43,6 +43,19 @@ public class SuperMelee
   {
     if(!this.competitors.contains(competitor))
       this.competitors.addElement(competitor);
+  }
+  
+  public IParticipant getCompetitorByParticipantIdCode(String code)
+  {
+    IParticipant _retval = null;
+    
+    for(IParticipant it : this.getCompetitors())
+    { //  durchlaufe alle Mitspieler aus dem Feld
+      if(code.equals(it.getParticipantId().getCode()))
+        _retval = it;
+    }
+    
+    return _retval;
   }
   
   public int countCompetitors()

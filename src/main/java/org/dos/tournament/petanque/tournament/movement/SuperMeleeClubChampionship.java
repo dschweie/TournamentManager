@@ -1,4 +1,4 @@
-package org.dos.tournament.petanque.tournament;
+package org.dos.tournament.petanque.tournament.movement;
 
 import java.util.Collections;
 import java.util.Vector;
@@ -26,45 +26,10 @@ public class SuperMeleeClubChampionship extends SuperMelee
   {
     boolean _retval = false;
     Vector<IParticipant> _members = TournamentUtils.filterParticipantsByStatus(this.getCompetitors(), ParticipantStatus.ACTIVE);
+    Vector<Vector<Vector<Integer>>> _grid = compileGridForSupermelee(_members.size());
     
-    if(     ( 3 <  _members.size() )
-        &&  ( 7 != _members.size() ) )
-    { //  mindestens 4 aktive Teilnehmer werden benötigt, damit eine Runde erstellt werden kann
-    
-      Vector<Vector<Vector<Integer>>> _grid = new Vector<Vector<Vector<Integer>>>();
-      int _membersLeft = _members.size();
-      // Bilde das Grid für die Runde
-      for(int i=0; ( _members.size() / 4 ) > i; ++i)
-      {
-        Vector<Integer> _home;
-        Vector<Integer> _guest;
-        
-        switch( _membersLeft % 4 )
-        {
-          case 3:
-          case 2:   //  in diesem Fall spielen zwei Triplette
-                    _home  = new Vector<Integer>(3); _home.add(new Integer(-1)); _home.add(new Integer(-1)); _home.add(new Integer(-1)); 
-                    _guest = new Vector<Integer>(3); _guest.add(new Integer(-1)); _guest.add(new Integer(-1)); _guest.add(new Integer(-1));
-                    _membersLeft -= 6;
-                    break;
-          case 1:   //  in diesem Fall spielt ein Triplette gegen ein Doublette
-                    _home  = new Vector<Integer>(3); _home.add(new Integer(-1)); _home.add(new Integer(-1)); _home.add(new Integer(-1)); 
-                    _guest = new Vector<Integer>(2); _guest.add(new Integer(-1)); _guest.add(new Integer(-1));
-                    _membersLeft -= 5;
-                    break;
-          default:  //  in diesem Fall werden zwei Doublette gebildet
-                    _home  = new Vector<Integer>(2); _home.add(new Integer(-1)); _home.add(new Integer(-1));
-                    _guest = new Vector<Integer>(2); _guest.add(new Integer(-1)); _guest.add(new Integer(-1));
-                    _membersLeft -= 4;
-                    break;
-        }
-          
-        Vector<Vector<Integer>> _partie = new Vector<Vector<Integer>>(2);
-        _partie.addElement(_home);
-        _partie.addElement(_guest);
-        _grid.add(_partie);
-      }
-      
+    if(null != _grid)
+    {
       // Durchlaufe das Grid, um Plätze zu füllen
       int _idxPartie = 0;
       int _idxTeam = 0;
@@ -91,6 +56,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
                 for(int i = 0; i < _idxSlot; ++i)
                 {
                   _valid &= !this.wereTeammates(_members.get(_grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), _members.get(_grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+                  //_valid &= !this.wereOpponents(_members.get(_grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), _members.get(_grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
                 }
               }
                 
@@ -166,6 +132,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
           }
           
           _matchday.addPartie(_partie);
+          this.addPartie(_partie);
         }
         
         this.getMatchdays().addElement(_matchday);
@@ -251,5 +218,50 @@ public class SuperMeleeClubChampionship extends SuperMelee
     }
     else
       return "";
+  }
+  
+  protected Vector<Vector<Vector<Integer>>> compileGridForSupermelee(int competitors)
+  {
+    int _membersLeft = competitors;
+    Vector<Vector<Vector<Integer>>> _retval = null;
+    
+    if(     ( 3 <  competitors )
+        &&  ( 7 != competitors ) )
+    { //  mindestens 4 aktive Teilnehmer werden benötigt, damit eine Runde erstellt werden kann
+    
+      _retval = new Vector<Vector<Vector<Integer>>>();
+      // Bilde das Grid für die Runde
+      for(int i=0; ( competitors / 4 ) > i; ++i)
+      {
+        Vector<Integer> _home;
+        Vector<Integer> _guest;
+        
+        switch( _membersLeft % 4 )
+        {
+          case 3:
+          case 2:   //  in diesem Fall spielen zwei Triplette
+                    _home  = new Vector<Integer>(3); _home.add(new Integer(-1)); _home.add(new Integer(-1)); _home.add(new Integer(-1)); 
+                    _guest = new Vector<Integer>(3); _guest.add(new Integer(-1)); _guest.add(new Integer(-1)); _guest.add(new Integer(-1));
+                    _membersLeft -= 6;
+                    break;
+          case 1:   //  in diesem Fall spielt ein Triplette gegen ein Doublette
+                    _home  = new Vector<Integer>(3); _home.add(new Integer(-1)); _home.add(new Integer(-1)); _home.add(new Integer(-1)); 
+                    _guest = new Vector<Integer>(2); _guest.add(new Integer(-1)); _guest.add(new Integer(-1));
+                    _membersLeft -= 5;
+                    break;
+          default:  //  in diesem Fall werden zwei Doublette gebildet
+                    _home  = new Vector<Integer>(2); _home.add(new Integer(-1)); _home.add(new Integer(-1));
+                    _guest = new Vector<Integer>(2); _guest.add(new Integer(-1)); _guest.add(new Integer(-1));
+                    _membersLeft -= 4;
+                    break;
+        }
+          
+        Vector<Vector<Integer>> _partie = new Vector<Vector<Integer>>(2);
+        _partie.addElement(_home);
+        _partie.addElement(_guest);
+        _retval.add(_partie);
+      }
+    }
+    return _retval;
   }
 }
