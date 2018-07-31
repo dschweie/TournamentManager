@@ -13,135 +13,186 @@ import org.dos.tournament.player.IParticipant;
 import org.dos.tournament.player.utils.NumericParticipantId;
 import org.dos.tournament.player.utils.ParticipantStatus;
 
+/**
+ *  \brief      Diese Klasse bildet das monatliche Super Melee-Turnier der Bouleabteilung von Blau-Gelb Groß-Gerau ab.
+ *  
+ *  Die Bouleabteilung bietet einmal im Monat ein Super Melee-Turnier an, das
+ *  für alle Spieler offen ist.
+ *  
+ *  Für die Abrechnung ist besonders, dass jeder Spieler für jede Runde 
+ *  (Matchday) an der er teilnimmt, einen Punkt bekommt und einen weiteren
+ *  für jedes Spiel, dass er gewinnt.
+ *  
+ *  Zusätzlich gibt es drei Punkte für den Tagessieger. 
+ *  
+ *  Die Wertung der Monatsturniere wird aufaddiert zu einer Jahreswertung.
+ *   
+ *  @author     dschweie
+ *
+ */
 public class SuperMeleeClubChampionship extends SuperMelee
 {
   private int idxTeam = 0;
   
+  /**
+   *  \brief    Mit dieser Methode wird ein neuer "Spieltag" erzeugt.
+   *  
+   *  Diese Methode steht anderen Klassen als Schnittstelle zur Verfügung,
+   *  um einen neuen Spieltag anzulegen. 
+   *  
+   *  In der Methode selbst wird lediglich die Entscheidung getroffen, ob
+   *  \li       der erste Spieltag oder
+   *  \li       ein weiterer Spieltag anzulegen ist.
+   *  
+   *  Anschließend wird an die entsprechende Methode delegiert.
+   *  
+   *  @return   Die Methode liefert im Rückgabewert die Information, ob 
+   *            ein neuer Spieltag angelegt werden konnte.
+   *            
+   *  @see      org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.generateFirstMatchday()
+   *  @see      org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.generateNextMatchdayByAlgorithm()
+   */
   public boolean generateNextMatchday()
   {
-    return (0 == this.countMatchdays())?this.generateFirstMatchday():this.generateNextMatchday(0);
+    return (0 == this.countMatchdays())?this.generateFirstMatchday():this.generateNextMatchdayByAlgorithm();
   }
   
-  private boolean generateNextMatchday(int modus)
+  /**
+   *  \brief    Die Methode erzeugt einen neuen "Spieltag" mit den aktiven Teilnehmern.
+   *  
+   *  
+   *  @return   Die Methode liefert im Rückgabewert die Information, ob ein 
+   *            neuer Spieltag angelegt werden konnte.
+   */
+  private boolean generateNextMatchdayByAlgorithm()
   {
-    boolean _retval = false;
+    int _matchdaysExpected = this.countMatchdays() + 1;
     Vector<IParticipant> _members = TournamentUtils.filterParticipantsByStatus(this.getCompetitors(), ParticipantStatus.ACTIVE);
-    Vector<Vector<Vector<Integer>>> _grid = compileGridForSupermelee(_members.size());
+    Vector<Vector<Vector<Integer>>> _grid = compileGridTemplateForSupermelee(_members.size());
     
     if(null != _grid)
     {
-      // Durchlaufe das Grid, um Plätze zu füllen
-      int _idxPartie = 0;
-      int _idxTeam = 0;
-      int _idxSlot = 0;
-      boolean _valid = true;
-
       Collections.shuffle(_members);
+      _grid = fillGridWithParticipants(_grid, _members);
       
-      while( (-1 < _idxPartie) && (_grid.size() > _idxPartie) )
-      { 
-        while(( -1 < _idxTeam ) && ( _grid.get(_idxPartie).size() > _idxTeam) )
-        {
-          while (( -1 < _idxSlot ) && ( _grid.get(_idxPartie).get(_idxTeam).size() > _idxSlot ))
-          {
-            while(( -1 < _idxSlot ) &&  ( _grid.get(_idxPartie).get(_idxTeam).size() > _idxSlot ) && _grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() < _members.size() )
-            {
-              _grid.get(_idxPartie).get(_idxTeam).set(_idxSlot, new Integer(_grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() + 1) );
-              
-              _valid = _grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() < _members.size();
-              
-              if(_valid)
-              { // prüfe, ob Spieler passt
-                _valid &= !this.checkMemberInGrid(_grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue(), _idxPartie, _idxTeam, _idxSlot, _grid);
-                for(int i = 0; i < _idxSlot; ++i)
-                {
-                  _valid &= !this.wereTeammates(_members.get(_grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), _members.get(_grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
-                  //_valid &= !this.wereOpponents(_members.get(_grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), _members.get(_grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
-                }
-              }
-                
-              if(_valid)
-              {
-                ++_idxSlot;
-              }
-            }
+      if(null != _grid)
+        compileNextMatchDayFromGrid(_grid, _members);
+    }
 
-            if(( -1 < _idxSlot ) &&  ( _grid.get(_idxPartie).get(_idxTeam).size() > _idxSlot ))
-            {
-              if(_grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() >= _members.size())
-              { // Backtracking: Spieler zurücksetzen und Platz zurück gehen
-                _grid.get(_idxPartie).get(_idxTeam).set(_idxSlot, new Integer(-1) );
-                --_idxSlot;
-              }
-            }
-          }
-          
-          if(-1 == _idxSlot)
-          { // 
-            --_idxTeam;
-            if(-1 < _idxTeam)
-              _idxSlot = _grid.get(_idxPartie).get(_idxTeam).size() - 1;
+    return (_matchdaysExpected == this.countMatchdays());
+  }
+
+  private void compileNextMatchDayFromGrid(Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants)
+  {
+    if((null != grid) && (null != participants))
+    {
+      //  Partien bilden
+      Matchday _matchday = new Matchday();
+      for(int p = 0; p < grid.size(); ++p)
+      {
+        Partie _partie = new Partie();
+        
+        for(int t=0; t < grid.get(p).size(); ++t)
+        {
+          if( 3 == grid.get(p).get(t).size())
+          {
+            Triplette _tt = new Triplette(new NumericParticipantId(idxTeam++), participants.get(grid.get(p).get(t).get(0).intValue()), participants.get(grid.get(p).get(t).get(1).intValue()), participants.get(grid.get(p).get(t).get(2).intValue()));
+            _partie.addParticipant(_tt);
+            this.addTeam(_tt);
           }
           else
           {
-            ++_idxTeam;
-            _idxSlot=0;
+            Doublette _td = new Doublette(new NumericParticipantId(idxTeam++), participants.get(grid.get(p).get(t).get(0).intValue()), participants.get(grid.get(p).get(t).get(1).intValue()));
+            _partie.addParticipant(_td);
+            this.addTeam(_td);
           }
-          
         }
         
-        if(-1 == _idxTeam)
+        _matchday.addPartie(_partie);
+        this.addPartie(_partie);
+      }
+      this.getMatchdays().addElement(_matchday);
+    }
+  }
+
+  private Vector<Vector<Vector<Integer>>> fillGridWithParticipants(Vector<Vector<Vector<Integer>>> grid,
+      Vector<IParticipant> participants)
+  {
+    // Durchlaufe das Grid, um Plätze zu füllen
+    int _idxPartie = 0;
+    int _idxTeam = 0;
+    int _idxSlot = 0;
+    boolean _valid = true;
+    
+    while( (-1 < _idxPartie) && (grid.size() > _idxPartie) )
+    { 
+      while(( -1 < _idxTeam ) && ( grid.get(_idxPartie).size() > _idxTeam) )
+      {
+        while (( -1 < _idxSlot ) && ( grid.get(_idxPartie).get(_idxTeam).size() > _idxSlot ))
         {
-          --_idxPartie;
-          if(-1 < _idxPartie)
+          while(( -1 < _idxSlot ) &&  ( grid.get(_idxPartie).get(_idxTeam).size() > _idxSlot ) && grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() < participants.size() )
           {
-            _idxTeam = _grid.get(_idxPartie).size() - 1;
-            _idxSlot = _grid.get(_idxPartie).get(_idxTeam).size() - 1;
+            grid.get(_idxPartie).get(_idxTeam).set(_idxSlot, new Integer(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() + 1) );
+            
+            _valid = grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() < participants.size();
+            
+            if(_valid)
+            { // prüfe, ob Spieler passt
+              _valid &= !this.checkMemberInGrid(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue(), _idxPartie, _idxTeam, _idxSlot, grid);
+              for(int i = 0; i < _idxSlot; ++i)
+              {
+                _valid &= !this.wereTeammates(participants.get(grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+                //_valid &= !this.wereOpponents(_members.get(_grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), _members.get(_grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+              }
+            }
+              
+            if(_valid)
+            {
+              ++_idxSlot;
+            }
           }
+
+          if(( -1 < _idxSlot ) &&  ( grid.get(_idxPartie).get(_idxTeam).size() > _idxSlot ))
+          {
+            if(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() >= participants.size())
+            { // Backtracking: Spieler zurücksetzen und Platz zurück gehen
+              grid.get(_idxPartie).get(_idxTeam).set(_idxSlot, new Integer(-1) );
+              --_idxSlot;
+            }
+          }
+        }
+        
+        if(-1 == _idxSlot)
+        { // 
+          --_idxTeam;
+          if(-1 < _idxTeam)
+            _idxSlot = grid.get(_idxPartie).get(_idxTeam).size() - 1;
         }
         else
         {
-          ++_idxPartie;
-          _idxTeam = 0;
+          ++_idxTeam;
+          _idxSlot=0;
         }
         
       }
       
-      if(0 < _idxPartie)
+      if(-1 == _idxTeam)
       {
-        //  Partien bilden
-        Matchday _matchday = new Matchday();
-        for(int p = 0; p < _grid.size(); ++p)
+        --_idxPartie;
+        if(-1 < _idxPartie)
         {
-          Partie _partie = new Partie();
-          
-          for(int t=0; t < _grid.get(p).size(); ++t)
-          {
-            if( 3 == _grid.get(p).get(t).size())
-            {
-              Triplette _tt = new Triplette(new NumericParticipantId(idxTeam++), _members.get(_grid.get(p).get(t).get(0).intValue()), _members.get(_grid.get(p).get(t).get(1).intValue()), _members.get(_grid.get(p).get(t).get(2).intValue()));
-              _partie.addParticipant(_tt);
-              this.addTeam(_tt);
-            }
-            else
-            {
-              Doublette _td = new Doublette(new NumericParticipantId(idxTeam++), _members.get(_grid.get(p).get(t).get(0).intValue()), _members.get(_grid.get(p).get(t).get(1).intValue()));
-              _partie.addParticipant(_td);
-              this.addTeam(_td);
-            }
-          }
-          
-          _matchday.addPartie(_partie);
-          this.addPartie(_partie);
+          _idxTeam = grid.get(_idxPartie).size() - 1;
+          _idxSlot = grid.get(_idxPartie).get(_idxTeam).size() - 1;
         }
-        
-        this.getMatchdays().addElement(_matchday);
-        _retval = - 1 < _idxPartie;   //  Flag wird gesetzt, da nächste Runde erstellt ist
       }
+      else
+      {
+        ++_idxPartie;
+        _idxTeam = 0;
+      }
+      
     }
-    
-
-    return _retval;
+    return (-1 == _idxPartie)?null:grid;
   }
 
   private boolean checkMemberInGrid(int intValue, int idxPartie, int idxTeam, int idxSlot, Vector<Vector<Vector<Integer>>> grid)
@@ -153,7 +204,6 @@ public class SuperMeleeClubChampionship extends SuperMelee
           _retval |= ( intValue == grid.get(i).get(j).get(k).intValue() );
     return _retval;
   }
-
 
   private boolean generateFirstMatchday()
   {
@@ -220,7 +270,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
       return "";
   }
   
-  protected Vector<Vector<Vector<Integer>>> compileGridForSupermelee(int competitors)
+  protected Vector<Vector<Vector<Integer>>> compileGridTemplateForSupermelee(int competitors)
   {
     int _membersLeft = competitors;
     Vector<Vector<Vector<Integer>>> _retval = null;
