@@ -21,5 +21,6 @@ public class Doublette extends AbstractPetanqueTeam
     String _tireurName = this.getTireur().getName();
     return _pointeurName.concat(", ").concat(_tireurName);
   }
+
 }
 

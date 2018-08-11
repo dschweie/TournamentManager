@@ -96,14 +96,4 @@ public abstract class AbstractParticipant implements IParticipant
     return ParticipantStatus.DISQUALIFIED == this.getStatus();
   }
 
-  public boolean hasAttendees()
-  {
-    return null != this.getAttendeesToArray();
-  }
-  
-  public Attendee[] getAttendeesToArray()
-  {
-    return null;
-  }
-
 }

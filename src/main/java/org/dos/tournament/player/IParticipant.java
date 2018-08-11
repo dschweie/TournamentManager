@@ -19,5 +19,5 @@ public interface IParticipant
   public boolean disqualifyParticipant();
   
   public boolean hasAttendees();
-  public Attendee[] getAttendeesToArray();
+  public IParticipant[] getAttendeesToArray();
 }

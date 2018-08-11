@@ -26,4 +26,18 @@ public class Attendee extends AbstractParticipant
   {
     this.name = name.toString();
   }
+
+  @Override
+  public boolean hasAttendees()
+  {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  @Override
+  public IParticipant[] getAttendeesToArray()
+  {
+    // TODO Auto-generated method stub
+    return null;
+  }
 }

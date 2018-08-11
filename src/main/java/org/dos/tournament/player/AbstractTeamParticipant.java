@@ -26,14 +26,28 @@ public abstract class AbstractTeamParticipant extends AbstractParticipant
   {
     this.participants = new Vector<IParticipant>();
   }
-  
-  public Attendee[] getAttendeesToArray()
+ 
+  public IParticipant[] getAttendeesToArray()
   {
-    return (0<this.participants.size())?(Attendee[])this.participants.toArray():null;
+    return (0<this.participants.size())?(IParticipant[])this.participants.toArray():null;
   }
   
   public boolean contains(IParticipant participant)
   {
     return this.participants.contains(participant);
   }
+  
+  public int countAttendees()
+  {
+    int retval = 0;
+    for(int i=0; i < this.participants.size(); ++i)
+      retval += null!=this.participants.get(i)?1:0;
+    return retval;
+  }
+  
+  public boolean hasAttendees()
+  {
+    return 0 < this.countAttendees();
+  }
+
 }

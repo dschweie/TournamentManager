@@ -17,6 +17,8 @@ public abstract class AbstractPetanqueTeam extends AbstractTeamParticipant
   
   public AbstractPetanqueTeam(IParticipantId id, IParticipant pointeur, IParticipant milieu, IParticipant tireur)
   {
+    super();
+    
     this.id = id;
     
     this.getParticipants().setSize(3);
@@ -73,4 +75,6 @@ public abstract class AbstractPetanqueTeam extends AbstractTeamParticipant
     this.getParticipants().set(TIREUR, tireur);
   }
 
+
+ 
 }
