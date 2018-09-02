@@ -31,4 +31,15 @@ public class AssociationAttendee extends Attendee
     this.association = association;
   }
 
+  @Override
+  protected String getElement(String id)
+  {
+    switch(id)
+    {
+      case "club":
+      case "association" :  return this.getAssociation();
+      default:              return super.getElement(id);
+    }
+  }
+
 }

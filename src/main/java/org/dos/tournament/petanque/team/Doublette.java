@@ -1,5 +1,7 @@
 package org.dos.tournament.petanque.team;
 
+import java.util.Vector;
+
 import org.dos.tournament.player.IParticipant;
 import org.dos.tournament.player.utils.IParticipantId;
 
@@ -21,6 +23,7 @@ public class Doublette extends AbstractPetanqueTeam
     String _tireurName = this.getTireur().getName();
     return _pointeurName.concat(", ").concat(_tireurName);
   }
+
 
 }
 

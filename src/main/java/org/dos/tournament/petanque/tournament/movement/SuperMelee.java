@@ -1,5 +1,6 @@
 package org.dos.tournament.petanque.tournament.movement;
 
+import java.util.Observable;
 import java.util.Vector;
 
 import org.dos.tournament.petanque.team.AbstractPetanqueTeam;
@@ -7,7 +8,7 @@ import org.dos.tournament.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.petanque.tournament.partie.Partie;
 import org.dos.tournament.player.IParticipant;
 
-public class SuperMelee
+public class SuperMelee extends Observable
 {
   private Vector<IParticipant> competitors;
   private Vector<Matchday> matchdays;
@@ -27,7 +28,7 @@ public class SuperMelee
   /**
    * @return the competitors
    */
-  protected Vector<IParticipant> getCompetitors()
+  public Vector<IParticipant> getCompetitors()
   {
     return competitors;
   }
@@ -42,7 +43,12 @@ public class SuperMelee
   public void addCompetitor(IParticipant competitor)
   {
     if(!this.competitors.contains(competitor))
+    {
       this.competitors.addElement(competitor);
+      this.setChanged();
+      this.notifyObservers();
+      this.clearChanged();
+    }
   }
   
   public IParticipant getCompetitorByParticipantIdCode(String code)
@@ -116,5 +122,47 @@ public class SuperMelee
       _retval = this.parties.get(i).wereOpponents(first, second);
     
     return _retval;    
+  }
+
+  public void forceNotifyAll()
+  {
+    this.setChanged();
+    this.notifyObservers();
+    this.clearChanged();
+  }
+
+  /**
+   *  \brief    Mit dieser Methode wird ein neuer "Spieltag" erzeugt.
+   *  
+   *  Diese Methode steht anderen Klassen als Schnittstelle zur Verfügung,
+   *  um einen neuen Spieltag anzulegen. 
+   *  
+   *  In der Methode selbst wird lediglich die Entscheidung getroffen, ob
+   *  \li       der erste Spieltag oder
+   *  \li       ein weiterer Spieltag anzulegen ist.
+   *  
+   *  Anschließend wird an die entsprechende Methode delegiert.
+   *  
+   *  @return   Die Methode liefert im Rückgabewert die Information, ob 
+   *            ein neuer Spieltag angelegt werden konnte.
+   *            
+   *  @see      org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.generateFirstMatchday()
+   *  @see      org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.generateNextMatchdayByAlgorithm()
+   */
+  public boolean generateNextMatchday()
+  {
+    return (0 == this.countMatchdays())?this.generateFirstMatchday():this.generateNextMatchdayByAlgorithm();
+  }
+
+  protected boolean generateNextMatchdayByAlgorithm()
+  {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  protected boolean generateFirstMatchday()
+  {
+    // TODO Auto-generated method stub
+    return false;
   }
 }

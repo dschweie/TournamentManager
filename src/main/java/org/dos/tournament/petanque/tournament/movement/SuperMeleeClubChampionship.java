@@ -35,36 +35,13 @@ public class SuperMeleeClubChampionship extends SuperMelee
   private int idxTeam = 0;
   
   /**
-   *  \brief    Mit dieser Methode wird ein neuer "Spieltag" erzeugt.
-   *  
-   *  Diese Methode steht anderen Klassen als Schnittstelle zur Verfügung,
-   *  um einen neuen Spieltag anzulegen. 
-   *  
-   *  In der Methode selbst wird lediglich die Entscheidung getroffen, ob
-   *  \li       der erste Spieltag oder
-   *  \li       ein weiterer Spieltag anzulegen ist.
-   *  
-   *  Anschließend wird an die entsprechende Methode delegiert.
-   *  
-   *  @return   Die Methode liefert im Rückgabewert die Information, ob 
-   *            ein neuer Spieltag angelegt werden konnte.
-   *            
-   *  @see      org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.generateFirstMatchday()
-   *  @see      org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.generateNextMatchdayByAlgorithm()
-   */
-  public boolean generateNextMatchday()
-  {
-    return (0 == this.countMatchdays())?this.generateFirstMatchday():this.generateNextMatchdayByAlgorithm();
-  }
-  
-  /**
    *  \brief    Die Methode erzeugt einen neuen "Spieltag" mit den aktiven Teilnehmern.
    *  
    *  
    *  @return   Die Methode liefert im Rückgabewert die Information, ob ein 
    *            neuer Spieltag angelegt werden konnte.
    */
-  private boolean generateNextMatchdayByAlgorithm()
+  protected boolean generateNextMatchdayByAlgorithm()
   {
     int _matchdaysExpected = this.countMatchdays() + 1;
     Vector<IParticipant> _members = TournamentUtils.filterParticipantsByStatus(this.getCompetitors(), ParticipantStatus.ACTIVE);
@@ -205,7 +182,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
     return _retval;
   }
 
-  private boolean generateFirstMatchday()
+  protected boolean generateFirstMatchday()
   {
     boolean _retval = false;
     Vector<IParticipant> _members = TournamentUtils.filterParticipantsByStatus(this.getCompetitors(), ParticipantStatus.ACTIVE);

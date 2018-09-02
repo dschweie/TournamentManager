@@ -1,5 +1,7 @@
 package org.dos.tournament.player;
 
+import java.util.Vector;
+
 import org.dos.tournament.player.utils.IParticipantId;
 import org.dos.tournament.player.utils.ParticipantStatus;
 
@@ -37,6 +39,7 @@ public abstract class AbstractParticipant implements IParticipant
   {
     return this.id.getName();
   }
+  
 
   /* (non-Javadoc)
    * @see org.dos.tournament.players.IParticipant#getDescription()
@@ -96,4 +99,24 @@ public abstract class AbstractParticipant implements IParticipant
     return ParticipantStatus.DISQUALIFIED == this.getStatus();
   }
 
+  @Override
+  public Vector<String> getParticipantAsRow(Vector<String> header)
+  {
+    Vector<String> _retval = new Vector<String>();
+    for(int i=0; i < header.size(); ++i)
+    {
+      _retval.add(this.getElement(header.elementAt(i).toLowerCase()));
+    }
+    return _retval;
+  }
+
+  protected String getElement(String id)
+  {
+    switch(id)
+    {
+      case "id":      return this.id.getCode();
+      case "status":  return this.getStatus().toString();
+      default:        return null;
+    }
+  }
 }

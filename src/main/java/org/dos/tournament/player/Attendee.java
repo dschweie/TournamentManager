@@ -1,5 +1,7 @@
 package org.dos.tournament.player;
 
+import java.util.Vector;
+
 import org.dos.tournament.player.utils.NumericParticipantId;
 
 public class Attendee extends AbstractParticipant
@@ -39,5 +41,14 @@ public class Attendee extends AbstractParticipant
   {
     // TODO Auto-generated method stub
     return null;
+  }
+
+  protected String getElement(String id)
+  {
+    switch(id)
+    {
+      case "name":    return this.getName();
+      default:        return super.getElement(id);
+    }
   }
 }

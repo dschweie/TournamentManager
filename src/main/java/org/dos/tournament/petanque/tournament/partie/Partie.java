@@ -166,5 +166,13 @@ public class Partie extends AbstractEncounter
     return _retval;
   }
 
+  public IParticipant getCompetitor(int index)
+  {
+    if((-1 < index) && (this.getCompetitors().size() > index))
+      return (IParticipant) this.getCompetitors().keySet().toArray()[index];
+    else
+      return null;
+  }
+
   
 }
