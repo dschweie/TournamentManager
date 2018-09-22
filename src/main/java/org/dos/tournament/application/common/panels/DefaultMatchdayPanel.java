@@ -21,6 +21,10 @@ import javax.swing.ImageIcon;
 import java.awt.Dimension;
 import java.awt.ComponentOrientation;
 import java.util.ResourceBundle;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class DefaultMatchdayPanel extends JPanel
 {
@@ -59,6 +63,20 @@ public class DefaultMatchdayPanel extends JPanel
     add(scrollPane, BorderLayout.CENTER);
     
     tableMatches = new JTable();
+    tableMatches.addKeyListener(new KeyAdapter() {
+      @Override
+      public void keyPressed(KeyEvent e) {
+        if('\t' == e.getKeyChar())
+        {
+          int _iCurrentColumn = DefaultMatchdayPanel.this.tableMatches.getSelectedColumn();
+          int _iCurrentRow    = DefaultMatchdayPanel.this.tableMatches.getSelectedRow();
+          if(3 == _iCurrentColumn)
+            DefaultMatchdayPanel.this.tableMatches.changeSelection(_iCurrentRow, 5, false, false);
+          else
+            DefaultMatchdayPanel.this.tableMatches.changeSelection(_iCurrentRow+1, 3, false, false);
+        }
+      }
+    });
     scrollPane.setViewportView(tableMatches);
 
   }

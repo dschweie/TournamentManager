@@ -66,5 +66,12 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
     
     return _header;
   }
+
+
+  @Override
+  public boolean isCellEditable(int row, int column)
+  {
+    return ((3 == column)||(5 == column));
+  }
   
 }
