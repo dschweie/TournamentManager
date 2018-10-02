@@ -11,7 +11,92 @@
   <url>http://maven.apache.org</url>
   
   <build>
-  	<resources>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.3.1</version>
+          <configuration>
+            <source>1.7</source>
+            <target>1.7</target>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>org.dos.tournament.application.TournamentManagerUI</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+        <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/TournamentManager</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>resources</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/TournamentManager/lib</outputDirectory>
+              <overWriteReleases>false</overWriteReleases>
+              <overWriteSnapshots>false</overWriteSnapshots>
+              <overWriteIfNewer>true</overWriteIfNewer>
+              <includeScope>runtime</includeScope>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <mainClass>org.dos.tournament.application.TournamentManagerUI</mainClass>
+            </manifest>
+            <manifestEntries>
+              <Class-Path>.</Class-Path>
+            </manifestEntries>
+          </archive>
+          <finalName>TournamentManager/TournamentManager-0.0.1-preview</finalName>
+        </configuration>
+      </plugin>
+    </plugins>
+    <resources>
       <resource>
         <directory>src/main/java</directory>
         <includes>
@@ -47,4 +132,32 @@
         <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <reporting>
+	  <plugins>
+		  <!-- Normally, we take off the dependency report, saves time. -->
+		  <plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-project-info-reports-plugin</artifactId>
+		    <version>2.7</version>
+		    <configuration>
+		      <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+		    </configuration>
+		  </plugin>
+		
+		  <!-- integrate maven-cobertura-plugin to project site --> 
+		  <plugin>
+		    <groupId>org.codehaus.mojo</groupId>
+		    <artifactId>cobertura-maven-plugin</artifactId>
+		    <version>2.6</version>
+		    <configuration>
+		      <formats>
+		        <format>html</format>
+		        <format>xml</format>
+		      </formats>
+		    </configuration>
+		  </plugin>
+	
+	   </plugins>
+	</reporting>
 </project>
