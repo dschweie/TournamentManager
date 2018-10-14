@@ -69,8 +69,19 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
     // TODO Auto-generated method stub
     super.setValueAt(aValue, row, column);
     if((""!=this.getValueAt(row, 3))&&(""!=this.getValueAt(row, 5))&&(null!=this.xTournament))
-    { // Begegnung auswerten
-      this.xTournament.setResult(iMatchdayIndex, row, Integer.parseInt(this.getValueAt(row, 3).toString()), Integer.parseInt(this.getValueAt(row, 5).toString()));
+    { 
+      if(Integer.parseInt(this.getValueAt(row, 3).toString()) == Integer.parseInt(this.getValueAt(row, 5).toString()))
+      { //  Falls ein "Unentschieden" erfasst wird, wird der andere Wert gelöscht!
+        switch(column)
+        {
+          case 3 : this.setValueAt("", row, 5);break;
+          case 5 : this.setValueAt("", row, 3);break;
+        }
+      }
+      else  
+      { //  Ergebnis ist vollständig und wird ausgewertet
+        this.xTournament.setResult(iMatchdayIndex, row, Integer.parseInt(this.getValueAt(row, 3).toString()), Integer.parseInt(this.getValueAt(row, 5).toString()));
+      }
     }
   }
 

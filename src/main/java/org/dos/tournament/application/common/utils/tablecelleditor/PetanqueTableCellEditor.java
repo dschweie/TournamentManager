@@ -109,6 +109,7 @@ public class PetanqueTableCellEditor extends JTextField implements TableCellEdit
   {
     // Diese Methode wird von der JTable aufgerufen, wenn der Editor angezeigt werden soll
     setText( value.toString() );
+    this.selectAll();
     return this;
   }
 

@@ -91,6 +91,7 @@ public class DefaultMatchdayPanel extends JPanel
     this();
     this.tableMatches.setModel(model);
   }
+  
   private class SwingAction extends AbstractAction {
     public SwingAction() {
       putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_181-Printer_2124005.png")));
