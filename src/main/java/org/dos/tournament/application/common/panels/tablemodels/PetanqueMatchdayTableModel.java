@@ -23,7 +23,7 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
   @Override
   public void update(Observable o, Object arg)
   {
-    // TODO Auto-generated method stub
+    
     switch(o.getClass().getName())
     {
       case "org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship":
@@ -71,7 +71,7 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
     if((""!=this.getValueAt(row, 3))&&(""!=this.getValueAt(row, 5))&&(null!=this.xTournament))
     { 
       if(Integer.parseInt(this.getValueAt(row, 3).toString()) == Integer.parseInt(this.getValueAt(row, 5).toString()))
-      { //  Falls ein "Unentschieden" erfasst wird, wird der andere Wert gelöscht!
+      { //  Falls ein "Unentschieden" erfasst wird, wird der andere Wert gelï¿½scht!
         switch(column)
         {
           case 3 : this.setValueAt("", row, 5);break;
@@ -79,7 +79,7 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
         }
       }
       else  
-      { //  Ergebnis ist vollständig und wird ausgewertet
+      { //  Ergebnis ist vollstï¿½ndig und wird ausgewertet
         this.xTournament.setResult(iMatchdayIndex, row, Integer.parseInt(this.getValueAt(row, 3).toString()), Integer.parseInt(this.getValueAt(row, 5).toString()));
       }
     }
