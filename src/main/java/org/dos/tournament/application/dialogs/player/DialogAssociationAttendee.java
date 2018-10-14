@@ -32,19 +32,21 @@ public class DialogAssociationAttendee extends JDialog
   static private int INDEX = 0;
 
   private final JPanel contentPanel = new JPanel();
-  private JTextField textId;
-  private JTextField textName;
-  private JTextField textAssociation;
+  protected JTextField textId;
+  protected JTextField textName;
+  protected JTextField textAssociation;
   private JLabel lblId;
   private JLabel lblName;
   private JLabel lblAssociation;
   private JLabel lblState;
-  private JComboBox comboBoxStatus;
+  protected JComboBox comboBoxStatus;
   private final Action actionSaveData = new SwingActionOK();
   
-  private Vector<IParticipant> vecAttendees = null;
-  private int iPos;
+  protected Vector<IParticipant> vecAttendees = null;
+  protected int iPos;
   private final Action actionCancel = new SwingActionCancel();
+  private JButton okButton;
+  private JButton cancelButton;
 
   /**
    * Launch the application.
@@ -134,14 +136,14 @@ public class DialogAssociationAttendee extends JDialog
       getContentPane().add(buttonPane, BorderLayout.SOUTH);
       buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
       {
-        JButton okButton = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.okButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+        okButton = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.okButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
         okButton.setAction(actionSaveData);
         okButton.setActionCommand(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.okButton.actionCommand")); //$NON-NLS-1$ //$NON-NLS-2$
         buttonPane.add(okButton);
         getRootPane().setDefaultButton(okButton);
       }
       {
-        JButton cancelButton = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.cancelButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+        cancelButton = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.cancelButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
         cancelButton.setAction(actionCancel);
         cancelButton.setActionCommand(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.cancelButton.actionCommand")); //$NON-NLS-1$ //$NON-NLS-2$
         buttonPane.add(cancelButton);
@@ -204,5 +206,16 @@ public class DialogAssociationAttendee extends JDialog
     public void actionPerformed(ActionEvent e) {
       DialogAssociationAttendee.this.dispose();
     }
+  }
+  
+  static public int getIndex()
+  {
+    return ++DialogAssociationAttendee.INDEX;
+  }
+  protected JButton getOkButton() {
+    return okButton;
+  }
+  protected JButton getCancelButton() {
+    return cancelButton;
   }
 }

@@ -5,31 +5,18 @@ import java.util.Set;
 
 import org.dos.tournament.competition.AbstractEncounter;
 import org.dos.tournament.competition.DefaultCompetitorResult;
+import org.dos.tournament.petanque.result.PetanqueResult;
 import org.dos.tournament.player.AbstractTeamParticipant;
 import org.dos.tournament.player.IParticipant;
+import org.dos.tournament.result.IResult;
 
 public class Partie extends AbstractEncounter
 {
 
-  /* (non-Javadoc)
-   * @see org.dos.tournament.competition.AbstractEncounter#addParticipant(org.dos.tournament.player.IParticipant)
-   */
-  @Override
-  public boolean addParticipant(IParticipant competitor)
-  {
-    return (this.getCompetitors().size() < 2)?super.addParticipant(competitor):false;
-  }
-
   @Override
   public boolean isComplete()
   {
-    Iterator<IParticipant> _it = this.getCompetitors().keySet().iterator();
-    boolean _retval = 2==this.getCompetitors().size();
-    
-    while(_it.hasNext())
-      _retval &= null != this.getCompetitors().get(_it.next());
-    
-    return _retval;    
+    return 2==this.competitors.size();
   }
 
 
@@ -38,50 +25,9 @@ public class Partie extends AbstractEncounter
   {
     IParticipant _retval = null;
     
-    if(this.isComplete())
+    if(null != this.result)
     {
-      IParticipant[] _competitors = {};
-      _competitors = this.getCompetitors().keySet().toArray(_competitors);
-      
-      switch(i)
-      {
-        case 1 :  _retval =  0 < (this.getCompetitors().get(_competitors[0])).compareTo(this.getCompetitors().get(_competitors[1])) ? _competitors[0] :  _competitors[1];
-                  break;
-        case 2 :  _retval =  0 > (this.getCompetitors().get(_competitors[0])).compareTo(this.getCompetitors().get(_competitors[1])) ? _competitors[0] :  _competitors[1];
-                  break;
-      }
-    }    
-    return _retval;
-  }
-  
-  public CompetitorPartieResult getCompetitorResult(IParticipant competitor)
-  {
-    CompetitorPartieResult _retval = null;
-    
-    if(this.getCompetitors().containsKey(competitor))
-    {
-      IParticipant[] _competitors = {};
-      _competitors = this.getCompetitors().keySet().toArray(_competitors);
-      
-      int _idxCompetitor  = competitor.equals(_competitors[0])?0:1;
-      int _idxOpponent    = competitor.equals(_competitors[0])?1:0;
-      
-      _retval = new CompetitorPartieResult( this.getCompetitors().get(_competitors[_idxCompetitor]).getValue()  ,
-                                            this.getCompetitors().get(_competitors[_idxOpponent]).getValue()    ,
-                                            _competitors[_idxOpponent]                                            );
-    }
-    
-    return _retval;
-  }
-
-  @Override
-  public boolean setResult(IParticipant competitor, DefaultCompetitorResult result)
-  {
-    boolean _retval = false;
-    
-    if(this.getCompetitors().containsKey(competitor))
-    {
-      _retval = ( null != this.getCompetitors().put(competitor, result) );
+      // TODO Prüfung implementieren
     }
     
     return _retval;
@@ -89,8 +35,7 @@ public class Partie extends AbstractEncounter
   
   public boolean wereOpponents(IParticipant first, IParticipant second)
   {
-    AbstractTeamParticipant[] _teams = {};
-    _teams = this.getCompetitors().keySet().toArray(_teams);
+    AbstractTeamParticipant[] _teams = (AbstractTeamParticipant[]) this.competitors.toArray();
     
     return (      (_teams[0].contains(first) && _teams[1].contains(second))
               ||  (_teams[1].contains(first) && _teams[0].contains(second)) );
@@ -106,23 +51,22 @@ public class Partie extends AbstractEncounter
     
     if(0 < this.getCompetitors().size())
     {
-      IParticipant[] _competitors = {};
-      _competitors = this.getCompetitors().keySet().toArray(_competitors);
+      IParticipant[] _competitors = (IParticipant[]) this.competitors.toArray();
       
       switch ( _competitors.length )
       {
         case 1:   _retval = _retval.concat(_competitors[0].getCode())
                                   .concat(" -  ?   ")
-                                  .concat(null==this.getCompetitors().get(_competitors[0])?"__":String.format("%2d", this.getCompetitors().get(_competitors[0]).getValue()))
+                                  .concat(this.isScored()?String.format("%2d", ((PetanqueResult)this.result).getScore()):"__")
                                   .concat(":__");
                   break;
         case 2:   _retval = _retval.concat(_competitors[0].getCode())
                                   .concat(" - ")
                                   .concat(_competitors[1].getCode())
                                   .concat("  ")
-                                  .concat(null==this.getCompetitors().get(_competitors[0])?"__":String.format("%2d", this.getCompetitors().get(_competitors[0]).getValue()))
+                                  .concat(this.isScored()?String.format("%2d", ((PetanqueResult)this.result).getScore()):"__")
                                   .concat(":")
-                                  .concat(null==this.getCompetitors().get(_competitors[1])?"__":String.format("%2d", this.getCompetitors().get(_competitors[1]).getValue()));
+                                  .concat(this.isScored()?String.format("%2d", ((PetanqueResult)this.result).getOppsScore()):"__");
                   break;
         default:  _retval = _retval.concat(" ?  -  ?   __:__");      
       }
@@ -139,23 +83,22 @@ public class Partie extends AbstractEncounter
     
     if(0 < this.getCompetitors().size())
     {
-      IParticipant[] _competitors = {};
-      _competitors = this.getCompetitors().keySet().toArray(_competitors);
+      IParticipant[] _competitors = (IParticipant[]) this.competitors.toArray();
       
       switch ( _competitors.length )
       {
         case 1:   _retval = _retval.concat(_competitors[0].getDescription())
                                   .concat(" -  ?   ")
-                                  .concat(null==this.getCompetitors().get(_competitors[0])?"__":String.format("%2d", this.getCompetitors().get(_competitors[0]).getValue()))
+                                  .concat(this.isScored()?String.format("%2d", ((PetanqueResult)this.result).getScore()):"__")
                                   .concat(":__");
                   break;
         case 2:   _retval = _retval.concat(_competitors[0].getDescription())
                                   .concat(" - ")
                                   .concat(_competitors[1].getDescription())
                                   .concat("  ")
-                                  .concat(null==this.getCompetitors().get(_competitors[0])?"__":String.format("%2d", this.getCompetitors().get(_competitors[0]).getValue()))
+                                  .concat(this.isScored()?String.format("%2d", ((PetanqueResult)this.result).getScore()):"__")
                                   .concat(":")
-                                  .concat(null==this.getCompetitors().get(_competitors[1])?"__":String.format("%2d", this.getCompetitors().get(_competitors[1]).getValue()));
+                                  .concat(this.isScored()?String.format("%2d", ((PetanqueResult)this.result).getOppsScore()):"__");
                   break;
         default:  _retval = _retval.concat(" ?  -  ?   __:__");      
       }
@@ -168,10 +111,28 @@ public class Partie extends AbstractEncounter
 
   public IParticipant getCompetitor(int index)
   {
-    if((-1 < index) && (this.getCompetitors().size() > index))
-      return (IParticipant) this.getCompetitors().keySet().toArray()[index];
-    else
-      return null;
+    return this.competitors.get(index);
+  }
+
+
+  @Override
+  public IResult getResult()
+  {
+    return this.result;
+  }
+
+
+  @Override
+  public IResult getCompetitorResult(IParticipant competitor)
+  {
+    if(this.isScored())
+    {
+      if(this.competitors.get(0).equals(competitor) || this.competitors.get(0).contains(competitor))
+        return new PetanqueResult(((PetanqueResult)this.result).getScore(), ((PetanqueResult)this.result).getOppsScore());
+      if(this.competitors.get(1).equals(competitor) || this.competitors.get(1).contains(competitor))
+        return new PetanqueResult(((PetanqueResult)this.result).getOppsScore(), ((PetanqueResult)this.result).getScore());
+    }
+    return null;
   }
 
   

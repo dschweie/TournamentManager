@@ -126,9 +126,9 @@ public class TournamentManagerUI
       {
         ParticipantsTableModel _tableModel = new ParticipantsTableModel();
         SuperMelee _tournament = new SuperMeleeClubChampionship();
-        _tournament.addObserver(_tableModel);
+        //_tournament.addObserver(_tableModel);
         //_tournament.addCompetitor(new AssociationAttendee(1,"Max Mustermann", "BG Gross-Gerau"));
-        PetanqueSuperMeleePanel _panel = new PetanqueSuperMeleePanel(_tableModel);
+        PetanqueSuperMeleePanel _panel = new PetanqueSuperMeleePanel(_tournament);
         _panel.setTournament(_tournament);
         this.frmApplication.getContentPane().add(_panel);
         this.frmApplication.revalidate();

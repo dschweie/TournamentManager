@@ -165,4 +165,10 @@ public class SuperMelee extends Observable
     // TODO Auto-generated method stub
     return false;
   }
+
+  public void setResult(int iMatchdayIndex, int iPartieIndex, int iHome, int iGuest)
+  {
+    // TODO Auto-generated method stub
+    
+  }
 }

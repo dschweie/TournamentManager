@@ -4,6 +4,9 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JToolBar;
 import javax.swing.table.DefaultTableModel;
+
+import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor;
+
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
@@ -71,12 +74,14 @@ public class DefaultMatchdayPanel extends JPanel
           int _iCurrentColumn = DefaultMatchdayPanel.this.tableMatches.getSelectedColumn();
           int _iCurrentRow    = DefaultMatchdayPanel.this.tableMatches.getSelectedRow();
           if(3 == _iCurrentColumn)
-            DefaultMatchdayPanel.this.tableMatches.changeSelection(_iCurrentRow, 5, false, false);
+            DefaultMatchdayPanel.this.tableMatches.changeSelection(_iCurrentRow, 4, false, false);
           else
-            DefaultMatchdayPanel.this.tableMatches.changeSelection(_iCurrentRow+1, 3, false, false);
+            DefaultMatchdayPanel.this.tableMatches.changeSelection(_iCurrentRow+1, 2, false, false);
         }
       }
     });
+    tableMatches.setDefaultEditor(Object.class, new PetanqueTableCellEditor());
+    
     scrollPane.setViewportView(tableMatches);
 
   }

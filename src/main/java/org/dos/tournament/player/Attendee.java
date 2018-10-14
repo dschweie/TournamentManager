@@ -42,6 +42,13 @@ public class Attendee extends AbstractParticipant
     // TODO Auto-generated method stub
     return null;
   }
+  
+  @Override
+  public boolean contains(IParticipant competitor)
+  {
+    // TODO Auto-generated method stub
+    return false;
+  }
 
   protected String getElement(String id)
   {
@@ -51,4 +58,5 @@ public class Attendee extends AbstractParticipant
       default:        return super.getElement(id);
     }
   }
+
 }

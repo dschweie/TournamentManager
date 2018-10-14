@@ -24,6 +24,17 @@ public class Doublette extends AbstractPetanqueTeam
     return _pointeurName.concat(", ").concat(_tireurName);
   }
 
+  /* (non-Javadoc)
+   * @see org.dos.tournament.player.AbstractTeamParticipant#getAttendeesToArray()
+   */
+  @Override
+  public IParticipant[] getAttendeesToArray()
+  {
+    IParticipant[] _retval = { this.getPointeur(), this.getTireur() };
+    return _retval;
+  }
 
+
+  
 }
 

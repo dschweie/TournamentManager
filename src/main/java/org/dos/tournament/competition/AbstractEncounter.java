@@ -1,36 +1,56 @@
 package org.dos.tournament.competition;
 
-import java.util.HashMap;
+import java.util.Vector;
 
 import org.dos.tournament.player.IParticipant;
+import org.dos.tournament.result.IResult;
 
 public abstract class AbstractEncounter implements IEncounter
 {
-  private HashMap<IParticipant, DefaultCompetitorResult> competitors;
+  protected Vector<IParticipant> competitors;
+  protected IResult result;
 
   public AbstractEncounter()
   {
-    this.competitors =  new HashMap<IParticipant, DefaultCompetitorResult>();
+    this.competitors =  new Vector<IParticipant>();
+    this.result = null;
   }
   
-  public boolean addParticipant(IParticipant competitor)
+  public void addParticipant(IParticipant competitor)
   {
-    this.competitors.put(competitor, null);
-    return true;
+    this.competitors.add(competitor);
   }
   
-  public boolean setResult(IParticipant competitor, DefaultCompetitorResult result)
+  
+  
+  /**
+   * \copydoc org::dos::tournament::competition::IEncounter::setResult(IResult)
+   */
+  @Override
+  public void setResult(IResult result)
   {
-    boolean _retval = false;
-    if(this.competitors.containsKey(competitor))
-    {
-      this.competitors.put(competitor, result);
-      _retval = true;
-    }
-    return _retval;
+    this.result = result;
   }
-  
-  protected HashMap<IParticipant, DefaultCompetitorResult> getCompetitors()
+
+  /**
+   * \copydoc org::dos::tournament::competition::IEncounter::isComplete()
+   */
+  @Override
+  public boolean isComplete()
+  {
+    return false;
+  }
+
+  /**
+   * \copydoc org::dos::tournament::competition::IEncounter::isScored()
+   */
+  @Override
+  public boolean isScored()
+  {
+    return null != this.result;
+  }
+
+  protected Vector<IParticipant> getCompetitors()
   {
     return this.competitors;
   }

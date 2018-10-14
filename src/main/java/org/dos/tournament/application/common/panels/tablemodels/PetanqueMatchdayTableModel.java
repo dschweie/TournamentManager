@@ -12,6 +12,7 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
 {
   private int iMatchdayIndex;
   private boolean bInit = true;
+  private SuperMelee xTournament = null;
   
   public PetanqueMatchdayTableModel(int matchday)
   {
@@ -33,26 +34,46 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
   
   protected void update(SuperMelee tournament, Object arg)
   {
-    int iMatches = tournament.getMatchday(iMatchdayIndex).countMatches();
-    Vector<Vector<String>> _matchdayData = new Vector<Vector<String>>();
-
-    for(int i=0; i<iMatches; ++i)
+    if(0 == this.getDataVector().size())
     {
-      Vector<String> _row = new Vector<String>();
-      _row.add(String.valueOf(i+1));
-      _row.add(tournament.getMatchday(iMatchdayIndex).getMatch(i).getCompetitor(0).getDescription());
-      _row.add(tournament.getMatchday(iMatchdayIndex).getMatch(i).getCompetitor(1).getDescription());
-      _row.add("0");
-      _row.add(":");
-      _row.add("0");
+      int iMatches = tournament.getMatchday(iMatchdayIndex).countMatches();
+      Vector<Vector<String>> _matchdayData = new Vector<Vector<String>>();
+  
+      for(int i=0; i<iMatches; ++i)
+      {
+        Vector<String> _row = new Vector<String>();
+        _row.add(String.valueOf(i+1));
+        _row.add(tournament.getMatchday(iMatchdayIndex).getMatch(i).getCompetitor(0).getDescription());
+        _row.add(tournament.getMatchday(iMatchdayIndex).getMatch(i).getCompetitor(1).getDescription());
+        _row.add("");
+        _row.add(":");
+        _row.add("");
+        
+        _matchdayData.add(_row);
+      }
       
-      _matchdayData.add(_row);
+      this.setDataVector(_matchdayData, PetanqueMatchdayTableModel.STANDARDHEADER_PETANQUE());
+      
+      this.xTournament = tournament;
+      
+      this.fireTableDataChanged();
     }
-    
-    this.setDataVector(_matchdayData, PetanqueMatchdayTableModel.STANDARDHEADER_PETANQUE());
-    
-    this.fireTableDataChanged();
   } 
+
+  /* (non-Javadoc)
+   * @see javax.swing.table.DefaultTableModel#setValueAt(java.lang.Object, int, int)
+   */
+  @Override
+  public void setValueAt(Object aValue, int row, int column)
+  {
+    // TODO Auto-generated method stub
+    super.setValueAt(aValue, row, column);
+    if((""!=this.getValueAt(row, 3))&&(""!=this.getValueAt(row, 5))&&(null!=this.xTournament))
+    { // Begegnung auswerten
+      this.xTournament.setResult(iMatchdayIndex, row, Integer.parseInt(this.getValueAt(row, 3).toString()), Integer.parseInt(this.getValueAt(row, 5).toString()));
+    }
+  }
+
 
   static private Vector<String> STANDARDHEADER_PETANQUE()
   {

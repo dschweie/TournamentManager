@@ -29,7 +29,8 @@ public abstract class AbstractTeamParticipant extends AbstractParticipant
  
   public IParticipant[] getAttendeesToArray()
   {
-    return (0<this.participants.size())?(IParticipant[])this.participants.toArray():null;
+    return (IParticipant[]) this.participants.toArray();
+    // return (0<this.participants.size())?(IParticipant[])this.participants.toArray():null;
   }
   
   public boolean contains(IParticipant participant)

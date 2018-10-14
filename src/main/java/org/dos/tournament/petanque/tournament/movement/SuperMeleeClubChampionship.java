@@ -3,8 +3,10 @@ package org.dos.tournament.petanque.tournament.movement;
 import java.util.Collections;
 import java.util.Vector;
 
+import org.dos.tournament.petanque.result.PetanqueSuperMeleeClubChampionshipResult;
 import org.dos.tournament.petanque.team.AbstractPetanqueTeam;
 import org.dos.tournament.petanque.team.Doublette;
+import org.dos.tournament.petanque.team.JoueurIndividuel;
 import org.dos.tournament.petanque.team.Triplette;
 import org.dos.tournament.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.petanque.tournament.partie.Partie;
@@ -290,5 +292,24 @@ public class SuperMeleeClubChampionship extends SuperMelee
       }
     }
     return _retval;
+  }
+  
+  
+  public void setResult(int iMatchdayIndex, int iMatchIndex, int iHome, int iGuest)
+  {
+    PetanqueSuperMeleeClubChampionshipResult _home  = new PetanqueSuperMeleeClubChampionshipResult(iHome, iGuest);
+    PetanqueSuperMeleeClubChampionshipResult _guest = new PetanqueSuperMeleeClubChampionshipResult(iGuest, iHome);
+    
+    IParticipant[] _homeAttendees = ((AbstractPetanqueTeam)this.getMatchday(iMatchdayIndex).getMatch(iMatchIndex).getCompetitor(0)).getAttendeesToArray();
+    for(int i=0; i < _homeAttendees.length; ++i)
+      _homeAttendees[i].addResultOfMatchday(iMatchdayIndex, _home);
+
+    IParticipant[] _guestAttendees = ((AbstractPetanqueTeam)this.getMatchday(iMatchdayIndex).getMatch(iMatchIndex).getCompetitor(1)).getAttendeesToArray();
+    for(int i=0; i < _guestAttendees.length; ++i)
+      _guestAttendees[i].addResultOfMatchday(iMatchdayIndex, _guest);
+    
+    this.setChanged();
+    this.notifyObservers();
+    this.clearChanged();
   }
 }

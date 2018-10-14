@@ -1,14 +1,18 @@
 package org.dos.tournament.player;
 
+import java.util.Collection;
 import java.util.Vector;
 
 import org.dos.tournament.player.utils.IParticipantId;
 import org.dos.tournament.player.utils.ParticipantStatus;
+import org.dos.tournament.result.IResult;
+import org.dos.tournament.result.ITotalResult;
 
 public abstract class AbstractParticipant implements IParticipant
 {
   protected IParticipantId id = null;
   protected ParticipantStatus status = ParticipantStatus.ACTIVE;
+  protected ITotalResult result = null;
 
   @Override
   public IParticipantId getParticipantId()
@@ -48,6 +52,42 @@ public abstract class AbstractParticipant implements IParticipant
   public String getDescription()
   {
     return String.format("%s - %s", this.id.getCode(), this.getName());
+  }
+  
+  /* (non-Javadoc)
+   * @see org.dos.tournament.player.IParticipant#addMatchdayResult(int, org.dos.tournament.result.IResult)
+   */
+  @Override
+  public void addResultOfMatchday(int matchday, IResult result)
+  {
+    this.result.addResultOfMatchday(matchday, result);
+  }
+
+  /* (non-Javadoc)
+   * @see org.dos.tournament.player.IParticipant#getTotalResult()
+   */
+  @Override
+  public int getTotalScore()
+  {
+    return this.result.getTotalScore();
+  }
+
+  /* (non-Javadoc)
+   * @see org.dos.tournament.player.IParticipant#getTotalResult()
+   */
+  @Override
+  public int[] getTotalResult()
+  {
+    return this.result.getTotalResult();
+  }
+  
+    /* (non-Javadoc)
+   * @see org.dos.tournament.player.IParticipant#getTotalResultIdentifiers()
+   */
+  @Override
+  public Collection<Object> getTotalResultIdentifiers()
+  {
+    return this.result.getTotalResultIdentifiers();
   }
 
   /* (non-Javadoc)
@@ -109,6 +149,16 @@ public abstract class AbstractParticipant implements IParticipant
     }
     return _retval;
   }
+  
+  /* (non-Javadoc)
+   * @see java.lang.Comparable#compareTo(java.lang.Object)
+   */
+  @Override
+  public int compareTo(Object o)
+  {
+    // TODO Auto-generated method stub
+    return 0;
+  }
 
   protected String getElement(String id)
   {
@@ -119,4 +169,6 @@ public abstract class AbstractParticipant implements IParticipant
       default:        return null;
     }
   }
+  
+  
 }
