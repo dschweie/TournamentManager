@@ -59,4 +59,10 @@ public class Attendee extends AbstractParticipant
     }
   }
 
+  @Override
+  public String getDescriptionByCode()
+  {
+    return this.getCode();
+  }
+
 }

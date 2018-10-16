@@ -13,6 +13,7 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
   private int iMatchdayIndex;
   private boolean bInit = true;
   private SuperMelee xTournament = null;
+  private boolean bOutputNumeric = true;
   
   public PetanqueMatchdayTableModel(int matchday)
   {
@@ -43,8 +44,16 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
       {
         Vector<String> _row = new Vector<String>();
         _row.add(String.valueOf(i+1));
-        _row.add(tournament.getMatchday(iMatchdayIndex).getMatch(i).getCompetitor(0).getDescription());
-        _row.add(tournament.getMatchday(iMatchdayIndex).getMatch(i).getCompetitor(1).getDescription());
+        if (this.bOutputNumeric)
+        {
+          _row.add(tournament.getMatchday(iMatchdayIndex).getMatch(i).getCompetitor(0).getDescriptionByCode());
+          _row.add(tournament.getMatchday(iMatchdayIndex).getMatch(i).getCompetitor(1).getDescriptionByCode());
+        }
+        else
+        {
+          _row.add(tournament.getMatchday(iMatchdayIndex).getMatch(i).getCompetitor(0).getDescription());
+          _row.add(tournament.getMatchday(iMatchdayIndex).getMatch(i).getCompetitor(1).getDescription());
+        }
         _row.add("");
         _row.add(":");
         _row.add("");
@@ -104,6 +113,27 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
   public boolean isCellEditable(int row, int column)
   {
     return ((3 == column)||(5 == column));
+  }
+  
+  public boolean toggleOutputParticipants()
+  {
+    this.bOutputNumeric = !this.bOutputNumeric;
+    if(null != this.xTournament)
+    {
+      for(int i=0; i<this.xTournament.getMatchday(this.iMatchdayIndex).countMatches(); ++i)
+        if (this.bOutputNumeric)
+        {
+          this.setValueAt(this.xTournament.getMatchday(this.iMatchdayIndex).getMatch(i).getCompetitor(0).getDescriptionByCode(), i, 1);          
+          this.setValueAt(this.xTournament.getMatchday(this.iMatchdayIndex).getMatch(i).getCompetitor(1).getDescriptionByCode(), i, 2);
+        }
+        else
+        {
+          this.setValueAt(this.xTournament.getMatchday(this.iMatchdayIndex).getMatch(i).getCompetitor(0).getDescription(), i, 1);          
+          this.setValueAt(this.xTournament.getMatchday(this.iMatchdayIndex).getMatch(i).getCompetitor(1).getDescription(), i, 2);
+        }        
+    }
+    this.fireTableDataChanged();
+    return this.bOutputNumeric;
   }
   
 }

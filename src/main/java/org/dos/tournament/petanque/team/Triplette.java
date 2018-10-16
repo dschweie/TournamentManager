@@ -38,4 +38,13 @@ public class Triplette extends AbstractPetanqueTeam
     IParticipant[] _retval = { this.getPointeur(), this.getMilieu(), this.getTireur() };
     return _retval;
   }
+
+  @Override
+  public String getDescriptionByCode()
+  {
+    String _pointeurName = this.getPointeur().getCode();
+    String _milieuName = this.getMilieu().getCode();
+    String _tireurName = this.getTireur().getCode();
+    return _pointeurName.concat(", ").concat(_milieuName).concat(", ").concat(_tireurName);
+  }
 }

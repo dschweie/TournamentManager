@@ -34,6 +34,15 @@ public class Doublette extends AbstractPetanqueTeam
     return _retval;
   }
 
+  @Override
+  public String getDescriptionByCode()
+  {
+    String _pointeurName = this.getPointeur().getCode();
+    String _tireurName = this.getTireur().getCode();
+    return _pointeurName.concat(", ").concat(_tireurName);
+  }
+
+
 
   
 }

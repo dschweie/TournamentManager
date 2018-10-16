@@ -5,6 +5,7 @@ import java.awt.BorderLayout;
 import javax.swing.JToolBar;
 import javax.swing.table.DefaultTableModel;
 
+import org.dos.tournament.application.common.panels.tablemodels.PetanqueMatchdayTableModel;
 import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor;
 
 import javax.swing.JTable;
@@ -35,6 +36,7 @@ public class DefaultMatchdayPanel extends JPanel
   private final Action printMatchday = new SwingAction();
   private final Action timer = new SwingActionMatchdayTimer();
   private JProgressBar progressBar;
+  private final Action action = new SwingActionToggleTeamPresentation();
 
   /**
    * Create the panel.
@@ -52,6 +54,10 @@ public class DefaultMatchdayPanel extends JPanel
     horizontalStrut.setMinimumSize(new Dimension(10, 10));
     horizontalStrut.setMaximumSize(new Dimension(32000, 10));
     toolBar.add(horizontalStrut);
+    
+    JButton btnNewButton = new JButton("");
+    btnNewButton.setAction(action);
+    toolBar.add(btnNewButton);
     
     JButton btnTimer = toolBar.add(timer);
     
@@ -200,6 +206,33 @@ public class DefaultMatchdayPanel extends JPanel
     public void setDurationInMillis(int time)
     {
       this.iMillis = time;
+    }
+  }
+  private class SwingAction_2 extends AbstractAction {
+    public SwingAction_2() {
+      putValue(NAME, "SwingAction_2");
+      putValue(SHORT_DESCRIPTION, "Some short description");
+    }
+    public void actionPerformed(ActionEvent e) {
+    }
+  }
+  private class SwingAction_3 extends AbstractAction {
+    public SwingAction_3() {
+      putValue(NAME, "SwingAction_3");
+      putValue(SHORT_DESCRIPTION, "Some short description");
+    }
+    public void actionPerformed(ActionEvent e) {
+    }
+  }
+  private class SwingActionToggleTeamPresentation extends AbstractAction {
+    public SwingActionToggleTeamPresentation() {
+      putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_210-User_alpha.png")));
+      putValue(NAME, "");
+      putValue(SHORT_DESCRIPTION, "Some short description");
+    }
+    public void actionPerformed(ActionEvent e) {
+      PetanqueMatchdayTableModel _model = (PetanqueMatchdayTableModel) DefaultMatchdayPanel.this.tableMatches.getModel();
+      _model.toggleOutputParticipants();
     }
   }
 }
