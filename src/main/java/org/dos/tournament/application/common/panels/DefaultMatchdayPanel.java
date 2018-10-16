@@ -230,9 +230,26 @@ public class DefaultMatchdayPanel extends JPanel
       putValue(NAME, "");
       putValue(SHORT_DESCRIPTION, "Some short description");
     }
+    
+    private void updateButton(boolean numeric)
+    {
+      if(numeric)
+      {
+        putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_210-User_alpha.png")));
+        putValue(NAME, "");
+        putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.footer-toolbar.description.switchToAlpha"));
+      }
+      else
+      {
+        putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_210-User_numeric.png")));
+        putValue(NAME, "");
+        putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.footer-toolbar.description.switchToNumeric"));
+      }
+    }
+    
     public void actionPerformed(ActionEvent e) {
       PetanqueMatchdayTableModel _model = (PetanqueMatchdayTableModel) DefaultMatchdayPanel.this.tableMatches.getModel();
-      _model.toggleOutputParticipants();
+      this.updateButton(_model.toggleOutputParticipants());
     }
   }
 }

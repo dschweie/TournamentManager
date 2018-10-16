@@ -36,6 +36,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JMenuBar;
 import javax.swing.JToolBar;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
 import java.util.Observer;
@@ -88,9 +89,12 @@ public class PetanqueSuperMeleePanel extends JPanel
     JToolBar toolBar_1 = new JToolBar();
     panel_1.add(toolBar_1, BorderLayout.NORTH);
     
+    String key = "enlist attendee";
     JButton btnNeuerTeilnehmer = new JButton("");
     btnNeuerTeilnehmer.setIcon(new ImageIcon(PetanqueSuperMeleePanel.class.getResource("/org/dos/tournament/resources/icons/if_207-User_2124114.png")));
     btnNeuerTeilnehmer.setAction(enlistAttendee);
+    btnNeuerTeilnehmer.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ADD, 0), key);
+    btnNeuerTeilnehmer.getActionMap().put(key, enlistAttendee);
     toolBar_1.add(btnNeuerTeilnehmer);
     
     Component horizontalStrut = Box.createHorizontalStrut(20);
@@ -150,25 +154,25 @@ public class PetanqueSuperMeleePanel extends JPanel
     tableAttendees.getColumnModel().getColumn(3).setPreferredWidth(30);
     
     
-    JScrollPane scrollPaneCourts = new JScrollPane();
-    tabbedPaneLeft.addTab("Pl\u00E4tze", null, scrollPaneCourts, null);
-    scrollPaneCourts.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-    scrollPaneCourts.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-    
-    tableCourts = new JTable();
-    tableCourts.setModel(new DefaultTableModel(
-      new Object[][] {
-        {null, null},
-        {null, null},
-        {null, null},
-        {null, null},
-        {null, null},
-      },
-      new String[] {
-        "Nummer", "Begegnung"
-      }
-    ));
-    scrollPaneCourts.setViewportView(tableCourts);
+//    JScrollPane scrollPaneCourts = new JScrollPane();
+//    tabbedPaneLeft.addTab("Pl\u00E4tze", null, scrollPaneCourts, null);
+//    scrollPaneCourts.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+//    scrollPaneCourts.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+//    
+//    tableCourts = new JTable();
+//    tableCourts.setModel(new DefaultTableModel(
+//      new Object[][] {
+//        {null, null},
+//        {null, null},
+//        {null, null},
+//        {null, null},
+//        {null, null},
+//      },
+//      new String[] {
+//        "Nummer", "Begegnung"
+//      }
+//    ));
+//    scrollPaneCourts.setViewportView(tableCourts);
     
     JPanel panelRight = new JPanel();
  
@@ -223,7 +227,7 @@ public class PetanqueSuperMeleePanel extends JPanel
     
     
     public SwingActionEnlistAttendee() {
-      putValue(MNEMONIC_KEY, KeyEvent.VK_ADD);
+      putValue(MNEMONIC_KEY, KeyEvent.VK_F7);
       putValue(SMALL_ICON, new ImageIcon(PetanqueSuperMeleePanel.class.getResource("/org/dos/tournament/resources/icons/if_207-User_2124114.png")));
       putValue(NAME, "");
       putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("PetanqueSuperMeleePanel.enlistAttendee.short description")); //$NON-NLS-1$ //$NON-NLS-2$

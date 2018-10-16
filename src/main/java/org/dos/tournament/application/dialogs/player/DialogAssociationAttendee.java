@@ -149,6 +149,7 @@ public class DialogAssociationAttendee extends JDialog
         buttonPane.add(cancelButton);
       }
     }
+    this.pack();
   }
 
   public DialogAssociationAttendee(Vector<IParticipant> participants, int pos)
@@ -173,6 +174,7 @@ public class DialogAssociationAttendee extends JDialog
       this.textId.setEditable(false);
       this.textId.setFocusable(false);
     }    
+    this.pack();
   }
   
   
@@ -204,6 +206,7 @@ public class DialogAssociationAttendee extends JDialog
       putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionCancel.short description")); //$NON-NLS-1$ //$NON-NLS-2$
     }
     public void actionPerformed(ActionEvent e) {
+      DialogAssociationAttendee.dropIndex();
       DialogAssociationAttendee.this.dispose();
     }
   }
@@ -212,6 +215,12 @@ public class DialogAssociationAttendee extends JDialog
   {
     return ++DialogAssociationAttendee.INDEX;
   }
+  
+  static protected void dropIndex()
+  {
+    --DialogAssociationAttendee.INDEX;
+  }
+  
   protected JButton getOkButton() {
     return okButton;
   }

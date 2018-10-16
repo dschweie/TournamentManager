@@ -8,10 +8,10 @@ import org.dos.tournament.player.utils.ParticipantStatus;
 import org.dos.tournament.result.IResult;
 
 /**
- *  \brief      Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier
+ *  \brief      Dieses ist das zentrale Interface fÃ¼r Teilnehmer oder Teams im Turnier
  *  
- *  Um mit dem Tournament Manager einen möglichst allgemeinen Ansatz zu
- *  unterstützen wurde mit dieser Schnittstelle ein
+ *  Um mit dem Tournament Manager einen mÃ¶glichst allgemeinen Ansatz zu
+ *  unterstÃ¼tzen wurde mit dieser Schnittstelle ein
  *  
  *  \author     dschweie
  */

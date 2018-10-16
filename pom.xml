@@ -117,7 +117,7 @@
 	  <dependency>
 	    <groupId>com.jgoodies</groupId>
 	    <artifactId>jgoodies-forms</artifactId>
-	    <version>1.8.0</version>
+	    <version>1.9.0</version>
 	  </dependency>
     <dependency>
         <groupId>org.junit.jupiter</groupId>

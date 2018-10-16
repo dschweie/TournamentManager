@@ -44,7 +44,8 @@ public class LeaderboardTableModel extends DefaultTableModel implements Observer
     
     _columnIdentifiers.add("Rang");
     _columnIdentifiers.add("Name");
-    _columnIdentifiers.addAll(_participants.get(0).getTotalResultIdentifiers());
+    if(0 < _participants.size())
+      _columnIdentifiers.addAll(_participants.get(0).getTotalResultIdentifiers());
     this.setColumnIdentifiers(_columnIdentifiers);
     
     while(_it.hasNext())

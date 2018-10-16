@@ -1,5 +1,9 @@
 package org.dos.tournament.petanque.team;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import org.dos.tournament.player.IParticipant;
 import org.dos.tournament.player.utils.IParticipantId;
 
@@ -42,9 +46,9 @@ public class Triplette extends AbstractPetanqueTeam
   @Override
   public String getDescriptionByCode()
   {
-    String _pointeurName = this.getPointeur().getCode();
-    String _milieuName = this.getMilieu().getCode();
-    String _tireurName = this.getTireur().getCode();
-    return _pointeurName.concat(", ").concat(_milieuName).concat(", ").concat(_tireurName);
+    List<Integer> _numbers = Arrays.asList(Integer.parseInt(this.getPointeur().getCode().trim()), Integer.parseInt(this.getMilieu().getCode().trim()), Integer.parseInt(this.getTireur().getCode().trim()));
+    Collections.sort(_numbers);
+    
+    return String.format("%d, %d, %d",  _numbers.get(0), _numbers.get(1), _numbers.get(2));
   }
 }
