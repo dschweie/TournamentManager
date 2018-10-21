@@ -35,10 +35,10 @@ public class Partie extends AbstractEncounter
   
   public boolean wereOpponents(IParticipant first, IParticipant second)
   {
-    AbstractTeamParticipant[] _teams = (AbstractTeamParticipant[]) this.competitors.toArray();
-    
-    return (      (_teams[0].contains(first) && _teams[1].contains(second))
-              ||  (_teams[1].contains(first) && _teams[0].contains(second)) );
+    Object[] _teams =  this.competitors.toArray();
+   
+    return (      (((AbstractTeamParticipant)_teams[0]).contains(first) && ((AbstractTeamParticipant)_teams[1]).contains(second))
+              ||  (((AbstractTeamParticipant)_teams[1]).contains(first) && ((AbstractTeamParticipant)_teams[0]).contains(second)) );
   }
 
   /* (non-Javadoc)
@@ -133,6 +133,14 @@ public class Partie extends AbstractEncounter
         return new PetanqueResult(((PetanqueResult)this.result).getOppsScore(), ((PetanqueResult)this.result).getScore());
     }
     return null;
+  }
+
+
+  public boolean playedInTriplette(IParticipant participant)
+  {
+    Object[] _teams =  this.competitors.toArray();
+    return (      ( 3==((AbstractTeamParticipant)_teams[0]).countAttendees()?((AbstractTeamParticipant)_teams[0]).contains(participant):false)
+              ||  ( 3==((AbstractTeamParticipant)_teams[1]).countAttendees()?((AbstractTeamParticipant)_teams[1]).contains(participant):false)  );
   }
 
   

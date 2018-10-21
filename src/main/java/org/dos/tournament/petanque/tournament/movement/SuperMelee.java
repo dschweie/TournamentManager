@@ -3,6 +3,8 @@ package org.dos.tournament.petanque.tournament.movement;
 import java.util.Observable;
 import java.util.Vector;
 
+import javax.swing.AbstractAction;
+
 import org.dos.tournament.petanque.team.AbstractPetanqueTeam;
 import org.dos.tournament.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.petanque.tournament.partie.Partie;
@@ -10,12 +12,64 @@ import org.dos.tournament.player.IParticipant;
 
 public class SuperMelee extends Observable
 {
-  private Vector<IParticipant> competitors;
-  private Vector<Matchday> matchdays;
+  protected Vector<IParticipant> competitors;
+  protected Vector<Matchday> matchdays;
   
-  private Vector<Partie> parties;
-  private Vector<AbstractPetanqueTeam> teams;
+  protected Vector<Partie> parties;
+  protected Vector<AbstractPetanqueTeam> teams;
   
+  private boolean bRuleNotSamePartner = true;
+  private boolean bRuleNotSameOpponent = true;
+  private boolean bRuleNoTripletteTwice = true;
+  
+  /**
+   * @return the bRuleNotSamePartner
+   */
+  public boolean isRuleNotSamePartnerActive()
+  {
+    return bRuleNotSamePartner;
+  }
+
+  /**
+   * @param bRuleNotSamePartner the bRuleNotSamePartner to set
+   */
+  public void setRuleNotSamePartner(boolean bRuleNotSamePartner)
+  {
+    this.bRuleNotSamePartner = bRuleNotSamePartner;
+  }
+
+  /**
+   * @return the bRuleNotSameOpponent
+   */
+  public boolean isRuleNotSameOpponentActive()
+  {
+    return bRuleNotSameOpponent;
+  }
+
+  /**
+   * @param bRuleNotSameOpponent the bRuleNotSameOpponent to set
+   */
+  public void setRuleNotSameOpponent(boolean bRuleNotSameOpponent)
+  {
+    this.bRuleNotSameOpponent = bRuleNotSameOpponent;
+  }
+
+  /**
+   * @return the bRuleNoTripletteTwice
+   */
+  public boolean isRuleNoTripletteTwiceActive()
+  {
+    return bRuleNoTripletteTwice;
+  }
+
+  /**
+   * @param bRuleNoTripletteTwice the bRuleNoTripletteTwice to set
+   */
+  public void setRuleNoTripletteTwice(boolean bRuleNoTripletteTwice)
+  {
+    this.bRuleNoTripletteTwice = bRuleNoTripletteTwice;
+  }
+
   public SuperMelee()
   {
     this.competitors = new Vector<IParticipant>();
@@ -170,5 +224,52 @@ public class SuperMelee extends Observable
   {
     // TODO Auto-generated method stub
     
+  }
+
+  protected boolean alreadyPlayedTriplette(IParticipant participant)
+  {
+    boolean _retval = false;
+    
+    for(int i=0; ((this.parties.size() > i) && ( !_retval )); ++i)
+      _retval = this.parties.get(i).playedInTriplette(participant);
+    
+    return _retval;    
+  }
+
+  public void regenerateLastMatchday()
+  {
+    int       _matchdayIndex  = this.countMatchdays()-1;
+    Matchday  _matchday       = this.getMatchday(_matchdayIndex);
+    if(0 == _matchday.countScoredMatches())
+    { //  matchday has no scored and can be generated
+      int _matches = _matchday.countMatches();
+      for(int i = 0; i < _matches; ++i)
+        this.parties.remove(_matchday.getMatch(i));
+      this.matchdays.remove(_matchday);
+      
+      if(this.generateNextMatchday())
+      {
+        this.setChanged();
+        this.notifyObservers(new MatchdayUpdate(_matchdayIndex));
+        this.clearChanged();
+      }
+    }
+  }
+  
+  public class MatchdayUpdate {
+    private int matchday;
+    
+    public MatchdayUpdate(int matchday)
+    {
+      this.matchday = matchday;
+    }
+
+    /**
+     * @return the matchday
+     */
+    public int getMatchday()
+    {
+      return matchday;
+    }
   }
 }

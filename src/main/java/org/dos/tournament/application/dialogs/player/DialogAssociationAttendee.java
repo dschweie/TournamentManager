@@ -24,6 +24,8 @@ import org.dos.tournament.player.IParticipant;
 import org.dos.tournament.player.utils.ParticipantStatus;
 import java.awt.Dialog.ModalityType;
 import javax.swing.AbstractAction;
+import javax.swing.AbstractButton;
+
 import java.awt.event.ActionEvent;
 import javax.swing.Action;
 
@@ -45,8 +47,11 @@ public class DialogAssociationAttendee extends JDialog
   protected Vector<IParticipant> vecAttendees = null;
   protected int iPos;
   private final Action actionCancel = new SwingActionCancel();
-  private JButton okButton;
-  private JButton cancelButton;
+  private JButton btnOk;
+  private JButton btnCancel;
+  private JButton btnAdditionalAttendee;
+  private final Action actionOkAndNext = new SwingActionOkAndNext();
+
 
   /**
    * Launch the application.
@@ -81,7 +86,7 @@ public class DialogAssociationAttendee extends JDialog
         ColumnSpec.decode("center:4px"),
         ColumnSpec.decode("center:100px"),
         ColumnSpec.decode("center:4px"),
-        ColumnSpec.decode("100px:grow"),},
+        ColumnSpec.decode("300px:grow"),},
       new RowSpec[] {
         FormSpecs.LINE_GAP_ROWSPEC,
         RowSpec.decode("30px"),
@@ -136,17 +141,22 @@ public class DialogAssociationAttendee extends JDialog
       getContentPane().add(buttonPane, BorderLayout.SOUTH);
       buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
       {
-        okButton = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.okButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
-        okButton.setAction(actionSaveData);
-        okButton.setActionCommand(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.okButton.actionCommand")); //$NON-NLS-1$ //$NON-NLS-2$
-        buttonPane.add(okButton);
-        getRootPane().setDefaultButton(okButton);
+        btnOk = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.okButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+        btnOk.setAction(actionSaveData);
+        btnOk.setActionCommand(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.okButton.actionCommand")); //$NON-NLS-1$ //$NON-NLS-2$
+        buttonPane.add(btnOk);
+        getRootPane().setDefaultButton(btnOk);
       }
       {
-        cancelButton = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.cancelButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
-        cancelButton.setAction(actionCancel);
-        cancelButton.setActionCommand(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.cancelButton.actionCommand")); //$NON-NLS-1$ //$NON-NLS-2$
-        buttonPane.add(cancelButton);
+        btnAdditionalAttendee = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+        btnAdditionalAttendee.setAction(actionOkAndNext);
+        buttonPane.add(btnAdditionalAttendee);
+      }
+      {
+        btnCancel = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.cancelButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+        btnCancel.setAction(actionCancel);
+        btnCancel.setActionCommand(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.cancelButton.actionCommand")); //$NON-NLS-1$ //$NON-NLS-2$
+        buttonPane.add(btnCancel);
       }
     }
     this.pack();
@@ -166,11 +176,15 @@ public class DialogAssociationAttendee extends JDialog
       this.textName.setText(participants.elementAt(pos).getName().trim());
       this.textAssociation.setText(((AssociationAttendee)participants.elementAt(pos)).getAssociation());
       this.comboBoxStatus.setSelectedItem(participants.elementAt(pos).getStatus());
+      
+      this.setTitle("Teilnehmer bearbeiten");
+      this.btnAdditionalAttendee.setVisible(false);
+      this.btnAdditionalAttendee.setEnabled(false);
     }
     else
     {
       
-      this.textId.setText(String.valueOf(++DialogAssociationAttendee.INDEX));
+      this.textId.setText(String.valueOf(DialogAssociationAttendee.getNextIndex()));
       this.textId.setEditable(false);
       this.textId.setFocusable(false);
     }    
@@ -211,7 +225,7 @@ public class DialogAssociationAttendee extends JDialog
     }
   }
   
-  static public int getIndex()
+  static public int getNextIndex()
   {
     return ++DialogAssociationAttendee.INDEX;
   }
@@ -222,9 +236,39 @@ public class DialogAssociationAttendee extends JDialog
   }
   
   protected JButton getOkButton() {
-    return okButton;
+    return btnOk;
   }
   protected JButton getCancelButton() {
-    return cancelButton;
+    return btnCancel;
+  }
+  protected AbstractButton getNextButton()
+  {
+    return this.btnAdditionalAttendee;
+  }
+
+
+  private class SwingActionOkAndNext extends AbstractAction {
+    public SwingActionOkAndNext() {
+      putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionOkAndNext.name")); //$NON-NLS-1$ //$NON-NLS-2$
+      putValue(SHORT_DESCRIPTION, "Some short description");
+    }
+    public void actionPerformed(ActionEvent e) {
+      if(-1 == DialogAssociationAttendee.this.iPos)
+      { //  new Attendee will be added
+        AssociationAttendee _attendee = new AssociationAttendee(Integer.parseInt(DialogAssociationAttendee.this.textId.getText()), DialogAssociationAttendee.this.textName.getText(), DialogAssociationAttendee.this.textAssociation.getText());
+        _attendee.setStatus((ParticipantStatus) DialogAssociationAttendee.this.comboBoxStatus.getSelectedItem());
+        DialogAssociationAttendee.this.vecAttendees.add(_attendee);
+      }
+      else
+      { //  existing Attendee will be updated
+        DialogAssociationAttendee.this.vecAttendees.elementAt(DialogAssociationAttendee.this.iPos).setName(DialogAssociationAttendee.this.textName.getText());
+        ((AssociationAttendee)DialogAssociationAttendee.this.vecAttendees.elementAt(DialogAssociationAttendee.this.iPos)).setAssociation(DialogAssociationAttendee.this.textAssociation.getText());
+        DialogAssociationAttendee.this.vecAttendees.elementAt(DialogAssociationAttendee.this.iPos).setStatus((ParticipantStatus) DialogAssociationAttendee.this.comboBoxStatus.getSelectedItem());
+      }
+      DialogAssociationAttendee.this.textId.setText(String.valueOf(DialogAssociationAttendee.getNextIndex()));
+      DialogAssociationAttendee.this.textName.setText("");
+      DialogAssociationAttendee.this.textAssociation.setText("");
+      DialogAssociationAttendee.this.comboBoxStatus.setSelectedIndex(1);
+    }
   }
 }

@@ -34,6 +34,17 @@ public class Matchday
     return _retval;
   }
 
+  public int countScoredMatches()
+  {
+    int _retval = 0;
+    
+    for(int i=0; i < this.matches.size(); ++i)
+      if(this.matches.get(i).isScored())
+        ++_retval;
+    
+    return _retval;
+  }
+  
   /* (non-Javadoc)
    * @see java.lang.Object#toString()
    */

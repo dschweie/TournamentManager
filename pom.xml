@@ -4,7 +4,7 @@
 
   <groupId>org.dschweie</groupId>
   <artifactId>TournamentManager</artifactId>
-  <version>0.0.2-preview</version>
+  <version>0.0.2b-preview</version>
   <packaging>jar</packaging>
 
   <name>TournamentManager</name>
@@ -92,7 +92,7 @@
               <Class-Path>.</Class-Path>
             </manifestEntries>
           </archive>
-          <finalName>TournamentManager/TournamentManager-0.0.2-preview</finalName>
+          <finalName>TournamentManager/TournamentManager-${version}</finalName>
         </configuration>
       </plugin>
     </plugins>

@@ -35,7 +35,7 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
   
   protected void update(SuperMelee tournament, Object arg)
   {
-    if(0 == this.getDataVector().size())
+    if((0 == this.getDataVector().size()) || this.matchdayChanged(arg))
     {
       int iMatches = tournament.getMatchday(iMatchdayIndex).countMatches();
       Vector<Vector<String>> _matchdayData = new Vector<Vector<String>>();
@@ -69,6 +69,17 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
     }
   } 
 
+  private boolean matchdayChanged(Object cause)
+  {
+    boolean _retval = false;
+    
+    if(null != cause)
+      if(cause.getClass().getName().equals("org.dos.tournament.petanque.tournament.movement.SuperMelee$MatchdayUpdate"))
+        _retval = (this.iMatchdayIndex == ((org.dos.tournament.petanque.tournament.movement.SuperMelee.MatchdayUpdate)cause).getMatchday());
+    return _retval;
+  }
+
+
   /* (non-Javadoc)
    * @see javax.swing.table.DefaultTableModel#setValueAt(java.lang.Object, int, int)
    */
@@ -90,6 +101,7 @@ public class PetanqueMatchdayTableModel extends DefaultTableModel implements Obs
       else  
       { //  Ergebnis ist vollst�ndig und wird ausgewertet
         this.xTournament.setResult(iMatchdayIndex, row, Integer.parseInt(this.getValueAt(row, 3).toString()), Integer.parseInt(this.getValueAt(row, 5).toString()));
+        this.xTournament.forceNotifyAll();
       }
     }
   }

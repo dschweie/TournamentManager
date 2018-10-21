@@ -118,10 +118,17 @@ public class SuperMeleeClubChampionship extends SuperMelee
             if(_valid)
             { // prüfe, ob Spieler passt
               _valid &= !this.checkMemberInGrid(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue(), _idxPartie, _idxTeam, _idxSlot, grid);
+              if((3 == grid.get(_idxPartie).get(_idxTeam).size()) && this.isRuleNoTripletteTwiceActive())
+                _valid &= !this.alreadyPlayedTriplette(participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
               for(int i = 0; i < _idxSlot; ++i)
               {
-                _valid &= !this.wereTeammates(participants.get(grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
-                //_valid &= !this.wereOpponents(_members.get(_grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), _members.get(_grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+                if(_valid)
+                { //  in this case check are still reasonable
+                  if(this.isRuleNotSamePartnerActive())
+                    _valid &= !this.wereTeammates(participants.get(grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+                  if(this.isRuleNotSameOpponentActive())
+                    _valid &= !this.wereOpponents(participants.get(grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+                }
               }
             }
               
@@ -299,6 +306,8 @@ public class SuperMeleeClubChampionship extends SuperMelee
   {
     PetanqueSuperMeleeClubChampionshipResult _home  = new PetanqueSuperMeleeClubChampionshipResult(iHome, iGuest);
     PetanqueSuperMeleeClubChampionshipResult _guest = new PetanqueSuperMeleeClubChampionshipResult(iGuest, iHome);
+    
+    this.getMatchday(iMatchdayIndex).getMatch(iMatchIndex).setResult(_home);
     
     IParticipant[] _homeAttendees = ((AbstractPetanqueTeam)this.getMatchday(iMatchdayIndex).getMatch(iMatchIndex).getCompetitor(0)).getAttendeesToArray();
     for(int i=0; i < _homeAttendees.length; ++i)
