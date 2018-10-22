@@ -54,6 +54,12 @@ import javax.swing.Action;
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.Dialog.ModalExclusionType;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.JTextField;
+import javax.swing.JPanel;
+import java.awt.FlowLayout;
+import javax.swing.SwingConstants;
 
 public class TournamentManagerUI
 {
@@ -61,6 +67,8 @@ public class TournamentManagerUI
   private JFrame frmTurnierverwaltung;
   private final Action actionExit = new SwingAction();
   private final Action createTournament = new CreateTournamentAction(this.frmTurnierverwaltung);
+  private JTextField txtSwVersion;
+  private JTextField txtOS;
 
   /**
    * Launch the application.
@@ -101,6 +109,32 @@ public class TournamentManagerUI
     frmTurnierverwaltung.setMinimumSize(new Dimension(800, 600));
     frmTurnierverwaltung.getContentPane().setSize(new Dimension(600, 800));
     frmTurnierverwaltung.getContentPane().setMinimumSize(new Dimension(600, 800));
+    
+    JPanel panel = new JPanel();
+    panel.setAlignmentX(Component.RIGHT_ALIGNMENT);
+    frmTurnierverwaltung.getContentPane().add(panel, BorderLayout.SOUTH);
+    panel.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
+    
+    txtOS = new JTextField();
+    txtOS.setRequestFocusEnabled(false);
+    txtOS.setHorizontalAlignment(SwingConstants.CENTER);
+    txtOS.setFocusable(false);
+    txtOS.setFocusTraversalKeysEnabled(false);
+    txtOS.setEditable(false);
+    panel.add(txtOS);
+    txtOS.setColumns(15);
+    txtOS.setText(System.getProperty("os.name").concat(" ").concat(System.getProperty("os.version")));
+    
+    txtSwVersion = new JTextField();
+    txtSwVersion.setRequestFocusEnabled(false);
+    txtSwVersion.setHorizontalAlignment(SwingConstants.CENTER);
+    txtSwVersion.setAlignmentX(Component.RIGHT_ALIGNMENT);
+    txtSwVersion.setFocusTraversalKeysEnabled(false);
+    txtSwVersion.setFocusable(false);
+    panel.add(txtSwVersion);
+    txtSwVersion.setEditable(false);
+    txtSwVersion.setText(ResourceBundle.getBundle("org.dos.tournament.resources.config").getString("TournamentManager.version"));
+    txtSwVersion.setColumns(10);
     frmTurnierverwaltung.setSize(new Dimension(1024, 768));
     frmTurnierverwaltung.setTitle(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.frmTurnierverwaltung.title")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-2$
     frmTurnierverwaltung.setBounds(100, 100, 450, 300);

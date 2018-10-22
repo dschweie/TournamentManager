@@ -120,7 +120,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
               _valid &= !this.checkMemberInGrid(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue(), _idxPartie, _idxTeam, _idxSlot, grid);
               if((3 == grid.get(_idxPartie).get(_idxTeam).size()) && this.isRuleNoTripletteTwiceActive())
                 _valid &= !this.alreadyPlayedTriplette(participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
-              for(int i = 0; i < _idxSlot; ++i)
+              for(int i = 0; _valid && (i < _idxSlot); ++i)
               {
                 if(_valid)
                 { //  in this case check are still reasonable
@@ -128,6 +128,16 @@ public class SuperMeleeClubChampionship extends SuperMelee
                     _valid &= !this.wereTeammates(participants.get(grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
                   if(this.isRuleNotSameOpponentActive())
                     _valid &= !this.wereOpponents(participants.get(grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+                }
+              }
+              if(1==_idxTeam)
+              { //  in this case check will be done if player does not meet an opponent
+                for(int _opps=0; _valid && (_opps < grid.get(_idxPartie).get(0).size()); ++_opps)
+                {
+                  if(this.isRuleNotSamePartnerActive())
+                    _valid &= !this.wereTeammates(participants.get(grid.get(_idxPartie).get(0).get(_opps).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+                  if(this.isRuleNotSameOpponentActive())
+                    _valid &= !this.wereOpponents(participants.get(grid.get(_idxPartie).get(0).get(_opps).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
                 }
               }
             }
