@@ -97,6 +97,8 @@ public class SuperMeleeClubChampionship extends SuperMelee
   private Vector<Vector<Vector<Integer>>> fillGridWithParticipants(Vector<Vector<Vector<Integer>>> grid,
       Vector<IParticipant> participants)
   {
+    //  this counter should help tio avoid to long runnings of this algorithm
+    long _stepper = 0;
     // Durchlaufe das Grid, um Plätze zu füllen
     int _idxPartie = 0;
     int _idxTeam = 0;
@@ -114,37 +116,31 @@ public class SuperMeleeClubChampionship extends SuperMelee
             grid.get(_idxPartie).get(_idxTeam).set(_idxSlot, new Integer(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() + 1) );
             
             _valid = grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() < participants.size();
+            _valid &= !this.checkMemberInGrid(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue(), _idxPartie, _idxTeam, _idxSlot, grid);
+
+            if(_valid && (3 == grid.get(_idxPartie).get(_idxTeam).size()) && this.isRuleNoTripletteTwiceActive())
+              _valid &= !this.alreadyPlayedTriplette(participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
             
-            if(_valid)
-            { // prüfe, ob Spieler passt
-              _valid &= !this.checkMemberInGrid(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue(), _idxPartie, _idxTeam, _idxSlot, grid);
-              if((3 == grid.get(_idxPartie).get(_idxTeam).size()) && this.isRuleNoTripletteTwiceActive())
-                _valid &= !this.alreadyPlayedTriplette(participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
-              for(int i = 0; _valid && (i < _idxSlot); ++i)
+            for(int _iTeam=0; _valid && (_iTeam <= _idxTeam); ++_iTeam)
+            {
+              for(int _iSlot=0; _valid && (_iSlot < (_iTeam<_idxTeam?grid.get(_idxPartie).get(_iTeam).size():_idxSlot)); ++_iSlot)
               {
-                if(_valid)
-                { //  in this case check are still reasonable
-                  if(this.isRuleNotSamePartnerActive())
-                    _valid &= !this.wereTeammates(participants.get(grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
-                  if(this.isRuleNotSameOpponentActive())
-                    _valid &= !this.wereOpponents(participants.get(grid.get(_idxPartie).get(_idxTeam).get(i).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
-                }
-              }
-              if(1==_idxTeam)
-              { //  in this case check will be done if player does not meet an opponent
-                for(int _opps=0; _valid && (_opps < grid.get(_idxPartie).get(0).size()); ++_opps)
-                {
-                  if(this.isRuleNotSamePartnerActive())
-                    _valid &= !this.wereTeammates(participants.get(grid.get(_idxPartie).get(0).get(_opps).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
-                  if(this.isRuleNotSameOpponentActive())
-                    _valid &= !this.wereOpponents(participants.get(grid.get(_idxPartie).get(0).get(_opps).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
-                }
+                if(this.isRuleNotSamePartnerActive())
+                  _valid &= !this.wereTeammates(participants.get(grid.get(_idxPartie).get(_iTeam).get(_iSlot).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+                if(this.isRuleNotSameOpponentActive())
+                  _valid &= !this.wereOpponents(participants.get(grid.get(_idxPartie).get(_iTeam).get(_iSlot).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
               }
             }
-              
+
             if(_valid)
             {
+              // System.out.println(String.format("%d ; %d ; %d ", _idxPartie, _idxTeam, _idxSlot).concat(String.valueOf(_valid)).concat(" => ").concat(grid.toString()));
               ++_idxSlot;
+
+              //  currently the algorithm should run very long in fifth and following matchday, so it opens the ruleset
+              ++_stepper;
+              if(10000000 < _stepper)
+                this.setRuleNotSameOpponent(false);
             }
           }
 
@@ -194,9 +190,9 @@ public class SuperMeleeClubChampionship extends SuperMelee
   private boolean checkMemberInGrid(int intValue, int idxPartie, int idxTeam, int idxSlot, Vector<Vector<Vector<Integer>>> grid)
   {
     boolean _retval = false;
-    for(int i=0; i<=idxPartie; ++i)
-      for(int j=0; j <= ((i==idxPartie)?idxTeam:grid.get(i).size()-1); ++j)
-        for(int k=0; k < (((i==idxPartie)&&(j==idxTeam))?idxSlot:grid.get(i).get(j).size()); ++k)
+    for(int i=0; ( !_retval ) && ( i<=idxPartie ); ++i)
+      for(int j=0; ( !_retval ) && ( j <= ((i==idxPartie)?idxTeam:grid.get(i).size()-1) ); ++j)
+        for(int k=0; ( !_retval ) && ( k < (((i==idxPartie)&&(j==idxTeam))?idxSlot:grid.get(i).get(j).size()) ); ++k)
           _retval |= ( intValue == grid.get(i).get(j).get(k).intValue() );
     return _retval;
   }

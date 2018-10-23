@@ -5,6 +5,7 @@ import java.awt.BorderLayout;
 import javax.swing.JToolBar;
 import javax.swing.table.DefaultTableModel;
 
+import org.dos.tournament.application.common.controls.ToggleButton;
 import org.dos.tournament.application.common.panels.tablemodels.PetanqueMatchdayTableModel;
 import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor;
 
@@ -37,6 +38,10 @@ public class DefaultMatchdayPanel extends JPanel
   private final Action timer = new SwingActionMatchdayTimer();
   private JProgressBar progressBar;
   private final Action action = new SwingActionToggleTeamPresentation();
+  private ToggleButton stateTeammates = new ToggleButton("P", "0", false);
+  private ToggleButton stateOpponents = new ToggleButton("O", "0", false);
+  private ToggleButton stateTriplette = new ToggleButton("T", "0", false);
+  
 
   /**
    * Create the panel.
@@ -49,6 +54,13 @@ public class DefaultMatchdayPanel extends JPanel
     add(toolBar, BorderLayout.SOUTH);
     
     JButton btnPrintMatchday = toolBar.add(printMatchday);
+    
+    toolBar.add(this.stateTeammates);
+    toolBar.add(this.stateOpponents);
+    toolBar.add(this.stateTriplette);
+    this.stateTeammates.setToolTipText("Regel: Keine Runde mit dem gleichen Partner.");
+    this.stateOpponents.setToolTipText("Regel: Keine Runde gegen den gleichen Gegner.");
+    this.stateTriplette.setToolTipText("Regel: Keine zwei Runden im Triplette.");
     
     Component horizontalStrut = Box.createHorizontalStrut(10);
     horizontalStrut.setMinimumSize(new Dimension(10, 10));
@@ -96,6 +108,24 @@ public class DefaultMatchdayPanel extends JPanel
   {
     this();
     this.tableMatches.setModel(model);
+  }
+  
+  public void setStateRuleTeammates(boolean state)
+  {
+    this.stateTeammates.setSelected(state);
+    this.stateTeammates.repaint();
+  }
+  
+  public void setStateRuleOpponents(boolean state)
+  {
+    this.stateOpponents.setSelected(state);
+    this.stateOpponents.repaint();
+  }
+  
+  public void setStateRuleTriplette(boolean state)
+  {
+    this.stateTriplette.setSelected(state);
+    this.stateTriplette.repaint();
   }
   
   private class SwingAction extends AbstractAction {

@@ -367,7 +367,7 @@ public class PetanqueSuperMeleePanel extends JPanel
     }
     public void actionPerformed(ActionEvent e) {
       boolean _processed = false;
-    
+      
       while(!_processed)
       {
         if(PetanqueSuperMeleePanel.this.tournament.generateNextMatchday())
@@ -377,6 +377,9 @@ public class PetanqueSuperMeleePanel extends JPanel
           PetanqueSuperMeleePanel.this.tournament.addObserver(_model);
           DefaultMatchdayPanel _panel = new DefaultMatchdayPanel(_model);
           PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.addTab("Runde ".concat(String.valueOf(_matchdays)), null, _panel, null);
+          _panel.setStateRuleTeammates(PetanqueSuperMeleePanel.this.tournament.isRuleNotSamePartnerActive());
+          _panel.setStateRuleOpponents(PetanqueSuperMeleePanel.this.tournament.isRuleNotSameOpponentActive());
+          _panel.setStateRuleTriplette(PetanqueSuperMeleePanel.this.tournament.isRuleNoTripletteTwiceActive());
           
           PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
           _processed = true;

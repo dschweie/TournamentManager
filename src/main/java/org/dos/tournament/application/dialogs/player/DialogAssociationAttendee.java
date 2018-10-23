@@ -183,7 +183,7 @@ public class DialogAssociationAttendee extends JDialog
     }
     else
     {
-      
+      this.setTitle("Teilnehmer erfassen");
       this.textId.setText(String.valueOf(DialogAssociationAttendee.getNextIndex()));
       this.textId.setEditable(false);
       this.textId.setFocusable(false);
