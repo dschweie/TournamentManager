@@ -8,7 +8,6 @@ import javax.swing.table.TableColumn;
 
 import org.dos.tournament.application.common.controls.ToggleButton;
 import org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable;
-import org.dos.tournament.application.common.panels.tablemodels.PetanqueMatchdayTableModel;
 import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor;
 import org.dos.tournament.petanque.tournament.movement.SuperMelee;
 
@@ -102,22 +101,6 @@ public class DefaultMatchdayPanel extends JPanel
     this();
     
     this.tableMatches = new SuperMeleeMatchdayTable(tournament, matchday);
-    tableMatches.addKeyListener(new KeyAdapter() {
-      @Override
-      public void keyPressed(KeyEvent e) {
-        if('\t' == e.getKeyChar())
-        {
-          int _iCurrentColumn = DefaultMatchdayPanel.this.tableMatches.getSelectedColumn();
-          int _iCurrentRow    = DefaultMatchdayPanel.this.tableMatches.getSelectedRow();
-          if(3 == _iCurrentColumn)
-            DefaultMatchdayPanel.this.tableMatches.changeSelection(_iCurrentRow, 4, false, false);
-          else
-            DefaultMatchdayPanel.this.tableMatches.changeSelection(_iCurrentRow+1, 2, false, false);
-        }
-      }
-    });
-
-    tableMatches.setDefaultEditor(Object.class, new PetanqueTableCellEditor());
     
     scrollPane.setViewportView(tableMatches);
   }

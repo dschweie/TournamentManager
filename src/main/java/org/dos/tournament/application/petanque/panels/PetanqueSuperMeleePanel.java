@@ -18,7 +18,6 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
 import org.dos.tournament.application.common.panels.DefaultMatchdayPanel;
-import org.dos.tournament.application.common.panels.tablemodels.PetanqueMatchdayTableModel;
 import org.dos.tournament.application.dialogs.player.DialogAssociationAttendee;
 import org.dos.tournament.application.dialogs.player.petanque.DialogJoueurIndividuel;
 import org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableColumnModel;
