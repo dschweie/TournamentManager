@@ -61,6 +61,7 @@ import java.awt.ComponentOrientation;
 import java.awt.event.KeyEvent;
 import javax.swing.KeyStroke;
 import java.awt.Checkbox;
+import javax.swing.JProgressBar;
 
 public class PetanqueSuperMeleePanel extends JPanel
 {
@@ -79,12 +80,13 @@ public class PetanqueSuperMeleePanel extends JPanel
   private JTable table;
   private JTable tableLeaderboard;
   private final Action replaceLastMatchday = new SwingActionUpdateLastRound();
-
+  
   /**
    * Create the panel.
    */
   public PetanqueSuperMeleePanel(SuperMelee tournament)
   {
+    setPreferredSize(new Dimension(1024, 600));
     this.tournament = tournament;
     
     setBounds(new Rectangle(4, 4, 10, 10));
@@ -237,6 +239,7 @@ public class PetanqueSuperMeleePanel extends JPanel
     toolBar.add(btnNewButton);
     
     JButton btnReplaceLastMatchday = toolBar.add(replaceLastMatchday);
+
     this.tournament.addObserver((Observer) this.replaceLastMatchday);
     
     table = new JTable();
@@ -366,16 +369,19 @@ public class PetanqueSuperMeleePanel extends JPanel
       putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("PetanqueSuperMeleePanel.createNewMatchday.short description")); //$NON-NLS-1$ //$NON-NLS-2$
     }
     public void actionPerformed(ActionEvent e) {
+      
       boolean _processed = false;
+      
       
       while(!_processed)
       {
-        if(PetanqueSuperMeleePanel.this.tournament.generateNextMatchday())
+        if(PetanqueSuperMeleePanel.this.tournament.generateNextMatchday(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays))
         { // in this case a new matchday was created
           int _matchdays = PetanqueSuperMeleePanel.this.tournament.countMatchdays();
-          PetanqueMatchdayTableModel _model = new PetanqueMatchdayTableModel(_matchdays - 1);
-          PetanqueSuperMeleePanel.this.tournament.addObserver(_model);
-          DefaultMatchdayPanel _panel = new DefaultMatchdayPanel(_model);
+//          PetanqueMatchdayTableModel _model = new PetanqueMatchdayTableModel(_matchdays - 1);
+//          PetanqueSuperMeleePanel.this.tournament.addObserver(_model);
+          DefaultMatchdayPanel _panel = new DefaultMatchdayPanel(PetanqueSuperMeleePanel.this.tournament, _matchdays-1);
+          
           PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.addTab("Runde ".concat(String.valueOf(_matchdays)), null, _panel, null);
           _panel.setStateRuleTeammates(PetanqueSuperMeleePanel.this.tournament.isRuleNotSamePartnerActive());
           _panel.setStateRuleOpponents(PetanqueSuperMeleePanel.this.tournament.isRuleNotSameOpponentActive());
@@ -466,7 +472,7 @@ public class PetanqueSuperMeleePanel extends JPanel
       JTabbedPane _pane = PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedComponent();
       PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.remove(component)
       */
-      PetanqueSuperMeleePanel.this.tournament.regenerateLastMatchday();
+      PetanqueSuperMeleePanel.this.tournament.regenerateLastMatchday(PetanqueSuperMeleePanel.this);
     }
     public void updateStatus()
     {

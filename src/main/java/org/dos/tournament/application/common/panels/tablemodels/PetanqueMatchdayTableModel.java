@@ -4,27 +4,44 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.Vector;
 
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import org.dos.tournament.petanque.tournament.movement.SuperMelee;
 
+/**
+ * \brief       Diese Klasse ist TableModel für eine Spielrunde
+ * 
+ * \remark      Es ist aktuell noch nicht ganz klar, ob diese Klasse ein 
+ *              allgemeines TableModel sein kann oder nur für die Turnierformen
+ *              Supermelee und Monatsturnier genutzt werden kann.
+ * @author dirk.schweier
+ *
+ */
 public class PetanqueMatchdayTableModel extends DefaultTableModel implements Observer
 {
+  /**
+   *  \brief    In diesem Attribut wird die Information gehalten zu
+   *            welcher Runde des Turniers das Panel gehört.
+   *  
+   *  In der Applikation wird für jede Spielrunde/Spieltag ein Panel angezeigt.
+   *  Über dieses Attribut weiß die Instanz, welche Daten des Turnieres für sie
+   *  entscheidend sind.
+   */
   private int iMatchdayIndex;
   private boolean bInit = true;
   private SuperMelee xTournament = null;
   private boolean bOutputNumeric = true;
+  private JTable guiTable = null;
   
   public PetanqueMatchdayTableModel(int matchday)
   {
     this.iMatchdayIndex = matchday;
   }
-
   
   @Override
   public void update(Observable o, Object arg)
   {
-    
     switch(o.getClass().getName())
     {
       case "org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship":

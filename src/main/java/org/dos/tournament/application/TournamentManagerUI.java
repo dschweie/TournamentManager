@@ -106,9 +106,9 @@ public class TournamentManagerUI
   private void initialize()
   {
     frmTurnierverwaltung = new JFrame();
-    frmTurnierverwaltung.setMinimumSize(new Dimension(800, 600));
-    frmTurnierverwaltung.getContentPane().setSize(new Dimension(600, 800));
-    frmTurnierverwaltung.getContentPane().setMinimumSize(new Dimension(600, 800));
+    frmTurnierverwaltung.setMinimumSize(new Dimension(1024, 600));
+    frmTurnierverwaltung.getContentPane().setSize(new Dimension(1024, 800));
+    frmTurnierverwaltung.getContentPane().setMinimumSize(new Dimension(1024, 800));
     
     JPanel panel = new JPanel();
     panel.setAlignmentX(Component.RIGHT_ALIGNMENT);

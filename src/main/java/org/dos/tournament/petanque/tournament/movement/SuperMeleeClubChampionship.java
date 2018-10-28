@@ -3,6 +3,7 @@ package org.dos.tournament.petanque.tournament.movement;
 import java.util.Collections;
 import java.util.Vector;
 
+import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.petanque.result.PetanqueSuperMeleeClubChampionshipResult;
 import org.dos.tournament.petanque.team.AbstractPetanqueTeam;
 import org.dos.tournament.petanque.team.Doublette;
@@ -34,7 +35,10 @@ import org.dos.tournament.player.utils.ParticipantStatus;
  */
 public class SuperMeleeClubChampionship extends SuperMelee
 {
+  
   private int idxTeam = 0;
+  private char[][] aiParticipantTable = null;
+  private boolean[] abTriplettePlayed = null;
   
   /**
    *  \brief    Die Methode erzeugt einen neuen "Spieltag" mit den aktiven Teilnehmern.
@@ -49,9 +53,13 @@ public class SuperMeleeClubChampionship extends SuperMelee
     Vector<IParticipant> _members = TournamentUtils.filterParticipantsByStatus(this.getCompetitors(), ParticipantStatus.ACTIVE);
     Vector<Vector<Vector<Integer>>> _grid = compileGridTemplateForSupermelee(_members.size());
     
+    this.setNextMatchdayProgressMaximum(_grid.size() * 2);
+    this.updateNextMatchdayProgress(0);
+    
     if(null != _grid)
     {
       Collections.shuffle(_members);
+      this.analyseLastMatchdays(_members);
       _grid = fillGridWithParticipants(_grid, _members);
       
       if(null != _grid)
@@ -104,7 +112,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
     int _idxTeam = 0;
     int _idxSlot = 0;
     boolean _valid = true;
-    
+
     while( (-1 < _idxPartie) && (grid.size() > _idxPartie) )
     { 
       while(( -1 < _idxTeam ) && ( grid.get(_idxPartie).size() > _idxTeam) )
@@ -119,28 +127,29 @@ public class SuperMeleeClubChampionship extends SuperMelee
             _valid &= !this.checkMemberInGrid(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue(), _idxPartie, _idxTeam, _idxSlot, grid);
 
             if(_valid && (3 == grid.get(_idxPartie).get(_idxTeam).size()) && this.isRuleNoTripletteTwiceActive())
-              _valid &= !this.alreadyPlayedTriplette(participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
-            
+              _valid &= !this.abTriplettePlayed[grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()];
+              
             for(int _iTeam=0; _valid && (_iTeam <= _idxTeam); ++_iTeam)
             {
               for(int _iSlot=0; _valid && (_iSlot < (_iTeam<_idxTeam?grid.get(_idxPartie).get(_iTeam).size():_idxSlot)); ++_iSlot)
               {
                 if(this.isRuleNotSamePartnerActive())
-                  _valid &= !this.wereTeammates(participants.get(grid.get(_idxPartie).get(_iTeam).get(_iSlot).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+                  _valid &= SuperMelee.FLAG_WERE_TEAMMATES != this.aiParticipantTable[grid.get(_idxPartie).get(_iTeam).get(_iSlot).intValue()][grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()];
                 if(this.isRuleNotSameOpponentActive())
-                  _valid &= !this.wereOpponents(participants.get(grid.get(_idxPartie).get(_iTeam).get(_iSlot).intValue()), participants.get(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()));
+                  _valid &= SuperMelee.FLAG_WERE_OPPONENTS != this.aiParticipantTable[grid.get(_idxPartie).get(_iTeam).get(_iSlot).intValue()][grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()];
               }
             }
 
             if(_valid)
             {
               // System.out.println(String.format("%d ; %d ; %d ", _idxPartie, _idxTeam, _idxSlot).concat(String.valueOf(_valid)).concat(" => ").concat(grid.toString()));
+              this.updateNextMatchdayProgress(_idxPartie*2+_idxTeam);
+
               ++_idxSlot;
 
-              //  currently the algorithm should run very long in fifth and following matchday, so it opens the ruleset
               ++_stepper;
-              if(10000000 < _stepper)
-                this.setRuleNotSameOpponent(false);
+              if(10000 < _stepper)
+              this.setRuleNotSameOpponent(false);
             }
           }
 
@@ -184,6 +193,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
       }
       
     }
+    
     return (-1 == _idxPartie)?null:grid;
   }
 
@@ -197,14 +207,74 @@ public class SuperMeleeClubChampionship extends SuperMelee
     return _retval;
   }
 
+  protected void analyseLastMatchdays(Vector<IParticipant> participants)
+  {
+    this.initParticipantTable(participants.size(), SuperMelee.FLAG_NEVER_MET);
+    this.initTriplettePlayed(participants.size(), false);
+    
+    for(Matchday _matchday : this.matchdays)
+    {
+      for(int _idxPartie=0; _idxPartie < _matchday.countMatches(); ++_idxPartie)
+      {
+        IParticipant[] _home = _matchday.getMatch(_idxPartie).getCompetitor(0).getAttendeesToArray();
+        IParticipant[] _guest = _matchday.getMatch(_idxPartie).getCompetitor(1).getAttendeesToArray();
+        
+        if(3==_home.length)
+          for(int i=0; i<3; ++i)
+            this.abTriplettePlayed[participants.indexOf(_home[i])] = true;
+        if(3==_guest.length)
+          for(int i=0; i<3; ++i)
+            this.abTriplettePlayed[participants.indexOf(_guest[i])] = true;
+        
+        for(int i=0; i<_home.length; ++i)
+        {
+          int iCurrentParticipant = participants.indexOf(_home[i]);
+          
+          for(int h=0; h<_home.length; ++h)
+            this.aiParticipantTable[iCurrentParticipant][participants.indexOf(_home[h])] = i==h?SuperMelee.FLAG_INVALID_PAIR:SuperMelee.FLAG_WERE_TEAMMATES;
+          for(int g=0; g<_guest.length; ++g)
+          { //  mark opps
+            int iCurrentOpponent = participants.indexOf(_guest[g]);
+            this.aiParticipantTable[iCurrentParticipant][iCurrentOpponent] = SuperMelee.FLAG_WERE_OPPONENTS;
+            this.aiParticipantTable[iCurrentOpponent][iCurrentParticipant] = SuperMelee.FLAG_WERE_OPPONENTS;
+            
+            if(0==i)
+              for(int j=0; j<_guest.length; ++j)
+                this.aiParticipantTable[iCurrentOpponent][participants.indexOf(_guest[j])] = g==j?SuperMelee.FLAG_INVALID_PAIR:SuperMelee.FLAG_WERE_TEAMMATES;
+          }
+        }
+      }
+    }
+  }
+  
+  protected void initParticipantTable(int size, char defaultValue)
+  {
+    this.aiParticipantTable = new char[size][size];
+    for(int i=0; i<size; ++i)
+      for(int j=0; j<size; ++j)
+        this.aiParticipantTable[i][j] = defaultValue;
+  }
+  
+  protected void initTriplettePlayed(int size, boolean defaultValue)
+  {
+    this.abTriplettePlayed = new boolean[size];
+    for(int i=0; i<size; ++i)
+      this.abTriplettePlayed[i] = defaultValue;
+  }
+  
   protected boolean generateFirstMatchday()
   {
     boolean _retval = false;
     Vector<IParticipant> _members = TournamentUtils.filterParticipantsByStatus(this.getCompetitors(), ParticipantStatus.ACTIVE);
+    
+    this.setNextMatchdayProgressMaximum(_members.size());
+    this.updateNextMatchdayProgressLeft(_members.size());
 
     if(     ( 3 <  _members.size() )
         &&  ( 7 != _members.size() ) )
     { //  mindestens 4 aktive Teilnehmer werden benötigt, damit eine Runde erstellt werden kann
+      
+      
       Collections.shuffle(_members);
       Matchday _matchday = new Matchday();
       Partie _p = null;
@@ -238,6 +308,8 @@ public class SuperMeleeClubChampionship extends SuperMelee
         this.addPartie(_p);
         this.addTeam(_home);
         this.addTeam(_guest);
+
+        this.updateNextMatchdayProgressLeft(_members.size());
       }
       
       this.getMatchdays().addElement(_matchday);

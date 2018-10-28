@@ -4,10 +4,13 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JToolBar;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 
 import org.dos.tournament.application.common.controls.ToggleButton;
+import org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable;
 import org.dos.tournament.application.common.panels.tablemodels.PetanqueMatchdayTableModel;
 import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor;
+import org.dos.tournament.petanque.tournament.movement.SuperMelee;
 
 import javax.swing.JTable;
 import javax.swing.JScrollPane;
@@ -30,7 +33,11 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-
+/**
+ * \brief       Diese Klasse repräsentiert die GUI für einen Spieltag
+ * 
+ * @author dirk.schweier
+ */
 public class DefaultMatchdayPanel extends JPanel
 {
   private JTable tableMatches;
@@ -41,6 +48,7 @@ public class DefaultMatchdayPanel extends JPanel
   private ToggleButton stateTeammates = new ToggleButton("P", "0", false);
   private ToggleButton stateOpponents = new ToggleButton("O", "0", false);
   private ToggleButton stateTriplette = new ToggleButton("T", "0", false);
+  private JScrollPane scrollPane;
   
 
   /**
@@ -80,10 +88,20 @@ public class DefaultMatchdayPanel extends JPanel
     progressBar.setMaximumSize(new Dimension(64, 32));
     toolBar.add(progressBar);
     
-    JScrollPane scrollPane = new JScrollPane();
+    scrollPane = new JScrollPane();
     add(scrollPane, BorderLayout.CENTER);
+  }
+
+  public DefaultMatchdayPanel(DefaultTableModel model)
+  {
+    this();
+  }
+  
+  public DefaultMatchdayPanel(SuperMelee tournament, int matchday)
+  {
+    this();
     
-    tableMatches = new JTable();
+    this.tableMatches = new SuperMeleeMatchdayTable(tournament, matchday);
     tableMatches.addKeyListener(new KeyAdapter() {
       @Override
       public void keyPressed(KeyEvent e) {
@@ -98,18 +116,12 @@ public class DefaultMatchdayPanel extends JPanel
         }
       }
     });
+
     tableMatches.setDefaultEditor(Object.class, new PetanqueTableCellEditor());
     
     scrollPane.setViewportView(tableMatches);
-
   }
 
-  public DefaultMatchdayPanel(DefaultTableModel model)
-  {
-    this();
-    this.tableMatches.setModel(model);
-  }
-  
   public void setStateRuleTeammates(boolean state)
   {
     this.stateTeammates.setSelected(state);
@@ -128,6 +140,28 @@ public class DefaultMatchdayPanel extends JPanel
     this.stateTriplette.repaint();
   }
   
+  
+  
+  /* (non-Javadoc)
+   * @see javax.swing.JPanel#updateUI()
+   */
+  @Override
+  public void updateUI()
+  {
+    super.updateUI();
+    try
+    {
+        tableMatches.getColumnModel().getColumn(0).setPreferredWidth(  30 );
+        tableMatches.getColumnModel().getColumn(1).setPreferredWidth( 200 );
+        tableMatches.getColumnModel().getColumn(2).setPreferredWidth(  30 );
+        tableMatches.getColumnModel().getColumn(3).setPreferredWidth( 10 );
+        tableMatches.getColumnModel().getColumn(3).setPreferredWidth( 30 );
+    }
+    catch (Exception e) { /* currently nothing */ };
+  }
+
+
+
   private class SwingAction extends AbstractAction {
     public SwingAction() {
       putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_181-Printer_2124005.png")));
@@ -278,8 +312,7 @@ public class DefaultMatchdayPanel extends JPanel
     }
     
     public void actionPerformed(ActionEvent e) {
-      PetanqueMatchdayTableModel _model = (PetanqueMatchdayTableModel) DefaultMatchdayPanel.this.tableMatches.getModel();
-      this.updateButton(_model.toggleOutputParticipants());
+      this.updateButton(((SuperMeleeMatchdayTable) DefaultMatchdayPanel.this.tableMatches).toggleOutputParticipants());
     }
   }
 }

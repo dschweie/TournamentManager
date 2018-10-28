@@ -143,5 +143,12 @@ public class Partie extends AbstractEncounter
               ||  ( 3==((AbstractTeamParticipant)_teams[1]).countAttendees()?((AbstractTeamParticipant)_teams[1]).contains(participant):false)  );
   }
 
+
+  public String getId()
+  {
+    // TODO Auto-generated method stub
+    return "xyz";
+  }
+
   
 }

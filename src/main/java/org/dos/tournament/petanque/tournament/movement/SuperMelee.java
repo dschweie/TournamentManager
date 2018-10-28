@@ -1,10 +1,14 @@
 package org.dos.tournament.petanque.tournament.movement;
 
+import java.awt.Component;
 import java.util.Observable;
 import java.util.Vector;
 
 import javax.swing.AbstractAction;
+import javax.swing.ProgressMonitor;
 
+import org.dos.tournament.application.common.dialogs.MatchdayProgressMonitor;
+import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.petanque.team.AbstractPetanqueTeam;
 import org.dos.tournament.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.petanque.tournament.partie.Partie;
@@ -21,6 +25,14 @@ public class SuperMelee extends Observable
   private boolean bRuleNotSamePartner = true;
   private boolean bRuleNotSameOpponent = true;
   private boolean bRuleNoTripletteTwice = true;
+  
+  private ProgressMonitor xProgressMonitor = null;      
+
+  
+  static final public char FLAG_NEVER_MET       = ' ';
+  static final public char FLAG_WERE_TEAMMATES  = 'T';
+  static final public char FLAG_WERE_OPPONENTS  = 'O';
+  static final public char FLAG_INVALID_PAIR    = 'X';
   
   /**
    * @return the bRuleNotSamePartner
@@ -203,10 +215,49 @@ public class SuperMelee extends Observable
    *  @see      org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.generateFirstMatchday()
    *  @see      org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.generateNextMatchdayByAlgorithm()
    */
-  public boolean generateNextMatchday()
+  public boolean generateNextMatchday(Component parent)
   {
-    return (0 == this.countMatchdays())?this.generateFirstMatchday():this.generateNextMatchdayByAlgorithm();
+    if(null == parent)
+      this.xProgressMonitor = null;
+    else
+      this.xProgressMonitor = new MatchdayProgressMonitor(parent, "Message", "nopte", 0, 100);
+    
+    boolean _retval = (0 == this.countMatchdays())?this.generateFirstMatchday():this.generateNextMatchdayByAlgorithm();
+    
+    if(null != parent)
+    {
+      this.xProgressMonitor.close();
+      // this.xProgressMonitor = null;
+    }
+    
+    return _retval;
   }
+  
+  protected boolean isNextMatchdayCanceled()
+  {
+    return (null==this.xProgressMonitor?false:this.xProgressMonitor.isCanceled());
+  }
+  
+  protected void updateNextMatchdayProgressLeft(int leftValue)
+  {
+    if(null!=this.xProgressMonitor)
+      this.xProgressMonitor.setProgress(this.xProgressMonitor.getMaximum()-leftValue);
+  }
+
+  protected void updateNextMatchdayProgress(int value)
+  {
+    if(null!=this.xProgressMonitor)
+    {
+      this.xProgressMonitor.setProgress(value);
+    }
+  }
+
+  protected void setNextMatchdayProgressMaximum(int value)
+  {
+    if(null!=this.xProgressMonitor)
+      this.xProgressMonitor.setMaximum(value);
+  }
+
 
   protected boolean generateNextMatchdayByAlgorithm()
   {
@@ -236,7 +287,7 @@ public class SuperMelee extends Observable
     return _retval;    
   }
 
-  public void regenerateLastMatchday()
+  public void regenerateLastMatchday(Component panel)
   {
     int       _matchdayIndex  = this.countMatchdays()-1;
     Matchday  _matchday       = this.getMatchday(_matchdayIndex);
@@ -247,7 +298,7 @@ public class SuperMelee extends Observable
         this.parties.remove(_matchday.getMatch(i));
       this.matchdays.remove(_matchday);
       
-      if(this.generateNextMatchday())
+      if(this.generateNextMatchday(panel))
       {
         this.setChanged();
         this.notifyObservers(new MatchdayUpdate(_matchdayIndex));

@@ -62,21 +62,21 @@ public class EvaluatePetanque
     _tournament.addCompetitor(new Attendee(14, "Ben Weiland"));
     _tournament.addCompetitor(new Attendee(15, "Gerhard Scherer"));
     
-    _tournament.generateNextMatchday();
+    _tournament.generateNextMatchday(null);
     System.out.println("Runde 1:\n" +_tournament.getMatchdayAsString(1));
-    _tournament.generateNextMatchday();
+    _tournament.generateNextMatchday(null);
     System.out.println("\nRunde 2:\n" + _tournament.getMatchdayAsString(2));
-    _tournament.generateNextMatchday();
+    _tournament.generateNextMatchday(null);
     System.out.println("\nRunde 3:\n" + _tournament.getMatchdayAsString(3));
    
     _tournament.getCompetitorByParticipantIdCode("  4").inactivateParticipant();
     _tournament.getCompetitorByParticipantIdCode("  8").inactivateParticipant();
     _tournament.getCompetitorByParticipantIdCode("  2").inactivateParticipant();
-    _tournament.generateNextMatchday();
+    _tournament.generateNextMatchday(null);
     System.out.println("\nRunde 4:\n" + _tournament.getMatchdayAsString(4));
-    _tournament.generateNextMatchday();
+    _tournament.generateNextMatchday(null);
     System.out.println("\nRunde 5:\n" + _tournament.getMatchdayAsString(5));
-    _tournament.generateNextMatchday();
+    _tournament.generateNextMatchday(null);
     System.out.println("\nRunde 6:\n" + _tournament.getMatchdayAsString(6));
 //    _tournament.generateNextMatchday();
 //    System.out.println("\nRunde 7:\n" + _tournament.getMatchdayAsString(7));
