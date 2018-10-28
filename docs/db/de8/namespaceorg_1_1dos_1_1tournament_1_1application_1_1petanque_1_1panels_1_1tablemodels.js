@@ -1,0 +1,6 @@
+var namespaceorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels =
+[
+    [ "LeaderboardTableColumnModel", "d7/d47/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels_1_1_leaderboard_table_column_model.html", "d7/d47/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels_1_1_leaderboard_table_column_model" ],
+    [ "LeaderboardTableModel", "de/d0f/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels_1_1_leaderboard_table_model.html", "de/d0f/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels_1_1_leaderboard_table_model" ],
+    [ "ParticipantsTableModel", "d3/db5/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels_1_1_participants_table_model.html", "d3/db5/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels_1_1_participants_table_model" ]
+];

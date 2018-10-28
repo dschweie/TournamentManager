@@ -1,0 +1,6 @@
+<map id="org.dos.tournament.petanque.team.JoueurIndividuel" name="org.dos.tournament.petanque.team.JoueurIndividuel">
+<area shape="rect" id="node2" href="$dc/dd1/classorg_1_1dos_1_1tournament_1_1player_1_1_association_attendee.html" title="org.dos.tournament.player.\lAssociationAttendee" alt="" coords="31,348,208,389"/>
+<area shape="rect" id="node3" href="$d6/d37/classorg_1_1dos_1_1tournament_1_1player_1_1_attendee.html" title="org.dos.tournament.player.\lAttendee" alt="" coords="31,259,208,300"/>
+<area shape="rect" id="node4" href="$d9/dd5/classorg_1_1dos_1_1tournament_1_1player_1_1_abstract_participant.html" title="org.dos.tournament.player.\lAbstractParticipant" alt="" coords="31,169,208,211"/>
+<area shape="rect" id="node5" href="$d9/d4f/interfaceorg_1_1dos_1_1tournament_1_1player_1_1_i_participant.html" title="Dieses ist das zentrale Interface fÃ¼r Teilnehmer oder Teams im Turnier. " alt="" coords="31,80,208,121"/>
+</map>

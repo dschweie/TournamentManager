@@ -1,0 +1,5 @@
+<map id="org.dos.tournament.petanque.result.PetanqueResult.compareTo" name="org.dos.tournament.petanque.result.PetanqueResult.compareTo">
+<area shape="rect" id="node2" href="$d9/db5/classorg_1_1dos_1_1tournament_1_1petanque_1_1result_1_1_petanque_result.html#a4a56c2f8531d507d1682a1f38fbcf251" title="org.dos.tournament.petanque.result.\lPetanqueResult.PetanqueResult" alt="" coords="284,5,515,47"/>
+<area shape="rect" id="node3" href="$d9/db5/classorg_1_1dos_1_1tournament_1_1petanque_1_1result_1_1_petanque_result.html#a781c95436fc1873cffd70f35b3b131a4" title="org.dos.tournament.petanque.result.\lPetanqueResult.getScore" alt="" coords="284,71,515,112"/>
+<area shape="rect" id="node4" href="$d9/db5/classorg_1_1dos_1_1tournament_1_1petanque_1_1result_1_1_petanque_result.html#a33057361ae2015d0070199722b54801e" title="org.dos.tournament.petanque.result.\lPetanqueResult.getDifference" alt="" coords="284,136,515,177"/>
+</map>

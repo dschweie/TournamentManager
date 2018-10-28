@@ -1,0 +1,6 @@
+<map id="org.dos.tournament.boardgames.movement.TableBasedIndividual.generateMovement" name="org.dos.tournament.boardgames.movement.TableBasedIndividual.generateMovement">
+<area shape="rect" id="node2" href="$df/d9c/classorg_1_1dos_1_1tournament_1_1boardgames_1_1movement_1_1_table_based_individual.html#a765c53f94ba863b38af0ec486351d539" title="org.dos.tournament.boardgames.movement.\lTableBasedIndividual.checkChair" alt="" coords="329,5,605,47"/>
+<area shape="rect" id="node3" href="$df/d9c/classorg_1_1dos_1_1tournament_1_1boardgames_1_1movement_1_1_table_based_individual.html#aa993560a2a10dff5027aafa0c8595813" title="org.dos.tournament.boardgames.movement.\lTableBasedIndividual.setChair" alt="" coords="329,71,605,112"/>
+<area shape="rect" id="node4" href="$df/d9c/classorg_1_1dos_1_1tournament_1_1boardgames_1_1movement_1_1_table_based_individual.html#a16f0376d3240e10e5962c3f55cfb9ccc" title="org.dos.tournament.boardgames.movement.\lTableBasedIndividual.releaseChair" alt="" coords="329,136,605,177"/>
+<area shape="rect" id="node5" href="$df/d9c/classorg_1_1dos_1_1tournament_1_1boardgames_1_1movement_1_1_table_based_individual.html#a9c5e466c61b977bfcc3cda489f177095" title="org.dos.tournament.boardgames.movement.\lTableBasedIndividual.printMovement" alt="" coords="329,201,605,243"/>
+</map>

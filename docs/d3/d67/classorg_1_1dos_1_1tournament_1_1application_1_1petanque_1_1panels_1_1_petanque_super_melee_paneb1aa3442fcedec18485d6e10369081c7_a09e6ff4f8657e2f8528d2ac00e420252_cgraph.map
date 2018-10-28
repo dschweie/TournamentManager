@@ -1,0 +1,4 @@
+<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionUpdateLastRound.updateStatus" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionUpdateLastRound.updateStatus">
+<area shape="rect" id="node2" href="$d1/dc6/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee.html#a772f0b940941bbe283b3054ea13676ac" title="org.dos.tournament.petanque.tournament.movement.\lSuperMelee.getMatchday" alt="" coords="375,5,701,47"/>
+<area shape="rect" id="node3" href="$d2/def/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1matchday_1_1_matchday.html#a51b26ce69a47caab8c91f0cc157fcbdd" title="org.dos.tournament.petanque.tournament.matchday.\lMatchday.countScoredMatches" alt="" coords="375,71,701,112"/>
+</map>

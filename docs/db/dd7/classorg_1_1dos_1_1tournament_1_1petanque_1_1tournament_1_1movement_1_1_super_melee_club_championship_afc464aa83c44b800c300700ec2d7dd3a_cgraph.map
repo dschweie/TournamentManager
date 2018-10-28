@@ -1,0 +1,5 @@
+<map id="org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.analyseLastMatchdays" name="org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.analyseLastMatchdays">
+<area shape="rect" id="node2" href="$db/dd7/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee_club_championship.html#ad14746be7d347c60d9b4d83767c081cf" title="org.dos.tournament.petanque.tournament.movement.\lSuperMeleeClubChampionship.initParticipantTable" alt="" coords="391,5,717,47"/>
+<area shape="rect" id="node3" href="$db/dd7/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee_club_championship.html#acd979d067d5bae357104ce475638e121" title="org.dos.tournament.petanque.tournament.movement.\lSuperMeleeClubChampionship.initTriplettePlayed" alt="" coords="391,71,717,112"/>
+<area shape="rect" id="node4" href="$d9/d4f/interfaceorg_1_1dos_1_1tournament_1_1player_1_1_i_participant.html#a9bc6e25d1e18f0350cb98ebcffacba59" title="org.dos.tournament.player.\lIParticipant.getAttendeesToArray" alt="" coords="447,136,661,177"/>
+</map>

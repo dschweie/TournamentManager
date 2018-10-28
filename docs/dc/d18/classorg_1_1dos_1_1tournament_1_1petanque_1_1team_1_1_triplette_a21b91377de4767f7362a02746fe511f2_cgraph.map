@@ -1,0 +1,7 @@
+<map id="org.dos.tournament.petanque.team.Triplette.getDescription" name="org.dos.tournament.petanque.team.Triplette.getDescription">
+<area shape="rect" id="node2" href="$d4/d79/classorg_1_1dos_1_1tournament_1_1petanque_1_1team_1_1_abstract_petanque_team.html#a4fd2784c98c4aa04e10fc7fcd4532847" title="org.dos.tournament.petanque.team.\lAbstractPetanqueTeam.getPointeur" alt="" coords="281,5,509,47"/>
+<area shape="rect" id="node4" href="$d9/d4f/interfaceorg_1_1dos_1_1tournament_1_1player_1_1_i_participant.html#afe960ae8abf1d064dc18005f91c8c79b" title="org.dos.tournament.player.\lIParticipant.getName" alt="" coords="307,71,484,112"/>
+<area shape="rect" id="node5" href="$d4/d79/classorg_1_1dos_1_1tournament_1_1petanque_1_1team_1_1_abstract_petanque_team.html#ae810691e890488888da12e7d5801fecc" title="org.dos.tournament.petanque.team.\lAbstractPetanqueTeam.getMilieu" alt="" coords="281,136,509,177"/>
+<area shape="rect" id="node6" href="$d4/d79/classorg_1_1dos_1_1tournament_1_1petanque_1_1team_1_1_abstract_petanque_team.html#add13a69f7abfd85e42078f30eee2255e" title="org.dos.tournament.petanque.team.\lAbstractPetanqueTeam.getTireur" alt="" coords="281,201,509,243"/>
+<area shape="rect" id="node3" href="$d7/d2d/classorg_1_1dos_1_1tournament_1_1player_1_1_abstract_team_participant.html#a8a18d0ede989f0f16cbfdea40f361506" title="org.dos.tournament.player.\lAbstractTeamParticipant.getParticipants" alt="" coords="557,136,813,177"/>
+</map>

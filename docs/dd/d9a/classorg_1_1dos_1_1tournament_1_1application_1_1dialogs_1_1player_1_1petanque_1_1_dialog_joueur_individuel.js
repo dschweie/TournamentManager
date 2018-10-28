@@ -1,0 +1,7 @@
+var classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque_1_1_dialog_joueur_individuel =
+[
+    [ "SwingActionOK", "dd/d69/classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque_1_1_dialog_joueur_individuel_1_1_swing_action_o_k.html", "dd/d69/classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque_1_1_dialog_joueur_individuel_1_1_swing_action_o_k" ],
+    [ "SwingActionOkAndNext", "d2/d1e/classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque_1_1_dialog_joueur_317926b130cdb12d5ade28dc8f88e318.html", "d2/d1e/classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque_1_1_dialog_joueur_317926b130cdb12d5ade28dc8f88e318" ],
+    [ "DialogJoueurIndividuel", "dd/d9a/classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque_1_1_dialog_joueur_individuel.html#ad6c79efac03beccd5c21394b0c487cb7", null ],
+    [ "DialogJoueurIndividuel", "dd/d9a/classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque_1_1_dialog_joueur_individuel.html#accbee14f6df74b76aeb1c64f0a3a11c1", null ]
+];

@@ -1,0 +1,21 @@
+<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
+<area shape="rect" id="node2" href="$db/dac/classorg_1_1dos_1_1tournament_1_1competition_1_1_default_competitor_result.html" title="org.dos.tournament.competition.\lDefaultCompetitorResult" alt="" coords="189,5,399,47"/>
+<area shape="rect" id="node3" href="$d5/d5e/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1partie_1_1_competitor_partie_result.html" title="org.dos.tournament.petanque.tournament.partie.\lCompetitorPartieResult" alt="" coords="144,71,444,112"/>
+<area shape="rect" id="node4" href="$d9/d4f/interfaceorg_1_1dos_1_1tournament_1_1player_1_1_i_participant.html" title="Dieses ist das zentrale Interface fÃ¼r Teilnehmer oder Teams im Turnier. " alt="" coords="205,136,383,177"/>
+<area shape="rect" id="node13" href="$d7/dfa/interfaceorg_1_1dos_1_1tournament_1_1result_1_1_i_result.html" title="org.dos.tournament.result.\lIResult" alt="" coords="207,201,381,243"/>
+<area shape="rect" id="node18" href="$d9/dc9/interfaceorg_1_1dos_1_1tournament_1_1result_1_1_i_total_result.html" title="org.dos.tournament.result.\lITotalResult" alt="" coords="207,267,381,308"/>
+<area shape="rect" id="node5" href="$d9/dd5/classorg_1_1dos_1_1tournament_1_1player_1_1_abstract_participant.html" title="org.dos.tournament.player.\lAbstractParticipant" alt="" coords="492,136,669,177"/>
+<area shape="rect" id="node6" href="$d7/d2d/classorg_1_1dos_1_1tournament_1_1player_1_1_abstract_team_participant.html" title="org.dos.tournament.player.\lAbstractTeamParticipant" alt="" coords="747,71,924,112"/>
+<area shape="rect" id="node10" href="$d6/d37/classorg_1_1dos_1_1tournament_1_1player_1_1_attendee.html" title="org.dos.tournament.player.\lAttendee" alt="" coords="747,136,924,177"/>
+<area shape="rect" id="node7" href="$d4/d79/classorg_1_1dos_1_1tournament_1_1petanque_1_1team_1_1_abstract_petanque_team.html" title="org.dos.tournament.petanque.team.\lAbstractPetanqueTeam" alt="" coords="1003,71,1231,112"/>
+<area shape="rect" id="node8" href="$d8/df8/classorg_1_1dos_1_1tournament_1_1petanque_1_1team_1_1_doublette.html" title="org.dos.tournament.petanque.team.\lDoublette" alt="" coords="1311,5,1539,47"/>
+<area shape="rect" id="node9" href="$dc/d18/classorg_1_1dos_1_1tournament_1_1petanque_1_1team_1_1_triplette.html" title="org.dos.tournament.petanque.team.\lTriplette" alt="" coords="1311,71,1539,112"/>
+<area shape="rect" id="node11" href="$dc/dd1/classorg_1_1dos_1_1tournament_1_1player_1_1_association_attendee.html" title="org.dos.tournament.player.\lAssociationAttendee" alt="" coords="1028,136,1205,177"/>
+<area shape="rect" id="node12" href="$d0/df1/classorg_1_1dos_1_1tournament_1_1petanque_1_1team_1_1_joueur_individuel.html" title="org.dos.tournament.petanque.team.\lJoueurIndividuel" alt="" coords="1311,136,1539,177"/>
+<area shape="rect" id="node14" href="$d0/d3d/classorg_1_1dos_1_1tournament_1_1result_1_1_abstract_result.html" title="org.dos.tournament.result.\lAbstractResult" alt="" coords="493,201,668,243"/>
+<area shape="rect" id="node15" href="$d9/db5/classorg_1_1dos_1_1tournament_1_1petanque_1_1result_1_1_petanque_result.html" title="org.dos.tournament.petanque.result.\lPetanqueResult" alt="" coords="720,201,951,243"/>
+<area shape="rect" id="node16" href="$d9/d8e/classorg_1_1dos_1_1tournament_1_1petanque_1_1result_1_1_petanque_match_result.html" title="org.dos.tournament.petanque.result.\lPetanqueMatchResult" alt="" coords="1001,201,1232,243"/>
+<area shape="rect" id="node17" href="$da/d1d/classorg_1_1dos_1_1tournament_1_1petanque_1_1result_1_1_petanque_super_melee_club_championship_result.html" title="org.dos.tournament.petanque.result.\lPetanqueSuperMeleeClubChampionshipResult" alt="" coords="1280,201,1571,243"/>
+<area shape="rect" id="node19" href="$d7/d79/classorg_1_1dos_1_1tournament_1_1result_1_1_abstract_total_result.html" title="org.dos.tournament.result.\lAbstractTotalResult" alt="" coords="493,267,668,308"/>
+<area shape="rect" id="node20" href="$d1/d24/classorg_1_1dos_1_1tournament_1_1petanque_1_1team_1_1_joueur_individuel_1_1_petanque_total_result.html" title="org.dos.tournament.petanque.team.\lJoueurIndividuel.PetanqueTotalResult" alt="" coords="717,267,953,308"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableModel.update" name="org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableModel.update">
+<area shape="rect" id="node2" href="$d9/d4f/interfaceorg_1_1dos_1_1tournament_1_1player_1_1_i_participant.html#ad66e3619a87478747224fb8198e395f7" title="org.dos.tournament.player.\lIParticipant.getStatus" alt="" coords="431,5,608,47"/>
+<area shape="rect" id="node3" href="$d9/d4f/interfaceorg_1_1dos_1_1tournament_1_1player_1_1_i_participant.html#afe960ae8abf1d064dc18005f91c8c79b" title="org.dos.tournament.player.\lIParticipant.getName" alt="" coords="431,71,608,112"/>
+<area shape="rect" id="node4" href="$d9/d4f/interfaceorg_1_1dos_1_1tournament_1_1player_1_1_i_participant.html#ab5d2909d8b278cbff23aaee3629c9f69" title="org.dos.tournament.player.\lIParticipant.getTotalResult" alt="" coords="431,136,608,177"/>
+</map>

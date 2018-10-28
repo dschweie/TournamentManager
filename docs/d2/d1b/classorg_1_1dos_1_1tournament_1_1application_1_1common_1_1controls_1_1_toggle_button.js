@@ -1,0 +1,26 @@
+var classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button =
+[
+    [ "ToggleButton", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#ae267e18a0e37f9c8b91d912150ff7c6b", null ],
+    [ "getFont", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a20d845706975b7230e10beb8b41f8056", null ],
+    [ "getHeight", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a04a7b2909ffffcfbcdfce4ac9ca1516c", null ],
+    [ "getPreferredSize", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a440d9b1b6479168de42ca5fbde3ebfc0", null ],
+    [ "getWidth", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a5c23919812b6d8bd7d5444a12bd9228e", null ],
+    [ "paintComponent", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a014c6006a2e35787a04d0b851c51e1d9", null ],
+    [ "setSelected", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#adc93d7d898bff00d6c8ebf45b9710418", null ],
+    [ "setText", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a01ce4a3e0f35939d848fa35223358f15", null ],
+    [ "black", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a8d59e1b83b517bb25980a288f0de6a1b", null ],
+    [ "bounds", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a67ffe649f067d175859d8242e1dead2f", null ],
+    [ "colorBright", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a1a9e4751ebad8b910a792f967dbe594a", null ],
+    [ "colorDark", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#ae1fb305c3f898101e847246d8f371f0a", null ],
+    [ "falseLabel", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a2e005a3fc32a6c76552907090fa10dc8", null ],
+    [ "font", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a09a94852cfc63f8e217c6779c1e48e29", null ],
+    [ "gap", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#af659f259ae3f5ee4378ac88d251eea7c", null ],
+    [ "globalWitdh", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#aa67e468b6148478e15b611b840ea2266", null ],
+    [ "green", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a5572593c38633339210c40821683c8f9", null ],
+    [ "light", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#ab25bc0210956963de3cba744b6b54f90", null ],
+    [ "max", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#aa704f7741352536e538c30b788ca32ad", null ],
+    [ "red", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a16d28e9e0fb7a73b6e16d66c33e871b5", null ],
+    [ "thumbBounds", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a47498262f069c1362e15c5d4837a3c85", null ],
+    [ "trueLabel", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#ab26291cf6da0d03fdd1ac903a1cef150", null ],
+    [ "white", "d2/d1b/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1controls_1_1_toggle_button.html#a071b2537de971112323920155a82e786", null ]
+];

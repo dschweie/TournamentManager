@@ -1,0 +1,6 @@
+<map id="org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.setResult" name="org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship.setResult">
+<area shape="rect" id="node2" href="$d1/dc6/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee.html#a772f0b940941bbe283b3054ea13676ac" title="org.dos.tournament.petanque.tournament.movement.\lSuperMelee.getMatchday" alt="" coords="380,5,707,47"/>
+<area shape="rect" id="node3" href="$d2/def/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1matchday_1_1_matchday.html#a2901c05d447f110887df43c0c46d29ae" title="org.dos.tournament.petanque.tournament.matchday.\lMatchday.getMatch" alt="" coords="381,71,706,112"/>
+<area shape="rect" id="node4" href="$d6/daa/classorg_1_1dos_1_1tournament_1_1competition_1_1_abstract_encounter.html#a0679c73283424629d382e0b343d17000" title="Setter&#45;Methode für das Ergebnis der Begegnung. " alt="" coords="439,136,648,177"/>
+<area shape="rect" id="node5" href="$d3/d82/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1partie_1_1_partie.html#abeb8b169795897ae3432ae9f12e71067" title="org.dos.tournament.petanque.tournament.partie.\lPartie.getCompetitor" alt="" coords="393,201,693,243"/>
+</map>

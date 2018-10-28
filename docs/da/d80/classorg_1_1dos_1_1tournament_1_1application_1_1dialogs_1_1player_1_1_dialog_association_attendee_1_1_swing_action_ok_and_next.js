@@ -1,0 +1,5 @@
+var classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1_dialog_association_attendee_1_1_swing_action_ok_and_next =
+[
+    [ "SwingActionOkAndNext", "da/d80/classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1_dialog_association_attendee_1_1_swing_action_ok_and_next.html#aa21dd9f949d8f16feac7e36ea1f371f3", null ],
+    [ "actionPerformed", "da/d80/classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1_dialog_association_attendee_1_1_swing_action_ok_and_next.html#ac52c8d4a404c42be8a5543f51e553858", null ]
+];
