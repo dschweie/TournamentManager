@@ -9,10 +9,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.FormSpecs;
-import com.jgoodies.forms.layout.RowSpec;
 import java.util.ResourceBundle;
 import java.util.Vector;
 
@@ -22,12 +18,14 @@ import javax.swing.DefaultComboBoxModel;
 import org.dos.tournament.player.AssociationAttendee;
 import org.dos.tournament.player.IParticipant;
 import org.dos.tournament.player.utils.ParticipantStatus;
-import java.awt.Dialog.ModalityType;
 import javax.swing.AbstractAction;
 import javax.swing.AbstractButton;
 
 import java.awt.event.ActionEvent;
 import javax.swing.Action;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
 
 public class DialogAssociationAttendee extends JDialog
 {
@@ -82,59 +80,101 @@ public class DialogAssociationAttendee extends JDialog
     getContentPane().setLayout(new BorderLayout());
     contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
     getContentPane().add(contentPanel, BorderLayout.NORTH);
-    contentPanel.setLayout(new FormLayout(new ColumnSpec[] {
-        ColumnSpec.decode("center:4px"),
-        ColumnSpec.decode("center:100px"),
-        ColumnSpec.decode("center:4px"),
-        ColumnSpec.decode("300px:grow"),},
-      new RowSpec[] {
-        FormSpecs.LINE_GAP_ROWSPEC,
-        RowSpec.decode("30px"),
-        RowSpec.decode("30px"),
-        RowSpec.decode("30px"),
-        RowSpec.decode("30px"),}));
+    GridBagLayout gbl_contentPanel = new GridBagLayout();
+    gbl_contentPanel.columnWidths = new int[]{111, 111, 111, 111, 0};
+    gbl_contentPanel.rowHeights = new int[]{22, 0, 22, 0};
+    gbl_contentPanel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+    gbl_contentPanel.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
+    contentPanel.setLayout(gbl_contentPanel);
     {
       lblId = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblId.text")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-2$
-      contentPanel.add(lblId, "2, 2, right, center");
+      GridBagConstraints gbc_lblId = new GridBagConstraints();
+      gbc_lblId.anchor = GridBagConstraints.EAST;
+      gbc_lblId.fill = GridBagConstraints.VERTICAL;
+      gbc_lblId.insets = new Insets(0, 0, 5, 5);
+      gbc_lblId.gridx = 0;
+      gbc_lblId.gridy = 0;
+      contentPanel.add(lblId, gbc_lblId);
     }
+    lblId.setLabelFor(textId);
     {
       textId = new JTextField();
       textId.setEditable(false);
       textId.setEnabled(false);
-      lblId.setLabelFor(textId);
-      contentPanel.add(textId, "4, 2, fill, default");
+      GridBagConstraints gbc_textId = new GridBagConstraints();
+      gbc_textId.gridwidth = 3;
+      gbc_textId.fill = GridBagConstraints.BOTH;
+      gbc_textId.insets = new Insets(0, 0, 5, 5);
+      gbc_textId.gridx = 1;
+      gbc_textId.gridy = 0;
+      contentPanel.add(textId, gbc_textId);
       textId.setColumns(10);
     }
     {
       lblName = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblName.text")); //$NON-NLS-1$ //$NON-NLS-2$
-      contentPanel.add(lblName, "2, 3, right, center");
+      GridBagConstraints gbc_lblName = new GridBagConstraints();
+      gbc_lblName.anchor = GridBagConstraints.EAST;
+      gbc_lblName.fill = GridBagConstraints.VERTICAL;
+      gbc_lblName.insets = new Insets(0, 0, 5, 5);
+      gbc_lblName.gridx = 0;
+      gbc_lblName.gridy = 1;
+      contentPanel.add(lblName, gbc_lblName);
     }
     {
       textName = new JTextField();
-      lblName.setLabelFor(textName);
-      contentPanel.add(textName, "4, 3, fill, default");
+      GridBagConstraints gbc_textName = new GridBagConstraints();
+      gbc_textName.gridwidth = 3;
+      gbc_textName.fill = GridBagConstraints.BOTH;
+      gbc_textName.insets = new Insets(0, 0, 5, 5);
+      gbc_textName.gridx = 1;
+      gbc_textName.gridy = 1;
+      contentPanel.add(textName, gbc_textName);
       textName.setColumns(10);
     }
+    lblName.setLabelFor(textName);
     {
       lblAssociation = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblAssociation.text")); //$NON-NLS-1$ //$NON-NLS-2$
-      contentPanel.add(lblAssociation, "2, 4, right, default");
+      GridBagConstraints gbc_lblAssociation = new GridBagConstraints();
+      gbc_lblAssociation.anchor = GridBagConstraints.EAST;
+      gbc_lblAssociation.fill = GridBagConstraints.VERTICAL;
+      gbc_lblAssociation.insets = new Insets(0, 0, 0, 5);
+      gbc_lblAssociation.gridx = 0;
+      gbc_lblAssociation.gridy = 2;
+      contentPanel.add(lblAssociation, gbc_lblAssociation);
     }
+    lblAssociation.setLabelFor(textAssociation);
     {
       textAssociation = new JTextField();
-      lblAssociation.setLabelFor(textAssociation);
-      contentPanel.add(textAssociation, "4, 4, fill, default");
+      GridBagConstraints gbc_textAssociation = new GridBagConstraints();
+      gbc_textAssociation.gridwidth = 3;
+      gbc_textAssociation.fill = GridBagConstraints.BOTH;
+      gbc_textAssociation.insets = new Insets(0, 0, 0, 5);
+      gbc_textAssociation.gridx = 1;
+      gbc_textAssociation.gridy = 2;
+      contentPanel.add(textAssociation, gbc_textAssociation);
       textAssociation.setColumns(10);
     }
     {
       lblState = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblState.text")); //$NON-NLS-1$ //$NON-NLS-2$
-      contentPanel.add(lblState, "2, 5, right, default");
+      GridBagConstraints gbc_lblState = new GridBagConstraints();
+      gbc_lblState.anchor = GridBagConstraints.EAST;
+      gbc_lblState.fill = GridBagConstraints.VERTICAL;
+      gbc_lblState.insets = new Insets(0, 0, 0, 5);
+      gbc_lblState.gridx = 0;
+      gbc_lblState.gridy = 3;
+      contentPanel.add(lblState, gbc_lblState);
     }
+    lblState.setLabelFor(comboBoxStatus);
     {
       comboBoxStatus = new JComboBox();
-      lblState.setLabelFor(comboBoxStatus);
       comboBoxStatus.setModel(new DefaultComboBoxModel(ParticipantStatus.values()));
       comboBoxStatus.setSelectedIndex(1);
-      contentPanel.add(comboBoxStatus, "4, 5, fill, default");
+      GridBagConstraints gbc_comboBoxStatus = new GridBagConstraints();
+      gbc_comboBoxStatus.gridwidth = 3;
+      gbc_comboBoxStatus.fill = GridBagConstraints.BOTH;
+      gbc_comboBoxStatus.gridx = 1;
+      gbc_comboBoxStatus.gridy = 3;
+      contentPanel.add(comboBoxStatus, gbc_comboBoxStatus);
     }
     {
       JPanel buttonPane = new JPanel();
