@@ -1,6 +1,0 @@
-<map id="org.dos.tournament.result.AbstractResult" name="org.dos.tournament.result.AbstractResult">
-<area shape="rect" id="node4" href="$d9/db5/classorg_1_1dos_1_1tournament_1_1petanque_1_1result_1_1_petanque_result.html" title="org.dos.tournament.petanque.result.\lPetanqueResult" alt="" coords="35,259,266,300"/>
-<area shape="rect" id="node2" href="$d7/dfa/interfaceorg_1_1dos_1_1tournament_1_1result_1_1_i_result.html" title="org.dos.tournament.result.\lIResult" alt="" coords="63,80,238,121"/>
-<area shape="rect" id="node5" href="$d9/d8e/classorg_1_1dos_1_1tournament_1_1petanque_1_1result_1_1_petanque_match_result.html" title="org.dos.tournament.petanque.result.\lPetanqueMatchResult" alt="" coords="35,348,266,389"/>
-<area shape="rect" id="node6" href="$da/d1d/classorg_1_1dos_1_1tournament_1_1petanque_1_1result_1_1_petanque_super_melee_club_championship_result.html" title="org.dos.tournament.petanque.result.\lPetanqueSuperMeleeClubChampionshipResult" alt="" coords="5,437,296,479"/>
-</map>

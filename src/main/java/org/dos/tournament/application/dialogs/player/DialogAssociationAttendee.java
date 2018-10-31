@@ -15,9 +15,13 @@ import java.util.Vector;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
+import org.dos.tournament.application.TournamentManagerUI;
 import org.dos.tournament.player.AssociationAttendee;
 import org.dos.tournament.player.IParticipant;
 import org.dos.tournament.player.utils.ParticipantStatus;
+
+import com.mongodb.MongoClient;
+
 import javax.swing.AbstractAction;
 import javax.swing.AbstractButton;
 
@@ -49,6 +53,11 @@ public class DialogAssociationAttendee extends JDialog
   private JButton btnCancel;
   private JButton btnAdditionalAttendee;
   private final Action actionOkAndNext = new SwingActionOkAndNext();
+  private JLabel lblSurname;
+  private JTextField textSurname;
+  private JLabel lblDataEntries;
+  private JComboBox comboBoxDataEntries;
+  private JLabel lblHits;
 
 
   /**
@@ -81,10 +90,10 @@ public class DialogAssociationAttendee extends JDialog
     contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
     getContentPane().add(contentPanel, BorderLayout.NORTH);
     GridBagLayout gbl_contentPanel = new GridBagLayout();
-    gbl_contentPanel.columnWidths = new int[]{111, 111, 111, 111, 0};
-    gbl_contentPanel.rowHeights = new int[]{22, 0, 22, 0};
-    gbl_contentPanel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-    gbl_contentPanel.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
+    gbl_contentPanel.columnWidths = new int[] {60, 150, 60, 100, 50, 0};
+    gbl_contentPanel.rowHeights = new int[]{22, 0, 22, 0, 0};
+    gbl_contentPanel.columnWeights = new double[]{0.0, 1.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
+    gbl_contentPanel.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE, 0.0};
     contentPanel.setLayout(gbl_contentPanel);
     {
       lblId = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblId.text")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-2$
@@ -123,7 +132,6 @@ public class DialogAssociationAttendee extends JDialog
     {
       textName = new JTextField();
       GridBagConstraints gbc_textName = new GridBagConstraints();
-      gbc_textName.gridwidth = 3;
       gbc_textName.fill = GridBagConstraints.BOTH;
       gbc_textName.insets = new Insets(0, 0, 5, 5);
       gbc_textName.gridx = 1;
@@ -133,11 +141,31 @@ public class DialogAssociationAttendee extends JDialog
     }
     lblName.setLabelFor(textName);
     {
+      lblSurname = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblSurname.text")); //$NON-NLS-1$ //$NON-NLS-2$
+      GridBagConstraints gbc_lblSurname = new GridBagConstraints();
+      gbc_lblSurname.anchor = GridBagConstraints.EAST;
+      gbc_lblSurname.insets = new Insets(0, 0, 5, 5);
+      gbc_lblSurname.gridx = 2;
+      gbc_lblSurname.gridy = 1;
+      contentPanel.add(lblSurname, gbc_lblSurname);
+    }
+    {
+      textSurname = new JTextField();
+      GridBagConstraints gbc_textSurname = new GridBagConstraints();
+      gbc_textSurname.gridwidth = 2;
+      gbc_textSurname.insets = new Insets(0, 0, 5, 0);
+      gbc_textSurname.fill = GridBagConstraints.HORIZONTAL;
+      gbc_textSurname.gridx = 3;
+      gbc_textSurname.gridy = 1;
+      contentPanel.add(textSurname, gbc_textSurname);
+      textSurname.setColumns(10);
+    }
+    {
       lblAssociation = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblAssociation.text")); //$NON-NLS-1$ //$NON-NLS-2$
       GridBagConstraints gbc_lblAssociation = new GridBagConstraints();
       gbc_lblAssociation.anchor = GridBagConstraints.EAST;
       gbc_lblAssociation.fill = GridBagConstraints.VERTICAL;
-      gbc_lblAssociation.insets = new Insets(0, 0, 0, 5);
+      gbc_lblAssociation.insets = new Insets(0, 0, 5, 5);
       gbc_lblAssociation.gridx = 0;
       gbc_lblAssociation.gridy = 2;
       contentPanel.add(lblAssociation, gbc_lblAssociation);
@@ -146,9 +174,9 @@ public class DialogAssociationAttendee extends JDialog
     {
       textAssociation = new JTextField();
       GridBagConstraints gbc_textAssociation = new GridBagConstraints();
-      gbc_textAssociation.gridwidth = 3;
+      gbc_textAssociation.insets = new Insets(0, 0, 5, 0);
+      gbc_textAssociation.gridwidth = 4;
       gbc_textAssociation.fill = GridBagConstraints.BOTH;
-      gbc_textAssociation.insets = new Insets(0, 0, 0, 5);
       gbc_textAssociation.gridx = 1;
       gbc_textAssociation.gridy = 2;
       contentPanel.add(textAssociation, gbc_textAssociation);
@@ -159,7 +187,7 @@ public class DialogAssociationAttendee extends JDialog
       GridBagConstraints gbc_lblState = new GridBagConstraints();
       gbc_lblState.anchor = GridBagConstraints.EAST;
       gbc_lblState.fill = GridBagConstraints.VERTICAL;
-      gbc_lblState.insets = new Insets(0, 0, 0, 5);
+      gbc_lblState.insets = new Insets(0, 0, 5, 5);
       gbc_lblState.gridx = 0;
       gbc_lblState.gridy = 3;
       contentPanel.add(lblState, gbc_lblState);
@@ -170,11 +198,38 @@ public class DialogAssociationAttendee extends JDialog
       comboBoxStatus.setModel(new DefaultComboBoxModel(ParticipantStatus.values()));
       comboBoxStatus.setSelectedIndex(1);
       GridBagConstraints gbc_comboBoxStatus = new GridBagConstraints();
-      gbc_comboBoxStatus.gridwidth = 3;
+      gbc_comboBoxStatus.insets = new Insets(0, 0, 5, 0);
+      gbc_comboBoxStatus.gridwidth = 4;
       gbc_comboBoxStatus.fill = GridBagConstraints.BOTH;
       gbc_comboBoxStatus.gridx = 1;
       gbc_comboBoxStatus.gridy = 3;
       contentPanel.add(comboBoxStatus, gbc_comboBoxStatus);
+    }
+    {
+      lblDataEntries = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblStoredData.text")); //$NON-NLS-1$ //$NON-NLS-2$
+      GridBagConstraints gbc_lblDataEntries = new GridBagConstraints();
+      gbc_lblDataEntries.anchor = GridBagConstraints.EAST;
+      gbc_lblDataEntries.insets = new Insets(0, 0, 0, 5);
+      gbc_lblDataEntries.gridx = 0;
+      gbc_lblDataEntries.gridy = 4;
+      contentPanel.add(lblDataEntries, gbc_lblDataEntries);
+    }
+    {
+      comboBoxDataEntries = new JComboBox();
+      GridBagConstraints gbc_comboBoxDataEntries = new GridBagConstraints();
+      gbc_comboBoxDataEntries.gridwidth = 3;
+      gbc_comboBoxDataEntries.insets = new Insets(0, 0, 0, 5);
+      gbc_comboBoxDataEntries.fill = GridBagConstraints.HORIZONTAL;
+      gbc_comboBoxDataEntries.gridx = 1;
+      gbc_comboBoxDataEntries.gridy = 4;
+      contentPanel.add(comboBoxDataEntries, gbc_comboBoxDataEntries);
+    }
+    {
+      lblHits = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblMatches.text")); //$NON-NLS-1$ //$NON-NLS-2$
+      GridBagConstraints gbc_lblHits = new GridBagConstraints();
+      gbc_lblHits.gridx = 4;
+      gbc_lblHits.gridy = 4;
+      contentPanel.add(lblHits, gbc_lblHits);
     }
     {
       JPanel buttonPane = new JPanel();
@@ -189,6 +244,7 @@ public class DialogAssociationAttendee extends JDialog
       }
       {
         btnAdditionalAttendee = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+        btnAdditionalAttendee.setMnemonic('w');
         btnAdditionalAttendee.setAction(actionOkAndNext);
         buttonPane.add(btnAdditionalAttendee);
       }
@@ -200,6 +256,13 @@ public class DialogAssociationAttendee extends JDialog
       }
     }
     this.pack();
+    
+    if(null == TournamentManagerUI.getMongoClient())
+    {
+      lblDataEntries.setEnabled(false);
+      comboBoxDataEntries.setEnabled(false);
+      lblHits.setVisible(false);
+    }
   }
 
   public DialogAssociationAttendee(Vector<IParticipant> participants, int pos)
@@ -220,6 +283,11 @@ public class DialogAssociationAttendee extends JDialog
       this.setTitle("Teilnehmer bearbeiten");
       this.btnAdditionalAttendee.setVisible(false);
       this.btnAdditionalAttendee.setEnabled(false);
+      
+      this.lblDataEntries.setVisible(false);
+      this.comboBoxDataEntries.setVisible(false);
+      this.lblHits.setVisible(false);
+      
     }
     else
     {

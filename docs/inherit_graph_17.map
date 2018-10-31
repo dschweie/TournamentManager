@@ -1,3 +1,5 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$d1/d4d/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1utils_1_1_tournament_utils.html" title="org.dos.tournament.petanque.tournament.utils.\lTournamentUtils" alt="" coords="5,5,297,47"/>
+<area shape="rect" id="node1" href="$a00416.html" title="org.dos.tournament.player.utils.\lIParticipantId" alt="" coords="5,39,211,80"/>
+<area shape="rect" id="node2" href="$a00420.html" title="org.dos.tournament.player.utils.\lNumericAssociationId" alt="" coords="259,5,464,47"/>
+<area shape="rect" id="node3" href="$a00424.html" title="org.dos.tournament.player.utils.\lNumericParticipantId" alt="" coords="259,71,464,112"/>
 </map>

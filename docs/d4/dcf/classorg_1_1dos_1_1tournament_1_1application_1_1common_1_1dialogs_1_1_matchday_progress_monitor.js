@@ -1,4 +1,0 @@
-var classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1dialogs_1_1_matchday_progress_monitor =
-[
-    [ "MatchdayProgressMonitor", "d4/dcf/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1dialogs_1_1_matchday_progress_monitor.html#a658a357d031552fd9fee9aee25806fce", null ]
-];

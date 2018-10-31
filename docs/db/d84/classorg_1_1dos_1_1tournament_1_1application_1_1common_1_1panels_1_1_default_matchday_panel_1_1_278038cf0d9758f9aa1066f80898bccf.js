@@ -1,6 +1,0 @@
-var classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1_default_matchday_panel_1_1_278038cf0d9758f9aa1066f80898bccf =
-[
-    [ "SwingActionToggleTeamPresentation", "db/d84/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1_default_matchday_panel_1_1_278038cf0d9758f9aa1066f80898bccf.html#a0918741f979c28ff8a04f256a65ae758", null ],
-    [ "actionPerformed", "db/d84/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1_default_matchday_panel_1_1_278038cf0d9758f9aa1066f80898bccf.html#a7c62cfa6e8d96c4c336b8494e9eea99d", null ],
-    [ "updateButton", "db/d84/classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1_default_matchday_panel_1_1_278038cf0d9758f9aa1066f80898bccf.html#adf6016493646618eb94ca37b08e9df9c", null ]
-];

@@ -48,6 +48,8 @@ import org.dos.tournament.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship;
 import org.dos.tournament.player.AssociationAttendee;
 
+import com.mongodb.MongoClient;
+
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
 import javax.swing.Action;
@@ -69,6 +71,8 @@ public class TournamentManagerUI
   private final Action createTournament = new CreateTournamentAction(this.frmTurnierverwaltung);
   private JTextField txtSwVersion;
   private JTextField txtOS;
+  
+  static private MongoClient mongoClient = null;
 
   /**
    * Launch the application.
@@ -159,6 +163,26 @@ public class TournamentManagerUI
     JMenuItem mntmTurnierverwaltungBeenden = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmTurnierverwaltungBeenden.text")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-2$
     mntmTurnierverwaltungBeenden.setAction(actionExit);
     mnDatei.add(mntmTurnierverwaltungBeenden);
+    
+    TournamentManagerUI.initConnection();
+  }
+  
+  static public MongoClient initConnection()
+  {
+    try
+    {
+      TournamentManagerUI.mongoClient = new MongoClient();
+    } catch (Exception e)
+    {
+      TournamentManagerUI.mongoClient = null;
+      e.printStackTrace();
+    }
+    return TournamentManagerUI.mongoClient;
+  }
+  
+  static public MongoClient getMongoClient()
+  {
+    return TournamentManagerUI.mongoClient;
   }
 
   private class SwingAction extends AbstractAction {

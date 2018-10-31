@@ -1,0 +1,4 @@
+var namespaceorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque =
+[
+    [ "DialogJoueurIndividuel", "classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque_1_1_dialog_joueur_individuel.html", "classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque_1_1_dialog_joueur_individuel" ]
+];

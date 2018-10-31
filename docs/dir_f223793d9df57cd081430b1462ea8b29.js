@@ -1,10 +1,10 @@
 var dir_f223793d9df57cd081430b1462ea8b29 =
 [
-    [ "SuperMelee.java", "df/d72/_super_melee_8java.html", [
-      [ "SuperMelee", "d1/dc6/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee.html", "d1/dc6/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee" ],
-      [ "MatchdayUpdate", "d4/d84/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee_1_1_matchday_update.html", "d4/d84/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee_1_1_matchday_update" ]
+    [ "SuperMelee.java", "a00077.html", [
+      [ "SuperMelee", "a00368.html", "a00368" ],
+      [ "MatchdayUpdate", "a00372.html", "a00372" ]
     ] ],
-    [ "SuperMeleeClubChampionship.java", "d1/df6/_super_melee_club_championship_8java.html", [
-      [ "SuperMeleeClubChampionship", "db/dd7/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee_club_championship.html", "db/dd7/classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee_club_championship" ]
+    [ "SuperMeleeClubChampionship.java", "a00080.html", [
+      [ "SuperMeleeClubChampionship", "a00376.html", "a00376" ]
     ] ]
 ];

@@ -1,5 +1,0 @@
-var classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane19dba74bf8521722aa51a57f4c58713b =
-[
-    [ "SwingActionDeleteAttendee", "d3/daa/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane19dba74bf8521722aa51a57f4c58713b.html#ae1decb5b178c4a8f3544bb55087b1afe", null ],
-    [ "actionPerformed", "d3/daa/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane19dba74bf8521722aa51a57f4c58713b.html#a86ca09db1b94c564102fc69291da8378", null ]
-];

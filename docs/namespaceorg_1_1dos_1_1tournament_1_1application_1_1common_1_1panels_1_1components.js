@@ -1,0 +1,4 @@
+var namespaceorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1components =
+[
+    [ "SuperMeleeMatchdayTable", "classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1components_1_1_super_melee_matchday_table.html", "classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1components_1_1_super_melee_matchday_table" ]
+];

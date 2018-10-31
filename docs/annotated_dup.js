@@ -1,4 +1,6 @@
 var annotated_dup =
 [
-    [ "org", "db/d96/namespaceorg.html", "db/d96/namespaceorg" ]
+    [ "org", "a00135.html", "a00135" ],
+    [ "Comparable", "a00912.html", null ],
+    [ "Runnable", "a00908.html", null ]
 ];

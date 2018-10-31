@@ -1,4 +1,4 @@
 var namespaces =
 [
-    [ "org", "db/d96/namespaceorg.html", "db/d96/namespaceorg" ]
+    [ "org", "a00135.html", "a00135" ]
 ];

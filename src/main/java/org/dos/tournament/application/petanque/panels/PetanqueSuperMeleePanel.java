@@ -17,6 +17,8 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
+import org.bson.Document;
+import org.bson.conversions.Bson;
 import org.dos.tournament.application.common.panels.DefaultMatchdayPanel;
 import org.dos.tournament.application.dialogs.player.DialogAssociationAttendee;
 import org.dos.tournament.application.dialogs.player.petanque.DialogJoueurIndividuel;
@@ -27,6 +29,10 @@ import org.dos.tournament.petanque.team.JoueurIndividuel;
 import org.dos.tournament.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.player.AssociationAttendee;
+import org.dos.tournament.player.IParticipant;
+
+import com.mongodb.DBObject;
+import com.mongodb.MongoClient;
 
 import javax.swing.ScrollPaneConstants;
 import java.awt.Rectangle;
@@ -79,6 +85,7 @@ public class PetanqueSuperMeleePanel extends JPanel
   private JTable table;
   private JTable tableLeaderboard;
   private final Action replaceLastMatchday = new SwingActionUpdateLastRound();
+  private final Action addToDatabase = new SwingActionAddParticipantsToDatabase();
   
   /**
    * Create the panel.
@@ -144,6 +151,8 @@ public class PetanqueSuperMeleePanel extends JPanel
     button.setToolTipText("Import fiktiver Spieler");
     button.setText("");
     button.setIcon(new ImageIcon(PetanqueSuperMeleePanel.class.getResource("/org/dos/tournament/resources/icons/if_219-Dice_2124175.png")));
+    
+    JButton button_1 = toolBar_1.add(addToDatabase);
     
     JScrollPane scrollPane = new JScrollPane();
     panel_1.add(scrollPane, BorderLayout.CENTER);
@@ -501,5 +510,26 @@ public class PetanqueSuperMeleePanel extends JPanel
       this.updateStatus();
     }
     
+  }
+  private class SwingActionAddParticipantsToDatabase extends AbstractAction {
+    public SwingActionAddParticipantsToDatabase() {
+      putValue(SMALL_ICON, new ImageIcon(PetanqueSuperMeleePanel.class.getResource("/org/dos/tournament/resources/icons/if_413-Data_Add_2124504.png")));
+      putValue(NAME, "SwingAction");
+      putValue(SHORT_DESCRIPTION, "Some short description");
+    }
+    public void actionPerformed(ActionEvent e) {
+      if(null != PetanqueSuperMeleePanel.this.tournament)
+      {
+        MongoClient _mongoClient = new MongoClient("localhost");
+        
+        for( IParticipant _it : PetanqueSuperMeleePanel.this.tournament.getCompetitors() )
+        {
+          if (0 == _mongoClient.getDatabase("sandboxUsers").getCollection("participants").count(((Bson) ( new Document() ).append("name", _it.getName() ) )) )
+            _mongoClient.getDatabase("sandboxUsers").getCollection("participants").insertOne((Document) (new Document()).append("name", _it.getName()));
+        }
+        
+        _mongoClient.close();
+      }
+    }
   }
 }

@@ -1,5 +1,0 @@
-var classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane80f122ef89a82b02efc7b000ca97c025 =
-[
-    [ "SwingActionActivateAttendee", "d1/d48/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane80f122ef89a82b02efc7b000ca97c025.html#a592f007642f9d3a44300ef86e1f4af6c", null ],
-    [ "actionPerformed", "d1/d48/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane80f122ef89a82b02efc7b000ca97c025.html#ad6ef58b5ddec4126f8cd7027a1f196c8", null ]
-];

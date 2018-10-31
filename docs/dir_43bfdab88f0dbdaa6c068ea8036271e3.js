@@ -1,15 +1,16 @@
 var dir_43bfdab88f0dbdaa6c068ea8036271e3 =
 [
     [ "tablemodels", "dir_3e8f02df41bcf73c99a2f2a946ac2606.html", "dir_3e8f02df41bcf73c99a2f2a946ac2606" ],
-    [ "PetanqueSuperMeleePanel.java", "d5/dde/_petanque_super_melee_panel_8java.html", [
-      [ "PetanqueSuperMeleePanel", "d2/da3/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_panel.html", "d2/da3/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_panel" ],
-      [ "SwingActionEnlistAttendee", "d6/dee/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane2c7bbe55dda04c769715b2ba6c65c750.html", "d6/dee/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane2c7bbe55dda04c769715b2ba6c65c750" ],
-      [ "SwingActionUpdateAttendee", "d8/dfb/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_paneafc789b1d6f813ee3177afd0c8a28653.html", "d8/dfb/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_paneafc789b1d6f813ee3177afd0c8a28653" ],
-      [ "SwingActionActivateAttendee", "d1/d48/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane80f122ef89a82b02efc7b000ca97c025.html", "d1/d48/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane80f122ef89a82b02efc7b000ca97c025" ],
-      [ "SwingActionInactivateAttendee", "d2/dd2/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane80bd598ff7b84cb9bbd7362112a02e22.html", "d2/dd2/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane80bd598ff7b84cb9bbd7362112a02e22" ],
-      [ "SwingActionDeleteAttendee", "d3/daa/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane19dba74bf8521722aa51a57f4c58713b.html", "d3/daa/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane19dba74bf8521722aa51a57f4c58713b" ],
-      [ "SwingActionCreateNewMatchday", "d6/de0/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_paneb48c1a099809ed8569c6cf442bbd418e.html", "d6/de0/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_paneb48c1a099809ed8569c6cf442bbd418e" ],
-      [ "SwingActionImportSomePlayers", "d8/db9/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane1492bedd943c9f7358ce965a1d5512ae.html", "d8/db9/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_pane1492bedd943c9f7358ce965a1d5512ae" ],
-      [ "SwingActionUpdateLastRound", "d3/d67/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_paneb1aa3442fcedec18485d6e10369081c7.html", "d3/d67/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_paneb1aa3442fcedec18485d6e10369081c7" ]
+    [ "PetanqueSuperMeleePanel.java", "a00023.html", [
+      [ "PetanqueSuperMeleePanel", "a00248.html", "a00248" ],
+      [ "SwingActionEnlistAttendee", "a00252.html", "a00252" ],
+      [ "SwingActionUpdateAttendee", "a00256.html", "a00256" ],
+      [ "SwingActionActivateAttendee", "a00260.html", "a00260" ],
+      [ "SwingActionInactivateAttendee", "a00264.html", "a00264" ],
+      [ "SwingActionDeleteAttendee", "a00268.html", "a00268" ],
+      [ "SwingActionCreateNewMatchday", "a00272.html", "a00272" ],
+      [ "SwingActionImportSomePlayers", "a00276.html", "a00276" ],
+      [ "SwingActionUpdateLastRound", "a00280.html", "a00280" ],
+      [ "SwingActionAddParticipantsToDatabase", "a00284.html", "a00284" ]
     ] ]
 ];

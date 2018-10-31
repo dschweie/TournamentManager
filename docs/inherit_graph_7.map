@@ -1,4 +1,4 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node2" href="$de/db4/classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1_dialog_association_attendee.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee" alt="" coords="117,5,405,47"/>
-<area shape="rect" id="node3" href="$dd/d9a/classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque_1_1_dialog_joueur_individuel.html" title="org.dos.tournament.application.dialogs.player.petanque.\lDialogJoueurIndividuel" alt="" coords="453,5,799,47"/>
+<area shape="rect" id="node2" href="$a00220.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee" alt="" coords="117,5,405,47"/>
+<area shape="rect" id="node3" href="$a00236.html" title="org.dos.tournament.application.dialogs.player.petanque.\lDialogJoueurIndividuel" alt="" coords="453,5,799,47"/>
 </map>

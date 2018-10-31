@@ -58,7 +58,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
     
     if(null != _grid)
     {
-      Collections.shuffle(_members);
+      //Collections.shuffle(_members);
       this.analyseLastMatchdays(_members);
       _grid = fillGridWithParticipants(_grid, _members);
       
@@ -124,10 +124,14 @@ public class SuperMeleeClubChampionship extends SuperMelee
             grid.get(_idxPartie).get(_idxTeam).set(_idxSlot, new Integer(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() + 1) );
             
             _valid = grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() < participants.size();
+            System.out.println(String.format("Pruefung: Index okay         : %d ; %d ; %d ", _idxPartie, _idxTeam, _idxSlot).concat(String.valueOf(_valid)).concat(" => ").concat(grid.toString()));
+
             _valid &= !this.checkMemberInGrid(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue(), _idxPartie, _idxTeam, _idxSlot, grid);
+            System.out.println(String.format("Pruefung: Spieler unique     : %d ; %d ; %d ", _idxPartie, _idxTeam, _idxSlot).concat(String.valueOf(_valid)).concat(" => ").concat(grid.toString()));
 
             if(_valid && (3 == grid.get(_idxPartie).get(_idxTeam).size()) && this.isRuleNoTripletteTwiceActive())
               _valid &= !this.abTriplettePlayed[grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue()];
+            System.out.println(String.format("Pruefung: Triplette gespielt : %d ; %d ; %d ", _idxPartie, _idxTeam, _idxSlot).concat(String.valueOf(_valid)).concat(" => ").concat(grid.toString()));
               
             for(int _iTeam=0; _valid && (_iTeam <= _idxTeam); ++_iTeam)
             {
@@ -140,9 +144,9 @@ public class SuperMeleeClubChampionship extends SuperMelee
               }
             }
 
+            System.out.println(String.format("Pruefung: nicht zusammen     : %d ; %d ; %d ", _idxPartie, _idxTeam, _idxSlot).concat(String.valueOf(_valid)).concat(" => ").concat(grid.toString()));
             if(_valid)
             {
-              // System.out.println(String.format("%d ; %d ; %d ", _idxPartie, _idxTeam, _idxSlot).concat(String.valueOf(_valid)).concat(" => ").concat(grid.toString()));
               this.updateNextMatchdayProgress(_idxPartie*2+_idxTeam);
 
               ++_idxSlot;
@@ -275,7 +279,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
     { //  mindestens 4 aktive Teilnehmer werden benötigt, damit eine Runde erstellt werden kann
       
       
-      Collections.shuffle(_members);
+      //Collections.shuffle(_members);
       Matchday _matchday = new Matchday();
       Partie _p = null;
       while(0 < _members.size())

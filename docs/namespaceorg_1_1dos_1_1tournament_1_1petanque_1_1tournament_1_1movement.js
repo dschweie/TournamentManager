@@ -1,0 +1,5 @@
+var namespaceorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement =
+[
+    [ "SuperMelee", "classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee.html", "classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee" ],
+    [ "SuperMeleeClubChampionship", "classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee_club_championship.html", "classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1movement_1_1_super_melee_club_championship" ]
+];

@@ -1,4 +1,0 @@
-var classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels_1_1_leaderboard_table_column_model =
-[
-    [ "update", "d7/d47/classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels_1_1_leaderboard_table_column_model.html#aec01dc4a9303fdd1abbfd62f26a138eb", null ]
-];

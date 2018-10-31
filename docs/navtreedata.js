@@ -22,9 +22,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"d5/d04/namespaceorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels.html",
-"db/dac/classorg_1_1dos_1_1tournament_1_1competition_1_1_default_competitor_result.html#a8a2398f9c22641f0d1ee7254cc862e7b"
+"a00002.html",
+"a00232.html",
+"a00380.html#a21262d3ba10d295093ef2851484cbe7e"
 ];
 
 var SYNCONMSG = 'Klicken um Panelsynchronisation auszuschalten';
