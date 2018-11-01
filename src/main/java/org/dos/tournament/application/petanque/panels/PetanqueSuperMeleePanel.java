@@ -400,19 +400,14 @@ public class PetanqueSuperMeleePanel extends JPanel
         }
         else
         { //  in this case the ruleset should be made more flexible
-          if(PetanqueSuperMeleePanel.this.tournament.isRuleNotSameOpponentActive())
-            PetanqueSuperMeleePanel.this.tournament.setRuleNotSameOpponent(false);
-          else
-            if(PetanqueSuperMeleePanel.this.tournament.isRuleNoTripletteTwiceActive())
-              PetanqueSuperMeleePanel.this.tournament.setRuleNoTripletteTwice(false);
-            else
-            { 
-              JOptionPane.showMessageDialog(null,
-                  "Es kann keine weitere Runde angelegt werden, ohne die Regeln zu verletzen.",
-                  "Fehler: Anlegen einer neuen Runde",
-                  JOptionPane.ERROR_MESSAGE);              
-              _processed = true;           
-            }
+          if(!PetanqueSuperMeleePanel.this.tournament.suspendWeakestRule())
+          {
+            JOptionPane.showMessageDialog(null,
+                "Es kann keine weitere Runde angelegt werden, ohne die Regeln zu verletzen.",
+                "Fehler: Anlegen einer neuen Runde",
+                JOptionPane.ERROR_MESSAGE);              
+            _processed = true;           
+          }
         }
       }
     }

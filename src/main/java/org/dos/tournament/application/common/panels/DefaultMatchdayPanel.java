@@ -48,6 +48,7 @@ public class DefaultMatchdayPanel extends JPanel
   private ToggleButton stateOpponents = new ToggleButton("O", "0", false);
   private ToggleButton stateTriplette = new ToggleButton("T", "0", false);
   private JScrollPane scrollPane;
+  private JButton btnPrintMatchday;
   
 
   /**
@@ -60,14 +61,16 @@ public class DefaultMatchdayPanel extends JPanel
     JToolBar toolBar = new JToolBar();
     add(toolBar, BorderLayout.SOUTH);
     
-    JButton btnPrintMatchday = toolBar.add(printMatchday);
+    btnPrintMatchday = toolBar.add(printMatchday);
     
+    /*
     toolBar.add(this.stateTeammates);
     toolBar.add(this.stateOpponents);
     toolBar.add(this.stateTriplette);
     this.stateTeammates.setToolTipText("Regel: Keine Runde mit dem gleichen Partner.");
     this.stateOpponents.setToolTipText("Regel: Keine Runde gegen den gleichen Gegner.");
     this.stateTriplette.setToolTipText("Regel: Keine zwei Runden im Triplette.");
+     */
     
     Component horizontalStrut = Box.createHorizontalStrut(10);
     horizontalStrut.setMinimumSize(new Dimension(10, 10));
@@ -102,6 +105,10 @@ public class DefaultMatchdayPanel extends JPanel
     
     this.tableMatches = new SuperMeleeMatchdayTable(tournament, matchday);
     
+    
+    
+    this.btnPrintMatchday.setToolTipText("<html><p width=\"650\">" +tournament.getRegulationState().replaceAll("\n", "<br/>")+"</p></html>");
+        
     scrollPane.setViewportView(tableMatches);
   }
 

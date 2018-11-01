@@ -9,13 +9,26 @@ import javax.swing.ProgressMonitor;
 
 import org.dos.tournament.application.common.dialogs.MatchdayProgressMonitor;
 import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
+import org.dos.tournament.movement.regulations.Regulation;
 import org.dos.tournament.petanque.team.AbstractPetanqueTeam;
 import org.dos.tournament.petanque.tournament.matchday.Matchday;
+import org.dos.tournament.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTandem;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTwice;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTandem;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTwice;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTwice;
 import org.dos.tournament.petanque.tournament.partie.Partie;
 import org.dos.tournament.player.IParticipant;
 
 public class SuperMelee extends Observable
 {
+  static final public char FLAG_NEVER_MET       = ' ';
+  static final public char FLAG_WERE_TEAMMATES  = 'T';
+  static final public char FLAG_WERE_OPPONENTS  = 'O';
+  static final public char FLAG_INVALID_PAIR    = 'X';
+  
   protected Vector<IParticipant> competitors;
   protected Vector<Matchday> matchdays;
   
@@ -28,11 +41,7 @@ public class SuperMelee extends Observable
   
   private ProgressMonitor xProgressMonitor = null;      
 
-  
-  static final public char FLAG_NEVER_MET       = ' ';
-  static final public char FLAG_WERE_TEAMMATES  = 'T';
-  static final public char FLAG_WERE_OPPONENTS  = 'O';
-  static final public char FLAG_INVALID_PAIR    = 'X';
+  protected Regulation<SuperMelee, Vector<Vector<Integer>>, IParticipant> regulations; 
   
   /**
    * @return the bRuleNotSamePartner
@@ -89,6 +98,16 @@ public class SuperMelee extends Observable
     
     this.parties = new Vector<Partie>();
     this.teams = new Vector<AbstractPetanqueTeam>();
+ 
+    
+    this.regulations = new CoreRuleSuperMeleeAllIndicesUnique();
+    this.regulations = new RuleSuperMeleeNeverMeetTeammateTandem(this.regulations, true, false);
+    this.regulations = new RuleSuperMeleeNeverMeetTeammateTwice(this.regulations, true, true);
+    this.regulations = new RuleSuperMeleeNeverPlayTripletteTandem(this.regulations, true, true);
+    this.regulations = new RuleSuperMeleeNeverMeetOpponentTandem(this.regulations, true, true);
+    this.regulations = new RuleSuperMeleeNeverPlayTripletteTwice(this.regulations, true, true);
+    this.regulations = new RuleSuperMeleeNeverMeetOpponentTwice(this.regulations, true, true);
+    
   }
   
   /**
@@ -258,7 +277,6 @@ public class SuperMelee extends Observable
       this.xProgressMonitor.setMaximum(value);
   }
 
-
   protected boolean generateNextMatchdayByAlgorithm()
   {
     // TODO Auto-generated method stub
@@ -307,6 +325,11 @@ public class SuperMelee extends Observable
     }
   }
   
+  public boolean suspendWeakestRule()
+  {
+    return this.regulations.suspend();
+  }
+  
   public class MatchdayUpdate {
     private int matchday;
     
@@ -322,5 +345,10 @@ public class SuperMelee extends Observable
     {
       return matchday;
     }
+  }
+
+  public String getRegulationState() 
+  {
+    return this.regulations.toString();
   }
 }
