@@ -58,17 +58,13 @@ public abstract class AbstractRegulationDecorator<T,G,P> implements Regulation<T
   @Override
   public boolean suspend() 
   {
-    boolean _hasInnerToggled = this.xInner.suspend();
-    boolean _hasThisToggled = false;
-    
-    if(!_hasInnerToggled)
-      if(this.bEffective && this.bSuspendable)
-      {
-        this.bEffective = false;
-        _hasThisToggled = true;
-      }
-    
-    return (_hasInnerToggled || _hasThisToggled);
+    if(this.bEffective && this.bSuspendable)
+    {
+      this.bEffective = false;
+      return true;
+    }
+    else
+      return this.xInner.suspend();
   }
 
   @Override

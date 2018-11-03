@@ -11,7 +11,6 @@ public class MatchdayProgressMonitor extends ProgressMonitor
   {
     super(parentComponent, message, note, min, max);
     this.setMillisToDecideToPopup(100);
-
   }
 
 }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.1.5 (180911a)" language="German" saveDate="2018.11.02 at 18:57:34 CET" saveUser="dos">
+  <Conditions>
+    <Condition uId="15411807324685315">
+      <Title language="German" value="Regelgruppe"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15411809282165441">
+          <Symbol language="German" value="WizInit"/>
+          <Title language="German" value="Prüfen möglicher Vorgabewerte"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15411809282185443">
+          <Symbol language="German" value="WizTArt"/>
+          <Title language="German" value="Auswahl der Turnierart"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15411810775135448">
+          <Symbol language="German" value="WizTFPet"/>
+          <Title language="German" value="Auswahl der Turnierform für Boule-Turniere"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15411811415465451">
+          <Symbol language="German" value="WizPSM"/>
+          <Title language="German" value="Auswahl und Konfiguration der Regeln für Super Melee"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15411812321065454">
+          <Symbol language="German" value="WizDaten"/>
+          <Title language="German" value="Konfiguration der Datenverbindung"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="11446800829457960">
+      <Title language="German" value="Turnierform"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15411807878855353">
+          <Symbol language="German" value="Pet - SM"/>
+          <Title language="German" value="Petanque - Super Melee"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15411807878875355">
+          <Symbol language="German" value="Pet - SMT"/>
+          <Title language="German" value="Petanque - Super Melee Monatsturnier"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15411808635795362">
+          <Symbol language="German" value="*"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="11446800828767967">
+      <Title language="German" value="Titel für Aktion 1"/>
+    </Action>
+    <Action uId="11446800829627977">
+      <Title language="German" value="weiter mit Regelgruppe"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15411813141545571">
+          <Symbol language="German" value="WizInit"/>
+          <Title language="German" value="Prüfen möglicher Vorgabewerte"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15411813142705574">
+          <Symbol language="German" value="WizTArt"/>
+          <Title language="German" value="Auswahl der Turnierart"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15411813142735577">
+          <Symbol language="German" value="WizTFPet"/>
+          <Title language="German" value="Auswahl der Turnierform für Boule-Turniere"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15411813142765580">
+          <Symbol language="German" value="WizPSM"/>
+          <Title language="German" value="Auswahl und Konfiguration der Regeln für Super Melee"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15411813143235583">
+          <Symbol language="German" value="WizDaten"/>
+          <Title language="German" value="Konfiguration der Datenverbindung"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15411813227815586">
+          <Symbol language="German" value="ex"/>
+          <Title language="German" value="Ende des Wizards"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+  </Actions>
+  <Rules lastId="5">
+    <Rule id="3">
+      <ConditionOccurrenceLink link="15411807878855353"/>
+    </Rule>
+    <Rule id="4">
+      <ConditionOccurrenceLink link="15411807878875355"/>
+    </Rule>
+    <Rule id="5">
+      <ConditionOccurrenceLink link="15411808635795362"/>
+    </Rule>
+  </Rules>
+  <Title language="German" value="Hier doppel-klicken um den Titel für die Entscheidungstabelle einzugeben"/>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+</LFET>

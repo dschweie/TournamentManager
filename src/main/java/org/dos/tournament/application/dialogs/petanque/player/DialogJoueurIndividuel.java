@@ -1,4 +1,4 @@
-package org.dos.tournament.application.dialogs.player.petanque;
+package org.dos.tournament.application.dialogs.petanque.player;
 
 import java.awt.event.ActionEvent;
 import java.util.ResourceBundle;
@@ -17,17 +17,17 @@ public class DialogJoueurIndividuel extends DialogAssociationAttendee
   public DialogJoueurIndividuel()
   {
     super();
-    this.getOkButton().setAction(new org.dos.tournament.application.dialogs.player.petanque.DialogJoueurIndividuel.SwingActionOK());
+    this.getOkButton().setAction(new org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOK());
     if(this.getNextButton().isEnabled())
-      this.getNextButton().setAction(new org.dos.tournament.application.dialogs.player.petanque.DialogJoueurIndividuel.SwingActionOkAndNext());
+      this.getNextButton().setAction(new org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOkAndNext());
   }
 
   public DialogJoueurIndividuel(Vector<IParticipant> participants, int pos)
   {
     super(participants, pos);  
-    this.getOkButton().setAction(new org.dos.tournament.application.dialogs.player.petanque.DialogJoueurIndividuel.SwingActionOK());
+    this.getOkButton().setAction(new org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOK());
     if(this.getNextButton().isEnabled())
-      this.getNextButton().setAction(new org.dos.tournament.application.dialogs.player.petanque.DialogJoueurIndividuel.SwingActionOkAndNext());
+      this.getNextButton().setAction(new org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOkAndNext());
   }
   
   private class SwingActionOK extends AbstractAction {

@@ -2,6 +2,7 @@ package org.dos.tournament.petanque;
 
 import org.dos.tournament.competition.DefaultCompetitorResult;
 import org.dos.tournament.petanque.team.Doublette;
+import org.dos.tournament.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship;
 import org.dos.tournament.petanque.tournament.partie.CompetitorPartieResult;
 import org.dos.tournament.petanque.tournament.partie.Partie;
@@ -45,7 +46,7 @@ public class EvaluatePetanque
     CompetitorPartieResult teamResult = freundschaftsspiel.getCompetitorResult(team);
     System.out.println("Ergebnis:  ".concat(teamResult.toString()));
     */
-    SuperMeleeClubChampionship _tournament = new SuperMeleeClubChampionship();
+    SuperMelee _tournament = new SuperMeleeClubChampionship();
     _tournament.addCompetitor(new Attendee( 1, "Gerd Lipp"));
     _tournament.addCompetitor(new Attendee( 2, "Frank Graf"));
     _tournament.addCompetitor(new Attendee( 3, "Gerhard Olschewski"));
