@@ -38,6 +38,7 @@ public class DialogAssociationAttendee extends JDialog
   private final JPanel contentPanel = new JPanel();
   protected JTextField textId;
   protected JTextField textName;
+  protected JTextField textSurname;
   protected JTextField textAssociation;
   private JLabel lblId;
   private JLabel lblName;
@@ -54,7 +55,6 @@ public class DialogAssociationAttendee extends JDialog
   private JButton btnAdditionalAttendee;
   private final Action actionOkAndNext = new SwingActionOkAndNext();
   private JLabel lblSurname;
-  private JTextField textSurname;
   private JLabel lblDataEntries;
   private JComboBox comboBoxDataEntries;
   private JLabel lblHits;
@@ -207,6 +207,8 @@ public class DialogAssociationAttendee extends JDialog
     }
     {
       lblDataEntries = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblStoredData.text")); //$NON-NLS-1$ //$NON-NLS-2$
+      lblDataEntries.setEnabled(TournamentManagerUI.isConnected());
+//      lblDataEntries.setVisible(null!=TournamentManagerUI.getMongoClient());
       GridBagConstraints gbc_lblDataEntries = new GridBagConstraints();
       gbc_lblDataEntries.anchor = GridBagConstraints.EAST;
       gbc_lblDataEntries.insets = new Insets(0, 0, 0, 5);
@@ -216,6 +218,8 @@ public class DialogAssociationAttendee extends JDialog
     }
     {
       comboBoxDataEntries = new JComboBox();
+      comboBoxDataEntries.setEnabled(TournamentManagerUI.isConnected());
+//      comboBoxDataEntries.setVisible(null!=TournamentManagerUI.getMongoClient());
       GridBagConstraints gbc_comboBoxDataEntries = new GridBagConstraints();
       gbc_comboBoxDataEntries.gridwidth = 3;
       gbc_comboBoxDataEntries.insets = new Insets(0, 0, 0, 5);
@@ -226,6 +230,7 @@ public class DialogAssociationAttendee extends JDialog
     }
     {
       lblHits = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblMatches.text")); //$NON-NLS-1$ //$NON-NLS-2$
+//      lblHits.setVisible(null!=TournamentManagerUI.getMongoClient());
       GridBagConstraints gbc_lblHits = new GridBagConstraints();
       gbc_lblHits.gridx = 4;
       gbc_lblHits.gridy = 4;

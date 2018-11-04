@@ -3,6 +3,8 @@ package org.dos.tournament.petanque.tournament.movement.regulations;
 import java.util.Vector;
 
 import org.dos.tournament.movement.regulations.Regulation;
+import org.dos.tournament.petanque.tournament.matchday.Matchday;
+import org.dos.tournament.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.player.IParticipant;
 
 public class RuleSuperMeleeNeverMeetTeammateTwice extends RuleSuperMeleeNeverMeetOpponentTwice {
@@ -12,15 +14,56 @@ public class RuleSuperMeleeNeverMeetTeammateTwice extends RuleSuperMeleeNeverMee
     super(innerRegulation, effective, suspendable);
   }
 
+  protected void performInit(SuperMelee tournament, int round, Vector<IParticipant> participants) 
+  {
+    this.initParticipantTable(participants.size(), Regulation.FLAG_NEVER_MET);
+    
+    for(int md=0; md<round; ++md)
+    {
+      Matchday _matchday = tournament.getMatchday(md);
+
+      for(int _idxPartie=0; _idxPartie < _matchday.countMatches(); ++_idxPartie)
+      {
+        IParticipant[] _home = _matchday.getMatch(_idxPartie).getCompetitor(0).getAttendeesToArray();
+        IParticipant[] _guest = _matchday.getMatch(_idxPartie).getCompetitor(1).getAttendeesToArray();
+        
+        for(int i=0; i<_home.length; ++i)
+        {
+          int iCurrentParticipant = participants.indexOf(_home[i]);
+          
+          for(int h=0; h<_home.length; ++h)
+            this.aiParticipantTable[iCurrentParticipant][participants.indexOf(_home[h])] = i==h?Regulation.FLAG_INVALID_PAIR:Regulation.FLAG_WERE_TEAMMATES;
+          for(int g=0; g<_guest.length; ++g)
+          { //  mark opps
+            int iCurrentOpponent = participants.indexOf(_guest[g]);
+
+            if(0==i)
+              for(int j=0; j<_guest.length; ++j)
+                this.aiParticipantTable[iCurrentOpponent][participants.indexOf(_guest[j])] = g==j?Regulation.FLAG_INVALID_PAIR:Regulation.FLAG_WERE_TEAMMATES;
+          }
+        }
+      }
+    }
+  }
+  
+  
   protected boolean performCheck(int[] pointer, Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants) 
   {
     boolean _valid = true;
     
+    /**
     for(int _iTeam=0; _valid && (_iTeam <= pointer[1]); ++_iTeam)
     {
       for(int _iSlot=0; _valid && (_iSlot < (_iTeam<pointer[1]?grid.get(pointer[0]).get(_iTeam).size():pointer[2])); ++_iSlot)
         _valid &= Regulation.FLAG_WERE_TEAMMATES != this.aiParticipantTable[grid.get(pointer[0]).get(_iTeam).get(_iSlot).intValue()][grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).intValue()];
     }
+    */
+
+    for(int _iSlot=0; _valid && (_iSlot < pointer[2]); ++_iSlot) 
+    {
+      _valid &= Regulation.FLAG_WERE_TEAMMATES != this.aiParticipantTable[grid.get(pointer[0]).get(pointer[1]).get(_iSlot).intValue()][grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).intValue()];
+    }
+    
     
     return _valid;
   }

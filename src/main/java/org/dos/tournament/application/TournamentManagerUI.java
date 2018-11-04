@@ -40,8 +40,12 @@ import java.awt.Component;
 import java.awt.Container;
 
 import javax.swing.Box;
+import javax.swing.JComponent;
+import javax.swing.JDialog;
 import javax.swing.JSeparator;
 
+import org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually;
+import org.dos.tournament.application.petanque.factories.SupermeleeMenuFactory;
 import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.application.petanque.panels.tablemodels.ParticipantsTableModel;
 import org.dos.tournament.petanque.tournament.movement.SuperMelee;
@@ -73,6 +77,10 @@ public class TournamentManagerUI
   private JTextField txtOS;
   
   static private MongoClient mongoClient = null;
+  protected JMenu mnSupermelee;
+  
+  static public TournamentManagerUI application = null;
+  private JMenuBar menuBar;
 
   /**
    * Launch the application.
@@ -85,8 +93,8 @@ public class TournamentManagerUI
       {
         try
         {
-          TournamentManagerUI window = new TournamentManagerUI();
-          window.frmTurnierverwaltung.setVisible(true);
+          TournamentManagerUI.application = new TournamentManagerUI();
+          TournamentManagerUI.application.frmTurnierverwaltung.setVisible(true);
         } catch (Exception e)
         {
           e.printStackTrace();
@@ -144,7 +152,7 @@ public class TournamentManagerUI
     frmTurnierverwaltung.setBounds(100, 100, 450, 300);
     frmTurnierverwaltung.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
-    JMenuBar menuBar = new JMenuBar();
+    menuBar = new JMenuBar();
     frmTurnierverwaltung.setJMenuBar(menuBar);
     
     JMenu mnDatei = new JMenu(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mnDatei.text")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-2$
@@ -164,6 +172,37 @@ public class TournamentManagerUI
     mntmTurnierverwaltungBeenden.setAction(actionExit);
     mnDatei.add(mntmTurnierverwaltungBeenden);
     
+    mnSupermelee = new JMenu(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mnSupermle.text"));
+    menuBar.add(mnSupermelee);
+    
+    /*
+    JMenuItem mntmRundeAuslosen = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmRundeAuslosen.text")); //$NON-NLS-1$ //$NON-NLS-2$
+    mnSupermelee.add(mntmRundeAuslosen);
+    
+    JMenu mnRundeErstellen = new JMenu(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mnRundeErstellen.text")); //$NON-NLS-1$ //$NON-NLS-2$
+    mnSupermelee.add(mnRundeErstellen);
+    
+    JMenuItem mntmPaarungenSetzen = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmPaarungenSetzen.text")); //$NON-NLS-1$ //$NON-NLS-2$
+    mntmPaarungenSetzen.setAction(new CreateRoundManually());
+    mnRundeErstellen.add(mntmPaarungenSetzen);
+    
+    JMenuItem mntmTeilnehmerMischen = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmTeilnehmerMischen.text")); //$NON-NLS-1$ //$NON-NLS-2$
+    mnRundeErstellen.add(mntmTeilnehmerMischen);
+    
+    JSeparator separator_1 = new JSeparator();
+    mnSupermelee.add(separator_1);
+    
+    JMenuItem mntmAlleRegelnDeaktivieren = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmAlleRegelnDeaktivieren.text")); //$NON-NLS-1$ //$NON-NLS-2$
+    mnSupermelee.add(mntmAlleRegelnDeaktivieren);
+    
+    JMenuItem mntmAlleRegelnAktivieren = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmAlleRegelnAktivieren.text")); //$NON-NLS-1$ //$NON-NLS-2$
+    mnSupermelee.add(mntmAlleRegelnAktivieren);
+    
+    JMenuItem mntmAktuellesRegelwerkAnzeigen = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmAktuellesRegelwerkAnzeigen.text")); //$NON-NLS-1$ //$NON-NLS-2$
+    mnSupermelee.add(mntmAktuellesRegelwerkAnzeigen);
+    */
+    this.mnSupermelee.setVisible(false);
+    
     TournamentManagerUI.initConnection();
   }
   
@@ -182,9 +221,15 @@ public class TournamentManagerUI
   
   static public MongoClient getMongoClient()
   {
-    return TournamentManagerUI.mongoClient;
+    //return TournamentManagerUI.mongoClient;
+    return null;
   }
 
+  static public boolean isConnected()
+  {
+    return false;
+  }
+  
   private class SwingAction extends AbstractAction {
     public SwingAction() {
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.action.name")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -219,6 +264,8 @@ public class TournamentManagerUI
         _panel.setTournament(_tournament);
         this.frmApplication.getContentPane().add(_panel);
         this.frmApplication.revalidate();
+        SupermeleeMenuFactory.buildSupermeleeMenu(_tournament);
+        TournamentManagerUI.setVisibleSupermelee(true);
         /*
         this.frmApplication.getContentPane().doLayout();
         this.frmApplication.getWindowListeners().notifyAll();
@@ -227,4 +274,15 @@ public class TournamentManagerUI
       }
     }
   }
+  
+  public static void setVisibleSupermelee(boolean bFlag)
+  {
+    TournamentManagerUI.application.mnSupermelee.setVisible(bFlag);
+  }
+  
+  public static void addMenuItemSupermelee(JComponent item)
+  {
+    TournamentManagerUI.application.mnSupermelee.add(item);
+  }
+  
 }

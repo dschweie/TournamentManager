@@ -39,7 +39,7 @@ public class DialogJoueurIndividuel extends DialogAssociationAttendee
     public void actionPerformed(ActionEvent e) {
       if(-1 == DialogJoueurIndividuel.this.iPos)
       { //  new Attendee will be added
-        AssociationAttendee _attendee = new JoueurIndividuel(Integer.parseInt(DialogJoueurIndividuel.this.textId.getText()), DialogJoueurIndividuel.this.textName.getText(), DialogJoueurIndividuel.this.textAssociation.getText());
+        AssociationAttendee _attendee = new JoueurIndividuel(Integer.parseInt(DialogJoueurIndividuel.this.textId.getText()), DialogJoueurIndividuel.this.textName.getText().trim(), DialogJoueurIndividuel.this.textSurname.getText().trim(), DialogJoueurIndividuel.this.textAssociation.getText().trim());
         _attendee.setStatus((ParticipantStatus) DialogJoueurIndividuel.this.comboBoxStatus.getSelectedItem());
         DialogJoueurIndividuel.this.vecAttendees.add(_attendee);
       }
@@ -61,7 +61,7 @@ public class DialogJoueurIndividuel extends DialogAssociationAttendee
     public void actionPerformed(ActionEvent e) {
       if(-1 == DialogJoueurIndividuel.this.iPos)
       { //  new Attendee will be added
-        AssociationAttendee _attendee = new JoueurIndividuel(Integer.parseInt(DialogJoueurIndividuel.this.textId.getText()), DialogJoueurIndividuel.this.textName.getText(), DialogJoueurIndividuel.this.textAssociation.getText());
+        AssociationAttendee _attendee = new JoueurIndividuel(Integer.parseInt(DialogJoueurIndividuel.this.textId.getText()), DialogJoueurIndividuel.this.textName.getText().trim(), DialogJoueurIndividuel.this.textSurname.getText().trim(), DialogJoueurIndividuel.this.textAssociation.getText().trim());
         _attendee.setStatus((ParticipantStatus) DialogJoueurIndividuel.this.comboBoxStatus.getSelectedItem());
         DialogJoueurIndividuel.this.vecAttendees.add(_attendee);
       }

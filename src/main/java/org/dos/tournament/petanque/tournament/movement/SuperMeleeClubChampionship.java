@@ -2,6 +2,13 @@ package org.dos.tournament.petanque.tournament.movement;
 
 import org.dos.tournament.petanque.result.PetanqueSuperMeleeClubChampionshipResult;
 import org.dos.tournament.petanque.team.AbstractPetanqueTeam;
+import org.dos.tournament.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTandem;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTwice;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTandem;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTwice;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem;
+import org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTwice;
 import org.dos.tournament.player.IParticipant;
 
 /**
@@ -23,6 +30,17 @@ import org.dos.tournament.player.IParticipant;
  */
 public class SuperMeleeClubChampionship extends SuperMelee
 {
+  public SuperMeleeClubChampionship()
+  {
+    super();
+    
+    this.regulations = new CoreRuleSuperMeleeAllIndicesUnique();
+    this.regulations = new RuleSuperMeleeNeverMeetTeammateTwice(this.regulations, true, false);
+    this.regulations = new RuleSuperMeleeNeverPlayTripletteTandem(this.regulations, true, true);
+    this.regulations = new RuleSuperMeleeNeverMeetOpponentTandem(this.regulations, true, true);
+    this.regulations = new RuleSuperMeleeNeverPlayTripletteTwice(this.regulations, true, true);
+    this.regulations = new RuleSuperMeleeNeverMeetOpponentTwice(this.regulations, true, true);
+  }
   
   public void setResult(int iMatchdayIndex, int iMatchIndex, int iHome, int iGuest)
   {

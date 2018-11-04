@@ -1,14 +1,18 @@
 package org.dos.tournament.petanque.tournament.movement;
 
 import java.awt.Component;
+import java.awt.event.ActionEvent;
 import java.util.Collections;
 import java.util.Observable;
+import java.util.ResourceBundle;
 import java.util.Vector;
 
 import javax.swing.AbstractAction;
+import javax.swing.JDialog;
 import javax.swing.ProgressMonitor;
 
 import org.dos.tournament.application.common.dialogs.MatchdayProgressMonitor;
+import org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually;
 import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.movement.regulations.Regulation;
 import org.dos.tournament.petanque.team.AbstractPetanqueTeam;
@@ -51,6 +55,13 @@ public class SuperMelee extends Observable
   private ProgressMonitor xProgressMonitor = null;      
 
   protected Regulation<SuperMelee, Vector<Vector<Integer>>, IParticipant> regulations;
+  
+  private boolean runningGenerateRound = false;
+  private boolean resultGenerateRound = false;
+  private int iProcessMax = 100;
+  private int iProcessCurrent = 0;
+  private Thread thread;
+  private MonitoringThread xMonitoring;
   
   /**
    * @return the bRuleNotSamePartner
@@ -245,20 +256,69 @@ public class SuperMelee extends Observable
    */
   public boolean generateNextMatchday(Component parent)
   {
-    if(null == parent)
-      this.xProgressMonitor = null;
-    else
-      this.xProgressMonitor = new MatchdayProgressMonitor(null, "Message", "nopte", 0, 100);
+    this.runningGenerateRound = true;
+    this.resultGenerateRound = true;
+   
+    this.xMonitoring = new MonitoringThread();
     
-    boolean _retval = (0 == this.countMatchdays())?this.generateFirstMatchday():this.generateNextMatchdayByAlgorithm();
+    this.thread = new Thread(this.xMonitoring);
+    
+//    this.thread = new Thread (new Runnable() {
+//      private int iMaximum = 100;
+//      private int iProgress = 7;
+//      public void run() {
+//        ProgressMonitor pm =   new ProgressMonitor(parent, "Auslosung läuft", "zwei", iProgress, iMaximum);
+//        //SuperMelee.this.xProgressMonitor =  new ProgressMonitor(parent, "Auslosung läuft", "zwei", 0, 100);
+////        while(SuperMelee.this.runningGenerateRound)
+//        while(iProgress<iMaximum)
+//        {
+//          pm.setProgress(iProgress);
+//          
+//          //try { Thread.sleep(100); } 
+//          //catch (Exception ex) {}
+//        }
+//        pm.close();
+//        //SuperMelee.this.xProgressMonitor.close();
+//        /*
+//        while(!SuperMelee.this.xProgressMonitor.isCanceled())
+//        {
+//          pm.setProgress(i);
+//          // Als Ersatz für eine rechen-
+//          // intensive Operation
+//          try { Thread.sleep(100); } 
+//          catch (Exception ex) {}
+//        }*/
+//      }
+//      
+//    });
+    thread.start ();
+    this.resultGenerateRound &= (0 == SuperMelee.this.countMatchdays())?SuperMelee.this.generateFirstMatchday():SuperMelee.this.generateNextMatchdayByAlgorithm();
+    this.xMonitoring.setProgress(100);
+    this.runningGenerateRound = false;
+    
+    try
+    {
+      this.xProgressMonitor.setProgress(10000);
+    }
+    catch(Exception e) { /* NOTHING TO DO */ }
+    
+    //this.resultGenerateRound &= !this.xProgressMonitor.isCanceled();
+   
+    
+    //if(null == parent)
+    //  this.xProgressMonitor = null;
+    //else
+    //  this.xProgressMonitor = new MatchdayProgressMonitor(null, "Message", "nopte", 0, 100);
+    
+    //boolean _retval = (0 == this.countMatchdays())?this.generateFirstMatchday():this.generateNextMatchdayByAlgorithm();
     
     if(null != parent)
     {
-      this.xProgressMonitor.close();
+      //this.xProgressMonitor.close();
       // this.xProgressMonitor = null;
     }
     
-    return _retval;
+    return this.resultGenerateRound;
   }
   
   protected boolean isNextMatchdayCanceled()
@@ -361,9 +421,9 @@ public class SuperMelee extends Observable
     Vector<IParticipant> _members = TournamentUtils.filterParticipantsByStatus(this.getCompetitors(), ParticipantStatus.ACTIVE);
     Vector<Vector<Vector<Integer>>> _grid = compileGridTemplateForSupermelee(_members.size());
     
-    this.setNextMatchdayProgressMaximum(_grid.size() * 2);
-    this.updateNextMatchdayProgress(0);
-    
+    this.iProcessMax = _grid.size() * 2;
+    this.iProcessCurrent = 0;
+
     if(null != _grid)
     {
       Collections.shuffle(_members);
@@ -378,7 +438,7 @@ public class SuperMelee extends Observable
     return (_matchdaysExpected == this.countMatchdays());
   }
 
-  private void compileNextMatchDayFromGrid(Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants) {
+  public void compileNextMatchDayFromGrid(Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants) {
     if((null != grid) && (null != participants))
     {
       //  Partien bilden
@@ -440,7 +500,8 @@ public class SuperMelee extends Observable
             }
             if(_valid)
             {
-              this.updateNextMatchdayProgress(_idxPartie*2+_idxTeam);
+              this.iProcessCurrent = (_idxPartie*2+_idxTeam);
+              this.xMonitoring.setProgress(Math.floorDiv(this.iProcessCurrent * 100, this.iProcessMax));
               ++_idxSlot;
             }
           }
@@ -493,9 +554,10 @@ public class SuperMelee extends Observable
     boolean _retval = false;
     Vector<IParticipant> _members = TournamentUtils.filterParticipantsByStatus(this.getCompetitors(), ParticipantStatus.ACTIVE);
     
-    this.setNextMatchdayProgressMaximum(_members.size());
-    this.updateNextMatchdayProgressLeft(_members.size());
-  
+    this.iProcessMax = _members.size();
+    
+    this.xMonitoring.setProgress(Math.floorDiv(this.iProcessMax - _members.size() * 100, this.iProcessMax));
+    
     if(     ( 3 <  _members.size() )
         &&  ( 7 != _members.size() ) )
     { //  mindestens 4 aktive Teilnehmer werden benötigt, damit eine Runde erstellt werden kann
@@ -535,7 +597,8 @@ public class SuperMelee extends Observable
         this.addTeam(_home);
         this.addTeam(_guest);
   
-        this.updateNextMatchdayProgressLeft(_members.size());
+        this.iProcessCurrent = this.iProcessMax - _members.size();
+        this.xMonitoring.setProgress(Math.floorDiv(this.iProcessMax - _members.size() * 100, this.iProcessMax));
       }
       
       this.getMatchdays().addElement(_matchday);
@@ -601,5 +664,50 @@ public class SuperMelee extends Observable
       }
     }
     return _retval;
+  }
+  
+  public AbstractAction getActionCreateRoundManually()
+  {
+    return new CreateRoundManually();
+  } 
+  
+  private class CreateRoundManually extends AbstractAction 
+  {
+    public CreateRoundManually() {
+      putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Supermelee.Action.CreateRoundManually.name")); //$NON-NLS-1$ //$NON-NLS-2$
+      putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Supermelee.Action.CreateRoundManually.short description")); //$NON-NLS-1$ //$NON-NLS-2$
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+      Vector<IParticipant> _participants = TournamentUtils.filterParticipantsByStatus(SuperMelee.this.getCompetitors(), ParticipantStatus.ACTIVE);
+      Vector<Vector<Vector<Integer>>> _grid = SuperMelee.this.compileGridTemplateForSupermelee(_participants.size());
+      JDialog dialog = new DialogSetRoundManually(SuperMelee.this, _grid, _participants);
+      dialog.setModal(true);
+      dialog.setVisible(true);
+    }
+    
+  }
+
+  private class MonitoringThread implements Runnable
+  {
+    private int iMaximum = 100;
+    private int iProgress = 7;
+    
+    public void run() 
+    {
+      ProgressMonitor pm =   new ProgressMonitor(null, "Auslosung läuft", "zwei", iProgress, iMaximum);
+      while(iProgress<iMaximum)
+      {
+        pm.setProgress(iProgress);
+      }
+      pm.close();
+    }
+    
+    public void setProgress(int value)
+    {
+      this.iProgress = value;
+    }
   }
 }

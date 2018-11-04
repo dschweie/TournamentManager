@@ -12,12 +12,20 @@ import org.dos.tournament.result.IResult;
 
 public class JoueurIndividuel extends AssociationAttendee
 {
+  private String strSurname = "";
+  
   public JoueurIndividuel(int id, String name, String association)
   {
     super(id, name, association);
     this.result = new PetanqueTotalResult();
   }
   
+  public JoueurIndividuel(int id, String name, String surname, String association)
+  {
+    super(id, name, association);
+    this.strSurname = surname;
+    this.result = new PetanqueTotalResult();
+  }
  
 
   /* (non-Javadoc)
@@ -30,7 +38,21 @@ public class JoueurIndividuel extends AssociationAttendee
   }
 
 
-
+  public String getName()
+  {
+    return super.getName().concat(" ").concat(strSurname).trim();
+  }
+  
+  public String getForename()
+  {
+    return super.getName();
+  }
+  
+  public String getSurname()
+  {
+    return strSurname;
+  }
+  
   private class PetanqueTotalResult extends AbstractTotalResult
   {
     public final static int POINTS      = 0;
