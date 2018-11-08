@@ -1,11 +1,4 @@
-<map id="org.dos.tournament.player.IParticipant" name="org.dos.tournament.player.IParticipant">
-<area shape="rect" id="node3" href="$a00396.html" title="org.dos.tournament.player.\lAbstractParticipant" alt="" coords="369,104,547,145"/>
-<area shape="rect" id="node2" href="$a00912.html" title="Comparable" alt="" coords="5,111,96,138"/>
-<area shape="rect" id="node4" href="$a00400.html" title="org.dos.tournament.player.\lAbstractTeamParticipant" alt="" coords="595,71,772,112"/>
-<area shape="rect" id="node8" href="$a00408.html" title="org.dos.tournament.player.\lAttendee" alt="" coords="595,136,772,177"/>
-<area shape="rect" id="node5" href="$a00344.html" title="org.dos.tournament.petanque.team.\lAbstractPetanqueTeam" alt="" coords="820,71,1048,112"/>
-<area shape="rect" id="node6" href="$a00348.html" title="org.dos.tournament.petanque.team.\lDoublette" alt="" coords="1096,5,1324,47"/>
-<area shape="rect" id="node7" href="$a00360.html" title="org.dos.tournament.petanque.team.\lTriplette" alt="" coords="1096,71,1324,112"/>
-<area shape="rect" id="node9" href="$a00404.html" title="org.dos.tournament.player.\lAssociationAttendee" alt="" coords="845,136,1023,177"/>
-<area shape="rect" id="node10" href="$a00352.html" title="org.dos.tournament.petanque.team.\lJoueurIndividuel" alt="" coords="1096,136,1324,177"/>
+<map id="org.dos.tournament.petanque.result.PetanqueResult" name="org.dos.tournament.petanque.result.PetanqueResult">
+<area shape="rect" id="node2" href="$a00545.html" title="org.dos.tournament.result.\lAbstractResult" alt="" coords="5,96,180,137"/>
+<area shape="rect" id="node3" href="$a00553.html" title="org.dos.tournament.result.\lIResult" alt="" coords="5,5,180,47"/>
 </map>

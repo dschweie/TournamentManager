@@ -1,25 +1,4 @@
 var a00188 =
 [
-    [ "SwingAction", "a00192.html", "a00192" ],
-    [ "SwingAction_1", "a00196.html", "a00196" ],
-    [ "SwingAction_2", "a00204.html", "a00204" ],
-    [ "SwingAction_3", "a00208.html", "a00208" ],
-    [ "SwingActionMatchdayTimer", "a00200.html", "a00200" ],
-    [ "SwingActionToggleTeamPresentation", "a00212.html", "a00212" ],
-    [ "DefaultMatchdayPanel", "a00188.html#a759a90d8090c2a24835443d9e44353a3", null ],
-    [ "DefaultMatchdayPanel", "a00188.html#ad42ba7cdae37ccfad88fc0f70664255e", null ],
-    [ "DefaultMatchdayPanel", "a00188.html#a11cc60212d1c126e29605551a8d35347", null ],
-    [ "setStateRuleOpponents", "a00188.html#ad0ddef7547f9d85b8dab95af8b53eecc", null ],
-    [ "setStateRuleTeammates", "a00188.html#abedfb7f8a1c980a2a446da7f6448ca87", null ],
-    [ "setStateRuleTriplette", "a00188.html#a0636bcf044358bad64e4bc0f1dfa1c94", null ],
-    [ "updateUI", "a00188.html#aace0a65d7e84a242d06f146825ebd231", null ],
-    [ "action", "a00188.html#a65e81ad56c81ed41584e658b31303b53", null ],
-    [ "printMatchday", "a00188.html#ac983730915a3f9ce3507f251dcf6271e", null ],
-    [ "progressBar", "a00188.html#ac61d62a49d57fe5831d4a93a4cf38fab", null ],
-    [ "scrollPane", "a00188.html#a350fd0a9e3a3fcb0204a3a43bf7eafaf", null ],
-    [ "stateOpponents", "a00188.html#a92c8919f37870b7b00de9a7cb3da33aa", null ],
-    [ "stateTeammates", "a00188.html#a7ffc9b7494db696fd7b9bd654e7bc910", null ],
-    [ "stateTriplette", "a00188.html#ae99aba5724ad0d1be98b2edecaf0a482", null ],
-    [ "tableMatches", "a00188.html#a3c86f6b4988f848d681041c563a12d69", null ],
-    [ "timer", "a00188.html#a3936790b8351d1bd39551ed6ec048e73", null ]
+    [ "DialogJoueurIndividuel", "a00282.html", "a00282" ]
 ];

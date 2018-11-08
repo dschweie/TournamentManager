@@ -1,5 +1,0 @@
-var namespaceorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1partie =
-[
-    [ "CompetitorPartieResult", "classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1partie_1_1_competitor_partie_result.html", "classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1partie_1_1_competitor_partie_result" ],
-    [ "Partie", "classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1partie_1_1_partie.html", "classorg_1_1dos_1_1tournament_1_1petanque_1_1tournament_1_1partie_1_1_partie" ]
-];

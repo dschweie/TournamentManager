@@ -1,3 +1,5 @@
-<map id="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee" name="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee">
-<area shape="rect" id="node3" href="$a00236.html" title="org.dos.tournament.application.dialogs.player.petanque.\lDialogJoueurIndividuel" alt="" coords="5,169,351,211"/>
+<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable">
+<area shape="rect" id="node4" href="$a00473.html" title="org.dos.tournament.petanque.tournament.movement.\lSuperMelee" alt="" coords="800,566,1127,607"/>
+<area shape="rect" id="node7" href="$a00485.html" title="org.dos.tournament.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="207,501,533,542"/>
+<area shape="rect" id="node15" href="$a00401.html" title="org.dos.tournament.movement.regulations.\lRegulation\&lt; org.dos.tournament.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.player.\lIParticipant \&gt;" alt="" coords="157,922,583,993"/>
 </map>

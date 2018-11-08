@@ -1,0 +1,5 @@
+<map id="org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship" name="org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship">
+<area shape="rect" id="node2" href="$a00473.html" title="org.dos.tournament.petanque.tournament.movement.\lSuperMelee" alt="" coords="800,362,1127,403"/>
+<area shape="rect" id="node5" href="$a00485.html" title="org.dos.tournament.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="207,215,533,257"/>
+<area shape="rect" id="node13" href="$a00401.html" title="org.dos.tournament.movement.regulations.\lRegulation\&lt; org.dos.tournament.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.player.\lIParticipant \&gt;" alt="" coords="157,631,583,702"/>
+</map>

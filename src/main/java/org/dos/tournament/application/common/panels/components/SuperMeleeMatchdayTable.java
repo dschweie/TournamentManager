@@ -17,23 +17,110 @@ import org.dos.tournament.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.petanque.tournament.partie.Partie;
 
 /**
- * @author dirk.schweier
- *
+ * \brief       Die Klasse steht für die Tabelle für Spielpaarungen im Supermelee
+ * 
+ * 
+ * 
+ * @author      dirk.schweier
  */
 public class SuperMeleeMatchdayTable extends JTable
 {
+  /**
+   *  \brief    Konstante für die Spalte mit den Index innerhalb der Runde
+   *  
+   *  Die Begegnungen in einer Runde werden fortlaufend mit 1 beginnend 
+   *  durchnummeriert.
+   *  
+   *  Diese Konstante steht für die Spalte, in der dieser Index angezeigt
+   *  wird.
+   */
   final static public String COL_INDEX        = "INDEX";
+  /**
+   *  \brief    Konstante für den eindeutigen Index der Begegnung im Turnier
+   *  
+   *  Jede Begegnung soll selbst einen eindeutigen Index haben, der im Turnier
+   *  nur einmal vorkommt. Damit lassen sich zum Beispiel Begegnungen 
+   *  beschreiben, ohne dass ein konkretes Team zu benennen ist. Es kann z.B.
+   *  "Sieger aus Begegnung 50" im Spielplan auftauchen und das Team wird
+   *  erst angegeben, wenn die Begegnung mit Ergebnis versehen ist.
+   *  
+   *  Diese Konstante steht für die Spalte, die nur optional angezeigt wird.
+   */
   final static public String COL_MATCH        = "MATCH";
+  /**
+   *  \brief    Konstante für die Spalte für das erste Team der Begegnung
+   *  
+   *  In einem Supermelee-Turnier besteht eine Begegnung aus zwei Teams. 
+   *  
+   *  Diese Konstante steht für das erste der beiden Teams einer Begegnung.
+   */
   final static public String COL_HOME_TEAM    = "HOTEAM";
+  /**
+   *  \brief    Konstante für die Spalte mit dem Ergebnis des ersten Teams
+   *  
+   *  In einem Supermelee-Turnier besteht eine Begegnung aus zwei Teams. 
+   *  
+   *  Diese Konstante steht für die Spalte mit dem Ergebnis für das erste der 
+   *  beiden Teams einer Begegnung.
+   */
   final static public String COL_HOME_SCORE   = "HOSCOR";
+  /**
+   *  \brief    Konstante für die Spalte für das zweite Team der Begegnung
+   *  
+   *  In einem Supermelee-Turnier besteht eine Begegnung aus zwei Teams. 
+   *  
+   *  Diese Konstante steht für das zweiter der beiden Teams einer Begegnung.
+   */
   final static public String COL_GUEST_TEAM   = "GUTEAM";
+  /**
+   *  \brief    Konstante für die Spalte mit dem Ergebnis des zweiten Teams
+   *  
+   *  In einem Supermelee-Turnier besteht eine Begegnung aus zwei Teams. 
+   *  
+   *  Diese Konstante steht für die Spalte mit dem Ergebnis für das zweite der 
+   *  beiden Teams einer Begegnung.
+   */
   final static public String COL_GUEST_SCORE  = "GUSCOR";
+  /**
+   *  \brief    Konstante für die Spalte zwischen den beiden Ergebnissen
+   *  
+   *  Die Ergebnisse der beiden Teams werden aus optischen Gründen durch eine
+   *  Spalte von einander getrennt.
+   *  
+   *  Diese Konstante steht für diese Spalte, die die Ergebnisse von einander
+   *  trennt.
+   */
   final static public String COL_VS_SCORE     = "VERSUS";
+  /**
+   *  \brief    Konstante für den Platz, auf dem die Begegnung ausgespielt wird
+   *  
+   *  Je nach Turniermodus wird neben der Spielpaarung auch der Platz gelost, 
+   *  auf dem die Begegnung auszutragen ist.
+   *  
+   *  Diese Konstante steht für die Spalte, in der der Platz ausgegeben wird.
+   */
   final static public String COL_COURT        = "COURT";
   
+  /**
+   *  \brief    Referenz auf die Turnierinstanz, zu der die Runde gehört
+   *  
+   *  Diese Tabelle ist eine grafische Darstellung der Runde eines konkreten
+   *  Turniers. In diesem Attribut wird die Referenz auf das Datenmodell
+   *  gehalten, aus dem sich die angezeigten Daten ableiten lassen.
+   */
   private SuperMelee xTournament = null;
+  /**
+   *  \brief    Index für die Runde, die durch diese JTable dargestellt wird
+   */
   private int iMatchdayIndex = -1;
-  
+
+  /**
+   *  Dieser Konstruktror ist der Standardkonstruktor der Klasse mit den notwendingen Parametern.
+   *  
+   *  @param    tournament    In dem Parameter ist eine Instanz von SuperMelee 
+   *                          zu übergeben. 
+   *  @param    matchday
+   */
   public SuperMeleeMatchdayTable(SuperMelee tournament, int matchday)
   {
     super();
@@ -43,8 +130,6 @@ public class SuperMeleeMatchdayTable extends JTable
     this.iMatchdayIndex = matchday;
     this.addKeyListener(new KeyAdapter());
     this.setDefaultEditor(Object.class, new PetanqueTableCellEditor());
-
-    // TODO Auto-generated constructor stub
   }
   
   public boolean toggleOutputParticipants()
@@ -151,13 +236,23 @@ public class SuperMeleeMatchdayTable extends JTable
     }
 
 
-    /* (non-Javadoc)
-     * @see javax.swing.table.DefaultTableModel#setValueAt(java.lang.Object, int, int)
+    /**
+     *  \brief  Methode übernimmt einen erfassten Wert in GUI und Datenmodell der Tabelle
+     *  
+     *  @param  aValue        In dem Paramter ist das Ergebnis zu übergeben.
+     *  @param  row           In diesem Parameter wird der Zeilenindex der 
+     *                        Zelle übergeben, die geändert werden soll.
+     *  @param  column        In diesem Parameter wird der Spaltenindex der 
+     *                        Zelle übergeben, die geändert werden soll.
+     *                        
+     *  \todo   In dieser Methode fehlt noch ein ordentliches Handling von
+     *          fehlerhaften Eingaben, wie z.B. nicht numerische Eingaben.
+     *  
+     *  @see javax.swing.table.DefaultTableModel#setValueAt(java.lang.Object, int, int)
      */
     @Override
     public void setValueAt(Object aValue, int row, int column)
     {
-      // TODO Auto-generated method stub
       super.setValueAt(aValue, row, column);
       if((""!=this.getValueAt(row, this.astrHeader.indexOf(SuperMeleeMatchdayTable.COL_HOME_SCORE)))&&(""!=this.getValueAt(row, this.astrHeader.indexOf(SuperMeleeMatchdayTable.COL_GUEST_SCORE)))&&(null!=this.xTournament))
       { 
@@ -169,13 +264,26 @@ public class SuperMeleeMatchdayTable extends JTable
             this.setValueAt("", row, this.astrHeader.indexOf(SuperMeleeMatchdayTable.COL_HOME_SCORE));
         }
         else  
-        { //  Ergebnis ist vollstï¿½ndig und wird ausgewertet
+        { //  Ergebnis ist vollständig und wird ausgewertet
           this.xTournament.setResult(iMatchdayIndex, row, Integer.parseInt(this.getValueAt(row, this.astrHeader.indexOf(COL_HOME_SCORE)).toString()), Integer.parseInt(this.getValueAt(row, this.astrHeader.indexOf(SuperMeleeMatchdayTable.COL_GUEST_SCORE)).toString()));
           this.xTournament.forceNotifyAll();
         }
       }
     }
     
+    /**
+     *  \brief  Methode erzeugt die Kopfzeile der Tabelle mit den Texten, die in der GUI angezeigt werden.
+     *  
+     *  In der internen Struktur SuperMeleeMatchdayTable.astrHeader werden nur
+     *  die Konstanten der jeweiligen Spalten hinterlegt. Mit dieser Methode 
+     *  wird die Kopfzeile der Tabelle mit den Spaltennamen erzeugt, die dann 
+     *  in der GUI dargestellt werden.
+     *  
+     *  @todo   Die Bezeichner werden aktuell noch nicht aus den Properties 
+     *          gelesen.
+     *  
+     *  @return Die Methode liefert die Kopfzeile als Vector zurück.
+     */
     private Vector<String> compileHeader()
     {
       Vector<String> _header = new Vector<String>();
@@ -199,21 +307,23 @@ public class SuperMeleeMatchdayTable extends JTable
       return _header;
     }
 
-
-    private Vector<String> STANDARDHEADER_PETANQUE()
-    {
-      Vector<String> _header = new Vector<String>();
-      _header.add("Partie");
-      _header.add("Heim");
-      _header.add("Gast");
-      _header.add("");
-      _header.add("");
-      _header.add("");
-      
-      return _header;
-    }
-
-
+    /**
+     *  \brief  Methode liefert die Information, ob der Zelleninhalt editiert werden darf
+     *  
+     *  Der Anwender darf in der Tabelle nur die Spalten editieren, in denen 
+     *  Spielergebnnisse der Teams einer Spielpaarung erfasst werden sollen.
+     *  Alle anderen Zellen sollen nicht geändert werden dürfen.
+     *  
+     *  @param  row           In dem Parameter wird der Zeilenindex der Zelle
+     *                        übergeben, für die angefragt werden soll, ob der
+     *                        Anwender den Inhalt ändern darf.
+     *  @param  column        In dem Parameter wird der Spaltenindex der Zelle
+     *                        übergeben, für die angefragt werden soll, ob der
+     *                        Anwender den Inhalt ändern darf
+     *  
+     *  @return Die Methode liefert im Rückgabewert den Wert <code>true</code>,
+     *          wenn der Anwender den Zelleninhalt bearbeiten darf.
+     */
     @Override
     public boolean isCellEditable(int row, int column)
     {
@@ -222,6 +332,19 @@ public class SuperMeleeMatchdayTable extends JTable
                 ||  SuperMeleeMatchdayTable.COL_GUEST_SCORE.equals(this.astrHeader.get(column)) );
     }
     
+    /**
+     *  \brief  Mit der Methode wird das Ausgabeformat der Paarungen umgeschaltet
+     *  
+     *  In der Tabelle werden Spielpaarungen und Spielergebnisse auf der GUI 
+     *  ausgegeben. Für die Paarungen können entweder die Nummern oder Namen
+     *  der Spieler der Teams angezeigt werden. 
+     *  
+     *  Mit dieser Methode kann die Darstellung umgeschaltet werden.
+     *  
+     *  @return Die Methode liefert den Wert <code>true</code>, wenn die 
+     *          Darstellung auch Nummern umgeschaltet wurde. Andernfalls wird
+     *          der Wert <code>false</code> zurückgegeben.
+     */
     public boolean toggleOutputParticipants()
     {
       this.bOutputNumeric = !this.bOutputNumeric;
@@ -243,13 +366,58 @@ public class SuperMeleeMatchdayTable extends JTable
       return this.bOutputNumeric;
     }
     
+    /**
+     *  \brief  Getter-Methode liefert den Spaltenindex zu einem speziellen Spaltencode
+     *  
+     *  In der Tabelle kann es eine variable Anzahl von Spalten geben. Somit 
+     *  kann ein Spalte nicht über einen konstanten Spaltenindex referenziert
+     *  werden.
+     *  
+     *  Jede Tabelle hat mit dem Vector astrHeader einen Ort, an dem die 
+     *  Spalten dokumentiert sind.
+     *  
+     *  @param  header        In diesem Parameter ist eine Spaltenkennung zu
+     *                        übergeben, zu der der Spaltenindex zurückgegeben
+     *                        werden soll.
+     *                        
+     *  @return Die Methode liefert den Spaltenindex als <code>int</code> 
+     *          zurück. Wenn die Spalte nicht ermittelt werden kann, da 
+     *          diese nicht eingeblendet oder unbekannt ist, wird der Wert
+     *          -1 zurückgegeben.
+     */
     public int getColumnIndexOf(String header)
     {
       return this.astrHeader.indexOf(header);
     }
   }
   
+  /**
+   *  \brief    Listener zur Positionierung des Focus in der SuperMeleeMatchdayTable
+   * 
+   *  In der Tabelle mit Spielergebnissen gibt es nur wenige Zellen, in denen
+   *  der Anwender Eingaben machen kann. Diese Zellen sollen über die Tab-Taste
+   *  angesteuert werden können.
+   *  
+   *  Dieser Listener kümmert sich darum, dass der Anwender mit der Tab-Taste 
+   *  das nächste freie Feld in den Fokus nehmen kann, damit weitere Ergebnisse
+   *  erfasst werden können.
+   *  
+   *  @author dirk.schweier
+   *  
+   *  \see      SuperMeleeMatchdayTable
+   *
+   */
   private class KeyAdapter extends java.awt.event.KeyAdapter {
+    /**
+     *  \brief  Methode, die im Falle der Tab-Taste den Fokus in der Tabelle steuert
+     *  
+     *  Diese Methode wird von dem Interface eingefordert und wird aufgerufen, 
+     *  wenn Tasten gedrückt werden.
+     *  
+     *  \param  e             In dem Parameter wird eine Instanz übergeben, aus
+     *                        der Informationen über das Ereignis hervorgehen,
+     *                        das Auslöser für den Aufruf dieser Methode ist.
+     */
     public void keyPressed(KeyEvent e) {
       if('\t' == e.getKeyChar())
       {

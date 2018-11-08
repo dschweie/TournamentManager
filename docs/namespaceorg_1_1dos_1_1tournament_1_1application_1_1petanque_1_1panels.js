@@ -1,5 +1,0 @@
-var namespaceorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels =
-[
-    [ "tablemodels", "namespaceorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels.html", "namespaceorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1tablemodels" ],
-    [ "PetanqueSuperMeleePanel", "classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_panel.html", "classorg_1_1dos_1_1tournament_1_1application_1_1petanque_1_1panels_1_1_petanque_super_melee_panel" ]
-];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['numericassociationid',['NumericAssociationId',['../a00420.html',1,'org::dos::tournament::player::utils']]],
-  ['numericparticipantid',['NumericParticipantId',['../a00424.html',1,'org::dos::tournament::player::utils']]]
+  ['numericassociationid',['NumericAssociationId',['../a00534.html',1,'org::dos::tournament::player::utils']]],
+  ['numericparticipantid',['NumericParticipantId',['../a00538.html',1,'org::dos::tournament::player::utils']]]
 ];

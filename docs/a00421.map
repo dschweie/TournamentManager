@@ -1,0 +1,6 @@
+<map id="org.dos.tournament.petanque.team.AbstractPetanqueTeam" name="org.dos.tournament.petanque.team.AbstractPetanqueTeam">
+<area shape="rect" id="node4" href="$a00426.html" title="org.dos.tournament.petanque.team.\lDoublette" alt="" coords="732,5,960,47"/>
+<area shape="rect" id="node5" href="$a00438.html" title="org.dos.tournament.petanque.team.\lTriplette" alt="" coords="732,71,960,112"/>
+<area shape="rect" id="node2" href="$a00514.html" title="org.dos.tournament.player.\lAbstractTeamParticipant" alt="" coords="231,39,408,80"/>
+<area shape="rect" id="node3" href="$a00510.html" title="org.dos.tournament.player.\lAbstractParticipant" alt="" coords="5,39,183,80"/>
+</map>

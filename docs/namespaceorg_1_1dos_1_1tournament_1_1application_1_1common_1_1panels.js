@@ -1,5 +1,0 @@
-var namespaceorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels =
-[
-    [ "components", "namespaceorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1components.html", "namespaceorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1components" ],
-    [ "DefaultMatchdayPanel", "classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1_default_matchday_panel.html", "classorg_1_1dos_1_1tournament_1_1application_1_1common_1_1panels_1_1_default_matchday_panel" ]
-];

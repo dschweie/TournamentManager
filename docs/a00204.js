@@ -1,5 +1,10 @@
 var a00204 =
 [
-    [ "SwingAction_2", "a00204.html#aabb31a5ed0e1cafc47c5b6052162550e", null ],
-    [ "actionPerformed", "a00204.html#ac8c2182d88e33e22a80b867d2790e2d8", null ]
+    [ "CoreRuleSuperMeleeAllIndicesUnique", "a00446.html", "a00446" ],
+    [ "RuleSuperMeleeNeverMeetOpponentTandem", "a00450.html", "a00450" ],
+    [ "RuleSuperMeleeNeverMeetOpponentTwice", "a00454.html", "a00454" ],
+    [ "RuleSuperMeleeNeverMeetTeammateTandem", "a00458.html", "a00458" ],
+    [ "RuleSuperMeleeNeverMeetTeammateTwice", "a00462.html", "a00462" ],
+    [ "RuleSuperMeleeNeverPlayTripletteTandem", "a00466.html", "a00466" ],
+    [ "RuleSuperMeleeNeverPlayTripletteTwice", "a00470.html", "a00470" ]
 ];

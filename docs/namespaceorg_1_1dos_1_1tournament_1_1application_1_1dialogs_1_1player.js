@@ -1,5 +1,0 @@
-var namespaceorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player =
-[
-    [ "petanque", "namespaceorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque.html", "namespaceorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1petanque" ],
-    [ "DialogAssociationAttendee", "classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1_dialog_association_attendee.html", "classorg_1_1dos_1_1tournament_1_1application_1_1dialogs_1_1player_1_1_dialog_association_attendee" ]
-];

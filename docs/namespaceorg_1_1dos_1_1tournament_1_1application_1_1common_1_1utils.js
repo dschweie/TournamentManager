@@ -1,4 +1,0 @@
-var namespaceorg_1_1dos_1_1tournament_1_1application_1_1common_1_1utils =
-[
-    [ "tablecelleditor", "namespaceorg_1_1dos_1_1tournament_1_1application_1_1common_1_1utils_1_1tablecelleditor.html", "namespaceorg_1_1dos_1_1tournament_1_1application_1_1common_1_1utils_1_1tablecelleditor" ]
-];

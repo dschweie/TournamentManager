@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['tablebasedindividual_2ejava',['TableBasedIndividual.java',['../a00038.html',1,'']]],
-  ['togglebutton_2ejava',['ToggleButton.java',['../a00002.html',1,'']]],
-  ['tournamentgrid_2ejava',['TournamentGrid.java',['../a00089.html',1,'']]],
-  ['tournamentmanagerui_2ejava',['TournamentManagerUI.java',['../a00035.html',1,'']]],
-  ['tournamentutils_2ejava',['TournamentUtils.java',['../a00092.html',1,'']]],
-  ['triplette_2ejava',['Triplette.java',['../a00071.html',1,'']]]
+  ['supermelee_2ejava',['SuperMelee.java',['../a00113.html',1,'']]],
+  ['supermeleeclubchampionship_2ejava',['SuperMeleeClubChampionship.java',['../a00116.html',1,'']]],
+  ['supermeleematchdaytable_2ejava',['SuperMeleeMatchdayTable.java',['../a00008.html',1,'']]],
+  ['supermeleemenufactory_2ejava',['SupermeleeMenuFactory.java',['../a00026.html',1,'']]]
 ];

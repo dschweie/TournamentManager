@@ -1,3 +1,4 @@
-<map id="org.dos.tournament.player.utils.NumericAssociationId" name="org.dos.tournament.player.utils.NumericAssociationId">
-<area shape="rect" id="node2" href="$a00416.html" title="org.dos.tournament.player.utils.\lIParticipantId" alt="" coords="5,5,211,47"/>
+<map id="org.dos.tournament.petanque.team.AbstractPetanqueTeam" name="org.dos.tournament.petanque.team.AbstractPetanqueTeam">
+<area shape="rect" id="node2" href="$a00513.html" title="org.dos.tournament.player.\lAbstractTeamParticipant" alt="" coords="352,39,529,80"/>
+<area shape="rect" id="node3" href="$a00509.html" title="org.dos.tournament.player.\lAbstractParticipant" alt="" coords="30,5,207,47"/>
 </map>

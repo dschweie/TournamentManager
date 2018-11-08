@@ -1,0 +1,10 @@
+<map id="org.dos.tournament.movement.regulations.Regulation&lt; T, G, P &gt;" name="org.dos.tournament.movement.regulations.Regulation&lt; T, G, P &gt;">
+<area shape="rect" id="node2" href="$a00394.html" title="org::dos::tournament\l::movement::regulations\l::AbstractCoreRule\&lt; T, G, P \&gt;" alt="" coords="588,130,787,186"/>
+<area shape="rect" id="node5" href="$a00398.html" title="org::dos::tournament\l::movement::regulations\l::AbstractRegulationDecorator\l\&lt; T, G, P \&gt;" alt="" coords="589,301,785,372"/>
+<area shape="rect" id="node9" href="$a00402.html" title="org.dos.tournament.movement.regulations.\lRegulation\&lt; org.dos.tournament.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.player.\lIParticipant \&gt;" alt="" coords="475,403,900,473"/>
+<area shape="rect" id="node3" href="$a00446.html" title="Diese Klasse ist Basisklasse im Regelwerk. " alt="" coords="1092,5,1343,105"/>
+<area shape="rect" id="node4" href="$a00394.html" title="org.dos.tournament.movement.regulations.\lAbstractCoreRule\&lt; SuperMelee,\l Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="1080,130,1355,186"/>
+<area shape="rect" id="node6" href="$a00454.html" title="org::dos::tournament\l::petanque::tournament\l::movement::regulations\l::RuleSuperMeleeNeverMeetOpponent\lTwice\&lt; SuperMelee, Vector\&lt; Vector\l\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="1096,211,1339,311"/>
+<area shape="rect" id="node7" href="$a00470.html" title="org::dos::tournament\l::petanque::tournament\l::movement::regulations\l::RuleSuperMeleeNeverPlayTriplette\lTwice\&lt; SuperMelee, Vector\&lt; Vector\l\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="1101,335,1333,435"/>
+<area shape="rect" id="node8" href="$a00398.html" title="org.dos.tournament.movement.regulations.\lAbstractRegulationDecorator\&lt; SuperMelee,\l Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="1080,459,1355,515"/>
+</map>

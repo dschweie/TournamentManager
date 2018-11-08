@@ -1,6 +1,11 @@
 var NAVTREE =
 [
   [ "TournamentManager", "index.html", [
+    [ "Was ist auf diesen Seiten zu finden?", "index.html#main01", null ],
+    [ "Benutzerhandbuch", "a01087.html", [
+      [ "Struktur des Handbuchs", "a01087.html#manStruct", null ]
+    ] ],
+    [ "Ausstehende Aufgaben", "a00173.html", null ],
     [ "Pakete", null, [
       [ "Pakete", "namespaces.html", "namespaces" ]
     ] ],
@@ -23,8 +28,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00002.html",
-"a00232.html",
-"a00380.html#a21262d3ba10d295093ef2851484cbe7e"
+"a00266.html",
+"a00414.html#a236d30bc2fc7b9584d5645094463fe8b",
+"a00522.html"
 ];
 
 var SYNCONMSG = 'Klicken um Panelsynchronisation auszuschalten';
