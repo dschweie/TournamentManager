@@ -25,11 +25,11 @@ import org.dos.tournament.application.dialogs.player.DialogAssociationAttendee;
 import org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableColumnModel;
 import org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableModel;
 import org.dos.tournament.application.petanque.panels.tablemodels.ParticipantsTableModel;
-import org.dos.tournament.petanque.team.JoueurIndividuel;
-import org.dos.tournament.petanque.tournament.matchday.Matchday;
-import org.dos.tournament.petanque.tournament.movement.SuperMelee;
-import org.dos.tournament.player.AssociationAttendee;
-import org.dos.tournament.player.IParticipant;
+import org.dos.tournament.branch.petanque.team.JoueurIndividuel;
+import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
+import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.common.player.AssociationAttendee;
+import org.dos.tournament.common.player.IParticipant;
 
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
@@ -511,6 +511,8 @@ public class PetanqueSuperMeleePanel extends JPanel
       putValue(SMALL_ICON, new ImageIcon(PetanqueSuperMeleePanel.class.getResource("/org/dos/tournament/resources/icons/if_413-Data_Add_2124504.png")));
       putValue(NAME, "SwingAction");
       putValue(SHORT_DESCRIPTION, "Some short description");
+      
+      this.setEnabled(false);
     }
     public void actionPerformed(ActionEvent e) {
       if(null != PetanqueSuperMeleePanel.this.tournament)

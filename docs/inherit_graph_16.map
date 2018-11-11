@@ -1,12 +1,3 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$a00402.html" title="org.dos.tournament.movement.regulations.\lRegulation\&lt; T, G, P \&gt;" alt="" coords="5,39,273,80"/>
-<area shape="rect" id="node2" href="$a00394.html" title="org.dos.tournament.movement.regulations.\lAbstractCoreRule\&lt; T, G, P \&gt;" alt="" coords="321,5,589,47"/>
-<area shape="rect" id="node4" href="$a00398.html" title="org.dos.tournament.movement.regulations.\lAbstractRegulationDecorator\&lt; T, G, P \&gt;" alt="" coords="321,71,589,112"/>
-<area shape="rect" id="node3" href="$a00446.html" title="Diese Klasse ist Basisklasse im Regelwerk. " alt="" coords="637,5,1032,47"/>
-<area shape="rect" id="node5" href="$a00454.html" title="org.dos.tournament.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetOpponentTwice" alt="" coords="637,71,1032,112"/>
-<area shape="rect" id="node9" href="$a00470.html" title="org.dos.tournament.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTwice" alt="" coords="637,136,1032,177"/>
-<area shape="rect" id="node6" href="$a00450.html" title="org.dos.tournament.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetOpponentTandem" alt="" coords="1080,5,1475,47"/>
-<area shape="rect" id="node7" href="$a00462.html" title="org.dos.tournament.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTwice" alt="" coords="1080,71,1475,112"/>
-<area shape="rect" id="node8" href="$a00458.html" title="org.dos.tournament.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTandem" alt="" coords="1523,71,1917,112"/>
-<area shape="rect" id="node10" href="$a00466.html" title="org.dos.tournament.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTandem" alt="" coords="1080,136,1475,177"/>
+<area shape="rect" id="node1" href="$d8/d89/a00484.html" title="org.dos.tournament.branch.petanque.tournament.utils.\lTournamentGrid" alt="" coords="5,5,340,47"/>
 </map>

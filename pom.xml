@@ -154,7 +154,12 @@
         <artifactId>mongodb-driver</artifactId>
         <version>3.8.2</version>
     </dependency>
-</dependencies>
+    <dependency>
+	    <groupId>com.miglayout</groupId>
+	    <artifactId>miglayout</artifactId>
+	    <version>3.5.5</version>
+    </dependency>
+  </dependencies>
   
   <reporting>
 	  <plugins>

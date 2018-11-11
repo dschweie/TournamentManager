@@ -16,9 +16,9 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
 import org.dos.tournament.application.TournamentManagerUI;
-import org.dos.tournament.player.AssociationAttendee;
-import org.dos.tournament.player.IParticipant;
-import org.dos.tournament.player.utils.ParticipantStatus;
+import org.dos.tournament.common.player.AssociationAttendee;
+import org.dos.tournament.common.player.IParticipant;
+import org.dos.tournament.common.player.utils.ParticipantStatus;
 
 import com.mongodb.MongoClient;
 
@@ -30,6 +30,7 @@ import javax.swing.Action;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.event.KeyEvent;
 
 public class DialogAssociationAttendee extends JDialog
 {
@@ -120,46 +121,47 @@ public class DialogAssociationAttendee extends JDialog
       textId.setColumns(10);
     }
     {
-      lblName = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblName.text")); //$NON-NLS-1$ //$NON-NLS-2$
-      GridBagConstraints gbc_lblName = new GridBagConstraints();
-      gbc_lblName.anchor = GridBagConstraints.EAST;
-      gbc_lblName.fill = GridBagConstraints.VERTICAL;
-      gbc_lblName.insets = new Insets(0, 0, 5, 5);
-      gbc_lblName.gridx = 0;
-      gbc_lblName.gridy = 1;
-      contentPanel.add(lblName, gbc_lblName);
-    }
-    {
-      textName = new JTextField();
-      GridBagConstraints gbc_textName = new GridBagConstraints();
-      gbc_textName.fill = GridBagConstraints.BOTH;
-      gbc_textName.insets = new Insets(0, 0, 5, 5);
-      gbc_textName.gridx = 1;
-      gbc_textName.gridy = 1;
-      contentPanel.add(textName, gbc_textName);
-      textName.setColumns(10);
-    }
-    lblName.setLabelFor(textName);
-    {
       lblSurname = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblSurname.text")); //$NON-NLS-1$ //$NON-NLS-2$
       GridBagConstraints gbc_lblSurname = new GridBagConstraints();
       gbc_lblSurname.anchor = GridBagConstraints.EAST;
       gbc_lblSurname.insets = new Insets(0, 0, 5, 5);
-      gbc_lblSurname.gridx = 2;
+      gbc_lblSurname.gridx = 0;
       gbc_lblSurname.gridy = 1;
       contentPanel.add(lblSurname, gbc_lblSurname);
     }
     {
       textSurname = new JTextField();
       GridBagConstraints gbc_textSurname = new GridBagConstraints();
-      gbc_textSurname.gridwidth = 2;
       gbc_textSurname.insets = new Insets(0, 0, 5, 0);
       gbc_textSurname.fill = GridBagConstraints.HORIZONTAL;
-      gbc_textSurname.gridx = 3;
+      gbc_textSurname.gridx = 1;
       gbc_textSurname.gridy = 1;
       contentPanel.add(textSurname, gbc_textSurname);
       textSurname.setColumns(10);
     }
+    this.lblSurname.setLabelFor(this.textSurname);
+    {
+      lblName = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblName.text")); //$NON-NLS-1$ //$NON-NLS-2$
+      GridBagConstraints gbc_lblName = new GridBagConstraints();
+      gbc_lblName.anchor = GridBagConstraints.EAST;
+      gbc_lblName.fill = GridBagConstraints.VERTICAL;
+      gbc_lblName.insets = new Insets(0, 0, 5, 5);
+      gbc_lblName.gridx = 2;
+      gbc_lblName.gridy = 1;
+      contentPanel.add(lblName, gbc_lblName);
+    }
+    {
+      textName = new JTextField();
+      GridBagConstraints gbc_textName = new GridBagConstraints();
+      gbc_textName.gridwidth = 2;
+      gbc_textName.fill = GridBagConstraints.BOTH;
+      gbc_textName.insets = new Insets(0, 0, 5, 5);
+      gbc_textName.gridx = 3;
+      gbc_textName.gridy = 1;
+      contentPanel.add(textName, gbc_textName);
+      textName.setColumns(10);
+    }
+    lblName.setLabelFor(textName);
     {
       lblAssociation = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblAssociation.text")); //$NON-NLS-1$ //$NON-NLS-2$
       GridBagConstraints gbc_lblAssociation = new GridBagConstraints();
@@ -242,6 +244,7 @@ public class DialogAssociationAttendee extends JDialog
       buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
       {
         btnOk = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.okButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+        btnOk.setMnemonic(KeyEvent.VK_END);
         btnOk.setAction(actionSaveData);
         btnOk.setActionCommand(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.okButton.actionCommand")); //$NON-NLS-1$ //$NON-NLS-2$
         buttonPane.add(btnOk);
@@ -250,11 +253,13 @@ public class DialogAssociationAttendee extends JDialog
       {
         btnAdditionalAttendee = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
         btnAdditionalAttendee.setMnemonic('w');
+        btnAdditionalAttendee.setMnemonic(KeyEvent.VK_ENTER);
         btnAdditionalAttendee.setAction(actionOkAndNext);
         buttonPane.add(btnAdditionalAttendee);
       }
       {
         btnCancel = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.cancelButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+        btnCancel.setMnemonic(KeyEvent.VK_ESCAPE);
         btnCancel.setAction(actionCancel);
         btnCancel.setActionCommand(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.cancelButton.actionCommand")); //$NON-NLS-1$ //$NON-NLS-2$
         buttonPane.add(btnCancel);
@@ -308,6 +313,7 @@ public class DialogAssociationAttendee extends JDialog
   private class SwingActionOK extends AbstractAction {
     public SwingActionOK() 
     {
+      putValue(MNEMONIC_KEY, KeyEvent.VK_END);
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionSaveData.name")); //$NON-NLS-1$ //$NON-NLS-2$
       putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionSaveData.short description")); //$NON-NLS-1$ //$NON-NLS-2$
     }
@@ -329,6 +335,7 @@ public class DialogAssociationAttendee extends JDialog
   }
   private class SwingActionCancel extends AbstractAction {
     public SwingActionCancel() {
+      putValue(MNEMONIC_KEY, KeyEvent.VK_ESCAPE);
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionCancel.name")); //$NON-NLS-1$ //$NON-NLS-2$
       putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionCancel.short description")); //$NON-NLS-1$ //$NON-NLS-2$
     }
@@ -362,6 +369,7 @@ public class DialogAssociationAttendee extends JDialog
 
   private class SwingActionOkAndNext extends AbstractAction {
     public SwingActionOkAndNext() {
+      putValue(MNEMONIC_KEY, KeyEvent.VK_ENTER);
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionOkAndNext.name")); //$NON-NLS-1$ //$NON-NLS-2$
       putValue(SHORT_DESCRIPTION, "Some short description");
     }

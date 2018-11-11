@@ -6,10 +6,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 
 import javax.swing.JPanel;
-import java.awt.GridLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
 import java.awt.event.ItemEvent;
@@ -18,22 +14,15 @@ import java.util.ResourceBundle;
 import java.util.Vector;
 
 import javax.swing.Action;
-import javax.swing.ComboBoxModel;
-
 import java.awt.FlowLayout;
-import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JLabel;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
 import javax.swing.JComboBox;
-import java.awt.Insets;
 import net.miginfocom.swing.MigLayout;
 import java.awt.Dimension;
 import javax.swing.SwingConstants;
 
-import org.dos.tournament.petanque.tournament.movement.SuperMelee;
-import org.dos.tournament.player.IParticipant;
-import javax.swing.JScrollPane;
+import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.common.player.IParticipant;
 
 public class DialogSetRoundManually extends JDialog {
   private final Action actionOK = new SwingAction();

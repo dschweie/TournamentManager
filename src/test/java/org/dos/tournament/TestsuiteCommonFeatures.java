@@ -15,9 +15,9 @@ import org.junit.runners.Suite.SuiteClasses;
  *
  */
 @RunWith(Suite.class)
-@SuiteClasses({ org.dos.tournament.player.TestAttendee.class                             ,
-                org.dos.tournament.competition.TestDefaultCompetitorResult.class         ,
-                org.dos.tournament.competition.TestDefaultCompetitorResultCompare.class    })
+@SuiteClasses({ org.dos.tournament.common.player.TestAttendee.class                             ,
+                org.dos.tournament.common.competition.TestDefaultCompetitorResult.class         ,
+                org.dos.tournament.common.competition.TestDefaultCompetitorResultCompare.class    })
 public class TestsuiteCommonFeatures
 {
 

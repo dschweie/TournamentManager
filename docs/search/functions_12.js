@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wereopponents',['wereOpponents',['../a00474.html#a24a70d7ab0ec6ebb90633a7aeb4caa76',1,'org.dos.tournament.petanque.tournament.movement.SuperMelee.wereOpponents()'],['../a00498.html#abc6dea92018fe77953e3c12cede498e7',1,'org.dos.tournament.petanque.tournament.partie.Partie.wereOpponents()']]],
-  ['wereteammates',['wereTeammates',['../a00474.html#ad6cf6ec504b6a889a4be09d223cf1401',1,'org::dos::tournament::petanque::tournament::movement::SuperMelee']]]
+  ['wereopponents',['wereOpponents',['../de/d87/a00456.html#a7da7e3d2ac20c24987e76e706eb533e5',1,'org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.wereOpponents()'],['../d9/dc5/a00480.html#a7f4c4c6f2d7bc80e226dc16a51e6df3d',1,'org.dos.tournament.branch.petanque.tournament.partie.Partie.wereOpponents()']]],
+  ['wereteammates',['wereTeammates',['../de/d87/a00456.html#a2353ec7ffd27aaca63069d51b68a9216',1,'org::dos::tournament::branch::petanque::tournament::movement::SuperMelee']]]
 ];

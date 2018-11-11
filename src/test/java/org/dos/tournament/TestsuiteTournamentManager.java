@@ -16,7 +16,7 @@ import org.junit.runners.Suite.SuiteClasses;
  */
 @RunWith(Suite.class)
 @SuiteClasses({ org.dos.tournament.TestsuiteCommonFeatures.class     ,
-                org.dos.tournament.petanque.TestsuitePetanque.class    })
+                org.dos.tournament.branch.petanque.TestsuitePetanque.class    })
 public class TestsuiteTournamentManager
 {
 

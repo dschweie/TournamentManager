@@ -1,16 +1,18 @@
 package org.dos.tournament.application.dialogs.petanque.player;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.ResourceBundle;
 import java.util.Vector;
 
 import javax.swing.AbstractAction;
 
 import org.dos.tournament.application.dialogs.player.DialogAssociationAttendee;
-import org.dos.tournament.petanque.team.JoueurIndividuel;
-import org.dos.tournament.player.AssociationAttendee;
-import org.dos.tournament.player.IParticipant;
-import org.dos.tournament.player.utils.ParticipantStatus;
+import org.dos.tournament.branch.petanque.team.JoueurIndividuel;
+import org.dos.tournament.common.player.AssociationAttendee;
+import org.dos.tournament.common.player.IParticipant;
+import org.dos.tournament.common.player.utils.ParticipantStatus;
 
 public class DialogJoueurIndividuel extends DialogAssociationAttendee
 {
@@ -30,7 +32,8 @@ public class DialogJoueurIndividuel extends DialogAssociationAttendee
       this.getNextButton().setAction(new org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOkAndNext());
   }
   
-  private class SwingActionOK extends AbstractAction {
+  private class SwingActionOK extends AbstractAction 
+  {
     public SwingActionOK() 
     {
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionSaveData.name")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -53,11 +56,19 @@ public class DialogJoueurIndividuel extends DialogAssociationAttendee
     }
   }
 
-  private class SwingActionOkAndNext extends AbstractAction {
+  private class SwingActionOkAndNext extends AbstractAction 
+  {
+    /**
+     *  Standardkonstruktor der Aktion
+     */
     public SwingActionOkAndNext() {
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionOkAndNext.name")); //$NON-NLS-1$ //$NON-NLS-2$
       putValue(SHORT_DESCRIPTION, "Some short description");
     }
+    
+    /**
+     *  Diese 
+     */
     public void actionPerformed(ActionEvent e) {
       if(-1 == DialogJoueurIndividuel.this.iPos)
       { //  new Attendee will be added
@@ -74,6 +85,7 @@ public class DialogJoueurIndividuel extends DialogAssociationAttendee
       
       DialogJoueurIndividuel.this.textId.setText(String.valueOf(DialogAssociationAttendee.getNextIndex()));
       DialogJoueurIndividuel.this.textName.setText("");
+      DialogJoueurIndividuel.this.textSurname.setText("");
       DialogJoueurIndividuel.this.textAssociation.setText("");
       DialogJoueurIndividuel.this.comboBoxStatus.setSelectedIndex(1);
       DialogJoueurIndividuel.this.repaint();

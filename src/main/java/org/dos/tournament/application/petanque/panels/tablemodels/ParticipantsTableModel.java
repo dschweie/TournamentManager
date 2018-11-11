@@ -6,8 +6,8 @@ import java.util.Vector;
 
 import javax.swing.table.DefaultTableModel;
 
-import org.dos.tournament.petanque.tournament.movement.SuperMelee;
-import org.dos.tournament.player.IParticipant;
+import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.common.player.IParticipant;
 
 public class ParticipantsTableModel extends DefaultTableModel implements Observer
 {

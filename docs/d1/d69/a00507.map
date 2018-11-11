@@ -1,0 +1,9 @@
+<map id="org.dos.tournament.common.movement.regulations.AbstractRegulationDecorator&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.AbstractRegulationDecorator&lt; T, G, P &gt;">
+<area shape="rect" id="node3" href="$d4/d82/a00436.html" title="org::dos::tournament\l::branch::petanque::tournament\l::movement::regulations::RuleSuperMelee\lNeverMeetOpponentTwice\&lt; SuperMelee,\l Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="800,26,1075,111"/>
+<area shape="rect" id="node6" href="$d1/d0b/a00452.html" title="org::dos::tournament\l::branch::petanque::tournament\l::movement::regulations::RuleSuperMelee\lNeverPlayTripletteTwice\&lt; SuperMelee,\l Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="800,135,1075,221"/>
+<area shape="rect" id="node8" href="$dc/d30/a00508.html" title="org.dos.tournament.common.movement.regulations.\lAbstractRegulationDecorator\&lt; SuperMelee,\l Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="776,245,1099,301"/>
+<area shape="rect" id="node2" href="$d4/dfb/a00512.html" title="org::dos::tournament\l::common::movement::regulations\l::Regulation\&lt; T, G, P \&gt;" alt="" coords="5,150,224,206"/>
+<area shape="rect" id="node4" href="$d9/dd5/a00432.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetOpponentTandem" alt="" coords="1148,5,1585,47"/>
+<area shape="rect" id="node5" href="$d3/dea/a00444.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTwice" alt="" coords="1148,71,1585,112"/>
+<area shape="rect" id="node7" href="$de/dfe/a00448.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTandem" alt="" coords="1148,157,1585,199"/>
+</map>

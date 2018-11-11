@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['disqualified',['DISQUALIFIED',['../a00542.html#ae1b23b8c55932bc8626f398269137295',1,'org::dos::tournament::player::utils::ParticipantStatus']]]
+  ['disqualified',['DISQUALIFIED',['../dd/de6/a00548.html#ac246cdfa826e96ea310d61bc3006980e',1,'org::dos::tournament::common::player::utils::ParticipantStatus']]]
 ];

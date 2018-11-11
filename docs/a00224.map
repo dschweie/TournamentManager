@@ -1,5 +1,0 @@
-<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel">
-<area shape="rect" id="node4" href="$a00474.html" title="org.dos.tournament.petanque.tournament.movement.\lSuperMelee" alt="" coords="967,501,1293,542"/>
-<area shape="rect" id="node8" href="$a00486.html" title="org.dos.tournament.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="373,209,700,250"/>
-<area shape="rect" id="node16" href="$a00402.html" title="org.dos.tournament.movement.regulations.\lRegulation\&lt; org.dos.tournament.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.player.\lIParticipant \&gt;" alt="" coords="324,535,749,606"/>
-</map>

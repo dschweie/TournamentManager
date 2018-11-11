@@ -1,4 +1,0 @@
-<map id="org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem" name="org.dos.tournament.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem">
-<area shape="rect" id="node2" href="$a00469.html" title="org.dos.tournament.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTwice" alt="" coords="455,5,849,47"/>
-<area shape="rect" id="node3" href="$a00397.html" title="org::dos::tournament\l::movement::regulations\l::AbstractRegulationDecorator\l\&lt; SuperMelee, Vector\&lt; Vector\l\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="207,51,405,137"/>
-</map>

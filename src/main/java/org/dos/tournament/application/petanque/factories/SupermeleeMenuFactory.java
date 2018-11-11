@@ -7,7 +7,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JSeparator;
 
 import org.dos.tournament.application.TournamentManagerUI;
-import org.dos.tournament.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 
 public class SupermeleeMenuFactory
 {

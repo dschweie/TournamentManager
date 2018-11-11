@@ -48,9 +48,9 @@ import org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundMa
 import org.dos.tournament.application.petanque.factories.SupermeleeMenuFactory;
 import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.application.petanque.panels.tablemodels.ParticipantsTableModel;
-import org.dos.tournament.petanque.tournament.movement.SuperMelee;
-import org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship;
-import org.dos.tournament.player.AssociationAttendee;
+import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship;
+import org.dos.tournament.common.player.AssociationAttendee;
 
 import com.mongodb.MongoClient;
 

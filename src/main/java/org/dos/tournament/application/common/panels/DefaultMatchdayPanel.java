@@ -9,7 +9,7 @@ import javax.swing.table.TableColumn;
 import org.dos.tournament.application.common.controls.ToggleButton;
 import org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable;
 import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor;
-import org.dos.tournament.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 
 import javax.swing.JTable;
 import javax.swing.JScrollPane;

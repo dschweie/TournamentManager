@@ -12,9 +12,9 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor;
-import org.dos.tournament.petanque.tournament.matchday.Matchday;
-import org.dos.tournament.petanque.tournament.movement.SuperMelee;
-import org.dos.tournament.petanque.tournament.partie.Partie;
+import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
+import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.branch.petanque.tournament.partie.Partie;
 
 /**
  * \brief       Die Klasse steht für die Tabelle für Spielpaarungen im Supermelee
@@ -231,7 +231,7 @@ public class SuperMeleeMatchdayTable extends JTable
       
       if(null != cause)
         if(cause.getClass().getName().equals("org.dos.tournament.petanque.tournament.movement.SuperMelee$MatchdayUpdate"))
-          _retval = (this.iMatchdayIndex == ((org.dos.tournament.petanque.tournament.movement.SuperMelee.MatchdayUpdate)cause).getMatchday());
+          _retval = (this.iMatchdayIndex == ((org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MatchdayUpdate)cause).getMatchday());
       return _retval;
     }
 

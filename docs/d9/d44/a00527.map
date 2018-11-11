@@ -1,0 +1,6 @@
+<map id="org.dos.tournament.common.player.Attendee" name="org.dos.tournament.common.player.Attendee">
+<area shape="rect" id="node4" href="$d9/d24/a00524.html" title="org.dos.tournament.common.player.\lAssociationAttendee" alt="" coords="25,273,256,315"/>
+<area shape="rect" id="node2" href="$d4/d40/a00516.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="25,95,256,136"/>
+<area shape="rect" id="node3" href="$d7/d41/a00532.html" title="Dieses ist das zentrale Interface fÃ¼r Teilnehmer oder Teams im Turnier. " alt="" coords="25,5,256,47"/>
+<area shape="rect" id="node5" href="$d9/d72/a00412.html" title="org.dos.tournament.branch.petanque.team.\lJoueurIndividuel" alt="" coords="5,363,276,404"/>
+</map>
