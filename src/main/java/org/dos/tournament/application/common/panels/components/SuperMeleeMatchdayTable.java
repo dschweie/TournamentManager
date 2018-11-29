@@ -126,6 +126,7 @@ public class SuperMeleeMatchdayTable extends JTable
     super();
     this.xTournament = tournament;
     this.setModel(new TableModel(matchday));
+    ((TableModel) this.getModel()).update(this.xTournament, null);
     this.xTournament.addObserver((Observer) this.getModel());
     this.iMatchdayIndex = matchday;
     this.addKeyListener(new KeyAdapter());

@@ -39,6 +39,7 @@ public class SingletonStorage
       case "mongo":     _retval = new DatabaseClient(); 
                         _retval.open(SingletonStorage.getStorageParameters(storageType)); 
                         break;
+      default:          _retval = null; break;
     }
     
     return _retval;

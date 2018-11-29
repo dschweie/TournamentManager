@@ -445,9 +445,10 @@ public class DialogAssociationAttendee extends JDialog
       }
       catch(Exception ex) { System.out.println(ex.getLocalizedMessage()); }
 
-      if(     ( 2 < _forename.length()    )
-          ||  ( 2 < _surname.length()     )
-          ||  ( 2 < _association.length() ) )
+      if(     ( null != SingletonStorage.getInstance()  )
+          &&  (     ( 2 < _forename.length()    )
+                ||  ( 2 < _surname.length()     )
+                ||  ( 2 < _association.length() )       ) )
       {
         
 //        Vector<JoueurIndividuel> _matches = SingletonStorage.getInstance().findParticipantAsJoueurIndividuel(DialogAssociationAttendee.this.textName.getText(), DialogAssociationAttendee.this.textSurname.getText(), DialogAssociationAttendee.this.textAssociation.getText());

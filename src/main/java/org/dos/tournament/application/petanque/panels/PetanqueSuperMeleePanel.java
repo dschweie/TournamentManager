@@ -513,7 +513,7 @@ public class PetanqueSuperMeleePanel extends JPanel
       putValue(NAME, "SwingAction");
       putValue(SHORT_DESCRIPTION, "Some short description");
       
-      this.setEnabled(true);
+      this.setEnabled(null != SingletonStorage.getPrimaryStorage());
     }
     public void actionPerformed(ActionEvent e) {
       if(0 < PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRowCount())
