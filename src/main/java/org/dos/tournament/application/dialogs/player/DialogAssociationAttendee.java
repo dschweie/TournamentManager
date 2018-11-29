@@ -16,9 +16,13 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
 import org.dos.tournament.application.TournamentManagerUI;
+import org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel;
+import org.dos.tournament.branch.petanque.team.JoueurIndividuel;
 import org.dos.tournament.common.player.AssociationAttendee;
 import org.dos.tournament.common.player.IParticipant;
+import org.dos.tournament.common.player.utils.NumericParticipantId;
 import org.dos.tournament.common.player.utils.ParticipantStatus;
+import org.dos.tournament.common.storage.SingletonStorage;
 
 import com.mongodb.MongoClient;
 
@@ -26,11 +30,14 @@ import javax.swing.AbstractAction;
 import javax.swing.AbstractButton;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.Action;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class DialogAssociationAttendee extends JDialog
 {
@@ -57,9 +64,10 @@ public class DialogAssociationAttendee extends JDialog
   private final Action actionOkAndNext = new SwingActionOkAndNext();
   private JLabel lblSurname;
   private JLabel lblDataEntries;
-  private JComboBox comboBoxDataEntries;
+  protected JComboBox comboBoxDataEntries;
   private JLabel lblHits;
-
+  
+  protected AssociationAttendee xAttendee = null;
 
   /**
    * Launch the application.
@@ -82,6 +90,8 @@ public class DialogAssociationAttendee extends JDialog
    */
   public DialogAssociationAttendee()
   {
+    KeyListener _storageListener = new StorageKeyListener();
+    
     setModalityType(ModalityType.APPLICATION_MODAL);
     setType(Type.POPUP);
 
@@ -131,6 +141,7 @@ public class DialogAssociationAttendee extends JDialog
     }
     {
       textSurname = new JTextField();
+      textSurname.setName("txtSurname");
       GridBagConstraints gbc_textSurname = new GridBagConstraints();
       gbc_textSurname.insets = new Insets(0, 0, 5, 0);
       gbc_textSurname.fill = GridBagConstraints.HORIZONTAL;
@@ -138,6 +149,7 @@ public class DialogAssociationAttendee extends JDialog
       gbc_textSurname.gridy = 1;
       contentPanel.add(textSurname, gbc_textSurname);
       textSurname.setColumns(10);
+      textSurname.addKeyListener(_storageListener);
     }
     this.lblSurname.setLabelFor(this.textSurname);
     {
@@ -152,6 +164,7 @@ public class DialogAssociationAttendee extends JDialog
     }
     {
       textName = new JTextField();
+      textName.setName("txtForename");
       GridBagConstraints gbc_textName = new GridBagConstraints();
       gbc_textName.gridwidth = 2;
       gbc_textName.fill = GridBagConstraints.BOTH;
@@ -160,6 +173,7 @@ public class DialogAssociationAttendee extends JDialog
       gbc_textName.gridy = 1;
       contentPanel.add(textName, gbc_textName);
       textName.setColumns(10);
+      this.textName.addKeyListener(_storageListener);
     }
     lblName.setLabelFor(textName);
     {
@@ -175,6 +189,7 @@ public class DialogAssociationAttendee extends JDialog
     lblAssociation.setLabelFor(textAssociation);
     {
       textAssociation = new JTextField();
+      textAssociation.setName("txtAssociation");
       GridBagConstraints gbc_textAssociation = new GridBagConstraints();
       gbc_textAssociation.insets = new Insets(0, 0, 5, 0);
       gbc_textAssociation.gridwidth = 4;
@@ -183,6 +198,8 @@ public class DialogAssociationAttendee extends JDialog
       gbc_textAssociation.gridy = 2;
       contentPanel.add(textAssociation, gbc_textAssociation);
       textAssociation.setColumns(10);
+      this.textAssociation.addKeyListener(_storageListener);
+      
     }
     {
       lblState = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.lblState.text")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -220,6 +237,7 @@ public class DialogAssociationAttendee extends JDialog
     }
     {
       comboBoxDataEntries = new JComboBox();
+      comboBoxDataEntries.addActionListener(new ActionListenerUpdateFields());
       comboBoxDataEntries.setEnabled(TournamentManagerUI.isConnected());
 //      comboBoxDataEntries.setVisible(null!=TournamentManagerUI.getMongoClient());
       GridBagConstraints gbc_comboBoxDataEntries = new GridBagConstraints();
@@ -267,7 +285,7 @@ public class DialogAssociationAttendee extends JDialog
     }
     this.pack();
     
-    if(null == TournamentManagerUI.getMongoClient())
+    if(false == true)
     {
       lblDataEntries.setEnabled(false);
       comboBoxDataEntries.setEnabled(false);
@@ -373,12 +391,25 @@ public class DialogAssociationAttendee extends JDialog
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionOkAndNext.name")); //$NON-NLS-1$ //$NON-NLS-2$
       putValue(SHORT_DESCRIPTION, "Some short description");
     }
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) 
+    {
       if(-1 == DialogAssociationAttendee.this.iPos)
       { //  new Attendee will be added
-        AssociationAttendee _attendee = new AssociationAttendee(Integer.parseInt(DialogAssociationAttendee.this.textId.getText()), DialogAssociationAttendee.this.textName.getText(), DialogAssociationAttendee.this.textAssociation.getText());
-        _attendee.setStatus((ParticipantStatus) DialogAssociationAttendee.this.comboBoxStatus.getSelectedItem());
-        DialogAssociationAttendee.this.vecAttendees.add(_attendee);
+        AssociationAttendee _attendee = null;
+        
+        if(     (     DialogAssociationAttendee.this.comboBoxDataEntries.isEnabled()         ) 
+            &&  ( 0 < DialogAssociationAttendee.this.comboBoxDataEntries.getSelectedIndex()  ) )
+        { // In diesem Fall ist das Objekt der Combobox zu nehmen
+          _attendee = (AssociationAttendee) DialogAssociationAttendee.this.comboBoxDataEntries.getSelectedItem();
+        }
+        else
+        {
+          _attendee = new JoueurIndividuel(Integer.parseInt(DialogAssociationAttendee.this.textId.getText()), DialogAssociationAttendee.this.textName.getText().trim(), DialogAssociationAttendee.this.textSurname.getText().trim(), DialogAssociationAttendee.this.textAssociation.getText().trim());
+          _attendee.setStatus((ParticipantStatus) DialogAssociationAttendee.this.comboBoxStatus.getSelectedItem());
+        }
+        
+        if(null != _attendee)
+          DialogAssociationAttendee.this.vecAttendees.add(_attendee);
       }
       else
       { //  existing Attendee will be updated
@@ -391,5 +422,95 @@ public class DialogAssociationAttendee extends JDialog
       DialogAssociationAttendee.this.textAssociation.setText("");
       DialogAssociationAttendee.this.comboBoxStatus.setSelectedIndex(1);
     }
+  }
+  
+  private class StorageKeyListener implements KeyListener
+  {
+
+    @Override
+    public void keyTyped(KeyEvent e)
+    {
+      String _forename = DialogAssociationAttendee.this.textName.getText();
+      String _surname = DialogAssociationAttendee.this.textSurname.getText();
+      String _association = DialogAssociationAttendee.this.textAssociation.getText();
+      
+      try
+      {
+        switch(((JTextField)e.getSource()).getName())
+        {
+          case "txtForename" :    _forename     = _forename.concat(Character.toString(e.getKeyChar()));     break;
+          case "txtSurname" :     _surname      = _surname.concat(Character.toString(e.getKeyChar()));      break;
+          case "txtAssociation" : _association  = _association.concat(Character.toString(e.getKeyChar()));  break;
+        }
+      }
+      catch(Exception ex) { System.out.println(ex.getLocalizedMessage()); }
+
+      if(     ( 2 < _forename.length()    )
+          ||  ( 2 < _surname.length()     )
+          ||  ( 2 < _association.length() ) )
+      {
+        
+//        Vector<JoueurIndividuel> _matches = SingletonStorage.getInstance().findParticipantAsJoueurIndividuel(DialogAssociationAttendee.this.textName.getText(), DialogAssociationAttendee.this.textSurname.getText(), DialogAssociationAttendee.this.textAssociation.getText());
+        Vector<JoueurIndividuel> _matches = SingletonStorage.getInstance().findParticipantAsJoueurIndividuel(_forename, _surname, _association);
+        DialogAssociationAttendee.this.lblHits.setText(String.format("%d", _matches.size()));
+        
+        DialogAssociationAttendee.this.comboBoxDataEntries.removeAllItems();
+
+        if(0 < _matches.size())
+        {
+          DialogAssociationAttendee.this.comboBoxDataEntries.addItem("-");
+          
+          for(JoueurIndividuel _it : _matches)
+          {
+            _it.setParticipantId(new NumericParticipantId(Integer.parseInt(DialogAssociationAttendee.this.textId.getText())));
+            DialogAssociationAttendee.this.comboBoxDataEntries.addItem(_it);
+          }
+          DialogAssociationAttendee.this.lblDataEntries.setEnabled(true);
+          DialogAssociationAttendee.this.comboBoxDataEntries.setEnabled(true);
+          DialogAssociationAttendee.this.comboBoxDataEntries.setEditable(false);
+        }
+        else
+        {
+          DialogAssociationAttendee.this.lblDataEntries.setEnabled(false);
+          DialogAssociationAttendee.this.comboBoxDataEntries.setEditable(false);
+          DialogAssociationAttendee.this.comboBoxDataEntries.setEnabled(false);
+        }
+      }
+      DialogAssociationAttendee.this.comboBoxDataEntries.updateUI();
+      DialogAssociationAttendee.this.repaint();
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e)
+    {
+      // TODO Auto-generated method stub
+      
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e)
+    {
+      // TODO Auto-generated method stub
+      
+    }
+    
+  }
+
+  private class ActionListenerUpdateFields implements ActionListener
+  {
+
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+      if(     ( DialogAssociationAttendee.this.comboBoxDataEntries.isEnabled()            ) 
+          &&  ( 0 < DialogAssociationAttendee.this.comboBoxDataEntries.getSelectedIndex() ) )
+      { //  In diesem Fall ist ein Teilnehmer selektiert und die Felder sind zu aktualisieren
+        DialogAssociationAttendee.this.textName.setText(((JoueurIndividuel) DialogAssociationAttendee.this.comboBoxDataEntries.getSelectedItem()).getForename());
+        DialogAssociationAttendee.this.textSurname.setText(((JoueurIndividuel) DialogAssociationAttendee.this.comboBoxDataEntries.getSelectedItem()).getSurname());
+        DialogAssociationAttendee.this.textAssociation.setText(((JoueurIndividuel) DialogAssociationAttendee.this.comboBoxDataEntries.getSelectedItem()).getAssociation());
+      }
+      
+    }
+    
   }
 }

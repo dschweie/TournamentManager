@@ -1,7 +1,6 @@
 var a00214 =
 [
-    [ "IParticipantId", "d4/d33/a00536.html", "d4/d33/a00536" ],
-    [ "NumericAssociationId", "d4/d79/a00540.html", "d4/d79/a00540" ],
-    [ "NumericParticipantId", "d2/ddf/a00544.html", "d2/ddf/a00544" ],
-    [ "ParticipantStatus", "dd/de6/a00548.html", "dd/de6/a00548" ]
+    [ "PetanqueMatchResult", "d3/d29/a00419.html", "d3/d29/a00419" ],
+    [ "PetanqueResult", "d1/d05/a00423.html", "d1/d05/a00423" ],
+    [ "PetanqueSuperMeleeClubChampionshipResult", "da/db6/a00427.html", "da/db6/a00427" ]
 ];

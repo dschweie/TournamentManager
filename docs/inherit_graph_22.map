@@ -1,12 +1,3 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$d4/dfb/a00512.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; T, G, P \&gt;" alt="" coords="5,39,328,80"/>
-<area shape="rect" id="node2" href="$dc/d1c/a00504.html" title="org.dos.tournament.common.movement.regulations.\lAbstractCoreRule\&lt; T, G, P \&gt;" alt="" coords="376,5,699,47"/>
-<area shape="rect" id="node4" href="$dc/d30/a00508.html" title="org.dos.tournament.common.movement.regulations.\lAbstractRegulationDecorator\&lt; T, G, P \&gt;" alt="" coords="376,71,699,112"/>
-<area shape="rect" id="node3" href="$d4/dd3/a00428.html" title="Diese Klasse ist Basisklasse im Regelwerk. " alt="" coords="747,5,1184,47"/>
-<area shape="rect" id="node5" href="$d4/d82/a00436.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetOpponentTwice" alt="" coords="747,71,1184,112"/>
-<area shape="rect" id="node9" href="$d1/d0b/a00452.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTwice" alt="" coords="747,136,1184,177"/>
-<area shape="rect" id="node6" href="$d9/dd5/a00432.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetOpponentTandem" alt="" coords="1232,5,1669,47"/>
-<area shape="rect" id="node7" href="$d3/dea/a00444.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTwice" alt="" coords="1232,71,1669,112"/>
-<area shape="rect" id="node8" href="$de/df8/a00440.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTandem" alt="" coords="1717,71,2155,112"/>
-<area shape="rect" id="node10" href="$de/dfe/a00448.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTandem" alt="" coords="1232,136,1669,177"/>
+<area shape="rect" id="node1" href="$d0/d2a/a00531.html" title="org.dos.tournament.common.movement.regulations.\lAbstractCoreRule\&lt; SuperMelee, Vector\l\&lt; Vector\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="5,5,328,61"/>
 </map>

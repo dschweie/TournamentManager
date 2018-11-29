@@ -1,3 +1,6 @@
-<map id="org.dos.tournament.common.result.IResult" name="org.dos.tournament.common.result.IResult">
-<area shape="rect" id="node2" href="$d1/de6/a01068.html" title="Comparable" alt="" coords="74,5,165,32"/>
+<map id="org.dos.tournament.common.player.IParticipant" name="org.dos.tournament.common.player.IParticipant">
+<area shape="rect" id="node3" href="$d4/d9c/a00543.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="423,39,653,80"/>
+<area shape="rect" id="node2" href="$d6/d27/a01163.html" title="Comparable" alt="" coords="5,46,96,73"/>
+<area shape="rect" id="node4" href="$d9/d8b/a00547.html" title="org.dos.tournament.common.player.\lAbstractTeamParticipant" alt="" coords="701,5,932,47"/>
+<area shape="rect" id="node5" href="$d8/d75/a00555.html" title="org.dos.tournament.common.player.\lAttendee" alt="" coords="701,71,932,112"/>
 </map>

@@ -1,3 +1,4 @@
-<map id="org.dos.tournament.common.movement.regulations.AbstractRegulationDecorator&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.AbstractRegulationDecorator&lt; T, G, P &gt;">
-<area shape="rect" id="node2" href="$d4/dfb/a00512.html" title="org::dos::tournament\l::common::movement::regulations\l::Regulation\&lt; T, G, P \&gt;" alt="" coords="333,36,552,92"/>
+<map id="org.dos.tournament.branch.petanque.tournament.partie.Partie" name="org.dos.tournament.branch.petanque.tournament.partie.Partie">
+<area shape="rect" id="node2" href="$dd/d4d/a00519.html" title="org.dos.tournament.common.competition.\lAbstractEncounter" alt="" coords="45,95,308,136"/>
+<area shape="rect" id="node3" href="$d9/d44/a00527.html" title="org.dos.tournament.common.competition.\lIEncounter" alt="" coords="45,5,308,47"/>
 </map>

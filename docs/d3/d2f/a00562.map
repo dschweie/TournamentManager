@@ -1,3 +1,4 @@
-<map id="org.dos.tournament.common.result.ITotalResult" name="org.dos.tournament.common.result.ITotalResult">
-<area shape="rect" id="node2" href="$d1/de6/a01068.html" title="Comparable" alt="" coords="74,5,165,32"/>
+<map id="org.dos.tournament.common.player.utils.IParticipantId" name="org.dos.tournament.common.player.utils.IParticipantId">
+<area shape="rect" id="node2" href="$d2/dd7/a00567.html" title="org.dos.tournament.common.player.utils.\lNumericAssociationId" alt="" coords="312,5,571,47"/>
+<area shape="rect" id="node3" href="$df/d3a/a00571.html" title="org.dos.tournament.common.player.utils.\lNumericParticipantId" alt="" coords="312,71,571,112"/>
 </map>

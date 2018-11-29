@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['benutzerhandbuch',['Benutzerhandbuch',['../d8/d18/a01069.html',1,'']]]
+  ['benutzerhandbuch',['Benutzerhandbuch',['../d2/dd2/a01164.html',1,'']]]
 ];

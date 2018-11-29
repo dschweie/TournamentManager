@@ -1,0 +1,4 @@
+<map id="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually" name="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually">
+<area shape="rect" id="node8" href="$dc/da0/a00483.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee" alt="" coords="996,370,1367,411"/>
+<area shape="rect" id="node10" href="$d3/d87/a00539.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.common.player.\lIParticipant \&gt;" alt="" coords="300,667,779,738"/>
+</map>

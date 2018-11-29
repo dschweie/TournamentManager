@@ -1,6 +1,7 @@
 package org.dos.tournament.common.player;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Vector;
 
 import org.dos.tournament.common.player.utils.IParticipantId;
@@ -13,6 +14,7 @@ public abstract class AbstractParticipant implements IParticipant
   protected IParticipantId id = null;
   protected ParticipantStatus status = ParticipantStatus.ACTIVE;
   protected ITotalResult result = null;
+  protected HashMap<String, Object> attributes = new HashMap<String, Object>();
 
   @Override
   public IParticipantId getParticipantId()
@@ -170,5 +172,18 @@ public abstract class AbstractParticipant implements IParticipant
     }
   }
   
+  public Object getAttribute(String key)
+  {
+    return this.attributes.get(key);
+  }
   
+  public void setAttribute(String key, Object value)
+  {
+    this.attributes.put(key, value);
+  }
+  
+  public boolean hasAttribute(String key)
+  {
+    return this.attributes.containsKey(key);
+  }
 }

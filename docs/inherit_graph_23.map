@@ -1,5 +1,3 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$d4/d33/a00536.html" title="org.dos.tournament.common.player.utils.\lIParticipantId" alt="" coords="5,39,264,80"/>
-<area shape="rect" id="node2" href="$d4/d79/a00540.html" title="org.dos.tournament.common.player.utils.\lNumericAssociationId" alt="" coords="312,5,571,47"/>
-<area shape="rect" id="node3" href="$d2/ddf/a00544.html" title="org.dos.tournament.common.player.utils.\lNumericParticipantId" alt="" coords="312,71,571,112"/>
+<area shape="rect" id="node1" href="$d7/d84/a00535.html" title="org.dos.tournament.common.movement.regulations.\lAbstractRegulationDecorator\&lt; SuperMelee,\l Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="5,5,328,61"/>
 </map>

@@ -1,7 +1,7 @@
 var a00215 =
 [
-    [ "AbstractResult", "dd/de9/a00552.html", "dd/de9/a00552" ],
-    [ "AbstractTotalResult", "d6/d95/a00556.html", "d6/d95/a00556" ],
-    [ "IResult", "d9/d19/a00560.html", null ],
-    [ "ITotalResult", "d0/dc2/a00564.html", "d0/dc2/a00564" ]
+    [ "AbstractPetanqueTeam", "df/d70/a00431.html", "df/d70/a00431" ],
+    [ "Doublette", "d0/dc5/a00435.html", "d0/dc5/a00435" ],
+    [ "JoueurIndividuel", "d9/d3a/a00439.html", "d9/d3a/a00439" ],
+    [ "Triplette", "de/d84/a00447.html", "de/d84/a00447" ]
 ];

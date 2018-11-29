@@ -1,0 +1,6 @@
+<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee">
+<area shape="rect" id="node3" href="$d3/d87/a00539.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.common.player.\lIParticipant \&gt;" alt="" coords="964,147,1443,218"/>
+<area shape="rect" id="node4" href="$d3/d87/a00539.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; T, G, P \&gt;" alt="" coords="333,155,656,196"/>
+<area shape="rect" id="node15" href="$db/dc4/a00495.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="1018,647,1389,688"/>
+<area shape="rect" id="node16" href="$d7/de8/a01159.html" title="Runnable" alt="" coords="457,678,533,705"/>
+</map>

@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique">
-<area shape="rect" id="node2" href="$dc/d1c/a00504.html" title="org::dos::tournament\l::common::movement::regulations\l::AbstractCoreRule\&lt; SuperMelee,\l Vector\&lt; Vector\&lt; Integer \&gt; \&gt;,\l IParticipant \&gt;" alt="" coords="272,5,491,91"/>
-<area shape="rect" id="node3" href="$d4/dfb/a00512.html" title="org::dos::tournament\l::common::movement::regulations\l::Regulation\&lt; T, G, P \&gt;" alt="" coords="5,20,224,76"/>
+<map id="org.dos.tournament.branch.petanque.result.PetanqueSuperMeleeClubChampionshipResult" name="org.dos.tournament.branch.petanque.result.PetanqueSuperMeleeClubChampionshipResult">
+<area shape="rect" id="node2" href="$d3/d29/a00419.html" title="org.dos.tournament.branch.petanque.result.\lPetanqueMatchResult" alt="" coords="13,95,288,136"/>
+<area shape="rect" id="node3" href="$d1/d05/a00423.html" title="org.dos.tournament.branch.petanque.result.\lPetanqueResult" alt="" coords="13,5,288,47"/>
 </map>

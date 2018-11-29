@@ -30,6 +30,7 @@ import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.common.player.AssociationAttendee;
 import org.dos.tournament.common.player.IParticipant;
+import org.dos.tournament.common.storage.SingletonStorage;
 
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
@@ -512,21 +513,20 @@ public class PetanqueSuperMeleePanel extends JPanel
       putValue(NAME, "SwingAction");
       putValue(SHORT_DESCRIPTION, "Some short description");
       
-      this.setEnabled(false);
+      this.setEnabled(true);
     }
     public void actionPerformed(ActionEvent e) {
-      if(null != PetanqueSuperMeleePanel.this.tournament)
+      if(0 < PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRowCount())
       {
-        MongoClient _mongoClient = new MongoClient("localhost");
+        SingletonStorage.getPrimaryStorage().saveParticipant(PetanqueSuperMeleePanel.this.tournament.getCompetitors().elementAt(PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRows()[0]),false);
         
-        for( IParticipant _it : PetanqueSuperMeleePanel.this.tournament.getCompetitors() )
-        {
-          if (0 == _mongoClient.getDatabase("sandboxUsers").getCollection("participants").count(((Bson) ( new Document() ).append("name", _it.getName() ) )) )
-            _mongoClient.getDatabase("sandboxUsers").getCollection("participants").insertOne((Document) (new Document()).append("name", _it.getName()));
-        }
-        
-        _mongoClient.close();
+        PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
       }
+      else
+        JOptionPane.showMessageDialog(  PetanqueSuperMeleePanel.this, 
+                                        ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("PetanqueSuperMeleePanel.SwingActionUpdateAttendee.Error.NotColumnSelected.message"), 
+                                        ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("PetanqueSuperMeleePanel.SwingActionUpdateAttendee.Error.NotColumnSelected.title"), 
+                                        JOptionPane.ERROR_MESSAGE );
     }
   }
 }

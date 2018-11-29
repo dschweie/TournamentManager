@@ -44,6 +44,7 @@ import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JSeparator;
 
+import org.dos.tournament.application.common.config.SingletonProperties;
 import org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually;
 import org.dos.tournament.application.petanque.factories.SupermeleeMenuFactory;
 import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
@@ -208,6 +209,8 @@ public class TournamentManagerUI
   
   static public MongoClient initConnection()
   {
+    System.out.println(SingletonProperties.getProperty("storage"));
+    /*
     try
     {
       TournamentManagerUI.mongoClient = new MongoClient();
@@ -217,6 +220,8 @@ public class TournamentManagerUI
       e.printStackTrace();
     }
     return TournamentManagerUI.mongoClient;
+    */
+    return null;
   }
   
   static public MongoClient getMongoClient()

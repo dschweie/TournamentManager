@@ -122,6 +122,14 @@
           <include>**/*.png</include>
         </includes>
       </resource>
+      <resource>
+	      <filtering>true</filtering><!-- if it is neccessary -->
+	      <directory>${project.basedir}/config</directory><!-- from -->
+	      <targetPath>${project.build.directory}/TournamentManager</targetPath><!-- to -->
+	      <includes><!-- what -->
+	        <include>config.properties</include>
+	      </includes>
+      </resource>
   	</resources>
   </build>
   

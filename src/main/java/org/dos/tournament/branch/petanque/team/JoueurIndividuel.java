@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.ResourceBundle;
 import java.util.Vector;
 
+import org.bson.Document;
 import org.dos.tournament.branch.petanque.result.PetanqueMatchResult;
 import org.dos.tournament.common.player.AssociationAttendee;
 import org.dos.tournament.common.result.AbstractTotalResult;
@@ -27,6 +28,21 @@ public class JoueurIndividuel extends AssociationAttendee
     this.result = new PetanqueTotalResult();
   }
  
+
+  public JoueurIndividuel(Document document)
+  {
+    this(0, ((Document) document.get("name")).get("forename").toString(), ((Document) document.get("name")).get("surname").toString(), document.get("association").toString());
+    for( String _it : document.keySet())
+      switch(_it)
+      {
+        case "_class":
+        case "association":
+        case "name":
+        case "name.forname":
+        case "name.surname":  /* NOTHING TO DO */ break;
+        default:              this.attributes.put(_it, document.getString(_it));
+      }
+  }
 
   /* (non-Javadoc)
    * @see org.dos.tournament.player.AbstractParticipant#compareTo(java.lang.Object)
@@ -157,4 +173,25 @@ public class JoueurIndividuel extends AssociationAttendee
 
   }
 
+  public void setSurname(String value)
+  {
+    this.strSurname = value.toString();
+  }
+
+  public void setForename(String value)
+  {
+    this.setName(value);
+  }
+
+  /* (non-Javadoc)
+   * @see java.lang.Object#toString()
+   */
+  @Override
+  public String toString()
+  {
+    String _name = this.getForename().concat(" ").concat(this.getSurname());
+    return _name.concat("; ").concat(this.getAssociation());
+  }
+
+  
 }

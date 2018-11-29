@@ -1,5 +1,5 @@
 var a00207 =
 [
-    [ "CompetitorPartieResult", "d9/d34/a00476.html", "d9/d34/a00476" ],
-    [ "Partie", "d9/dc5/a00480.html", "d9/dc5/a00480" ]
+    [ "factories", "d5/df1/a00206.html", "d5/df1/a00206" ],
+    [ "panels", "dc/d31/a00208.html", "dc/d31/a00208" ]
 ];

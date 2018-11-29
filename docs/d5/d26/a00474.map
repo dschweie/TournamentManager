@@ -1,5 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult" name="org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult">
-<area shape="rect" id="node2" href="$d1/de6/a01068.html" title="Comparable\&lt; CompetitorPartie\lResult \&gt;" alt="" coords="161,5,361,47"/>
-<area shape="rect" id="node4" href="$d7/d41/a00532.html" title="Dieses ist das zentrale Interface fÃ¼r Teilnehmer oder Teams im Turnier. " alt="" coords="145,157,376,199"/>
-<area shape="rect" id="node5" href="$d1/de6/a01068.html" title="Comparable" alt="" coords="5,165,96,191"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem">
+<area shape="rect" id="node2" href="$d9/d4a/a00479.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTwice" alt="" coords="272,27,709,69"/>
+<area shape="rect" id="node3" href="$d7/d84/a00535.html" title="org::dos::tournament\l::common::movement::regulations\l::AbstractRegulationDecorator\l\&lt; SuperMelee, Vector\&lt; Vector\l\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="5,5,224,91"/>
 </map>

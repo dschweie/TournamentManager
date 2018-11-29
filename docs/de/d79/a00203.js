@@ -1,4 +1,5 @@
 var a00203 =
 [
-    [ "Matchday", "dc/df3/a00424.html", "dc/df3/a00424" ]
+    [ "movement", "dd/de3/a00201.html", "dd/de3/a00201" ],
+    [ "player", "d1/d72/a00204.html", "d1/d72/a00204" ]
 ];

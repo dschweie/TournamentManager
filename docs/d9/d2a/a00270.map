@@ -1,4 +1,3 @@
-<map id="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually" name="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually">
-<area shape="rect" id="node8" href="$de/d87/a00456.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee" alt="" coords="996,370,1367,411"/>
-<area shape="rect" id="node10" href="$d4/dfb/a00512.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.common.player.\lIParticipant \&gt;" alt="" coords="300,667,779,738"/>
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer">
+<area shape="rect" id="node3" href="$d7/de8/a01159.html" title="Runnable" alt="" coords="185,5,261,32"/>
 </map>
