@@ -125,9 +125,10 @@ public class SuperMeleeMatchdayTable extends JTable
   {
     super();
     this.xTournament = tournament;
-    this.setModel(new TableModel(matchday));
-    ((TableModel) this.getModel()).update(this.xTournament, null);
-    this.xTournament.addObserver((Observer) this.getModel());
+    TableModel _model = new TableModel(matchday);
+    this.setModel(_model);
+    _model.update(this.xTournament, null);
+    this.xTournament.addObserver(_model);
     this.iMatchdayIndex = matchday;
     this.addKeyListener(new KeyAdapter());
     this.setDefaultEditor(Object.class, new PetanqueTableCellEditor());
@@ -177,9 +178,9 @@ public class SuperMeleeMatchdayTable extends JTable
     {
       switch(o.getClass().getName())
       {
-        case "org.dos.tournament.petanque.tournament.movement.SuperMeleeClubChampionship":
-        case "org.dos.tournament.petanque.tournament.movement.SuperMelee":                  this.update((SuperMelee)o, arg);
-                                                                                            break;
+        case "org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship":
+        case "org.dos.tournament.branch.petanque.tournament.movement.SuperMelee":                   this.update((SuperMelee)o, arg);
+                                                                                                    break;
       }
     }
     
@@ -231,7 +232,7 @@ public class SuperMeleeMatchdayTable extends JTable
       boolean _retval = false;
       
       if(null != cause)
-        if(cause.getClass().getName().equals("org.dos.tournament.petanque.tournament.movement.SuperMelee$MatchdayUpdate"))
+        if(cause.getClass().getName().equals("org.dos.tournament.branch.petanque.tournament.movement.SuperMelee$MatchdayUpdate"))
           _retval = (this.iMatchdayIndex == ((org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MatchdayUpdate)cause).getMatchday());
       return _retval;
     }

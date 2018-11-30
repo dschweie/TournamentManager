@@ -106,6 +106,7 @@ public class DialogJoueurIndividuel extends DialogAssociationAttendee
       DialogJoueurIndividuel.this.textId.setText(String.valueOf(DialogAssociationAttendee.getNextIndex()));
       DialogJoueurIndividuel.this.textName.setText("");
       DialogJoueurIndividuel.this.textSurname.setText("");
+      DialogJoueurIndividuel.this.textSurname.requestFocus();
       DialogJoueurIndividuel.this.textAssociation.setText("");
       DialogJoueurIndividuel.this.comboBoxStatus.setSelectedIndex(1);
       DialogJoueurIndividuel.this.repaint();

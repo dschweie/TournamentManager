@@ -477,6 +477,7 @@ public class PetanqueSuperMeleePanel extends JPanel
       PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.remove(component)
       */
       PetanqueSuperMeleePanel.this.tournament.regenerateLastMatchday(PetanqueSuperMeleePanel.this);
+      //PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
     }
     public void updateStatus()
     {
