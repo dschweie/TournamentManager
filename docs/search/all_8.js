@@ -44,5 +44,6 @@ var searchData=
   ['isvalidtext',['isValidText',['../d6/d7f/a00287.html#a5dd5907d7f700d6a6b872712ab21e91c',1,'org::dos::tournament::application::common::utils::tablecelleditor::PetanqueTableCellEditor']]],
   ['itemstatechanged',['itemStateChanged',['../dc/d0f/a00303.html#a8566cfa30a501d7f213587f2ce80b4b1',1,'org::dos::tournament::application::dialogs::petanque::movement::DialogSetRoundManually::PreventDuplicatedElements']]],
   ['itotalresult',['ITotalResult',['../d9/dad/a00591.html',1,'org::dos::tournament::common::result']]],
-  ['itotalresult_2ejava',['ITotalResult.java',['../d7/d3f/a00173.html',1,'']]]
+  ['itotalresult_2ejava',['ITotalResult.java',['../d7/d3f/a00173.html',1,'']]],
+  ['iwinneroftheday',['iWinnerOfTheDay',['../d8/d67/a00499.html#aa08255ab8b5a5c699efbaf29318e73f3',1,'org::dos::tournament::branch::petanque::tournament::movement::SuperMeleeClubChampionship']]]
 ];

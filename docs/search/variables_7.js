@@ -14,5 +14,6 @@ var searchData=
   ['iprocesscurrent',['iProcessCurrent',['../dc/da0/a00483.html#aa2e0f77a271c4021a48ee73c49d2c184',1,'org::dos::tournament::branch::petanque::tournament::movement::SuperMelee']]],
   ['iprocessmax',['iProcessMax',['../dc/da0/a00483.html#ae35b4edc0106de382852a2e55e00bdb6',1,'org::dos::tournament::branch::petanque::tournament::movement::SuperMelee']]],
   ['iprogress',['iProgress',['../db/dc4/a00495.html#afc07051eae497db091eced4010904764',1,'org::dos::tournament::branch::petanque::tournament::movement::SuperMelee::MonitoringThread']]],
-  ['iscore',['iScore',['../d1/d05/a00423.html#a568f5a0c936f556f07043f7492cd2afa',1,'org::dos::tournament::branch::petanque::result::PetanqueResult']]]
+  ['iscore',['iScore',['../d1/d05/a00423.html#a568f5a0c936f556f07043f7492cd2afa',1,'org::dos::tournament::branch::petanque::result::PetanqueResult']]],
+  ['iwinneroftheday',['iWinnerOfTheDay',['../d8/d67/a00499.html#aa08255ab8b5a5c699efbaf29318e73f3',1,'org::dos::tournament::branch::petanque::tournament::movement::SuperMeleeClubChampionship']]]
 ];

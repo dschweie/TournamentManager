@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE RootStep>
+<RootStep id="_0" name="root" version="4.4.1">
+  <include>qfs.qft</include>
+  <reference>qfs.qft</reference>
+  <TestSet id="_1" name="unbenannt">
+    <TestCase id="_2" name="unbenannt"/>
+  </TestSet>
+  <PackageRoot id="_3"/>
+  <ExtraSequence id="_4">
+    <SetupSequence id="_6" name="Starte TournamentManager">
+      <SetGlobalStep id="_7" varname="client">
+        <default>TournamentManager</default>
+      </SetGlobalStep>
+      <ClientWaiter client="$(client)" engine="swt" id="_8" local="true"
+                    raise="false" resvarname="isSUTRunning" timeout="1">
+        <comment>Dieser Knoten prüft, ob das SUT bereits läuft. Das Ergebnis der Prüfung wird in der Variable isSUTRunning gespeichert. Diese Variable enthält entweder true, wenn das SUT läuft oder false, wenn das SUT nicht läuft. Im folgenden IF-Knoten wird diese Variable ausgewertet.</comment>
+      </ClientWaiter>
+      <IfSequence id="_9" name="SUT starten, wenn notwendig"
+                  test="not $(isSUTRunning)">
+        <ProcedureCall disabled="true" id="_A"
+                       procedure="qfs.qft#qfs.swt.instrument.setup">
+          <variable name="sutdir">C:\Users\dirk.schweier.MPSC\git\TournamentManager\target\TournamentManager</variable>
+        </ProcedureCall>
+        <BasicSequence disabled="true" id="_B"
+                       name="Setze SWT_GTK3=0 auf Linux">
+          <comment>Seit SWT Version 4.4 auf Linux wird standardmäßig GTK3 verwendet. QF-Test unterstützt aktuell nur GTK2, welches durch diese Sequenz erzwungen wird. Aus funktionaler Sicht macht dies keinen Unterschied.</comment>
+          <IfSequence id="_C" name="Nur Linux" test="not ${qftest:windows}">
+            <ServerScriptStep id="_D" name="Setze Umgebungsvariable SWT_GTK3">
+              <code>rc.setProperty('env', 'SWT_GTK3', 0)</code>
+            </ServerScriptStep>
+          </IfSequence>
+        </BasicSequence>
+        <JavaClientStarter client="$(client)" executable="${qftest:java}"
+                           id="_E">
+          <parameter>-jar</parameter>
+          <parameter>C:\Users\dirk.schweier.MPSC\git\TournamentManager\target\TournamentManager\TournamentManager-0.0.5a-preview.jar</parameter>
+        </JavaClientStarter>
+        <ClientWaiter client="$(client)" engine="swing" id="_F"/>
+      </IfSequence>
+    </SetupSequence>
+    <BasicSequence id="_U" name="Aufnahme 01.12.18 14:44">
+      <MouseEventStep clicks="1" client="$(client)"
+                      component="frameTournament_Manager.panel"
+                      event="MOUSE_MPRC" id="_V" modifiers="16" x="311"
+                      y="466"/>
+      <MouseEventStep clicks="1" client="$(client)" component="menuFile2"
+                      event="MOUSE_MPRC" id="_W" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)"
+                      component="menuItemTurnier_anlegen2" event="MOUSE_MPRC"
+                      id="_X" modifiers="16"/>
+    </BasicSequence>
+    <SetupSequence id="_Y" name="Starte Tournament Manager">
+      <SetGlobalStep id="_Z" varname="client">
+        <default>Tournament Manager</default>
+      </SetGlobalStep>
+      <ClientWaiter client="$(client)" id="_a" local="true" raise="false"
+                    resvarname="isSUTRunning" timeout="1">
+        <comment>Dieser Knoten prüft, ob das SUT bereits läuft. Das Ergebnis der Prüfung wird in der Variable isSUTRunning gespeichert. Diese Variable enthält entweder true, wenn das SUT läuft oder false, wenn das SUT nicht läuft. Im folgenden IF-Knoten wird diese Variable ausgewertet.</comment>
+      </ClientWaiter>
+      <IfSequence id="_b" name="SUT starten, wenn notwendig"
+                  test="not $(isSUTRunning)">
+        <JavaClientStarter client="$(client)" executable="${qftest:java}"
+                           id="_c">
+          <parameter>-jar</parameter>
+          <parameter>C:\Users\dirk.schweier.MPSC\git\TournamentManager\target\TournamentManager\TournamentManager-0.0.5a-preview.jar</parameter>
+        </JavaClientStarter>
+        <ClientWaiter client="$(client)" id="_d"/>
+      </IfSequence>
+    </SetupSequence>
+    <BasicSequence id="_e" name="Aufnahme 01.12.18 16:39">
+      <MouseEventStep clicks="1" client="$(client)" component="menuFile2"
+                      event="MOUSE_MPRC" id="_f" modifiers="16"/>
+      <MouseEventStep clicks="1" client="$(client)"
+                      component="menuItemTurnier_anlegen2" event="MOUSE_MPRC"
+                      id="_g" modifiers="16"/>
+    </BasicSequence>
+    <SetupSequence id="_h" name="Starte Tournament Manager">
+      <SetGlobalStep id="_i" varname="client">
+        <default>Tournament Manager</default>
+      </SetGlobalStep>
+      <ClientWaiter client="$(client)" id="_j" local="true" raise="false"
+                    resvarname="isSUTRunning" timeout="1">
+        <comment>Dieser Knoten prüft, ob das SUT bereits läuft. Das Ergebnis der Prüfung wird in der Variable isSUTRunning gespeichert. Diese Variable enthält entweder true, wenn das SUT läuft oder false, wenn das SUT nicht läuft. Im folgenden IF-Knoten wird diese Variable ausgewertet.</comment>
+      </ClientWaiter>
+      <IfSequence id="_k" name="SUT starten, wenn notwendig"
+                  test="not $(isSUTRunning)">
+        <JavaClientStarter client="$(client)"
+                           directory="C:\Users\dirk.schweier.MPSC\git\TournamentManager\target\TournamentManager"
+                           executable="${qftest:java}" id="_l">
+          <parameter>-jar</parameter>
+          <parameter>C:\Users\dirk.schweier.MPSC\git\TournamentManager\target\TournamentManager\TournamentManager-0.0.5a-preview.jar</parameter>
+        </JavaClientStarter>
+        <ClientWaiter client="$(client)" id="_m"/>
+      </IfSequence>
+    </SetupSequence>
+  </ExtraSequence>
+  <WindowList id="_5">
+    <WindowStep class="Window" feature="Tournament Manager" height="600"
+                id="frameTournament_Manager" uid="_G" width="1024" x="493"
+                y="381">
+      <extrafeature name="qfs:class" negate="false" regexp="false" state="0">javax.swing.JFrame</extrafeature>
+      <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                    state="0">Window</extrafeature>
+      <extrafeature name="qfs:label" negate="false" regexp="false" state="1">Tournament Manager</extrafeature>
+      <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                    state="0">javax.swing.JFrame</extrafeature>
+      <ComponentStep class="Panel" classcount="5" classindex="3" height="549"
+                     id="frameTournament_Manager.panel" uid="_H" width="1016"
+                     x="4" y="47">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JPanel</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Panel</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JPanel</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="Panel" classcount="3" classindex="0" height="572"
+                     id="frameTournament_Manager.panel2" uid="_I" width="1016"
+                     x="4" y="24">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JPanel</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Panel</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JPanel</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="TextField" classcount="2" classindex="0"
+                     height="20" id="frameTournament_Manager.text" uid="_J"
+                     width="169" x="727" y="571">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JTextField</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">TextField</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JTextField</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="TextField" classcount="2" classindex="1"
+                     height="20" id="frameTournament_Manager.text2" uid="_K"
+                     width="114" x="901" y="571">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JTextField</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">TextField</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JTextField</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="MenuBar" classcount="1" classindex="0" height="23"
+                     id="frameTournament_Manager.menubar" uid="_L"
+                     width="1016" x="4" y="24">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JMenuBar</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">MenuBar</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JMenuBar</extrafeature>
+        <extrafeature name="qfs:type" negate="false" regexp="false" state="0">Menu:MenuBar</extrafeature>
+        <ComponentStep class="MenuItem" classcount="2" classindex="0"
+                       feature="File" height="21" id="menuFile" uid="_M"
+                       width="31" x="0" y="0">
+          <extrafeature name="qfs:class" negate="false" regexp="false"
+                        state="0">javax.swing.JMenu</extrafeature>
+          <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                        state="0">MenuItem</extrafeature>
+          <extrafeature name="qfs:label" negate="false" regexp="false"
+                        state="1">File</extrafeature>
+          <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                        state="0">javax.swing.JMenu</extrafeature>
+          <ComponentStep class="MenuItem" classcount="3" classindex="0"
+                         feature="Turnier anlegen"
+                         id="menuItemTurnier_anlegen" uid="_N">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.JMenuItem</extrafeature>
+            <extrafeature name="qfs:genericclass" negate="false"
+                          regexp="false" state="0">MenuItem</extrafeature>
+            <extrafeature name="qfs:label" negate="false" regexp="false"
+                          state="1">Turnier anlegen</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.JMenuItem</extrafeature>
+          </ComponentStep>
+          <ComponentStep class="MenuItem" classcount="3" classindex="1"
+                         feature="Turnier speichern"
+                         id="menuItemTurnier_speichern" uid="_O">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.JMenuItem</extrafeature>
+            <extrafeature name="qfs:genericclass" negate="false"
+                          regexp="false" state="0">MenuItem</extrafeature>
+            <extrafeature name="qfs:label" negate="false" regexp="false"
+                          state="1">Turnier speichern</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.JMenuItem</extrafeature>
+          </ComponentStep>
+          <ComponentStep class="Separator" classcount="1" classindex="0"
+                         id="menuFile.separator" uid="_P">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.JSeparator</extrafeature>
+            <extrafeature name="qfs:genericclass" negate="false"
+                          regexp="false" state="0">Separator</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.JSeparator</extrafeature>
+          </ComponentStep>
+          <ComponentStep class="MenuItem" classcount="3" classindex="2"
+                         feature="Beenden" id="menuItemBeenden" uid="_Q">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.JMenuItem</extrafeature>
+            <extrafeature name="qfs:genericclass" negate="false"
+                          regexp="false" state="0">MenuItem</extrafeature>
+            <extrafeature name="qfs:label" negate="false" regexp="false"
+                          state="1">Beenden</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.JMenuItem</extrafeature>
+          </ComponentStep>
+        </ComponentStep>
+        <ComponentStep class="MenuItem" classcount="2" classindex="1"
+                       feature="Supermêlée" height="0" id="menuSupermêlée"
+                       uid="_R" width="0" x="31" y="0">
+          <extrafeature name="qfs:class" negate="false" regexp="false"
+                        state="0">javax.swing.JMenu</extrafeature>
+          <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                        state="0">MenuItem</extrafeature>
+          <extrafeature name="qfs:label" negate="false" regexp="false"
+                        state="1">Supermêlée</extrafeature>
+          <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                        state="0">javax.swing.JMenu</extrafeature>
+        </ComponentStep>
+        <ComponentStep class="MenuItem" classcount="5" classindex="0"
+                       feature="File" height="21" id="menuFile2" uid="_S"
+                       width="31" x="0" y="0">
+          <extrafeature name="qfs:class" negate="false" regexp="false"
+                        state="0">javax.swing.JMenu</extrafeature>
+          <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                        state="0">MenuItem</extrafeature>
+          <extrafeature name="qfs:label" negate="false" regexp="false"
+                        state="1">File</extrafeature>
+          <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                        state="0">javax.swing.JMenu</extrafeature>
+          <ComponentStep class="MenuItem" classcount="3" classindex="0"
+                         feature="Turnier anlegen" height="21"
+                         id="menuItemTurnier_anlegen2" uid="_T" width="121">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.JMenuItem</extrafeature>
+            <extrafeature name="qfs:genericclass" negate="false"
+                          regexp="false" state="0">MenuItem</extrafeature>
+            <extrafeature name="qfs:label" negate="false" regexp="false"
+                          state="1">Turnier anlegen</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.JMenuItem</extrafeature>
+          </ComponentStep>
+        </ComponentStep>
+      </ComponentStep>
+      <ComponentStep class="Panel" classcount="14" classindex="5" height="519"
+                     id="frameTournament_Manager.panel3" uid="_n" width="1016"
+                     x="4" y="47">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">Panel</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JPanel</extrafeature>
+      </ComponentStep>
+      <ComponentStep class="SplitPanel" classcount="1" classindex="0"
+                     height="516" id="frameTournament_Manager.split" uid="_o"
+                     width="1013" x="5" y="48">
+        <extrafeature name="qfs:class" negate="false" regexp="false"
+                      state="0">javax.swing.JSplitPane</extrafeature>
+        <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                      state="0">SplitPanel</extrafeature>
+        <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                      state="0">javax.swing.JSplitPane</extrafeature>
+        <ComponentStep class="Divider" classcount="1" classindex="0"
+                       feature="Horizontal"
+                       id="frameTournament_Manager.dividerHorizontal"
+                       uid="_p">
+          <extrafeature name="qfs:class" negate="false" regexp="false"
+                        state="0">javax.swing.plaf.metal.MetalSplitPaneDivider</extrafeature>
+          <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                        state="0">Divider</extrafeature>
+          <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                        state="0">javax.swing.plaf.metal.MetalSplitPaneDivider</extrafeature>
+        </ComponentStep>
+        <ComponentStep class="TabPanel" classcount="2" classindex="0"
+                       feature="Split: Left" id="tabbedLeft" uid="_q" x="1"
+                       y="1">
+          <extrafeature name="qfs:class" negate="false" regexp="false"
+                        state="0">javax.swing.JTabbedPane</extrafeature>
+          <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                        state="0">TabPanel</extrafeature>
+          <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                        state="0">javax.swing.JTabbedPane</extrafeature>
+          <ComponentStep class="Panel" classcount="1" classindex="0"
+                         feature="Tab: Teilnehmer" height="486"
+                         id="panelTeilnehmer" uid="_r" width="453" x="2"
+                         y="25">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.JPanel</extrafeature>
+            <extrafeature name="qfs:genericclass" negate="false"
+                          regexp="false" state="0">Panel</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.JPanel</extrafeature>
+            <extrafeature name="qfs:type" negate="false" regexp="false"
+                          state="0">Panel:TabPanelContent</extrafeature>
+            <ComponentStep class="ToolBar" classcount="1" classindex="0"
+                           height="48" id="panelTeilnehmer.toolbar" uid="_s"
+                           width="453" x="0" y="0">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.JToolBar</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">ToolBar</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.JToolBar</extrafeature>
+              <ComponentStep class="Button" classcount="7" classindex="0"
+                             feature="ToolTip: add a new attendee" height="44"
+                             id="buttonTipAdd_a_new_attendee" uid="_t"
+                             width="44" x="16" y="1">
+                <extrafeature name="imagehash" negate="false" regexp="false"
+                              state="1">-1191739391</extrafeature>
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.JButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:label" negate="false" regexp="false"
+                              state="1">if_207-User_2124114</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.JButton</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="javax.swing.Box$Filler" classcount="3"
+                             classindex="0" height="44"
+                             id="panelTeilnehmer.com" uid="_u" width="10"
+                             x="60" y="1">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.Box$$Filler</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.Box$$Filler</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="Button" classcount="7" classindex="1"
+                             feature="ToolTip: edit data of the selected attendee"
+                             height="44"
+                             id="buttonTipEdit_data_of_the_selected_attendee"
+                             uid="_v" width="44" x="70" y="1">
+                <extrafeature name="imagehash" negate="false" regexp="false"
+                              state="1">1106739201</extrafeature>
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.JButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:label" negate="false" regexp="false"
+                              state="1">if_215-User_2124127</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.JButton</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="Button" classcount="7" classindex="2"
+                             feature="ToolTip: activates the selected attendee"
+                             height="44"
+                             id="buttonTipActivates_the_selected_attendee"
+                             uid="_w" width="44" x="114" y="1">
+                <extrafeature name="imagehash" negate="false" regexp="false"
+                              state="1">-117997567</extrafeature>
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.JButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:label" negate="false" regexp="false"
+                              state="1">if_209-User_2124118</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.JButton</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="Button" classcount="7" classindex="3"
+                             feature="ToolTip: inactivates the selected attendee"
+                             height="44"
+                             id="buttonTipInactivates_the_selected_attendee"
+                             uid="_x" width="44" x="158" y="1">
+                <extrafeature name="imagehash" negate="false" regexp="false"
+                              state="1">1039630337</extrafeature>
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.JButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:label" negate="false" regexp="false"
+                              state="1">if_211-User_2124119</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.JButton</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="javax.swing.Box$Filler" classcount="3"
+                             classindex="1" height="44"
+                             id="panelTeilnehmer.com2" uid="_y" width="10"
+                             x="202" y="1">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.Box$$Filler</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.Box$$Filler</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="Button" classcount="7" classindex="4"
+                             feature="ToolTip: deletes the selected attendee"
+                             height="44"
+                             id="buttonTipDeletes_the_selected_attendee"
+                             uid="_z" width="44" x="212" y="1">
+                <extrafeature name="imagehash" negate="false" regexp="false"
+                              state="1">-1191739391</extrafeature>
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.JButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:label" negate="false" regexp="false"
+                              state="1">if_208-User_2124123</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.JButton</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="javax.swing.Box$Filler" classcount="3"
+                             classindex="2" height="44"
+                             id="panelTeilnehmer.com3" uid="_+" width="20"
+                             x="256" y="1">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.Box$$Filler</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.Box$$Filler</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="Button" classcount="7" classindex="5"
+                             feature="ToolTip: Import fiktiver Spieler"
+                             height="44" id="buttonTipImport_fiktiver_Spieler"
+                             uid="_-" width="44" x="276" y="1">
+                <extrafeature name="imagehash" negate="false" regexp="false"
+                              state="1">-1544060927</extrafeature>
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.JButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:label" negate="false" regexp="false"
+                              state="1">if_219-Dice_2124175</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.JButton</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="Button" classcount="7" classindex="6"
+                             feature="ToolTip: Some short description"
+                             height="44" id="buttonTipSome_short_description"
+                             uid="_10" width="44" x="320" y="1">
+                <extrafeature name="imagehash" negate="false" regexp="false"
+                              state="1">-352878591</extrafeature>
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.JButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:label" negate="false" regexp="false"
+                              state="1">if_413-Data_Add_2124504</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.JButton</extrafeature>
+              </ComponentStep>
+            </ComponentStep>
+            <ComponentStep class="Panel" classcount="1" classindex="0"
+                           height="438" id="panelTeilnehmer.scroll" uid="_11"
+                           width="453" x="0" y="48">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.JScrollPane</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">Panel</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.JScrollPane</extrafeature>
+              <extrafeature name="qfs:type" negate="false" regexp="false"
+                            state="0">Panel:ScrollPanel</extrafeature>
+              <ComponentStep class="Table" classcount="1" classindex="0"
+                             id="panelTeilnehmer.table" uid="_12">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.JTable</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Table</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.JTable</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="javax.swing.CellRendererPane"
+                             classcount="2" classindex="0" height="0"
+                             id="panelTeilnehmer.com4" uid="_13" width="0"
+                             x="1" y="21">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.CellRendererPane</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.CellRendererPane</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="ScrollBar" classcount="2" classindex="0"
+                             feature="Vertical"
+                             id="panelTeilnehmer.scrollbarVertical" uid="_14"
+                             x="0" y="0">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.JScrollPane$$ScrollBar</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">ScrollBar</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.JScrollPane$$ScrollBar</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="Button" classcount="4" classindex="0"
+                             feature="Down" height="0"
+                             id="panelTeilnehmer.buttonDown" uid="_15"
+                             width="0" x="0" y="0">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+                <extrafeature name="qfs:type" negate="false" regexp="false"
+                              state="0">Button:ScrollBarButton</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="Button" classcount="4" classindex="1"
+                             feature="Up" height="0"
+                             id="panelTeilnehmer.buttonUp" uid="_16" width="0"
+                             x="0" y="0">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+                <extrafeature name="qfs:type" negate="false" regexp="false"
+                              state="0">Button:ScrollBarButton</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="ScrollBar" classcount="2" classindex="1"
+                             feature="Horizontal"
+                             id="panelTeilnehmer.scrollbarHorizontal"
+                             uid="_17" x="0" y="0">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.JScrollPane$$ScrollBar</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">ScrollBar</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.JScrollPane$$ScrollBar</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="Button" classcount="4" classindex="2"
+                             feature="Right" height="0"
+                             id="panelTeilnehmer.buttonRight" uid="_18"
+                             width="0" x="0" y="0">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+                <extrafeature name="qfs:type" negate="false" regexp="false"
+                              state="0">Button:ScrollBarButton</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="Button" classcount="4" classindex="3"
+                             feature="Left" height="0"
+                             id="panelTeilnehmer.buttonLeft" uid="_19"
+                             width="0" x="0" y="0">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">Button</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+                <extrafeature name="qfs:type" negate="false" regexp="false"
+                              state="0">Button:ScrollBarButton</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="TableHeader" classcount="1" classindex="0"
+                             id="panelTeilnehmer.header" uid="_1A">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.table.JTableHeader</extrafeature>
+                <extrafeature name="qfs:genericclass" negate="false"
+                              regexp="false" state="0">TableHeader</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.table.JTableHeader</extrafeature>
+              </ComponentStep>
+              <ComponentStep class="javax.swing.CellRendererPane"
+                             classcount="2" classindex="1" height="0"
+                             id="panelTeilnehmer.com5" uid="_1B" width="0"
+                             x="1" y="1">
+                <extrafeature name="qfs:class" negate="false" regexp="false"
+                              state="0">javax.swing.CellRendererPane</extrafeature>
+                <extrafeature name="qfs:systemclass" negate="false"
+                              regexp="false" state="0">javax.swing.CellRendererPane</extrafeature>
+              </ComponentStep>
+            </ComponentStep>
+          </ComponentStep>
+          <ComponentStep class="Panel" classcount="2" classindex="1"
+                         feature="Tab: Rangliste" height="486"
+                         id="scrollRangliste" uid="_1C" width="453" x="2"
+                         y="25">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.JScrollPane</extrafeature>
+            <extrafeature name="qfs:genericclass" negate="false"
+                          regexp="false" state="0">Panel</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.JScrollPane</extrafeature>
+            <extrafeature name="qfs:type" negate="false" regexp="false"
+                          state="0">Panel:ScrollPanel</extrafeature>
+            <ComponentStep class="Table" classcount="1" classindex="0"
+                           id="scrollRangliste.table" uid="_1D">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.JTable</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">Table</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.JTable</extrafeature>
+            </ComponentStep>
+            <ComponentStep class="javax.swing.CellRendererPane" classcount="2"
+                           classindex="0" height="0" id="scrollRangliste.com"
+                           uid="_1E" width="0" x="1" y="1">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.CellRendererPane</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.CellRendererPane</extrafeature>
+            </ComponentStep>
+            <ComponentStep class="ScrollBar" classcount="2" classindex="0"
+                           feature="Vertical"
+                           id="scrollRangliste.scrollbarVertical" uid="_1F"
+                           x="0" y="0">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.JScrollPane$$ScrollBar</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">ScrollBar</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.JScrollPane$$ScrollBar</extrafeature>
+            </ComponentStep>
+            <ComponentStep class="Button" classcount="4" classindex="0"
+                           feature="Down" height="0"
+                           id="scrollRangliste.buttonDown" uid="_1G" width="0"
+                           x="0" y="0">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">Button</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+              <extrafeature name="qfs:type" negate="false" regexp="false"
+                            state="0">Button:ScrollBarButton</extrafeature>
+            </ComponentStep>
+            <ComponentStep class="Button" classcount="4" classindex="1"
+                           feature="Up" height="0"
+                           id="scrollRangliste.buttonUp" uid="_1H" width="0"
+                           x="0" y="0">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">Button</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+              <extrafeature name="qfs:type" negate="false" regexp="false"
+                            state="0">Button:ScrollBarButton</extrafeature>
+            </ComponentStep>
+            <ComponentStep class="ScrollBar" classcount="2" classindex="1"
+                           feature="Horizontal"
+                           id="scrollRangliste.scrollbarHorizontal" uid="_1I"
+                           x="0" y="0">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.JScrollPane$$ScrollBar</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">ScrollBar</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.JScrollPane$$ScrollBar</extrafeature>
+            </ComponentStep>
+            <ComponentStep class="Button" classcount="4" classindex="2"
+                           feature="Right" height="0"
+                           id="scrollRangliste.buttonRight" uid="_1J"
+                           width="0" x="0" y="0">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">Button</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+              <extrafeature name="qfs:type" negate="false" regexp="false"
+                            state="0">Button:ScrollBarButton</extrafeature>
+            </ComponentStep>
+            <ComponentStep class="Button" classcount="4" classindex="3"
+                           feature="Left" height="0"
+                           id="scrollRangliste.buttonLeft" uid="_1K" width="0"
+                           x="0" y="0">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">Button</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.plaf.metal.MetalScrollButton</extrafeature>
+              <extrafeature name="qfs:type" negate="false" regexp="false"
+                            state="0">Button:ScrollBarButton</extrafeature>
+            </ComponentStep>
+            <ComponentStep class="TableHeader" classcount="1" classindex="0"
+                           id="scrollRangliste.header" uid="_1L">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.table.JTableHeader</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">TableHeader</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.table.JTableHeader</extrafeature>
+            </ComponentStep>
+            <ComponentStep class="javax.swing.CellRendererPane" classcount="2"
+                           classindex="1" height="0" id="scrollRangliste.com2"
+                           uid="_1M" width="0" x="1" y="1">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.CellRendererPane</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.CellRendererPane</extrafeature>
+            </ComponentStep>
+          </ComponentStep>
+        </ComponentStep>
+        <ComponentStep class="Panel" classcount="2" classindex="1"
+                       feature="Split: Right" id="panelRight" uid="_1N">
+          <extrafeature name="qfs:class" negate="false" regexp="false"
+                        state="0">javax.swing.JPanel</extrafeature>
+          <extrafeature name="qfs:genericclass" negate="false" regexp="false"
+                        state="0">Panel</extrafeature>
+          <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                        state="0">javax.swing.JPanel</extrafeature>
+          <extrafeature name="qfs:type" negate="false" regexp="false"
+                        state="0">Panel:SplitPanelContent</extrafeature>
+          <ComponentStep class="TabPanel" classcount="1" classindex="0"
+                         height="482" id="panelRight.tabbed" uid="_1O"
+                         width="543" x="0" y="32">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.JTabbedPane</extrafeature>
+            <extrafeature name="qfs:genericclass" negate="false"
+                          regexp="false" state="0">TabPanel</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.JTabbedPane</extrafeature>
+          </ComponentStep>
+          <ComponentStep class="ToolBar" classcount="1" classindex="0"
+                         height="32" id="panelRight.toolbar" uid="_1P"
+                         width="543" x="0" y="0">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.JToolBar</extrafeature>
+            <extrafeature name="qfs:genericclass" negate="false"
+                          regexp="false" state="0">ToolBar</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.JToolBar</extrafeature>
+            <ComponentStep class="Button" classcount="2" classindex="0"
+                           feature="Neue Runde" height="28"
+                           id="buttonNeue_Runde" uid="_1Q" width="80" x="16"
+                           y="1">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.JButton</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">Button</extrafeature>
+              <extrafeature name="qfs:label" negate="false" regexp="false"
+                            state="1">Neue Runde</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.JButton</extrafeature>
+            </ComponentStep>
+            <ComponentStep class="Button" classcount="2" classindex="1"
+                           feature="Runde neu losen" height="28"
+                           id="buttonRunde_neu_losen" uid="_1R" width="106"
+                           x="96" y="1">
+              <extrafeature name="qfs:class" negate="false" regexp="false"
+                            state="0">javax.swing.JButton</extrafeature>
+              <extrafeature name="qfs:genericclass" negate="false"
+                            regexp="false" state="0">Button</extrafeature>
+              <extrafeature name="qfs:label" negate="false" regexp="false"
+                            state="1">Runde neu losen</extrafeature>
+              <extrafeature name="qfs:systemclass" negate="false"
+                            regexp="false" state="0">javax.swing.JButton</extrafeature>
+            </ComponentStep>
+          </ComponentStep>
+          <ComponentStep class="Table" classcount="1" classindex="0"
+                         id="panelRight.table" uid="_1S" x="0" y="514">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.JTable</extrafeature>
+            <extrafeature name="qfs:genericclass" negate="false"
+                          regexp="false" state="0">Table</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.JTable</extrafeature>
+          </ComponentStep>
+          <ComponentStep class="javax.swing.CellRendererPane" classcount="1"
+                         classindex="0" height="0" id="panelRight.com"
+                         uid="_1T" width="0" x="0" y="514">
+            <extrafeature name="qfs:class" negate="false" regexp="false"
+                          state="0">javax.swing.CellRendererPane</extrafeature>
+            <extrafeature name="qfs:systemclass" negate="false" regexp="false"
+                          state="0">javax.swing.CellRendererPane</extrafeature>
+          </ComponentStep>
+        </ComponentStep>
+      </ComponentStep>
+    </WindowStep>
+  </WindowList>
+</RootStep>

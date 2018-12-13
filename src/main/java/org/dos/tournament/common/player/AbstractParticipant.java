@@ -14,6 +14,7 @@ public abstract class AbstractParticipant implements IParticipant
   protected IParticipantId id = null;
   protected ParticipantStatus status = ParticipantStatus.ACTIVE;
   protected ITotalResult result = null;
+  protected IResult trophy =  null;
   protected HashMap<String, Object> attributes = new HashMap<String, Object>();
 
   @Override
@@ -83,7 +84,7 @@ public abstract class AbstractParticipant implements IParticipant
     return this.result.getTotalResult();
   }
   
-    /* (non-Javadoc)
+  /* (non-Javadoc)
    * @see org.dos.tournament.player.IParticipant#getTotalResultIdentifiers()
    */
   @Override
@@ -92,6 +93,22 @@ public abstract class AbstractParticipant implements IParticipant
     return this.result.getTotalResultIdentifiers();
   }
 
+  public boolean hasWinnerOfTheDayTrophy()
+  {
+    return null != this.trophy;
+  }
+  
+  public void setWinnerOfTheDayTrophy(IResult instance)
+  {
+    this.trophy = instance;
+  }
+  
+  public void unsetWinnerOfTheDayTrophy()
+  {
+    this.trophy = null;
+  }
+  
+  
   /* (non-Javadoc)
    * @see org.dos.tournament.player.IParticipant#getStatus()
    */

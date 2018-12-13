@@ -16,8 +16,11 @@ var a00559 =
     [ "getTotalResultIdentifiers", "d2/d50/a00559.html#a7fc609beea4ca80d07314825bb0706dd", null ],
     [ "getTotalScore", "d2/d50/a00559.html#a74cb403efd3085519a9c5acd6df6fd29", null ],
     [ "hasAttendees", "d2/d50/a00559.html#a1cc4f71625904ca075750bc49cedfcf3", null ],
+    [ "hasWinnerOfTheDayTrophy", "d2/d50/a00559.html#a0bfd1da6502c147b76a97fb7d82aa9f0", null ],
     [ "inactivateParticipant", "d2/d50/a00559.html#ac2d169a8f71726807f3a9b94c38e3174", null ],
     [ "setName", "d2/d50/a00559.html#a213f006522f8f8ce72e65573d8c15b08", null ],
     [ "setParticipantId", "d2/d50/a00559.html#a6791ba01fb0925ee8ce25389c70a0d54", null ],
-    [ "setStatus", "d2/d50/a00559.html#af9f46c894fc2c520f9aedf82a67eefb9", null ]
+    [ "setStatus", "d2/d50/a00559.html#af9f46c894fc2c520f9aedf82a67eefb9", null ],
+    [ "setWinnerOfTheDayTrophy", "d2/d50/a00559.html#aa8d3b46c03e2b78d07cd92135354aac3", null ],
+    [ "unsetWinnerOfTheDayTrophy", "d2/d50/a00559.html#a386a9037a7cd0e426b257f9edb876e8a", null ]
 ];

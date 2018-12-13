@@ -30,6 +30,8 @@ import org.dos.tournament.common.player.IParticipant;
  */
 public class SuperMeleeClubChampionship extends SuperMelee
 {
+  protected int iWinnerOfTheDay;
+  
   public SuperMeleeClubChampionship()
   {
     super();
@@ -40,6 +42,8 @@ public class SuperMeleeClubChampionship extends SuperMelee
     this.regulations = new RuleSuperMeleeNeverMeetOpponentTandem(this.regulations, true, true);
     this.regulations = new RuleSuperMeleeNeverPlayTripletteTwice(this.regulations, true, true);
     this.regulations = new RuleSuperMeleeNeverMeetOpponentTwice(this.regulations, true, true);
+    
+    this.iWinnerOfTheDay = -1;
   }
   
   public void setResult(int iMatchdayIndex, int iMatchIndex, int iHome, int iGuest)
@@ -57,8 +61,28 @@ public class SuperMeleeClubChampionship extends SuperMelee
     for(int i=0; i < _guestAttendees.length; ++i)
       _guestAttendees[i].addResultOfMatchday(iMatchdayIndex, _guest);
     
+    this.updateWinnerOfTheDay();
+    
     this.setChanged();
     this.notifyObservers();
     this.clearChanged();
+  }
+
+  protected void updateWinnerOfTheDay()
+  {
+    int _iLeaderIndex = -1;
+    
+    for(int i=0; i<this.competitors.size(); ++i)
+    {
+      this.competitors.get(i).unsetWinnerOfTheDayTrophy();
+      if(-1 != _iLeaderIndex)
+      {
+        if(this.competitors.get(i).compareTo(this.competitors.get(_iLeaderIndex))>0)
+          _iLeaderIndex = i;
+      }
+      else
+        _iLeaderIndex = i;
+    }
+    this.competitors.get(_iLeaderIndex).setWinnerOfTheDayTrophy(null);
   }
 }

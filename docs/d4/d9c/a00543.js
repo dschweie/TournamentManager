@@ -16,12 +16,16 @@ var a00543 =
     [ "getTotalResultIdentifiers", "d4/d9c/a00543.html#a041153df6736442a8e52c3c8f9bb50fa", null ],
     [ "getTotalScore", "d4/d9c/a00543.html#a3ace9bc8a444fe7c541b831b4051d8de", null ],
     [ "hasAttribute", "d4/d9c/a00543.html#afdd6969476ca2abb8df3a0c99fb00e57", null ],
+    [ "hasWinnerOfTheDayTrophy", "d4/d9c/a00543.html#a438f53347546e1f21d59a18ceb36c862", null ],
     [ "inactivateParticipant", "d4/d9c/a00543.html#aed5831dda7fa3af948a720dfd431cdfa", null ],
     [ "setAttribute", "d4/d9c/a00543.html#a60984673dfefc0152fc465e5fd03b5a2", null ],
     [ "setParticipantId", "d4/d9c/a00543.html#a2ee6b90f45d1cf9ab389aab7182435e2", null ],
     [ "setStatus", "d4/d9c/a00543.html#af1dc2606a89568707a3baf5c503a32d5", null ],
+    [ "setWinnerOfTheDayTrophy", "d4/d9c/a00543.html#ad0c2cd339274c6d3e40c75c72400116c", null ],
+    [ "unsetWinnerOfTheDayTrophy", "d4/d9c/a00543.html#a53340dee42186316baf5e8bbfeb7cc3e", null ],
     [ "attributes", "d4/d9c/a00543.html#ab798062026346ae4c0c6e14f9b0db41a", null ],
     [ "id", "d4/d9c/a00543.html#aa5e74e294ed04ec45530b98a65e3af4a", null ],
     [ "result", "d4/d9c/a00543.html#a6c664a24cabbd07dfc78d05e13eb9aaa", null ],
-    [ "status", "d4/d9c/a00543.html#aff385fe822a4324e1a7f266e8ded2c6d", null ]
+    [ "status", "d4/d9c/a00543.html#aff385fe822a4324e1a7f266e8ded2c6d", null ],
+    [ "trophy", "d4/d9c/a00543.html#ad9539bc45c404e5784d9c83bae857c87", null ]
 ];

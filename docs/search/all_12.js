@@ -34,6 +34,7 @@ var searchData=
   ['tournamentutils_2ejava',['TournamentUtils.java',['../d4/d3e/a00116.html',1,'']]],
   ['triplette',['Triplette',['../de/d84/a00447.html',1,'org.dos.tournament.branch.petanque.team.Triplette'],['../de/d84/a00447.html#a13debc34316c4e0e82ea435085dd2801',1,'org.dos.tournament.branch.petanque.team.Triplette.Triplette(IParticipantId id, IParticipant pointeur, IParticipant tireur)'],['../de/d84/a00447.html#aa46ac1ad1074d0bcff2e7e6d315f6510',1,'org.dos.tournament.branch.petanque.team.Triplette.Triplette(IParticipantId id, IParticipant pointeur, IParticipant milieu, IParticipant tireur)']]],
   ['triplette_2ejava',['Triplette.java',['../db/db6/a00074.html',1,'']]],
+  ['trophy',['trophy',['../d4/d9c/a00543.html#ad9539bc45c404e5784d9c83bae857c87',1,'org::dos::tournament::common::player::AbstractParticipant']]],
   ['truelabel',['trueLabel',['../d0/d27/a00239.html#ab26291cf6da0d03fdd1ac903a1cef150',1,'org::dos::tournament::application::common::controls::ToggleButton']]],
   ['txtos',['txtOS',['../d1/d53/a00399.html#a336e4cb8c33debbb0cf9ca0e06a7afed',1,'org::dos::tournament::application::TournamentManagerUI']]],
   ['txtswversion',['txtSwVersion',['../d1/d53/a00399.html#afe5c923ec84e4991bdf44ba3a3872611',1,'org::dos::tournament::application::TournamentManagerUI']]]

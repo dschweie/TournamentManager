@@ -17,6 +17,7 @@ var searchData=
   ['timer',['timer',['../d0/d2f/a00259.html#a3936790b8351d1bd39551ed6ec048e73',1,'org::dos::tournament::application::common::panels::DefaultMatchdayPanel']]],
   ['tireur',['TIREUR',['../df/d70/a00431.html#a88a61bd90102f4a96e38c2b1bd6c415e',1,'org::dos::tournament::branch::petanque::team::AbstractPetanqueTeam']]],
   ['tournament',['tournament',['../da/dd4/a00291.html#a5bc56c1a1e1aacd36bda2bb40e3375e7',1,'org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.tournament()'],['../d1/dc6/a00347.html#a93fc89ad4ce6ea887c4250429fb4bf7e',1,'org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.tournament()']]],
+  ['trophy',['trophy',['../d4/d9c/a00543.html#ad9539bc45c404e5784d9c83bae857c87',1,'org::dos::tournament::common::player::AbstractParticipant']]],
   ['truelabel',['trueLabel',['../d0/d27/a00239.html#ab26291cf6da0d03fdd1ac903a1cef150',1,'org::dos::tournament::application::common::controls::ToggleButton']]],
   ['txtos',['txtOS',['../d1/d53/a00399.html#a336e4cb8c33debbb0cf9ca0e06a7afed',1,'org::dos::tournament::application::TournamentManagerUI']]],
   ['txtswversion',['txtSwVersion',['../d1/d53/a00399.html#afe5c923ec84e4991bdf44ba3a3872611',1,'org::dos::tournament::application::TournamentManagerUI']]]

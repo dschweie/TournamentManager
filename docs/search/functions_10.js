@@ -37,6 +37,7 @@ var searchData=
   ['setvalue',['setValue',['../d0/de7/a00523.html#a4ce7f902f18828aaa7d86ec9fe218ec1',1,'org::dos::tournament::common::competition::DefaultCompetitorResult']]],
   ['setvalueat',['setValueAt',['../d3/d1a/a00251.html#a5f7fbd2c523170e3715add2d19322962',1,'org::dos::tournament::application::common::panels::components::SuperMeleeMatchdayTable::TableModel']]],
   ['setvisiblesupermelee',['setVisibleSupermelee',['../d1/d53/a00399.html#a48dd26cf63e4c349bde81e8e0a804b36',1,'org::dos::tournament::application::TournamentManagerUI']]],
+  ['setwinnerofthedaytrophy',['setWinnerOfTheDayTrophy',['../d4/d9c/a00543.html#ad0c2cd339274c6d3e40c75c72400116c',1,'org.dos.tournament.common.player.AbstractParticipant.setWinnerOfTheDayTrophy()'],['../d2/d50/a00559.html#aa8d3b46c03e2b78d07cd92135354aac3',1,'org.dos.tournament.common.player.IParticipant.setWinnerOfTheDayTrophy()']]],
   ['shouldselectcell',['shouldSelectCell',['../d6/d7f/a00287.html#a0d6fb95b59f0a6906557ffecff11ee94',1,'org::dos::tournament::application::common::utils::tablecelleditor::PetanqueTableCellEditor']]],
   ['singletonproperties',['SingletonProperties',['../d3/d42/a00235.html#ae22c0349ea6915fbcd8399cdb5160a5f',1,'org::dos::tournament::application::common::config::SingletonProperties']]],
   ['stopcellediting',['stopCellEditing',['../d6/d7f/a00287.html#a6d6da25944fc8f6c05e8858a096a779e',1,'org::dos::tournament::application::common::utils::tablecelleditor::PetanqueTableCellEditor']]],

@@ -8,6 +8,7 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.util.ResourceBundle;
 import java.util.Vector;
@@ -17,6 +18,7 @@ import javax.swing.DefaultComboBoxModel;
 
 import org.dos.tournament.application.TournamentManagerUI;
 import org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel;
+import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.branch.petanque.team.JoueurIndividuel;
 import org.dos.tournament.common.player.AssociationAttendee;
 import org.dos.tournament.common.player.IParticipant;
@@ -328,6 +330,41 @@ public class DialogAssociationAttendee extends JDialog
   }
   
   
+  
+  static public int getNextIndex()
+  {
+    return ++DialogAssociationAttendee.INDEX;
+  }
+  
+  static protected void dropIndex()
+  {
+    --DialogAssociationAttendee.INDEX;
+  }
+  
+  protected JButton getOkButton() {
+    return btnOk;
+  }
+  protected JButton getCancelButton() {
+    return btnCancel;
+  }
+  protected AbstractButton getNextButton()
+  {
+    return this.btnAdditionalAttendee;
+  }
+
+  protected boolean checkDialogData()
+  {
+    boolean retval = 0 < this.textName.getText().concat(this.textSurname.getText()).trim().length();
+    if(!retval)
+    {
+      JOptionPane.showMessageDialog(  this, 
+                                      ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.Error.DataIncorrect.message"), 
+                                      ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.Error.DataIncorrect.title"), 
+                                      JOptionPane.ERROR_MESSAGE );
+    }
+    return retval;
+  }
+
   private class SwingActionOK extends AbstractAction {
     public SwingActionOK() 
     {
@@ -363,28 +400,6 @@ public class DialogAssociationAttendee extends JDialog
     }
   }
   
-  static public int getNextIndex()
-  {
-    return ++DialogAssociationAttendee.INDEX;
-  }
-  
-  static protected void dropIndex()
-  {
-    --DialogAssociationAttendee.INDEX;
-  }
-  
-  protected JButton getOkButton() {
-    return btnOk;
-  }
-  protected JButton getCancelButton() {
-    return btnCancel;
-  }
-  protected AbstractButton getNextButton()
-  {
-    return this.btnAdditionalAttendee;
-  }
-
-
   private class SwingActionOkAndNext extends AbstractAction {
     public SwingActionOkAndNext() {
       putValue(MNEMONIC_KEY, KeyEvent.VK_ENTER);
