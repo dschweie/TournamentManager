@@ -14,7 +14,7 @@ public class ParticipantsTableModel extends DefaultTableModel implements Observe
 
   public ParticipantsTableModel()
   {
-    super(null, new String[] {"Nummer", "Name", "Verein", "Status"});
+    super(null, new String[] {"Nummer", "Vorname", "Nachname", "Verein", "Status"});
 //    super(new Object[][] {{null, null, null, null}}, new String[] {"Nummer", "Name", "Verein", "Status"});
   }
   
@@ -34,7 +34,7 @@ public class ParticipantsTableModel extends DefaultTableModel implements Observe
       _field.add(_participants.elementAt(i).getParticipantAsRow(this.vecHeader));
     
     this.setDataVector(_field, this.columnIdentifiers);
-    
+
     this.fireTableDataChanged();
   }
 
@@ -42,7 +42,8 @@ public class ParticipantsTableModel extends DefaultTableModel implements Observe
   {
     Vector<String> _header=new Vector<String>();
     _header.add("id");
-    _header.add("name");
+    _header.add("name.forename");
+    _header.add("name.surname");
     _header.add("club");
     _header.add("status");
     return _header;

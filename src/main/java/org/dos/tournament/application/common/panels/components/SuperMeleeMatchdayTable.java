@@ -15,6 +15,7 @@ import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTable
 import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.branch.petanque.tournament.partie.Partie;
+import org.dos.tournament.application.common.controls.TableHeaderColumnContent;
 
 /**
  * \brief       Die Klasse steht für die Tabelle für Spielpaarungen im Supermelee
@@ -132,6 +133,7 @@ public class SuperMeleeMatchdayTable extends JTable
     this.iMatchdayIndex = matchday;
     this.addKeyListener(new KeyAdapter());
     this.setDefaultEditor(Object.class, new PetanqueTableCellEditor());
+    //this.updateColumnSize();
   }
   
   public boolean toggleOutputParticipants()
@@ -142,6 +144,17 @@ public class SuperMeleeMatchdayTable extends JTable
   protected Matchday getMatchday()
   {
     return this.xTournament.getMatchday(this.iMatchdayIndex);  
+  }
+  
+  protected void updateColumnSize()
+  {
+    int _cols = this.getColumnModel().getColumnCount();
+    
+    for(int i = 0; i < _cols; ++i)
+    {
+      Object obj = this.getTableHeader().getColumnModel().getColumn(i).getHeaderValue();
+      this.getColumnModel().getColumn(i).setPreferredWidth(((TableHeaderColumnContent)this.getTableHeader().getColumnModel().getColumn(i).getHeaderValue()).getPreferredWidth());
+    }
   }
 
   private class TableModel extends DefaultTableModel implements Observer
@@ -182,6 +195,7 @@ public class SuperMeleeMatchdayTable extends JTable
         case "org.dos.tournament.branch.petanque.tournament.movement.SuperMelee":                   this.update((SuperMelee)o, arg);
                                                                                                     break;
       }
+      
     }
     
     protected void update(SuperMelee tournament, Object arg)
@@ -221,8 +235,15 @@ public class SuperMeleeMatchdayTable extends JTable
           _matchdayData.add(_row);
         }
         
-        this.setDataVector(_matchdayData, this.compileHeader());
         
+        Vector<TableHeaderColumnContent> _header = this.compileHeader();
+        this.setDataVector(_matchdayData, _header);
+        
+        for(int i=0; i < _header.size(); ++i)
+          SuperMeleeMatchdayTable.this.getTableHeader().getColumnModel().getColumn(i).setHeaderValue(_header.get(i));
+        
+        
+        SuperMeleeMatchdayTable.this.updateColumnSize();
         this.fireTableDataChanged();
       }
     } 
@@ -286,23 +307,23 @@ public class SuperMeleeMatchdayTable extends JTable
      *  
      *  @return Die Methode liefert die Kopfzeile als Vector zurück.
      */
-    private Vector<String> compileHeader()
+    private Vector<TableHeaderColumnContent> compileHeader()
     {
-      Vector<String> _header = new Vector<String>();
+      Vector<TableHeaderColumnContent> _header = new Vector<TableHeaderColumnContent>();
       
       for(String _column : this.astrHeader)
       {
         switch(_column)
         {
-          case SuperMeleeMatchdayTable.COL_INDEX       : _header.add("Nr."); break;
-          case SuperMeleeMatchdayTable.COL_MATCH       : _header.add("Id"); break;
-          case SuperMeleeMatchdayTable.COL_HOME_TEAM   : _header.add("Heim"); break;
-          case SuperMeleeMatchdayTable.COL_HOME_SCORE  : _header.add(""); break;
-          case SuperMeleeMatchdayTable.COL_GUEST_TEAM  : _header.add("Gast"); break;
-          case SuperMeleeMatchdayTable.COL_GUEST_SCORE : _header.add(""); break;
-          case SuperMeleeMatchdayTable.COL_VS_SCORE    : _header.add(""); break;
-          case SuperMeleeMatchdayTable.COL_COURT       : _header.add("Platz"); break;
-          default                         : _header.add("");
+          case SuperMeleeMatchdayTable.COL_INDEX       : _header.add(new TableHeaderColumnContent(SuperMeleeMatchdayTable.COL_INDEX, "Nr.", 30)); break;
+          case SuperMeleeMatchdayTable.COL_MATCH       : _header.add(new TableHeaderColumnContent(SuperMeleeMatchdayTable.COL_MATCH, "Id", 30)); break;
+          case SuperMeleeMatchdayTable.COL_HOME_TEAM   : _header.add(new TableHeaderColumnContent(SuperMeleeMatchdayTable.COL_HOME_TEAM, "Heim", 250)); break;
+          case SuperMeleeMatchdayTable.COL_HOME_SCORE  : _header.add(new TableHeaderColumnContent(SuperMeleeMatchdayTable.COL_HOME_SCORE, "Punkte", 60)); break;
+          case SuperMeleeMatchdayTable.COL_GUEST_TEAM  : _header.add(new TableHeaderColumnContent(SuperMeleeMatchdayTable.COL_GUEST_TEAM, "Gast", 250)); break;
+          case SuperMeleeMatchdayTable.COL_GUEST_SCORE : _header.add(new TableHeaderColumnContent(SuperMeleeMatchdayTable.COL_GUEST_SCORE, "Punkte", 60)); break;
+          case SuperMeleeMatchdayTable.COL_VS_SCORE    : _header.add(new TableHeaderColumnContent(SuperMeleeMatchdayTable.COL_VS_SCORE, "vs", 10)); break;
+          case SuperMeleeMatchdayTable.COL_COURT       : _header.add(new TableHeaderColumnContent(SuperMeleeMatchdayTable.COL_COURT, "Platz", 30)); break;
+          default                         : _header.add(new TableHeaderColumnContent("", "", 100));
         }
       }
       

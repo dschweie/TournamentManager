@@ -92,7 +92,7 @@ public class DialogAssociationAttendee extends JDialog
    */
   public DialogAssociationAttendee()
   {
-    KeyListener _storageListener = new StorageKeyListener();
+    KeyListener _storageListener = new org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.StorageKeyListener();
     
     setModalityType(ModalityType.APPLICATION_MODAL);
     setType(Type.POPUP);
@@ -395,7 +395,8 @@ public class DialogAssociationAttendee extends JDialog
       putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogAssociationAttendee.actionCancel.short description")); //$NON-NLS-1$ //$NON-NLS-2$
     }
     public void actionPerformed(ActionEvent e) {
-      DialogAssociationAttendee.dropIndex();
+      if(-1 == DialogAssociationAttendee.this.iPos)
+        DialogAssociationAttendee.dropIndex();
       DialogAssociationAttendee.this.dispose();
     }
   }

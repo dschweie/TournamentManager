@@ -362,8 +362,14 @@ public class PetanqueSuperMeleePanel extends JPanel
     public void actionPerformed(ActionEvent e) {
       if(0 < PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRowCount())
       {
-        PetanqueSuperMeleePanel.this.tournament.getCompetitors().remove(PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRows()[0]).activateParticipant();
-        PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
+        if(JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog( PetanqueSuperMeleePanel.this, 
+                                                                    ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("PetanqueSuperMeleePanel.SwingActionDeleteAttendee.confirm.message").concat("\n\n").concat(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Commom.NoUndo.message")), 
+                                                                    ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("PetanqueSuperMeleePanel.SwingActionDeleteAttendee.confirm.title"), 
+                                                                    JOptionPane.YES_NO_OPTION))
+        {
+          PetanqueSuperMeleePanel.this.tournament.getCompetitors().remove(PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRows()[0]).activateParticipant();
+          PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
+        }
       }
       else
         JOptionPane.showMessageDialog(  PetanqueSuperMeleePanel.this, 
@@ -422,36 +428,36 @@ public class PetanqueSuperMeleePanel extends JPanel
     {
       if(0 == PetanqueSuperMeleePanel.this.tournament.countCompetitors())
       {
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Doris Herbst".replaceAll("\\s\\s", " "), "Verein für Deutsch-Französische Freundschaft (VDFF) Biebertal".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Werngard  Jakob".replaceAll("\\s\\s", " "), " Sportverein Klein-Gerau".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Arved Leis".replaceAll("\\s\\s", " "), "  Sportgemeinschaft Arheilgen e.V. - Abt. Pétanque".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Burgunda  Quade".replaceAll("\\s\\s", " "), "vereinslos".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Rosie Mauch".replaceAll("\\s\\s", " "), "TVO Dreieichenhain".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Gundhild  Jüngling".replaceAll("\\s\\s", " "), "vereinslos".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Tilman  Koch".replaceAll("\\s\\s", " "), "TVO Dreieichenhain".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Wendelgard  Lembke".replaceAll("\\s\\s", " "), "  SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Wilbrandt Holstein".replaceAll("\\s\\s", " "), "  Boule-Freunde Solms e.V.".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Merlind Ranft".replaceAll("\\s\\s", " "), " SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Uwe Sautter".replaceAll("\\s\\s", " "), " PSG Rüsselsheim e.V.".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Eduard  Walter".replaceAll("\\s\\s", " "), "Verein für Deutsch-Französische Freundschaft (VDFF) Biebertal".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Ekhard  Brill".replaceAll("\\s\\s", " "), " SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Wilma Klages".replaceAll("\\s\\s", " "), "  SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Silke Brandes".replaceAll("\\s\\s", " "), " 1.PCP (1. Petanque Club Petterweil)".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Antonie März".replaceAll("\\s\\s", " "), "  SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Wolfram Edelmann".replaceAll("\\s\\s", " "), "Orplid Frankfurt e.V. - Abteilung Pétanque".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Herzlinde Rust".replaceAll("\\s\\s", " "), "Orplid Frankfurt e.V. - Abteilung Pétanque".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Helge Marx".replaceAll("\\s\\s", " "), "  SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Tell  Plate".replaceAll("\\s\\s", " "), "Sportgemeinschaft Arheilgen e.V. - Abt. Pétanque".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Eitelbert Wiesmann", "Boule Club Rheingau".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Rilana  Kersten".replaceAll("\\s\\s", " "), "Boule Club Rheingau".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Goldtraud Bohm".replaceAll("\\s\\s", " "), "  PSG Rüsselsheim e.V.".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Helmtraud Weinert".replaceAll("\\s\\s", " "), " Sportverein Klein-Gerau".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Adelheid  Seliger".replaceAll("\\s\\s", " "), " Ginsheimer Altrheinbouler 1999 e.V.".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Bernhilde Kögel".replaceAll("\\s\\s", " "), " Ginsheimer Altrheinbouler 1999 e.V.".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Gebhart Diederichs".replaceAll("\\s\\s", " "), "Turngemeinde Schierstein 1848 J.P.".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Walbert Mahnke".replaceAll("\\s\\s", " "), "Turngemeinde Schierstein 1848 J.P.".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Hilmar  Schrade".replaceAll("\\s\\s", " "), "Turngemeinde Schierstein 1848 J.P.".trim()));
-        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Reinburga Bieri".replaceAll("\\s\\s", " "), "Sportgemeinschaft Arheilgen e.V. - Abt. Pétanque".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Doris".trim(), "Herbst".trim(), "Verein für Deutsch-Französische Freundschaft (VDFF) Biebertal".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Werngard".trim(), "Jakob".trim(), " Sportverein Klein-Gerau".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Arved".trim(), "Leis".trim(), "  Sportgemeinschaft Arheilgen e.V. - Abt. Pétanque".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Burgunda  ".trim(), "  Quade".trim(), "vereinslos".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Rosie ".trim(), " Mauch".trim(), "TVO Dreieichenhain".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Gundhild  ".trim(), "  Jüngling".trim(), "vereinslos".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Tilman  ".trim(), "  Koch".trim(), "TVO Dreieichenhain".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Wendelgard  ".trim(), "  Lembke".trim(), "  SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Wilbrandt ".trim(), " Holstein".trim(), "  Boule-Freunde Solms e.V.".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Merlind ".trim(), " Ranft".trim(), " SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Uwe".trim(), "Sautter".trim(), " PSG Rüsselsheim e.V.".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Eduard  ".trim(), "  Walter".trim(), "Verein für Deutsch-Französische Freundschaft (VDFF) Biebertal".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Ekhard  ".trim(), "  Brill".trim(), " SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Wilma ".trim(), " Klages".trim(), "  SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Silke ".trim(), " Brandes".trim(), " 1.PCP (1. Petanque Club Petterweil)".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Antonie ".trim(), " März".trim(), "  SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Wolfram ".trim(), " Edelmann".trim(), "Orplid Frankfurt e.V. - Abteilung Pétanque".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Herzlinde ".trim(), " Rust".trim(), "Orplid Frankfurt e.V. - Abteilung Pétanque".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Helge ".trim(), " Marx".trim(), "  SV Blau-Gelb Groß-Gerau e.V. - Abteilung Boule".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Tell  ".trim(), "  Plate".trim(), "Sportgemeinschaft Arheilgen e.V. - Abt. Pétanque".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Eitelbert ".trim(), " Wiesmann".trim(), "Boule Club Rheingau".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Rilana  ".trim(), "  Kersten".trim(), "Boule Club Rheingau".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Goldtraud ".trim(), " Bohm".trim(), "  PSG Rüsselsheim e.V.".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Helmtraud ".trim(), " Weinert".trim(), " Sportverein Klein-Gerau".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Adelheid  ".trim(), "  Seliger".trim(), " Ginsheimer Altrheinbouler 1999 e.V.".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Bernhilde ".trim(), " Kögel".trim(), " Ginsheimer Altrheinbouler 1999 e.V.".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Gebhart ".trim(), " Diederichs".trim(), "Turngemeinde Schierstein 1848 J.P.".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Walbert ".trim(), " Mahnke".trim(), "Turngemeinde Schierstein 1848 J.P.".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Hilmar  ".trim(), "  Schrade".trim(), "Turngemeinde Schierstein 1848 J.P.".trim()));
+        PetanqueSuperMeleePanel.this.tournament.addCompetitor(new JoueurIndividuel(DialogAssociationAttendee.getNextIndex(), "Reinburga ".trim(), " Bieri".trim(), "Sportgemeinschaft Arheilgen e.V. - Abt. Pétanque".trim()));
       }
       this.setEnabled(false);
     }

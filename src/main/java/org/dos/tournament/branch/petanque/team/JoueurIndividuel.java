@@ -69,6 +69,26 @@ public class JoueurIndividuel extends AssociationAttendee
     return strSurname;
   }
   
+  
+  /* (non-Javadoc)
+   * @see org.dos.tournament.common.player.AssociationAttendee#getElement(java.lang.String)
+   */
+  @Override
+  protected String getElement(String id)
+  {
+    switch(id.toLowerCase().trim())
+    {
+      case "name.surname"   : 
+      case "surname"        :
+      case "name"           : return this.getSurname();
+      case "name.forename"  :
+      case "forename"       : return this.getForename();
+      default               : return super.getElement(id);
+    }
+  }
+
+
+
   private class PetanqueTotalResult extends AbstractTotalResult
   {
     public final static int POINTS      = 0;
