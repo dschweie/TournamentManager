@@ -382,6 +382,19 @@ public class SuperMelee extends Observable
     }
   }
   
+  public void deleteLastMatchday()
+  {
+    int       _matchdayIndex  = this.countMatchdays()-1;
+    Matchday  _matchday       = this.getMatchday(_matchdayIndex);
+    if(0 == _matchday.countScoredMatches())
+    { //  matchday has no scored and can be generated
+      int _matches = _matchday.countMatches();
+      for(int i = 0; i < _matches; ++i)
+        this.parties.remove(_matchday.getMatch(i));
+      this.matchdays.remove(_matchday);
+    }
+  }
+  
   public boolean suspendWeakestRule()
   {
     return this.regulations.suspend();

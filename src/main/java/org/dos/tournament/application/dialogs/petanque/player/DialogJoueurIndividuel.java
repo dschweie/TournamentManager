@@ -108,8 +108,21 @@ public class DialogJoueurIndividuel extends DialogAssociationAttendee
       {
         if(-1 == DialogJoueurIndividuel.this.iPos)
         { //  new Attendee will be added
-          AssociationAttendee _attendee = new JoueurIndividuel(Integer.parseInt(DialogJoueurIndividuel.this.textId.getText()), DialogJoueurIndividuel.this.textName.getText().trim(), DialogJoueurIndividuel.this.textSurname.getText().trim(), DialogJoueurIndividuel.this.textAssociation.getText().trim());
-          _attendee.setStatus((ParticipantStatus) DialogJoueurIndividuel.this.comboBoxStatus.getSelectedItem());
+          AssociationAttendee _attendee = null;
+          
+          if(     (     DialogJoueurIndividuel.this.comboBoxDataEntries.isEnabled()         ) 
+              &&  ( 0 < DialogJoueurIndividuel.this.comboBoxDataEntries.getSelectedIndex()  ) )
+          { // In diesem Fall ist das Objekt der Combobox zu nehmen
+            _attendee = (AssociationAttendee) DialogJoueurIndividuel.this.comboBoxDataEntries.getSelectedItem();
+          }
+          else
+          {
+           _attendee = new JoueurIndividuel(Integer.parseInt(DialogJoueurIndividuel.this.textId.getText()), DialogJoueurIndividuel.this.textName.getText().trim(), DialogJoueurIndividuel.this.textSurname.getText().trim(), DialogJoueurIndividuel.this.textAssociation.getText().trim());
+          }
+          
+          if(null != _attendee)
+            _attendee.setStatus((ParticipantStatus) DialogJoueurIndividuel.this.comboBoxStatus.getSelectedItem());
+          
           DialogJoueurIndividuel.this.vecAttendees.add(_attendee);
         }
         else

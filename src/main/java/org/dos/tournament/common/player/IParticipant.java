@@ -32,6 +32,8 @@ public interface IParticipant extends Comparable
    */
   public void setParticipantId(IParticipantId id);
   
+  public Object getAttribute(String key);
+  
   public String getCode();
   
   public String getName();

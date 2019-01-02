@@ -90,7 +90,7 @@ public class DialogAssociationAttendee extends JDialog
   /**
    * Create the dialog.
    */
-  public DialogAssociationAttendee()
+  protected DialogAssociationAttendee()
   {
     KeyListener _storageListener = new org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.StorageKeyListener();
     
@@ -468,7 +468,7 @@ public class DialogAssociationAttendee extends JDialog
       {
         
 //        Vector<JoueurIndividuel> _matches = SingletonStorage.getInstance().findParticipantAsJoueurIndividuel(DialogAssociationAttendee.this.textName.getText(), DialogAssociationAttendee.this.textSurname.getText(), DialogAssociationAttendee.this.textAssociation.getText());
-        Vector<JoueurIndividuel> _matches = SingletonStorage.getInstance().findParticipantAsJoueurIndividuel(_forename, _surname, _association);
+        Vector<JoueurIndividuel> _matches = SingletonStorage.getInstance().findParticipantAsJoueurIndividuel(_forename, _surname, _association, DialogAssociationAttendee.this.vecAttendees);
         DialogAssociationAttendee.this.lblHits.setText(String.format("%d", _matches.size()));
         
         DialogAssociationAttendee.this.comboBoxDataEntries.removeAllItems();

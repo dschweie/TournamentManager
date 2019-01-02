@@ -136,4 +136,30 @@ public class DatabaseClient implements Storage
     return _retval;
   }
 
+  public Vector<JoueurIndividuel> findParticipantAsJoueurIndividuel(String forename, String surname, String association, Vector<IParticipant> excluded)
+  {
+    Vector<JoueurIndividuel> _retval = new Vector<JoueurIndividuel>();
+    Vector<String> _values = new Vector<String>();
+    
+    excluded.forEach(it -> _values.add((String) it.getAttribute("_id")));
+    
+    MongoCollection<Document> _collParticipants = this.mongoClient.getDatabase(mongoDatabaseName).getCollection(mongoCollectionParticipantsName);
+    
+    if(null != _collParticipants)
+    {
+      FindIterable<Document> _hits = _collParticipants.find(  Filters.and(  Filters.regex("name.forename", forename+".*", "i"), 
+                                                                            Filters.regex("name.surname", surname+".*", "i"), 
+                                                                            Filters.regex("association", association+".*", "i"),
+                                                                            Filters.nin("_id", _values))).sort(Sorts.ascending("name.surname"));
+      
+      
+      for (Document _it : _hits)
+      {
+        _retval.add(new JoueurIndividuel(_it));
+      }    
+    }
+
+    return _retval;
+  }
+
 }

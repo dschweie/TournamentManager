@@ -87,6 +87,7 @@ public class PetanqueSuperMeleePanel extends JPanel
   private JTable tableLeaderboard;
   private final Action replaceLastMatchday = new SwingActionUpdateLastRound();
   private final Action addToDatabase = new SwingActionAddParticipantsToDatabase();
+  private final Action deleteLastMatchday = new SwingActionDeleteLastMatchday();
   
   /**
    * Create the panel.
@@ -223,12 +224,14 @@ public class PetanqueSuperMeleePanel extends JPanel
       public void componentAdded(ContainerEvent e)
       {
         ((SwingActionUpdateLastRound) PetanqueSuperMeleePanel.this.replaceLastMatchday).updateStatus();
+        ((SwingActionDeleteLastMatchday) PetanqueSuperMeleePanel.this.deleteLastMatchday).updateStatus();
       }
 
       @Override
       public void componentRemoved(ContainerEvent e)
       {
         ((SwingActionUpdateLastRound) PetanqueSuperMeleePanel.this.replaceLastMatchday).updateStatus();
+        ((SwingActionDeleteLastMatchday) PetanqueSuperMeleePanel.this.deleteLastMatchday).updateStatus();
       }
     });
     tabbedPaneMatchdays.addChangeListener(new ChangeListener() {
@@ -236,6 +239,7 @@ public class PetanqueSuperMeleePanel extends JPanel
       public void stateChanged(ChangeEvent e)
       {
         ((SwingActionUpdateLastRound) PetanqueSuperMeleePanel.this.replaceLastMatchday).updateStatus();
+        ((SwingActionDeleteLastMatchday) PetanqueSuperMeleePanel.this.deleteLastMatchday).updateStatus();
       }
     });
     panelRight.add(tabbedPaneMatchdays, BorderLayout.CENTER);
@@ -248,8 +252,13 @@ public class PetanqueSuperMeleePanel extends JPanel
     toolBar.add(btnNewButton);
     
     JButton btnReplaceLastMatchday = toolBar.add(replaceLastMatchday);
+    
+    JButton btnDeleteLastMatchday = new JButton("New button");
+    btnDeleteLastMatchday.setAction(deleteLastMatchday);
+    toolBar.add(btnDeleteLastMatchday);
 
     this.tournament.addObserver((Observer) this.replaceLastMatchday);
+    this.tournament.addObserver((Observer) this.deleteLastMatchday);
     
     table = new JTable();
     panelRight.add(table, BorderLayout.SOUTH);
@@ -535,5 +544,52 @@ public class PetanqueSuperMeleePanel extends JPanel
                                         ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("PetanqueSuperMeleePanel.SwingActionUpdateAttendee.Error.NotColumnSelected.title"), 
                                         JOptionPane.ERROR_MESSAGE );
     }
+  }
+  private class SwingActionDeleteLastMatchday extends AbstractAction implements Observer {
+    public SwingActionDeleteLastMatchday() {
+      try
+      {
+        putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("PetanqueSuperMeleePanel.deleteLastMatchday.name")); //$NON-NLS-1$ //$NON-NLS-2$
+        putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("PetanqueSuperMeleePanel.deleteLastMatchday.shortDescription")); //$NON-NLS-1$ //$NON-NLS-2$
+        this.updateStatus();
+      }
+      catch(Exception e)
+      {
+        this.setEnabled(false);
+      }
+    }
+    public void actionPerformed(ActionEvent e) {
+      PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.remove(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedIndex());
+      PetanqueSuperMeleePanel.this.tournament.deleteLastMatchday();
+    }
+
+    public void updateStatus()
+    {
+      try
+      {
+        if(0 == PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getTabCount())
+          this.setEnabled(false);
+        else
+        {
+          if(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedIndex() == PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getTabCount()-1)
+          {
+            Matchday _matchday = PetanqueSuperMeleePanel.this.tournament.getMatchday(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedIndex());
+            this.setEnabled(0 == _matchday.countScoredMatches());
+          }
+          else
+            this.setEnabled(false);
+        }
+      } catch (Exception ex)
+      {
+        this.setEnabled(false);
+      }
+    }
+    
+    @Override
+    public void update(Observable o, Object arg)
+    {
+      this.updateStatus();
+    }
+  
   }
 }

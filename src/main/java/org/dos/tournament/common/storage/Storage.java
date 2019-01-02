@@ -52,4 +52,6 @@ public interface Storage
   public boolean saveParticipant(IParticipant participant, boolean overwrite);
   
   public Vector<JoueurIndividuel> findParticipantAsJoueurIndividuel(String forname, String surename, String association);
+
+  public Vector<JoueurIndividuel> findParticipantAsJoueurIndividuel(String forname, String surename, String association, Vector<IParticipant> excluded);
 }
