@@ -50,7 +50,7 @@ public class Attendee extends AbstractParticipant
     return false;
   }
 
-  protected String getElement(String id)
+  protected Object getElement(String id)
   {
     switch(id)
     {

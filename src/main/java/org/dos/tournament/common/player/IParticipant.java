@@ -60,6 +60,6 @@ public interface IParticipant extends Comparable
   public IParticipant[] getAttendeesToArray();
   public boolean contains(IParticipant competitor);
   
-  public Vector<String> getParticipantAsRow(Vector<String> header);
+  public Vector<Object> getParticipantAsRow(Vector<String> header);
   public Collection<Object> getTotalResultIdentifiers();
 }

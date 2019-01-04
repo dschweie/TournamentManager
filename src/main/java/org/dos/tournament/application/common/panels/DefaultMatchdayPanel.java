@@ -104,7 +104,7 @@ public class DefaultMatchdayPanel extends JPanel
     this();
     
     this.tableMatches = new SuperMeleeMatchdayTable(tournament, matchday);
-    
+    this.tableMatches.getTableHeader().setReorderingAllowed( false );
     
     
     this.btnPrintMatchday.setToolTipText("<html><p width=\"650\">" +tournament.getRegulationState().replaceAll("\n", "<br/>")+"</p></html>");

@@ -322,7 +322,7 @@ public class DialogAssociationAttendee extends JDialog
     else
     {
       this.setTitle("Teilnehmer erfassen");
-      this.textId.setText(String.valueOf(DialogAssociationAttendee.getNextIndex()));
+      this.textId.setText(String.valueOf(this.getNextIndex()));
       this.textId.setEditable(false);
       this.textId.setFocusable(false);
     }    
@@ -331,14 +331,21 @@ public class DialogAssociationAttendee extends JDialog
   
   
   
-  static public int getNextIndex()
+  public int getNextIndex()
   {
-    return ++DialogAssociationAttendee.INDEX;
+    Vector<String> _indices = new Vector<String>();
+    this.vecAttendees.forEach(it -> _indices.add(it.getCode().trim()));
+    
+    int i = 1;
+    
+    while(_indices.contains(String.valueOf(i)))
+      ++i;
+    return i;
   }
   
   static protected void dropIndex()
   {
-    --DialogAssociationAttendee.INDEX;
+    // --DialogAssociationAttendee.INDEX;
   }
   
   protected JButton getOkButton() {
@@ -433,7 +440,7 @@ public class DialogAssociationAttendee extends JDialog
         ((AssociationAttendee)DialogAssociationAttendee.this.vecAttendees.elementAt(DialogAssociationAttendee.this.iPos)).setAssociation(DialogAssociationAttendee.this.textAssociation.getText());
         DialogAssociationAttendee.this.vecAttendees.elementAt(DialogAssociationAttendee.this.iPos).setStatus((ParticipantStatus) DialogAssociationAttendee.this.comboBoxStatus.getSelectedItem());
       }
-      DialogAssociationAttendee.this.textId.setText(String.valueOf(DialogAssociationAttendee.getNextIndex()));
+      DialogAssociationAttendee.this.textId.setText(String.valueOf(DialogAssociationAttendee.this.getNextIndex()));
       DialogAssociationAttendee.this.textName.setText("");
       DialogAssociationAttendee.this.textAssociation.setText("");
       DialogAssociationAttendee.this.comboBoxStatus.setSelectedIndex(1);
@@ -452,11 +459,14 @@ public class DialogAssociationAttendee extends JDialog
       
       try
       {
-        switch(((JTextField)e.getSource()).getName())
+        if(Character.toString(e.getKeyChar()).matches("\\p{Print}"))
         {
-          case "txtForename" :    _forename     = _forename.concat(Character.toString(e.getKeyChar()));     break;
-          case "txtSurname" :     _surname      = _surname.concat(Character.toString(e.getKeyChar()));      break;
-          case "txtAssociation" : _association  = _association.concat(Character.toString(e.getKeyChar()));  break;
+          switch(((JTextField)e.getSource()).getName())
+          {
+            case "txtForename" :    _forename     = _forename.concat(Character.toString(e.getKeyChar()));     break;
+            case "txtSurname" :     _surname      = _surname.concat(Character.toString(e.getKeyChar()));      break;
+            case "txtAssociation" : _association  = _association.concat(Character.toString(e.getKeyChar()));  break;
+          }
         }
       }
       catch(Exception ex) { System.out.println(ex.getLocalizedMessage()); }
@@ -466,8 +476,6 @@ public class DialogAssociationAttendee extends JDialog
                 ||  ( 2 < _surname.length()     )
                 ||  ( 2 < _association.length() )       ) )
       {
-        
-//        Vector<JoueurIndividuel> _matches = SingletonStorage.getInstance().findParticipantAsJoueurIndividuel(DialogAssociationAttendee.this.textName.getText(), DialogAssociationAttendee.this.textSurname.getText(), DialogAssociationAttendee.this.textAssociation.getText());
         Vector<JoueurIndividuel> _matches = SingletonStorage.getInstance().findParticipantAsJoueurIndividuel(_forename, _surname, _association, DialogAssociationAttendee.this.vecAttendees);
         DialogAssociationAttendee.this.lblHits.setText(String.format("%d", _matches.size()));
         
@@ -495,6 +503,7 @@ public class DialogAssociationAttendee extends JDialog
       }
       DialogAssociationAttendee.this.comboBoxDataEntries.updateUI();
       DialogAssociationAttendee.this.repaint();
+      
     }
 
     @Override
@@ -507,7 +516,27 @@ public class DialogAssociationAttendee extends JDialog
     @Override
     public void keyReleased(KeyEvent e)
     {
-      // TODO Auto-generated method stub
+      
+      switch(e.getKeyCode())
+      {
+        case KeyEvent.VK_UP:
+        case KeyEvent.VK_LEFT:    if(     (0 < DialogAssociationAttendee.this.comboBoxDataEntries.getItemCount()      )
+                                      &&  (0 < DialogAssociationAttendee.this.comboBoxDataEntries.getSelectedIndex()  ) )
+                                  {
+                                    DialogAssociationAttendee.this.comboBoxDataEntries.setSelectedIndex(DialogAssociationAttendee.this.comboBoxDataEntries.getSelectedIndex() - 1);
+                                  }
+                                  break;
+        case KeyEvent.VK_DOWN:
+        case KeyEvent.VK_RIGHT:   if(     (0 < DialogAssociationAttendee.this.comboBoxDataEntries.getItemCount()      )
+                                      &&  (DialogAssociationAttendee.this.comboBoxDataEntries.getItemCount() > DialogAssociationAttendee.this.comboBoxDataEntries.getSelectedIndex() + 1  ) )
+                                  {
+                                    DialogAssociationAttendee.this.comboBoxDataEntries.setSelectedIndex(DialogAssociationAttendee.this.comboBoxDataEntries.getSelectedIndex() + 1);
+                                  }
+                                  break;
+        default:                  break;
+      }
+      DialogAssociationAttendee.this.comboBoxDataEntries.updateUI();
+      DialogAssociationAttendee.this.repaint();
       
     }
     

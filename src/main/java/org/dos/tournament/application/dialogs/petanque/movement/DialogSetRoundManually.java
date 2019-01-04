@@ -25,8 +25,8 @@ import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.common.player.IParticipant;
 
 public class DialogSetRoundManually extends JDialog {
-  private final Action actionOK = new SwingAction();
-  private final Action actionCancel = new SwingAction_1();
+  private final Action actionOK = new SwingActionCreateMatchday();
+  private final Action actionCancel = new SwingActionCancel();
   private JPanel panelMain;
   
   private Vector<JComboBox> comboBoxes = new Vector<JComboBox>();
@@ -35,6 +35,7 @@ public class DialogSetRoundManually extends JDialog {
   private Vector<Vector<Vector<Integer>>> grid;
   private Vector<IParticipant> participants;
   private JButton btnOK;
+  private final Action actionFillUp = new SwingActionFillUpForm();
   
   public DialogSetRoundManually() {
     setPreferredSize(new Dimension(600, 400));
@@ -60,6 +61,10 @@ public class DialogSetRoundManually extends JDialog {
     btnOK.setAction(actionOK);
     this.actionOK.setEnabled(false);
     panel.add(btnOK);
+    
+    JButton btnFillUp = new JButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogSetRoundManually.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+    btnFillUp.setAction(actionFillUp);
+    panel.add(btnFillUp);
     
     JButton btnCancel = new JButton("New button");
     btnCancel.setAction(actionCancel);
@@ -110,8 +115,8 @@ public class DialogSetRoundManually extends JDialog {
     this.pack();
   }
 
-  private class SwingAction extends AbstractAction {
-    public SwingAction() {
+  private class SwingActionCreateMatchday extends AbstractAction {
+    public SwingActionCreateMatchday() {
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.OK.name"));
       putValue(SHORT_DESCRIPTION, "Some short description");
     }
@@ -120,8 +125,8 @@ public class DialogSetRoundManually extends JDialog {
     }
   }
   
-  private class SwingAction_1 extends AbstractAction {
-    public SwingAction_1() {
+  private class SwingActionCancel extends AbstractAction {
+    public SwingActionCancel() {
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.Cancel.name"));
       putValue(SHORT_DESCRIPTION, "Some short description");
     }
@@ -223,5 +228,19 @@ public class DialogSetRoundManually extends JDialog {
           }
     }
       
+  }
+  private class SwingActionFillUpForm extends AbstractAction {
+    public SwingActionFillUpForm() {
+      putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogSetRoundManually.FillUp.name"));
+      putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DialogSetRoundManually.FillUp.shortDescription"));
+    }
+    public void actionPerformed(ActionEvent e) {
+      DialogSetRoundManually.this.comboBoxes.forEach(it -> {
+        if(0 == it.getSelectedIndex())
+        { //  
+          
+        }
+      });
+    }
   }
 }

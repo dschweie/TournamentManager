@@ -32,7 +32,7 @@ public class AssociationAttendee extends Attendee
   }
 
   @Override
-  protected String getElement(String id)
+  protected Object getElement(String id)
   {
     switch(id)
     {

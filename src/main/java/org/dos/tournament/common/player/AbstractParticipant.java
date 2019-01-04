@@ -159,9 +159,9 @@ public abstract class AbstractParticipant implements IParticipant
   }
 
   @Override
-  public Vector<String> getParticipantAsRow(Vector<String> header)
+  public Vector<Object> getParticipantAsRow(Vector<String> header)
   {
-    Vector<String> _retval = new Vector<String>();
+    Vector<Object> _retval = new Vector<Object>();
     for(int i=0; i < header.size(); ++i)
     {
       _retval.add(this.getElement(header.elementAt(i).toLowerCase()));
@@ -179,11 +179,11 @@ public abstract class AbstractParticipant implements IParticipant
     return 0;
   }
 
-  protected String getElement(String id)
+  protected Object getElement(String id)
   {
     switch(id)
     {
-      case "id":      return this.id.getCode();
+      case "id":      return new Integer(this.id.getCode().trim());
       case "status":  return this.getStatus().toString();
       default:        return null;
     }

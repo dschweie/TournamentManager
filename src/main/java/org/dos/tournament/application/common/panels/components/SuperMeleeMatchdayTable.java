@@ -3,13 +3,19 @@
  */
 package org.dos.tournament.application.common.panels.components;
 
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Font;
 import java.awt.event.KeyEvent;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Vector;
 
+import javax.swing.JLabel;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 
 import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor;
 import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
@@ -102,6 +108,21 @@ public class SuperMeleeMatchdayTable extends JTable
    */
   final static public String COL_COURT        = "COURT";
   
+  final static public Color  COLOR_CELL_DEFAULT               = Color.WHITE;
+  final static public Color  COLOR_CELL_MATCH_SCORED          = new Color(144,238,144); 
+//  final static public Color  COLOR_CELL_MATCH_SCORED          = Color.GREEN; 
+  final static public Color  COLOR_CELL_MATCH_SCORED_SELECTED = new Color( 0, 195, 0 );
+  final static public Color  COLOR_TEXT_DEFAULT               = Color.BLACK;
+  final static public Color  COLOR_TEXT_MATCH_SCORED          = Color.BLACK; 
+  final static public Color  COLOR_TEXT_MATCH_SCORED_SELECTED = Color.WHITE;
+  final static public Color  COLOR_TEXT_MATCH_WON             = new Color(0, 120, 0); 
+  final static public Color  COLOR_TEXT_MATCH_WON_SELECTED    = Color.WHITE;
+//final static public Color  COLOR_TEXT_MATCH_LOST            = new Color(180, 0, 0); 
+  final static public Color  COLOR_TEXT_MATCH_LOST            = Color.GRAY; 
+  final static public Color  COLOR_TEXT_MATCH_LOST_SELECTED   = Color.BLACK;
+ 
+  
+  
   /**
    *  \brief    Referenz auf die Turnierinstanz, zu der die Runde gehört
    *  
@@ -133,7 +154,18 @@ public class SuperMeleeMatchdayTable extends JTable
     this.iMatchdayIndex = matchday;
     this.addKeyListener(new KeyAdapter());
     this.setDefaultEditor(Object.class, new PetanqueTableCellEditor());
-    //this.updateColumnSize();
+    if(null != this.getColumn(COL_INDEX))
+      this.getColumn(COL_INDEX).setCellRenderer(new TableCellRendererMatchStatus());
+    if(null != this.getColumn(COL_VS_SCORE))
+      this.getColumn(COL_VS_SCORE).setCellRenderer(new TableCellRendererCenteredText());
+    if(null != this.getColumn(COL_HOME_SCORE))
+      this.getColumn(COL_HOME_SCORE).setCellRenderer(new TableCellRendererCenteredText());
+    if(null != this.getColumn(COL_GUEST_SCORE))
+      this.getColumn(COL_GUEST_SCORE).setCellRenderer(new TableCellRendererCenteredText());
+    if(null != this.getColumn(COL_HOME_TEAM))
+      this.getColumn(COL_HOME_TEAM).setCellRenderer(new TableCellRendererHomeColumn());
+    if(null != this.getColumn(COL_GUEST_TEAM))
+      this.getColumn(COL_GUEST_TEAM).setCellRenderer(new TableCellRendererGuestColumn());
   }
   
   public boolean toggleOutputParticipants()
@@ -146,6 +178,23 @@ public class SuperMeleeMatchdayTable extends JTable
     return this.xTournament.getMatchday(this.iMatchdayIndex);  
   }
   
+  
+  /* (non-Javadoc)
+   * @see javax.swing.JTable#getColumn(java.lang.Object)
+   */
+  @Override
+  public TableColumn getColumn(Object identifier)
+  {
+    try
+    {
+      return this.getColumnModel().getColumn(((TableModel) this.getModel()).getColumnIndexOf((String) identifier));
+    }
+    catch(Exception e)
+    {
+      return super.getColumn(identifier);
+    }
+  }
+
   protected void updateColumnSize()
   {
     int _cols = this.getColumnModel().getColumnCount();
@@ -257,7 +306,6 @@ public class SuperMeleeMatchdayTable extends JTable
           _retval = (this.iMatchdayIndex == ((org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MatchdayUpdate)cause).getMatchday());
       return _retval;
     }
-
 
     /**
      *  \brief  Methode übernimmt einen erfassten Wert in GUI und Datenmodell der Tabelle
@@ -412,6 +460,8 @@ public class SuperMeleeMatchdayTable extends JTable
     {
       return this.astrHeader.indexOf(header);
     }
+    
+    
   }
   
   /**
@@ -458,6 +508,144 @@ public class SuperMeleeMatchdayTable extends JTable
           SuperMeleeMatchdayTable.this.changeSelection(_iCurrentRow, ((TableModel) SuperMeleeMatchdayTable.this.getModel()).getColumnIndexOf(SuperMeleeMatchdayTable.COL_HOME_SCORE) - 1, false, false);
         }
       }
+    }
+  }
+  
+  private class TableCellRendererMatchStatus extends DefaultTableCellRenderer
+  {
+    public Component getTableCellRendererComponent(JTable table, Object value,
+        boolean isSelected, boolean hasFocus, int row, int column) {
+      Component _comp = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+      
+      Object _home = table.getValueAt(row, ((TableModel) table.getModel()).getColumnIndexOf(SuperMeleeMatchdayTable.COL_HOME_SCORE));
+      Object _guest = table.getValueAt(row, ((TableModel) table.getModel()).getColumnIndexOf(SuperMeleeMatchdayTable.COL_GUEST_SCORE));
+
+      _comp.setForeground(SuperMeleeMatchdayTable.COLOR_TEXT_DEFAULT);
+
+      if(isSelected)
+        this.setFont(this.getFont().deriveFont(Font.BOLD));
+      else
+        _comp.setBackground(SuperMeleeMatchdayTable.COLOR_CELL_DEFAULT);
+      
+      this.setHorizontalAlignment(JLabel.CENTER);
+
+
+      try
+      {
+        if(null != _home && null != _guest)
+          if(0 < Integer.parseInt(_home.toString().trim()) + Integer.parseInt(_guest.toString().trim()))
+          {
+            if(isSelected)
+            {
+              _comp.setBackground(SuperMeleeMatchdayTable.COLOR_CELL_MATCH_SCORED_SELECTED);
+              _comp.setForeground(SuperMeleeMatchdayTable.COLOR_TEXT_MATCH_SCORED_SELECTED);
+            }
+            else
+              _comp.setBackground(SuperMeleeMatchdayTable.COLOR_CELL_MATCH_SCORED);
+          }
+      }
+      catch(Exception e) {};
+      
+      return _comp;
+    }
+  }
+
+  private class TableCellRendererHomeColumn extends DefaultTableCellRenderer
+  {
+    public Component getTableCellRendererComponent(JTable table, Object value,
+        boolean isSelected, boolean hasFocus, int row, int column) {
+      Component _comp = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+      
+      Object _home = table.getValueAt(row, ((TableModel) table.getModel()).getColumnIndexOf(SuperMeleeMatchdayTable.COL_HOME_SCORE));
+      Object _guest = table.getValueAt(row, ((TableModel) table.getModel()).getColumnIndexOf(SuperMeleeMatchdayTable.COL_GUEST_SCORE));
+
+      _comp.setForeground(SuperMeleeMatchdayTable.COLOR_TEXT_DEFAULT);
+      _comp.setFont(_comp.getFont().deriveFont(Font.PLAIN));
+      
+      if(isSelected)
+        _comp.setFont(_comp.getFont());
+      else
+        _comp.setBackground(SuperMeleeMatchdayTable.COLOR_CELL_DEFAULT);
+
+      try
+      {
+        if(null != _home && null != _guest)
+          if(Integer.parseInt(_home.toString().trim()) > Integer.parseInt(_guest.toString().trim()))
+          {
+            this.setFont(this.getFont().deriveFont(Font.BOLD));
+            if(isSelected)
+            {
+              _comp.setBackground( SuperMeleeMatchdayTable.COLOR_CELL_MATCH_SCORED_SELECTED );
+              _comp.setFont(_comp.getFont().deriveFont(Font.BOLD));
+              _comp.setForeground( SuperMeleeMatchdayTable.COLOR_TEXT_MATCH_WON_SELECTED );
+            }
+            else
+            {
+              _comp.setForeground(SuperMeleeMatchdayTable.COLOR_TEXT_MATCH_WON);
+            }
+          }
+          else
+            _comp.setForeground(SuperMeleeMatchdayTable.COLOR_TEXT_MATCH_LOST);
+            
+      }
+      catch(Exception e) {};
+      
+      return _comp;
+    }
+  }
+  
+  private class TableCellRendererGuestColumn extends DefaultTableCellRenderer
+  {
+    public Component getTableCellRendererComponent(JTable table, Object value,
+        boolean isSelected, boolean hasFocus, int row, int column) {
+      Component _comp = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+      
+      Object _home = table.getValueAt(row, ((TableModel) table.getModel()).getColumnIndexOf(SuperMeleeMatchdayTable.COL_HOME_SCORE));
+      Object _guest = table.getValueAt(row, ((TableModel) table.getModel()).getColumnIndexOf(SuperMeleeMatchdayTable.COL_GUEST_SCORE));
+
+      _comp.setForeground(SuperMeleeMatchdayTable.COLOR_TEXT_DEFAULT);
+      _comp.setFont(_comp.getFont().deriveFont(Font.PLAIN));
+      
+      if(isSelected)
+        _comp.setFont(_comp.getFont());
+      else
+        _comp.setBackground(SuperMeleeMatchdayTable.COLOR_CELL_DEFAULT);
+
+      try
+      {
+        if(null != _home && null != _guest)
+          if(Integer.parseInt(_home.toString().trim()) < Integer.parseInt(_guest.toString().trim()))
+          {
+            this.setFont(this.getFont().deriveFont(Font.BOLD));
+            if(isSelected)
+            {
+              _comp.setBackground( SuperMeleeMatchdayTable.COLOR_CELL_MATCH_SCORED_SELECTED );
+              _comp.setFont(_comp.getFont().deriveFont(Font.BOLD));
+              _comp.setForeground( SuperMeleeMatchdayTable.COLOR_TEXT_MATCH_WON_SELECTED );
+            }
+            else
+            {
+              _comp.setForeground(SuperMeleeMatchdayTable.COLOR_TEXT_MATCH_WON);
+            }
+          }
+          else
+            _comp.setForeground(SuperMeleeMatchdayTable.COLOR_TEXT_MATCH_LOST);
+            
+      }
+      catch(Exception e) {};
+      
+      return _comp;
+    }
+  }
+  
+  private class TableCellRendererCenteredText extends DefaultTableCellRenderer
+  {
+    public Component getTableCellRendererComponent(JTable table, Object value,
+        boolean isSelected, boolean hasFocus, int row, int column) {
+      super.getTableCellRendererComponent(table, value, isSelected,
+          hasFocus, row, column);
+      this.setHorizontalAlignment(JLabel.CENTER);
+      return this;
     }
   }
 }

@@ -25,7 +25,7 @@ public class ParticipantsTableModel extends DefaultTableModel implements Observe
   public void update(Observable o, Object arg)
   {
     Vector<IParticipant> _participants = ((SuperMelee)o).getCompetitors();
-    Vector<Vector<String>> _field = new Vector<Vector<String>>();
+    Vector<Vector<Object>> _field = new Vector<Vector<Object>>();
     
     if(null == this.vecHeader)
       this.vecHeader = ParticipantsTableModel.compileDefaultHeader();
@@ -37,6 +37,23 @@ public class ParticipantsTableModel extends DefaultTableModel implements Observe
 
     this.fireTableDataChanged();
   }
+  
+  
+
+  /* (non-Javadoc)
+   * @see javax.swing.table.AbstractTableModel#getColumnClass(int)
+   */
+  @Override
+  public Class<?> getColumnClass(int columnIndex)
+  {
+    switch( columnIndex )
+    {
+        case 0:   return Integer.class;
+        default:  return String.class;
+    }
+  }
+
+
 
   static private Vector<String> compileDefaultHeader()
   {

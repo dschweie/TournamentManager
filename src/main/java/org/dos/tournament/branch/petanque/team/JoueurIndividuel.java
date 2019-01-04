@@ -74,7 +74,7 @@ public class JoueurIndividuel extends AssociationAttendee
    * @see org.dos.tournament.common.player.AssociationAttendee#getElement(java.lang.String)
    */
   @Override
-  protected String getElement(String id)
+  protected Object getElement(String id)
   {
     switch(id.toLowerCase().trim())
     {

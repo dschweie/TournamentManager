@@ -133,7 +133,7 @@ public class DialogJoueurIndividuel extends DialogAssociationAttendee
           DialogJoueurIndividuel.this.vecAttendees.elementAt(DialogJoueurIndividuel.this.iPos).setStatus((ParticipantStatus) DialogJoueurIndividuel.this.comboBoxStatus.getSelectedItem());
         }
         
-        DialogJoueurIndividuel.this.textId.setText(String.valueOf(DialogAssociationAttendee.getNextIndex()));
+        DialogJoueurIndividuel.this.textId.setText(String.valueOf(DialogJoueurIndividuel.this.getNextIndex()));
         DialogJoueurIndividuel.this.textName.setText("");
         DialogJoueurIndividuel.this.textSurname.setText("");
         DialogJoueurIndividuel.this.textSurname.requestFocus();
