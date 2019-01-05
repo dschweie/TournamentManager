@@ -32,6 +32,8 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 /**
  * \brief       Diese Klasse repräsentiert die GUI für einen Spieltag
  * 
@@ -41,9 +43,9 @@ public class DefaultMatchdayPanel extends JPanel
 {
   private JTable tableMatches;
   private final Action printMatchday = new SwingAction();
-  private final Action timer = new SwingActionMatchdayTimer();
+  private final SwingActionMatchdayTimer actionTimer = new SwingActionMatchdayTimer();
   private JProgressBar progressBar;
-  private final Action action = new SwingActionToggleTeamPresentation();
+  private final Action actionToggleTeamPresentation = new SwingActionToggleTeamPresentation();
   private ToggleButton stateTeammates = new ToggleButton("P", "0", false);
   private ToggleButton stateOpponents = new ToggleButton("O", "0", false);
   private ToggleButton stateTriplette = new ToggleButton("T", "0", false);
@@ -78,17 +80,19 @@ public class DefaultMatchdayPanel extends JPanel
     toolBar.add(horizontalStrut);
     
     JButton btnNewButton = new JButton("");
-    btnNewButton.setAction(action);
+    btnNewButton.setAction(actionToggleTeamPresentation);
     toolBar.add(btnNewButton);
     
-    JButton btnTimer = toolBar.add(timer);
+    JButton btnTimer = toolBar.add(actionTimer);
     
     progressBar = new JProgressBar();
-    progressBar.setString("0:50");
+    //progressBar.setString("0:50");
     progressBar.setStringPainted(true);
     progressBar.setMinimumSize(new Dimension(64, 32));
     progressBar.setMaximumSize(new Dimension(64, 32));
+    progressBar.addMouseListener(new ListenerTimerModification());
     toolBar.add(progressBar);
+    this.actionTimer.updateProgressbar();
     
     scrollPane = new JScrollPane();
     add(scrollPane, BorderLayout.CENTER);
@@ -182,6 +186,7 @@ public class DefaultMatchdayPanel extends JPanel
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.timer.name")); //$NON-NLS-1$ //$NON-NLS-2$
       putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.timer.short description")); //$NON-NLS-1$ //$NON-NLS-2$
       this.thread = new Thread(this);
+      this.updateProgressbar();
     }
     
     public void actionPerformed(ActionEvent e) {
@@ -260,6 +265,30 @@ public class DefaultMatchdayPanel extends JPanel
     public void setDurationInMillis(int time)
     {
       this.iMillis = time;
+      if(!this.thread.isAlive())
+        this.updateProgressbar();
+    }
+    
+    public void increaseDurationInMinutes(int minutes)
+    {
+      if(!this.thread.isAlive())
+      {
+        this.iMillis += minutes * 60 * 1000;
+        this.iMillis = Math.max(0, iMillis);
+        this.updateProgressbar();
+      }
+    }
+    
+    public void updateProgressbar()
+    {
+      if(null != DefaultMatchdayPanel.this.progressBar)
+      {
+        DefaultMatchdayPanel.this.progressBar.setString(String.format("%tT", new GregorianCalendar(0, 0, 0, 0, 0, (int)Math.round((this.iMillis)/1000.0f))));
+        DefaultMatchdayPanel.this.progressBar.setValue( 0 );
+        DefaultMatchdayPanel.this.progressBar.repaint();
+        DefaultMatchdayPanel.this.progressBar.validate();
+        DefaultMatchdayPanel.this.actionTimer.setEnabled(0 < this.iMillis);
+      }
     }
   }
   private class SwingAction_2 extends AbstractAction {
@@ -305,4 +334,42 @@ public class DefaultMatchdayPanel extends JPanel
       this.updateButton(((SuperMeleeMatchdayTable) DefaultMatchdayPanel.this.tableMatches).toggleOutputParticipants());
     }
   }
+  
+  private class ListenerTimerModification extends MouseAdapter 
+  {
+    public void mousePressed(MouseEvent e)
+    {
+      int _size = e.getComponent().getWidth();
+      if (!e.isPopupTrigger())
+      {
+        if (e.getX() < ( ( _size / 7 ) * 3 ) )
+        { // decrease time
+          if(1 == e.getClickCount())
+            DefaultMatchdayPanel.this.actionTimer.increaseDurationInMinutes(-1);
+          else if (1 < e.getClickCount())
+            DefaultMatchdayPanel.this.actionTimer.increaseDurationInMinutes(-4);
+        }
+        if ( e.getX() > ( ( _size / 7 )  * 4 ) )
+        { // decrease time
+          if( 1 == e.getClickCount() )
+            DefaultMatchdayPanel.this.actionTimer.increaseDurationInMinutes(1);
+          else if ( 2 == e.getClickCount() )
+            DefaultMatchdayPanel.this.actionTimer.increaseDurationInMinutes(4);
+        }
+          
+      }
+    }
+
+    public void mouseReleased(MouseEvent e)
+    {
+        if (e.isPopupTrigger())
+            doPop(e);
+    }
+
+    private void doPop(MouseEvent e){
+        //PopUpDemo menu = new PopUpDemo();
+        //menu.show(e.getComponent(), e.getX(), e.getY());
+    } 
+  }
+  
 }

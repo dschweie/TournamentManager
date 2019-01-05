@@ -109,15 +109,13 @@ public class SuperMeleeMatchdayTable extends JTable
   final static public String COL_COURT        = "COURT";
   
   final static public Color  COLOR_CELL_DEFAULT               = Color.WHITE;
-  final static public Color  COLOR_CELL_MATCH_SCORED          = new Color(144,238,144); 
-//  final static public Color  COLOR_CELL_MATCH_SCORED          = Color.GREEN; 
-  final static public Color  COLOR_CELL_MATCH_SCORED_SELECTED = new Color( 0, 195, 0 );
+  final static public Color  COLOR_CELL_MATCH_SCORED          = new Color( 144, 238, 144 ); 
+  final static public Color  COLOR_CELL_MATCH_SCORED_SELECTED = new Color(   0, 195,   0 );
   final static public Color  COLOR_TEXT_DEFAULT               = Color.BLACK;
   final static public Color  COLOR_TEXT_MATCH_SCORED          = Color.BLACK; 
   final static public Color  COLOR_TEXT_MATCH_SCORED_SELECTED = Color.WHITE;
-  final static public Color  COLOR_TEXT_MATCH_WON             = new Color(0, 120, 0); 
+  final static public Color  COLOR_TEXT_MATCH_WON             = new Color(   0, 120,   0 ); 
   final static public Color  COLOR_TEXT_MATCH_WON_SELECTED    = Color.WHITE;
-//final static public Color  COLOR_TEXT_MATCH_LOST            = new Color(180, 0, 0); 
   final static public Color  COLOR_TEXT_MATCH_LOST            = Color.GRAY; 
   final static public Color  COLOR_TEXT_MATCH_LOST_SELECTED   = Color.BLACK;
  
