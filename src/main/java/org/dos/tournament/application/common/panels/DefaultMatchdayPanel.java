@@ -12,11 +12,13 @@ import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTable
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 
 import javax.swing.JTable;
+import javax.swing.JTable.PrintMode;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
 import java.lang.Thread.State;
+import java.text.MessageFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -34,6 +36,10 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.print.PageFormat;
+import java.awt.print.Printable;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
 /**
  * \brief       Diese Klasse repräsentiert die GUI für einen Spieltag
  * 
@@ -42,7 +48,7 @@ import java.awt.event.MouseEvent;
 public class DefaultMatchdayPanel extends JPanel
 {
   private JTable tableMatches;
-  private final Action printMatchday = new SwingAction();
+  private final Action printMatchday = new SwingActionPrintMatchday();
   private final SwingActionMatchdayTimer actionTimer = new SwingActionMatchdayTimer();
   private JProgressBar progressBar;
   private final Action actionToggleTeamPresentation = new SwingActionToggleTeamPresentation();
@@ -156,13 +162,33 @@ public class DefaultMatchdayPanel extends JPanel
 
 
 
-  private class SwingAction extends AbstractAction {
-    public SwingAction() {
+  private class SwingActionPrintMatchday extends AbstractAction {
+    public SwingActionPrintMatchday() {
       putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_181-Printer_2124005.png")));
       putValue(NAME, "SwingAction");
       putValue(SHORT_DESCRIPTION, "prints the current data of this matchday");
     }
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) 
+    {
+      PrinterJob _printJob = PrinterJob.getPrinterJob();
+      PageFormat _page = new PageFormat();
+      
+      _page.setOrientation(PageFormat.LANDSCAPE);
+      
+      _printJob.setPrintable(DefaultMatchdayPanel.this.getPrintable(), _page);
+      
+      if(_printJob.printDialog())
+      {
+        try
+        {
+          _printJob.print();
+        } 
+        catch (PrinterException e1)
+        {
+          // TODO Auto-generated catch block
+          e1.printStackTrace();
+        }
+      }
     }
   }
   private class SwingAction_1 extends AbstractAction {
@@ -170,7 +196,9 @@ public class DefaultMatchdayPanel extends JPanel
       putValue(NAME, "SwingAction_1");
       putValue(SHORT_DESCRIPTION, "Some short description");
     }
-    public void actionPerformed(ActionEvent e) {
+    
+    public void actionPerformed(ActionEvent e) 
+    {
     }
   }
   
@@ -370,6 +398,11 @@ public class DefaultMatchdayPanel extends JPanel
         //PopUpDemo menu = new PopUpDemo();
         //menu.show(e.getComponent(), e.getX(), e.getY());
     } 
+  }
+
+  public Printable getPrintable()
+  {
+    return this.tableMatches.getPrintable(PrintMode.FIT_WIDTH, new MessageFormat(String.format("Runde %d", ((SuperMeleeMatchdayTable) this.tableMatches).getMatchdayIndex()+1)), new MessageFormat(String.format("Tournament Manager %1$s               %2$td.%2$tm.%2$tY               Seite {0}", ResourceBundle.getBundle("org.dos.tournament.resources.config").getString("TournamentManager.version"), GregorianCalendar.getInstance())));
   }
   
 }

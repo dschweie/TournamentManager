@@ -50,6 +50,8 @@ public interface IParticipant extends Comparable
   public void setWinnerOfTheDayTrophy(IResult instance);
   public void unsetWinnerOfTheDayTrophy();
   
+  public int compareToByResult(IParticipant opponent, boolean includeTiebreaker);
+  
   public ParticipantStatus getStatus();
   public void setStatus(ParticipantStatus status);
   public boolean activateParticipant();

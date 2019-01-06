@@ -10,6 +10,7 @@ import org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSu
 import org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem;
 import org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTwice;
 import org.dos.tournament.common.player.IParticipant;
+import org.dos.tournament.common.result.ConstantScoreResult;
 
 /**
  *  \brief      Diese Klasse bildet das monatliche Super Melee-Turnier der Bouleabteilung von Blau-Gelb Groﬂ-Gerau ab.
@@ -43,6 +44,8 @@ public class SuperMeleeClubChampionship extends SuperMelee
     this.regulations = new RuleSuperMeleeNeverPlayTripletteTwice(this.regulations, true, true);
     this.regulations = new RuleSuperMeleeNeverMeetOpponentTwice(this.regulations, true, true);
     
+    this.xTrophy = new ConstantScoreResult(3);
+    
     this.iWinnerOfTheDay = -1;
   }
   
@@ -61,7 +64,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
     for(int i=0; i < _guestAttendees.length; ++i)
       _guestAttendees[i].addResultOfMatchday(iMatchdayIndex, _guest);
     
-    this.updateWinnerOfTheDay();
+    // this.updateWinnerOfTheDay();
     
     this.setChanged();
     this.notifyObservers();

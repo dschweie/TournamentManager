@@ -1,5 +1,4 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node2" href="$da/dd4/a00291.html" title="org.dos.tournament.application.dialogs.petanque.movement.\lDialogSetRoundManually" alt="" coords="117,5,487,47"/>
-<area shape="rect" id="node3" href="$de/dab/a00319.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee" alt="" coords="158,71,446,112"/>
-<area shape="rect" id="node4" href="$d0/da2/a00307.html" title="org.dos.tournament.application.dialogs.petanque.player.\lDialogJoueurIndividuel" alt="" coords="535,71,880,112"/>
+<area shape="rect" id="node2" href="$d3/d58/a00285.html" title="Diese Klasse repräsentiert die GUI für einen Spieltag. " alt="" coords="116,5,416,47"/>
+<area shape="rect" id="node3" href="$de/d08/a00381.html" title="org.dos.tournament.application.petanque.panels.\lPetanqueSuperMeleePanel" alt="" coords="115,71,417,112"/>
 </map>

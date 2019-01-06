@@ -8,6 +8,7 @@ import java.util.Vector;
 import org.bson.Document;
 import org.dos.tournament.branch.petanque.result.PetanqueMatchResult;
 import org.dos.tournament.common.player.AssociationAttendee;
+import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.result.AbstractTotalResult;
 import org.dos.tournament.common.result.IResult;
 
@@ -50,9 +51,24 @@ public class JoueurIndividuel extends AssociationAttendee
   @Override
   public int compareTo(Object o)
   {
-    return this.result.compareTo(((JoueurIndividuel)o).result);
-  }
+    int _iResult = this.compareToByResult((IParticipant) o, true);
+    if(0 == _iResult)
+      _iResult = (-1)*this.getName().compareToIgnoreCase(((IParticipant)o).getName());
 
+    return _iResult;
+  }
+  
+  /* (non-Javadoc)
+   * @see org.dos.tournament.common.player.AbstractParticipant#compareToByResult(org.dos.tournament.common.player.IParticipant, boolean)
+   */
+  @Override
+  public int compareToByResult(IParticipant opponent, boolean includeTiebreaker)
+  {
+    if( true == includeTiebreaker )
+      return this.result.compareTo(((JoueurIndividuel)opponent).result);
+    else
+      return this.result.getTotalScore() - ((JoueurIndividuel)opponent).result.getTotalScore();
+  }
 
   public String getName()
   {
@@ -187,7 +203,7 @@ public class JoueurIndividuel extends AssociationAttendee
         case PetanqueTotalResult.DIFFERENCE : 
         case PetanqueTotalResult.WINS :       
         case PetanqueTotalResult.MATCHES :    return(this.getValueForCategory(category) == opps.getValueForCategory(category)?this.compareTo(opps, category+1):this.getValueForCategory(category) - opps.getValueForCategory(category));
-        default:                              return (-1)*this.getName().compareToIgnoreCase(opps.getName());
+        default:                              return 0;
       }
     }
 

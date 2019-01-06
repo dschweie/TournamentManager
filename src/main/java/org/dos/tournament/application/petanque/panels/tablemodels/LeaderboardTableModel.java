@@ -37,6 +37,8 @@ public class LeaderboardTableModel extends DefaultTableModel implements Observer
   @Override
   public void update(Observable o, Object arg)
   {
+    IParticipant _last = null;
+    
     Vector<IParticipant> _participants = ((SuperMelee)o).getCompetitors();
     Iterator<IParticipant> _it = _participants.iterator();
     TreeSet<IParticipant> _leaderboard = new TreeSet<IParticipant>();
@@ -44,6 +46,9 @@ public class LeaderboardTableModel extends DefaultTableModel implements Observer
     
     _columnIdentifiers.add("Rang");
     _columnIdentifiers.add("Name");
+    
+    _participants.forEach(it -> it.unsetWinnerOfTheDayTrophy());
+    
     if(0 < _participants.size())
       _columnIdentifiers.addAll(_participants.get(0).getTotalResultIdentifiers());
     this.setColumnIdentifiers(_columnIdentifiers);
@@ -61,6 +66,12 @@ public class LeaderboardTableModel extends DefaultTableModel implements Observer
     while(_it.hasNext())
     {
       IParticipant _current = _it.next();
+      if( 0 == rank )
+        _current.setWinnerOfTheDayTrophy(((SuperMelee)o).getTrophy());
+      else
+        if( 0 == _current.compareToByResult(_last, true) )
+          _current.setWinnerOfTheDayTrophy(((SuperMelee)o).getTrophy());
+      
       Vector<Object> _row = new Vector<Object>();
       _row.add(new Integer(++rank));
       _row.add(_current.getName());
@@ -72,6 +83,8 @@ public class LeaderboardTableModel extends DefaultTableModel implements Observer
       }
       
       this.addRow(_row);
+      
+      _last = _current;
     }
     
     this.fireTableDataChanged();

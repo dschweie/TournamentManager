@@ -1,3 +1,12 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$d5/d8a/a00599.html" title="Über diese Klasse läuft das Speichern und Laden von Daten. " alt="" coords="5,5,244,47"/>
+<area shape="rect" id="node1" href="$d8/d9b/a00577.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; T, G, P \&gt;" alt="" coords="5,39,328,80"/>
+<area shape="rect" id="node2" href="$d4/d9e/a00569.html" title="org.dos.tournament.common.movement.regulations.\lAbstractCoreRule\&lt; T, G, P \&gt;" alt="" coords="376,5,699,47"/>
+<area shape="rect" id="node4" href="$d6/d21/a00573.html" title="org.dos.tournament.common.movement.regulations.\lAbstractRegulationDecorator\&lt; T, G, P \&gt;" alt="" coords="376,71,699,112"/>
+<area shape="rect" id="node3" href="$d9/da5/a00493.html" title="Diese Klasse ist Basisklasse im Regelwerk. " alt="" coords="747,5,1184,47"/>
+<area shape="rect" id="node5" href="$d8/db6/a00501.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetOpponentTwice" alt="" coords="747,71,1184,112"/>
+<area shape="rect" id="node9" href="$d8/dc7/a00517.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTwice" alt="" coords="747,136,1184,177"/>
+<area shape="rect" id="node6" href="$d4/d1e/a00497.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetOpponentTandem" alt="" coords="1232,5,1669,47"/>
+<area shape="rect" id="node7" href="$df/db6/a00509.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTwice" alt="" coords="1232,71,1669,112"/>
+<area shape="rect" id="node8" href="$d7/d37/a00505.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTandem" alt="" coords="1717,71,2155,112"/>
+<area shape="rect" id="node10" href="$da/def/a00513.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTandem" alt="" coords="1232,136,1669,177"/>
 </map>

@@ -1,33 +1,3 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node2" href="$df/da9/a00263.html" title="org.dos.tournament.application.common.panels.\lDefaultMatchdayPanel.SwingAction" alt="" coords="264,1524,564,1565"/>
-<area shape="rect" id="node3" href="$d1/dd4/a00267.html" title="org.dos.tournament.application.common.panels.\lDefaultMatchdayPanel.SwingAction_1" alt="" coords="264,1589,564,1631"/>
-<area shape="rect" id="node4" href="$d3/d5e/a00275.html" title="org.dos.tournament.application.common.panels.\lDefaultMatchdayPanel.SwingAction_2" alt="" coords="264,136,564,177"/>
-<area shape="rect" id="node5" href="$d2/d82/a00279.html" title="org.dos.tournament.application.common.panels.\lDefaultMatchdayPanel.SwingAction_3" alt="" coords="264,201,564,243"/>
-<area shape="rect" id="node6" href="$dd/d86/a00271.html" title="org.dos.tournament.application.common.panels.\lDefaultMatchdayPanel.SwingActionMatchdayTimer" alt="" coords="255,71,573,112"/>
-<area shape="rect" id="node7" href="$dd/dfe/a00283.html" title="org.dos.tournament.application.common.panels.\lDefaultMatchdayPanel.SwingActionToggleTeamPresentation" alt="" coords="229,267,599,308"/>
-<area shape="rect" id="node8" href="$d9/d5e/a00295.html" title="org.dos.tournament.application.dialogs.petanque.movement.\lDialogSetRoundManually.SwingAction" alt="" coords="229,332,599,373"/>
-<area shape="rect" id="node9" href="$df/d95/a00299.html" title="org.dos.tournament.application.dialogs.petanque.movement.\lDialogSetRoundManually.SwingAction_1" alt="" coords="229,397,599,439"/>
-<area shape="rect" id="node10" href="$d1/d5d/a00311.html" title="org.dos.tournament.application.dialogs.petanque.player.\lDialogJoueurIndividuel.SwingActionOK" alt="" coords="241,463,587,504"/>
-<area shape="rect" id="node11" href="$d4/d6f/a00315.html" title="org.dos.tournament.application.dialogs.petanque.player.\lDialogJoueurIndividuel.SwingActionOkAndNext" alt="" coords="241,528,587,569"/>
-<area shape="rect" id="node12" href="$d8/dfc/a00327.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee.SwingActionCancel" alt="" coords="267,593,561,635"/>
-<area shape="rect" id="node13" href="$de/d55/a00323.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee.SwingActionOK" alt="" coords="270,659,558,700"/>
-<area shape="rect" id="node14" href="$d8/df7/a00331.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee.SwingActionOkAndNext" alt="" coords="253,724,575,765"/>
-<area shape="rect" id="node15" href="$d4/def/a00359.html" title="org.dos.tournament.application.petanque.panels.\lPetanqueSuperMeleePanel.SwingActionActivateAttendee" alt="" coords="237,789,591,831"/>
-<area shape="rect" id="node16" href="$da/dee/a00383.html" title="org.dos.tournament.application.petanque.panels.\lPetanqueSuperMeleePanel.SwingActionAddParticipants\lToDatabase" alt="" coords="241,855,587,911"/>
-<area shape="rect" id="node17" href="$d6/d80/a00371.html" title="org.dos.tournament.application.petanque.panels.\lPetanqueSuperMeleePanel.SwingActionCreateNewMatchday" alt="" coords="227,936,601,977"/>
-<area shape="rect" id="node18" href="$df/dc2/a00367.html" title="org.dos.tournament.application.petanque.panels.\lPetanqueSuperMeleePanel.SwingActionDeleteAttendee" alt="" coords="242,1001,586,1043"/>
-<area shape="rect" id="node19" href="$d0/d48/a00351.html" title="org.dos.tournament.application.petanque.panels.\lPetanqueSuperMeleePanel.SwingActionEnlistAttendee" alt="" coords="244,1067,584,1108"/>
-<area shape="rect" id="node20" href="$dd/dcb/a00375.html" title="org.dos.tournament.application.petanque.panels.\lPetanqueSuperMeleePanel.SwingActionImportSomePlayers" alt="" coords="229,1132,599,1173"/>
-<area shape="rect" id="node21" href="$d9/d9b/a00363.html" title="org.dos.tournament.application.petanque.panels.\lPetanqueSuperMeleePanel.SwingActionInactivateAttendee" alt="" coords="233,1197,595,1239"/>
-<area shape="rect" id="node22" href="$d3/dc9/a00355.html" title="org.dos.tournament.application.petanque.panels.\lPetanqueSuperMeleePanel.SwingActionUpdateAttendee" alt="" coords="240,1263,588,1304"/>
-<area shape="rect" id="node23" href="$d8/d95/a00379.html" title="org.dos.tournament.application.petanque.panels.\lPetanqueSuperMeleePanel.SwingActionUpdateLastRound" alt="" coords="235,1655,593,1696"/>
-<area shape="rect" id="node24" href="$d1/d98/a00407.html" title="org.dos.tournament.application.\lTournamentManagerUI.CreateTournamentAction" alt="" coords="265,1328,563,1369"/>
-<area shape="rect" id="node25" href="$d0/da0/a00403.html" title="org.dos.tournament.application.\lTournamentManagerUI.SwingAction" alt="" coords="300,1393,528,1435"/>
-<area shape="rect" id="node26" href="$d6/d60/a00491.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee.CreateRoundManually" alt="" coords="229,1459,599,1500"/>
-<area shape="rect" id="node28" href="$db/db9/a00387.html" title="org.dos.tournament.application.petanque.panels.tablemodels.\lLeaderboardTableColumnModel" alt="" coords="225,1720,603,1761"/>
-<area shape="rect" id="node30" href="$d3/d1a/a00251.html" title="org.dos.tournament.application.common.panels.components.\lSuperMeleeMatchdayTable.TableModel" alt="" coords="227,1785,601,1827"/>
-<area shape="rect" id="node31" href="$db/d95/a00391.html" title="org.dos.tournament.application.petanque.panels.tablemodels.\lLeaderboardTableModel" alt="" coords="225,1851,603,1892"/>
-<area shape="rect" id="node32" href="$db/dbc/a00395.html" title="org.dos.tournament.application.petanque.panels.tablemodels.\lParticipantsTableModel" alt="" coords="225,1916,603,1957"/>
-<area shape="rect" id="node34" href="$d7/de8/a01159.html" title="Runnable" alt="" coords="53,46,129,73"/>
-<area shape="rect" id="node35" href="$db/dc4/a00495.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="229,5,599,47"/>
+<area shape="rect" id="node1" href="$d1/d6e/a00613.html" title="org.dos.tournament.common.player.utils.\lParticipantStatus" alt="" coords="5,5,264,47"/>
 </map>

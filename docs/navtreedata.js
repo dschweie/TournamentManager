@@ -2,10 +2,10 @@ var NAVTREE =
 [
   [ "TournamentManager", "index.html", [
     [ "Was ist auf diesen Seiten zu finden?", "index.html#main01", null ],
-    [ "Benutzerhandbuch", "d2/dd2/a01164.html", [
-      [ "Struktur des Handbuchs", "d2/dd2/a01164.html#manStruct", null ]
+    [ "Benutzerhandbuch", "d7/d04/a01246.html", [
+      [ "Struktur des Handbuchs", "d7/d04/a01246.html#manStruct", null ]
     ] ],
-    [ "Ausstehende Aufgaben", "da/d15/a00188.html", null ],
+    [ "Ausstehende Aufgaben", "dc/d57/a00194.html", null ],
     [ "Pakete", null, [
       [ "Pakete", "namespaces.html", "namespaces" ]
     ] ],
@@ -16,7 +16,7 @@ var NAVTREE =
       [ "Klassen-Elemente", "functions.html", [
         [ "Alle", "functions.html", "functions_dup" ],
         [ "Funktionen", "functions_func.html", "functions_func" ],
-        [ "Variablen", "functions_vars.html", null ]
+        [ "Variablen", "functions_vars.html", "functions_vars" ]
       ] ]
     ] ],
     [ "Dateien", null, [
@@ -28,9 +28,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d29/a00419.html#a7f1f5a09da2784c47f48562f433d1157",
-"d9/d3a/a00439.html#a75377f3e4457d60a3b919a3c889600a5",
-"dd/ded/a00211.html"
+"d6/d21/a00573.html#ab42c7066fd1afa90a56f6c086f7ee861",
+"d8/deb/a00545.html#a1312efacb5e42f6441b803d9d948cd7a",
+"dc/dc9/a00389.html#a9887500a1215abf4654edfe33cb14f7c",
+"functions_s.html"
 ];
 
 var SYNCONMSG = 'Klicken um Panelsynchronisation auszuschalten';

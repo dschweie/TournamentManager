@@ -31,9 +31,11 @@ import org.dos.tournament.common.movement.regulations.Regulation;
 import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.player.utils.NumericParticipantId;
 import org.dos.tournament.common.player.utils.ParticipantStatus;
+import org.dos.tournament.common.result.IResult;
 
 public class SuperMelee extends Observable
 {
+
   static final public char FLAG_NEVER_MET       = ' ';
   static final public char FLAG_WERE_TEAMMATES  = 'T';
   static final public char FLAG_WERE_OPPONENTS  = 'O';
@@ -55,6 +57,7 @@ public class SuperMelee extends Observable
   private ProgressMonitor xProgressMonitor = null;      
 
   protected Regulation<SuperMelee, Vector<Vector<Integer>>, IParticipant> regulations;
+  protected IResult xTrophy = null;
   
   private boolean runningGenerateRound = false;
   private boolean resultGenerateRound = false;
@@ -111,6 +114,22 @@ public class SuperMelee extends Observable
     this.bRuleNoTripletteTwice = bRuleNoTripletteTwice;
   }
 
+  /**
+   * @return the xTrophy
+   */
+  public IResult getTrophy()
+  {
+    return xTrophy;
+  }
+
+  /**
+   * @param xTrophy the xTrophy to set
+   */
+  protected void setTrophy(IResult trophy)
+  {
+    this.xTrophy = trophy;
+  }
+  
   public SuperMelee()
   {
     this.competitors = new Vector<IParticipant>();

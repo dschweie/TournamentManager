@@ -72,7 +72,7 @@ public abstract class AbstractParticipant implements IParticipant
   @Override
   public int getTotalScore()
   {
-    return this.result.getTotalScore();
+    return ( this.result.getTotalScore() + ( null==this.trophy?0:this.trophy.getScore() ) );
   }
 
   /* (non-Javadoc)
@@ -81,7 +81,9 @@ public abstract class AbstractParticipant implements IParticipant
   @Override
   public int[] getTotalResult()
   {
-    return this.result.getTotalResult();
+    int[] _aiRetval = this.result.getTotalResult();
+    _aiRetval[0] += ( null==this.trophy?0:this.trophy.getScore() );
+    return _aiRetval;
   }
   
   /* (non-Javadoc)
@@ -175,9 +177,24 @@ public abstract class AbstractParticipant implements IParticipant
   @Override
   public int compareTo(Object o)
   {
+    try
+    {
+      return this.compareToByResult((IParticipant)o, true);
+    }
+    catch(Exception e) { return 0; }
+  }
+  
+  /* (non-Javadoc)
+   * @see org.dos.tournament.common.player.IParticipant#compareToByResult(org.dos.tournament.common.player.IParticipant, boolean)
+   */
+  @Override
+  public int compareToByResult(IParticipant opponent, boolean includeTiebreaker)
+  {
     // TODO Auto-generated method stub
     return 0;
   }
+
+  
 
   protected Object getElement(String id)
   {

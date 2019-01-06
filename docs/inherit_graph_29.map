@@ -1,4 +1,5 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$de/d94/a00603.html" title="Diese Schnittstelle ist Fassade für unterschiedliche Implementierungen zum Speichern von Daten..." alt="" coords="5,5,244,47"/>
-<area shape="rect" id="node2" href="$d8/de9/a00595.html" title="org.dos.tournament.common.storage.mongo.\lDatabaseClient" alt="" coords="292,5,575,47"/>
+<area shape="rect" id="node1" href="$d6/db2/a00601.html" title="org.dos.tournament.common.player.utils.\lIParticipantId" alt="" coords="5,39,264,80"/>
+<area shape="rect" id="node2" href="$d0/d1c/a00605.html" title="org.dos.tournament.common.player.utils.\lNumericAssociationId" alt="" coords="312,5,571,47"/>
+<area shape="rect" id="node3" href="$db/d3f/a00609.html" title="org.dos.tournament.common.player.utils.\lNumericParticipantId" alt="" coords="312,71,571,112"/>
 </map>

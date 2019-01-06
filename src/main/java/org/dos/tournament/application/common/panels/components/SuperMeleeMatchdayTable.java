@@ -135,6 +135,14 @@ public class SuperMeleeMatchdayTable extends JTable
   private int iMatchdayIndex = -1;
 
   /**
+   * @return the iMatchdayIndex
+   */
+  public int getMatchdayIndex()
+  {
+    return iMatchdayIndex;
+  }
+
+  /**
    *  Dieser Konstruktror ist der Standardkonstruktor der Klasse mit den notwendingen Parametern.
    *  
    *  @param    tournament    In dem Parameter ist eine Instanz von SuperMelee 
