@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.common.competition.IEncounter" name="org.dos.tournament.common.competition.IEncounter">
-<area shape="rect" id="node2" href="$da/d7e/a00492.html" title="org.dos.tournament.common.competition.\lAbstractEncounter" alt="" coords="45,95,308,136"/>
-<area shape="rect" id="node3" href="$d9/dc5/a00480.html" title="org.dos.tournament.branch.petanque.tournament.partie.\lPartie" alt="" coords="5,184,348,225"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTwice" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTwice">
+<area shape="rect" id="node2" href="$d6/d21/a00573.html" title="org::dos::tournament\l::common::movement::regulations\l::AbstractRegulationDecorator\l\&lt; SuperMelee, Vector\&lt; Vector\l\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="687,87,905,172"/>
+<area shape="rect" id="node3" href="$d8/d9b/a00577.html" title="org::dos::tournament\l::common::movement::regulations\l::Regulation\&lt; T, G, P \&gt;" alt="" coords="333,36,552,92"/>
 </map>

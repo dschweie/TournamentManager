@@ -1,7 +1,8 @@
-<map id="org.dos.tournament.common.player.AbstractTeamParticipant" name="org.dos.tournament.common.player.AbstractTeamParticipant">
-<area shape="rect" id="node4" href="$d9/de6/a00404.html" title="org.dos.tournament.branch.petanque.team.\lAbstractPetanqueTeam" alt="" coords="841,39,1112,80"/>
-<area shape="rect" id="node2" href="$d4/d40/a00516.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="284,39,515,80"/>
-<area shape="rect" id="node3" href="$d7/d41/a00532.html" title="Dieses ist das zentrale Interface fÃ¼r Teilnehmer oder Teams im Turnier. " alt="" coords="5,39,236,80"/>
-<area shape="rect" id="node5" href="$dd/dea/a00408.html" title="org.dos.tournament.branch.petanque.team.\lDoublette" alt="" coords="1160,5,1431,47"/>
-<area shape="rect" id="node6" href="$db/d4f/a00420.html" title="org.dos.tournament.branch.petanque.team.\lTriplette" alt="" coords="1160,71,1431,112"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee">
+<area shape="rect" id="node3" href="$d8/d9b/a00577.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.common.player.\lIParticipant \&gt;" alt="" coords="964,148,1443,219"/>
+<area shape="rect" id="node4" href="$d8/d9b/a00577.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; T, G, P \&gt;" alt="" coords="333,156,656,197"/>
+<area shape="rect" id="node8" href="$da/dd1/a00629.html" title="org.dos.tournament.common.result.\lIResult" alt="" coords="1089,504,1317,545"/>
+<area shape="rect" id="node9" href="$d1/d31/a01245.html" title="Comparable" alt="" coords="449,511,540,538"/>
+<area shape="rect" id="node17" href="$db/d44/a00533.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="1018,713,1389,755"/>
+<area shape="rect" id="node18" href="$d3/d07/a01241.html" title="Runnable" alt="" coords="457,745,533,771"/>
 </map>

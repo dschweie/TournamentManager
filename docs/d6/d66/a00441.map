@@ -1,4 +1,2 @@
-<map id="org.dos.tournament.branch.petanque.team.JoueurIndividuel.PetanqueTotalResult" name="org.dos.tournament.branch.petanque.team.JoueurIndividuel.PetanqueTotalResult">
-<area shape="rect" id="node2" href="$d5/d80/a00583.html" title="org.dos.tournament.common.result.\lAbstractTotalResult" alt="" coords="469,39,697,80"/>
-<area shape="rect" id="node3" href="$d9/dad/a00591.html" title="org.dos.tournament.common.result.\lITotalResult" alt="" coords="63,5,291,47"/>
+<map id="org.dos.tournament.application.TournamentManagerUI.CreateTournamentAction" name="org.dos.tournament.application.TournamentManagerUI.CreateTournamentAction">
 </map>

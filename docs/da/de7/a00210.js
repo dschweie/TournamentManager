@@ -1,4 +1,4 @@
 var a00210 =
 [
-    [ "TableBasedIndividual", "d2/db6/a00411.html", "d2/db6/a00411" ]
+    [ "DialogJoueurIndividuel", "d3/d93/a00341.html", "d3/d93/a00341" ]
 ];

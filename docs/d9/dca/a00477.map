@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTwice" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTwice">
-<area shape="rect" id="node2" href="$d7/d84/a00535.html" title="org::dos::tournament\l::common::movement::regulations\l::AbstractRegulationDecorator\l\&lt; SuperMelee, Vector\&lt; Vector\l\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="359,68,577,153"/>
-<area shape="rect" id="node3" href="$d3/d87/a00539.html" title="org::dos::tournament\l::common::movement::regulations\l::Regulation\&lt; T, G, P \&gt;" alt="" coords="5,5,224,61"/>
+<map id="org.dos.tournament.branch.petanque.team.JoueurIndividuel.PetanqueTotalResult" name="org.dos.tournament.branch.petanque.team.JoueurIndividuel.PetanqueTotalResult">
+<area shape="rect" id="node2" href="$de/d85/a00618.html" title="org.dos.tournament.common.result.\lAbstractTotalResult" alt="" coords="27,95,255,136"/>
+<area shape="rect" id="node3" href="$d6/dfa/a00626.html" title="org.dos.tournament.common.result.\lITotalResult" alt="" coords="27,5,255,47"/>
 </map>

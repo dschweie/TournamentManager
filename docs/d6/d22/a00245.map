@@ -1,5 +1,2 @@
-<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable">
-<area shape="rect" id="node4" href="$dc/da0/a00483.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee" alt="" coords="853,593,1224,634"/>
-<area shape="rect" id="node6" href="$d3/d87/a00539.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.common.player.\lIParticipant \&gt;" alt="" coords="157,291,636,362"/>
-<area shape="rect" id="node16" href="$db/dc4/a00495.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="211,662,582,703"/>
+<map id="org.dos.tournament.application.common.controls.ToggleButton" name="org.dos.tournament.application.common.controls.ToggleButton">
 </map>

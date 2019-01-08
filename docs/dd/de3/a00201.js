@@ -1,4 +1,5 @@
 var a00201 =
 [
-    [ "DialogSetRoundManually", "da/dd4/a00291.html", "da/dd4/a00291" ]
+    [ "TableHeaderColumnContent", "d6/d22/a00245.html", "d6/d22/a00245" ],
+    [ "ToggleButton", "de/dbc/a00249.html", "de/dbc/a00249" ]
 ];

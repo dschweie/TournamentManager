@@ -1,3 +1,6 @@
-<map id="org.dos.tournament.common.player.utils.NumericParticipantId" name="org.dos.tournament.common.player.utils.NumericParticipantId">
-<area shape="rect" id="node2" href="$d4/d33/a00536.html" title="org.dos.tournament.common.player.utils.\lIParticipantId" alt="" coords="5,5,264,47"/>
+<map id="org.dos.tournament.branch.petanque.tournament.partie.Partie" name="org.dos.tournament.branch.petanque.tournament.partie.Partie">
+<area shape="rect" id="node2" href="$d8/df0/a00557.html" title="org.dos.tournament.common.competition.\lAbstractEncounter" alt="" coords="733,71,996,112"/>
+<area shape="rect" id="node3" href="$d8/dd2/a00565.html" title="org.dos.tournament.common.competition.\lIEncounter" alt="" coords="340,5,603,47"/>
+<area shape="rect" id="node4" href="$da/dd1/a00629.html" title="org.dos.tournament.common.result.\lIResult" alt="" coords="357,71,585,112"/>
+<area shape="rect" id="node5" href="$d1/d31/a01245.html" title="Comparable" alt="" coords="5,78,96,105"/>
 </map>

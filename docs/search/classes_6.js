@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keyadapter',['KeyAdapter',['../d4/d04/a00255.html',1,'org::dos::tournament::application::common::panels::components::SuperMeleeMatchdayTable']]]
+  ['keyadapter',['KeyAdapter',['../da/d53/a00265.html',1,'org::dos::tournament::application::common::panels::components::SuperMeleeMatchdayTable']]]
 ];

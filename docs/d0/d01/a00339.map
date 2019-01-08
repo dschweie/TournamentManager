@@ -1,2 +1,6 @@
-<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionDeleteAttendee" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionDeleteAttendee">
+<map id="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel" name="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel">
+<area shape="rect" id="node2" href="$db/ddc/a00353.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee" alt="" coords="1247,321,1535,363"/>
+<area shape="rect" id="node4" href="$d6/da3/a00589.html" title="org.dos.tournament.common.player.\lAssociationAttendee" alt="" coords="812,60,1043,101"/>
+<area shape="rect" id="node5" href="$d2/da3/a00593.html" title="org.dos.tournament.common.player.\lAttendee" alt="" coords="321,24,552,65"/>
+<area shape="rect" id="node6" href="$d8/dc8/a00581.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="5,5,236,47"/>
 </map>

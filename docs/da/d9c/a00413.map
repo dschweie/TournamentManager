@@ -1,4 +1,2 @@
-<map id="org.dos.tournament.branch.petanque.result.PetanqueMatchResult" name="org.dos.tournament.branch.petanque.result.PetanqueMatchResult">
-<area shape="rect" id="node2" href="$d3/d29/a00419.html" title="org.dos.tournament.branch.petanque.result.\lPetanqueResult" alt="" coords="5,124,280,165"/>
-<area shape="rect" id="node3" href="$d9/d42/a00575.html" title="org.dos.tournament.common.result.\lAbstractResult" alt="" coords="29,5,257,47"/>
+<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionAddParticipantsToDatabase" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionAddParticipantsToDatabase">
 </map>

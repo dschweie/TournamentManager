@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.branch.petanque.tournament.partie.Partie" name="org.dos.tournament.branch.petanque.tournament.partie.Partie">
-<area shape="rect" id="node2" href="$da/d7e/a00492.html" title="org.dos.tournament.common.competition.\lAbstractEncounter" alt="" coords="45,95,308,136"/>
-<area shape="rect" id="node3" href="$de/d4e/a00500.html" title="org.dos.tournament.common.competition.\lIEncounter" alt="" coords="45,5,308,47"/>
+<map id="org.dos.tournament.branch.petanque.team.JoueurIndividuel.PetanqueTotalResult" name="org.dos.tournament.branch.petanque.team.JoueurIndividuel.PetanqueTotalResult">
+<area shape="rect" id="node2" href="$dc/db1/a00621.html" title="org.dos.tournament.common.result.\lAbstractTotalResult" alt="" coords="740,45,968,87"/>
+<area shape="rect" id="node3" href="$d9/d1d/a00633.html" title="org.dos.tournament.common.result.\lITotalResult" alt="" coords="333,5,561,47"/>
+<area shape="rect" id="node4" href="$d1/d31/a01245.html" title="Comparable" alt="" coords="5,13,96,39"/>
 </map>

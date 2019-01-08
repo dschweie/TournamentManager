@@ -1,4 +1,6 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTandem" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTandem">
-<area shape="rect" id="node2" href="$d4/d4b/a00471.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTwice" alt="" coords="491,5,928,47"/>
-<area shape="rect" id="node3" href="$d3/d5d/a00463.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetOpponentTwice" alt="" coords="5,5,443,47"/>
+<map id="org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam" name="org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam">
+<area shape="rect" id="node4" href="$d0/d29/a00470.html" title="org.dos.tournament.branch.petanque.team.\lDoublette" alt="" coords="881,5,1152,47"/>
+<area shape="rect" id="node5" href="$db/d8e/a00482.html" title="org.dos.tournament.branch.petanque.team.\lTriplette" alt="" coords="881,71,1152,112"/>
+<area shape="rect" id="node2" href="$d4/d2f/a00582.html" title="org.dos.tournament.common.player.\lAbstractTeamParticipant" alt="" coords="284,39,515,80"/>
+<area shape="rect" id="node3" href="$dd/d5c/a00578.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="5,39,236,80"/>
 </map>

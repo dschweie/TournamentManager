@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['numericassociationid',['NumericAssociationId',['../d2/dd7/a00567.html',1,'org::dos::tournament::common::player::utils']]],
-  ['numericparticipantid',['NumericParticipantId',['../df/d3a/a00571.html',1,'org::dos::tournament::common::player::utils']]]
+  ['numericassociationid',['NumericAssociationId',['../d0/d1c/a00605.html',1,'org::dos::tournament::common::player::utils']]],
+  ['numericparticipantid',['NumericParticipantId',['../db/d3f/a00609.html',1,'org::dos::tournament::common::player::utils']]]
 ];

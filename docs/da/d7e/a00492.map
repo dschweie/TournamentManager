@@ -1,0 +1,4 @@
+<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique">
+<area shape="rect" id="node2" href="$d4/d9e/a00569.html" title="org::dos::tournament\l::common::movement::regulations\l::AbstractCoreRule\&lt; SuperMelee,\l Vector\&lt; Vector\&lt; Integer \&gt; \&gt;,\l IParticipant \&gt;" alt="" coords="272,5,491,91"/>
+<area shape="rect" id="node3" href="$d8/d9b/a00577.html" title="org::dos::tournament\l::common::movement::regulations\l::Regulation\&lt; T, G, P \&gt;" alt="" coords="5,20,224,76"/>
+</map>

@@ -1,6 +1,5 @@
 var a00214 =
 [
-    [ "PetanqueMatchResult", "d3/d29/a00419.html", "d3/d29/a00419" ],
-    [ "PetanqueResult", "d1/d05/a00423.html", "d1/d05/a00423" ],
-    [ "PetanqueSuperMeleeClubChampionshipResult", "da/db6/a00427.html", "da/db6/a00427" ]
+    [ "tablemodels", "d3/dd5/a00215.html", "d3/dd5/a00215" ],
+    [ "PetanqueSuperMeleePanel", "de/d08/a00381.html", "de/d08/a00381" ]
 ];

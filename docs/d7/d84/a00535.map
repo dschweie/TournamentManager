@@ -1,4 +1,9 @@
-<map id="org.dos.tournament.common.player.utils.IParticipantId" name="org.dos.tournament.common.player.utils.IParticipantId">
-<area shape="rect" id="node2" href="$d4/d79/a00540.html" title="org.dos.tournament.common.player.utils.\lNumericAssociationId" alt="" coords="312,5,571,47"/>
-<area shape="rect" id="node3" href="$d2/ddf/a00544.html" title="org.dos.tournament.common.player.utils.\lNumericParticipantId" alt="" coords="312,71,571,112"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship">
+<area shape="rect" id="node2" href="$d7/def/a00521.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee" alt="" coords="1635,601,2005,642"/>
+<area shape="rect" id="node4" href="$d8/d9b/a00577.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.common.player.\lIParticipant \&gt;" alt="" coords="964,233,1443,303"/>
+<area shape="rect" id="node5" href="$d8/d9b/a00577.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; T, G, P \&gt;" alt="" coords="333,257,656,298"/>
+<area shape="rect" id="node9" href="$da/dd1/a00629.html" title="org.dos.tournament.common.result.\lIResult" alt="" coords="1089,697,1317,738"/>
+<area shape="rect" id="node10" href="$d1/d31/a01245.html" title="Comparable" alt="" coords="449,704,540,731"/>
+<area shape="rect" id="node18" href="$db/d44/a00533.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="1018,855,1389,897"/>
+<area shape="rect" id="node19" href="$d3/d07/a01241.html" title="Runnable" alt="" coords="457,760,533,787"/>
 </map>

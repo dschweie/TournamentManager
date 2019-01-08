@@ -1,4 +1,8 @@
-<map id="org.dos.tournament.common.result.AbstractResult" name="org.dos.tournament.common.result.AbstractResult">
-<area shape="rect" id="node2" href="$de/dde/a00587.html" title="org.dos.tournament.common.result.\lIResult" alt="" coords="5,80,233,121"/>
-<area shape="rect" id="node3" href="$d6/d27/a01163.html" title="Comparable" alt="" coords="74,5,165,32"/>
+<map id="org.dos.tournament.common.player.AbstractParticipant" name="org.dos.tournament.common.player.AbstractParticipant">
+<area shape="rect" id="node4" href="$d4/d2f/a00582.html" title="org.dos.tournament.common.player.\lAbstractTeamParticipant" alt="" coords="701,5,932,47"/>
+<area shape="rect" id="node6" href="$d7/db1/a00590.html" title="org.dos.tournament.common.player.\lAttendee" alt="" coords="701,71,932,112"/>
+<area shape="rect" id="node2" href="$da/de4/a00594.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier. " alt="" coords="144,39,375,80"/>
+<area shape="rect" id="node3" href="$d5/d32/a01214.html" title="Comparable" alt="" coords="5,46,96,73"/>
+<area shape="rect" id="node5" href="$db/d2c/a00466.html" title="org.dos.tournament.branch.petanque.team.\lAbstractPetanqueTeam" alt="" coords="980,5,1251,47"/>
+<area shape="rect" id="node7" href="$d6/d92/a00586.html" title="org.dos.tournament.common.player.\lAssociationAttendee" alt="" coords="1000,71,1231,112"/>
 </map>

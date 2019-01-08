@@ -1,2 +1,3 @@
-<map id="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOkAndNext" name="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOkAndNext">
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer">
+<area shape="rect" id="node3" href="$d3/d07/a01241.html" title="Runnable" alt="" coords="137,5,213,32"/>
 </map>

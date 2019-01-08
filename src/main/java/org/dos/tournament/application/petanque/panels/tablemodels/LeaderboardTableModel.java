@@ -37,7 +37,7 @@ public class LeaderboardTableModel extends DefaultTableModel implements Observer
   @Override
   public void update(Observable o, Object arg)
   {
-    IParticipant _last = null;
+    IParticipant _leader = null;
     
     Vector<IParticipant> _participants = ((SuperMelee)o).getCompetitors();
     Iterator<IParticipant> _it = _participants.iterator();
@@ -66,10 +66,15 @@ public class LeaderboardTableModel extends DefaultTableModel implements Observer
     while(_it.hasNext())
     {
       IParticipant _current = _it.next();
-      if( 0 == rank )
+      if(     ( 0 == rank )
+          &&  ( 0 < _current.getTotalScore())  )
+      {
         _current.setWinnerOfTheDayTrophy(((SuperMelee)o).getTrophy());
+        _leader = _current;
+      }
       else
-        if( 0 == _current.compareToByResult(_last, true) )
+        if(     ( null != _leader                                 )
+            &&  ( 0 == _current.compareToByResult(_leader, true)  ) )
           _current.setWinnerOfTheDayTrophy(((SuperMelee)o).getTrophy());
       
       Vector<Object> _row = new Vector<Object>();
@@ -84,7 +89,6 @@ public class LeaderboardTableModel extends DefaultTableModel implements Observer
       
       this.addRow(_row);
       
-      _last = _current;
     }
     
     this.fireTableDataChanged();

@@ -1,3 +1,6 @@
-<map id="org.dos.tournament.common.storage.mongo.DatabaseClient" name="org.dos.tournament.common.storage.mongo.DatabaseClient">
-<area shape="rect" id="node2" href="$de/d94/a00603.html" title="Diese Schnittstelle ist Fassade für unterschiedliche Implementierungen zum Speichern von Daten..." alt="" coords="5,5,244,47"/>
+<map id="org.dos.tournament.common.player.IParticipant" name="org.dos.tournament.common.player.IParticipant">
+<area shape="rect" id="node3" href="$dd/d5c/a00578.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="423,39,653,80"/>
+<area shape="rect" id="node2" href="$d5/d32/a01214.html" title="Comparable" alt="" coords="5,46,96,73"/>
+<area shape="rect" id="node4" href="$d4/d2f/a00582.html" title="org.dos.tournament.common.player.\lAbstractTeamParticipant" alt="" coords="701,5,932,47"/>
+<area shape="rect" id="node5" href="$d7/db1/a00590.html" title="org.dos.tournament.common.player.\lAttendee" alt="" coords="701,71,932,112"/>
 </map>

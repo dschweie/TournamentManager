@@ -1,3 +1,4 @@
-<map id="org.dos.tournament.common.storage.SingletonStorage" name="org.dos.tournament.common.storage.SingletonStorage">
-<area shape="rect" id="node2" href="$de/d94/a00603.html" title="Diese Schnittstelle ist Fassade für unterschiedliche Implementierungen zum Speichern von Daten..." alt="" coords="5,5,244,47"/>
+<map id="org.dos.tournament.common.player.utils.IParticipantId" name="org.dos.tournament.common.player.utils.IParticipantId">
+<area shape="rect" id="node2" href="$d5/d0a/a00602.html" title="org.dos.tournament.common.player.utils.\lNumericAssociationId" alt="" coords="312,5,571,47"/>
+<area shape="rect" id="node3" href="$d8/d00/a00606.html" title="org.dos.tournament.common.player.utils.\lNumericParticipantId" alt="" coords="312,71,571,112"/>
 </map>

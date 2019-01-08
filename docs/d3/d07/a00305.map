@@ -1,4 +1,2 @@
-<map id="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel" name="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel">
-<area shape="rect" id="node2" href="$de/dab/a00319.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee" alt="" coords="465,326,753,367"/>
-<area shape="rect" id="node4" href="$d9/d87/a00551.html" title="org.dos.tournament.common.player.\lAssociationAttendee" alt="" coords="31,57,261,98"/>
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionToggleTeamPresentation" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionToggleTeamPresentation">
 </map>

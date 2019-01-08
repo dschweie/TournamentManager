@@ -1,5 +1,7 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship">
-<area shape="rect" id="node2" href="$dc/da0/a00483.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee" alt="" coords="853,514,1224,555"/>
-<area shape="rect" id="node4" href="$d3/d87/a00539.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.common.player.\lIParticipant \&gt;" alt="" coords="157,213,636,283"/>
-<area shape="rect" id="node14" href="$db/dc4/a00495.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="211,583,582,625"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTwice" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTwice">
+<area shape="rect" id="node4" href="$d5/d0f/a00494.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetOpponentTandem" alt="" coords="1024,5,1461,47"/>
+<area shape="rect" id="node5" href="$d4/d1f/a00506.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTwice" alt="" coords="1024,71,1461,112"/>
+<area shape="rect" id="node2" href="$d8/da5/a00570.html" title="org::dos::tournament\l::common::movement::regulations\l::AbstractRegulationDecorator\l\&lt; SuperMelee, Vector\&lt; Vector\l\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="272,17,491,102"/>
+<area shape="rect" id="node3" href="$d4/dbe/a00574.html" title="org::dos::tournament\l::common::movement::regulations\l::Regulation\&lt; T, G, P \&gt;" alt="" coords="5,31,224,87"/>
+<area shape="rect" id="node6" href="$d0/da2/a00502.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTandem" alt="" coords="1509,71,1947,112"/>
 </map>

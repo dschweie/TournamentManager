@@ -1,3 +1,5 @@
-<map id="org.dos.tournament.common.player.utils.NumericAssociationId" name="org.dos.tournament.common.player.utils.NumericAssociationId">
-<area shape="rect" id="node2" href="$dc/dae/a00563.html" title="org.dos.tournament.common.player.utils.\lIParticipantId" alt="" coords="5,5,264,47"/>
+<map id="org.dos.tournament.common.movement.regulations.AbstractCoreRule&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.AbstractCoreRule&lt; T, G, P &gt;">
+<area shape="rect" id="node3" href="$d7/daa/a00490.html" title="Diese Klasse ist Basisklasse im Regelwerk. " alt="" coords="800,5,1075,91"/>
+<area shape="rect" id="node4" href="$d0/d3e/a00566.html" title="org.dos.tournament.common.movement.regulations.\lAbstractCoreRule\&lt; SuperMelee, Vector\l\&lt; Vector\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="776,115,1099,171"/>
+<area shape="rect" id="node2" href="$d4/dbe/a00574.html" title="org::dos::tournament\l::common::movement::regulations\l::Regulation\&lt; T, G, P \&gt;" alt="" coords="5,68,224,124"/>
 </map>

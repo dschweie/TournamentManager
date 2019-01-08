@@ -1,0 +1,10 @@
+<map id="org.dos.tournament.common.player.AssociationAttendee" name="org.dos.tournament.common.player.AssociationAttendee">
+<area shape="rect" id="node2" href="$d2/da3/a00593.html" title="org.dos.tournament.common.player.\lAttendee" alt="" coords="935,197,1165,239"/>
+<area shape="rect" id="node3" href="$d8/dc8/a00581.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="619,179,849,220"/>
+<area shape="rect" id="node4" href="$d8/dbd/a00597.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier. " alt="" coords="267,5,498,47"/>
+<area shape="rect" id="node5" href="$d1/d31/a01245.html" title="Comparable" alt="" coords="5,78,96,105"/>
+<area shape="rect" id="node8" href="$da/dd1/a00629.html" title="org.dos.tournament.common.result.\lIResult" alt="" coords="269,71,497,112"/>
+<area shape="rect" id="node11" href="$d9/d1d/a00633.html" title="org.dos.tournament.common.result.\lITotalResult" alt="" coords="269,136,497,177"/>
+<area shape="rect" id="node6" href="$d1/d6e/a00613.html" title="org.dos.tournament.common.player.utils.\lParticipantStatus" alt="" coords="253,201,512,243"/>
+<area shape="rect" id="node7" href="$d6/db2/a00601.html" title="org.dos.tournament.common.player.utils.\lIParticipantId" alt="" coords="253,267,512,308"/>
+</map>

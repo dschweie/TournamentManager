@@ -1,4 +1,4 @@
 var a00197 =
 [
-    [ "SuperMeleeMatchdayTable", "d0/d1f/a00247.html", "d0/d1f/a00247" ]
+    [ "tournament", "d7/da0/a00198.html", "d7/da0/a00198" ]
 ];

@@ -1,3 +1,4 @@
-<map id="org.dos.tournament.common.player.utils.NumericAssociationId" name="org.dos.tournament.common.player.utils.NumericAssociationId">
-<area shape="rect" id="node2" href="$d2/d50/a00559.html" title="org.dos.tournament.common.player.utils.\lIParticipantId" alt="" coords="5,5,264,47"/>
+<map id="org.dos.tournament.common.competition.IEncounter" name="org.dos.tournament.common.competition.IEncounter">
+<area shape="rect" id="node2" href="$dc/df9/a00554.html" title="org.dos.tournament.common.competition.\lAbstractEncounter" alt="" coords="45,95,308,136"/>
+<area shape="rect" id="node3" href="$d0/ddb/a00542.html" title="org.dos.tournament.branch.petanque.tournament.partie.\lPartie" alt="" coords="5,184,348,225"/>
 </map>

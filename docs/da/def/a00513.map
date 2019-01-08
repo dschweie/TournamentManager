@@ -1,5 +1,5 @@
-<map id="org.dos.tournament.common.competition.AbstractEncounter" name="org.dos.tournament.common.competition.AbstractEncounter">
-<area shape="rect" id="node2" href="$d0/de7/a00523.html" title="org.dos.tournament.common.competition.\lIEncounter" alt="" coords="340,5,603,47"/>
-<area shape="rect" id="node3" href="$d5/d80/a00583.html" title="org.dos.tournament.common.result.\lIResult" alt="" coords="357,71,585,112"/>
-<area shape="rect" id="node4" href="$db/d07/a01155.html" title="Comparable" alt="" coords="5,78,96,105"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTwice" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTwice">
+<area shape="rect" id="node4" href="$d6/d52/a00510.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTandem" alt="" coords="1024,27,1461,69"/>
+<area shape="rect" id="node2" href="$d8/da5/a00570.html" title="org::dos::tournament\l::common::movement::regulations\l::AbstractRegulationDecorator\l\&lt; SuperMelee, Vector\&lt; Vector\l\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="272,5,491,91"/>
+<area shape="rect" id="node3" href="$d4/dbe/a00574.html" title="org::dos::tournament\l::common::movement::regulations\l::Regulation\&lt; T, G, P \&gt;" alt="" coords="5,20,224,76"/>
 </map>

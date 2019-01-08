@@ -1,2 +1,7 @@
-<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingAction_3" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingAction_3">
+<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel">
+<area shape="rect" id="node4" href="$d7/def/a00521.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee" alt="" coords="1635,535,2005,577"/>
+<area shape="rect" id="node6" href="$d8/d9b/a00577.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.common.player.\lIParticipant \&gt;" alt="" coords="964,418,1443,489"/>
+<area shape="rect" id="node7" href="$d8/d9b/a00577.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; T, G, P \&gt;" alt="" coords="333,431,656,473"/>
+<area shape="rect" id="node11" href="$da/dd1/a00629.html" title="org.dos.tournament.common.result.\lIResult" alt="" coords="1089,878,1317,919"/>
+<area shape="rect" id="node19" href="$db/d44/a00533.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="1018,301,1389,342"/>
 </map>

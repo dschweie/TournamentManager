@@ -1,6 +1,7 @@
 var a00219 =
 [
-    [ "regulations", "dc/d9a/a00218.html", "dc/d9a/a00218" ],
-    [ "SuperMelee", "dc/da0/a00483.html", "dc/da0/a00483" ],
-    [ "SuperMeleeClubChampionship", "d8/d67/a00499.html", "d8/d67/a00499" ]
+    [ "result", "d5/d0b/a00220.html", "d5/d0b/a00220" ],
+    [ "team", "dd/d52/a00221.html", "dd/d52/a00221" ],
+    [ "tournament", "dc/d28/a00223.html", "dc/d28/a00223" ],
+    [ "EvaluatePetanque", "da/dc3/a00453.html", null ]
 ];

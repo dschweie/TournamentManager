@@ -1,5 +1,2 @@
-<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel">
-<area shape="rect" id="node4" href="$d9/d4a/a00479.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee" alt="" coords="853,385,1224,427"/>
-<area shape="rect" id="node6" href="$d7/d84/a00535.html" title="org.dos.tournament.common.movement.regulations.\lRegulation\&lt; org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee, Vector\&lt; Vector\&lt; Integer \&gt; \&gt;, org.dos.tournament.common.player.\lIParticipant \&gt;" alt="" coords="157,89,636,160"/>
-<area shape="rect" id="node16" href="$d6/d60/a00491.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="211,393,582,435"/>
+<map id="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOK" name="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOK">
 </map>
