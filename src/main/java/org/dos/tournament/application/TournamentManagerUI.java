@@ -47,6 +47,7 @@ import javax.swing.JSeparator;
 import org.dos.tournament.application.common.config.SingletonProperties;
 import org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually;
 import org.dos.tournament.application.petanque.factories.SupermeleeMenuFactory;
+import org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel;
 import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.application.petanque.panels.tablemodels.ParticipantsTableModel;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
@@ -74,6 +75,7 @@ public class TournamentManagerUI
   private JFrame frmTurnierverwaltung;
   private final Action actionExit = new SwingAction();
   private final Action createTournament = new CreateTournamentAction(this.frmTurnierverwaltung);
+  private final Action createFreitag = new CreateFridayTournamentAction(this.frmTurnierverwaltung);
   private JTextField txtSwVersion;
   private JTextField txtOS;
   
@@ -163,6 +165,10 @@ public class TournamentManagerUI
     mntmNeuesTurnier.setAction(createTournament);
     mnDatei.add(mntmNeuesTurnier);
     
+    JMenuItem mntmDubletteFormee = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmNewMenuItem.text")); //$NON-NLS-1$ //$NON-NLS-2$
+    mntmDubletteFormee.setAction(createFreitag);
+    mnDatei.add(mntmDubletteFormee);
+    
     JMenuItem mntmTurnierSpeichern = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmTurnierSpeichern.text")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-2$
     mnDatei.add(mntmTurnierSpeichern);
     
@@ -235,6 +241,18 @@ public class TournamentManagerUI
     return false;
   }
   
+  
+  public static void setVisibleSupermelee(boolean bFlag)
+  {
+    TournamentManagerUI.application.mnSupermelee.setVisible(bFlag);
+  }
+  
+  public static void addMenuItemSupermelee(JComponent item)
+  {
+    TournamentManagerUI.application.mnSupermelee.add(item);
+  }
+
+  
   private class SwingAction extends AbstractAction {
     public SwingAction() {
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.action.name")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -280,14 +298,28 @@ public class TournamentManagerUI
     }
   }
   
-  public static void setVisibleSupermelee(boolean bFlag)
-  {
-    TournamentManagerUI.application.mnSupermelee.setVisible(bFlag);
-  }
-  
-  public static void addMenuItemSupermelee(JComponent item)
-  {
-    TournamentManagerUI.application.mnSupermelee.add(item);
+  private class CreateFridayTournamentAction extends AbstractAction {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -414080870711326324L;
+    public CreateFridayTournamentAction(JFrame frmApplication) {
+      putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.createTournament.name")); //$NON-NLS-1$ //$NON-NLS-2$
+      putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.createTournament.short description")); //$NON-NLS-1$ //$NON-NLS-2$
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) 
+    {
+      PetanqueLEquipeFormePanel _panel = new PetanqueLEquipeFormePanel(null);
+      _panel.setTournament(null);
+      System.out.println("_panel = ".concat(_panel.toString()));
+      System.out.println("TournamentManagerUI.this.frmTurnierverwaltung = ".concat(TournamentManagerUI.this.frmTurnierverwaltung.toString()));
+      System.out.println("TournamentManagerUI.this.frmTurnierverwaltung.getContentPane() = ".concat(TournamentManagerUI.this.frmTurnierverwaltung.getContentPane().toString()));
+      TournamentManagerUI.this.frmTurnierverwaltung.getContentPane().add(_panel);
+      TournamentManagerUI.this.frmTurnierverwaltung.revalidate();
+    }
+    
   }
   
 }

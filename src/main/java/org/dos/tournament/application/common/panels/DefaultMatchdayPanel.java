@@ -15,9 +15,15 @@ import javax.swing.JTable;
 import javax.swing.JTable.PrintMode;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
 import java.lang.Thread.State;
+import java.net.URL;
 import java.text.MessageFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -40,6 +46,9 @@ import java.awt.print.PageFormat;
 import java.awt.print.Printable;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 /**
  * \brief       Diese Klasse repräsentiert die GUI für einen Spieltag
  * 
@@ -208,6 +217,8 @@ public class DefaultMatchdayPanel extends JPanel
     private GregorianCalendar xStop;
     private int iMillis = 50 * 60 * 1000;
     private boolean bRunning = false;
+    private Clip clip;
+
    
     public SwingActionMatchdayTimer() {
       putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_18-Time_2123866.png")));
@@ -215,6 +226,26 @@ public class DefaultMatchdayPanel extends JPanel
       putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.timer.short description")); //$NON-NLS-1$ //$NON-NLS-2$
       this.thread = new Thread(this);
       this.updateProgressbar();
+
+      try {
+        URL url = DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/sounds/AirHorn.wav");
+        System.out.println(url.toString());
+        AudioInputStream audioIn;
+        audioIn = AudioSystem.getAudioInputStream(url);
+        // Get a sound clip resource.
+        this.clip = AudioSystem.getClip();
+        // Open audio clip and load samples from the audio input stream.
+        clip.open(audioIn);
+      } catch (LineUnavailableException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      } catch (UnsupportedAudioFileException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
     }
     
     public void actionPerformed(ActionEvent e) {
@@ -270,6 +301,28 @@ public class DefaultMatchdayPanel extends JPanel
         }
       }
     
+      //  Abspielen der Sounddatei
+      // Open an audio input stream.
+      this.clip.loop(3);
+      this.clip.start();
+      /*
+      try {
+        for(int i=0; i<3; ++i)
+        {
+          
+          clip.start();
+          try {
+            Thread.sleep(500);
+          } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+          }
+        }
+      } catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+      }
+      */
       if(!this.bRunning)
       { //  reset progressbar
         DefaultMatchdayPanel.this.progressBar.setString(String.format("%tT", new GregorianCalendar(0, 0, 0, 0, 0, (int)Math.round((this.iMillis)/1000.0f))));

@@ -32,6 +32,7 @@ import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.player.utils.NumericParticipantId;
 import org.dos.tournament.common.player.utils.ParticipantStatus;
 import org.dos.tournament.common.result.IResult;
+import org.dos.tournament.common.storage.SingletonStorage;
 
 public class SuperMelee extends Observable
 {
@@ -251,6 +252,10 @@ public class SuperMelee extends Observable
   public void forceNotifyAll()
   {
     this.setChanged();
+    
+    //  Benutzer werden in die Datenbank geschrieben
+    this.competitors.forEach(it ->  { if(null == it.getAttribute("_id")) SingletonStorage.getInstance().saveParticipant(it, true);});
+    
     this.notifyObservers();
     this.clearChanged();
   }

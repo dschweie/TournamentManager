@@ -31,6 +31,10 @@ public interface Storage
    */
   public void close();
   
+  public boolean isConnected();
+  
+  public boolean isFailed();
+  
   /**
    *  \brief    Methode zum Speichern eines allgemeinen Mitpielers
    *  @param    participant   In dem Parameter ist ein Objekt vom Typ 

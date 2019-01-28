@@ -36,16 +36,16 @@ public class SingletonStorage
     
     switch(storageType.toLowerCase())
     {
-      case "mongo":     _retval = new DatabaseClient(); 
-                        _retval.open(SingletonStorage.getStorageParameters(storageType)); 
-                        break;
-      default:          _retval = null; break;
+      case DatabaseClient.IDENTIFIER:   _retval = new DatabaseClient(); 
+                                        _retval.open(SingletonStorage.getStorageParameters(storageType)); 
+                                         break;
+      default:                          _retval = null; break;
     }
     
     return _retval;
   }
   
-  protected static HashMap<String,Object> getStorageParameters(String storageType)
+  public static HashMap<String,Object> getStorageParameters(String storageType)
   {
     HashMap<String,Object> _map = new HashMap<String,Object>();
     
