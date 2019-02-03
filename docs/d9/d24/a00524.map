@@ -1,2 +1,7 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.CreateRoundManually" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.CreateRoundManually">
+<map id="org.dos.tournament.branch.petanque.result.PetanqueResult" name="org.dos.tournament.branch.petanque.result.PetanqueResult">
+<area shape="rect" id="node1" title=" " alt="" coords="99,291,374,332"/>
+<area shape="rect" id="node2" href="$da/dd4/a00690.html" title=" " alt="" coords="5,172,233,213"/>
+<area shape="rect" id="node3" href="$dd/d85/a00702.html" title=" " alt="" coords="5,81,233,123"/>
+<area shape="rect" id="node4" href="$db/d74/a01378.html" title=" " alt="" coords="74,5,165,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="257,179,296,206"/>
 </map>

@@ -1,10 +1,14 @@
 var a00514 =
 [
-    [ "RuleSuperMeleeNeverPlayTripletteTwice", "d6/d90/a00514.html#a50b9021c882216ecd5b162983b8bbc51", null ],
-    [ "getRuleDescription", "d6/d90/a00514.html#a20f0e97c543f09b0b842c0c2d25905f4", null ],
-    [ "initTriplettePlayed", "d6/d90/a00514.html#aa8f383630ceb36ff39a55799696070e7", null ],
-    [ "performCheck", "d6/d90/a00514.html#a3080d2a2a4d37d780a761eb188b2537e", null ],
-    [ "performInit", "d6/d90/a00514.html#a3dafdbd1f768c266e7e9d0880359686b", null ],
-    [ "performTeardown", "d6/d90/a00514.html#a566595d5d728cb314c03680cd182d0ca", null ],
-    [ "abTriplettePlayed", "d6/d90/a00514.html#a4d399f3c0697495e1863bedb63ffe6de", null ]
+    [ "TableBasedIndividual", "d6/d90/a00514.html#ab709110f3f600cf117ab857c7a965e68", null ],
+    [ "checkChair", "d6/d90/a00514.html#a5f39a2d122ea4399c44c841b048713c0", null ],
+    [ "generateMovement", "d6/d90/a00514.html#a50296c565fc66b8bdf6e301af6de66f7", null ],
+    [ "printMovement", "d6/d90/a00514.html#a502c25d548581f050c9171d8eec0b8d8", null ],
+    [ "releaseChair", "d6/d90/a00514.html#a1e35a50fd50314ef6a8ff5dfcb2c9a80", null ],
+    [ "setChair", "d6/d90/a00514.html#ae29c7cf457a8bd01b8e1b83facb1c344", null ],
+    [ "chairs", "d6/d90/a00514.html#a611bba1afdae9f6739f440732e8f33bc", null ],
+    [ "meetings", "d6/d90/a00514.html#ad54575272e78fc5f1aa4ef0b6e2b8bfc", null ],
+    [ "participants", "d6/d90/a00514.html#a5bc29b8b291a2d40169c640460e61d93", null ],
+    [ "rounds", "d6/d90/a00514.html#a146c35bc4eeae374804e664fcbc07572", null ],
+    [ "tables", "d6/d90/a00514.html#a20a72d1880b5a8a2063ba7b12d1e85bf", null ]
 ];

@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTandem" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTandem">
-<area shape="rect" id="node2" href="$d4/d1f/a00506.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetTeammateTwice" alt="" coords="491,5,928,47"/>
-<area shape="rect" id="node3" href="$d8/d57/a00498.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverMeetOpponentTwice" alt="" coords="5,5,443,47"/>
+<map id="org.dos.tournament.application.TournamentManagerUI.CreateTournamentAction" name="org.dos.tournament.application.TournamentManagerUI.CreateTournamentAction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,304,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="101,5,209,32"/>
 </map>

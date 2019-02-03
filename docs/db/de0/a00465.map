@@ -1,6 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam" name="org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam">
-<area shape="rect" id="node4" href="$d0/d29/a00470.html" title="org.dos.tournament.branch.petanque.team.\lDoublette" alt="" coords="881,5,1152,47"/>
-<area shape="rect" id="node5" href="$db/d8e/a00482.html" title="org.dos.tournament.branch.petanque.team.\lTriplette" alt="" coords="881,71,1152,112"/>
-<area shape="rect" id="node2" href="$d4/d2f/a00582.html" title="org.dos.tournament.common.player.\lAbstractTeamParticipant" alt="" coords="284,39,515,80"/>
-<area shape="rect" id="node3" href="$dd/d5c/a00578.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="5,39,236,80"/>
+<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionDeleteAttendee" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionDeleteAttendee">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,349,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="123,5,231,32"/>
 </map>

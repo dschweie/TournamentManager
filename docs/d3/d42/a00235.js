@@ -1,4 +1,4 @@
 var a00235 =
 [
-    [ "DatabaseClient", "de/dbb/a00637.html", "de/dbb/a00637" ]
+    [ "DialogAssociationAttendee", "d8/ddd/a00380.html", "d8/ddd/a00380" ]
 ];

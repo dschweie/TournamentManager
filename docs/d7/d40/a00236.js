@@ -1,6 +1,5 @@
 var a00236 =
 [
-    [ "mongo", "d3/d42/a00235.html", "d3/d42/a00235" ],
-    [ "SingletonStorage", "db/d3a/a00641.html", null ],
-    [ "Storage", "d6/dcf/a00645.html", "d6/dcf/a00645" ]
+    [ "DialogChooseTournament", "d9/de6/a00404.html", "d9/de6/a00404" ],
+    [ "DialogChooseTournamentDep", "df/d15/a00416.html", "df/d15/a00416" ]
 ];

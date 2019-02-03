@@ -1,7 +1,10 @@
 package org.dos.tournament.branch.petanque.tournament.matchday;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
+import org.bson.Document;
 import org.dos.tournament.branch.petanque.tournament.partie.Partie;
 
 public class Matchday
@@ -72,6 +75,12 @@ public class Matchday
   public Partie getMatch(int index)
   {
     return ((-1<index)&&(this.matches.size()>index))?this.matches.get(index):null;    
+  }
+
+  public Document toBsonDocument() {
+    List<Document> _matches = new ArrayList<Document>();
+    this.matches.forEach( it -> { _matches.add( it.toBsonDocument() ); } );
+    return new Document("matches", _matches);
   }
 }
  

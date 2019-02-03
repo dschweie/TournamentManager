@@ -1,5 +1,6 @@
 var a00326 =
 [
-    [ "SwingActionCancel", "d8/d23/a00326.html#a3a62252f0690567aeb24d922c2e39fbd", null ],
-    [ "actionPerformed", "d8/d23/a00326.html#ab926bf6fabddaf28fa01274102944ac1", null ]
+    [ "SwingActionToggleTeamPresentation", "d8/d23/a00326.html#a0918741f979c28ff8a04f256a65ae758", null ],
+    [ "actionPerformed", "d8/d23/a00326.html#a7c62cfa6e8d96c4c336b8494e9eea99d", null ],
+    [ "updateButton", "d8/d23/a00326.html#adf6016493646618eb94ca37b08e9df9c", null ]
 ];

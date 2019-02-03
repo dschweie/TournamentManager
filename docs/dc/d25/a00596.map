@@ -1,11 +1,5 @@
-<map id="org.dos.tournament.common.player.IParticipant" name="org.dos.tournament.common.player.IParticipant">
-<area shape="rect" id="node3" href="$d8/dc8/a00581.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="423,104,653,145"/>
-<area shape="rect" id="node2" href="$d1/d31/a01245.html" title="Comparable" alt="" coords="5,111,96,138"/>
-<area shape="rect" id="node4" href="$dc/dac/a00585.html" title="org.dos.tournament.common.player.\lAbstractTeamParticipant" alt="" coords="701,71,932,112"/>
-<area shape="rect" id="node8" href="$d2/da3/a00593.html" title="org.dos.tournament.common.player.\lAttendee" alt="" coords="701,136,932,177"/>
-<area shape="rect" id="node5" href="$dc/ddf/a00469.html" title="org.dos.tournament.branch.petanque.team.\lAbstractPetanqueTeam" alt="" coords="980,71,1251,112"/>
-<area shape="rect" id="node6" href="$dc/d8e/a00473.html" title="org.dos.tournament.branch.petanque.team.\lDoublette" alt="" coords="1299,5,1569,47"/>
-<area shape="rect" id="node7" href="$d6/d1a/a00485.html" title="org.dos.tournament.branch.petanque.team.\lTriplette" alt="" coords="1299,71,1569,112"/>
-<area shape="rect" id="node9" href="$d6/da3/a00589.html" title="org.dos.tournament.common.player.\lAssociationAttendee" alt="" coords="1000,136,1231,177"/>
-<area shape="rect" id="node10" href="$d9/dca/a00477.html" title="org.dos.tournament.branch.petanque.team.\lJoueurIndividuel" alt="" coords="1299,136,1569,177"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MonitoringThread" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MonitoringThread">
+<area shape="rect" id="node1" title=" " alt="" coords="5,109,376,151"/>
+<area shape="rect" id="node2" href="$d2/dff/a01374.html" title=" " alt="" coords="113,5,189,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="213,5,251,32"/>
 </map>

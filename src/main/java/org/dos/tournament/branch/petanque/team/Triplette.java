@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.bson.Document;
 import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.player.utils.IParticipantId;
 
@@ -51,4 +52,11 @@ public class Triplette extends AbstractPetanqueTeam
     
     return String.format("%d, %d, %d",  _numbers.get(0), _numbers.get(1), _numbers.get(2));
   }
+  
+  @Override
+  public Document toBsonDocument() 
+  {
+    return super.toBsonDocument().append("pointeur", new Integer(this.getTireur().getCode().trim())).append("milieu", new Integer(this.getMilieu().getCode().trim())).append("tireur", new Integer(this.getPointeur().getCode().trim()));
+  }
+
 }

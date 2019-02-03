@@ -46,6 +46,9 @@ import javax.swing.JSeparator;
 
 import org.dos.tournament.application.common.config.SingletonProperties;
 import org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually;
+import org.dos.tournament.application.dialogs.tournament.DialogChooseTournament;
+import org.dos.tournament.application.dialogs.tournament.DialogChooseTournamentDep;
+import org.dos.tournament.application.factory.FactoryTournament;
 import org.dos.tournament.application.petanque.factories.SupermeleeMenuFactory;
 import org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel;
 import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
@@ -53,6 +56,7 @@ import org.dos.tournament.application.petanque.panels.tablemodels.ParticipantsTa
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship;
 import org.dos.tournament.common.player.AssociationAttendee;
+import org.dos.tournament.common.storage.SingletonStorage;
 
 import com.mongodb.MongoClient;
 
@@ -84,6 +88,7 @@ public class TournamentManagerUI
   
   static public TournamentManagerUI application = null;
   private JMenuBar menuBar;
+  private final Action openTournament = new OpenTournamentAction();
 
   /**
    * Launch the application.
@@ -168,6 +173,8 @@ public class TournamentManagerUI
     JMenuItem mntmDubletteFormee = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmNewMenuItem.text")); //$NON-NLS-1$ //$NON-NLS-2$
     mntmDubletteFormee.setAction(createFreitag);
     mnDatei.add(mntmDubletteFormee);
+    
+    JMenuItem mntmOpenTournament = mnDatei.add(openTournament);
     
     JMenuItem mntmTurnierSpeichern = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmTurnierSpeichern.text")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-2$
     mnDatei.add(mntmTurnierSpeichern);
@@ -281,19 +288,18 @@ public class TournamentManagerUI
       {
         ParticipantsTableModel _tableModel = new ParticipantsTableModel();
         SuperMelee _tournament = new SuperMeleeClubChampionship();
-        //_tournament.addObserver(_tableModel);
-        //_tournament.addCompetitor(new AssociationAttendee(1,"Max Mustermann", "BG Gross-Gerau"));
         PetanqueSuperMeleePanel _panel = new PetanqueSuperMeleePanel(_tournament);
         _panel.setTournament(_tournament);
+        System.out.println("Anzahl der Komponenten im Frame = ".concat(String.valueOf(this.frmApplication.getContentPane().getComponentCount())));
+        for(int i=0; i < this.frmApplication.getContentPane().getComponentCount(); ++i)          
+          System.out.println("    ".concat(null==this.frmApplication.getContentPane().getComponent(i).getName()?"unknown":this.frmApplication.getContentPane().getComponent(i).getName().toString()).concat(" => ").concat(this.frmApplication.getContentPane().getComponent(i).toString()));
         this.frmApplication.getContentPane().add(_panel);
+        System.out.println("Anzahl der Komponenten im Frame = ".concat(String.valueOf(this.frmApplication.getContentPane().getComponentCount())));
+        for(int i=0; i < this.frmApplication.getContentPane().getComponentCount(); ++i)          
+          System.out.println("    ".concat(null==this.frmApplication.getContentPane().getComponent(i).getName()?"unknown":this.frmApplication.getContentPane().getComponent(i).getName().toString()).concat(" => ").concat(this.frmApplication.getContentPane().getComponent(i).toString()));
         this.frmApplication.revalidate();
         SupermeleeMenuFactory.buildSupermeleeMenu(_tournament);
         TournamentManagerUI.setVisibleSupermelee(true);
-        /*
-        this.frmApplication.getContentPane().doLayout();
-        this.frmApplication.getWindowListeners().notifyAll();
-        this.frmApplication.getContentPane().repaint();
-        this.frmApplication.repaint();*/
       }
     }
   }
@@ -322,4 +328,25 @@ public class TournamentManagerUI
     
   }
   
+  private class OpenTournamentAction extends AbstractAction 
+  {
+    public OpenTournamentAction() 
+    {
+      putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.openTournament.name"));
+      putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.openTournament.short description"));
+    }
+    public void actionPerformed(ActionEvent e) 
+    {
+      DialogChooseTournament _dialog = new DialogChooseTournament();
+      _dialog.setVisible(true);
+      while(_dialog.isVisible());
+      if(_dialog.isTournamentSelected())
+      {
+        System.out.println(_dialog.getSelectedTournamentId());
+        JPanel _frame = FactoryTournament.SetupTournamentEnvironment(_dialog.getSelectedTournamentId());
+        TournamentManagerUI.this.frmTurnierverwaltung.getContentPane().add(_frame);
+        TournamentManagerUI.this.frmTurnierverwaltung.revalidate();
+      }
+    }
+  }
 }

@@ -1,5 +1,8 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node2" href="$db/d53/a00321.html" title="org.dos.tournament.application.dialogs.petanque.movement.\lDialogSetRoundManually" alt="" coords="117,5,487,47"/>
-<area shape="rect" id="node3" href="$db/ddc/a00353.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee" alt="" coords="158,71,446,112"/>
-<area shape="rect" id="node4" href="$d3/d93/a00341.html" title="org.dos.tournament.application.dialogs.petanque.player.\lDialogJoueurIndividuel" alt="" coords="535,71,880,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,111,69,138"/>
+<area shape="rect" id="node2" href="$df/d03/a00348.html" title=" " alt="" coords="117,5,487,47"/>
+<area shape="rect" id="node3" href="$d8/ddd/a00380.html" title=" " alt="" coords="158,71,446,112"/>
+<area shape="rect" id="node5" href="$d9/de6/a00404.html" title=" " alt="" coords="143,136,461,177"/>
+<area shape="rect" id="node6" href="$df/d15/a00416.html" title=" " alt="" coords="143,201,461,243"/>
+<area shape="rect" id="node4" href="$d8/d21/a00368.html" title=" " alt="" coords="535,71,880,112"/>
 </map>

@@ -1,8 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam" name="org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam">
-<area shape="rect" id="node6" href="$dc/d8e/a00473.html" title="org.dos.tournament.branch.petanque.team.\lDoublette" alt="" coords="1299,5,1569,47"/>
-<area shape="rect" id="node7" href="$d6/d1a/a00485.html" title="org.dos.tournament.branch.petanque.team.\lTriplette" alt="" coords="1299,71,1569,112"/>
-<area shape="rect" id="node2" href="$dc/dac/a00585.html" title="org.dos.tournament.common.player.\lAbstractTeamParticipant" alt="" coords="701,39,932,80"/>
-<area shape="rect" id="node3" href="$d8/dc8/a00581.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="423,39,653,80"/>
-<area shape="rect" id="node4" href="$d8/dbd/a00597.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier. " alt="" coords="144,39,375,80"/>
-<area shape="rect" id="node5" href="$d1/d31/a01245.html" title="Comparable" alt="" coords="5,46,96,73"/>
+<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionCreateNewMatchday" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionCreateNewMatchday">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,380,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="139,5,247,32"/>
 </map>

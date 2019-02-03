@@ -1,5 +1,5 @@
 var a00462 =
 [
-    [ "PetanqueSuperMeleeClubChampionshipResult", "de/dcb/a00462.html#ad0935ba1378164eada8d97f71d021304", null ],
-    [ "compileGameScore", "de/dcb/a00462.html#a612bba8e9d44c854919bf78cefeb7e36", null ]
+    [ "SwingActionInactivateAttendee", "de/dcb/a00462.html#aaea40aeacaf8eed9d2e280a458665870", null ],
+    [ "actionPerformed", "de/dcb/a00462.html#ae60f6b8ce4cfa053268ebbe8323804a0", null ]
 ];

@@ -1,2 +1,10 @@
-<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.ListenerTimerModification" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.ListenerTimerModification">
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer">
+<area shape="rect" id="node1" title=" " alt="" coords="166,109,483,151"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node3" href="$d2/dff/a01374.html" title=" " alt="" coords="137,5,213,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="237,5,281,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="305,5,344,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="369,5,430,32"/>
+<area shape="rect" id="node7" title=" " alt="" coords="455,5,584,32"/>
+<area shape="rect" id="node8" title=" " alt="" coords="609,5,675,32"/>
 </map>

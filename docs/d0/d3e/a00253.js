@@ -1,4 +1,5 @@
 var a00253 =
 [
-    [ "MatchdayProgressMonitor", "d0/d3e/a00253.html#a658a357d031552fd9fee9aee25806fce", null ]
+    [ "CompetitorPartieResult", "d9/d0f/a00644.html", "d9/d0f/a00644" ],
+    [ "Partie", "dd/d1f/a00648.html", "dd/d1f/a00648" ]
 ];

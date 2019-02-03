@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.branch.petanque.team.JoueurIndividuel.PetanqueTotalResult" name="org.dos.tournament.branch.petanque.team.JoueurIndividuel.PetanqueTotalResult">
-<area shape="rect" id="node2" href="$de/d85/a00618.html" title="org.dos.tournament.common.result.\lAbstractTotalResult" alt="" coords="27,95,255,136"/>
-<area shape="rect" id="node3" href="$d6/dfa/a00626.html" title="org.dos.tournament.common.result.\lITotalResult" alt="" coords="27,5,255,47"/>
+<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionDeleteLastMatchday" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionDeleteLastMatchday">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,380,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="81,5,189,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="213,5,287,32"/>
 </map>

@@ -13,14 +13,14 @@ import org.dos.tournament.common.storage.mongo.DatabaseClient;
  */
 public class SingletonStorage
 {
-  private static Storage xPrimaryStorage = null;
+  private static IStorage xPrimaryStorage = null;
   
-  public static Storage getInstance()
+  public static IStorage getInstance()
   {
     return SingletonStorage.getPrimaryStorage();
   }
   
-  public static Storage getPrimaryStorage()
+  public static IStorage getPrimaryStorage()
   {
     if(null == SingletonStorage.xPrimaryStorage)
     {
@@ -30,9 +30,9 @@ public class SingletonStorage
     return SingletonStorage.xPrimaryStorage;
   }
 
-  protected static Storage generateStorageInstance(String storageType)
+  protected static IStorage generateStorageInstance(String storageType)
   {
-    Storage _retval = null;
+    IStorage _retval = null;
     
     switch(storageType.toLowerCase())
     {

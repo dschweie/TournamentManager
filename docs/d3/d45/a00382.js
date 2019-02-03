@@ -1,5 +1,5 @@
 var a00382 =
 [
-    [ "SwingActionEnlistAttendee", "d3/d45/a00382.html#a7c0097992be538318a4aa5634a80d267", null ],
-    [ "actionPerformed", "d3/d45/a00382.html#ab7509e420f7d05f30711d36c23312629", null ]
+    [ "SwingActionOkAndNext", "d3/d45/a00382.html#aa21dd9f949d8f16feac7e36ea1f371f3", null ],
+    [ "actionPerformed", "d3/d45/a00382.html#ac52c8d4a404c42be8a5543f51e553858", null ]
 ];

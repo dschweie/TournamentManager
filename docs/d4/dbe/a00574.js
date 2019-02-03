@@ -1,12 +1,7 @@
 var a00574 =
 [
-    [ "init", "d4/dbe/a00574.html#accc8b48e94670ff086269b53f7d9366e", null ],
-    [ "isEffective", "d4/dbe/a00574.html#ad27787556274126d34cff9545374e471", null ],
-    [ "isSuspendable", "d4/dbe/a00574.html#adc2d2aca51b09addf29e99ea8ded0e25", null ],
-    [ "isValid", "d4/dbe/a00574.html#a02e865cbf6ed48080aed6e81de4fa7ae", null ],
-    [ "putIntoEffect", "d4/dbe/a00574.html#a0d0b4554689f1e814205596cc6c89750", null ],
-    [ "putIntoEffectAll", "d4/dbe/a00574.html#a0ef66da09c17bd9da0f6c1c8a798abcf", null ],
-    [ "suspend", "d4/dbe/a00574.html#ad2b2ceafa531ec23126643757fe91a0e", null ],
-    [ "suspendAll", "d4/dbe/a00574.html#af34234a4f29318a5778d09d8623100b1", null ],
-    [ "teardown", "d4/dbe/a00574.html#af7bc3bc29e7bc35648a2be099d980b84", null ]
+    [ "RuleSuperMeleeNeverMeetTeammateTwice", "d4/dbe/a00574.html#a9a98fd3a4da3eef610b6f4953b7d8eb6", null ],
+    [ "getRuleDescription", "d4/dbe/a00574.html#a5a423859a4e32bc1fdb42407f5f36aad", null ],
+    [ "performCheck", "d4/dbe/a00574.html#af58f0b255f9fefa79c4619c5a5d2f1a1", null ],
+    [ "performInit", "d4/dbe/a00574.html#afd6a8c3b8ca8e9cc1605957638faee9b", null ]
 ];

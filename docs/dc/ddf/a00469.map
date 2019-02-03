@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.team.Doublette" name="org.dos.tournament.branch.petanque.team.Doublette">
-<area shape="rect" id="node2" href="$db/d2c/a00466.html" title="org.dos.tournament.branch.petanque.team.\lAbstractPetanqueTeam" alt="" coords="5,95,276,136"/>
-<area shape="rect" id="node3" href="$d4/d2f/a00582.html" title="org.dos.tournament.common.player.\lAbstractTeamParticipant" alt="" coords="25,5,256,47"/>
+<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionCreateNewMatchday" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionCreateNewMatchday">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,380,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="139,5,247,32"/>
 </map>

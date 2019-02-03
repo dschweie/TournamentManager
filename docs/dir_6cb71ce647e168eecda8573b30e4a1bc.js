@@ -1,8 +1,8 @@
 var dir_6cb71ce647e168eecda8573b30e4a1bc =
 [
     [ "DialogJoueurIndividuel.java", "d6/d5b/a00026.html", [
-      [ "DialogJoueurIndividuel", "d3/d93/a00341.html", "d3/d93/a00341" ],
-      [ "SwingActionOK", "d9/d48/a00345.html", "d9/d48/a00345" ],
-      [ "SwingActionOkAndNext", "d7/dfc/a00349.html", "d7/dfc/a00349" ]
+      [ "DialogJoueurIndividuel", "d8/d21/a00368.html", "d8/d21/a00368" ],
+      [ "SwingActionOK", "db/d7e/a00372.html", "db/d7e/a00372" ],
+      [ "SwingActionOkAndNext", "d6/db8/a00376.html", "d6/db8/a00376" ]
     ] ]
 ];

@@ -1,2 +1,5 @@
-<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableCellRendererCenteredText" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableCellRendererCenteredText">
+<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,380,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="66,5,194,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="219,5,292,32"/>
 </map>

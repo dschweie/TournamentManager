@@ -1,5 +1,7 @@
-<map id="org.dos.tournament.common.result.ITotalResult" name="org.dos.tournament.common.result.ITotalResult">
-<area shape="rect" id="node3" href="$de/d85/a00618.html" title="org.dos.tournament.common.result.\lAbstractTotalResult" alt="" coords="27,169,255,211"/>
-<area shape="rect" id="node2" href="$d5/d32/a01214.html" title="Comparable" alt="" coords="95,5,186,32"/>
-<area shape="rect" id="node4" href="$d9/dea/a00478.html" title="org.dos.tournament.branch.petanque.team.\lJoueurIndividuel.PetanqueTotalResult" alt="" coords="5,259,276,300"/>
+<map id="org.dos.tournament.common.competition.AbstractTournament" name="org.dos.tournament.common.competition.AbstractTournament">
+<area shape="rect" id="node1" title=" " alt="" coords="316,27,579,69"/>
+<area shape="rect" id="node4" href="$d6/d92/a00586.html" title=" " alt="" coords="627,27,997,69"/>
+<area shape="rect" id="node2" title=" " alt="" coords="93,5,180,32"/>
+<area shape="rect" id="node3" href="$d1/daa/a00638.html" title="Das Interface dient als allgemeine Schittstelle für Turniere." alt="" coords="5,57,268,98"/>
+<area shape="rect" id="node5" href="$d5/d0a/a00602.html" title="Diese Klasse bildet das monatliche Super Melee&#45;Turnier der Bouleabteilung von Blau&#45;Gelb Groß&#45;Gerau ab..." alt="" coords="1045,27,1416,69"/>
 </map>

@@ -1,5 +1,7 @@
 package org.dos.tournament.common.result;
 
+import org.bson.Document;
+
 public class ConstantScoreResult implements IResult
 {
   
@@ -29,4 +31,9 @@ public class ConstantScoreResult implements IResult
     return this.iScore;
   }
 
+  @Override
+  public Document toBsonDocument() 
+  {
+    return new Document("_class", this.getClass().getName()).append("score", new Integer(this.iScore));
+  }
 }

@@ -6,7 +6,9 @@ package org.dos.tournament.common.storage;
 import java.util.HashMap;
 import java.util.Vector;
 
+import org.bson.Document;
 import org.dos.tournament.branch.petanque.team.JoueurIndividuel;
+import org.dos.tournament.common.competition.ITournament;
 import org.dos.tournament.common.player.AbstractParticipant;
 import org.dos.tournament.common.player.IParticipant;
 
@@ -14,7 +16,7 @@ import org.dos.tournament.common.player.IParticipant;
  *  \brief      Diese Schnittstelle ist Fassade für unterschiedliche Implementierungen zum Speichern von Daten.
  *  
  */
-public interface Storage
+public interface IStorage
 {
   /**
    *  \brief    Methode zum Öffnen der Verbindung zum Speichermedium
@@ -55,7 +57,28 @@ public interface Storage
    */
   public boolean saveParticipant(IParticipant participant, boolean overwrite);
   
+  public boolean saveTournament(ITournament tournament, boolean overwrite);
+  
   public Vector<JoueurIndividuel> findParticipantAsJoueurIndividuel(String forname, String surename, String association);
 
   public Vector<JoueurIndividuel> findParticipantAsJoueurIndividuel(String forname, String surename, String association, Vector<IParticipant> excluded);
+  
+  public IParticipant findParticipantById(String id);
+  
+  /**
+   *  \brief    Methode liefert Informationen zu den aktuell verfügbaren Turnieren
+   *  
+   *  @return   Die Turnierinformationen werden als Hashmap geliefert.
+   */
+  public Vector<HashMap<String,String>> getTournamentData();
+  
+  /**
+   *  \brief    Die Methode liefert eine Instanz vom Typ ITournament
+   *  
+   *  @param    tid           In dem Parameter ist die ID des Turniers zu übergeben.
+   *  
+   *  @return
+   */
+  public ITournament loadTournament(String tid);
+  public Document loadTournamentAsDocument(String tid);
 }

@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.common.result.AbstractResult" name="org.dos.tournament.common.result.AbstractResult">
-<area shape="rect" id="node2" href="$d0/db1/a00622.html" title="org.dos.tournament.common.result.\lIResult" alt="" coords="5,80,233,121"/>
-<area shape="rect" id="node3" href="$d5/d32/a01214.html" title="Comparable" alt="" coords="74,5,165,32"/>
+<map id="org.dos.tournament.branch.petanque.tournament.utils.TournamentGrid" name="org.dos.tournament.branch.petanque.tournament.utils.TournamentGrid">
+<area shape="rect" id="node1" title=" " alt="" coords="5,184,340,225"/>
+<area shape="rect" id="node2" title=" " alt="" coords="111,95,234,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="143,5,203,32"/>
 </map>

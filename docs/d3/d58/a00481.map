@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.branch.petanque.team.Triplette" name="org.dos.tournament.branch.petanque.team.Triplette">
-<area shape="rect" id="node2" href="$db/d2c/a00466.html" title="org.dos.tournament.branch.petanque.team.\lAbstractPetanqueTeam" alt="" coords="5,95,276,136"/>
-<area shape="rect" id="node3" href="$d4/d2f/a00582.html" title="org.dos.tournament.common.player.\lAbstractTeamParticipant" alt="" coords="25,5,256,47"/>
+<map id="org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableColumnModel" name="org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableColumnModel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,383,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="35,5,207,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="231,5,304,32"/>
 </map>

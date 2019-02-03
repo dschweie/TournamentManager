@@ -1,10 +1,10 @@
 var a00566 =
 [
-    [ "isEffective", "d0/d3e/a00566.html#ad5d1eca649dc500cf706facee8b7701b", null ],
-    [ "isSuspendable", "d0/d3e/a00566.html#ab4ab341ac219d3b90b3457a70ffe464b", null ],
-    [ "putIntoEffect", "d0/d3e/a00566.html#aed497e10c010a02b9189072e668df9b0", null ],
-    [ "putIntoEffectAll", "d0/d3e/a00566.html#a8335d1c90409c9788e7832568a300796", null ],
-    [ "suspend", "d0/d3e/a00566.html#a738097ffd200dfeb415a4f74a0f4c0b9", null ],
-    [ "suspendAll", "d0/d3e/a00566.html#a8544adade45af06faaed97ceddd8ecd6", null ],
-    [ "teardown", "d0/d3e/a00566.html#a889c6e46020aa394177e8ab410cdb3b4", null ]
+    [ "RuleSuperMeleeNeverMeetOpponentTwice", "d0/d3e/a00566.html#ac0412e30cbb70d9718b746082a7b5c92", null ],
+    [ "getRuleDescription", "d0/d3e/a00566.html#acc6b78d6943f6f78e49ce4e2cbb7eadb", null ],
+    [ "initParticipantTable", "d0/d3e/a00566.html#a885686fd17211f7d7e329b008ab8d922", null ],
+    [ "performCheck", "d0/d3e/a00566.html#a6dff999a45a5d8e72663dc359fa6e5a1", null ],
+    [ "performInit", "d0/d3e/a00566.html#a1f8654b7b6e0d743333941704d523f41", null ],
+    [ "performTeardown", "d0/d3e/a00566.html#a39424046b2249ea932b674c621b8551d", null ],
+    [ "aiParticipantTable", "d0/d3e/a00566.html#abafb0b085a12a0c694ee3b5d36db8150", null ]
 ];

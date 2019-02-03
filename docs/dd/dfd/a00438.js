@@ -1,5 +1,5 @@
 var a00438 =
 [
-    [ "SwingAction", "dd/dfd/a00438.html#af61a6f840bfa97402d8f6f1768609e65", null ],
-    [ "actionPerformed", "dd/dfd/a00438.html#a3e8895c0027bd976f233ca18b2f4bb2f", null ]
+    [ "SwingActionAddParticipantsToDatabase", "dd/dfd/a00438.html#adc778240f20548796686b386127afbc2", null ],
+    [ "actionPerformed", "dd/dfd/a00438.html#aef18cef23e23b0c9d6a5f4e8a685637e", null ]
 ];

@@ -268,6 +268,10 @@ public class PetanqueSuperMeleePanel extends JPanel
     table = new JTable();
     panelRight.add(table, BorderLayout.SOUTH);
     
+    if(0 < tournament.countMatchdays())
+      for(int i = 0; i < tournament.countMatchdays(); ++i)
+        this.tabbedPaneMatchdays.addTab("Runde ".concat(String.valueOf(i+1)), null, new DefaultMatchdayPanel(tournament, i), null);
+    
     this.doLayout();
     
   }

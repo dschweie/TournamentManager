@@ -2,6 +2,7 @@ package org.dos.tournament.common.competition;
 
 import java.util.Vector;
 
+import org.bson.Document;
 import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.result.IResult;
 
@@ -58,5 +59,10 @@ public abstract class AbstractEncounter implements IEncounter
   public IParticipant getWinner()
   {
     return this.getRank(1);
+  }
+  
+  public Document toBsonDocument()
+  {
+    return null;
   }
 }

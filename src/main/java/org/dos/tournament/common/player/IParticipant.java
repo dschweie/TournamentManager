@@ -3,6 +3,7 @@ package org.dos.tournament.common.player;
 import java.util.Collection;
 import java.util.Vector;
 
+import org.bson.Document;
 import org.dos.tournament.common.player.utils.IParticipantId;
 import org.dos.tournament.common.player.utils.ParticipantStatus;
 import org.dos.tournament.common.result.IResult;
@@ -64,4 +65,5 @@ public interface IParticipant extends Comparable
   
   public Vector<Object> getParticipantAsRow(Vector<String> header);
   public Collection<Object> getTotalResultIdentifiers();
+  public Document toBsonDocument();
 }

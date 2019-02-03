@@ -3,6 +3,7 @@ package org.dos.tournament.branch.petanque.tournament.partie;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.bson.Document;
 import org.dos.tournament.branch.petanque.result.PetanqueResult;
 import org.dos.tournament.common.competition.AbstractEncounter;
 import org.dos.tournament.common.competition.DefaultCompetitorResult;
@@ -12,6 +13,18 @@ import org.dos.tournament.common.result.IResult;
 
 public class Partie extends AbstractEncounter
 {
+
+  public Partie()
+  {
+    super();
+  }
+  
+  public Partie(IParticipant home, IParticipant guest)
+  {
+    super();
+    this.addParticipant(home);
+    this.addParticipant(guest);
+  }
 
   @Override
   public boolean isComplete()
@@ -149,6 +162,14 @@ public class Partie extends AbstractEncounter
     // TODO Auto-generated method stub
     return "xyz";
   }
-
   
+  public Document toBsonDocument()
+  {
+    Document _retval = new Document();
+    _retval.append("home", this.competitors.get(0).toBsonDocument()).append("guest", this.competitors.get(1).toBsonDocument());
+    if(this.isScored())
+      _retval.append("score", this.result.toBsonDocument());
+      
+    return _retval;
+  }
 }

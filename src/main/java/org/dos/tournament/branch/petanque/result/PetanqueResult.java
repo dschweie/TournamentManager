@@ -1,5 +1,6 @@
 package org.dos.tournament.branch.petanque.result;
 
+import org.bson.Document;
 import org.dos.tournament.common.result.AbstractResult;
 
 public class PetanqueResult extends AbstractResult
@@ -72,4 +73,11 @@ public class PetanqueResult extends AbstractResult
   {
     return this.iOppsScore;
   }
+  
+  @Override
+  public Document toBsonDocument() 
+  {
+    return super.toBsonDocument().append("score", new Integer(this.iScore)).append("oppsScore", this.iOppsScore);
+  }
+
 }

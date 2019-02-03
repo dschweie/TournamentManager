@@ -1,3 +1,7 @@
-<map id="org.dos.tournament.common.player.utils.NumericAssociationId" name="org.dos.tournament.common.player.utils.NumericAssociationId">
-<area shape="rect" id="node2" href="$d6/db2/a00601.html" title="org.dos.tournament.common.player.utils.\lIParticipantId" alt="" coords="5,5,264,47"/>
+<map id="org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult" name="org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult">
+<area shape="rect" id="node1" title=" " alt="" coords="568,99,911,140"/>
+<area shape="rect" id="node2" href="$db/d74/a01378.html" title=" " alt="" coords="161,5,361,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="241,106,280,133"/>
+<area shape="rect" id="node4" href="$d1/d97/a00670.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="145,157,376,199"/>
+<area shape="rect" id="node5" href="$db/d74/a01378.html" title=" " alt="" coords="5,165,96,191"/>
 </map>

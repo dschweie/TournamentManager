@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['singletonproperties_2ejava',['SingletonProperties.java',['../d7/d46/a00002.html',1,'']]],
-  ['singletonstorage_2ejava',['SingletonStorage.java',['../de/df3/a00185.html',1,'']]],
-  ['storage_2ejava',['Storage.java',['../da/d15/a00188.html',1,'']]],
-  ['supermelee_2ejava',['SuperMelee.java',['../d0/dc2/a00104.html',1,'']]],
-  ['supermeleeclubchampionship_2ejava',['SuperMeleeClubChampionship.java',['../df/d98/a00107.html',1,'']]],
-  ['supermeleematchdaytable_2ejava',['SuperMeleeMatchdayTable.java',['../d2/de7/a00014.html',1,'']]],
-  ['supermeleemenufactory_2ejava',['SupermeleeMenuFactory.java',['../d4/d8c/a00035.html',1,'']]]
+  ['regulation_2ejava',['Regulation.java',['../d6/d7d/a00161.html',1,'']]],
+  ['rulesupermeleenevermeetopponenttandem_2ejava',['RuleSuperMeleeNeverMeetOpponentTandem.java',['../d0/dc2/a00104.html',1,'']]],
+  ['rulesupermeleenevermeetopponenttwice_2ejava',['RuleSuperMeleeNeverMeetOpponentTwice.java',['../df/d98/a00107.html',1,'']]],
+  ['rulesupermeleenevermeetteammatetandem_2ejava',['RuleSuperMeleeNeverMeetTeammateTandem.java',['../d4/d81/a00110.html',1,'']]],
+  ['rulesupermeleenevermeetteammatetwice_2ejava',['RuleSuperMeleeNeverMeetTeammateTwice.java',['../d3/d00/a00113.html',1,'']]],
+  ['rulesupermeleeneverplaytriplettetandem_2ejava',['RuleSuperMeleeNeverPlayTripletteTandem.java',['../d4/d3e/a00116.html',1,'']]],
+  ['rulesupermeleeneverplaytriplettetwice_2ejava',['RuleSuperMeleeNeverPlayTripletteTwice.java',['../df/d6a/a00119.html',1,'']]]
 ];

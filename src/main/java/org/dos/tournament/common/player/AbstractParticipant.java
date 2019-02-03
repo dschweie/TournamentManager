@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Vector;
 
+import org.bson.Document;
 import org.dos.tournament.common.player.utils.IParticipantId;
 import org.dos.tournament.common.player.utils.ParticipantStatus;
 import org.dos.tournament.common.result.IResult;
@@ -220,4 +221,11 @@ public abstract class AbstractParticipant implements IParticipant
   {
     return this.attributes.containsKey(key);
   }
+  
+  @Override
+  public Document toBsonDocument() 
+  {
+    return new Document("_class", this.getClass().getName());
+  }
+
 }

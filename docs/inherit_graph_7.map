@@ -1,6 +1,7 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node2" href="$d2/d04/a00281.html" title="org.dos.tournament.application.common.panels.components.\lSuperMeleeMatchdayTable.TableCellRendererCenteredText" alt="" coords="220,5,595,47"/>
-<area shape="rect" id="node3" href="$d6/d4b/a00277.html" title="org.dos.tournament.application.common.panels.components.\lSuperMeleeMatchdayTable.TableCellRendererGuestColumn" alt="" coords="220,71,595,112"/>
-<area shape="rect" id="node4" href="$d0/d19/a00273.html" title="org.dos.tournament.application.common.panels.components.\lSuperMeleeMatchdayTable.TableCellRendererHomeColumn" alt="" coords="220,136,595,177"/>
-<area shape="rect" id="node5" href="$d5/d42/a00269.html" title="org.dos.tournament.application.common.panels.components.\lSuperMeleeMatchdayTable.TableCellRendererMatchStatus" alt="" coords="220,201,595,243"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,111,172,138"/>
+<area shape="rect" id="node2" href="$d5/d0f/a00308.html" title=" " alt="" coords="220,5,595,47"/>
+<area shape="rect" id="node3" href="$d8/d17/a00304.html" title=" " alt="" coords="220,71,595,112"/>
+<area shape="rect" id="node4" href="$db/da2/a00300.html" title=" " alt="" coords="220,136,595,177"/>
+<area shape="rect" id="node5" href="$db/d7b/a00296.html" title=" " alt="" coords="220,201,595,243"/>
 </map>

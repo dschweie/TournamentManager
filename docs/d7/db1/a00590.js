@@ -1,12 +1,6 @@
 var a00590 =
 [
-    [ "Attendee", "d7/db1/a00590.html#ad40ee4102acc08c80cc846936a8c72fc", null ],
-    [ "contains", "d7/db1/a00590.html#a927e24acbe60e26cf9eba2b0870e237f", null ],
-    [ "getAttendeesToArray", "d7/db1/a00590.html#af963dcacc67731e1cd05340e827269e0", null ],
-    [ "getDescriptionByCode", "d7/db1/a00590.html#a7f8ebf3c5e4c0c9fcc902e017e42f412", null ],
-    [ "getElement", "d7/db1/a00590.html#a2654699de432c3a551c50d4ec2384cdd", null ],
-    [ "getName", "d7/db1/a00590.html#ada8067112f227814ebbeb90d44fbf56f", null ],
-    [ "hasAttendees", "d7/db1/a00590.html#a9812b2dd8519e23bafef85e4134c3be6", null ],
-    [ "setName", "d7/db1/a00590.html#a85cd42e6e44cd00049706db343c2bcb8", null ],
-    [ "name", "d7/db1/a00590.html#a5940579bdaf578bb6541c54e80798752", null ]
+    [ "MatchdayUpdate", "d7/db1/a00590.html#a0feb2fd89002596f5cc1b2a6f5139e61", null ],
+    [ "getMatchday", "d7/db1/a00590.html#a3e7e4cf84e343ff57f67ab94a22f284f", null ],
+    [ "matchday", "d7/db1/a00590.html#a0fef9966304e8edb75cbe5e44cc51c6e", null ]
 ];

@@ -2,7 +2,9 @@ package org.dos.tournament.branch.petanque.tournament.movement;
 
 import java.awt.Component;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Observable;
 import java.util.ResourceBundle;
 import java.util.Vector;
@@ -11,6 +13,7 @@ import javax.swing.AbstractAction;
 import javax.swing.JDialog;
 import javax.swing.ProgressMonitor;
 
+import org.bson.Document;
 import org.dos.tournament.application.common.dialogs.MatchdayProgressMonitor;
 import org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually;
 import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
@@ -27,6 +30,8 @@ import org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSu
 import org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTwice;
 import org.dos.tournament.branch.petanque.tournament.partie.Partie;
 import org.dos.tournament.branch.petanque.tournament.utils.TournamentUtils;
+import org.dos.tournament.common.competition.AbstractTournament;
+import org.dos.tournament.common.competition.ITournament;
 import org.dos.tournament.common.movement.regulations.Regulation;
 import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.player.utils.NumericParticipantId;
@@ -34,7 +39,7 @@ import org.dos.tournament.common.player.utils.ParticipantStatus;
 import org.dos.tournament.common.result.IResult;
 import org.dos.tournament.common.storage.SingletonStorage;
 
-public class SuperMelee extends Observable
+public class SuperMelee extends AbstractTournament
 {
 
   static final public char FLAG_NEVER_MET       = ' ';
@@ -48,7 +53,7 @@ public class SuperMelee extends Observable
   protected Vector<Partie> parties;
   protected Vector<AbstractPetanqueTeam> teams;
 
-  private int idxTeam = 0; 
+  protected int idxTeam = 0; 
 
   
   private boolean bRuleNotSamePartner = true;
@@ -148,6 +153,40 @@ public class SuperMelee extends Observable
     this.regulations = new RuleSuperMeleeNeverPlayTripletteTwice(this.regulations, true, true);
     this.regulations = new RuleSuperMeleeNeverMeetOpponentTwice(this.regulations, true, true);
     
+  }
+  
+  public Document toBsonDocument()
+  {
+    Document _doc = super.toBsonDocument();
+
+    //  ---------------------------------------------------------------------------------
+    //  Hinzufügen der Teilnehmer zum Document
+    //  ---------------------------------------------------------------------------------
+    if(!this.competitors.isEmpty())
+    {
+      List<Document> _participants = new ArrayList<Document>();
+      this.competitors.forEach(it -> {
+        Document _competitor = new Document();
+        _competitor.append("code", new Integer(Integer.parseInt( it.getCode().trim())));
+        _competitor.append("_id", it.getAttribute("_id"));
+        _competitor.append("info", it.toString());
+        
+        _participants.add(_competitor);
+      });
+      _doc.append("participants", _participants);
+    }
+    
+    //  ---------------------------------------------------------------------------------
+    //  Hinzufügen der bereits gelosten Runden zum Document
+    //  ---------------------------------------------------------------------------------
+    if(!this.matchdays.isEmpty())
+    {
+      List<Document> _matchdays = new ArrayList<Document>();
+      this.matchdays.forEach(it -> { _matchdays.add(it.toBsonDocument()); });
+      _doc.append("matchdays", _matchdays);
+    }
+    
+    return _doc;
   }
   
   /**
@@ -255,6 +294,7 @@ public class SuperMelee extends Observable
     
     //  Benutzer werden in die Datenbank geschrieben
     this.competitors.forEach(it ->  { if(null == it.getAttribute("_id")) SingletonStorage.getInstance().saveParticipant(it, true);});
+    SingletonStorage.getInstance().saveTournament(this, true);
     
     this.notifyObservers();
     this.clearChanged();
@@ -286,35 +326,6 @@ public class SuperMelee extends Observable
     this.xMonitoring = new MonitoringThread();
     
     this.thread = new Thread(this.xMonitoring);
-    
-//    this.thread = new Thread (new Runnable() {
-//      private int iMaximum = 100;
-//      private int iProgress = 7;
-//      public void run() {
-//        ProgressMonitor pm =   new ProgressMonitor(parent, "Auslosung läuft", "zwei", iProgress, iMaximum);
-//        //SuperMelee.this.xProgressMonitor =  new ProgressMonitor(parent, "Auslosung läuft", "zwei", 0, 100);
-////        while(SuperMelee.this.runningGenerateRound)
-//        while(iProgress<iMaximum)
-//        {
-//          pm.setProgress(iProgress);
-//          
-//          //try { Thread.sleep(100); } 
-//          //catch (Exception ex) {}
-//        }
-//        pm.close();
-//        //SuperMelee.this.xProgressMonitor.close();
-//        /*
-//        while(!SuperMelee.this.xProgressMonitor.isCanceled())
-//        {
-//          pm.setProgress(i);
-//          // Als Ersatz für eine rechen-
-//          // intensive Operation
-//          try { Thread.sleep(100); } 
-//          catch (Exception ex) {}
-//        }*/
-//      }
-//      
-//    });
     thread.start ();
     this.resultGenerateRound &= (0 == SuperMelee.this.countMatchdays())?SuperMelee.this.generateFirstMatchday():SuperMelee.this.generateNextMatchdayByAlgorithm();
     this.xMonitoring.setProgress(100);
@@ -325,22 +336,6 @@ public class SuperMelee extends Observable
       this.xProgressMonitor.setProgress(10000);
     }
     catch(Exception e) { /* NOTHING TO DO */ }
-    
-    //this.resultGenerateRound &= !this.xProgressMonitor.isCanceled();
-   
-    
-    //if(null == parent)
-    //  this.xProgressMonitor = null;
-    //else
-    //  this.xProgressMonitor = new MatchdayProgressMonitor(null, "Message", "nopte", 0, 100);
-    
-    //boolean _retval = (0 == this.countMatchdays())?this.generateFirstMatchday():this.generateNextMatchdayByAlgorithm();
-    
-    if(null != parent)
-    {
-      //this.xProgressMonitor.close();
-      // this.xProgressMonitor = null;
-    }
     
     return this.resultGenerateRound;
   }

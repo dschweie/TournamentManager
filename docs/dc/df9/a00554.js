@@ -1,12 +1,13 @@
 var a00554 =
 [
-    [ "AbstractEncounter", "dc/df9/a00554.html#a5f5e4d6df93478128d615d67d629d280", null ],
-    [ "addParticipant", "dc/df9/a00554.html#a08c6558d0d222d39a1b87fa1c5d04d32", null ],
-    [ "getCompetitors", "dc/df9/a00554.html#a65b8089add578104205ab06e7dfcbb55", null ],
-    [ "getWinner", "dc/df9/a00554.html#ac6dab942c19b5a3db31fec51ce9ad4ec", null ],
-    [ "isComplete", "dc/df9/a00554.html#af028f2a9e305a91bb3b45e4a22ec6149", null ],
-    [ "isScored", "dc/df9/a00554.html#a150ffbf5407ca851f28d3cfa42301cf3", null ],
-    [ "setResult", "dc/df9/a00554.html#a24581eedee460958b6b092dc3fa49db4", null ],
-    [ "competitors", "dc/df9/a00554.html#aed061f275ef4a3c2d2e74288c54ff815", null ],
-    [ "result", "dc/df9/a00554.html#a126f07dcf4b4b6a5aeec0c152b633d03", null ]
+    [ "Matchday", "dc/df9/a00554.html#ab01b630fae989974dc0016fd1c339226", null ],
+    [ "addPartie", "dc/df9/a00554.html#ae98389cfd2e387549cb92f979455a935", null ],
+    [ "countCompletedMatches", "dc/df9/a00554.html#a01ce4d5dfbb379a49ff8b6ab06b232e5", null ],
+    [ "countMatches", "dc/df9/a00554.html#a847878492569101bde5468565e43d870", null ],
+    [ "countScoredMatches", "dc/df9/a00554.html#a794b0ee427810c23d9afc62d9212de31", null ],
+    [ "getMatch", "dc/df9/a00554.html#ae9810566aeebdb2ead67ee2ffe8a5278", null ],
+    [ "toBsonDocument", "dc/df9/a00554.html#a4130c19468533a5aec39d5d620e7c336", null ],
+    [ "toString", "dc/df9/a00554.html#a2bb601366a0253b00dda2812f06b0e0c", null ],
+    [ "toStringWithNames", "dc/df9/a00554.html#ab33eda02f0e8f7d5c922963e5da7fc24", null ],
+    [ "matches", "dc/df9/a00554.html#ade42b0cec3a931ae1a928cc2727473c5", null ]
 ];

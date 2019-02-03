@@ -1,4 +1,4 @@
 var a00218 =
 [
-    [ "movement", "d6/d43/a00216.html", "d6/d43/a00216" ]
+    [ "SuperMeleeMatchdayTable", "dd/d56/a00274.html", "dd/d56/a00274" ]
 ];
