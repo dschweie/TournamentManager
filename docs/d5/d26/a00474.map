@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem">
-<area shape="rect" id="node2" href="$d9/d4a/a00479.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTwice" alt="" coords="272,27,709,69"/>
-<area shape="rect" id="node3" href="$d7/d84/a00535.html" title="org::dos::tournament\l::common::movement::regulations\l::AbstractRegulationDecorator\l\&lt; SuperMelee, Vector\&lt; Vector\l\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="5,5,224,91"/>
+<map id="org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel.SwingActionAddParticipantsToDatabase" name="org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel.SwingActionAddParticipantsToDatabase">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,368,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="133,5,241,32"/>
 </map>

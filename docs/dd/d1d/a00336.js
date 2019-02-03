@@ -1,5 +1,6 @@
 var a00336 =
 [
-    [ "SwingActionInactivateAttendee", "dd/d1d/a00336.html#aaea40aeacaf8eed9d2e280a458665870", null ],
-    [ "actionPerformed", "dd/d1d/a00336.html#ae60f6b8ce4cfa053268ebbe8323804a0", null ]
+    [ "SwingActionToggleTeamPresentation", "dd/d1d/a00336.html#a0918741f979c28ff8a04f256a65ae758", null ],
+    [ "actionPerformed", "dd/d1d/a00336.html#a7c62cfa6e8d96c4c336b8494e9eea99d", null ],
+    [ "updateButton", "dd/d1d/a00336.html#adf6016493646618eb94ca37b08e9df9c", null ]
 ];

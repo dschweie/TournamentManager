@@ -1,6 +1,5 @@
 var a00448 =
 [
-    [ "RuleSuperMeleeNeverPlayTripletteTandem", "de/dfe/a00448.html#a5fb7553bdd5d378be994d586b746658d", null ],
-    [ "getRuleDescription", "de/dfe/a00448.html#a5df2952506250453a73a3e14f827cc97", null ],
-    [ "performInit", "de/dfe/a00448.html#a595c6167f334d7c17a8335c4f220d60f", null ]
+    [ "SwingActionEnlistLEquipe", "de/dfe/a00448.html#a9c06e1aef45c4b9e271aa7dce5f73a4e", null ],
+    [ "actionPerformed", "de/dfe/a00448.html#acc533af6f2d231a4d78829158d2e382f", null ]
 ];

@@ -1,6 +1,4 @@
-<map id="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel" name="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel">
-<area shape="rect" id="node2" href="$db/ddc/a00353.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee" alt="" coords="1247,321,1535,363"/>
-<area shape="rect" id="node4" href="$d6/da3/a00589.html" title="org.dos.tournament.common.player.\lAssociationAttendee" alt="" coords="812,60,1043,101"/>
-<area shape="rect" id="node5" href="$d2/da3/a00593.html" title="org.dos.tournament.common.player.\lAttendee" alt="" coords="321,24,552,65"/>
-<area shape="rect" id="node6" href="$d8/dc8/a00581.html" title="org.dos.tournament.common.player.\lAbstractParticipant" alt="" coords="5,5,236,47"/>
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.ListenerTimerModification" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.ListenerTimerModification">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,308,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="103,5,210,32"/>
 </map>

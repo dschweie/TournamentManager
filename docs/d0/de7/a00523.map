@@ -1,2 +1,5 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MatchdayUpdate" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MatchdayUpdate">
+<map id="org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableModel" name="org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableModel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,383,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="67,5,195,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="220,5,293,32"/>
 </map>

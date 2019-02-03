@@ -1,2 +1,7 @@
-<map id="org.dos.tournament.common.movement.regulations.Regulation&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.Regulation&lt; T, G, P &gt;">
+<map id="org.dos.tournament.branch.petanque.team.Doublette" name="org.dos.tournament.branch.petanque.team.Doublette">
+<area shape="rect" id="node1" title=" " alt="" coords="5,363,276,404"/>
+<area shape="rect" id="node2" href="$d6/d06/a00572.html" title=" " alt="" coords="5,273,276,315"/>
+<area shape="rect" id="node3" href="$df/d7d/a00696.html" title=" " alt="" coords="25,184,256,225"/>
+<area shape="rect" id="node4" href="$d0/db6/a00692.html" title=" " alt="" coords="25,95,256,136"/>
+<area shape="rect" id="node5" href="$da/d6b/a00708.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="25,5,256,47"/>
 </map>

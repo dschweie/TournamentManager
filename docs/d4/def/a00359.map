@@ -1,2 +1,4 @@
-<map id="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.SwingActionCancel" name="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.SwingActionCancel">
+<map id="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.PreventDuplicatedElements" name="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.PreventDuplicatedElements">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,375,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="143,5,237,32"/>
 </map>

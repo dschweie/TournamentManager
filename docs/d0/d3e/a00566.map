@@ -1,3 +1,8 @@
-<map id="org.dos.tournament.common.player.utils.NumericAssociationId" name="org.dos.tournament.common.player.utils.NumericAssociationId">
-<area shape="rect" id="node2" href="$dc/dae/a00563.html" title="org.dos.tournament.common.player.utils.\lIParticipantId" alt="" coords="5,5,264,47"/>
+<map id="org.dos.tournament.branch.petanque.result.PetanqueSuperMeleeClubChampionshipResult" name="org.dos.tournament.branch.petanque.result.PetanqueSuperMeleeClubChampionshipResult">
+<area shape="rect" id="node1" title=" " alt="" coords="136,396,427,437"/>
+<area shape="rect" id="node2" href="$d9/d19/a00560.html" title=" " alt="" coords="144,305,419,347"/>
+<area shape="rect" id="node3" href="$d0/dc2/a00564.html" title=" " alt="" coords="5,215,280,256"/>
+<area shape="rect" id="node4" href="$df/d3b/a00728.html" title=" " alt="" coords="29,96,257,137"/>
+<area shape="rect" id="node5" href="$dc/dce/a00740.html" title=" " alt="" coords="29,5,257,47"/>
+<area shape="rect" id="node6" title=" " alt="" coords="294,103,333,130"/>
 </map>

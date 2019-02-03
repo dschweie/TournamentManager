@@ -1,7 +1,5 @@
 var a00352 =
 [
-    [ "SwingActionUpdateLastRound", "d6/d9c/a00352.html#a9d9496efed0a4fee39ff51e24842e856", null ],
-    [ "actionPerformed", "d6/d9c/a00352.html#ae6077435c2f5ac963d078a32fd8c867b", null ],
-    [ "update", "d6/d9c/a00352.html#a435592999dc7831722bdbdc483fdd653", null ],
-    [ "updateStatus", "d6/d9c/a00352.html#a09e6ff4f8657e2f8528d2ac00e420252", null ]
+    [ "SwingActionCreateMatchday", "d6/d9c/a00352.html#a8518b6d53773bf146321ee5f3b093c87", null ],
+    [ "actionPerformed", "d6/d9c/a00352.html#a6d002ae84da14b1ddcb3cda79098b3ac", null ]
 ];

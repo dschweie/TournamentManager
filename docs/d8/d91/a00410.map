@@ -1,5 +1,5 @@
-<map id="org.dos.tournament.branch.petanque.result.PetanqueMatchResult" name="org.dos.tournament.branch.petanque.result.PetanqueMatchResult">
-<area shape="rect" id="node4" href="$d3/d29/a00419.html" title="org.dos.tournament.branch.petanque.result.\lPetanqueSuperMeleeClubChampionshipResult" alt="" coords="927,5,1217,47"/>
-<area shape="rect" id="node2" href="$d0/dd6/a00415.html" title="org.dos.tournament.branch.petanque.result.\lPetanqueResult" alt="" coords="281,5,556,47"/>
-<area shape="rect" id="node3" href="$df/d3a/a00571.html" title="org.dos.tournament.common.result.\lAbstractResult" alt="" coords="5,5,233,47"/>
+<map id="org.dos.tournament.application.dialogs.tournament.DialogChooseTournament.CancelAction" name="org.dos.tournament.application.dialogs.tournament.DialogChooseTournament.CancelAction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,324,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="44,5,152,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="177,5,286,32"/>
 </map>

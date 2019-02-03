@@ -1,5 +1,5 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTandem">
-<area shape="rect" id="node2" href="$d8/dc7/a00517.html" title="org.dos.tournament.branch.petanque.tournament.movement.regulations.\lRuleSuperMeleeNeverPlayTripletteTwice" alt="" coords="955,185,1392,226"/>
-<area shape="rect" id="node3" href="$d6/d21/a00573.html" title="org::dos::tournament\l::common::movement::regulations\l::AbstractRegulationDecorator\l\&lt; SuperMelee, Vector\&lt; Vector\l\&lt; Integer \&gt; \&gt;, IParticipant \&gt;" alt="" coords="687,99,905,184"/>
-<area shape="rect" id="node4" href="$d8/d9b/a00577.html" title="org::dos::tournament\l::common::movement::regulations\l::Regulation\&lt; T, G, P \&gt;" alt="" coords="333,36,552,92"/>
+<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionUpdateLastRound" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionUpdateLastRound">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,364,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="73,5,181,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="205,5,279,32"/>
 </map>

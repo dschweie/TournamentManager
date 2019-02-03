@@ -1,3 +1,4 @@
-<map id="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel" name="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel">
-<area shape="rect" id="node2" href="$de/dab/a00319.html" title="org.dos.tournament.application.dialogs.player.\lDialogAssociationAttendee" alt="" coords="34,80,322,121"/>
+<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableCellRendererCenteredText" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableCellRendererCenteredText">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,380,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="109,5,276,32"/>
 </map>

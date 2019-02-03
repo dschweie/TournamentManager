@@ -1,13 +1,7 @@
 var a00480 =
 [
-    [ "getCompetitor", "d9/dc5/a00480.html#afa256f544ec145a510fbcafb6c12b410", null ],
-    [ "getCompetitorResult", "d9/dc5/a00480.html#a1312efacb5e42f6441b803d9d948cd7a", null ],
-    [ "getId", "d9/dc5/a00480.html#a7d555b733d3df4098f4e8cd70630eb07", null ],
-    [ "getRank", "d9/dc5/a00480.html#aa0de9c55c80651e0bf03a63e47b1194c", null ],
-    [ "getResult", "d9/dc5/a00480.html#a2df2efad34fe8cd3cb35af164fac22de", null ],
-    [ "isComplete", "d9/dc5/a00480.html#a0d39d02a3a150537aeea6f791d75c764", null ],
-    [ "playedInTriplette", "d9/dc5/a00480.html#a4776d5509b97cf37a09aafdd1f490cd8", null ],
-    [ "toString", "d9/dc5/a00480.html#a1d4e12fbac369dc4cd843fb2947ff5cc", null ],
-    [ "toStringWithNames", "d9/dc5/a00480.html#ac2edc5ad5761315fdd83261e643a397e", null ],
-    [ "wereOpponents", "d9/dc5/a00480.html#a7f4c4c6f2d7bc80e226dc16a51e6df3d", null ]
+    [ "SwingActionDeleteLastMatchday", "d9/dc5/a00480.html#a59f0a5ca93ff6e3af21c534914a026c3", null ],
+    [ "actionPerformed", "d9/dc5/a00480.html#a50b80e641068306890a15e26f1926b14", null ],
+    [ "update", "d9/dc5/a00480.html#acb4ff7c2593aad50b7d7afe515c04c96", null ],
+    [ "updateStatus", "d9/dc5/a00480.html#ad9efdb7bc85bc7693faed3cc56905e59", null ]
 ];

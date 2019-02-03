@@ -1,5 +1,7 @@
 var a00472 =
 [
-    [ "SuperMeleeClubChampionship", "d7/db5/a00472.html#ad123513b2c7c402c6dea5e986762892a", null ],
-    [ "setResult", "d7/db5/a00472.html#a1a79d79a2a583876e3e89e5a09e9261f", null ]
+    [ "SwingActionUpdateLastRound", "d7/db5/a00472.html#a91ce68e261271c56659d1759cd34b665", null ],
+    [ "actionPerformed", "d7/db5/a00472.html#a65f0fd938d12ff0079d18dba2574e344", null ],
+    [ "update", "d7/db5/a00472.html#af5f6b7cb808cc3adb96fb6bf08180f7c", null ],
+    [ "updateStatus", "d7/db5/a00472.html#afec69600c341f7d5c30a17f50f6667d4", null ]
 ];

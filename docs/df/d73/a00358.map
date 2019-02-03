@@ -1,2 +1,5 @@
-<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionActivateAttendee" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionActivateAttendee">
+<map id="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.PreventDuplicatedElements" name="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.PreventDuplicatedElements">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,375,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="95,5,189,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="213,5,265,32"/>
 </map>

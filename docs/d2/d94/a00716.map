@@ -1,0 +1,4 @@
+<map id="org.dos.tournament.common.storage.SingletonStorage" name="org.dos.tournament.common.storage.SingletonStorage">
+<area shape="rect" id="node1" title="Über diese Klasse läuft das Speichern und Laden von Daten." alt="" coords="5,109,244,151"/>
+<area shape="rect" id="node2" href="$d4/deb/a00710.html" title="Diese Schnittstelle ist Fassade für unterschiedliche Implementierungen zum Speichern von Daten." alt="" coords="5,5,244,47"/>
+</map>

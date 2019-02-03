@@ -1,7 +1,5 @@
 var a00408 =
 [
-    [ "Doublette", "dd/dea/a00408.html#a74e99f3fbb7999c30a0c451e8cb1c61a", null ],
-    [ "getAttendeesToArray", "dd/dea/a00408.html#a4ba871b41349a62ce93ca4fc84a6ce51", null ],
-    [ "getDescription", "dd/dea/a00408.html#a213a0c48bf0116a1cbffac3e871dcad6", null ],
-    [ "getDescriptionByCode", "dd/dea/a00408.html#aacfda61270916d22afc1be1eb4e3270c", null ]
+    [ "SelectTournamentAction", "dd/dea/a00408.html#a12d509e04b7d77bef218746ca2f9b133", null ],
+    [ "actionPerformed", "dd/dea/a00408.html#aa84a9ddaea9c476e2dc23a1307854384", null ]
 ];

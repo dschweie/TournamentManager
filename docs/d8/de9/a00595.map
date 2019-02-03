@@ -1,3 +1,5 @@
-<map id="org.dos.tournament.common.player.IParticipant" name="org.dos.tournament.common.player.IParticipant">
-<area shape="rect" id="node2" href="$d1/d31/a01245.html" title="Comparable" alt="" coords="75,5,166,32"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique">
+<area shape="rect" id="node1" title="Diese Klasse ist Basisklasse im Regelwerk." alt="" coords="539,27,976,69"/>
+<area shape="rect" id="node2" href="$d4/d9b/a00680.html" title=" " alt="" coords="272,5,491,91"/>
+<area shape="rect" id="node3" href="$d6/dd3/a00688.html" title=" " alt="" coords="5,20,224,76"/>
 </map>
