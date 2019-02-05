@@ -1,21 +1,13 @@
 var a00684 =
 [
-    [ "AbstractRegulationDecorator", "d3/db4/a00684.html#a448b745b78267e89491f92595dd61944", null ],
-    [ "getRuleDescription", "d3/db4/a00684.html#a56b2c802dc6edcbd97bff268eb1ab161", null ],
-    [ "init", "d3/db4/a00684.html#afa768181bcc646ad6ed6bf7096cc5be9", null ],
-    [ "isEffective", "d3/db4/a00684.html#ad79c179bf8843e6847d72afc4f8cc629", null ],
-    [ "isSuspendable", "d3/db4/a00684.html#a31f598ed4935de95f122d22b8043e06c", null ],
-    [ "isValid", "d3/db4/a00684.html#a7419402415abe478c240c97cf5238fd4", null ],
-    [ "performCheck", "d3/db4/a00684.html#a25f99b2e527c0b6ed9ca22c2132ddab0", null ],
-    [ "performInit", "d3/db4/a00684.html#a76357e528d15e568cc626f51d8b51fbe", null ],
-    [ "performTeardown", "d3/db4/a00684.html#af4b0c436e6caf34cb2f224d5d3d0101f", null ],
-    [ "putIntoEffect", "d3/db4/a00684.html#a137cdef0b33add65990961cbbcfd7754", null ],
-    [ "putIntoEffectAll", "d3/db4/a00684.html#a975e8c1c7fe84999cc3b1184c4998740", null ],
-    [ "suspend", "d3/db4/a00684.html#a78355337ce68b52865815d604049e1db", null ],
-    [ "suspendAll", "d3/db4/a00684.html#a40340bbf5f4ea126be9e71e8611efeb8", null ],
-    [ "teardown", "d3/db4/a00684.html#ab42c7066fd1afa90a56f6c086f7ee861", null ],
-    [ "toString", "d3/db4/a00684.html#a997f4e9195c00bbd318912f5a197db1b", null ],
-    [ "bEffective", "d3/db4/a00684.html#aad3f4be367e30180da06f61aa766a989", null ],
-    [ "bSuspendable", "d3/db4/a00684.html#ae3ceb161b539d75fb8bf7bed4d62e046", null ],
-    [ "xInner", "d3/db4/a00684.html#a1ef686345419703c494561a8fa64110a", null ]
+    [ "AbstractEncounter", "d3/db4/a00684.html#a5f5e4d6df93478128d615d67d629d280", null ],
+    [ "addParticipant", "d3/db4/a00684.html#a08c6558d0d222d39a1b87fa1c5d04d32", null ],
+    [ "getCompetitors", "d3/db4/a00684.html#a65b8089add578104205ab06e7dfcbb55", null ],
+    [ "getWinner", "d3/db4/a00684.html#ac6dab942c19b5a3db31fec51ce9ad4ec", null ],
+    [ "isComplete", "d3/db4/a00684.html#af028f2a9e305a91bb3b45e4a22ec6149", null ],
+    [ "isScored", "d3/db4/a00684.html#a150ffbf5407ca851f28d3cfa42301cf3", null ],
+    [ "setResult", "d3/db4/a00684.html#a24581eedee460958b6b092dc3fa49db4", null ],
+    [ "toBsonDocument", "d3/db4/a00684.html#a20a012d58ba2013f86ee0358182e3b95", null ],
+    [ "competitors", "d3/db4/a00684.html#aed061f275ef4a3c2d2e74288c54ff815", null ],
+    [ "result", "d3/db4/a00684.html#a126f07dcf4b4b6a5aeec0c152b633d03", null ]
 ];

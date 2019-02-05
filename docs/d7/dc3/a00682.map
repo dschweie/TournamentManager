@@ -1,7 +1,8 @@
-<map id="org.dos.tournament.common.movement.regulations.AbstractRegulationDecorator&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.AbstractRegulationDecorator&lt; T, G, P &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="687,109,1009,150"/>
-<area shape="rect" id="node2" href="$d6/dd3/a00688.html" title=" " alt="" coords="333,36,552,92"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,51,116,77"/>
-<area shape="rect" id="node4" title=" " alt="" coords="368,116,517,143"/>
-<area shape="rect" id="node5" title=" " alt="" coords="409,176,476,203"/>
+<map id="org.dos.tournament.common.competition.AbstractEncounter" name="org.dos.tournament.common.competition.AbstractEncounter">
+<area shape="rect" id="node1" title=" " alt="" coords="733,71,996,112"/>
+<area shape="rect" id="node2" href="$df/d7d/a00696.html" title=" " alt="" coords="340,5,603,47"/>
+<area shape="rect" id="node3" href="$d3/d2c/a00764.html" title=" " alt="" coords="357,71,585,112"/>
+<area shape="rect" id="node4" href="$d2/daa/a01488.html" title=" " alt="" coords="5,78,96,105"/>
+<area shape="rect" id="node5" title=" " alt="" coords="331,136,612,177"/>
+<area shape="rect" id="node6" title=" " alt="" coords="21,143,81,170"/>
 </map>

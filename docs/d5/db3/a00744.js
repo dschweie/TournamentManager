@@ -1,10 +1,9 @@
 var a00744 =
 [
-    [ "addResultOfMatchday", "d5/db3/a00744.html#a8da2833ba6448e1f9efd0c741c2f0310", null ],
-    [ "countMatches", "d5/db3/a00744.html#a835f344f43b0e6bb15ad50ed65109df3", null ],
-    [ "getResultOfMatchday", "d5/db3/a00744.html#a0ac8e1545fa279498168e30a428a2afe", null ],
-    [ "getTotalResult", "d5/db3/a00744.html#a59e012d9997c70bc59b1450405f8f04c", null ],
-    [ "getTotalResultIdentifiers", "d5/db3/a00744.html#a6db26cfa859f21668deec983c18e39a4", null ],
-    [ "getTotalScore", "d5/db3/a00744.html#a0123762396de5c3ec74348d871309af9", null ],
-    [ "getValueForCategory", "d5/db3/a00744.html#ae7995dd37cc7fa3985233efc700e9625", null ]
+    [ "NumericParticipantId", "d5/db3/a00744.html#aab1f6b3523403b2c924d4e580dcf404b", null ],
+    [ "getCode", "d5/db3/a00744.html#a2086da958fa3116c37ab319134df26e0", null ],
+    [ "getDescription", "d5/db3/a00744.html#a9e4211703fd5d19303806f4b7f033c66", null ],
+    [ "getName", "d5/db3/a00744.html#ab4a66464110efc5cb8f7c344c5e70c3b", null ],
+    [ "toString", "d5/db3/a00744.html#affc673f94410e556a0360a5dfb0bdf5a", null ],
+    [ "id", "d5/db3/a00744.html#af64ef85497d7e5846ea05acc45fc3aec", null ]
 ];

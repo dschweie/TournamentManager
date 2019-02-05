@@ -1,5 +1,4 @@
-<map id="org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableColumnModel" name="org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableColumnModel">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,383,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="35,5,207,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="231,5,304,32"/>
+<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionUpdateAttendee" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionUpdateAttendee">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,353,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="125,5,233,32"/>
 </map>

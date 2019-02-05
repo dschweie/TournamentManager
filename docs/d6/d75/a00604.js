@@ -1,10 +1,17 @@
 var a00604 =
 [
-    [ "RuleSuperMeleeNeverMeetOpponentTwice", "d6/d75/a00604.html#ac0412e30cbb70d9718b746082a7b5c92", null ],
-    [ "getRuleDescription", "d6/d75/a00604.html#acc6b78d6943f6f78e49ce4e2cbb7eadb", null ],
-    [ "initParticipantTable", "d6/d75/a00604.html#a885686fd17211f7d7e329b008ab8d922", null ],
-    [ "performCheck", "d6/d75/a00604.html#a6dff999a45a5d8e72663dc359fa6e5a1", null ],
-    [ "performInit", "d6/d75/a00604.html#a1f8654b7b6e0d743333941704d523f41", null ],
-    [ "performTeardown", "d6/d75/a00604.html#a39424046b2249ea932b674c621b8551d", null ],
-    [ "aiParticipantTable", "d6/d75/a00604.html#abafb0b085a12a0c694ee3b5d36db8150", null ]
+    [ "PetanqueTotalResult", "d4/d14/a00608.html", "d4/d14/a00608" ],
+    [ "JoueurIndividuel", "d6/d75/a00604.html#ae8bab439a4fd812aaba4403ea404b1ea", null ],
+    [ "JoueurIndividuel", "d6/d75/a00604.html#a6a0952275d75a96db8b55106e14dbc62", null ],
+    [ "JoueurIndividuel", "d6/d75/a00604.html#a75377f3e4457d60a3b919a3c889600a5", null ],
+    [ "compareTo", "d6/d75/a00604.html#ac769e00fb4e0eabbb0d6592cb0e0f95e", null ],
+    [ "compareToByResult", "d6/d75/a00604.html#abc2fcf4e23bc0897d45e05c568f12aae", null ],
+    [ "getElement", "d6/d75/a00604.html#a9b1bceed588a580d9a7626ba3fd42648", null ],
+    [ "getForename", "d6/d75/a00604.html#a1a74d96defac8801fc0ce69cae8a381a", null ],
+    [ "getName", "d6/d75/a00604.html#ad22fae484222fc1aadebf8cf0ddf9405", null ],
+    [ "getSurname", "d6/d75/a00604.html#aceb9e065ba696ea22ffd252d13fc66a0", null ],
+    [ "setForename", "d6/d75/a00604.html#a4c448dacf2bd45aca70a2c0ab4097eb3", null ],
+    [ "setSurname", "d6/d75/a00604.html#a17c6fd0d4adbbaa12f0d3e02581a0811", null ],
+    [ "toString", "d6/d75/a00604.html#a26d8b9705fc9855464a0479162469f0c", null ],
+    [ "strSurname", "d6/d75/a00604.html#ae6c1df40de282e65837be1018a9e25c7", null ]
 ];

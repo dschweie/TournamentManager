@@ -94,6 +94,8 @@ public class PetanqueSuperMeleePanel extends JPanel
    */
   public PetanqueSuperMeleePanel(SuperMelee tournament)
   {
+    this.setName("SuperMeleePanel");
+    
     setPreferredSize(new Dimension(1024, 600));
     this.tournament = tournament;
     

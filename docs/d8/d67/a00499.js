@@ -1,7 +1,7 @@
 var a00499 =
 [
-    [ "SuperMeleeClubChampionship", "d8/d67/a00499.html#ad123513b2c7c402c6dea5e986762892a", null ],
-    [ "setResult", "d8/d67/a00499.html#a1a79d79a2a583876e3e89e5a09e9261f", null ],
-    [ "updateWinnerOfTheDay", "d8/d67/a00499.html#a03b47ee48f29b85ca76ef0cf676f2664", null ],
-    [ "iWinnerOfTheDay", "d8/d67/a00499.html#aa08255ab8b5a5c699efbaf29318e73f3", null ]
+    [ "SwingActionUpdateLastRound", "d8/d67/a00499.html#a91ce68e261271c56659d1759cd34b665", null ],
+    [ "actionPerformed", "d8/d67/a00499.html#a65f0fd938d12ff0079d18dba2574e344", null ],
+    [ "update", "d8/d67/a00499.html#af5f6b7cb808cc3adb96fb6bf08180f7c", null ],
+    [ "updateStatus", "d8/d67/a00499.html#afec69600c341f7d5c30a17f50f6667d4", null ]
 ];

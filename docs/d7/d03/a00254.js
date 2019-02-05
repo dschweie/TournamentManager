@@ -1,5 +1,8 @@
 var a00254 =
 [
-    [ "TournamentGrid", "df/d37/a00652.html", "df/d37/a00652" ],
-    [ "TournamentUtils", "dc/df2/a00656.html", null ]
+    [ "config", "de/dbc/a00249.html", "de/dbc/a00249" ],
+    [ "controls", "d4/d04/a00255.html", "d4/d04/a00255" ],
+    [ "dialogs", "d0/def/a00256.html", "d0/def/a00256" ],
+    [ "panels", "d7/d2f/a00258.html", "d7/d2f/a00258" ],
+    [ "utils", "dd/dd7/a00260.html", "dd/dd7/a00260" ]
 ];

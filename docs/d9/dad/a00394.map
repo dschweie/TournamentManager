@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.StorageKeyListener" name="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.StorageKeyListener">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,301,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="108,5,199,32"/>
+<map id="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel" name="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,169,351,211"/>
+<area shape="rect" id="node2" href="$d1/d98/a00407.html" title=" " alt="" coords="34,80,322,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="146,5,210,32"/>
 </map>

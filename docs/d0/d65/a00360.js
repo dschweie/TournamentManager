@@ -1,8 +1,6 @@
 var a00360 =
 [
-    [ "PreventDuplicatedElements", "d0/d65/a00360.html#a0cee88d65b295536ba21343dfbd8b820", null ],
-    [ "itemStateChanged", "d0/d65/a00360.html#a8566cfa30a501d7f213587f2ce80b4b1", null ],
-    [ "setDefaultColor", "d0/d65/a00360.html#a595df1e4faee4e71f91051152c817e0e", null ],
-    [ "updateGrid", "d0/d65/a00360.html#a81f5c4314912b082883519a0f032c40c", null ],
-    [ "colorDefault", "d0/d65/a00360.html#a5efac90ff7242e0f7d8cdb74df782da6", null ]
+    [ "SwingActionToggleTeamPresentation", "d0/d65/a00360.html#a0918741f979c28ff8a04f256a65ae758", null ],
+    [ "actionPerformed", "d0/d65/a00360.html#a7c62cfa6e8d96c4c336b8494e9eea99d", null ],
+    [ "updateButton", "d0/d65/a00360.html#adf6016493646618eb94ca37b08e9df9c", null ]
 ];

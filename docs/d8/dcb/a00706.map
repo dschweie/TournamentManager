@@ -1,4 +1,6 @@
-<map id="org.dos.tournament.common.player.IParticipant" name="org.dos.tournament.common.player.IParticipant">
-<area shape="rect" id="node1" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="5,80,236,121"/>
-<area shape="rect" id="node2" href="$db/d8b/a01464.html" title=" " alt="" coords="75,5,166,32"/>
+<map id="org.dos.tournament.common.movement.regulations.AbstractCoreRule&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.AbstractCoreRule&lt; T, G, P &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="273,75,596,117"/>
+<area shape="rect" id="node3" href="$df/d6f/a00623.html" title="Diese Klasse ist Basisklasse im Regelwerk." alt="" coords="800,5,1075,91"/>
+<area shape="rect" id="node4" href="$d1/d56/a00707.html" title=" " alt="" coords="776,115,1099,171"/>
+<area shape="rect" id="node2" href="$d3/d3b/a00715.html" title=" " alt="" coords="5,68,224,124"/>
 </map>

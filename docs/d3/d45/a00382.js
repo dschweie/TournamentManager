@@ -1,5 +1,5 @@
 var a00382 =
 [
-    [ "SwingActionOkAndNext", "d3/d45/a00382.html#aa21dd9f949d8f16feac7e36ea1f371f3", null ],
-    [ "actionPerformed", "d3/d45/a00382.html#ac52c8d4a404c42be8a5543f51e553858", null ]
+    [ "SwingActionCreateMatchday", "d3/d45/a00382.html#a8518b6d53773bf146321ee5f3b093c87", null ],
+    [ "actionPerformed", "d3/d45/a00382.html#a6d002ae84da14b1ddcb3cda79098b3ac", null ]
 ];

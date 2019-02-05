@@ -1,8 +1,5 @@
 var a00415 =
 [
-    [ "PetanqueMatchResult", "d0/dd6/a00415.html#a6d3851132a1254e4153811b22cc16ebf", null ],
-    [ "compareTo", "d0/dd6/a00415.html#ac2d36a282bb784baa8c43cd2d9f9141c", null ],
-    [ "compileGameScore", "d0/dd6/a00415.html#a0ef554cc882591fa0bf1dfb4cc85f6c8", null ],
-    [ "getMatchScore", "d0/dd6/a00415.html#a98478c8e57499ed66231cc05e404bcb5", null ],
-    [ "matchScore", "d0/dd6/a00415.html#a7f1f5a09da2784c47f48562f433d1157", null ]
+    [ "SwingActionCancel", "d0/dd6/a00415.html#a5bc249ec97b7ceb381fe309f38994fbf", null ],
+    [ "actionPerformed", "d0/dd6/a00415.html#a33802912dc138bf39d3925a2c194de57", null ]
 ];

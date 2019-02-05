@@ -1,5 +1,28 @@
 var a00508 =
 [
-    [ "SwingActionCreateNewMatchday", "dc/d30/a00508.html#ada526e5f6387558b6029017136050d7b", null ],
-    [ "actionPerformed", "dc/d30/a00508.html#a67520551692a471ec1bd224ad7f6280f", null ]
+    [ "SwingActionActivateAttendee", "d2/da3/a00520.html", "d2/da3/a00520" ],
+    [ "SwingActionCreateNewMatchday", "d7/d41/a00532.html", "d7/d41/a00532" ],
+    [ "SwingActionDeleteAttendee", "d5/d81/a00528.html", "d5/d81/a00528" ],
+    [ "SwingActionDeleteLastMatchday", "d4/d79/a00540.html", "d4/d79/a00540" ],
+    [ "SwingActionEnlistAttendee", "d4/dfb/a00512.html", "d4/dfb/a00512" ],
+    [ "SwingActionInactivateAttendee", "d9/d24/a00524.html", "d9/d24/a00524" ],
+    [ "SwingActionUpdateAttendee", "d4/d40/a00516.html", "d4/d40/a00516" ],
+    [ "SwingActionUpdateLastRound", "d4/d33/a00536.html", "d4/d33/a00536" ],
+    [ "PetanqueSuperMeleePanel", "dc/d30/a00508.html#a10c7fc169a9b12a3e571364cd938defa", null ],
+    [ "getTournament", "dc/d30/a00508.html#added482954228a49c9dc66bd8eaf83f2", null ],
+    [ "setTournament", "dc/d30/a00508.html#a1a072db3fcd6a1397643ac542c63ffe4", null ],
+    [ "activateAttendee", "dc/d30/a00508.html#accaf40f10cd27b7fcde0e09ac8492567", null ],
+    [ "createNewMatchday", "dc/d30/a00508.html#af3a5ad4d5931e34eda92934ca10c806f", null ],
+    [ "deleteAttendee", "dc/d30/a00508.html#a76129a410b2f0ec3fe9e0edf52be54ae", null ],
+    [ "deleteLastMatchday", "dc/d30/a00508.html#a5f73d8a2bbcba3f4e26bcb6dfe8b2f2a", null ],
+    [ "enlistAttendee", "dc/d30/a00508.html#a5faf9457f9cd53453e0b6bf3161d2283", null ],
+    [ "inactivateAttendee", "dc/d30/a00508.html#ad423b5b17189f9e64b230a49e23ef2a9", null ],
+    [ "replaceLastMatchday", "dc/d30/a00508.html#a8385d82f1f19667e56644b3f050b1753", null ],
+    [ "tabbedPaneMatchdays", "dc/d30/a00508.html#a028dc66edbca2446e719ddf8bc1764a9", null ],
+    [ "table", "dc/d30/a00508.html#a48e220485b3f1dccddb4b8002f8d6da5", null ],
+    [ "tableAttendees", "dc/d30/a00508.html#a76aba7b1fa8491537a01d006ed2504fb", null ],
+    [ "tableCourts", "dc/d30/a00508.html#a513dc364b3374b70513a7d9deb5fe948", null ],
+    [ "tableLeaderboard", "dc/d30/a00508.html#a20f97595328da66dd8137f372e86a383", null ],
+    [ "tournament", "dc/d30/a00508.html#a93fc89ad4ce6ea887c4250429fb4bf7e", null ],
+    [ "updateAttendee", "dc/d30/a00508.html#a1f7428101d7bc25643989fcd91937767", null ]
 ];

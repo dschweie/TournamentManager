@@ -1,7 +1,7 @@
 var a00540 =
 [
-    [ "CreateTournamentAction", "d4/d79/a00540.html#aaa2eaa4d76a512ab0ba821b81ea70795", null ],
-    [ "actionPerformed", "d4/d79/a00540.html#adba1eda86a64e1d033843b5912a2bb6f", null ],
-    [ "updateApplicationFrame", "d4/d79/a00540.html#a8c2c3bbe2b433798c3dd4c6d9954354a", null ],
-    [ "frmApplication", "d4/d79/a00540.html#a78d6602a40ee3ce581e1c599bf8333c2", null ]
+    [ "SwingActionDeleteLastMatchday", "d4/d79/a00540.html#a27b2b18690e36c58f517231c1fc5d4e6", null ],
+    [ "actionPerformed", "d4/d79/a00540.html#a51a78b3b945f3ef46cb72180af036332", null ],
+    [ "update", "d4/d79/a00540.html#aee633fdf9d8dccb1cfbcae7df9a880c8", null ],
+    [ "updateStatus", "d4/d79/a00540.html#af12f3f7813907a8610388a382a8f38ca", null ]
 ];

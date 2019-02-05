@@ -68,6 +68,20 @@ public class DatabaseClient implements IStorage,  ServerMonitorListener
           .build();
 
       this.mongoClient = new MongoClient(new ServerAddress(this.mongoHost, 27017), clientOptions);
+      
+      
+      
+      System.out.println(this.mongoClient.getDatabase(mongoDatabaseName).listCollectionNames().toString());
+      String strAllCollections = "";
+      for(String strCollection : this.mongoClient.getDatabase(mongoDatabaseName).listCollectionNames())
+      {
+        System.out.println(strCollection);
+        strAllCollections = strAllCollections.concat(strCollection).concat(";");
+      }
+      if(0 > strAllCollections.indexOf(mongoCollectionParticipantsName))
+        this.mongoClient.getDatabase(mongoDatabaseName).createCollection(mongoCollectionParticipantsName);
+      if(0 > strAllCollections.indexOf(mongoCollectionTournamentsName))
+        this.mongoClient.getDatabase(mongoDatabaseName).createCollection(mongoCollectionTournamentsName);
     } 
     catch (Exception ex) 
     {
@@ -113,7 +127,7 @@ public class DatabaseClient implements IStorage,  ServerMonitorListener
         HashMap<String,String> _element = new HashMap<String,String>();
         String _description = "";
         if(it.containsKey("participants"))
-          _description = _description.concat(String.valueOf(((ArrayList<Object>) it.get("participants")).size()));
+          _description = _description.concat(String.valueOf(((ArrayList<Object>) it.get("participants")).size()).concat(" Teilnehmer"));
         _element.put("tid", it.getString("tid"));
         _element.put("name", it.containsKey("name")?it.getString("name"):it.getString("tid"));
         _element.put("description", it.containsKey("description")?it.getString("description"):_description);

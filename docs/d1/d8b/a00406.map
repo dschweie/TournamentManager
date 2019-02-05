@@ -1,5 +1,5 @@
-<map id="org.dos.tournament.application.dialogs.tournament.DialogChooseTournament.SelectTournamentAction" name="org.dos.tournament.application.dialogs.tournament.DialogChooseTournament.SelectTournamentAction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,324,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="44,5,152,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="177,5,286,32"/>
+<map id="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee" name="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee">
+<area shape="rect" id="node1" title=" " alt="" coords="34,80,322,121"/>
+<area shape="rect" id="node3" href="$db/dbc/a00395.html" title=" " alt="" coords="5,169,351,211"/>
+<area shape="rect" id="node2" title=" " alt="" coords="146,5,210,32"/>
 </map>

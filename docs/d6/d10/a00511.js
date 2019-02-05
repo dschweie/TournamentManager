@@ -1,6 +1,28 @@
 var a00511 =
 [
-    [ "TournamentGrid", "d6/d10/a00511.html#a88a33fcb45ce0beeb6fd63669a4908d0", null ],
-    [ "buildGrid", "d6/d10/a00511.html#a946d180358a7d3c6cf0d80569bf77678", null ],
-    [ "grid", "d6/d10/a00511.html#a90b341ce6b7b4733415dec76de896972", null ]
+    [ "SwingActionActivateAttendee", "d0/de7/a00523.html", "d0/de7/a00523" ],
+    [ "SwingActionCreateNewMatchday", "d7/d84/a00535.html", "d7/d84/a00535" ],
+    [ "SwingActionDeleteAttendee", "d0/d2a/a00531.html", "d0/d2a/a00531" ],
+    [ "SwingActionDeleteLastMatchday", "d4/d9c/a00543.html", "d4/d9c/a00543" ],
+    [ "SwingActionEnlistAttendee", "dc/d19/a00515.html", "dc/d19/a00515" ],
+    [ "SwingActionInactivateAttendee", "d9/d44/a00527.html", "d9/d44/a00527" ],
+    [ "SwingActionUpdateAttendee", "dd/d4d/a00519.html", "dd/d4d/a00519" ],
+    [ "SwingActionUpdateLastRound", "d3/d87/a00539.html", "d3/d87/a00539" ],
+    [ "PetanqueSuperMeleePanel", "d6/d10/a00511.html#a10c7fc169a9b12a3e571364cd938defa", null ],
+    [ "getTournament", "d6/d10/a00511.html#added482954228a49c9dc66bd8eaf83f2", null ],
+    [ "setTournament", "d6/d10/a00511.html#a1a072db3fcd6a1397643ac542c63ffe4", null ],
+    [ "activateAttendee", "d6/d10/a00511.html#accaf40f10cd27b7fcde0e09ac8492567", null ],
+    [ "createNewMatchday", "d6/d10/a00511.html#af3a5ad4d5931e34eda92934ca10c806f", null ],
+    [ "deleteAttendee", "d6/d10/a00511.html#a76129a410b2f0ec3fe9e0edf52be54ae", null ],
+    [ "deleteLastMatchday", "d6/d10/a00511.html#a5f73d8a2bbcba3f4e26bcb6dfe8b2f2a", null ],
+    [ "enlistAttendee", "d6/d10/a00511.html#a5faf9457f9cd53453e0b6bf3161d2283", null ],
+    [ "inactivateAttendee", "d6/d10/a00511.html#ad423b5b17189f9e64b230a49e23ef2a9", null ],
+    [ "replaceLastMatchday", "d6/d10/a00511.html#a8385d82f1f19667e56644b3f050b1753", null ],
+    [ "tabbedPaneMatchdays", "d6/d10/a00511.html#a028dc66edbca2446e719ddf8bc1764a9", null ],
+    [ "table", "d6/d10/a00511.html#a48e220485b3f1dccddb4b8002f8d6da5", null ],
+    [ "tableAttendees", "d6/d10/a00511.html#a76aba7b1fa8491537a01d006ed2504fb", null ],
+    [ "tableCourts", "d6/d10/a00511.html#a513dc364b3374b70513a7d9deb5fe948", null ],
+    [ "tableLeaderboard", "d6/d10/a00511.html#a20f97595328da66dd8137f372e86a383", null ],
+    [ "tournament", "d6/d10/a00511.html#a93fc89ad4ce6ea887c4250429fb4bf7e", null ],
+    [ "updateAttendee", "d6/d10/a00511.html#a1f7428101d7bc25643989fcd91937767", null ]
 ];

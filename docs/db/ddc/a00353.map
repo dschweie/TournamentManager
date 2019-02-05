@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.SwingActionFillUpForm" name="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.SwingActionFillUpForm">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,375,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="136,5,244,32"/>
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,323,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="53,5,161,32"/>
+<area shape="rect" id="node3" href="$de/d3c/a01490.html" title=" " alt="" coords="185,5,261,32"/>
 </map>

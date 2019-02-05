@@ -1,5 +1,5 @@
 var a00500 =
 [
-    [ "SwingActionInactivateAttendee", "de/d4e/a00500.html#aaea40aeacaf8eed9d2e280a458665870", null ],
-    [ "actionPerformed", "de/d4e/a00500.html#ae60f6b8ce4cfa053268ebbe8323804a0", null ]
+    [ "SwingActionAddParticipantsToDatabase", "de/d4e/a00500.html#adc778240f20548796686b386127afbc2", null ],
+    [ "actionPerformed", "de/d4e/a00500.html#aef18cef23e23b0c9d6a5f4e8a685637e", null ]
 ];

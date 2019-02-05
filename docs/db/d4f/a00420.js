@@ -1,5 +1,6 @@
 var a00420 =
 [
-    [ "SwingAction", "db/d4f/a00420.html#abf8baf867ca9c2ab7440be20f005f50e", null ],
-    [ "actionPerformed", "db/d4f/a00420.html#a748690994d547b45ac08dc8e332faac8", null ]
+    [ "keyPressed", "db/d4f/a00420.html#a792272c76cb3b090d2087df15d07ce56", null ],
+    [ "keyReleased", "db/d4f/a00420.html#a368f964b347b50a6f0bbefe6c68d5bdf", null ],
+    [ "keyTyped", "db/d4f/a00420.html#a941952c560cfa30139f507d115379463", null ]
 ];

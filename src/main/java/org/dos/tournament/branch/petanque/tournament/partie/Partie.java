@@ -172,4 +172,15 @@ public class Partie extends AbstractEncounter
       
     return _retval;
   }
+
+  public int getHomeScore() 
+  {
+    return ((PetanqueResult)this.result).getScore();
+  }
+
+  public int getGuestScore() 
+  {
+    // TODO Auto-generated method stub
+    return ((PetanqueResult)this.result).getOppsScore();
+  }
 }

@@ -220,6 +220,15 @@ public class TournamentManagerUI
     TournamentManagerUI.initConnection();
   }
   
+  private void closeOpenTournament()
+  {
+    for(int i=0; i < this.frmTurnierverwaltung.getContentPane().getComponents().length; ++i)
+      if(null != this.frmTurnierverwaltung.getContentPane().getComponent(i).getName())
+        if(this.frmTurnierverwaltung.getContentPane().getComponent(i).getName().endsWith("Panel"))
+          this.frmTurnierverwaltung.getContentPane().remove(i);
+      
+  }
+  
   static public MongoClient initConnection()
   {
     System.out.println(SingletonProperties.getProperty("storage"));
@@ -259,6 +268,11 @@ public class TournamentManagerUI
     TournamentManagerUI.application.mnSupermelee.add(item);
   }
 
+  public static void removeAllMenuItemsSupermelee() {
+    // TODO Auto-generated method stub
+    TournamentManagerUI.application.mnSupermelee.removeAll();
+  }
+
   
   private class SwingAction extends AbstractAction {
     public SwingAction() {
@@ -286,6 +300,8 @@ public class TournamentManagerUI
     public void actionPerformed(ActionEvent e) {
       if(null != this.frmApplication)
       {
+        TournamentManagerUI.this.closeOpenTournament();
+        
         ParticipantsTableModel _tableModel = new ParticipantsTableModel();
         SuperMelee _tournament = new SuperMeleeClubChampionship();
         PetanqueSuperMeleePanel _panel = new PetanqueSuperMeleePanel(_tournament);
@@ -310,13 +326,17 @@ public class TournamentManagerUI
      */
     private static final long serialVersionUID = -414080870711326324L;
     public CreateFridayTournamentAction(JFrame frmApplication) {
-      putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.createTournament.name")); //$NON-NLS-1$ //$NON-NLS-2$
-      putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.createTournament.short description")); //$NON-NLS-1$ //$NON-NLS-2$
+//      putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.createTournament.name")); //$NON-NLS-1$ //$NON-NLS-2$
+//      putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.createTournament.short description")); //$NON-NLS-1$ //$NON-NLS-2$
+      putValue(NAME, "under construction"); //$NON-NLS-1$ //$NON-NLS-2$
+      putValue(SHORT_DESCRIPTION, "be patient"); //$NON-NLS-1$ //$NON-NLS-2$
     }
     
     @Override
     public void actionPerformed(ActionEvent e) 
     {
+      TournamentManagerUI.this.closeOpenTournament();
+      /*      
       PetanqueLEquipeFormePanel _panel = new PetanqueLEquipeFormePanel(null);
       _panel.setTournament(null);
       System.out.println("_panel = ".concat(_panel.toString()));
@@ -324,6 +344,7 @@ public class TournamentManagerUI
       System.out.println("TournamentManagerUI.this.frmTurnierverwaltung.getContentPane() = ".concat(TournamentManagerUI.this.frmTurnierverwaltung.getContentPane().toString()));
       TournamentManagerUI.this.frmTurnierverwaltung.getContentPane().add(_panel);
       TournamentManagerUI.this.frmTurnierverwaltung.revalidate();
+      */
     }
     
   }
@@ -342,6 +363,8 @@ public class TournamentManagerUI
       while(_dialog.isVisible());
       if(_dialog.isTournamentSelected())
       {
+        TournamentManagerUI.this.closeOpenTournament();
+        
         System.out.println(_dialog.getSelectedTournamentId());
         JPanel _frame = FactoryTournament.SetupTournamentEnvironment(_dialog.getSelectedTournamentId());
         TournamentManagerUI.this.frmTurnierverwaltung.getContentPane().add(_frame);
@@ -349,4 +372,5 @@ public class TournamentManagerUI
       }
     }
   }
+
 }

@@ -1,6 +1,8 @@
 var a00590 =
 [
-    [ "MatchdayUpdate", "d7/db1/a00590.html#a0feb2fd89002596f5cc1b2a6f5139e61", null ],
-    [ "getMatchday", "d7/db1/a00590.html#a3e7e4cf84e343ff57f67ab94a22f284f", null ],
-    [ "matchday", "d7/db1/a00590.html#a0fef9966304e8edb75cbe5e44cc51c6e", null ]
+    [ "PetanqueMatchResult", "d7/db1/a00590.html#a6d3851132a1254e4153811b22cc16ebf", null ],
+    [ "compareTo", "d7/db1/a00590.html#ac2d36a282bb784baa8c43cd2d9f9141c", null ],
+    [ "compileGameScore", "d7/db1/a00590.html#a0ef554cc882591fa0bf1dfb4cc85f6c8", null ],
+    [ "getMatchScore", "d7/db1/a00590.html#a98478c8e57499ed66231cc05e404bcb5", null ],
+    [ "matchScore", "d7/db1/a00590.html#a7f1f5a09da2784c47f48562f433d1157", null ]
 ];

@@ -1,8 +1,7 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTwice" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTwice">
-<area shape="rect" id="node1" title=" " alt="" coords="539,39,976,80"/>
-<area shape="rect" id="node4" href="$d1/d8c/a00600.html" title=" " alt="" coords="1024,5,1461,47"/>
-<area shape="rect" id="node5" href="$d0/d8d/a00612.html" title=" " alt="" coords="1024,71,1461,112"/>
-<area shape="rect" id="node2" href="$d3/db4/a00684.html" title=" " alt="" coords="272,17,491,102"/>
-<area shape="rect" id="node3" href="$d6/dd3/a00688.html" title=" " alt="" coords="5,31,224,87"/>
-<area shape="rect" id="node6" href="$d4/d14/a00608.html" title=" " alt="" coords="1509,71,1947,112"/>
+<map id="org.dos.tournament.branch.petanque.team.JoueurIndividuel" name="org.dos.tournament.branch.petanque.team.JoueurIndividuel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,363,276,404"/>
+<area shape="rect" id="node2" href="$d0/d72/a00724.html" title=" " alt="" coords="25,273,256,315"/>
+<area shape="rect" id="node3" href="$df/d3b/a00728.html" title=" " alt="" coords="25,184,256,225"/>
+<area shape="rect" id="node4" href="$d2/d94/a00716.html" title=" " alt="" coords="25,95,256,136"/>
+<area shape="rect" id="node5" href="$d4/db8/a00732.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="25,5,256,47"/>
 </map>

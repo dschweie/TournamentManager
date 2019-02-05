@@ -1,5 +1,4 @@
-<map id="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.PreventDuplicatedElements" name="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.PreventDuplicatedElements">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,375,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="95,5,189,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="213,5,265,32"/>
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingAction_3" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingAction_3">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,305,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="101,5,209,32"/>
 </map>

@@ -1,6 +1,6 @@
 var a00652 =
 [
-    [ "TournamentGrid", "df/d37/a00652.html#a88a33fcb45ce0beeb6fd63669a4908d0", null ],
-    [ "buildGrid", "df/d37/a00652.html#a946d180358a7d3c6cf0d80569bf77678", null ],
-    [ "grid", "df/d37/a00652.html#a90b341ce6b7b4733415dec76de896972", null ]
+    [ "MatchdayUpdate", "df/d37/a00652.html#a0feb2fd89002596f5cc1b2a6f5139e61", null ],
+    [ "getMatchday", "df/d37/a00652.html#a3e7e4cf84e343ff57f67ab94a22f284f", null ],
+    [ "matchday", "df/d37/a00652.html#a0fef9966304e8edb75cbe5e44cc51c6e", null ]
 ];

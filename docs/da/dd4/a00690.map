@@ -1,11 +1,7 @@
-<map id="org.dos.tournament.common.player.AbstractParticipant" name="org.dos.tournament.common.player.AbstractParticipant">
-<area shape="rect" id="node1" title=" " alt="" coords="619,175,849,216"/>
-<area shape="rect" id="node2" href="$da/d6b/a00708.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="267,5,498,47"/>
-<area shape="rect" id="node3" href="$db/d8b/a01464.html" title=" " alt="" coords="5,78,96,105"/>
-<area shape="rect" id="node6" href="$dc/dce/a00740.html" title=" " alt="" coords="269,71,497,112"/>
-<area shape="rect" id="node9" href="$d5/db3/a00744.html" title=" " alt="" coords="269,136,497,177"/>
-<area shape="rect" id="node4" href="$d0/d72/a00724.html" title=" " alt="" coords="253,201,512,243"/>
-<area shape="rect" id="node5" href="$d3/dda/a00712.html" title=" " alt="" coords="253,267,512,308"/>
-<area shape="rect" id="node7" title=" " alt="" coords="292,333,473,359"/>
-<area shape="rect" id="node8" title=" " alt="" coords="12,333,89,359"/>
+<map id="org.dos.tournament.common.competition.AbstractTournament" name="org.dos.tournament.common.competition.AbstractTournament">
+<area shape="rect" id="node1" title=" " alt="" coords="316,27,579,69"/>
+<area shape="rect" id="node4" href="$de/d33/a00651.html" title=" " alt="" coords="627,27,997,69"/>
+<area shape="rect" id="node2" title=" " alt="" coords="93,5,180,32"/>
+<area shape="rect" id="node3" href="$d8/d86/a00703.html" title="Das Interface dient als allgemeine Schittstelle für Turniere." alt="" coords="5,57,268,98"/>
+<area shape="rect" id="node5" href="$d2/d6e/a00667.html" title="Diese Klasse bildet das monatliche Super Melee&#45;Turnier der Bouleabteilung von Blau&#45;Gelb Groß&#45;Gerau ab..." alt="" coords="1045,27,1416,69"/>
 </map>

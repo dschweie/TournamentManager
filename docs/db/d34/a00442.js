@@ -1,7 +1,5 @@
 var a00442 =
 [
-    [ "SwingActionDeleteLastMatchday", "db/d34/a00442.html#a59f0a5ca93ff6e3af21c534914a026c3", null ],
-    [ "actionPerformed", "db/d34/a00442.html#a50b80e641068306890a15e26f1926b14", null ],
-    [ "update", "db/d34/a00442.html#acb4ff7c2593aad50b7d7afe515c04c96", null ],
-    [ "updateStatus", "db/d34/a00442.html#ad9efdb7bc85bc7693faed3cc56905e59", null ]
+    [ "CancelAction", "db/d34/a00442.html#a4958c2ec3d4c2cd5e1fc1326ff736da7", null ],
+    [ "actionPerformed", "db/d34/a00442.html#a9e6442664ed9dd7d2bc0a7f5235d63b9", null ]
 ];

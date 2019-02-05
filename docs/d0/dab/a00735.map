@@ -1,5 +1,5 @@
-<map id="org.dos.tournament.common.result.ConstantScoreResult" name="org.dos.tournament.common.result.ConstantScoreResult">
-<area shape="rect" id="node1" title=" " alt="" coords="5,169,233,211"/>
-<area shape="rect" id="node2" href="$dc/dce/a00740.html" title=" " alt="" coords="5,80,233,121"/>
-<area shape="rect" id="node3" href="$db/d8b/a01464.html" title=" " alt="" coords="74,5,165,32"/>
+<map id="org.dos.tournament.common.player.utils.IParticipantId" name="org.dos.tournament.common.player.utils.IParticipantId">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,264,80"/>
+<area shape="rect" id="node2" href="$dc/dce/a00740.html" title=" " alt="" coords="312,5,571,47"/>
+<area shape="rect" id="node3" href="$d5/db3/a00744.html" title=" " alt="" coords="312,71,571,112"/>
 </map>

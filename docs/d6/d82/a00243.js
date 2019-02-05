@@ -1,4 +1,4 @@
 var a00243 =
 [
-    [ "TableBasedIndividual", "dd/de9/a00552.html", "dd/de9/a00552" ]
+    [ "SingletonProperties", "d8/d0a/a00292.html", "d8/d0a/a00292" ]
 ];

@@ -1,5 +1,7 @@
 var a00392 =
 [
-    [ "SwingActionOkAndNext", "d4/d27/a00392.html#aa21dd9f949d8f16feac7e36ea1f371f3", null ],
-    [ "actionPerformed", "d4/d27/a00392.html#ac52c8d4a404c42be8a5543f51e553858", null ]
+    [ "SwingActionOK", "d9/da1/a00396.html", "d9/da1/a00396" ],
+    [ "SwingActionOkAndNext", "d9/d95/a00400.html", "d9/d95/a00400" ],
+    [ "DialogJoueurIndividuel", "d4/d27/a00392.html#aa33036682cb89f2d70cf31ec1fcced0a", null ],
+    [ "DialogJoueurIndividuel", "d4/d27/a00392.html#ada025f36ddc0f09d5577001cbe8c86b0", null ]
 ];

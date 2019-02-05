@@ -1,11 +1,10 @@
 var a00634 =
 [
-    [ "addParticipant", "d7/de4/a00634.html#a0a2c0b82582f3572b04794a4b9893911", null ],
-    [ "getCompetitorResult", "d7/de4/a00634.html#ac25bbf28f283c0163764e509be0e3d20", null ],
-    [ "getRank", "d7/de4/a00634.html#a167583b2a6779f6ee6069bbe8a93bd69", null ],
-    [ "getResult", "d7/de4/a00634.html#a6f35f8cf68bd83fe68ea895ad1fa1fb7", null ],
-    [ "getWinner", "d7/de4/a00634.html#a16b76f8f2318165e2fdd3cffe372d11f", null ],
-    [ "isComplete", "d7/de4/a00634.html#ace2da7f715ca9b0fa2841ed6f1a79120", null ],
-    [ "isScored", "d7/de4/a00634.html#a8be6844ee9175cfb5e91e50c393d215a", null ],
-    [ "setResult", "d7/de4/a00634.html#ac9444f0654bfe9243ebb1ca95c9c68b6", null ]
+    [ "RuleSuperMeleeNeverMeetOpponentTwice", "d7/de4/a00634.html#ac0412e30cbb70d9718b746082a7b5c92", null ],
+    [ "getRuleDescription", "d7/de4/a00634.html#acc6b78d6943f6f78e49ce4e2cbb7eadb", null ],
+    [ "initParticipantTable", "d7/de4/a00634.html#a885686fd17211f7d7e329b008ab8d922", null ],
+    [ "performCheck", "d7/de4/a00634.html#a6dff999a45a5d8e72663dc359fa6e5a1", null ],
+    [ "performInit", "d7/de4/a00634.html#a1f8654b7b6e0d743333941704d523f41", null ],
+    [ "performTeardown", "d7/de4/a00634.html#a39424046b2249ea932b674c621b8551d", null ],
+    [ "aiParticipantTable", "d7/de4/a00634.html#abafb0b085a12a0c694ee3b5d36db8150", null ]
 ];

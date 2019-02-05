@@ -1,11 +1,11 @@
 var a00696 =
 [
-    [ "AbstractTeamParticipant", "df/d7d/a00696.html#ac03161fa6c9d5c7cd6568e863e1266d7", null ],
-    [ "contains", "df/d7d/a00696.html#a9b1a728efa7d5929d444cf1af49d28ac", null ],
-    [ "countAttendees", "df/d7d/a00696.html#a3dddc76b55a8a54dea3421e4faaee7cd", null ],
-    [ "getAttendeesToArray", "df/d7d/a00696.html#a2db3f94c11aaeff7473113f605a375cc", null ],
-    [ "getParticipants", "df/d7d/a00696.html#aa05dc5fe12666ce0d81edafb83efafca", null ],
-    [ "hasAttendees", "df/d7d/a00696.html#af582ca4b3e675f4053d9d2ba62cd2216", null ],
-    [ "setParticipants", "df/d7d/a00696.html#a99e96c85cfdda197338544d5e906043c", null ],
-    [ "participants", "df/d7d/a00696.html#a1e027a2951e472a459d1699f3094d6e0", null ]
+    [ "addParticipant", "df/d7d/a00696.html#a0a2c0b82582f3572b04794a4b9893911", null ],
+    [ "getCompetitorResult", "df/d7d/a00696.html#ac25bbf28f283c0163764e509be0e3d20", null ],
+    [ "getRank", "df/d7d/a00696.html#a167583b2a6779f6ee6069bbe8a93bd69", null ],
+    [ "getResult", "df/d7d/a00696.html#a6f35f8cf68bd83fe68ea895ad1fa1fb7", null ],
+    [ "getWinner", "df/d7d/a00696.html#a16b76f8f2318165e2fdd3cffe372d11f", null ],
+    [ "isComplete", "df/d7d/a00696.html#ace2da7f715ca9b0fa2841ed6f1a79120", null ],
+    [ "isScored", "df/d7d/a00696.html#a8be6844ee9175cfb5e91e50c393d215a", null ],
+    [ "setResult", "df/d7d/a00696.html#ac9444f0654bfe9243ebb1ca95c9c68b6", null ]
 ];

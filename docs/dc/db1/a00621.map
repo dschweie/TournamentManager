@@ -1,5 +1,6 @@
-<map id="org.dos.tournament.common.competition.AbstractEncounter" name="org.dos.tournament.common.competition.AbstractEncounter">
-<area shape="rect" id="node1" title=" " alt="" coords="45,95,308,136"/>
-<area shape="rect" id="node3" href="$da/d6e/a00610.html" title=" " alt="" coords="5,184,348,225"/>
-<area shape="rect" id="node2" href="$d7/de4/a00634.html" title=" " alt="" coords="45,5,308,47"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique">
+<area shape="rect" id="node1" title="Diese Klasse ist Basisklasse im Regelwerk." alt="" coords="869,43,1307,85"/>
+<area shape="rect" id="node2" href="$d1/d56/a00707.html" title=" " alt="" coords="601,21,820,107"/>
+<area shape="rect" id="node3" href="$d3/d3b/a00715.html" title=" " alt="" coords="333,36,552,92"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,51,116,77"/>
 </map>

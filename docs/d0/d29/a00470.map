@@ -1,5 +1,4 @@
-<map id="org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel.SwingActionUpdateLastRound" name="org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel.SwingActionUpdateLastRound">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,379,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="81,5,189,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="213,5,286,32"/>
+<map id="org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel" name="org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,308,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="126,5,187,32"/>
 </map>

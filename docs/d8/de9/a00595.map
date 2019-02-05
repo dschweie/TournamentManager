@@ -1,5 +1,9 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique">
-<area shape="rect" id="node1" title="Diese Klasse ist Basisklasse im Regelwerk." alt="" coords="539,27,976,69"/>
-<area shape="rect" id="node2" href="$d4/d9b/a00680.html" title=" " alt="" coords="272,5,491,91"/>
-<area shape="rect" id="node3" href="$d6/dd3/a00688.html" title=" " alt="" coords="5,20,224,76"/>
+<map id="org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam" name="org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam">
+<area shape="rect" id="node1" title=" " alt="" coords="980,39,1251,80"/>
+<area shape="rect" id="node6" href="$d1/d8c/a00600.html" title=" " alt="" coords="1299,5,1569,47"/>
+<area shape="rect" id="node7" href="$d0/d8d/a00612.html" title=" " alt="" coords="1299,71,1569,112"/>
+<area shape="rect" id="node2" href="$dc/d14/a00720.html" title=" " alt="" coords="701,39,932,80"/>
+<area shape="rect" id="node3" href="$d2/d94/a00716.html" title=" " alt="" coords="423,39,653,80"/>
+<area shape="rect" id="node4" href="$d4/db8/a00732.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="144,39,375,80"/>
+<area shape="rect" id="node5" href="$d2/daa/a01488.html" title=" " alt="" coords="5,46,96,73"/>
 </map>

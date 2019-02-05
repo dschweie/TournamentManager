@@ -1,12 +1,10 @@
 var a00704 =
 [
-    [ "Attendee", "d4/d6a/a00704.html#ad40ee4102acc08c80cc846936a8c72fc", null ],
-    [ "contains", "d4/d6a/a00704.html#a927e24acbe60e26cf9eba2b0870e237f", null ],
-    [ "getAttendeesToArray", "d4/d6a/a00704.html#af963dcacc67731e1cd05340e827269e0", null ],
-    [ "getDescriptionByCode", "d4/d6a/a00704.html#a7f8ebf3c5e4c0c9fcc902e017e42f412", null ],
-    [ "getElement", "d4/d6a/a00704.html#a2654699de432c3a551c50d4ec2384cdd", null ],
-    [ "getName", "d4/d6a/a00704.html#ada8067112f227814ebbeb90d44fbf56f", null ],
-    [ "hasAttendees", "d4/d6a/a00704.html#a9812b2dd8519e23bafef85e4134c3be6", null ],
-    [ "setName", "d4/d6a/a00704.html#a85cd42e6e44cd00049706db343c2bcb8", null ],
-    [ "name", "d4/d6a/a00704.html#a5940579bdaf578bb6541c54e80798752", null ]
+    [ "isEffective", "d4/d6a/a00704.html#ad5d1eca649dc500cf706facee8b7701b", null ],
+    [ "isSuspendable", "d4/d6a/a00704.html#ab4ab341ac219d3b90b3457a70ffe464b", null ],
+    [ "putIntoEffect", "d4/d6a/a00704.html#aed497e10c010a02b9189072e668df9b0", null ],
+    [ "putIntoEffectAll", "d4/d6a/a00704.html#a8335d1c90409c9788e7832568a300796", null ],
+    [ "suspend", "d4/d6a/a00704.html#a738097ffd200dfeb415a4f74a0f4c0b9", null ],
+    [ "suspendAll", "d4/d6a/a00704.html#a8544adade45af06faaed97ceddd8ecd6", null ],
+    [ "teardown", "d4/d6a/a00704.html#a889c6e46020aa394177e8ab410cdb3b4", null ]
 ];

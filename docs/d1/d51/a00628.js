@@ -1,6 +1,10 @@
 var a00628 =
 [
-    [ "MatchdayUpdate", "d1/d51/a00628.html#a0feb2fd89002596f5cc1b2a6f5139e61", null ],
-    [ "getMatchday", "d1/d51/a00628.html#a3e7e4cf84e343ff57f67ab94a22f284f", null ],
-    [ "matchday", "d1/d51/a00628.html#a0fef9966304e8edb75cbe5e44cc51c6e", null ]
+    [ "RuleSuperMeleeNeverMeetOpponentTwice", "d1/d51/a00628.html#ac0412e30cbb70d9718b746082a7b5c92", null ],
+    [ "getRuleDescription", "d1/d51/a00628.html#acc6b78d6943f6f78e49ce4e2cbb7eadb", null ],
+    [ "initParticipantTable", "d1/d51/a00628.html#a885686fd17211f7d7e329b008ab8d922", null ],
+    [ "performCheck", "d1/d51/a00628.html#a6dff999a45a5d8e72663dc359fa6e5a1", null ],
+    [ "performInit", "d1/d51/a00628.html#a1f8654b7b6e0d743333941704d523f41", null ],
+    [ "performTeardown", "d1/d51/a00628.html#a39424046b2249ea932b674c621b8551d", null ],
+    [ "aiParticipantTable", "d1/d51/a00628.html#abafb0b085a12a0c694ee3b5d36db8150", null ]
 ];

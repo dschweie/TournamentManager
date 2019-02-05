@@ -1,12 +1,11 @@
 var a00443 =
 [
-    [ "compareTo", "d0/dc4/a00443.html#a1f180a05d44b1c0ed378ec39290faa4a", null ],
-    [ "compareTo", "d0/dc4/a00443.html#a8008f8d5bb46ed95af543a48df87a875", null ],
-    [ "countWins", "d0/dc4/a00443.html#adbdcab4a7de590fee285ba0ca8181332", null ],
-    [ "getName", "d0/dc4/a00443.html#a8069d3d763a2e47555173f3d2521e841", null ],
-    [ "getTotalDifference", "d0/dc4/a00443.html#a6054ad9393dad922a4fb43ae79c76bd1", null ],
-    [ "getTotalResult", "d0/dc4/a00443.html#a5b5c73f35579645470a3a68ffa4a60f3", null ],
-    [ "getTotalResultIdentifiers", "d0/dc4/a00443.html#ad7ea97e1b6402caebb3322cf3e7e8266", null ],
-    [ "getTotalScore", "d0/dc4/a00443.html#a54e36258c09aa45b7481ac7328ba3f9c", null ],
-    [ "getValueForCategory", "d0/dc4/a00443.html#a7804748c9a4ae33a54273ce49d134e41", null ]
+    [ "SwingAction", "de/d84/a00447.html", "de/d84/a00447" ],
+    [ "SwingAction_1", "d9/d69/a00451.html", "d9/d69/a00451" ],
+    [ "DialogChooseTournamentDep", "d0/dc4/a00443.html#a9d34eaf20535577c8fe0585d6ddedc06", null ],
+    [ "action", "d0/dc4/a00443.html#aafcd1dfceaa8136204190836853508e4", null ],
+    [ "action_1", "d0/dc4/a00443.html#ac617e43e32b98cba863c79f31c8e4567", null ],
+    [ "list", "d0/dc4/a00443.html#ad221cfa71e3a9a17bdf39c8721bfab66", null ],
+    [ "listTournamentData", "d0/dc4/a00443.html#acc0bed213f155ec66996afc4eda98195", null ],
+    [ "textArea", "d0/dc4/a00443.html#aaf0f83490a91f0fee226bc3ce56c5db7", null ]
 ];

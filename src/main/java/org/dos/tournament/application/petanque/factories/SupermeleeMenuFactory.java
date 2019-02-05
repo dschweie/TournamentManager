@@ -11,8 +11,10 @@ import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 
 public class SupermeleeMenuFactory
 {
+  
   static public void buildSupermeleeMenu(SuperMelee tournament)
   {
+    TournamentManagerUI.removeAllMenuItemsSupermelee();
     JMenuItem mntmRundeAuslosen = new JMenuItem(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("TournamentManagerUI.mntmRundeAuslosen.text")); //$NON-NLS-1$ //$NON-NLS-2$
     TournamentManagerUI.addMenuItemSupermelee(mntmRundeAuslosen);
     

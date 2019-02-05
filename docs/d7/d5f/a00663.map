@@ -1,7 +1,7 @@
-<map id="org.dos.tournament.common.competition.AbstractTournament" name="org.dos.tournament.common.competition.AbstractTournament">
-<area shape="rect" id="node1" title=" " alt="" coords="316,27,579,69"/>
-<area shape="rect" id="node4" href="$d3/dd6/a00624.html" title=" " alt="" coords="627,27,997,69"/>
-<area shape="rect" id="node2" title=" " alt="" coords="93,5,180,32"/>
-<area shape="rect" id="node3" href="$d5/d39/a00676.html" title="Das Interface dient als allgemeine Schittstelle für Turniere." alt="" coords="5,57,268,98"/>
-<area shape="rect" id="node5" href="$dc/d62/a00640.html" title="Diese Klasse bildet das monatliche Super Melee&#45;Turnier der Bouleabteilung von Blau&#45;Gelb Groß&#45;Gerau ab..." alt="" coords="1045,27,1416,69"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship">
+<area shape="rect" id="node1" title="Diese Klasse bildet das monatliche Super Melee&#45;Turnier der Bouleabteilung von Blau&#45;Gelb Groß&#45;Gerau ab..." alt="" coords="5,273,376,315"/>
+<area shape="rect" id="node2" href="$dd/d1f/a00648.html" title=" " alt="" coords="5,184,376,225"/>
+<area shape="rect" id="node3" href="$d6/dd3/a00688.html" title=" " alt="" coords="59,95,322,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="49,13,135,39"/>
+<area shape="rect" id="node5" href="$d0/d15/a00700.html" title="Das Interface dient als allgemeine Schittstelle für Turniere." alt="" coords="159,5,422,47"/>
 </map>

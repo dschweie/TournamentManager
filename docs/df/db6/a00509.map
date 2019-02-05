@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.application.TournamentManagerUI.OpenTournamentAction" name="org.dos.tournament.application.TournamentManagerUI.OpenTournamentAction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,297,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="97,5,205,32"/>
+<map id="org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel.SwingActionDeleteLastMatchday" name="org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel.SwingActionDeleteLastMatchday">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,395,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="89,5,197,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="221,5,294,32"/>
 </map>

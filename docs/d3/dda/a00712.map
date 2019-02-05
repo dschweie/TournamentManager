@@ -1,8 +1,7 @@
-<map id="org.dos.tournament.common.storage.mongo.DatabaseClient" name="org.dos.tournament.common.storage.mongo.DatabaseClient">
-<area shape="rect" id="node1" title=" " alt="" coords="468,172,751,213"/>
-<area shape="rect" id="node2" href="$d4/deb/a00710.html" title="Diese Schnittstelle ist Fassade für unterschiedliche Implementierungen zum Speichern von Daten." alt="" coords="5,5,244,47"/>
-<area shape="rect" id="node3" title=" " alt="" coords="51,71,198,98"/>
-<area shape="rect" id="node4" title=" " alt="" coords="97,177,153,203"/>
-<area shape="rect" id="node5" title=" " alt="" coords="77,227,172,254"/>
-<area shape="rect" id="node6" title=" " alt="" coords="105,278,144,305"/>
+<map id="org.dos.tournament.common.movement.regulations.AbstractRegulationDecorator&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.AbstractRegulationDecorator&lt; T, G, P &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="687,109,1009,150"/>
+<area shape="rect" id="node2" href="$dc/d8f/a00718.html" title=" " alt="" coords="333,36,552,92"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,51,116,77"/>
+<area shape="rect" id="node4" title=" " alt="" coords="368,116,517,143"/>
+<area shape="rect" id="node5" title=" " alt="" coords="409,176,476,203"/>
 </map>

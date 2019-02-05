@@ -277,11 +277,11 @@ public class SuperMeleeMatchdayTable extends JTable
               case SuperMeleeMatchdayTable.COL_HOME_TEAM   : _row.add( this.bOutputNumeric?  _match.getCompetitor(0).getDescriptionByCode():
                                                                                 _match.getCompetitor(0).getDescription());
                                                 break;
-              case SuperMeleeMatchdayTable.COL_HOME_SCORE  : _row.add( _match.isScored()?    "":""); break;
+              case SuperMeleeMatchdayTable.COL_HOME_SCORE  : _row.add( _match.isScored()?    String.valueOf(_match.getHomeScore()):""); break;
               case SuperMeleeMatchdayTable.COL_GUEST_TEAM  : _row.add( this.bOutputNumeric?  _match.getCompetitor(1).getDescriptionByCode():
                                                                                 _match.getCompetitor(1).getDescription());
                                                 break;
-              case SuperMeleeMatchdayTable.COL_GUEST_SCORE : _row.add( _match.isScored()?    "":""); break;
+              case SuperMeleeMatchdayTable.COL_GUEST_SCORE : _row.add( _match.isScored()?    String.valueOf(_match.getGuestScore()):""); break;
               case SuperMeleeMatchdayTable.COL_VS_SCORE    : _row.add(":"); break;
               case SuperMeleeMatchdayTable.COL_COURT       : _row.add("Platz"); break;
               default                         : _row.add("");

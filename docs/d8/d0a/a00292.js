@@ -1,4 +1,6 @@
 var a00292 =
 [
-    [ "keyPressed", "d8/d0a/a00292.html#acdad068fa6195ff9fb845fa039c88cfd", null ]
+    [ "mongo", "d6/d82/a00293.html", "d6/d82/a00293" ],
+    [ "IStorage", "d6/d17/a00778.html", "d6/d17/a00778" ],
+    [ "SingletonStorage", "d0/d7d/a00786.html", null ]
 ];

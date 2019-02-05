@@ -1,5 +1,5 @@
 var a00498 =
 [
-    [ "SwingAction", "d8/d57/a00498.html#af61a6f840bfa97402d8f6f1768609e65", null ],
-    [ "actionPerformed", "d8/d57/a00498.html#a3e8895c0027bd976f233ca18b2f4bb2f", null ]
+    [ "SwingActionCreateNewMatchday", "d8/d57/a00498.html#a4da8e4a47c8c8f0bdb2e1bfc15f24a5d", null ],
+    [ "actionPerformed", "d8/d57/a00498.html#a2d4c3a2f5a546af7db066cef8c6516bf", null ]
 ];

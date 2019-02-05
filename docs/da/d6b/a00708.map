@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.common.storage.SingletonStorage" name="org.dos.tournament.common.storage.SingletonStorage">
-<area shape="rect" id="node1" title="Über diese Klasse läuft das Speichern und Laden von Daten." alt="" coords="5,109,244,151"/>
-<area shape="rect" id="node2" href="$df/d96/a00714.html" title="Diese Schnittstelle ist Fassade für unterschiedliche Implementierungen zum Speichern von Daten." alt="" coords="5,5,244,47"/>
+<map id="org.dos.tournament.common.movement.regulations.AbstractCoreRule&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.AbstractCoreRule&lt; T, G, P &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="5,244,328,285"/>
+<area shape="rect" id="node2" href="$dc/d8f/a00718.html" title=" " alt="" coords="57,139,276,195"/>
+<area shape="rect" id="node3" title=" " alt="" coords="111,5,222,32"/>
 </map>

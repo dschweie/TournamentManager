@@ -1,28 +1,5 @@
 var a00752 =
 [
-    [ "DatabaseClient", "dd/d5c/a00752.html#ad7d3c5a18808bd29ee0493d48e6b7c90", null ],
-    [ "DatabaseClient", "dd/d5c/a00752.html#a1924d7505673c94d410ad16d9543b585", null ],
-    [ "close", "dd/d5c/a00752.html#ae49de6079e3870a3a09e3a2edb9cb195", null ],
-    [ "findParticipantAsJoueurIndividuel", "dd/d5c/a00752.html#ad44d6e4ca3e6f840c6ceb583513d5609", null ],
-    [ "findParticipantAsJoueurIndividuel", "dd/d5c/a00752.html#a30ca5efd303cfdafcfe9a0673f572ce5", null ],
-    [ "findParticipantById", "dd/d5c/a00752.html#ae164268814486e20cc442a13c6d75dc9", null ],
-    [ "getTournamentData", "dd/d5c/a00752.html#ac66ce543331cad91379e743d40df4923", null ],
-    [ "init", "dd/d5c/a00752.html#adb6e536510996e260ffd5ed72ffe888d", null ],
-    [ "isConnected", "dd/d5c/a00752.html#acb3740ea54fa205a4eb0f313663da21b", null ],
-    [ "isFailed", "dd/d5c/a00752.html#aa501586af9a16c027fd2a364d24fcfd0", null ],
-    [ "loadTournament", "dd/d5c/a00752.html#a632d04ee1a498bd4ac3dc0c1a8dbb6da", null ],
-    [ "loadTournamentAsDocument", "dd/d5c/a00752.html#a5991ce969cc734d7a7461abc52383976", null ],
-    [ "open", "dd/d5c/a00752.html#a6cd3c3c838f510bca23ded826ff8616b", null ],
-    [ "saveParticipant", "dd/d5c/a00752.html#a26bc23b6a2746e1d39aab4f23f3a49c4", null ],
-    [ "saveParticipant", "dd/d5c/a00752.html#a8e1eba1af30f9265914d5cc83593bff7", null ],
-    [ "saveTournament", "dd/d5c/a00752.html#af7f61ad02baf96869dfb4d54007f0435", null ],
-    [ "serverHearbeatStarted", "dd/d5c/a00752.html#a4798fee76c0900b03ded1f532c1691b7", null ],
-    [ "serverHeartbeatFailed", "dd/d5c/a00752.html#a403a7793111b49757ee899538a84dd14", null ],
-    [ "serverHeartbeatSucceeded", "dd/d5c/a00752.html#a6d7071f111f5bf64a55ffbf14fcb0fd1", null ],
-    [ "iConnectionStatus", "dd/d5c/a00752.html#aeb3197461077227bfe237b02f7d19bb4", null ],
-    [ "mongoClient", "dd/d5c/a00752.html#a2871f7f448d6d6a2850ef139aab9f36c", null ],
-    [ "mongoCollectionParticipantsName", "dd/d5c/a00752.html#a094c6334ee75aefdaf53219e2ec385ff", null ],
-    [ "mongoCollectionTournamentsName", "dd/d5c/a00752.html#aeeba3d1aafec4d5eaf2edb521935609a", null ],
-    [ "mongoDatabaseName", "dd/d5c/a00752.html#ae40210e7cd7c069f41029076a55d4c3d", null ],
-    [ "mongoHost", "dd/d5c/a00752.html#a34e939cb2ffbe2b66b97946b23915133", null ]
+    [ "compareTo", "dd/d5c/a00752.html#af19648ef0d2aac488d539d47d5a85781", null ],
+    [ "toBsonDocument", "dd/d5c/a00752.html#a3119752ed656c5cf612beb45cc266584", null ]
 ];

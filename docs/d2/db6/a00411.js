@@ -1,14 +1,5 @@
 var a00411 =
 [
-    [ "TableBasedIndividual", "d2/db6/a00411.html#ab709110f3f600cf117ab857c7a965e68", null ],
-    [ "checkChair", "d2/db6/a00411.html#a5f39a2d122ea4399c44c841b048713c0", null ],
-    [ "generateMovement", "d2/db6/a00411.html#a50296c565fc66b8bdf6e301af6de66f7", null ],
-    [ "printMovement", "d2/db6/a00411.html#a502c25d548581f050c9171d8eec0b8d8", null ],
-    [ "releaseChair", "d2/db6/a00411.html#a1e35a50fd50314ef6a8ff5dfcb2c9a80", null ],
-    [ "setChair", "d2/db6/a00411.html#ae29c7cf457a8bd01b8e1b83facb1c344", null ],
-    [ "chairs", "d2/db6/a00411.html#a611bba1afdae9f6739f440732e8f33bc", null ],
-    [ "meetings", "d2/db6/a00411.html#ad54575272e78fc5f1aa4ef0b6e2b8bfc", null ],
-    [ "participants", "d2/db6/a00411.html#a5bc29b8b291a2d40169c640460e61d93", null ],
-    [ "rounds", "d2/db6/a00411.html#a146c35bc4eeae374804e664fcbc07572", null ],
-    [ "tables", "d2/db6/a00411.html#a20a72d1880b5a8a2063ba7b12d1e85bf", null ]
+    [ "SwingActionOK", "d2/db6/a00411.html#aab79eb1b37316e399281b1534e2da487", null ],
+    [ "actionPerformed", "d2/db6/a00411.html#aa5a4fccde6a8947b45655fc2bb65f484", null ]
 ];

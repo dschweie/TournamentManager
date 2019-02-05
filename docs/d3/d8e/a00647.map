@@ -1,5 +1,7 @@
-<map id="org.dos.tournament.branch.petanque.tournament.partie.Partie" name="org.dos.tournament.branch.petanque.tournament.partie.Partie">
-<area shape="rect" id="node1" title=" " alt="" coords="5,184,348,225"/>
-<area shape="rect" id="node2" href="$d5/d4e/a00660.html" title=" " alt="" coords="45,95,308,136"/>
-<area shape="rect" id="node3" href="$d5/d40/a00672.html" title=" " alt="" coords="45,5,308,47"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee">
+<area shape="rect" id="node1" title=" " alt="" coords="627,27,997,69"/>
+<area shape="rect" id="node5" href="$df/d46/a00664.html" title="Diese Klasse bildet das monatliche Super Melee&#45;Turnier der Bouleabteilung von Blau&#45;Gelb Groß&#45;Gerau ab..." alt="" coords="1045,27,1416,69"/>
+<area shape="rect" id="node2" href="$d6/dd3/a00688.html" title=" " alt="" coords="316,27,579,69"/>
+<area shape="rect" id="node3" title=" " alt="" coords="93,5,180,32"/>
+<area shape="rect" id="node4" href="$d0/d15/a00700.html" title="Das Interface dient als allgemeine Schittstelle für Turniere." alt="" coords="5,57,268,98"/>
 </map>

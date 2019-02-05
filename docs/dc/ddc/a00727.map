@@ -1,8 +1,8 @@
-<map id="org.dos.tournament.common.result.AbstractResult" name="org.dos.tournament.common.result.AbstractResult">
-<area shape="rect" id="node1" title=" " alt="" coords="420,5,648,47"/>
-<area shape="rect" id="node4" href="$d0/dc2/a00564.html" title=" " alt="" coords="696,5,971,47"/>
-<area shape="rect" id="node2" href="$dc/dce/a00740.html" title=" " alt="" coords="144,5,372,47"/>
-<area shape="rect" id="node3" href="$db/d8b/a01464.html" title=" " alt="" coords="5,13,96,39"/>
-<area shape="rect" id="node5" href="$d9/d19/a00560.html" title=" " alt="" coords="1019,5,1293,47"/>
-<area shape="rect" id="node6" href="$dc/d40/a00568.html" title=" " alt="" coords="1341,5,1632,47"/>
+<map id="org.dos.tournament.common.player.Attendee" name="org.dos.tournament.common.player.Attendee">
+<area shape="rect" id="node1" title=" " alt="" coords="25,259,256,300"/>
+<area shape="rect" id="node5" href="$d0/d72/a00724.html" title=" " alt="" coords="25,348,256,389"/>
+<area shape="rect" id="node2" href="$d2/d94/a00716.html" title=" " alt="" coords="25,169,256,211"/>
+<area shape="rect" id="node3" href="$d4/db8/a00732.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="25,80,256,121"/>
+<area shape="rect" id="node4" href="$d2/daa/a01488.html" title=" " alt="" coords="95,5,186,32"/>
+<area shape="rect" id="node6" href="$d6/d75/a00604.html" title=" " alt="" coords="5,437,276,479"/>
 </map>

@@ -1,4 +1,6 @@
 var a00282 =
 [
-    [ "keyPressed", "dc/dc9/a00282.html#acdad068fa6195ff9fb845fa039c88cfd", null ]
+    [ "regulations", "d2/d04/a00281.html", "d2/d04/a00281" ],
+    [ "SuperMelee", "d9/d2a/a00654.html", "d9/d2a/a00654" ],
+    [ "SuperMeleeClubChampionship", "d1/d97/a00670.html", "d1/d97/a00670" ]
 ];

@@ -1,4 +1,6 @@
 var a00277 =
 [
-    [ "getTableCellRendererComponent", "d6/d4b/a00277.html#a630311d396a9690397ad8eb51d710210", null ]
+    [ "PetanqueMatchResult", "d7/db1/a00590.html", "d7/db1/a00590" ],
+    [ "PetanqueResult", "da/de4/a00594.html", "da/de4/a00594" ],
+    [ "PetanqueSuperMeleeClubChampionshipResult", "d7/dd2/a00598.html", "d7/dd2/a00598" ]
 ];

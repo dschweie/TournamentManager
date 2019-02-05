@@ -1,6 +1,5 @@
 var a00487 =
 [
-    [ "MatchdayUpdate", "dd/d9c/a00487.html#a0feb2fd89002596f5cc1b2a6f5139e61", null ],
-    [ "getMatchday", "dd/d9c/a00487.html#a3e7e4cf84e343ff57f67ab94a22f284f", null ],
-    [ "matchday", "dd/d9c/a00487.html#a0fef9966304e8edb75cbe5e44cc51c6e", null ]
+    [ "SwingActionInactivateLEquipe", "dd/d9c/a00487.html#a446d462b6ebdffbac3028c9b4d6116f3", null ],
+    [ "actionPerformed", "dd/d9c/a00487.html#a72da8e07ed2fc330c1cf311d371c0a78", null ]
 ];

@@ -1,9 +1,9 @@
 var dir_93b020970f251c23505f3a35bd7ff57c =
 [
-    [ "CompetitorPartieResult.java", "d1/d88/a00128.html", [
-      [ "CompetitorPartieResult", "d9/d0f/a00644.html", "d9/d0f/a00644" ]
+    [ "CompetitorPartieResult.java", "d3/df8/a00155.html", [
+      [ "CompetitorPartieResult", "d8/d73/a00674.html", "d8/d73/a00674" ]
     ] ],
-    [ "Partie.java", "d7/d06/a00131.html", [
-      [ "Partie", "dd/d1f/a00648.html", "dd/d1f/a00648" ]
+    [ "Partie.java", "d6/db8/a00158.html", [
+      [ "Partie", "da/d31/a00678.html", "da/d31/a00678" ]
     ] ]
 ];

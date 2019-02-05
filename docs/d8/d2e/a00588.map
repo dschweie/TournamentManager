@@ -1,4 +1,8 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MatchdayUpdate" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MatchdayUpdate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,376,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="171,5,210,32"/>
+<map id="org.dos.tournament.branch.petanque.result.PetanqueMatchResult" name="org.dos.tournament.branch.petanque.result.PetanqueMatchResult">
+<area shape="rect" id="node1" title=" " alt="" coords="144,381,419,423"/>
+<area shape="rect" id="node2" href="$da/de4/a00594.html" title=" " alt="" coords="5,291,280,332"/>
+<area shape="rect" id="node3" href="$d2/d4a/a00758.html" title=" " alt="" coords="29,172,257,213"/>
+<area shape="rect" id="node4" href="$d0/d7e/a00770.html" title=" " alt="" coords="29,81,257,123"/>
+<area shape="rect" id="node5" href="$d6/d51/a01494.html" title=" " alt="" coords="97,5,188,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="294,179,333,206"/>
 </map>

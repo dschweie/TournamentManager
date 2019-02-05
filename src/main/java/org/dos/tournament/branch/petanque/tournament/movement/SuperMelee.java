@@ -138,6 +138,8 @@ public class SuperMelee extends AbstractTournament
   
   public SuperMelee()
   {
+    super();
+    
     this.competitors = new Vector<IParticipant>();
     this.matchdays = new Vector<Matchday>();
     

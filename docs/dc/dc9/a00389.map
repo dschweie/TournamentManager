@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.ActionListenerUpdateFields" name="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.ActionListenerUpdateFields">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,347,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="123,5,229,32"/>
+<map id="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.PreventDuplicatedElements" name="org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually.PreventDuplicatedElements">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,375,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="143,5,237,32"/>
 </map>

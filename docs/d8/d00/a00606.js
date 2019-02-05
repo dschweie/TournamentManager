@@ -1,17 +1,8 @@
 var a00606 =
 [
-    [ "CompetitorPartieResult", "d8/d00/a00606.html#a9915bca460e93bbf0e63d97dced6494c", null ],
-    [ "compareTo", "d8/d00/a00606.html#a47533740b24dd1cdaa70b803e7b3af69", null ],
-    [ "getCompetitorValue", "d8/d00/a00606.html#aeda6527e43a5263bf647ba414ac73f9f", null ],
-    [ "getOpponent", "d8/d00/a00606.html#a04bcde3d910f23c61cc230433a4fe3f3", null ],
-    [ "getOpponentValue", "d8/d00/a00606.html#a14a561ed4714a85204f4fc5dd13ecd2e", null ],
-    [ "getPartieScore", "d8/d00/a00606.html#a73ed81d4ed6df15487f2adafbcd3dc23", null ],
-    [ "getValueDifference", "d8/d00/a00606.html#ada797266aa19b79d46bc175fef027c39", null ],
-    [ "setCompetitorValue", "d8/d00/a00606.html#abf1f3d410746b8b573c1d520c367883d", null ],
-    [ "setOpponentValue", "d8/d00/a00606.html#afc763ae5b33b224077006751288053a9", null ],
-    [ "setPartieScore", "d8/d00/a00606.html#a0d88c637f0fa3263e5fef953fe12c587", null ],
-    [ "competitorValue", "d8/d00/a00606.html#a15b090903db3d6c854698fe81a2406e9", null ],
-    [ "opponent", "d8/d00/a00606.html#aee09b04b13033fb692235b6b6b680990", null ],
-    [ "opponentValue", "d8/d00/a00606.html#ad1ba98d0a7e88169685dcba61046513d", null ],
-    [ "partieScore", "d8/d00/a00606.html#ae73a94d188be04e1f52397d19ffa9560", null ]
+    [ "Doublette", "d8/d00/a00606.html#a74e99f3fbb7999c30a0c451e8cb1c61a", null ],
+    [ "getAttendeesToArray", "d8/d00/a00606.html#a4ba871b41349a62ce93ca4fc84a6ce51", null ],
+    [ "getDescription", "d8/d00/a00606.html#a213a0c48bf0116a1cbffac3e871dcad6", null ],
+    [ "getDescriptionByCode", "d8/d00/a00606.html#aacfda61270916d22afc1be1eb4e3270c", null ],
+    [ "toBsonDocument", "d8/d00/a00606.html#a37a9d12806d675cb12e9ae66db640f85", null ]
 ];
