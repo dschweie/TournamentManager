@@ -225,8 +225,7 @@ public class JoueurIndividuel extends AssociationAttendee
   @Override
   public String toString()
   {
-    String _name = this.getForename().concat(" ").concat(this.getSurname());
-    return _name.concat("; ").concat(this.getAssociation());
+    return this.getSurname().concat("; ").concat(this.getForename()).concat("; ").concat(this.getAssociation());
   }
 
   
