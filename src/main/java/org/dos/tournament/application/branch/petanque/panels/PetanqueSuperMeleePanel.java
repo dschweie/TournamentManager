@@ -1,4 +1,4 @@
-package org.dos.tournament.application.petanque.panels;
+package org.dos.tournament.application.branch.petanque.panels;
 
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -21,12 +21,12 @@ import javax.swing.table.TableRowSorter;
 
 import org.bson.Document;
 import org.bson.conversions.Bson;
+import org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel;
+import org.dos.tournament.application.branch.petanque.panels.tablemodels.LeaderboardTableColumnModel;
+import org.dos.tournament.application.branch.petanque.panels.tablemodels.LeaderboardTableModel;
+import org.dos.tournament.application.branch.petanque.panels.tablemodels.ParticipantsTableModel;
+import org.dos.tournament.application.common.dialogs.player.DialogAssociationAttendee;
 import org.dos.tournament.application.common.panels.DefaultMatchdayPanel;
-import org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel;
-import org.dos.tournament.application.dialogs.player.DialogAssociationAttendee;
-import org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableColumnModel;
-import org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableModel;
-import org.dos.tournament.application.petanque.panels.tablemodels.ParticipantsTableModel;
 import org.dos.tournament.branch.petanque.team.JoueurIndividuel;
 import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
@@ -88,6 +88,7 @@ public class PetanqueSuperMeleePanel extends JPanel
   private JTable tableLeaderboard;
   private final Action replaceLastMatchday = new SwingActionUpdateLastRound();
   private final Action deleteLastMatchday = new SwingActionDeleteLastMatchday();
+  private final Action action = new SwingActionSetMatchdayManually();
   
   /**
    * Create the panel.
@@ -257,6 +258,8 @@ public class PetanqueSuperMeleePanel extends JPanel
     JButton btnNewButton = new JButton("Neue Runde");
     btnNewButton.setAction(createNewMatchday);
     toolBar.add(btnNewButton);
+    
+    JButton btnSetNewMatchday = toolBar.add(action);
     
     JButton btnReplaceLastMatchday = toolBar.add(replaceLastMatchday);
     
@@ -562,5 +565,14 @@ public class PetanqueSuperMeleePanel extends JPanel
       this.updateStatus();
     }
   
+  }
+  private class SwingActionSetMatchdayManually extends AbstractAction {
+    public SwingActionSetMatchdayManually() {
+      putValue(NAME, "SwingAction");
+      putValue(SHORT_DESCRIPTION, "Some short description");
+    }
+    public void actionPerformed(ActionEvent e) 
+    {
+    }
   }
 }

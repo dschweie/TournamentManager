@@ -1,4 +1,4 @@
-package org.dos.tournament.application.dialogs.petanque.player;
+package org.dos.tournament.application.branch.petanque.dialogs.player;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
@@ -9,8 +9,8 @@ import java.util.Vector;
 import javax.swing.AbstractAction;
 import javax.swing.JOptionPane;
 
-import org.dos.tournament.application.dialogs.player.DialogAssociationAttendee;
-import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
+import org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleePanel;
+import org.dos.tournament.application.common.dialogs.player.DialogAssociationAttendee;
 import org.dos.tournament.branch.petanque.team.JoueurIndividuel;
 import org.dos.tournament.common.player.AssociationAttendee;
 import org.dos.tournament.common.player.IParticipant;
@@ -22,17 +22,17 @@ public class DialogJoueurIndividuel extends DialogAssociationAttendee
   public DialogJoueurIndividuel()
   {
     super();
-    this.getOkButton().setAction(new org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOK());
+    this.getOkButton().setAction(new org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel.SwingActionOK());
     if(this.getNextButton().isEnabled())
-      this.getNextButton().setAction(new org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOkAndNext());
+      this.getNextButton().setAction(new org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel.SwingActionOkAndNext());
   }
 
   public DialogJoueurIndividuel(Vector<IParticipant> participants, int pos)
   {
     super(participants, pos);  
-    this.getOkButton().setAction(new org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOK());
+    this.getOkButton().setAction(new org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel.SwingActionOK());
     if(this.getNextButton().isEnabled())
-      this.getNextButton().setAction(new org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel.SwingActionOkAndNext());
+      this.getNextButton().setAction(new org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel.SwingActionOkAndNext());
     if(-1 < pos)
     {
       this.textSurname.setText(((JoueurIndividuel)participants.elementAt(pos)).getSurname().trim());

@@ -5,9 +5,9 @@ import javax.swing.JPanel;
 
 import org.bson.Document;
 import org.dos.tournament.application.TournamentManagerUI;
-import org.dos.tournament.application.petanque.factories.SupermeleeMenuFactory;
-import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
-import org.dos.tournament.application.petanque.panels.tablemodels.ParticipantsTableModel;
+import org.dos.tournament.application.branch.petanque.factories.SupermeleeMenuFactory;
+import org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleePanel;
+import org.dos.tournament.application.branch.petanque.panels.tablemodels.ParticipantsTableModel;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship;
 import org.dos.tournament.common.storage.SingletonStorage;

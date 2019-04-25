@@ -1,4 +1,4 @@
-package org.dos.tournament.application.petanque.factories;
+package org.dos.tournament.application.branch.petanque.factories;
 
 import java.util.ResourceBundle;
 

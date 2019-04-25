@@ -4,6 +4,7 @@ import java.util.Vector;
 
 import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.common.competition.AbstractTournament.Slot;
 import org.dos.tournament.common.movement.regulations.Regulation;
 import org.dos.tournament.common.player.IParticipant;
 
@@ -53,7 +54,7 @@ public class RuleSuperMeleeNeverMeetTeammateTwice extends RuleSuperMeleeNeverMee
   }
   
   
-  protected boolean performCheck(int[] pointer, Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants) 
+  protected boolean performCheck(int[] pointer, Vector<Vector<Vector<Slot>>> grid, Vector<IParticipant> participants) 
   {
     boolean _valid = true;
     
@@ -67,7 +68,7 @@ public class RuleSuperMeleeNeverMeetTeammateTwice extends RuleSuperMeleeNeverMee
 
     for(int _iSlot=0; _valid && (_iSlot < pointer[2]); ++_iSlot) 
     {
-      _valid &= Regulation.FLAG_WERE_TEAMMATES != this.aiParticipantTable[grid.get(pointer[0]).get(pointer[1]).get(_iSlot).intValue()][grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).intValue()];
+      _valid &= Regulation.FLAG_WERE_TEAMMATES != this.aiParticipantTable[grid.get(pointer[0]).get(pointer[1]).get(_iSlot).getNumber().intValue()][grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).getNumber().intValue()];
     }
     
     

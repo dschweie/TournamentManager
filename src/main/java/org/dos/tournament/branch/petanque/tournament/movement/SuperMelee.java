@@ -14,9 +14,9 @@ import javax.swing.JDialog;
 import javax.swing.ProgressMonitor;
 
 import org.bson.Document;
+import org.dos.tournament.application.branch.petanque.dialogs.movement.DialogSetRoundManually;
+import org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.application.common.dialogs.MatchdayProgressMonitor;
-import org.dos.tournament.application.dialogs.petanque.movement.DialogSetRoundManually;
-import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam;
 import org.dos.tournament.branch.petanque.team.Doublette;
 import org.dos.tournament.branch.petanque.team.Triplette;
@@ -62,7 +62,7 @@ public class SuperMelee extends AbstractTournament
   
   private ProgressMonitor xProgressMonitor = null;      
 
-  protected Regulation<SuperMelee, Vector<Vector<Integer>>, IParticipant> regulations;
+  protected Regulation<SuperMelee, Vector<Vector<Slot>>, IParticipant> regulations;
   protected IResult xTrophy = null;
   
   private boolean runningGenerateRound = false;
@@ -140,7 +140,7 @@ public class SuperMelee extends AbstractTournament
   {
     super();
     
-    this.competitors = new Vector<IParticipant>();
+    this.competitors = new AssociatedVector<IParticipant>();
     this.matchdays = new Vector<Matchday>();
     
     this.parties = new Vector<Partie>();
@@ -211,9 +211,9 @@ public class SuperMelee extends AbstractTournament
     if(!this.competitors.contains(competitor))
     {
       this.competitors.addElement(competitor);
-      this.setChanged();
-      this.notifyObservers();
-      this.clearChanged();
+//      this.setChanged();
+//      this.notifyObservers();
+//      this.clearChanged();
     }
   }
   
@@ -453,7 +453,7 @@ public class SuperMelee extends AbstractTournament
   protected boolean generateNextMatchdayByAlgorithm() {
     int _matchdaysExpected = this.countMatchdays() + 1;
     Vector<IParticipant> _members = TournamentUtils.filterParticipantsByStatus(this.getCompetitors(), ParticipantStatus.ACTIVE);
-    Vector<Vector<Vector<Integer>>> _grid = compileGridTemplateForSupermelee(_members.size());
+    Vector<Vector<Vector<Slot>>> _grid = compileGridTemplateForSupermelee(_members.size());
     
     this.iProcessMax = _grid.size() * 2;
     this.iProcessCurrent = 0;
@@ -472,7 +472,7 @@ public class SuperMelee extends AbstractTournament
     return (_matchdaysExpected == this.countMatchdays());
   }
 
-  public void compileNextMatchDayFromGrid(Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants) {
+  public void compileNextMatchDayFromGrid(Vector<Vector<Vector<Slot>>> grid, Vector<IParticipant> participants) {
     if((null != grid) && (null != participants))
     {
       //  Partien bilden
@@ -485,13 +485,13 @@ public class SuperMelee extends AbstractTournament
         {
           if( 3 == grid.get(p).get(t).size())
           {
-            Triplette _tt = new Triplette(new NumericParticipantId(idxTeam++), participants.get(grid.get(p).get(t).get(0).intValue()), participants.get(grid.get(p).get(t).get(1).intValue()), participants.get(grid.get(p).get(t).get(2).intValue()));
+            Triplette _tt = new Triplette(new NumericParticipantId(idxTeam++), participants.get(grid.get(p).get(t).get(0).getNumber().intValue()), participants.get(grid.get(p).get(t).get(1).getNumber().intValue()), participants.get(grid.get(p).get(t).get(2).getNumber().intValue()));
             _partie.addParticipant(_tt);
             this.addTeam(_tt);
           }
           else
           {
-            Doublette _td = new Doublette(new NumericParticipantId(idxTeam++), participants.get(grid.get(p).get(t).get(0).intValue()), participants.get(grid.get(p).get(t).get(1).intValue()));
+            Doublette _td = new Doublette(new NumericParticipantId(idxTeam++), participants.get(grid.get(p).get(t).get(0).getNumber().intValue()), participants.get(grid.get(p).get(t).get(1).getNumber().intValue()));
             _partie.addParticipant(_td);
             this.addTeam(_td);
           }
@@ -504,7 +504,7 @@ public class SuperMelee extends AbstractTournament
     }
   }
 
-  private Vector<Vector<Vector<Integer>>> fillGridWithParticipants(Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants) {
+  private Vector<Vector<Vector<Slot>>> fillGridWithParticipants(Vector<Vector<Vector<Slot>>> grid, Vector<IParticipant> participants) {
     //  this counter should help tio avoid to long runnings of this algorithm
     long _stepper = 0;
     // Durchlaufe das Grid, um Plätze zu füllen
@@ -519,19 +519,29 @@ public class SuperMelee extends AbstractTournament
       {
         while (( -1 < _idxSlot ) && ( grid.get(_idxPartie).get(_idxTeam).size() > _idxSlot ))
         {
-          while(( -1 < _idxSlot ) &&  ( grid.get(_idxPartie).get(_idxTeam).size() > _idxSlot ) && grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() < participants.size() )
+          while(( -1 < _idxSlot ) &&  ( grid.get(_idxPartie).get(_idxTeam).size() > _idxSlot ) && grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).getNumber().intValue() < participants.size() )
           {
-            grid.get(_idxPartie).get(_idxTeam).set(_idxSlot, new Integer(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() + 1) );
-            
-            _valid = grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() < participants.size();
-            
-            if(_valid)
-            {
-              int[] _pointer = {_idxPartie, _idxTeam, _idxSlot};
+            if(!grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).isBooked())
+            { // In diesem Fall soll der Platz über den Algorithmus belegt werden.
               
-              _valid &= this.regulations.isValid(_pointer, grid, participants);
-              //System.out.println(String.format("Pruefung: in Summe     : %d ; %d ; %d ", _idxPartie, _idxTeam, _idxSlot).concat(String.valueOf(_valid)).concat(" => ").concat(grid.toString()));
+//              grid.get(_idxPartie).get(_idxTeam).set(_idxSlot, new Integer(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() + 1) );
+              grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).setNumber( grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).getNumber() + 1 );
+              
+              _valid = grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).getNumber().intValue() < participants.size();
+              
+              if(_valid)
+              {
+                int[] _pointer = {_idxPartie, _idxTeam, _idxSlot};
+                
+                _valid &= this.regulations.isValid(_pointer, grid, participants);
+                //System.out.println(String.format("Pruefung: in Summe     : %d ; %d ; %d ", _idxPartie, _idxTeam, _idxSlot).concat(String.valueOf(_valid)).concat(" => ").concat(grid.toString()));
+              }
             }
+            else
+            { //  In diesem Fall wurde ein Spieler eingesetzt, der nicht entfernt werden darf.
+              _valid = true;
+            }
+            
             if(_valid)
             {
               this.iProcessCurrent = (_idxPartie*2+_idxTeam);
@@ -542,10 +552,14 @@ public class SuperMelee extends AbstractTournament
   
           if(( -1 < _idxSlot ) &&  ( grid.get(_idxPartie).get(_idxTeam).size() > _idxSlot ))
           {
-            if(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).intValue() >= participants.size())
+            if(grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).getNumber().intValue() >= participants.size())
             { // Backtracking: Spieler zurücksetzen und Platz zurück gehen
-              grid.get(_idxPartie).get(_idxTeam).set(_idxSlot, new Integer(-1) );
+              grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).setNumber(new Integer(-1));
+              
               --_idxSlot;
+              while(    ( -1 < _idxSlot )
+                    &&  ( grid.get(_idxPartie).get(_idxTeam).get(_idxSlot).isBooked() ) )
+                --_idxSlot;
             }
           }
         }
@@ -656,42 +670,42 @@ public class SuperMelee extends AbstractTournament
       return "";
   }
 
-  protected Vector<Vector<Vector<Integer>>> compileGridTemplateForSupermelee(int competitors) {
+  protected Vector<Vector<Vector<Slot>>> compileGridTemplateForSupermelee(int competitors) {
     int _membersLeft = competitors;
-    Vector<Vector<Vector<Integer>>> _retval = null;
+    Vector<Vector<Vector<Slot>>> _retval = null;
     
     if(     ( 3 <  competitors )
         &&  ( 7 != competitors ) )
     { //  mindestens 4 aktive Teilnehmer werden benötigt, damit eine Runde erstellt werden kann
     
-      _retval = new Vector<Vector<Vector<Integer>>>();
+      _retval = new Vector<Vector<Vector<Slot>>>();
       // Bilde das Grid für die Runde
       for(int i=0; ( competitors / 4 ) > i; ++i)
       {
-        Vector<Integer> _home;
-        Vector<Integer> _guest;
+        Vector<Slot> _home;
+        Vector<Slot> _guest;
         
         switch( _membersLeft % 4 )
         {
           case 3:
           case 2:   //  in diesem Fall spielen zwei Triplette
-                    _home  = new Vector<Integer>(3); _home.add(new Integer(-1)); _home.add(new Integer(-1)); _home.add(new Integer(-1)); 
-                    _guest = new Vector<Integer>(3); _guest.add(new Integer(-1)); _guest.add(new Integer(-1)); _guest.add(new Integer(-1));
+                    _home  = new Vector<Slot>(3); _home.add(new Slot()); _home.add(new Slot()); _home.add(new Slot()); 
+                    _guest = new Vector<Slot>(3); _guest.add(new Slot()); _guest.add(new Slot()); _guest.add(new Slot());
                     _membersLeft -= 6;
                     break;
           case 1:   //  in diesem Fall spielt ein Triplette gegen ein Doublette
-                    _home  = new Vector<Integer>(3); _home.add(new Integer(-1)); _home.add(new Integer(-1)); _home.add(new Integer(-1)); 
-                    _guest = new Vector<Integer>(2); _guest.add(new Integer(-1)); _guest.add(new Integer(-1));
+                    _home  = new Vector<Slot>(3); _home.add(new Slot()); _home.add(new Slot()); _home.add(new Slot()); 
+                    _guest = new Vector<Slot>(2); _guest.add(new Slot()); _guest.add(new Slot());
                     _membersLeft -= 5;
                     break;
           default:  //  in diesem Fall werden zwei Doublette gebildet
-                    _home  = new Vector<Integer>(2); _home.add(new Integer(-1)); _home.add(new Integer(-1));
-                    _guest = new Vector<Integer>(2); _guest.add(new Integer(-1)); _guest.add(new Integer(-1));
+                    _home  = new Vector<Slot>(2); _home.add(new Slot()); _home.add(new Slot());
+                    _guest = new Vector<Slot>(2); _guest.add(new Slot()); _guest.add(new Slot());
                     _membersLeft -= 4;
                     break;
         }
           
-        Vector<Vector<Integer>> _partie = new Vector<Vector<Integer>>(2);
+        Vector<Vector<Slot>> _partie = new Vector<Vector<Slot>>(2);
         _partie.addElement(_home);
         _partie.addElement(_guest);
         _retval.add(_partie);
@@ -716,7 +730,7 @@ public class SuperMelee extends AbstractTournament
     public void actionPerformed(ActionEvent e)
     {
       Vector<IParticipant> _participants = TournamentUtils.filterParticipantsByStatus(SuperMelee.this.getCompetitors(), ParticipantStatus.ACTIVE);
-      Vector<Vector<Vector<Integer>>> _grid = SuperMelee.this.compileGridTemplateForSupermelee(_participants.size());
+      Vector<Vector<Vector<Slot>>> _grid = SuperMelee.this.compileGridTemplateForSupermelee(_participants.size());
       JDialog dialog = new DialogSetRoundManually(SuperMelee.this, _grid, _participants);
       dialog.setModal(true);
       dialog.setVisible(true);
@@ -743,5 +757,24 @@ public class SuperMelee extends AbstractTournament
     {
       this.iProgress = value;
     }
+  }
+  
+  private class AssociatedVector<E> extends java.util.Vector<E>
+  {
+
+    @Override
+    public synchronized boolean add(E e) 
+    {
+      boolean _retval = super.add(e);
+      SuperMelee.this.forceNotifyAll();
+      return _retval;
+    }
+
+    @Override
+    public void add(int index, E element) {
+      super.add(index, element);
+      SuperMelee.this.forceNotifyAll();
+    }
+    
   }
 }

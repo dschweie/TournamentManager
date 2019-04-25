@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.dos.tournament.application.petanque.panels;
+package org.dos.tournament.application.branch.petanque.panels;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -38,11 +38,11 @@ import javax.swing.event.ChangeListener;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
+import org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel;
+import org.dos.tournament.application.branch.petanque.panels.tablemodels.LeaderboardTableColumnModel;
+import org.dos.tournament.application.branch.petanque.panels.tablemodels.LeaderboardTableModel;
+import org.dos.tournament.application.branch.petanque.panels.tablemodels.ParticipantsTableModel;
 import org.dos.tournament.application.common.panels.DefaultMatchdayPanel;
-import org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel;
-import org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableColumnModel;
-import org.dos.tournament.application.petanque.panels.tablemodels.LeaderboardTableModel;
-import org.dos.tournament.application.petanque.panels.tablemodels.ParticipantsTableModel;
 import org.dos.tournament.branch.petanque.team.JoueurIndividuel;
 import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;

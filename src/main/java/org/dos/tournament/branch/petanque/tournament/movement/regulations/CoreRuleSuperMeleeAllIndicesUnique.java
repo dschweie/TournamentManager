@@ -3,6 +3,7 @@ package org.dos.tournament.branch.petanque.tournament.movement.regulations;
 import java.util.Vector;
 
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.common.competition.AbstractTournament.Slot;
 import org.dos.tournament.common.movement.regulations.AbstractCoreRule;
 import org.dos.tournament.common.movement.regulations.Regulation;
 import org.dos.tournament.common.player.IParticipant;
@@ -16,17 +17,17 @@ import org.dos.tournament.common.player.IParticipant;
  *  @author dschweie
  *
  */
-public class CoreRuleSuperMeleeAllIndicesUnique extends AbstractCoreRule<SuperMelee, Vector<Vector<Integer>>, IParticipant>
+public class CoreRuleSuperMeleeAllIndicesUnique extends AbstractCoreRule<SuperMelee, Vector<Vector<Slot>>, IParticipant>
 {
   @Override
-  public boolean isValid(int[] pointer, Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants) 
+  public boolean isValid(int[] pointer, Vector<Vector<Vector<Slot>>> grid, Vector<IParticipant> participants) 
   {
-    int _idxParticipant = grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).intValue();
+    int _idxParticipant = grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).getNumber().intValue();
     boolean _retval = false;
     for(int i=0; ( !_retval ) && ( i<=pointer[0] ); ++i)
       for(int j=0; ( !_retval ) && ( j <= ((i==pointer[0])?pointer[1]:grid.get(i).size()-1) ); ++j)
         for(int k=0; ( !_retval ) && ( k < (((i==pointer[0])&&(j==pointer[1]))?pointer[2]:grid.get(i).get(j).size()) ); ++k)
-          _retval |= ( _idxParticipant == grid.get(i).get(j).get(k).intValue() );
+          _retval |= ( _idxParticipant == grid.get(i).get(j).get(k).getNumber().intValue() );
     return !_retval;
   }
 

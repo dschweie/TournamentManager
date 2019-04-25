@@ -1,4 +1,4 @@
-package org.dos.tournament.application.dialogs.petanque.movement;
+package org.dos.tournament.application.branch.petanque.dialogs.movement;
 
 import javax.swing.JDialog;
 import javax.swing.JButton;
@@ -22,6 +22,7 @@ import java.awt.Dimension;
 import javax.swing.SwingConstants;
 
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.common.competition.AbstractTournament.Slot;
 import org.dos.tournament.common.player.IParticipant;
 
 public class DialogSetRoundManually extends JDialog {
@@ -32,7 +33,7 @@ public class DialogSetRoundManually extends JDialog {
   private Vector<JComboBox> comboBoxes = new Vector<JComboBox>();
   
   private SuperMelee tournament;
-  private Vector<Vector<Vector<Integer>>> grid;
+  private Vector<Vector<Vector<Slot>>> grid;
   private Vector<IParticipant> participants;
   private JButton btnOK;
   private final Action actionFillUp = new SwingActionFillUpForm();
@@ -72,7 +73,7 @@ public class DialogSetRoundManually extends JDialog {
     
   }
 
-  public DialogSetRoundManually(SuperMelee tournament, Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants)
+  public DialogSetRoundManually(SuperMelee tournament, Vector<Vector<Vector<Slot>>> grid, Vector<IParticipant> participants)
   {
     this();
     
@@ -223,7 +224,10 @@ public class DialogSetRoundManually extends JDialog {
           for(int s=0; (s < DialogSetRoundManually.this.grid.get(m).get(t).size()) && (_idxCurrent <= _idxSlot);++s)
           {
             if(_idxCurrent == _idxSlot)
-              DialogSetRoundManually.this.grid.get(m).get(t).set(s, new Integer(_idxParticipant));
+            {
+              DialogSetRoundManually.this.grid.get(m).get(t).get(s).setNumber(new Integer(_idxParticipant));
+              DialogSetRoundManually.this.grid.get(m).get(t).get(s).setBooked(-1 < DialogSetRoundManually.this.grid.get(m).get(t).get(s).getNumber().intValue());
+            }
             ++_idxCurrent;
           }
     }

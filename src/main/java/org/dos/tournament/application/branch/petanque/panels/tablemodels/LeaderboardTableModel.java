@@ -1,4 +1,4 @@
-package org.dos.tournament.application.petanque.panels.tablemodels;
+package org.dos.tournament.application.branch.petanque.panels.tablemodels;
 
 import java.util.Iterator;
 import java.util.List;

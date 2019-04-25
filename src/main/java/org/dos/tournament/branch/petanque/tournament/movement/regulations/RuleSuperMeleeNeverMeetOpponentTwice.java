@@ -7,6 +7,7 @@ import java.util.Vector;
 
 import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.common.competition.AbstractTournament.Slot;
 import org.dos.tournament.common.movement.regulations.AbstractRegulationDecorator;
 import org.dos.tournament.common.movement.regulations.Regulation;
 import org.dos.tournament.common.player.IParticipant;
@@ -15,7 +16,7 @@ import org.dos.tournament.common.player.IParticipant;
  * @author dos
  *
  */
-public class RuleSuperMeleeNeverMeetOpponentTwice extends AbstractRegulationDecorator<SuperMelee, Vector<Vector<Integer>>, IParticipant> 
+public class RuleSuperMeleeNeverMeetOpponentTwice extends AbstractRegulationDecorator<SuperMelee, Vector<Vector<Slot>>, IParticipant> 
 {
 
   protected char[][] aiParticipantTable;
@@ -26,14 +27,14 @@ public class RuleSuperMeleeNeverMeetOpponentTwice extends AbstractRegulationDeco
   }
 
   @Override
-  protected boolean performCheck(int[] pointer, Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants) 
+  protected boolean performCheck(int[] pointer, Vector<Vector<Vector<Slot>>> grid, Vector<IParticipant> participants) 
   {
     boolean _valid = true;
     
     for(int _iTeam=0; _valid && (_iTeam <= pointer[1]); ++_iTeam)
     {
       for(int _iSlot=0; _valid && (_iSlot < (_iTeam<pointer[1]?grid.get(pointer[0]).get(_iTeam).size():pointer[2])); ++_iSlot)
-        _valid &= Regulation.FLAG_WERE_OPPONENTS != this.aiParticipantTable[grid.get(pointer[0]).get(_iTeam).get(_iSlot).intValue()][grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).intValue()];
+        _valid &= Regulation.FLAG_WERE_OPPONENTS != this.aiParticipantTable[grid.get(pointer[0]).get(_iTeam).get(_iSlot).getNumber().intValue()][grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).getNumber().intValue()];
     }
     
     return _valid;

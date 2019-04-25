@@ -1,4 +1,4 @@
-package org.dos.tournament.application.dialogs.tournament;
+package org.dos.tournament.application.common.dialogs.tournament;
 
 import javax.swing.JDialog;
 import javax.swing.JTextArea;

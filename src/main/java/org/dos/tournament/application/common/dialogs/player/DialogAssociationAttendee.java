@@ -1,4 +1,4 @@
-package org.dos.tournament.application.dialogs.player;
+package org.dos.tournament.application.common.dialogs.player;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -17,8 +17,8 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
 import org.dos.tournament.application.TournamentManagerUI;
-import org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel;
-import org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel;
+import org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel;
+import org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.branch.petanque.team.JoueurIndividuel;
 import org.dos.tournament.common.player.AssociationAttendee;
 import org.dos.tournament.common.player.IParticipant;
@@ -92,7 +92,7 @@ public class DialogAssociationAttendee extends JDialog
    */
   protected DialogAssociationAttendee()
   {
-    KeyListener _storageListener = new org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.StorageKeyListener();
+    KeyListener _storageListener = new org.dos.tournament.application.common.dialogs.player.DialogAssociationAttendee.StorageKeyListener();
     
     setModalityType(ModalityType.APPLICATION_MODAL);
     setType(Type.POPUP);

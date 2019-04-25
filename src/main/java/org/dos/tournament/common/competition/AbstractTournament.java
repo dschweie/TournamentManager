@@ -37,4 +37,22 @@ public abstract class AbstractTournament extends Observable implements ITourname
     this.title = value.toString();
   }
 
+  public class Slot
+  {
+    private Integer number = new Integer(-1);
+    private boolean booked = false;
+    
+    public Integer getNumber() {
+      return number;
+    }
+    public void setNumber(Integer number) {
+      this.number = number;
+    }
+    public boolean isBooked() {
+      return booked;
+    }
+    public void setBooked(boolean booked) {
+      this.booked = booked;
+    }
+  }
 }

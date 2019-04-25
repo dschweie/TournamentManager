@@ -7,6 +7,7 @@ import java.util.Vector;
 
 import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.common.competition.AbstractTournament.Slot;
 import org.dos.tournament.common.movement.regulations.AbstractRegulationDecorator;
 import org.dos.tournament.common.movement.regulations.Regulation;
 import org.dos.tournament.common.player.IParticipant;
@@ -15,20 +16,20 @@ import org.dos.tournament.common.player.IParticipant;
  * @author dos
  *
  */
-public class RuleSuperMeleeNeverPlayTripletteTwice extends AbstractRegulationDecorator<SuperMelee, Vector<Vector<Integer>>, IParticipant> 
+public class RuleSuperMeleeNeverPlayTripletteTwice extends AbstractRegulationDecorator<SuperMelee, Vector<Vector<Slot>>, IParticipant> 
 {
 
   protected boolean[] abTriplettePlayed;
 
 
-  public RuleSuperMeleeNeverPlayTripletteTwice(Regulation<SuperMelee, Vector<Vector<Integer>>, IParticipant> innerRegulation, boolean effective, boolean suspendable) {
+  public RuleSuperMeleeNeverPlayTripletteTwice(Regulation<SuperMelee, Vector<Vector<Slot>>, IParticipant> innerRegulation, boolean effective, boolean suspendable) {
     super(innerRegulation, effective, suspendable);
   }
 
   @Override
-  protected boolean performCheck(int[] pointer, Vector<Vector<Vector<Integer>>> grid, Vector<IParticipant> participants) 
+  protected boolean performCheck(int[] pointer, Vector<Vector<Vector<Slot>>> grid, Vector<IParticipant> participants) 
   {
-    return (3 == grid.get(pointer[0]).get(pointer[1]).size())?(!this.abTriplettePlayed[grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).intValue()]):true;
+    return (3 == grid.get(pointer[0]).get(pointer[1]).size())?(!this.abTriplettePlayed[grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).getNumber().intValue()]):true;
   }
 
   @Override
@@ -68,7 +69,7 @@ public class RuleSuperMeleeNeverPlayTripletteTwice extends AbstractRegulationDec
 
   @Override
   protected void performTeardown() {
-    // TODO Auto-generated method stub
+    
     
   }
 

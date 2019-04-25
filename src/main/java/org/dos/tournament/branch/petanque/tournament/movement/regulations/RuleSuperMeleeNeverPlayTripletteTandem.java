@@ -7,6 +7,7 @@ import java.util.Vector;
 
 import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
+import org.dos.tournament.common.competition.AbstractTournament.Slot;
 import org.dos.tournament.common.movement.regulations.Regulation;
 import org.dos.tournament.common.player.IParticipant;
 
@@ -40,7 +41,7 @@ public class RuleSuperMeleeNeverPlayTripletteTandem extends RuleSuperMeleeNeverP
     }
   }
 
-  public RuleSuperMeleeNeverPlayTripletteTandem(Regulation<SuperMelee, Vector<Vector<Integer>>, IParticipant> innerRegulation, boolean effective, boolean suspendable) 
+  public RuleSuperMeleeNeverPlayTripletteTandem(Regulation<SuperMelee, Vector<Vector<Slot>>, IParticipant> innerRegulation, boolean effective, boolean suspendable) 
   {
     super(innerRegulation, effective, suspendable);
   }
