@@ -52,6 +52,8 @@ import org.dos.tournament.application.branch.petanque.panels.tablemodels.Partici
 import org.dos.tournament.application.common.config.SingletonProperties;
 import org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournament;
 import org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournamentDep;
+import org.dos.tournament.application.configuration.ConfigurationEngine;
+import org.dos.tournament.application.configuration.IConfigurableApplication;
 import org.dos.tournament.application.factory.FactoryTournament;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship;
@@ -73,7 +75,7 @@ import javax.swing.JPanel;
 import java.awt.FlowLayout;
 import javax.swing.SwingConstants;
 
-public class TournamentManagerUI
+public class TournamentManagerUI implements IConfigurableApplication
 {
 
   private JFrame frmTurnierverwaltung;
@@ -87,6 +89,7 @@ public class TournamentManagerUI
   protected JMenu mnSupermelee;
   
   static public TournamentManagerUI application = null;
+  static protected String[] astrParameters = null;
   private JMenuBar menuBar;
   private final Action openTournament = new OpenTournamentAction();
 
@@ -101,7 +104,10 @@ public class TournamentManagerUI
       {
         try
         {
+          TournamentManagerUI.astrParameters = args;
           TournamentManagerUI.application = new TournamentManagerUI();
+          ConfigurationEngine engine = new ConfigurationEngine();
+          engine.execute(TournamentManagerUI.application);
           TournamentManagerUI.application.frmTurnierverwaltung.setVisible(true);
         } catch (Exception e)
         {
@@ -366,11 +372,97 @@ public class TournamentManagerUI
         TournamentManagerUI.this.closeOpenTournament();
         
         System.out.println(_dialog.getSelectedTournamentId());
-        JPanel _frame = FactoryTournament.SetupTournamentEnvironment(_dialog.getSelectedTournamentId());
+        JPanel _frame = FactoryTournament.SetupTournamentEnvironment(_dialog.getSelectedTournamentId(), true);
         TournamentManagerUI.this.frmTurnierverwaltung.getContentPane().add(_frame);
         TournamentManagerUI.this.frmTurnierverwaltung.revalidate();
       }
     }
+  }
+
+  
+  static protected int getParameterKeyPosition(String key)
+  {
+    for(int i=0; i < TournamentManagerUI.astrParameters.length; ++i)
+      if(TournamentManagerUI.astrParameters[i].toLowerCase().equals(key))
+        return i;
+    return -1;
+  }
+  
+  static protected String getParamterValue(String key)
+  {
+    int _keyPosition = TournamentManagerUI.getParameterKeyPosition(key);
+    if(-1 < _keyPosition)
+      return TournamentManagerUI.astrParameters[_keyPosition+1];
+    return null;
+  }
+  
+  @Override
+  public boolean _isViewParameterExists() 
+  {
+    return -1 < TournamentManagerUI.getParameterKeyPosition("-viewer");
+  }
+
+  @Override
+  public boolean _isTournamentIDExists() 
+  {
+    return null!=TournamentManagerUI.getParamterValue("-viewer")?TournamentManagerUI.getParamterValue("-viewer").matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"):false;
+  }
+
+  @Override
+  public boolean _isTournamentDataValid() 
+  {
+    // TODO Auto-generated method stub
+    return null!=TournamentManagerUI.getParamterValue("-viewer")?TournamentManagerUI.getParamterValue("-viewer").matches("[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"):false;
+  }
+
+  @Override
+  public void _doLoadTournament() 
+  {
+    this.closeOpenTournament();
+    
+    JPanel _frame = FactoryTournament.SetupTournamentEnvironment(TournamentManagerUI.getParamterValue("-viewer"), false);
+    this.frmTurnierverwaltung.getContentPane().add(_frame);
+    this.frmTurnierverwaltung.revalidate();  
+  }
+
+  @Override
+  public void _doSelectTournament() 
+  {
+    // TODO Auto-generated method stub
+    
+  }
+
+  @Override
+  public void _doDisplayErrorMessage() 
+  {
+    // TODO Auto-generated method stub
+    
+  }
+
+  @Override
+  public void _doCloseApplication() 
+  {
+    System.exit(0);
+  }
+
+  @Override
+  public void _doTrace(String dtName, String version, int rules, int rule) 
+  {
+    // TODO Auto-generated method stub
+    
+  }
+
+  @Override
+  public void _doSetFileMenuVisible_True() {
+    // TODO Auto-generated method stub
+    
+  }
+
+  @Override
+  public void _doSetFileMenuVisible_False() {
+    // TODO Auto-generated method stub
+    this.application.menuBar.removeAll();
+    this.application.menuBar.doLayout();
   }
 
 }

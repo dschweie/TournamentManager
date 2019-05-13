@@ -71,7 +71,12 @@ public class SuperMeleeClubChampionship extends SuperMelee
     if(null != data.get("name"))
       this.setTitle(data.getString("name"));
     
-    // import participants from database
+    this.importParticipants(data);
+    this.importMatchdays(data);
+  }
+  
+  private void importParticipants(Document data)
+  {
     if(null != data.get("participants"))
     {
       ArrayList<?> _participants = (ArrayList<?>) data.get("participants");
@@ -84,8 +89,10 @@ public class SuperMeleeClubChampionship extends SuperMelee
         });
       }
     }
-    
-    // import the matchdays
+  }
+  
+  private void importMatchdays(Document data)
+  {
     if(null != data.get("matchdays"))
     {
       ArrayList<Document> _matchdays = (ArrayList<Document>) data.get("matchdays");
@@ -143,6 +150,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
         }
       }
     }
+    
   }
 
   private IParticipant getCompetitorByCode(int code) 

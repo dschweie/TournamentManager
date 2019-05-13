@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.1.5 (190416x1)" language="English" saveDate="2019.04.26 at 05:58:05 CEST" saveUser="dirk.schweier">
+  <Conditions>
+    <Condition uId="11446800829457960">
+      <Title language="German" value="state"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15562034828080125">
+          <Symbol language="German" value="I"/>
+          <Title language="German" value="Initial Parameter Analysis"/>
+          <Symbol language="English" value="I"/>
+          <Title language="English" value="Initial Parameter Analysis"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15562034828100127">
+          <Symbol language="German" value="V"/>
+          <Title language="German" value="Viewer Mode"/>
+          <Symbol language="English" value="V"/>
+          <Title language="English" value="Viewer Mode"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15562035511150137">
+          <Symbol language="German" value="TM"/>
+          <Title language="German" value="Tournament Manager Mode"/>
+          <Symbol language="English" value="TM"/>
+          <Title language="English" value="Tournament Manager Mode"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="English" value="state"/>
+    </Condition>
+    <Condition uId="15562034564990081">
+      <Title language="German" value="view parameter exists"/>
+      <Title language="English" value="view parameter exists"/>
+    </Condition>
+    <Condition uId="15562037087850298">
+      <Title language="English" value="tournament ID exists"/>
+    </Condition>
+    <Condition uId="15562037092100299">
+      <Title language="English" value="tournament data valid"/>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="11446800828767967">
+      <Title language="German" value="Titel für Aktion 1"/>
+      <Title language="English" value="load tournament"/>
+    </Action>
+    <Action uId="15562037983990312">
+      <Title language="English" value="select tournament"/>
+    </Action>
+    <Action uId="15562509857141013">
+      <Title language="English" value="set file menu visible"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15562510189341154">
+          <Symbol language="English" value="true"/>
+          <Title language="English" value="menu visible"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15562510436491384">
+          <Symbol language="English" value="false"/>
+          <Title language="English" value="menu invisible"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15562038420320325">
+      <Title language="English" value="display error message"/>
+    </Action>
+    <Action uId="15562038614150327">
+      <Title language="English" value="close application"/>
+    </Action>
+    <Action uId="11446800829627977">
+      <Title language="German" value="next state"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15562036257420222">
+          <Symbol language="German" value="I"/>
+          <Title language="German" value="Initial Parameter Analysis"/>
+          <Symbol language="English" value="I"/>
+          <Title language="English" value="Initial Parameter Analysis"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15562036258110225">
+          <Symbol language="German" value="V"/>
+          <Title language="German" value="Viewer Mode"/>
+          <Symbol language="English" value="V"/>
+          <Title language="English" value="Viewer Mode"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15562036259790228">
+          <Symbol language="German" value="TM"/>
+          <Title language="German" value="Tournament Manager Mode"/>
+          <Symbol language="English" value="TM"/>
+          <Title language="English" value="Tournament Manager Mode"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15562036162360217">
+          <Symbol language="German" value="ex"/>
+          <Title language="German" value="stop configuration"/>
+          <Symbol language="English" value="ex"/>
+          <Title language="English" value="stop configuration"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+      <Title language="English" value="next state"/>
+    </Action>
+  </Actions>
+  <Rules lastId="10">
+    <Rule id="3">
+      <ConditionOccurrenceLink link="15562034828080125"/>
+      <ConditionLink link="15562034564990081" conditionState="true"/>
+      <ActionOccurrenceLink link="15562036258110225"/>
+      <ConditionLink link="15562037087850298" conditionState="true"/>
+      <ActionLink link="11446800828767967"/>
+    </Rule>
+    <Rule id="5">
+      <ConditionOccurrenceLink link="15562034828080125"/>
+      <ConditionLink link="15562034564990081" conditionState="true"/>
+      <ConditionLink link="15562037087850298" conditionState="false"/>
+      <ActionLink link="15562037983990312"/>
+      <ActionOccurrenceLink link="15562036258110225"/>
+    </Rule>
+    <Rule id="6">
+      <ConditionOccurrenceLink link="15562034828080125"/>
+      <ConditionLink link="15562034564990081" conditionState="false"/>
+      <ActionOccurrenceLink link="15562036259790228"/>
+    </Rule>
+    <Rule id="9">
+      <ConditionOccurrenceLink link="15562034828100127"/>
+      <ConditionLink link="15562037092100299" conditionState="true"/>
+      <ActionOccurrenceLink link="15562036162360217"/>
+      <ActionOccurrenceLink link="15562510436491384"/>
+    </Rule>
+    <Rule id="7">
+      <ConditionOccurrenceLink link="15562034828100127"/>
+      <ConditionLink link="15562037092100299" conditionState="false"/>
+      <ActionOccurrenceLink link="15562036162360217"/>
+      <ActionLink link="15562038420320325"/>
+      <ActionLink link="15562038614150327"/>
+    </Rule>
+    <Rule id="10">
+      <ConditionOccurrenceLink link="15562035511150137"/>
+      <ActionOccurrenceLink link="15562036162360217"/>
+      <ActionOccurrenceLink link="15562510189341154"/>
+    </Rule>
+  </Rules>
+  <Title language="German" value="Hier doppel-klicken um den Titel für die Entscheidungstabelle einzugeben"/>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceName=IConfigurableApplication&lt;br/&gt;// $$InterfaceRulesClassName=ConfigurationEngine&lt;br/&gt;// $$interfaceRuleGroups=true&lt;br/&gt;// $$InterfacePrefixIs=_is&lt;br/&gt;// $$InterfacePrefixDo=_do&lt;br/&gt;// $$package=org.dos.tournament.application.configuration"/>
+  <Title language="English" value="Hier doppel-klicken um den Titel für die Entscheidungstabelle einzugeben"/>
+</LFET>

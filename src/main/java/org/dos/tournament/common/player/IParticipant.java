@@ -46,6 +46,8 @@ public interface IParticipant extends Comparable
   public void addResultOfMatchday(int matchday, IResult result);
   public int getTotalScore();
   public int[] getTotalResult();
+  public int getTotalResultValue(int category);
+  public int getResultValue(int result, int category);
   
   public boolean hasWinnerOfTheDayTrophy();
   public void setWinnerOfTheDayTrophy(IResult instance);

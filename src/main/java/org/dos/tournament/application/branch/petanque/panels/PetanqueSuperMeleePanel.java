@@ -71,13 +71,12 @@ import javax.swing.KeyStroke;
 import java.awt.Checkbox;
 import javax.swing.JProgressBar;
 
-public class PetanqueSuperMeleePanel extends JPanel
+public class PetanqueSuperMeleePanel extends AbstractPetanqueSuperMeleePanel
 {
   private JTable tableAttendees;
   private JTable tableCourts;
   private final Action enlistAttendee = new SwingActionEnlistAttendee();
   
-  private SuperMelee tournament = null;
   private final Action updateAttendee = new SwingActionUpdateAttendee();
   private final Action activateAttendee = new SwingActionActivateAttendee();
   private final Action inactivateAttendee = new SwingActionInactivateAttendee();
@@ -95,10 +94,10 @@ public class PetanqueSuperMeleePanel extends JPanel
    */
   public PetanqueSuperMeleePanel(SuperMelee tournament)
   {
+    super(tournament);
     this.setName("SuperMeleePanel");
     
     setPreferredSize(new Dimension(1024, 600));
-    this.tournament = tournament;
     
     setBounds(new Rectangle(4, 4, 10, 10));
     setBorder(UIManager.getBorder("ScrollPane.border"));
@@ -173,7 +172,7 @@ public class PetanqueSuperMeleePanel extends JPanel
     
     tableAttendees.getTableHeader().setReorderingAllowed( false );
     
-    this.tournament.addObserver(_ptm);
+    this.getTournament().addObserver(_ptm);
     tableAttendees.getColumnModel().getColumn(0).setMinWidth(10);
     tableAttendees.getColumnModel().getColumn(0).setPreferredWidth(20);
     tableAttendees.getColumnModel().getColumn(1).setMinWidth(50);
@@ -217,8 +216,8 @@ public class PetanqueSuperMeleePanel extends JPanel
     LeaderboardTableModel _ltm = new LeaderboardTableModel();
     tableLeaderboard.setModel(_ltm);
     tableLeaderboard.setColumnModel(new LeaderboardTableColumnModel());
-    this.tournament.addObserver(_ltm);
-    this.tournament.addObserver((Observer) tableLeaderboard.getColumnModel());
+    this.getTournament().addObserver(_ltm);
+    this.getTournament().addObserver((Observer) tableLeaderboard.getColumnModel());
     tableLeaderboard.getTableHeader().setReorderingAllowed( false );
     
     scrollPaneLeaderboard.setViewportView(tableLeaderboard);
@@ -267,8 +266,8 @@ public class PetanqueSuperMeleePanel extends JPanel
     btnDeleteLastMatchday.setAction(deleteLastMatchday);
     toolBar.add(btnDeleteLastMatchday);
 
-    this.tournament.addObserver((Observer) this.replaceLastMatchday);
-    this.tournament.addObserver((Observer) this.deleteLastMatchday);
+    this.getTournament().addObserver((Observer) this.replaceLastMatchday);
+    this.getTournament().addObserver((Observer) this.deleteLastMatchday);
     
     table = new JTable();
     panelRight.add(table, BorderLayout.SOUTH);
@@ -281,15 +280,6 @@ public class PetanqueSuperMeleePanel extends JPanel
     
   }
 
-  public void setTournament(SuperMelee tournament)
-  {
-    this.tournament = tournament;
-  }
-
-  public SuperMelee getTournament()
-  {
-    return this.tournament;
-  }
   
 
   private class SwingActionEnlistAttendee extends AbstractAction {
@@ -305,10 +295,10 @@ public class PetanqueSuperMeleePanel extends JPanel
     public void actionPerformed(ActionEvent e) 
     {
       //this.panel.getTournament().addCompetitor(new AssociationAttendee (5, "Peter Oertel", "Rumkugler Hasslinghausen"));
-      DialogAssociationAttendee _dialog = new DialogJoueurIndividuel(PetanqueSuperMeleePanel.this.tournament.getCompetitors(), -1);
+      DialogAssociationAttendee _dialog = new DialogJoueurIndividuel(PetanqueSuperMeleePanel.this.getTournament().getCompetitors(), -1);
       _dialog.setVisible(true);
       while(_dialog.isVisible());
-      PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
+      PetanqueSuperMeleePanel.this.getTournament().forceNotifyAll();
     }
   }
   
@@ -323,14 +313,14 @@ public class PetanqueSuperMeleePanel extends JPanel
       if(0 < PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRowCount())
       {
         String _idx = PetanqueSuperMeleePanel.this.tableAttendees.getValueAt(PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRows()[0], 0).toString();
-        PetanqueSuperMeleePanel.this.tournament.getCompetitors().forEach(it -> {
+        PetanqueSuperMeleePanel.this.getTournament().getCompetitors().forEach(it -> {
           if(_idx.equalsIgnoreCase(it.getCode().trim()))
           {
-            DialogAssociationAttendee _dialog = new DialogJoueurIndividuel(PetanqueSuperMeleePanel.this.tournament.getCompetitors(), PetanqueSuperMeleePanel.this.tournament.getCompetitors().indexOf(it));
+            DialogAssociationAttendee _dialog = new DialogJoueurIndividuel(PetanqueSuperMeleePanel.this.getTournament().getCompetitors(), PetanqueSuperMeleePanel.this.getTournament().getCompetitors().indexOf(it));
             _dialog.setVisible(true);
             while(_dialog.isVisible());
             SingletonStorage.getPrimaryStorage().saveParticipant(it, false);
-            PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
+            PetanqueSuperMeleePanel.this.getTournament().forceNotifyAll();
           }
         });
       }
@@ -353,11 +343,11 @@ public class PetanqueSuperMeleePanel extends JPanel
       if(0 < PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRowCount())
       {
         String _idx = PetanqueSuperMeleePanel.this.tableAttendees.getValueAt(PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRows()[0], 0).toString();
-        PetanqueSuperMeleePanel.this.tournament.getCompetitors().forEach(it -> {
+        PetanqueSuperMeleePanel.this.getTournament().getCompetitors().forEach(it -> {
           if(_idx.equalsIgnoreCase(it.getCode().trim()))
           {
             it.activateParticipant();
-            PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
+            PetanqueSuperMeleePanel.this.getTournament().forceNotifyAll();
           }
         });
       }
@@ -379,11 +369,11 @@ public class PetanqueSuperMeleePanel extends JPanel
       if(0 < PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRowCount())
       {
         String _idx = PetanqueSuperMeleePanel.this.tableAttendees.getValueAt(PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRows()[0], 0).toString();
-        PetanqueSuperMeleePanel.this.tournament.getCompetitors().forEach(it -> {
+        PetanqueSuperMeleePanel.this.getTournament().getCompetitors().forEach(it -> {
           if(_idx.equalsIgnoreCase(it.getCode().trim()))
             it.inactivateParticipant();
         });
-        PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
+        PetanqueSuperMeleePanel.this.getTournament().forceNotifyAll();
       }
       else
         JOptionPane.showMessageDialog(  PetanqueSuperMeleePanel.this, 
@@ -408,11 +398,11 @@ public class PetanqueSuperMeleePanel extends JPanel
                                                                     JOptionPane.YES_NO_OPTION))
         {
           String _idx = PetanqueSuperMeleePanel.this.tableAttendees.getValueAt(PetanqueSuperMeleePanel.this.tableAttendees.getSelectedRows()[0], 0).toString();
-          PetanqueSuperMeleePanel.this.tournament.getCompetitors().forEach(it -> {
+          PetanqueSuperMeleePanel.this.getTournament().getCompetitors().forEach(it -> {
             if(_idx.equalsIgnoreCase(it.getCode().trim()))
             {
-              PetanqueSuperMeleePanel.this.tournament.getCompetitors().remove(it);
-              PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
+              PetanqueSuperMeleePanel.this.getTournament().getCompetitors().remove(it);
+              PetanqueSuperMeleePanel.this.getTournament().forceNotifyAll();
             }
           });
         }
@@ -436,24 +426,24 @@ public class PetanqueSuperMeleePanel extends JPanel
       
       while(!_processed)
       {
-        if(PetanqueSuperMeleePanel.this.tournament.generateNextMatchday(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays))
+        if(PetanqueSuperMeleePanel.this.getTournament().generateNextMatchday(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays))
         { // in this case a new matchday was created
-          int _matchdays = PetanqueSuperMeleePanel.this.tournament.countMatchdays();
+          int _matchdays = PetanqueSuperMeleePanel.this.getTournament().countMatchdays();
 //          PetanqueMatchdayTableModel _model = new PetanqueMatchdayTableModel(_matchdays - 1);
 //          PetanqueSuperMeleePanel.this.tournament.addObserver(_model);
-          DefaultMatchdayPanel _panel = new DefaultMatchdayPanel(PetanqueSuperMeleePanel.this.tournament, _matchdays-1);
+          DefaultMatchdayPanel _panel = new DefaultMatchdayPanel(PetanqueSuperMeleePanel.this.getTournament(), _matchdays-1);
           
           PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.addTab("Runde ".concat(String.valueOf(_matchdays)), null, _panel, null);
-          _panel.setStateRuleTeammates(PetanqueSuperMeleePanel.this.tournament.isRuleNotSamePartnerActive());
-          _panel.setStateRuleOpponents(PetanqueSuperMeleePanel.this.tournament.isRuleNotSameOpponentActive());
-          _panel.setStateRuleTriplette(PetanqueSuperMeleePanel.this.tournament.isRuleNoTripletteTwiceActive());
+          _panel.setStateRuleTeammates(PetanqueSuperMeleePanel.this.getTournament().isRuleNotSamePartnerActive());
+          _panel.setStateRuleOpponents(PetanqueSuperMeleePanel.this.getTournament().isRuleNotSameOpponentActive());
+          _panel.setStateRuleTriplette(PetanqueSuperMeleePanel.this.getTournament().isRuleNoTripletteTwiceActive());
           
-          PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
+          PetanqueSuperMeleePanel.this.getTournament().forceNotifyAll();
           _processed = true;
         }
         else
         { //  in this case the ruleset should be made more flexible
-          if(!PetanqueSuperMeleePanel.this.tournament.suspendWeakestRule())
+          if(!PetanqueSuperMeleePanel.this.getTournament().suspendWeakestRule())
           {
             JOptionPane.showMessageDialog(null,
                 "Es kann keine weitere Runde angelegt werden, ohne die Regeln zu verletzen.",
@@ -486,7 +476,7 @@ public class PetanqueSuperMeleePanel extends JPanel
       JTabbedPane _pane = PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedComponent();
       PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.remove(component)
       */
-      PetanqueSuperMeleePanel.this.tournament.regenerateLastMatchday(PetanqueSuperMeleePanel.this);
+      PetanqueSuperMeleePanel.this.getTournament().regenerateLastMatchday(PetanqueSuperMeleePanel.this);
       //PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
     }
     public void updateStatus()
@@ -499,7 +489,7 @@ public class PetanqueSuperMeleePanel extends JPanel
         {
           if(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedIndex() == PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getTabCount()-1)
           {
-            Matchday _matchday = PetanqueSuperMeleePanel.this.tournament.getMatchday(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedIndex());
+            Matchday _matchday = PetanqueSuperMeleePanel.this.getTournament().getMatchday(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedIndex());
             this.setEnabled(0 == _matchday.countScoredMatches());
           }
           else
@@ -534,7 +524,7 @@ public class PetanqueSuperMeleePanel extends JPanel
     }
     public void actionPerformed(ActionEvent e) {
       PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.remove(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedIndex());
-      PetanqueSuperMeleePanel.this.tournament.deleteLastMatchday();
+      PetanqueSuperMeleePanel.this.getTournament().deleteLastMatchday();
     }
 
     public void updateStatus()
@@ -547,7 +537,7 @@ public class PetanqueSuperMeleePanel extends JPanel
         {
           if(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedIndex() == PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getTabCount()-1)
           {
-            Matchday _matchday = PetanqueSuperMeleePanel.this.tournament.getMatchday(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedIndex());
+            Matchday _matchday = PetanqueSuperMeleePanel.this.getTournament().getMatchday(PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.getSelectedIndex());
             this.setEnabled(0 == _matchday.countScoredMatches());
           }
           else

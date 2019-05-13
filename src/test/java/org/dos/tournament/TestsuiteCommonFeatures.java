@@ -1,5 +1,7 @@
 package org.dos.tournament;
 
+import org.dos.tournament.common.competition.TestDefaultCompetitorResult;
+import org.dos.tournament.common.competition.TestDefaultCompetitorResultCompare;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
@@ -16,8 +18,8 @@ import org.junit.runners.Suite.SuiteClasses;
  */
 @RunWith(Suite.class)
 @SuiteClasses({ org.dos.tournament.common.player.TestAttendee.class                             ,
-                org.dos.tournament.common.competition.TestDefaultCompetitorResult.class         ,
-                org.dos.tournament.common.competition.TestDefaultCompetitorResultCompare.class    })
+                TestDefaultCompetitorResult.class         ,
+                TestDefaultCompetitorResultCompare.class    })
 public class TestsuiteCommonFeatures
 {
 

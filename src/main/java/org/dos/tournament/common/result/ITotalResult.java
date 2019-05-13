@@ -13,5 +13,6 @@ public interface ITotalResult extends Comparable
   public int[] getTotalResult();
   
   public int getValueForCategory(int category);
+  public int getResultValueForCategory(int result, int category);
   public Collection<Object> getTotalResultIdentifiers();
 }

@@ -7,6 +7,7 @@ import java.util.Vector;
 
 import org.bson.Document;
 import org.dos.tournament.branch.petanque.result.PetanqueMatchResult;
+import org.dos.tournament.branch.petanque.result.PetanqueResult;
 import org.dos.tournament.common.player.AssociationAttendee;
 import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.result.AbstractTotalResult;
@@ -105,7 +106,7 @@ public class JoueurIndividuel extends AssociationAttendee
 
 
 
-  private class PetanqueTotalResult extends AbstractTotalResult
+  public class PetanqueTotalResult extends AbstractTotalResult
   {
     public final static int POINTS      = 0;
     public final static int DIFFERENCE  = 1;
@@ -205,6 +206,28 @@ public class JoueurIndividuel extends AssociationAttendee
         case PetanqueTotalResult.MATCHES :    return(this.getValueForCategory(category) == opps.getValueForCategory(category)?this.compareTo(opps, category+1):this.getValueForCategory(category) - opps.getValueForCategory(category));
         default:                              return 0;
       }
+    }
+
+    @Override
+    public int getResultValueForCategory(int result, int category) 
+    {
+      int _retval = 0;
+      
+      if( ( -1 < result ) && ( this.mapResults.size() >= result ) )
+      {
+        try
+        {
+          switch(category)
+          {
+            case PetanqueTotalResult.DIFFERENCE : _retval = ((PetanqueResult) this.mapResults.get(new Integer(result))).getDifference(); break;
+          }
+        }
+        catch(Exception e)
+        {
+          
+        }
+      }
+      return _retval;
     }
 
   }

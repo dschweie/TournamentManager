@@ -21,6 +21,7 @@ import org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTable
 import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.branch.petanque.tournament.partie.Partie;
+import org.dos.tournament.application.branch.petanque.panels.components.tables.SuperMeleeResultsTable;
 import org.dos.tournament.application.common.controls.TableHeaderColumnContent;
 
 /**
@@ -128,7 +129,7 @@ public class SuperMeleeMatchdayTable extends JTable
    *  Turniers. In diesem Attribut wird die Referenz auf das Datenmodell
    *  gehalten, aus dem sich die angezeigten Daten ableiten lassen.
    */
-  private SuperMelee xTournament = null;
+  protected SuperMelee xTournament = null;
   /**
    *  \brief    Index für die Runde, die durch diese JTable dargestellt wird
    */
@@ -141,6 +142,13 @@ public class SuperMeleeMatchdayTable extends JTable
   {
     return iMatchdayIndex;
   }
+  
+  protected SuperMeleeMatchdayTable(SuperMelee tournament)
+  {
+    super();
+    this.xTournament = tournament;
+    this.addKeyListener(new KeyAdapter());
+  }
 
   /**
    *  Dieser Konstruktror ist der Standardkonstruktor der Klasse mit den notwendingen Parametern.
@@ -151,15 +159,17 @@ public class SuperMeleeMatchdayTable extends JTable
    */
   public SuperMeleeMatchdayTable(SuperMelee tournament, int matchday)
   {
-    super();
-    this.xTournament = tournament;
+    this(tournament);
     TableModel _model = new TableModel(matchday);
     this.setModel(_model);
     _model.update(this.xTournament, null);
     this.xTournament.addObserver(_model);
     this.iMatchdayIndex = matchday;
-    this.addKeyListener(new KeyAdapter());
     this.setDefaultEditor(Object.class, new PetanqueTableCellEditor());
+  }
+  
+  protected void setTableCellRenderer()
+  {
     if(null != this.getColumn(COL_INDEX))
       this.getColumn(COL_INDEX).setCellRenderer(new TableCellRendererMatchStatus());
     if(null != this.getColumn(COL_VS_SCORE))
@@ -212,7 +222,7 @@ public class SuperMeleeMatchdayTable extends JTable
     }
   }
 
-  private class TableModel extends DefaultTableModel implements Observer
+  public class TableModel extends DefaultTableModel implements Observer
   {
     
     /**
@@ -225,9 +235,9 @@ public class SuperMeleeMatchdayTable extends JTable
      */
     private int iMatchdayIndex;
     private boolean bInit = true;
-    private SuperMelee xTournament = null;
-    private boolean bOutputNumeric = true;
-    private Vector<String> astrHeader = null;
+    protected SuperMelee xTournament = null;
+    protected boolean bOutputNumeric = true;
+    protected Vector<String> astrHeader = null;
     
     public TableModel(int matchday)
     {
@@ -299,11 +309,13 @@ public class SuperMeleeMatchdayTable extends JTable
         
         
         SuperMeleeMatchdayTable.this.updateColumnSize();
+        SuperMeleeMatchdayTable.this.setTableCellRenderer();
+
         this.fireTableDataChanged();
       }
     } 
 
-    private boolean matchdayChanged(Object cause)
+    protected boolean matchdayChanged(Object cause)
     {
       boolean _retval = false;
       
@@ -361,7 +373,7 @@ public class SuperMeleeMatchdayTable extends JTable
      *  
      *  @return Die Methode liefert die Kopfzeile als Vector zurück.
      */
-    private Vector<TableHeaderColumnContent> compileHeader()
+    protected Vector<TableHeaderColumnContent> compileHeader()
     {
       Vector<TableHeaderColumnContent> _header = new Vector<TableHeaderColumnContent>();
       
@@ -644,7 +656,7 @@ public class SuperMeleeMatchdayTable extends JTable
     }
   }
   
-  private class TableCellRendererCenteredText extends DefaultTableCellRenderer
+  public class TableCellRendererCenteredText extends DefaultTableCellRenderer
   {
     public Component getTableCellRendererComponent(JTable table, Object value,
         boolean isSelected, boolean hasFocus, int row, int column) {

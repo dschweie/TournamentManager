@@ -87,6 +87,16 @@ public abstract class AbstractParticipant implements IParticipant
     return _aiRetval;
   }
   
+  public int getResultValue(int result, int category)
+  {
+    return ( this.result.getResultValueForCategory(result, category) );
+  }
+  
+  public int getTotalResultValue(int category)
+  {
+    return ( this.result.getValueForCategory(category) );
+  }
+  
   /* (non-Javadoc)
    * @see org.dos.tournament.player.IParticipant#getTotalResultIdentifiers()
    */
