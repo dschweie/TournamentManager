@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MultiProperties xmlns="hu.skzs.multiproperties">
+    <Version>1.2</Version>
+    <Name>Properties</Name>
+    <Description></Description>
+    <Handler>Java Properties Handler</Handler>
+    <Columns>
+        <Key>
+            <Width>471</Width>
+        </Key>
+        <Column>
+            <Name>Standard</Name>
+            <Description>Diese Meldungen werden genommen, wenn keine Sprachübersetzung vorhanden ist.</Description>
+            <Width>211</Width>
+            <HandlerConfiguration>/TournamentManager/src/main/java/org/dos/tournament/resources/messages/messages.properties|false|false|false|false|ISO-8859-1</HandlerConfiguration>
+        </Column>
+        <Column>
+            <Name>Deutsch</Name>
+            <Description>Hier sind die Texte für eine deutschsprachige Umgebung</Description>
+            <Width>330</Width>
+            <HandlerConfiguration>/TournamentManager/src/main/java/org/dos/tournament/resources/messages/messages_de_DE.properties|false|false|false|false|ISO-8859-1</HandlerConfiguration>
+        </Column>
+    </Columns>
+    <Records>
+        <Property>
+            <Name>Commom.NoUndo.message</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Attention: There is no undo for this action</Value>
+            <Value disabled="false">Achtung: Diese Aktion kann nicht rückgängig gemacht werden!</Value>
+        </Property>
+        <Property>
+            <Name>Common.Back.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Back</Value>
+            <Value disabled="false">Zurück</Value>
+        </Property>
+        <Property>
+            <Name>Common.Cancel.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Cancel</Value>
+            <Value disabled="false">Abbrechen</Value>
+        </Property>
+        <Property>
+            <Name>Common.Finish.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Finish</Value>
+            <Value disabled="false">Abschließen</Value>
+        </Property>
+        <Property>
+            <Name>Common.Next.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Next</Value>
+            <Value disabled="false">Weiter</Value>
+        </Property>
+        <Property>
+            <Name>Common.OK.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">OK</Value>
+            <Value disabled="false">Übernehmen</Value>
+        </Property>
+        <Property>
+            <Name>DefaultMatchdayPanel.footer-toolbar.description.switchToAlpha</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Switch to the names of the participants</Value>
+            <Value disabled="false">Umschalten auf Namen der Teilnehmer </Value>
+        </Property>
+        <Property>
+            <Name>DefaultMatchdayPanel.footer-toolbar.description.switchToNumeric</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Switch to IDs of participants</Value>
+            <Value disabled="false">Umschalten auf Nummern der Teilnehmer </Value>
+        </Property>
+        <Property>
+            <Name>DefaultMatchdayPanel.timer.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">start Timer</Value>
+            <Value disabled="false">Zeitnahme starten</Value>
+        </Property>
+        <Property>
+            <Name>DefaultMatchdayPanel.timer.running.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">stop Timer</Value>
+            <Value disabled="false">Zeitnahme beenden</Value>
+        </Property>
+        <Property>
+            <Name>DefaultMatchdayPanel.timer.running.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">The timer will be stopped and reseted.</Value>
+            <Value disabled="false">Die Zeitnahme wird gestoppt und zurückgesetzt.</Value>
+        </Property>
+        <Property>
+            <Name>DefaultMatchdayPanel.timer.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">The timer for matches can be started with this button.</Value>
+            <Value disabled="false">Start der Zeitnahme für eine Runde.</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.Error.DataIncorrect.message</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">You should not leave forename and surname empty!</Value>
+            <Value disabled="false">Sie müssen mindestens Vor- oder Nachname angeben!</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.Error.DataIncorrect.title</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Required data is missing</Value>
+            <Value disabled="false">Eingaben sind unvollständig</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.actionOkAndNext.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">okay and next</Value>
+            <Value disabled="false">Nächster Teilnehmer</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.actionCancel.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Abbrechen</Value>
+            <Value disabled="false">Abbrechen</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.actionCancel.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Updates will not be saved</Value>
+            <Value disabled="false">Änderungen werden verworfen</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.actionSaveData.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">OK</Value>
+            <Value disabled="false">Übernehmen</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.actionSaveData.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">updates the attendee</Value>
+            <Value disabled="false">übernimmt die Daten</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.cancelButton.actionCommand</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Cancel</Value>
+            <Value disabled="false">Cancel</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.cancelButton.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Cancel</Value>
+            <Value disabled="false">Abbrechen</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.lblAssociation.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Club</Value>
+            <Value disabled="false">Verein</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.lblId.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Id</Value>
+            <Value disabled="false">Nummer</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.lblMatches.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">-</Value>
+            <Value disabled="false">-</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.lblName.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Forename</Value>
+            <Value disabled="false">Vorname</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.lblState.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">State</Value>
+            <Value disabled="false">Status</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.lblStoredData.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Database</Value>
+            <Value disabled="false">Datenbank</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.lblSurname.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Surname</Value>
+            <Value disabled="false">Nachname</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.btnNewButton.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">new</Value>
+            <Value disabled="false">neuer Teilnehmer</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.okButton.actionCommand</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">OK</Value>
+            <Value disabled="false">OK</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.okButton.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">OK</Value>
+            <Value disabled="false">Übernehmen</Value>
+        </Property>
+        <Property>
+            <Name>DialogAssociationAttendee.this.title</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Teilnehmer anlegen</Value>
+            <Value disabled="false">Teilnehmer bearbeiten</Value>
+        </Property>
+        <Property>
+            <Name>DialogJoueurIndividuel.SwingActionOK.ConfirmDisqualifikation.message</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Do you really want to disqualify the participant?</Value>
+            <Value disabled="false">Sind Sie sicher, dass Sie den Spieler disqualifizieren wollen?</Value>
+        </Property>
+        <Property>
+            <Name>DialogJoueurIndividuel.SwingActionOK.ConfirmDisqualifikation.title</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Confirm disqualification</Value>
+            <Value disabled="false">Bestätigung der Disqualifikation</Value>
+        </Property>
+        <Property>
+            <Name>DialogSelectTournament.btnSelectTournament</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Select Tournament</Value>
+            <Value disabled="false">Turnier auswählen</Value>
+        </Property>
+        <Property>
+            <Name>DialogSelectTournament.title</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Overview of tournaments</Value>
+            <Value disabled="false">Übersicht der Turniere</Value>
+        </Property>
+        <Property>
+            <Name>DialogSetRoundManually.FillUp.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Complete pairings</Value>
+            <Value disabled="false">Paarungen vervollständigen</Value>
+        </Property>
+        <Property>
+            <Name>DialogSetRoundManually.FillUp.shortDescription</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Places that are not yet occupied by a player number will be assigned a random player number. It only ensures that there are no duplicates of player numbers.</Value>
+            <Value disabled="false">Die Plätze, die noch nicht mit einer Spielernummer besetzt sind werden mit zufälligen Spielernummer belegt. Es wird nur sichergestellt, dass es keine Duplikate bezüglich der Spielernummern gibt.</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Abreviation.Matchday</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Md. </Value>
+            <Value disabled="false">Rd.</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Abreviation.TotalDifference</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">TDP      </Value>
+            <Value disabled="false">GDP</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Association</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Association</Value>
+            <Value disabled="false">Verein</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.ID</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">No.</Value>
+            <Value disabled="false">Nr.</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Matches</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Matches</Value>
+            <Value disabled="false">Spiele</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Name</Value>
+            <Value disabled="false">Name</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Rank</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Rank       </Value>
+            <Value disabled="false">Platz</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.TotalScore</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Score     </Value>
+            <Value disabled="false">Punkte</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Tournament</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">tournament</Value>
+            <Value disabled="false">Turnier</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Tournament.Petanque.Monatsturnier</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Supermêleé - Monatsturnier Gross-Gerau</Value>
+            <Value disabled="false">Supermêleé - Monatsturnier Gross-Gerau</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Tournament.Petanque.Monatsturnier.description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>true</MultiLine>
+            <Value disabled="false">All ranked tournaments will be played as Doublette tournaments in Super Mélee mode with each&#13;
+- three games during the winter time (01.10. - 30.04.) respectively&#13;
+- four games during the summer time (01.05. - 30.09.)&#13;
+on a tournament day.&#13;
+&#13;
+draw&#13;
+In the draw of the pairings, care is taken only that a team does not play twice in the same cast. Should by the number of&#13;
+Participants can not be a pure doublette draw, either a triplet or an "unreal" is played (last pairing of the&#13;
+Draw), there is no bye.&#13;
+&#13;
+time limit&#13;
+The maximum time is 50 minutes. The time begins with the unmounting of the game pairings or with the end of the previous game round.&#13;
+After expiration of the time limit:&#13;
+1. the current recording is ended.&#13;
+2. There are two more recordings played.&#13;
+3. If no winning team is determined, another recording will be played.</Value>
+            <Value disabled="false">Alle Ranglisten-Turniere werden als Doublette-Turniere im Super-Mélee-Modus ausgetragen mit je&#13;
+- drei Spielen während der Winterzeit (01.10. – 30.04.) bzw.&#13;
+- vier Spielen während der Sommerzeit (01.05. – 30.09.)&#13;
+an einem Turniertag.&#13;
+&#13;
+Auslosung&#13;
+Bei der Auslosung der Paarungen wird lediglich darauf geachtet, dass ein Team nicht zweimal in gleicher Besetzung spielt. Sollte durch die Anzahl der&#13;
+Teilnehmer keine reine Doublette-Auslosung möglich sein, wird entweder zusätzlich ein Triplette oder ein „Unechtes“ gespielt (letzte Paarung der&#13;
+Auslosung), es gibt kein Freilos.&#13;
+&#13;
+Zeitlimit&#13;
+Die maximale Zeit ist 50 Minuten. Die Zeit beginnt mit dem Aushängen der Spielpaarungen bzw. mit Beendigung der vorigen Spielrunde.&#13;
+Nach Ablauf des Zeitlimits:&#13;
+1. wird die laufende Aufnahme beendet.&#13;
+2. Es werden zwei weitere Aufnahmen gespielt.&#13;
+3. Sollte kein Siegerteam feststehen wird eine weitere Aufnahme gespielt.</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Tournament.Petanque.Supermelee</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Supermêleé</Value>
+            <Value disabled="false">Supermêleé</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Tournament.Petanque.Supermelee.description</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <MultiLine>true</MultiLine>
+            <Value disabled="false">The Supermêlée plays one or more rounds. The participants are remixed after each round. The mixing of the formations and pairings is done by means of the tournament software. From the second round, the user can set the rules that should be used to solve the formations.&#13;
+&#13;
+The supermélée is usually played without a bye. This has the consequence that doublettes and triplettes are mixed together in not divisible by four participant fields. There are also different formations against each other.</Value>
+            <Value disabled="false">Beim Supermêlée werden eine oder mehrere Runden gespielt. Die Teilnehmer werden dabei nach jeder Runde neu zusammengemischt. Das Mischen der Formationen und Paarungen erfolgt durch mittels der Turniersoftware. Ab der zweiten Runde kann der Anwender das Regelwerk festlegen, das zum Losen der Formationen verwendet werden soll.&#13;
+&#13;
+Beim Supermêlée wird in der Regel ohne Freilos gespielt. Das hat zur Folge, dass bei nicht durch vier teilbaren Teilnehmerfeldern sowohl Doublettes als auch Triplettes zusammengemischt werden. Es spielen auch unterschiedliche Formationen gegeneinander.</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Tournament.SwissMode</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Tournament with Swiss Mode</Value>
+            <Value disabled="false">Tournament nach Schweizer System</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.TournamentDesciption</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">description</Value>
+            <Value disabled="false">Beschreibung</Value>
+        </Property>
+        <Property>
+            <Name>Glossary.Wins</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Wins</Value>
+            <Value disabled="false">Siege</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.SwingActionDeleteAttendee.confirm.message</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Do you really want to delete the participant?</Value>
+            <Value disabled="false">Sind Sie sicher, dass Sie den Spieler löschen wollen?</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.SwingActionDeleteAttendee.confirm.title</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Confirm deletion</Value>
+            <Value disabled="false">Bestätigung der Löschung</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.SwingActionUpdateAttendee.Error.NotColumnSelected.message</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">You can only update a selected row!</Value>
+            <Value disabled="false">Sie müssen zuerst eine Zeile selektieren!</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.SwingActionUpdateAttendee.Error.NotColumnSelected.title</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Action is not allowed</Value>
+            <Value disabled="false">Aktion ist aktuell nicht möglich.</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.activateAttendee.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">activate attendee</Value>
+            <Value disabled="false">Aktivieren eines Teilnehmers</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.createNewMatchday.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">New Matchday</Value>
+            <Value disabled="false">Neue Runde</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.createNewMatchday.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">creates a new matchday with all active competitors</Value>
+            <Value disabled="false">eine neue Runde mit allen aktiven Spielern wird erstellt</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.deactivateAttendee.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">deactivate a participant</Value>
+            <Value disabled="false">Deaktivieren eines Teilnehmers</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.deleteAttendee.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">delete attendee</Value>
+            <Value disabled="false">Teilnehmer löschen</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.deleteLastMatchday.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">delete Matchday</Value>
+            <Value disabled="false">Runde löschen</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.deleteLastMatchday.shortDescription</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">the operation deletes the last matchday if no result was entered</Value>
+            <Value disabled="false">wenn in der letzten Runde noch kein Ergebnis eingetragen ist, kann diese gelöscht werden</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.enlistAttendee.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">enlist participants</Value>
+            <Value disabled="false"> Hinzufügen von Teilnehmern</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.scrollPaneLeaderboard.title</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Leaderboard</Value>
+            <Value disabled="false">Rangliste</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueSuperMeleePanel.updateAttendee.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">edit data of an attendee</Value>
+            <Value disabled="false">Aktualisierung eines Teilnehmers</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueTotalResult.difference.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Difference</Value>
+            <Value disabled="false">Differenz</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueTotalResult.matches.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Matches</Value>
+            <Value disabled="false">Spiele</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueTotalResult.points.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Points</Value>
+            <Value disabled="false">Punkte</Value>
+        </Property>
+        <Property>
+            <Name>PetanqueTotalResult.wins.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Wins</Value>
+            <Value disabled="false">Siege</Value>
+        </Property>
+        <Property>
+            <Name>Supermelee.Action.CreateRoundManually.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">set participants manually</Value>
+            <Value disabled="false">Teilnehmer manuell setzen</Value>
+        </Property>
+        <Property>
+            <Name>Supermelee.Action.CreateRoundManually.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">The application supports the grid with all active participants and games can be set manually</Value>
+            <Value disabled="false">Das Raster für die Paarungen wird vorgegeben und kann manuell gefüllt werden.</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.action.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Exit</Value>
+            <Value disabled="false">Beenden</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.actionExit.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">closes application</Value>
+            <Value disabled="false">Die Turnierverwaltung wird sofort geschlossen.</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.createTournament.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">New Tournament</Value>
+            <Value disabled="false">Turnier anlegen</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.createTournament.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">creates a new Tournament</Value>
+            <Value disabled="false">In der Beta-Version wird ein Petanqueturnier mit dem Modus eines Monatsturniers von BG Gross-Gerau angelegt.</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.frmTurnierverwaltung.title</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Tournament Manager</Value>
+            <Value disabled="false">Tournament Manager</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mnDatei.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">File</Value>
+            <Value disabled="false">Datei</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mnRundeErstellen.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">create new matchday</Value>
+            <Value disabled="false">neue Runde erstellen</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmAktuellesRegelwerkAnzeigen.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">display current regulations</Value>
+            <Value disabled="false">aktuelles Regelwerk anzeigen</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmNeuesTurnier.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Create Tournament</Value>
+            <Value disabled="false">Neues Turnier</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmNewMenuItem.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">New menu item</Value>
+            <Value disabled="false">Freitagsturnier</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmPaarungenSetzen.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">set matchday and teams</Value>
+            <Value disabled="false">Paarungen manuell setzen</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmAlleRegelnAktivieren.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">activate all regulations</Value>
+            <Value disabled="false">alle Regeln aktivieren</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmAlleRegelnDeaktivieren.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">deactivate all regulations</Value>
+            <Value disabled="false">alle Regeln außer Kraft setzen</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmRundeAuslosen.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">draw lots for round</Value>
+            <Value disabled="false">Runde auslosen</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmTeilnehmerMischen.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">scramble attendees</Value>
+            <Value disabled="false">Teilnehmer neu mischen</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmTurnierSpeichern.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Save Tournament</Value>
+            <Value disabled="false">Turnier speichern</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmTurnierverwaltungBeenden.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Exit</Value>
+            <Value disabled="false">Beenden</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.openTournament.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Open Tournament</Value>
+            <Value disabled="false">Turnier öffnen</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.openTournament.short description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">opens a tournament from storage</Value>
+            <Value disabled="false">Turnierdaten werden geladen</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.openViewerInstance.description</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">opens a new window which displays tornament data in read only mode</Value>
+            <Value disabled="false">öffnet ein Fenster, in dem die Turnierdaten schreibgeschützt geöffnet werden</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.openViewerInstance.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Open Viewer</Value>
+            <Value disabled="false">Viewer öffnen</Value>
+        </Property>
+    </Records>
+</MultiProperties>
