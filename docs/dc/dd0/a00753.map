@@ -1,5 +1,4 @@
-<map id="org.dos.tournament.common.result.AbstractResult" name="org.dos.tournament.common.result.AbstractResult">
-<area shape="rect" id="node1" title=" " alt="" coords="5,169,233,211"/>
-<area shape="rect" id="node2" href="$d5/dae/a00767.html" title=" " alt="" coords="5,80,233,121"/>
-<area shape="rect" id="node3" href="$d7/d03/a01491.html" title=" " alt="" coords="74,5,165,32"/>
+<map id="org.dos.tournament.application.TournamentManagerUI.OpenTournamentAction" name="org.dos.tournament.application.TournamentManagerUI.OpenTournamentAction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,297,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="97,5,205,32"/>
 </map>

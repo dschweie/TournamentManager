@@ -1,5 +1,8 @@
 var a00350 =
 [
-    [ "SwingAction_1", "db/d10/a00350.html#a9ac255da0ff334d9492ee4672810293e", null ],
-    [ "actionPerformed", "db/d10/a00350.html#a178b846c60bb6682edb7647e44537df4", null ]
+    [ "competition", "d7/dfc/a00349.html", "d7/dfc/a00349" ],
+    [ "movement", "d6/d9c/a00352.html", "d6/d9c/a00352" ],
+    [ "player", "db/ddc/a00353.html", "db/ddc/a00353" ],
+    [ "result", "d3/dc9/a00355.html", "d3/dc9/a00355" ],
+    [ "storage", "d6/de1/a00356.html", "d6/de1/a00356" ]
 ];

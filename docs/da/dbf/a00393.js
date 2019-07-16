@@ -1,5 +1,30 @@
 var a00393 =
 [
-    [ "SwingActionActivateAttendee", "da/dbf/a00393.html#a592f007642f9d3a44300ef86e1f4af6c", null ],
-    [ "actionPerformed", "da/dbf/a00393.html#ad6ef58b5ddec4126f8cd7027a1f196c8", null ]
+    [ "SwingActionActivateLEquipe", "de/de8/a00405.html", "de/de8/a00405" ],
+    [ "SwingActionAddParticipantsToDatabase", "dc/d2f/a00425.html", "dc/d2f/a00425" ],
+    [ "SwingActionCreateNewMatchday", "d8/de7/a00417.html", "d8/de7/a00417" ],
+    [ "SwingActionDeleteLastMatchday", "d4/d53/a00429.html", "d4/d53/a00429" ],
+    [ "SwingActionDeleteLEquipe", "da/d9c/a00413.html", "da/d9c/a00413" ],
+    [ "SwingActionEnlistLEquipe", "d7/d93/a00397.html", "d7/d93/a00397" ],
+    [ "SwingActionInactivateLEquipe", "de/d3d/a00409.html", "de/d3d/a00409" ],
+    [ "SwingActionUpdateLastRound", "d2/de1/a00421.html", "d2/de1/a00421" ],
+    [ "SwingActionUpdateLEquipe", "d7/d00/a00401.html", "d7/d00/a00401" ],
+    [ "PetanqueLEquipeFormePanel", "da/dbf/a00393.html#acd657ea42d5801e51d02a2add6d46e74", null ],
+    [ "getTournament", "da/dbf/a00393.html#a8feff337271230dd8d580b9dd335804a", null ],
+    [ "setTournament", "da/dbf/a00393.html#accd18ee5594f1a8056d5a94d6c74f500", null ],
+    [ "activateLEquipe", "da/dbf/a00393.html#a19e078eefd4f6e0c07fd5b1d4449bf34", null ],
+    [ "addToDatabase", "da/dbf/a00393.html#aa6e997363888df42b5d84ea30f648bfd", null ],
+    [ "createNewMatchday", "da/dbf/a00393.html#aabe4aab020f746e8d2f12641924793bf", null ],
+    [ "deleteLastMatchday", "da/dbf/a00393.html#ad23d6cc937e44e467c2b0842464e258c", null ],
+    [ "deleteLEquipe", "da/dbf/a00393.html#abcad755e9c190a3717b6003d5424dc7d", null ],
+    [ "enlistLEquipe", "da/dbf/a00393.html#a12b7b834fdc8d96a976182beba03040d", null ],
+    [ "inactivateLEquipe", "da/dbf/a00393.html#a8cf9ada060af9c85ed4159e451574ce3", null ],
+    [ "replaceLastMatchday", "da/dbf/a00393.html#ad49a0a3af75958fe0c84ec31b353eaf6", null ],
+    [ "tabbedPaneMatchdays", "da/dbf/a00393.html#ab76bcd86e0d28e88b9961f4aaad097fa", null ],
+    [ "table", "da/dbf/a00393.html#abd64d4e5de6048a52e1ac0d28c6fdd65", null ],
+    [ "tableCourts", "da/dbf/a00393.html#a923af9fb317adcc0b4ce8e6c02f24918", null ],
+    [ "tableLeaderboard", "da/dbf/a00393.html#af9b888c019daa897fd800f8847460f0d", null ],
+    [ "tableLEquipes", "da/dbf/a00393.html#a3d57b9579ab3d5c53146f0ca59c8c76f", null ],
+    [ "tournament", "da/dbf/a00393.html#a38f23c05038cfeb478edbb9a19634564", null ],
+    [ "updateLEquipe", "da/dbf/a00393.html#a78f32502dea668e34275c646cd14f3db", null ]
 ];

@@ -1,8 +1,6 @@
-<map id="org.dos.tournament.branch.petanque.result.PetanqueResult" name="org.dos.tournament.branch.petanque.result.PetanqueResult">
-<area shape="rect" id="node1" title=" " alt="" coords="696,5,971,47"/>
-<area shape="rect" id="node5" href="$d7/db1/a00590.html" title=" " alt="" coords="1019,5,1293,47"/>
-<area shape="rect" id="node2" href="$d2/d4a/a00758.html" title=" " alt="" coords="420,5,648,47"/>
-<area shape="rect" id="node3" href="$d0/d7e/a00770.html" title=" " alt="" coords="144,5,372,47"/>
-<area shape="rect" id="node4" href="$d6/d51/a01494.html" title=" " alt="" coords="5,13,96,39"/>
-<area shape="rect" id="node6" href="$d7/dd2/a00598.html" title=" " alt="" coords="1341,5,1632,47"/>
+<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel">
+<area shape="rect" id="node1" title=" " alt="" coords="181,23,556,65"/>
+<area shape="rect" id="node4" href="$db/d43/a00422.html" title=" " alt="" coords="604,23,1064,65"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="33,56,106,83"/>
 </map>

@@ -1,10 +1,10 @@
 package org.dos.tournament.application.branch.petanque.panels;
 
-import javax.swing.JPanel;
-
+import org.dos.tournament.application.common.panels.AbstractTournamentPanel;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 
-public abstract class AbstractPetanqueSuperMeleePanel extends JPanel{
+public abstract class AbstractPetanqueSuperMeleePanel extends AbstractTournamentPanel
+{
 
   private SuperMelee tournament = null;
   
@@ -21,5 +21,10 @@ public abstract class AbstractPetanqueSuperMeleePanel extends JPanel{
   public SuperMelee getTournament()
   {
     return this.tournament;
+  }
+  
+  public String getTournamentIdAsString()
+  {
+    return this.tournament.getTournamentId().toString();
   }
 }

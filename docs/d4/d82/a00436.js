@@ -1,5 +1,27 @@
 var a00436 =
 [
-    [ "CancelAction", "d4/d82/a00436.html#a4958c2ec3d4c2cd5e1fc1326ff736da7", null ],
-    [ "actionPerformed", "d4/d82/a00436.html#a9e6442664ed9dd7d2bc0a7f5235d63b9", null ]
+    [ "SwingActionActivateAttendee", "de/dfe/a00448.html", "de/dfe/a00448" ],
+    [ "SwingActionCreateNewMatchday", "db/db1/a00460.html", "db/db1/a00460" ],
+    [ "SwingActionDeleteAttendee", "de/d87/a00456.html", "de/d87/a00456" ],
+    [ "SwingActionDeleteLastMatchday", "df/d38/a00468.html", "df/d38/a00468" ],
+    [ "SwingActionEnlistAttendee", "de/df8/a00440.html", "de/df8/a00440" ],
+    [ "SwingActionInactivateAttendee", "d1/d0b/a00452.html", "d1/d0b/a00452" ],
+    [ "SwingActionSetMatchdayManually", "d7/db5/a00472.html", "d7/db5/a00472" ],
+    [ "SwingActionUpdateAttendee", "d3/dea/a00444.html", "d3/dea/a00444" ],
+    [ "SwingActionUpdateLastRound", "d2/d9d/a00464.html", "d2/d9d/a00464" ],
+    [ "PetanqueSuperMeleePanel", "d4/d82/a00436.html#a0f2956014086094bfc9b2fa154887614", null ],
+    [ "action", "d4/d82/a00436.html#a9859a936ede51cbd8f5453604ad773c3", null ],
+    [ "activateAttendee", "d4/d82/a00436.html#ae506a1941eafebc0dc78feae7a5b4753", null ],
+    [ "createNewMatchday", "d4/d82/a00436.html#a7d03ecb387d94261686630528203409c", null ],
+    [ "deleteAttendee", "d4/d82/a00436.html#acd9ae380efec364d6c4c864e0958edeb", null ],
+    [ "deleteLastMatchday", "d4/d82/a00436.html#ae2c87d828f5a8f6334b7bae7319dc9fd", null ],
+    [ "enlistAttendee", "d4/d82/a00436.html#aad62a8443b27b5499cb772fbe7aeeb14", null ],
+    [ "inactivateAttendee", "d4/d82/a00436.html#a0bd81242fbbd53e6716b86c09872b2dd", null ],
+    [ "replaceLastMatchday", "d4/d82/a00436.html#a8a417e3554d115c2523164fcacedbb58", null ],
+    [ "tabbedPaneMatchdays", "d4/d82/a00436.html#a54d27cb40de9975cd20928600c84d681", null ],
+    [ "table", "d4/d82/a00436.html#a7f177bc910aa17bf72ef244a1edc7a3e", null ],
+    [ "tableAttendees", "d4/d82/a00436.html#a2e371e371a4241cf34c058c99f92d049", null ],
+    [ "tableCourts", "d4/d82/a00436.html#ae3e1a0113a35bc60b97f2d709728a229", null ],
+    [ "tableLeaderboard", "d4/d82/a00436.html#a49779e4e03a13fe997220fb1c71f2283", null ],
+    [ "updateAttendee", "d4/d82/a00436.html#a645fae8d18a1a7637a952ff90a3e2963", null ]
 ];

@@ -1,5 +1,5 @@
 var a00472 =
 [
-    [ "SwingActionEnlistLEquipe", "d7/db5/a00472.html#a9c06e1aef45c4b9e271aa7dce5f73a4e", null ],
-    [ "actionPerformed", "d7/db5/a00472.html#acc533af6f2d231a4d78829158d2e382f", null ]
+    [ "SwingActionSetMatchdayManually", "d7/db5/a00472.html#ab85e611a436dc4689478490a88551d86", null ],
+    [ "actionPerformed", "d7/db5/a00472.html#aba3be674ec10c1edae9cb70c82f98f69", null ]
 ];

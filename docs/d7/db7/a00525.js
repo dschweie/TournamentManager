@@ -1,6 +1,6 @@
 var a00525 =
 [
-    [ "MatchdayUpdate", "d7/db7/a00525.html#a0feb2fd89002596f5cc1b2a6f5139e61", null ],
-    [ "getMatchday", "d7/db7/a00525.html#a3e7e4cf84e343ff57f67ab94a22f284f", null ],
-    [ "matchday", "d7/db7/a00525.html#a0fef9966304e8edb75cbe5e44cc51c6e", null ]
+    [ "keyPressed", "d7/db7/a00525.html#a4190143e52588858cb4a8d6ad23b852d", null ],
+    [ "keyReleased", "d7/db7/a00525.html#aa13f61eb28a8d21fef79ba60a7d3fff7", null ],
+    [ "keyTyped", "d7/db7/a00525.html#a6882b1f8f605ba15aab72fe6c34c8680", null ]
 ];

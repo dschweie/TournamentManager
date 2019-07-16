@@ -1,5 +1,8 @@
-<map id="org.dos.tournament.common.result.AbstractResult" name="org.dos.tournament.common.result.AbstractResult">
-<area shape="rect" id="node1" title=" " alt="" coords="5,169,233,211"/>
-<area shape="rect" id="node2" href="$d3/d2c/a00764.html" title=" " alt="" coords="5,80,233,121"/>
-<area shape="rect" id="node3" href="$d2/daa/a01488.html" title=" " alt="" coords="74,5,165,32"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTwice" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverPlayTripletteTwice">
+<area shape="rect" id="node1" title=" " alt="" coords="955,185,1392,226"/>
+<area shape="rect" id="node2" href="$d8/d1c/a00824.html" title=" " alt="" coords="687,99,905,184"/>
+<area shape="rect" id="node3" href="$d8/d64/a00828.html" title=" " alt="" coords="333,36,552,92"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,51,116,77"/>
+<area shape="rect" id="node5" title=" " alt="" coords="368,116,517,143"/>
+<area shape="rect" id="node6" title=" " alt="" coords="409,197,476,224"/>
 </map>

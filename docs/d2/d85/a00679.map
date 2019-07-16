@@ -1,6 +1,4 @@
-<map id="org.dos.tournament.common.movement.regulations.AbstractCoreRule&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.AbstractCoreRule&lt; T, G, P &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="273,75,596,117"/>
-<area shape="rect" id="node3" href="$dc/d25/a00596.html" title="Diese Klasse ist Basisklasse im Regelwerk." alt="" coords="800,5,1075,91"/>
-<area shape="rect" id="node4" href="$d4/d9b/a00680.html" title=" " alt="" coords="776,115,1099,171"/>
-<area shape="rect" id="node2" href="$d6/dd3/a00688.html" title=" " alt="" coords="5,68,224,124"/>
+<map id="org.dos.tournament.application.TournamentManagerUI.OpenViewerAction" name="org.dos.tournament.application.TournamentManagerUI.OpenViewerAction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,268,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="83,5,191,32"/>
 </map>

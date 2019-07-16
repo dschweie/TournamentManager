@@ -290,13 +290,20 @@ public class SuperMelee extends AbstractTournament
     return _retval;    
   }
 
+  @Override
+  protected synchronized void setChanged() {
+    // TODO Auto-generated method stub
+    super.setChanged();
+    SingletonStorage.getInstance().saveTournament(this, true);
+  }
+
+
   public void forceNotifyAll()
   {
     this.setChanged();
     
     //  Benutzer werden in die Datenbank geschrieben
     this.competitors.forEach(it ->  { if(null == it.getAttribute("_id")) SingletonStorage.getInstance().saveParticipant(it, true);});
-    SingletonStorage.getInstance().saveTournament(this, true);
     
     this.notifyObservers();
     this.clearChanged();
@@ -413,6 +420,7 @@ public class SuperMelee extends AbstractTournament
       for(int i = 0; i < _matches; ++i)
         this.parties.remove(_matchday.getMatch(i));
       this.matchdays.remove(_matchday);
+      this.forceNotifyAll();
     }
   }
   

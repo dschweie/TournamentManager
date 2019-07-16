@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionPrintMatchday" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionPrintMatchday">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,317,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="107,5,215,32"/>
+<map id="org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel" name="org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,169,393,211"/>
+<area shape="rect" id="node2" href="$d4/d1f/a00506.html" title=" " alt="" coords="28,80,371,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="167,5,231,32"/>
 </map>

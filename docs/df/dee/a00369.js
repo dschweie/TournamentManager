@@ -1,6 +1,9 @@
 var a00369 =
 [
-    [ "keyPressed", "df/dee/a00369.html#a792272c76cb3b090d2087df15d07ce56", null ],
-    [ "keyReleased", "df/dee/a00369.html#a368f964b347b50a6f0bbefe6c68d5bdf", null ],
-    [ "keyTyped", "df/dee/a00369.html#a941952c560cfa30139f507d115379463", null ]
+    [ "TableModel", "dc/de3/a00373.html", "dc/de3/a00373" ],
+    [ "ParticipantTable", "df/dee/a00369.html#a743251dc13f4a5110f19e217d4b736f1", null ],
+    [ "isCellEditable", "df/dee/a00369.html#a90dde496eba20cafd6bbef3c99b98a17", null ],
+    [ "updateColumnSize", "df/dee/a00369.html#a404cba0d8135068d0d33f35ff72599e7", null ],
+    [ "tableModel", "df/dee/a00369.html#a005aa30d40bddf493ccf47d63564b1d1", null ],
+    [ "tournament", "df/dee/a00369.html#a4fa8cf90a53379f4da477069be2f4eb8", null ]
 ];

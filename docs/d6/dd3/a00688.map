@@ -1,8 +1,6 @@
-<map id="org.dos.tournament.common.competition.AbstractEncounter" name="org.dos.tournament.common.competition.AbstractEncounter">
-<area shape="rect" id="node1" title=" " alt="" coords="733,71,996,112"/>
-<area shape="rect" id="node2" href="$dd/d85/a00702.html" title=" " alt="" coords="340,5,603,47"/>
-<area shape="rect" id="node3" href="$d0/d7e/a00770.html" title=" " alt="" coords="357,71,585,112"/>
-<area shape="rect" id="node4" href="$d6/d51/a01494.html" title=" " alt="" coords="5,78,96,105"/>
-<area shape="rect" id="node5" title=" " alt="" coords="331,136,612,177"/>
-<area shape="rect" id="node6" title=" " alt="" coords="21,143,81,170"/>
+<map id="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard.WizardCancelAction" name="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard.WizardCancelAction">
+<area shape="rect" id="node1" title=" " alt="" coords="675,23,1079,65"/>
+<area shape="rect" id="node2" href="$df/d9e/a00686.html" title=" " alt="" coords="221,23,625,65"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="26,56,93,83"/>
 </map>

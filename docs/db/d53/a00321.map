@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.KeyAdapter" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.KeyAdapter">
-<area shape="rect" id="node1" title="Listener zur Positionierung des Focus in der SuperMeleeMatchdayTable." alt="" coords="5,80,380,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="99,5,286,32"/>
+<map id="org.dos.tournament.application.branch.petanque.dialogs.movement.DialogSetRoundManually" name="org.dos.tournament.application.branch.petanque.dialogs.movement.DialogSetRoundManually">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,417,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="179,5,243,32"/>
 </map>

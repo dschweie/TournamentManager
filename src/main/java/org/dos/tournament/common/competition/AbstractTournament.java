@@ -27,6 +27,11 @@ public abstract class AbstractTournament extends Observable implements ITourname
     this.tid = tid;
   }
   
+  public UUID getTournamentId()
+  {
+    return UUID.fromString(this.tid.toString());
+  }
+  
   protected void setTournamentId(String value)
   {
     this.tid = UUID.fromString(value);

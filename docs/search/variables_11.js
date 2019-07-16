@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vecattendees',['vecAttendees',['../d8/d91/a00410.html#adc77f5be319e4ed2c3aeefe5793a5cea',1,'org::dos::tournament::application::dialogs::player::DialogAssociationAttendee']]],
-  ['vecheader',['vecHeader',['../dc/dea/a00558.html#a6ffb5afb256741e52867281c29b456df',1,'org::dos::tournament::application::petanque::panels::tablemodels::ParticipantsTableModel']]]
+  ['updateattendee',['updateAttendee',['../db/d2c/a00466.html#a645fae8d18a1a7637a952ff90a3e2963',1,'org::dos::tournament::application::branch::petanque::panels::PetanqueSuperMeleePanel']]],
+  ['updatelequipe',['updateLEquipe',['../d7/db9/a00426.html#a78f32502dea668e34275c646cd14f3db',1,'org::dos::tournament::application::branch::petanque::panels::PetanqueLEquipeFormePanel']]]
 ];

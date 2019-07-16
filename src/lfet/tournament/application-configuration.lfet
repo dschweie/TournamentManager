@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.1.5 (190416x1)" language="English" saveDate="2019.04.26 at 05:58:05 CEST" saveUser="dirk.schweier">
+<LFET version="LF-ET 2.1.5 (190525x1)" language="English" saveDate="2019.05.30 at 17:10:48 CEST" saveUser="dirk.schweier">
   <Conditions>
     <Condition uId="11446800829457960">
       <Title language="German" value="state"/>
@@ -36,6 +36,9 @@
     <Condition uId="15562037092100299">
       <Title language="English" value="tournament data valid"/>
     </Condition>
+    <Condition uId="15592288452688920">
+      <Title language="English" value="opened in satelite-mode"/>
+    </Condition>
   </Conditions>
   <Actions>
     <Action uId="11446800828767967">
@@ -55,6 +58,19 @@
         <ActionOccurrence uId="15562510436491384">
           <Symbol language="English" value="false"/>
           <Title language="English" value="menu invisible"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15592289053638931">
+      <Title language="English" value="set default exit mode"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15592289764819074">
+          <Symbol language="English" value="HIDE"/>
+          <Title language="English" value="HIDE_ON_CLOSE"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592290192039348">
+          <Symbol language="English" value="EXIT"/>
+          <Title language="English" value="EXIT_ON_CLOSE"/>
         </ActionOccurrence>
       </ActionOccurrences>
     </Action>
@@ -95,7 +111,7 @@
       <Title language="English" value="next state"/>
     </Action>
   </Actions>
-  <Rules lastId="10">
+  <Rules lastId="13">
     <Rule id="3">
       <ConditionOccurrenceLink link="15562034828080125"/>
       <ConditionLink link="15562034564990081" conditionState="true"/>
@@ -115,11 +131,21 @@
       <ConditionLink link="15562034564990081" conditionState="false"/>
       <ActionOccurrenceLink link="15562036259790228"/>
     </Rule>
-    <Rule id="9">
+    <Rule id="11">
       <ConditionOccurrenceLink link="15562034828100127"/>
       <ConditionLink link="15562037092100299" conditionState="true"/>
       <ActionOccurrenceLink link="15562036162360217"/>
       <ActionOccurrenceLink link="15562510436491384"/>
+      <ConditionLink link="15592288452688920" conditionState="true"/>
+      <ActionOccurrenceLink link="15592289764819074"/>
+    </Rule>
+    <Rule id="13">
+      <ConditionOccurrenceLink link="15562034828100127"/>
+      <ConditionLink link="15562037092100299" conditionState="true"/>
+      <ActionOccurrenceLink link="15562036162360217"/>
+      <ActionOccurrenceLink link="15562510436491384"/>
+      <ConditionLink link="15592288452688920" conditionState="false"/>
+      <ActionOccurrenceLink link="15592290192039348"/>
     </Rule>
     <Rule id="7">
       <ConditionOccurrenceLink link="15562034828100127"/>
@@ -138,6 +164,6 @@
   <UrlsOut>
     <Url title="Ordner" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceName=IConfigurableApplication&lt;br/&gt;// $$InterfaceRulesClassName=ConfigurationEngine&lt;br/&gt;// $$interfaceRuleGroups=true&lt;br/&gt;// $$InterfacePrefixIs=_is&lt;br/&gt;// $$InterfacePrefixDo=_do&lt;br/&gt;// $$package=org.dos.tournament.application.configuration"/>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceName=IConfigurableApplication&lt;br/&gt;// $$InterfaceRulesClassName=ConfigurationEngine&lt;br/&gt;// $$interfaceRuleGroups=true&lt;br/&gt;// $$InterfacePrefixIs=_is&lt;br/&gt;// $$InterfacePrefixDo=_do&lt;br/&gt;// $$package=org.dos.tournament.application.configuration"/>
   <Title language="English" value="Hier doppel-klicken um den Titel für die Entscheidungstabelle einzugeben"/>
 </LFET>

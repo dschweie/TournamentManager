@@ -1,5 +1,8 @@
 package org.dos.tournament.application.factory;
 
+import java.util.concurrent.TimeUnit;
+
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -9,20 +12,49 @@ import org.dos.tournament.application.branch.petanque.factories.SupermeleeMenuFa
 import org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleePanel;
 import org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleeViewerPanel;
 import org.dos.tournament.application.branch.petanque.panels.tablemodels.ParticipantsTableModel;
+import org.dos.tournament.application.common.panels.AbstractTournamentPanel;
+import org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard;
+import org.dos.tournament.application.common.wizard.createtournament.TestDialog;
+import org.dos.tournament.application.factory.model.TournamentFactoryRulesEngine;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship;
 import org.dos.tournament.common.storage.SingletonStorage;
 
 public class FactoryTournament 
 {
-  static public JPanel SetupTournamentEnvironment(String tid, boolean active)
+  static public AbstractTournamentPanel SetupTournamentEnvironment(JFrame owner)
+  {
+    CreateTournamentWizard.xSettings.removeAllElements();
+    //CreateTournamentWizard _instance = new CreateTournamentWizard(owner);
+    CreateTournamentWizard _instance = new CreateTournamentWizard();
+    //TestDialog _instance = new TestDialog(owner);
+    _instance.setVisible(true);
+    _instance.revalidate();
+
+    while(_instance.isVisible())
+    {
+      /* wait and see */
+      try {
+        TimeUnit.MILLISECONDS.sleep(500);
+      } catch (InterruptedException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+    }
+    
+    //return _instance.getTournamentEnvironment();
+    return null;
+    
+  }
+  
+  static public AbstractTournamentPanel SetupTournamentEnvironment(String tid, boolean active)
   {
     return FactoryTournament.SetupTournamentEnvironment(SingletonStorage.getInstance().loadTournamentAsDocument(tid), active);
   }
   
-  static public JPanel SetupTournamentEnvironment(Document data, boolean active)
+  static public AbstractTournamentPanel SetupTournamentEnvironment(Document data, boolean active)
   {
-    JPanel _retval = null;
+    AbstractTournamentPanel _retval = null;
     String _class = data.getString("class");
     if(null == _class)
       _class = "org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship";
@@ -39,11 +71,11 @@ public class FactoryTournament
     return _retval;
   }
 
-  private static JPanel SetupSuperMeleeClubChampionship(Document data, boolean active) 
+  private static AbstractTournamentPanel SetupSuperMeleeClubChampionship(Document data, boolean active) 
   {
     SuperMeleeClubChampionship _tournament = new SuperMeleeClubChampionship(data);
     ParticipantsTableModel _tableModel = new ParticipantsTableModel();
-    JPanel _retval = null;
+    AbstractTournamentPanel _retval = null;
     if(active)
     {
       _retval = new PetanqueSuperMeleePanel(_tournament);

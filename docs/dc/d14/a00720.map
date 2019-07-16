@@ -1,11 +1,5 @@
-<map id="org.dos.tournament.common.player.AbstractParticipant" name="org.dos.tournament.common.player.AbstractParticipant">
-<area shape="rect" id="node1" title=" " alt="" coords="619,175,849,216"/>
-<area shape="rect" id="node2" href="$d1/da6/a00738.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="267,5,498,47"/>
-<area shape="rect" id="node3" href="$d6/d51/a01494.html" title=" " alt="" coords="5,78,96,105"/>
-<area shape="rect" id="node6" href="$d0/d7e/a00770.html" title=" " alt="" coords="269,71,497,112"/>
-<area shape="rect" id="node9" href="$d3/dee/a00774.html" title=" " alt="" coords="269,136,497,177"/>
-<area shape="rect" id="node4" href="$d8/d4e/a00754.html" title=" " alt="" coords="253,201,512,243"/>
-<area shape="rect" id="node5" href="$d4/d8f/a00742.html" title=" " alt="" coords="253,267,512,308"/>
-<area shape="rect" id="node7" title=" " alt="" coords="292,333,473,359"/>
-<area shape="rect" id="node8" title=" " alt="" coords="12,333,89,359"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique">
+<area shape="rect" id="node1" title="Diese Klasse ist Basisklasse im Regelwerk." alt="" coords="579,20,1016,61"/>
+<area shape="rect" id="node2" href="$de/d9d/a00813.html" title=" " alt="" coords="272,5,531,76"/>
+<area shape="rect" id="node3" href="$d6/d8b/a00821.html" title=" " alt="" coords="5,13,224,69"/>
 </map>

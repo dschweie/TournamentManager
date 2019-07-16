@@ -1,4 +1,6 @@
-<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingAction_2" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingAction_2">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,305,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="101,5,209,32"/>
+<map id="org.dos.tournament.application.branch.petanque.panels.AbstractPetanqueSuperMeleePanel" name="org.dos.tournament.application.branch.petanque.panels.AbstractPetanqueSuperMeleePanel">
+<area shape="rect" id="node1" title=" " alt="" coords="115,39,461,80"/>
+<area shape="rect" id="node3" href="$d7/db9/a00426.html" title=" " alt="" coords="509,5,856,47"/>
+<area shape="rect" id="node4" href="$db/d2c/a00466.html" title=" " alt="" coords="509,71,856,112"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,46,67,73"/>
 </map>

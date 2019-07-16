@@ -1,5 +1,5 @@
-<map id="org.dos.tournament.common.competition.AbstractEncounter" name="org.dos.tournament.common.competition.AbstractEncounter">
-<area shape="rect" id="node1" title=" " alt="" coords="45,95,308,136"/>
-<area shape="rect" id="node3" href="$da/d31/a00678.html" title=" " alt="" coords="5,184,348,225"/>
-<area shape="rect" id="node2" href="$dd/d85/a00702.html" title=" " alt="" coords="45,5,308,47"/>
+<map id="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard.WizardCancelAction" name="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard.WizardCancelAction">
+<area shape="rect" id="node1" title=" " alt="" coords="613,5,1017,47"/>
+<area shape="rect" id="node2" href="$df/d9e/a00686.html" title=" " alt="" coords="161,5,565,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,13,113,39"/>
 </map>

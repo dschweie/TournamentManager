@@ -1,9 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTwice" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetOpponentTwice">
-<area shape="rect" id="node1" title=" " alt="" coords="1061,161,1499,202"/>
-<area shape="rect" id="node2" href="$df/d96/a00714.html" title=" " alt="" coords="687,87,905,172"/>
-<area shape="rect" id="node3" href="$dc/d8f/a00718.html" title=" " alt="" coords="333,36,552,92"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,51,116,77"/>
-<area shape="rect" id="node5" title=" " alt="" coords="368,116,517,143"/>
-<area shape="rect" id="node6" title=" " alt="" coords="409,176,476,203"/>
-<area shape="rect" id="node7" title=" " alt="" coords="763,196,829,223"/>
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingAction_2" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingAction_2">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,305,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="101,5,209,32"/>
 </map>

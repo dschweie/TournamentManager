@@ -1,7 +1,6 @@
 var a00341 =
 [
-    [ "SwingActionOK", "d9/d48/a00345.html", "d9/d48/a00345" ],
-    [ "SwingActionOkAndNext", "d7/dfc/a00349.html", "d7/dfc/a00349" ],
-    [ "DialogJoueurIndividuel", "d3/d93/a00341.html#aa33036682cb89f2d70cf31ec1fcced0a", null ],
-    [ "DialogJoueurIndividuel", "d3/d93/a00341.html#ada025f36ddc0f09d5577001cbe8c86b0", null ]
+    [ "PetanqueMatchResult", "d3/dee/a00774.html", "d3/dee/a00774" ],
+    [ "PetanqueResult", "d6/d17/a00778.html", "d6/d17/a00778" ],
+    [ "PetanqueSuperMeleeClubChampionshipResult", "da/d96/a00782.html", "da/d96/a00782" ]
 ];

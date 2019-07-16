@@ -1,5 +1,5 @@
 var a00524 =
 [
-    [ "SwingActionInactivateAttendee", "d9/d24/a00524.html#aaea40aeacaf8eed9d2e280a458665870", null ],
-    [ "actionPerformed", "d9/d24/a00524.html#ae60f6b8ce4cfa053268ebbe8323804a0", null ]
+    [ "SwingActionOkAndNext", "d9/d24/a00524.html#adff931e592e61cb9c3b5ce51be81e96f", null ],
+    [ "actionPerformed", "d9/d24/a00524.html#a2a03bee3ae38c82d65495ef712da3a7b", null ]
 ];

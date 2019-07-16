@@ -1,7 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.team.Triplette" name="org.dos.tournament.branch.petanque.team.Triplette">
-<area shape="rect" id="node1" title=" " alt="" coords="5,363,276,404"/>
-<area shape="rect" id="node2" href="$d5/d8a/a00599.html" title=" " alt="" coords="5,273,276,315"/>
-<area shape="rect" id="node3" href="$de/de6/a00723.html" title=" " alt="" coords="25,184,256,225"/>
-<area shape="rect" id="node4" href="$dd/dd8/a00719.html" title=" " alt="" coords="25,95,256,136"/>
-<area shape="rect" id="node5" href="$d0/dab/a00735.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="25,5,256,47"/>
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionToggleTeamPresentation" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionToggleTeamPresentation">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,376,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="137,5,245,32"/>
 </map>

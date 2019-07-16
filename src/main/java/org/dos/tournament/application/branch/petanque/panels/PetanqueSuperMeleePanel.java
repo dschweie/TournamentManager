@@ -477,7 +477,6 @@ public class PetanqueSuperMeleePanel extends AbstractPetanqueSuperMeleePanel
       PetanqueSuperMeleePanel.this.tabbedPaneMatchdays.remove(component)
       */
       PetanqueSuperMeleePanel.this.getTournament().regenerateLastMatchday(PetanqueSuperMeleePanel.this);
-      //PetanqueSuperMeleePanel.this.tournament.forceNotifyAll();
     }
     public void updateStatus()
     {

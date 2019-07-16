@@ -1,6 +1,6 @@
 var a00292 =
 [
-    [ "mongo", "d6/d82/a00293.html", "d6/d82/a00293" ],
-    [ "IStorage", "d6/d17/a00778.html", "d6/d17/a00778" ],
-    [ "SingletonStorage", "d0/d7d/a00786.html", null ]
+    [ "LeaderboardTableColumnModel", "d8/d89/a00484.html", "d8/d89/a00484" ],
+    [ "LeaderboardTableModel", "d4/ddf/a00488.html", "d4/ddf/a00488" ],
+    [ "ParticipantsTableModel", "da/d7e/a00492.html", "da/d7e/a00492" ]
 ];

@@ -1,4 +1,6 @@
 var a00319 =
 [
-    [ "keyPressed", "de/dab/a00319.html#acdad068fa6195ff9fb845fa039c88cfd", null ]
+    [ "LeaderboardTableColumnModel", "d6/d52/a00510.html", "d6/d52/a00510" ],
+    [ "LeaderboardTableModel", "d6/d90/a00514.html", "d6/d90/a00514" ],
+    [ "ParticipantsTableModel", "d5/dee/a00518.html", "d5/dee/a00518" ]
 ];

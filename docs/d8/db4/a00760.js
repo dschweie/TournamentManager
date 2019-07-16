@@ -1,8 +1,6 @@
 var a00760 =
 [
-    [ "ConstantScoreResult", "d8/db4/a00760.html#a0a27f2248b1f71f238d244a042078892", null ],
-    [ "compareTo", "d8/db4/a00760.html#af0483e64491d8db0a6d5af5c125aee9e", null ],
-    [ "getScore", "d8/db4/a00760.html#a00651219d5640da6b4b3783cf213c409", null ],
-    [ "toBsonDocument", "d8/db4/a00760.html#a6d40b68b43f36f803475788872d20f95", null ],
-    [ "iScore", "d8/db4/a00760.html#aa5052efb3836d9d1a5f529449af78745", null ]
+    [ "MatchdayUpdate", "d8/db4/a00760.html#a0feb2fd89002596f5cc1b2a6f5139e61", null ],
+    [ "getMatchday", "d8/db4/a00760.html#a3e7e4cf84e343ff57f67ab94a22f284f", null ],
+    [ "matchday", "d8/db4/a00760.html#a0fef9966304e8edb75cbe5e44cc51c6e", null ]
 ];

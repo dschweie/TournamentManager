@@ -1,5 +1,8 @@
-<map id="org.dos.tournament.common.competition.IEncounter" name="org.dos.tournament.common.competition.IEncounter">
-<area shape="rect" id="node1" title=" " alt="" coords="45,5,308,47"/>
-<area shape="rect" id="node2" href="$df/d1b/a00687.html" title=" " alt="" coords="45,95,308,136"/>
-<area shape="rect" id="node3" href="$d6/da1/a00675.html" title=" " alt="" coords="5,184,348,225"/>
+<map id="org.dos.tournament.branch.petanque.result.PetanqueSuperMeleeClubChampionshipResult" name="org.dos.tournament.branch.petanque.result.PetanqueSuperMeleeClubChampionshipResult">
+<area shape="rect" id="node1" title=" " alt="" coords="136,396,427,437"/>
+<area shape="rect" id="node2" href="$d0/db6/a00692.html" title=" " alt="" coords="144,305,419,347"/>
+<area shape="rect" id="node3" href="$df/d7d/a00696.html" title=" " alt="" coords="5,215,280,256"/>
+<area shape="rect" id="node4" href="$da/d5b/a00868.html" title=" " alt="" coords="29,96,257,137"/>
+<area shape="rect" id="node5" href="$d1/d8f/a00880.html" title=" " alt="" coords="29,5,257,47"/>
+<area shape="rect" id="node6" title=" " alt="" coords="294,103,333,130"/>
 </map>

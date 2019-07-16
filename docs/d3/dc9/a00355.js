@@ -1,5 +1,8 @@
 var a00355 =
 [
-    [ "SwingAction_2", "d3/dc9/a00355.html#aabb31a5ed0e1cafc47c5b6052162550e", null ],
-    [ "actionPerformed", "d3/dc9/a00355.html#ac8c2182d88e33e22a80b867d2790e2d8", null ]
+    [ "AbstractResult", "df/d39/a00950.html", "df/d39/a00950" ],
+    [ "AbstractTotalResult", "d3/dca/a00954.html", "d3/dca/a00954" ],
+    [ "ConstantScoreResult", "df/d9c/a00958.html", "df/d9c/a00958" ],
+    [ "IResult", "df/d88/a00962.html", "df/d88/a00962" ],
+    [ "ITotalResult", "d2/d6e/a00966.html", "d2/d6e/a00966" ]
 ];

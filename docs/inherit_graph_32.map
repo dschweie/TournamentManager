@@ -1,5 +1,7 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$d4/d8f/a00742.html" title=" " alt="" coords="5,39,264,80"/>
-<area shape="rect" id="node2" href="$d4/dfa/a00746.html" title=" " alt="" coords="312,5,571,47"/>
-<area shape="rect" id="node3" href="$d9/db0/a00750.html" title=" " alt="" coords="312,71,571,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="93,5,180,32"/>
+<area shape="rect" id="node2" href="$d3/d50/a00882.html" title=" " alt="" coords="316,27,579,69"/>
+<area shape="rect" id="node3" href="$d2/dc7/a00838.html" title=" " alt="" coords="627,27,997,69"/>
+<area shape="rect" id="node4" href="$d0/d66/a00858.html" title="Diese Klasse bildet das monatliche Super Melee&#45;Turnier der Bouleabteilung von Blau&#45;Gelb Groß&#45;Gerau ab..." alt="" coords="1045,27,1416,69"/>
+<area shape="rect" id="node5" href="$d2/d79/a00898.html" title="Das Interface dient als allgemeine Schittstelle für Turniere." alt="" coords="5,57,268,98"/>
 </map>

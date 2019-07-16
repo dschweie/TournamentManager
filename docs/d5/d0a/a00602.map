@@ -1,7 +1,10 @@
-<map id="org.dos.tournament.branch.petanque.team.Doublette" name="org.dos.tournament.branch.petanque.team.Doublette">
-<area shape="rect" id="node1" title=" " alt="" coords="5,363,276,404"/>
-<area shape="rect" id="node2" href="$d5/d8a/a00599.html" title=" " alt="" coords="5,273,276,315"/>
-<area shape="rect" id="node3" href="$de/de6/a00723.html" title=" " alt="" coords="25,184,256,225"/>
-<area shape="rect" id="node4" href="$dd/dd8/a00719.html" title=" " alt="" coords="25,95,256,136"/>
-<area shape="rect" id="node5" href="$d0/dab/a00735.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="25,5,256,47"/>
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer">
+<area shape="rect" id="node1" title=" " alt="" coords="166,109,483,151"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node3" href="$d5/d84/a01612.html" title=" " alt="" coords="137,5,213,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="237,5,281,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="305,5,344,32"/>
+<area shape="rect" id="node6" title=" " alt="" coords="369,5,430,32"/>
+<area shape="rect" id="node7" title=" " alt="" coords="455,5,584,32"/>
+<area shape="rect" id="node8" title=" " alt="" coords="609,5,675,32"/>
 </map>

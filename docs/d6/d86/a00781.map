@@ -1,5 +1,7 @@
-<map id="org.dos.tournament.common.storage.mongo.DatabaseClient" name="org.dos.tournament.common.storage.mongo.DatabaseClient">
-<area shape="rect" id="node1" title=" " alt="" coords="91,95,374,136"/>
-<area shape="rect" id="node2" href="$d6/d17/a00778.html" title="Diese Schnittstelle ist Fassade für unterschiedliche Implementierungen zum Speichern von Daten." alt="" coords="5,5,244,47"/>
-<area shape="rect" id="node3" title=" " alt="" coords="269,13,415,39"/>
+<map id="org.dos.tournament.branch.petanque.result.PetanqueSuperMeleeClubChampionshipResult" name="org.dos.tournament.branch.petanque.result.PetanqueSuperMeleeClubChampionshipResult">
+<area shape="rect" id="node1" title=" " alt="" coords="5,363,296,404"/>
+<area shape="rect" id="node2" href="$d3/dee/a00774.html" title=" " alt="" coords="13,273,288,315"/>
+<area shape="rect" id="node3" href="$d6/d17/a00778.html" title=" " alt="" coords="13,184,288,225"/>
+<area shape="rect" id="node4" href="$df/d39/a00950.html" title=" " alt="" coords="37,95,265,136"/>
+<area shape="rect" id="node5" href="$df/d88/a00962.html" title=" " alt="" coords="37,5,265,47"/>
 </map>

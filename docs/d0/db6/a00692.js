@@ -1,8 +1,8 @@
 var a00692 =
 [
-    [ "DefaultCompetitorResult", "d0/db6/a00692.html#a37e917a2cec6802a20b60cf1c7080d76", null ],
-    [ "compareTo", "d0/db6/a00692.html#a359deaef00335e3542b33d5e3cae3dd4", null ],
-    [ "getValue", "d0/db6/a00692.html#a3d7bcbd5a3601ff0ba24b5f7a1824a89", null ],
-    [ "setValue", "d0/db6/a00692.html#a4ce7f902f18828aaa7d86ec9fe218ec1", null ],
-    [ "resultValue", "d0/db6/a00692.html#a09d21bd9e24ae448232d70bf83d0701a", null ]
+    [ "PetanqueMatchResult", "d0/db6/a00692.html#a6d3851132a1254e4153811b22cc16ebf", null ],
+    [ "compareTo", "d0/db6/a00692.html#ac2d36a282bb784baa8c43cd2d9f9141c", null ],
+    [ "compileGameScore", "d0/db6/a00692.html#a0ef554cc882591fa0bf1dfb4cc85f6c8", null ],
+    [ "getMatchScore", "d0/db6/a00692.html#a98478c8e57499ed66231cc05e404bcb5", null ],
+    [ "matchScore", "d0/db6/a00692.html#a7f1f5a09da2784c47f48562f433d1157", null ]
 ];

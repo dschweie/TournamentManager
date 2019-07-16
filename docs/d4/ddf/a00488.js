@@ -1,5 +1,6 @@
 var a00488 =
 [
-    [ "SwingActionDeleteLEquipe", "d4/ddf/a00488.html#a7068ae6e4c7cd34eb666b58ecc58f1a5", null ],
-    [ "actionPerformed", "d4/ddf/a00488.html#a403b04e328785a0d0a7cfbd7da105729", null ]
+    [ "LeaderboardTableModel", "d4/ddf/a00488.html#aef2e187a6a65537504a2f0b3c9700580", null ],
+    [ "isCellEditable", "d4/ddf/a00488.html#a6bf395a750ee450ad21fdac62a470436", null ],
+    [ "update", "d4/ddf/a00488.html#acc497d50f66457e447498514ea6f1ba3", null ]
 ];

@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['score_5fpartie_5flost',['SCORE_PARTIE_LOST',['../d8/d73/a00674.html#a1400cf0734461ea3ff153af9216fbfb9',1,'org::dos::tournament::branch::petanque::tournament::partie::CompetitorPartieResult']]],
-  ['score_5fpartie_5fwon',['SCORE_PARTIE_WON',['../d8/d73/a00674.html#a266115f40261d45565d6cf4257d5c3ac',1,'org::dos::tournament::branch::petanque::tournament::partie::CompetitorPartieResult']]],
-  ['scrollpane',['scrollPane',['../d2/d45/a00342.html#a350fd0a9e3a3fcb0204a3a43bf7eafaf',1,'org::dos::tournament::application::common::panels::DefaultMatchdayPanel']]],
-  ['selecttournament',['selectTournament',['../d1/d7e/a00434.html#a10938e33659f842c95d31cf3f8ef547d',1,'org::dos::tournament::application::dialogs::tournament::DialogChooseTournament']]],
-  ['serialversionuid',['serialVersionUID',['../d1/d7e/a00434.html#a3e8fa039c6522fb3771c3ef5819d96f8',1,'org.dos.tournament.application.dialogs.tournament.DialogChooseTournament.serialVersionUID()'],['../dd/dfd/a00438.html#a243ece12c214db4121db9857168c2617',1,'org.dos.tournament.application.dialogs.tournament.DialogChooseTournament.SelectTournamentAction.serialVersionUID()'],['../db/d34/a00442.html#abdd0a729cd9050bc2c2d6bc3225f0c0b',1,'org.dos.tournament.application.dialogs.tournament.DialogChooseTournament.CancelAction.serialVersionUID()'],['../db/df1/a00486.html#a4a15a6830bbe2a9ba75126e45561c7d2',1,'org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel.SwingActionActivateLEquipe.serialVersionUID()'],['../d4/dbe/a00574.html#ae8a9f7836ceab527a897f7c2bdbf1929',1,'org.dos.tournament.application.TournamentManagerUI.CreateFridayTournamentAction.serialVersionUID()']]],
-  ['stateopponents',['stateOpponents',['../d2/d45/a00342.html#a92c8919f37870b7b00de9a7cb3da33aa',1,'org::dos::tournament::application::common::panels::DefaultMatchdayPanel']]],
-  ['stateteammates',['stateTeammates',['../d2/d45/a00342.html#a7ffc9b7494db696fd7b9bd654e7bc910',1,'org::dos::tournament::application::common::panels::DefaultMatchdayPanel']]],
-  ['statetriplette',['stateTriplette',['../d2/d45/a00342.html#ae99aba5724ad0d1be98b2edecaf0a482',1,'org::dos::tournament::application::common::panels::DefaultMatchdayPanel']]],
-  ['status',['status',['../db/d7c/a00722.html#aff385fe822a4324e1a7f266e8ded2c6d',1,'org::dos::tournament::common::player::AbstractParticipant']]],
-  ['strid',['strId',['../d0/d61/a00302.html#af6ce42e1456c533deec79e80aa583e49',1,'org::dos::tournament::application::common::controls::TableHeaderColumnContent']]],
-  ['strsurname',['strSurname',['../da/d6e/a00610.html#ae6c1df40de282e65837be1018a9e25c7',1,'org::dos::tournament::branch::petanque::team::JoueurIndividuel']]],
-  ['substitutional',['SUBSTITUTIONAL',['../d8/d4e/a00754.html#ada283705a541ec49db572d4e1dc63baf',1,'org::dos::tournament::common::player::utils::ParticipantStatus']]]
+  ['rdbtnacbdtournament',['rdbtnACBDTournament',['../df/d96/a00714.html#aee464a4aa7dc0d2ad9ce45bdb0afa708',1,'org::dos::tournament::application::common::wizard::createtournament::WizardPetanqueCategoryPanel']]],
+  ['rdbtnmonthlyclubtournament',['rdbtnMonthlyClubTournament',['../df/d96/a00714.html#a417da529aae43c9ac7f15e3ff1ab597b',1,'org::dos::tournament::application::common::wizard::createtournament::WizardPetanqueCategoryPanel']]],
+  ['rdbtnsupermelee',['rdbtnSupermelee',['../df/d96/a00714.html#af09577de6d7f711576dadd944d2fb48e',1,'org::dos::tournament::application::common::wizard::createtournament::WizardPetanqueCategoryPanel']]],
+  ['red',['red',['../da/d7e/a00530.html#a16d28e9e0fb7a73b6e16d66c33e871b5',1,'org::dos::tournament::application::common::controls::ToggleButton']]],
+  ['regulations',['regulations',['../d2/dc7/a00838.html#ace6e4ddf136190e52af631e05ff9f469',1,'org::dos::tournament::branch::petanque::tournament::movement::SuperMelee']]],
+  ['replacelastmatchday',['replaceLastMatchday',['../d7/db9/a00426.html#ad49a0a3af75958fe0c84ec31b353eaf6',1,'org.dos.tournament.application.branch.petanque.panels.PetanqueLEquipeFormePanel.replaceLastMatchday()'],['../db/d2c/a00466.html#a8a417e3554d115c2523164fcacedbb58',1,'org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleePanel.replaceLastMatchday()']]],
+  ['result',['result',['../d5/d69/a00878.html#a126f07dcf4b4b6a5aeec0c152b633d03',1,'org.dos.tournament.common.competition.AbstractEncounter.result()'],['../d3/dd1/a00914.html#a6c664a24cabbd07dfc78d05e13eb9aaa',1,'org.dos.tournament.common.player.AbstractParticipant.result()']]],
+  ['resultgenerateround',['resultGenerateRound',['../d2/dc7/a00838.html#a9712bc5297b25b513d5cb813fdcbfd50',1,'org::dos::tournament::branch::petanque::tournament::movement::SuperMelee']]],
+  ['resultstable',['resultsTable',['../d4/d1f/a00506.html#a59b54973e676451b259b533fa17721f2',1,'org::dos::tournament::application::branch::petanque::panels::PetanqueSuperMeleeViewerPanel']]],
+  ['resultvalue',['resultValue',['../d7/d46/a00890.html#a09d21bd9e24ae448232d70bf83d0701a',1,'org::dos::tournament::common::competition::DefaultCompetitorResult']]],
+  ['rounds',['rounds',['../d4/d13/a00766.html#a146c35bc4eeae374804e664fcbc07572',1,'org::dos::tournament::branch::boardgames::movement::TableBasedIndividual']]],
+  ['runninggenerateround',['runningGenerateRound',['../d2/dc7/a00838.html#aec44ad9378b890a46f7d35e579690709',1,'org::dos::tournament::branch::petanque::tournament::movement::SuperMelee']]]
 ];

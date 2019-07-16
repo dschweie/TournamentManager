@@ -1,11 +1,9 @@
 var a00720 =
 [
-    [ "AbstractTeamParticipant", "dc/d14/a00720.html#ac03161fa6c9d5c7cd6568e863e1266d7", null ],
-    [ "contains", "dc/d14/a00720.html#a9b1a728efa7d5929d444cf1af49d28ac", null ],
-    [ "countAttendees", "dc/d14/a00720.html#a3dddc76b55a8a54dea3421e4faaee7cd", null ],
-    [ "getAttendeesToArray", "dc/d14/a00720.html#a2db3f94c11aaeff7473113f605a375cc", null ],
-    [ "getParticipants", "dc/d14/a00720.html#aa05dc5fe12666ce0d81edafb83efafca", null ],
-    [ "hasAttendees", "dc/d14/a00720.html#af582ca4b3e675f4053d9d2ba62cd2216", null ],
-    [ "setParticipants", "dc/d14/a00720.html#a99e96c85cfdda197338544d5e906043c", null ],
-    [ "participants", "dc/d14/a00720.html#a1e027a2951e472a459d1699f3094d6e0", null ]
+    [ "Triplette", "dc/d14/a00720.html#a13debc34316c4e0e82ea435085dd2801", null ],
+    [ "Triplette", "dc/d14/a00720.html#aa46ac1ad1074d0bcff2e7e6d315f6510", null ],
+    [ "getAttendeesToArray", "dc/d14/a00720.html#a806b04e7c2cbeb9ecf027fe03faa539d", null ],
+    [ "getDescription", "dc/d14/a00720.html#a5a9ca92f389278e17c17a548babc78b1", null ],
+    [ "getDescriptionByCode", "dc/d14/a00720.html#a97ff031256f6f2b4134f03ef111b2b89", null ],
+    [ "toBsonDocument", "dc/d14/a00720.html#a3206bd64477f41ee782a81b5ecc5820c", null ]
 ];

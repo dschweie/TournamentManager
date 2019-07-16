@@ -89,7 +89,8 @@ public class SuperMeleeLeaderboardTable  extends JTable
         
         Vector<Object> _row = new Vector<Object>();
         _row.add(new Integer(++rank));
-        _row.add(_current.getName());
+        //_row.add(_current.getName());
+        _row.add(_current.getParticipantId().getCode());
         _row.add(_current.getTotalScore());
         _row.add(_current.getTotalResultValue(PetanqueTotalResult.MATCHES));
         _row.add(_current.getTotalResultValue(PetanqueTotalResult.WINS));
@@ -121,7 +122,8 @@ public class SuperMeleeLeaderboardTable  extends JTable
       Vector<TableHeaderColumnContent> _header = new Vector<TableHeaderColumnContent>();
       // int _width = ParticipantTable.this.getWidth();
       _header.add(new TableHeaderColumnContent("RANK", ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Glossary.Rank"), 10));      
-      _header.add(new TableHeaderColumnContent("PARTICIPANT", ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Glossary.Name"), 100));
+      _header.add(new TableHeaderColumnContent("ID", ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Glossary.ID"), 100));
+      //_header.add(new TableHeaderColumnContent("PARTICIPANT", ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Glossary.Name"), 100));
       _header.add(new TableHeaderColumnContent("TOTALSCORE", ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Glossary.TotalScore"), 10));      
       _header.add(new TableHeaderColumnContent("MATCHES", ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Glossary.Matches"), 10));      
       _header.add(new TableHeaderColumnContent("WINS", ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Glossary.Wins"), 10));      

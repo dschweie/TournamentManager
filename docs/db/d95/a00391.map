@@ -1,5 +1,6 @@
-<map id="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel" name="org.dos.tournament.application.dialogs.petanque.player.DialogJoueurIndividuel">
-<area shape="rect" id="node1" title=" " alt="" coords="5,169,351,211"/>
-<area shape="rect" id="node2" href="$d9/de6/a00404.html" title=" " alt="" coords="34,80,322,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="146,5,210,32"/>
+<map id="org.dos.tournament.application.branch.petanque.panels.components.tables.SuperMeleeResultsTable.TableModel" name="org.dos.tournament.application.branch.petanque.panels.components.tables.SuperMeleeResultsTable.TableModel">
+<area shape="rect" id="node1" title=" " alt="" coords="604,23,1064,65"/>
+<area shape="rect" id="node2" href="$dc/d40/a00568.html" title=" " alt="" coords="181,23,556,65"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="33,56,106,83"/>
 </map>

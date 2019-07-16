@@ -1,12 +1,17 @@
 var a00712 =
 [
-    [ "init", "d3/dda/a00712.html#accc8b48e94670ff086269b53f7d9366e", null ],
-    [ "isEffective", "d3/dda/a00712.html#ad27787556274126d34cff9545374e471", null ],
-    [ "isSuspendable", "d3/dda/a00712.html#adc2d2aca51b09addf29e99ea8ded0e25", null ],
-    [ "isValid", "d3/dda/a00712.html#a02e865cbf6ed48080aed6e81de4fa7ae", null ],
-    [ "putIntoEffect", "d3/dda/a00712.html#a0d0b4554689f1e814205596cc6c89750", null ],
-    [ "putIntoEffectAll", "d3/dda/a00712.html#a0ef66da09c17bd9da0f6c1c8a798abcf", null ],
-    [ "suspend", "d3/dda/a00712.html#ad2b2ceafa531ec23126643757fe91a0e", null ],
-    [ "suspendAll", "d3/dda/a00712.html#af34234a4f29318a5778d09d8623100b1", null ],
-    [ "teardown", "d3/dda/a00712.html#af7bc3bc29e7bc35648a2be099d980b84", null ]
+    [ "PetanqueTotalResult", "d2/d94/a00716.html", "d2/d94/a00716" ],
+    [ "JoueurIndividuel", "d3/dda/a00712.html#ae8bab439a4fd812aaba4403ea404b1ea", null ],
+    [ "JoueurIndividuel", "d3/dda/a00712.html#a6a0952275d75a96db8b55106e14dbc62", null ],
+    [ "JoueurIndividuel", "d3/dda/a00712.html#a75377f3e4457d60a3b919a3c889600a5", null ],
+    [ "compareTo", "d3/dda/a00712.html#ac769e00fb4e0eabbb0d6592cb0e0f95e", null ],
+    [ "compareToByResult", "d3/dda/a00712.html#abc2fcf4e23bc0897d45e05c568f12aae", null ],
+    [ "getElement", "d3/dda/a00712.html#a9b1bceed588a580d9a7626ba3fd42648", null ],
+    [ "getForename", "d3/dda/a00712.html#a1a74d96defac8801fc0ce69cae8a381a", null ],
+    [ "getName", "d3/dda/a00712.html#ad22fae484222fc1aadebf8cf0ddf9405", null ],
+    [ "getSurname", "d3/dda/a00712.html#aceb9e065ba696ea22ffd252d13fc66a0", null ],
+    [ "setForename", "d3/dda/a00712.html#a4c448dacf2bd45aca70a2c0ab4097eb3", null ],
+    [ "setSurname", "d3/dda/a00712.html#a17c6fd0d4adbbaa12f0d3e02581a0811", null ],
+    [ "toString", "d3/dda/a00712.html#a26d8b9705fc9855464a0479162469f0c", null ],
+    [ "strSurname", "d3/dda/a00712.html#ae6c1df40de282e65837be1018a9e25c7", null ]
 ];

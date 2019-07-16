@@ -1,7 +1,6 @@
 var a00748 =
 [
-    [ "ACTIVE", "de/d3d/a00748.html#a3a93dbfcbcc02fb8f93eb4e6343facbf", null ],
-    [ "DISQUALIFIED", "de/d3d/a00748.html#a002a4519cf5bb43daa485b385e50a5f9", null ],
-    [ "INACTIVE", "de/d3d/a00748.html#ae51f33c23e7ded7a0515372b4b1370b9", null ],
-    [ "SUBSTITUTIONAL", "de/d3d/a00748.html#ada283705a541ec49db572d4e1dc63baf", null ]
+    [ "RuleSuperMeleeNeverPlayTripletteTandem", "de/d3d/a00748.html#a255893c88547aee529628ff56534fa30", null ],
+    [ "getRuleDescription", "de/d3d/a00748.html#a5df2952506250453a73a3e14f827cc97", null ],
+    [ "performInit", "de/d3d/a00748.html#a595c6167f334d7c17a8335c4f220d60f", null ]
 ];

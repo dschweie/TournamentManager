@@ -1,4 +1,7 @@
-<map id="org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult" name="org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,348,136"/>
-<area shape="rect" id="node2" href="$d6/d51/a01494.html" title=" " alt="" coords="77,5,277,47"/>
+<map id="org.dos.tournament.application.common.wizard.common.IWizardWorker" name="org.dos.tournament.application.common.wizard.common.IWizardWorker">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,359,80"/>
+<area shape="rect" id="node2" href="$dc/df1/a00662.html" title=" " alt="" coords="407,5,705,47"/>
+<area shape="rect" id="node5" href="$d2/db1/a00730.html" title=" " alt="" coords="413,71,699,112"/>
+<area shape="rect" id="node3" href="$d7/dc3/a00682.html" title=" " alt="" coords="753,5,1157,47"/>
+<area shape="rect" id="node4" href="$dd/d85/a00702.html" title=" " alt="" coords="753,71,1157,112"/>
 </map>

@@ -1,5 +1,5 @@
 var a00470 =
 [
-    [ "SwingActionCreateNewMatchday", "d0/d29/a00470.html#ada526e5f6387558b6029017136050d7b", null ],
-    [ "actionPerformed", "d0/d29/a00470.html#a67520551692a471ec1bd224ad7f6280f", null ]
+    [ "SwingActionEnlistAttendee", "d0/d29/a00470.html#a5150725d5df431c1878093a707a2ac09", null ],
+    [ "actionPerformed", "d0/d29/a00470.html#a8c89579ea309659d4e88fb7f80f41718", null ]
 ];

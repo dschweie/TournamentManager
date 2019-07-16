@@ -1,5 +1,5 @@
 var a00490 =
 [
-    [ "SwingActionInactivateLEquipe", "d7/daa/a00490.html#a446d462b6ebdffbac3028c9b4d6116f3", null ],
-    [ "actionPerformed", "d7/daa/a00490.html#a72da8e07ed2fc330c1cf311d371c0a78", null ]
+    [ "SwingActionCreateNewMatchday", "d7/daa/a00490.html#a677e16cd46641776ff012aa7dab4b8e4", null ],
+    [ "actionPerformed", "d7/daa/a00490.html#a2e3ab9fa8358f4ba4fffb1e9ef0094b9", null ]
 ];

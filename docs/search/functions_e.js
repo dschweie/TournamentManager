@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['open',['open',['../d6/d17/a00778.html#af62f114cb8ceb470fdbc465b04d913c7',1,'org.dos.tournament.common.storage.IStorage.open()'],['../da/d96/a00782.html#a6cd3c3c838f510bca23ded826ff8616b',1,'org.dos.tournament.common.storage.mongo.DatabaseClient.open()']]],
-  ['opentournamentaction',['OpenTournamentAction',['../dd/d5c/a00578.html#a9e9af505cf6c909ce5375ec4efaaab48',1,'org::dos::tournament::application::TournamentManagerUI::OpenTournamentAction']]]
+  ['numericassociationid',['NumericAssociationId',['../d5/d54/a00938.html#a2c9e9bedad8b04e4bd2e31d82bb8096d',1,'org.dos.tournament.common.player.utils.NumericAssociationId.NumericAssociationId(String code, String association, String description)'],['../d5/d54/a00938.html#ac87ee82f97aa220458e371ed5654d9fa',1,'org.dos.tournament.common.player.utils.NumericAssociationId.NumericAssociationId(int id, String association, String description)'],['../d5/d54/a00938.html#a012183a565b8e6c358079a9d66570ec8',1,'org.dos.tournament.common.player.utils.NumericAssociationId.NumericAssociationId(int id, String code, String association, String description)']]],
+  ['numericparticipantid',['NumericParticipantId',['../df/d12/a00942.html#aab1f6b3523403b2c924d4e580dcf404b',1,'org::dos::tournament::common::player::utils::NumericParticipantId']]]
 ];

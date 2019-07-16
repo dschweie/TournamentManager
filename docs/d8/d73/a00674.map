@@ -1,5 +1,5 @@
-<map id="org.dos.tournament.branch.petanque.tournament.partie.Partie" name="org.dos.tournament.branch.petanque.tournament.partie.Partie">
-<area shape="rect" id="node1" title=" " alt="" coords="5,184,348,225"/>
-<area shape="rect" id="node2" href="$df/d1b/a00687.html" title=" " alt="" coords="45,95,308,136"/>
-<area shape="rect" id="node3" href="$d8/d33/a00699.html" title=" " alt="" coords="45,5,308,47"/>
+<map id="org.dos.tournament.application.TournamentManagerUI.UpdateThread" name="org.dos.tournament.application.TournamentManagerUI.UpdateThread">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,241,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="54,5,115,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="140,5,187,32"/>
 </map>

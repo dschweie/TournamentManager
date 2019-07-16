@@ -1,5 +1,7 @@
 var a00340 =
 [
-    [ "SwingActionPrintMatchday", "df/df1/a00340.html#ae43f52210a441da08fc0b50e430b9428", null ],
-    [ "actionPerformed", "df/df1/a00340.html#a99308ae1b992a42e05f9e892cdc5a9f3", null ]
+    [ "result", "d3/d93/a00341.html", "d3/d93/a00341" ],
+    [ "team", "d2/d45/a00342.html", "d2/d45/a00342" ],
+    [ "tournament", "d8/d8e/a00344.html", "d8/d8e/a00344" ],
+    [ "EvaluatePetanque", "d0/d7e/a00770.html", null ]
 ];

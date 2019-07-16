@@ -45,7 +45,8 @@ public class LeaderboardTableModel extends DefaultTableModel implements Observer
     Vector<Object> _columnIdentifiers = new Vector<Object>();
     
     _columnIdentifiers.add("Rang");
-    _columnIdentifiers.add("Name");
+    _columnIdentifiers.add("Nummer");
+    //_columnIdentifiers.add("Name");
     
     _participants.forEach(it -> it.unsetWinnerOfTheDayTrophy());
     
@@ -79,7 +80,8 @@ public class LeaderboardTableModel extends DefaultTableModel implements Observer
       
       Vector<Object> _row = new Vector<Object>();
       _row.add(new Integer(++rank));
-      _row.add(_current.getName());
+      _row.add(_current.getParticipantId().getCode());
+      //_row.add(_current.getName());
       
       int[] _values = _current.getTotalResult();
       for(int i=0; i < _values.length; ++i)

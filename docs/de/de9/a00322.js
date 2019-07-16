@@ -1,4 +1,5 @@
 var a00322 =
 [
-    [ "keyPressed", "de/de9/a00322.html#acdad068fa6195ff9fb845fa039c88cfd", null ]
+    [ "TableHeaderColumnContent", "d0/d35/a00526.html", "d0/d35/a00526" ],
+    [ "ToggleButton", "da/d7e/a00530.html", "da/d7e/a00530" ]
 ];

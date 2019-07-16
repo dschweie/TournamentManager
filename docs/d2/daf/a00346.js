@@ -1,5 +1,6 @@
 var a00346 =
 [
-    [ "SwingActionPrintMatchday", "d2/daf/a00346.html#ae43f52210a441da08fc0b50e430b9428", null ],
-    [ "actionPerformed", "d2/daf/a00346.html#a99308ae1b992a42e05f9e892cdc5a9f3", null ]
+    [ "regulations", "d9/d48/a00345.html", "d9/d48/a00345" ],
+    [ "SuperMelee", "d2/dc7/a00838.html", "d2/dc7/a00838" ],
+    [ "SuperMeleeClubChampionship", "d0/d66/a00858.html", "d0/d66/a00858" ]
 ];

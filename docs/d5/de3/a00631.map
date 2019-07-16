@@ -1,7 +1,6 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTandem" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTandem">
-<area shape="rect" id="node1" title=" " alt="" coords="1509,27,1947,69"/>
-<area shape="rect" id="node2" href="$db/ddc/a00636.html" title=" " alt="" coords="1024,27,1461,69"/>
-<area shape="rect" id="node3" href="$d1/d51/a00628.html" title=" " alt="" coords="539,27,976,69"/>
-<area shape="rect" id="node4" href="$da/d6b/a00708.html" title=" " alt="" coords="272,5,491,91"/>
-<area shape="rect" id="node5" href="$d3/dda/a00712.html" title=" " alt="" coords="5,20,224,76"/>
+<map id="org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor" name="org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,376,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="30,5,111,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="136,5,245,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="270,5,397,32"/>
 </map>

@@ -1,8 +1,5 @@
-<map id="org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor" name="org.dos.tournament.application.common.utils.tablecelleditor.PetanqueTableCellEditor">
-<area shape="rect" id="node1" title=" " alt="" coords="51,184,422,225"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,87,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="111,95,221,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="245,95,372,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="396,95,565,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="459,5,502,32"/>
+<map id="org.dos.tournament.application.branch.petanque.dialogs.movement.DialogSetRoundManually.PreventDuplicatedElements" name="org.dos.tournament.application.branch.petanque.dialogs.movement.DialogSetRoundManually.PreventDuplicatedElements">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,417,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="117,5,210,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="235,5,287,32"/>
 </map>

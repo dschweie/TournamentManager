@@ -1,5 +1,5 @@
-<map id="org.dos.tournament.application.TournamentManagerUI.CreateTournamentAction" name="org.dos.tournament.application.TournamentManagerUI.CreateTournamentAction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,304,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="46,5,154,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="178,5,243,32"/>
+<map id="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournament.CancelAction" name="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournament.CancelAction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,377,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="87,5,195,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="219,5,265,32"/>
 </map>

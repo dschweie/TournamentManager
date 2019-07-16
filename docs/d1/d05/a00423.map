@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.ActionListenerUpdateFields" name="org.dos.tournament.application.dialogs.player.DialogAssociationAttendee.ActionListenerUpdateFields">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,347,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="123,5,229,32"/>
+<map id="org.dos.tournament.application.branch.petanque.panels.PetanqueLEquipeFormePanel.SwingActionUpdateLastRound" name="org.dos.tournament.application.branch.petanque.panels.PetanqueLEquipeFormePanel.SwingActionUpdateLastRound">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,379,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="81,5,189,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="213,5,286,32"/>
 </map>

@@ -1,5 +1,5 @@
 var a00478 =
 [
-    [ "SwingActionEnlistLEquipe", "d9/dea/a00478.html#a9c06e1aef45c4b9e271aa7dce5f73a4e", null ],
-    [ "actionPerformed", "d9/dea/a00478.html#acc533af6f2d231a4d78829158d2e382f", null ]
+    [ "SwingActionActivateAttendee", "d9/dea/a00478.html#a83c4226dddfbd7a48b41bb20e68198d1", null ],
+    [ "actionPerformed", "d9/dea/a00478.html#ac695a4c6f0116535e9d8272de53087d8", null ]
 ];

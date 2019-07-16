@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult" name="org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,348,136"/>
-<area shape="rect" id="node2" href="$d7/d03/a01491.html" title=" " alt="" coords="77,5,277,47"/>
+<map id="org.dos.tournament.application.TournamentManagerUI.OpenTournamentAction" name="org.dos.tournament.application.TournamentManagerUI.OpenTournamentAction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,297,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="97,5,205,32"/>
 </map>

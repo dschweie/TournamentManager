@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MonitoringThread" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MonitoringThread">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,376,121"/>
-<area shape="rect" id="node2" href="$de/d3c/a01490.html" title=" " alt="" coords="153,5,229,32"/>
+<map id="org.dos.tournament.application.common.wizard.AbstractRuleEngineWizard.RuleEngineThread" name="org.dos.tournament.application.common.wizard.AbstractRuleEngineWizard.RuleEngineThread">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,304,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="124,5,185,32"/>
 </map>

@@ -1,11 +1,14 @@
 var searchData=
 [
-  ['iencounter',['IEncounter',['../dd/d85/a00702.html',1,'org::dos::tournament::common::competition']]],
-  ['iparticipant',['IParticipant',['../d1/da6/a00738.html',1,'org::dos::tournament::common::player']]],
-  ['iparticipantid',['IParticipantId',['../d4/d8f/a00742.html',1,'org::dos::tournament::common::player::utils']]],
-  ['iresult',['IResult',['../d0/d7e/a00770.html',1,'org::dos::tournament::common::result']]],
-  ['istorage',['IStorage',['../d6/d17/a00778.html',1,'org::dos::tournament::common::storage']]],
-  ['itotalresult',['ITotalResult',['../d3/dee/a00774.html',1,'org::dos::tournament::common::result']]],
-  ['itournament',['ITournament',['../d8/dcb/a00706.html',1,'org::dos::tournament::common::competition']]],
-  ['itournamentworker',['ITournamentWorker',['../de/dcb/a00462.html',1,'org::dos::tournament::application::factory::model']]]
+  ['iconfigurableapplication',['IConfigurableApplication',['../db/d7c/a00722.html',1,'org::dos::tournament::application::configuration']]],
+  ['iencounter',['IEncounter',['../dc/dfa/a00894.html',1,'org::dos::tournament::common::competition']]],
+  ['iparticipant',['IParticipant',['../d7/d16/a00930.html',1,'org::dos::tournament::common::player']]],
+  ['iparticipantid',['IParticipantId',['../d0/df0/a00934.html',1,'org::dos::tournament::common::player::utils']]],
+  ['iresult',['IResult',['../df/d88/a00962.html',1,'org::dos::tournament::common::result']]],
+  ['istorage',['IStorage',['../d0/daf/a00970.html',1,'org::dos::tournament::common::storage']]],
+  ['itotalresult',['ITotalResult',['../d2/d6e/a00966.html',1,'org::dos::tournament::common::result']]],
+  ['itournament',['ITournament',['../d2/d79/a00898.html',1,'org::dos::tournament::common::competition']]],
+  ['itournamentpanel',['ITournamentPanel',['../da/d36/a00650.html',1,'org::dos::tournament::application::common::tournament']]],
+  ['itournamentworker',['ITournamentWorker',['../d2/db1/a00730.html',1,'org::dos::tournament::application::factory::model']]],
+  ['iwizardworker',['IWizardWorker',['../d8/d73/a00674.html',1,'org::dos::tournament::application::common::wizard::common']]]
 ];

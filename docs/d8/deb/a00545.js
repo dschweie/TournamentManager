@@ -1,13 +1,11 @@
 var a00545 =
 [
-    [ "getCompetitor", "d8/deb/a00545.html#afa256f544ec145a510fbcafb6c12b410", null ],
-    [ "getCompetitorResult", "d8/deb/a00545.html#a1312efacb5e42f6441b803d9d948cd7a", null ],
-    [ "getId", "d8/deb/a00545.html#a7d555b733d3df4098f4e8cd70630eb07", null ],
-    [ "getRank", "d8/deb/a00545.html#aa0de9c55c80651e0bf03a63e47b1194c", null ],
-    [ "getResult", "d8/deb/a00545.html#a2df2efad34fe8cd3cb35af164fac22de", null ],
-    [ "isComplete", "d8/deb/a00545.html#a0d39d02a3a150537aeea6f791d75c764", null ],
-    [ "playedInTriplette", "d8/deb/a00545.html#a4776d5509b97cf37a09aafdd1f490cd8", null ],
-    [ "toString", "d8/deb/a00545.html#a1d4e12fbac369dc4cd843fb2947ff5cc", null ],
-    [ "toStringWithNames", "d8/deb/a00545.html#ac2edc5ad5761315fdd83261e643a397e", null ],
-    [ "wereOpponents", "d8/deb/a00545.html#a7f4c4c6f2d7bc80e226dc16a51e6df3d", null ]
+    [ "SwingAction", "d5/d21/a00549.html", "d5/d21/a00549" ],
+    [ "SwingAction_1", "d0/d79/a00553.html", "d0/d79/a00553" ],
+    [ "DialogChooseTournamentDep", "d8/deb/a00545.html#a083fff61ed905225671ca6fa61f00881", null ],
+    [ "action", "d8/deb/a00545.html#a3d16781769da97313abd4765893d044c", null ],
+    [ "action_1", "d8/deb/a00545.html#a3945552dc6f470ffd50751c177cadb9f", null ],
+    [ "list", "d8/deb/a00545.html#a9b808df5c0cf90ffa724addb1ea29949", null ],
+    [ "listTournamentData", "d8/deb/a00545.html#a484b27ec83bc832bf1f18c44e8ebb822", null ],
+    [ "textArea", "d8/deb/a00545.html#adecb9cec0de0e7c2446b9b9925bef40d", null ]
 ];

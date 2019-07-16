@@ -1,5 +1,5 @@
 var a00298 =
 [
-    [ "SingletonProperties", "d9/d0d/a00298.html#ae22c0349ea6915fbcd8399cdb5160a5f", null ],
-    [ "xProperties", "d9/d0d/a00298.html#a5bb4b7f6de18ea38734b2537e79bff2d", null ]
+    [ "DialogChooseTournament", "d4/d33/a00536.html", "d4/d33/a00536" ],
+    [ "DialogChooseTournamentDep", "dd/de6/a00548.html", "dd/de6/a00548" ]
 ];

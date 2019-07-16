@@ -1,5 +1,5 @@
 var a00522 =
 [
-    [ "SwingActionUpdateAttendee", "d8/d14/a00522.html#a9887500a1215abf4654edfe33cb14f7c", null ],
-    [ "actionPerformed", "d8/d14/a00522.html#a199c4ed6b59d3aefa6170713fd162c34", null ]
+    [ "SingletonProperties", "d8/d14/a00522.html#ae22c0349ea6915fbcd8399cdb5160a5f", null ],
+    [ "xProperties", "d8/d14/a00522.html#a5bb4b7f6de18ea38734b2537e79bff2d", null ]
 ];

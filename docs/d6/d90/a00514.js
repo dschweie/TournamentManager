@@ -1,28 +1,6 @@
 var a00514 =
 [
-    [ "SwingActionActivateAttendee", "d0/d35/a00526.html", "d0/d35/a00526" ],
-    [ "SwingActionCreateNewMatchday", "dd/d5a/a00538.html", "dd/d5a/a00538" ],
-    [ "SwingActionDeleteAttendee", "dc/d20/a00534.html", "dc/d20/a00534" ],
-    [ "SwingActionDeleteLastMatchday", "dc/d2b/a00546.html", "dc/d2b/a00546" ],
-    [ "SwingActionEnlistAttendee", "d5/dee/a00518.html", "d5/dee/a00518" ],
-    [ "SwingActionInactivateAttendee", "da/d7e/a00530.html", "da/d7e/a00530" ],
-    [ "SwingActionUpdateAttendee", "d8/d14/a00522.html", "d8/d14/a00522" ],
-    [ "SwingActionUpdateLastRound", "d0/ddb/a00542.html", "d0/ddb/a00542" ],
-    [ "PetanqueSuperMeleePanel", "d6/d90/a00514.html#a10c7fc169a9b12a3e571364cd938defa", null ],
-    [ "getTournament", "d6/d90/a00514.html#added482954228a49c9dc66bd8eaf83f2", null ],
-    [ "setTournament", "d6/d90/a00514.html#a1a072db3fcd6a1397643ac542c63ffe4", null ],
-    [ "activateAttendee", "d6/d90/a00514.html#accaf40f10cd27b7fcde0e09ac8492567", null ],
-    [ "createNewMatchday", "d6/d90/a00514.html#af3a5ad4d5931e34eda92934ca10c806f", null ],
-    [ "deleteAttendee", "d6/d90/a00514.html#a76129a410b2f0ec3fe9e0edf52be54ae", null ],
-    [ "deleteLastMatchday", "d6/d90/a00514.html#a5f73d8a2bbcba3f4e26bcb6dfe8b2f2a", null ],
-    [ "enlistAttendee", "d6/d90/a00514.html#a5faf9457f9cd53453e0b6bf3161d2283", null ],
-    [ "inactivateAttendee", "d6/d90/a00514.html#ad423b5b17189f9e64b230a49e23ef2a9", null ],
-    [ "replaceLastMatchday", "d6/d90/a00514.html#a8385d82f1f19667e56644b3f050b1753", null ],
-    [ "tabbedPaneMatchdays", "d6/d90/a00514.html#a028dc66edbca2446e719ddf8bc1764a9", null ],
-    [ "table", "d6/d90/a00514.html#a48e220485b3f1dccddb4b8002f8d6da5", null ],
-    [ "tableAttendees", "d6/d90/a00514.html#a76aba7b1fa8491537a01d006ed2504fb", null ],
-    [ "tableCourts", "d6/d90/a00514.html#a513dc364b3374b70513a7d9deb5fe948", null ],
-    [ "tableLeaderboard", "d6/d90/a00514.html#a20f97595328da66dd8137f372e86a383", null ],
-    [ "tournament", "d6/d90/a00514.html#a93fc89ad4ce6ea887c4250429fb4bf7e", null ],
-    [ "updateAttendee", "d6/d90/a00514.html#a1f7428101d7bc25643989fcd91937767", null ]
+    [ "LeaderboardTableModel", "d6/d90/a00514.html#aef2e187a6a65537504a2f0b3c9700580", null ],
+    [ "isCellEditable", "d6/d90/a00514.html#a6bf395a750ee450ad21fdac62a470436", null ],
+    [ "update", "d6/d90/a00514.html#acc497d50f66457e447498514ea6f1ba3", null ]
 ];

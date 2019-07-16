@@ -1,13 +1,14 @@
 var a00684 =
 [
-    [ "AbstractEncounter", "d3/db4/a00684.html#a5f5e4d6df93478128d615d67d629d280", null ],
-    [ "addParticipant", "d3/db4/a00684.html#a08c6558d0d222d39a1b87fa1c5d04d32", null ],
-    [ "getCompetitors", "d3/db4/a00684.html#a65b8089add578104205ab06e7dfcbb55", null ],
-    [ "getWinner", "d3/db4/a00684.html#ac6dab942c19b5a3db31fec51ce9ad4ec", null ],
-    [ "isComplete", "d3/db4/a00684.html#af028f2a9e305a91bb3b45e4a22ec6149", null ],
-    [ "isScored", "d3/db4/a00684.html#a150ffbf5407ca851f28d3cfa42301cf3", null ],
-    [ "setResult", "d3/db4/a00684.html#a24581eedee460958b6b092dc3fa49db4", null ],
-    [ "toBsonDocument", "d3/db4/a00684.html#a20a012d58ba2013f86ee0358182e3b95", null ],
-    [ "competitors", "d3/db4/a00684.html#aed061f275ef4a3c2d2e74288c54ff815", null ],
-    [ "result", "d3/db4/a00684.html#a126f07dcf4b4b6a5aeec0c152b633d03", null ]
+    [ "TableBasedIndividual", "d3/db4/a00684.html#ab709110f3f600cf117ab857c7a965e68", null ],
+    [ "checkChair", "d3/db4/a00684.html#a5f39a2d122ea4399c44c841b048713c0", null ],
+    [ "generateMovement", "d3/db4/a00684.html#a50296c565fc66b8bdf6e301af6de66f7", null ],
+    [ "printMovement", "d3/db4/a00684.html#a502c25d548581f050c9171d8eec0b8d8", null ],
+    [ "releaseChair", "d3/db4/a00684.html#a1e35a50fd50314ef6a8ff5dfcb2c9a80", null ],
+    [ "setChair", "d3/db4/a00684.html#ae29c7cf457a8bd01b8e1b83facb1c344", null ],
+    [ "chairs", "d3/db4/a00684.html#a611bba1afdae9f6739f440732e8f33bc", null ],
+    [ "meetings", "d3/db4/a00684.html#ad54575272e78fc5f1aa4ef0b6e2b8bfc", null ],
+    [ "participants", "d3/db4/a00684.html#a5bc29b8b291a2d40169c640460e61d93", null ],
+    [ "rounds", "d3/db4/a00684.html#a146c35bc4eeae374804e664fcbc07572", null ],
+    [ "tables", "d3/db4/a00684.html#a20a72d1880b5a8a2063ba7b12d1e85bf", null ]
 ];

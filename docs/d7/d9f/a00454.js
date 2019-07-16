@@ -1,5 +1,7 @@
 var a00454 =
 [
-    [ "SwingAction_1", "d7/d9f/a00454.html#a6ab711428d08ef394325d61d45b15c98", null ],
-    [ "actionPerformed", "d7/d9f/a00454.html#a3064153167a7bc196e5c1c0d5bc13751", null ]
+    [ "SwingActionUpdateLastRound", "d7/d9f/a00454.html#a70c9ef36aa56f9e107dd081167aae2f5", null ],
+    [ "actionPerformed", "d7/d9f/a00454.html#a2e0a960ac2ec1eb465c49eb0b071543f", null ],
+    [ "update", "d7/d9f/a00454.html#a3ea2e474b3f76e24b0ef523f1228fb4d", null ],
+    [ "updateStatus", "d7/d9f/a00454.html#a25e20bddfa2ca5eefd6f70872c619cbf", null ]
 ];

@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionCreateNewMatchday" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionCreateNewMatchday">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,380,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="139,5,247,32"/>
+<map id="org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleePanel.SwingActionEnlistAttendee" name="org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleePanel.SwingActionEnlistAttendee">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,352,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="125,5,233,32"/>
 </map>

@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.1.5 (190626a)" language="German" saveDate="2019.06.30 at 10:02:02 CEST" saveUser="dirk.schweier">
+  <Conditions>
+    <Condition uId="11446800829457960">
+      <Title language="German" value="step"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15592755901970687">
+          <Symbol language="German" value="branch"/>
+          <Title language="German" value="Auswahl der Turnierart"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592755901990689">
+          <Symbol language="German" value="pet-cat"/>
+          <Title language="German" value="Petanque: Auswahl der Turnierform"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592800341567007">
+          <Symbol language="German" value="pet-sup-sel"/>
+          <Title language="German" value="Petanque - Supermelee: Regeln zur Auslosung"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592800594017871">
+          <Symbol language="German" value="pet-com-mov"/>
+          <Title language="German" value="Petanque: Allgemeine Regeln zum Ablauf einer Runde"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592810911242743">
+          <Symbol language="German" value="depends-on"/>
+          <Title language="German" value="Zwischenzustand, da es mehrere Vorgänger geben kann"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15592756481050723">
+      <Title language="German" value="properties: branch"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15592759061040883">
+          <Symbol language="German" value="null"/>
+          <Title language="German" value="keine Vorauswahl"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592759061060885">
+          <Symbol language="German" value="petanque"/>
+          <Title language="German" value="Petanque-Turnier"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592759519660890">
+          <Symbol language="German" value="*"/>
+          <Title language="German" value="unbekannter Eintrag"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15595548566918221">
+      <Title language="German" value="wizard control: wizard visible"/>
+    </Condition>
+    <Condition uId="15592778096454637">
+      <Title language="German" value="wizard control: empty pane"/>
+    </Condition>
+    <Condition uId="15592756449290722">
+      <Title language="German" value="wizard control: command"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15592756721120774">
+          <Symbol language="German" value="cancel"/>
+          <Title language="German" value="Abbrechen der Erstellung"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592756721140776">
+          <Symbol language="German" value="back"/>
+          <Title language="German" value="zurück zum vorherigen Schritt"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592757640560781">
+          <Symbol language="German" value="next"/>
+          <Title language="German" value="weiter zum nächsten Schritt"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592760976861102">
+          <Symbol language="German" value="none"/>
+          <Title language="German" value="Keine Taste gedrückt"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15592756489690724">
+      <Title language="German" value="wizard: branch"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15592764293151939">
+          <Symbol language="German" value="null"/>
+          <Title language="German" value="keine Vorauswahl"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592764293181942">
+          <Symbol language="German" value="petanque"/>
+          <Title language="German" value="Petanque-Turnier"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592764293211945">
+          <Symbol language="German" value="*"/>
+          <Title language="German" value="unbekannter Eintrag"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15592817583523536">
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15592817795734360">
+          <Symbol language="German" value="branch"/>
+          <Title language="German" value="Auswahl der Turnierart"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592817795764363">
+          <Symbol language="German" value="pet-cat"/>
+          <Title language="German" value="Petanque: Auswahl der Turnierform"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592817795794366">
+          <Symbol language="German" value="pet-sup-sel"/>
+          <Title language="German" value="Petanque - Supermelee: Regeln zur Auslosung"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592817795824369">
+          <Symbol language="German" value="pet-com-mov"/>
+          <Title language="German" value="Petanque: Allgemeine Regeln zum Ablauf einer Runde"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="German" value="wizard: last step"/>
+    </Condition>
+    <Condition uId="15592785598465055">
+      <Title language="German" value="pet-cat: tournament category"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15592790427215328">
+          <Symbol language="German" value="null"/>
+          <Title language="German" value="keine Auswahl getroffen"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592790427235330">
+          <Symbol language="German" value="supermelee"/>
+          <Title language="German" value="Allgemeines Supermelee"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15592796325485335">
+          <Symbol language="German" value="sup-monat"/>
+          <Title language="German" value="Monatsturnier nach Regeln von Groß-Gerau"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15618816220026572">
+          <Symbol language="German" value="undefined"/>
+          <Title language="German" value="ein undefinierter Wert"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15592803879679672">
+      <Title language="German" value="pet-com-mov: time boxed"/>
+    </Condition>
+    <Condition uId="15592811714303086">
+      <Title language="German" value="pet-com-mov: define tracks by movement"/>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="15592773916253485">
+      <Title language="German" value="dispose selected branch from properties"/>
+    </Action>
+    <Action uId="15592814218113110">
+      <Title language="German" value="petanque: time boxed matchday"/>
+    </Action>
+    <Action uId="15592815208583115">
+      <Title language="German" value="petanque: define tracks by movement"/>
+    </Action>
+    <Action uId="15592763290841714">
+      <Title language="German" value="wizard control: status cancel"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15592767406772468">
+          <Symbol language="German" value="enabled"/>
+          <Title language="German" value="aktiviert"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592767642002473">
+          <Symbol language="German" value="disabled"/>
+          <Title language="German" value="deaktiviert"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15592767827212610">
+      <Title language="German" value="wizard control: status back"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15592767827242613">
+          <Symbol language="German" value="enabled"/>
+          <Title language="German" value="aktiviert"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592767827282617">
+          <Symbol language="German" value="disabled"/>
+          <Title language="German" value="deaktiviert"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15592767843462620">
+      <Title language="German" value="wizard control: status next"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15592767843492623">
+          <Symbol language="German" value="enabled"/>
+          <Title language="German" value="aktiviert"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592767843532627">
+          <Symbol language="German" value="disabled"/>
+          <Title language="German" value="deaktiviert"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592802820089362">
+          <Symbol language="German" value="to_finish"/>
+          <Title language="German" value="aktiviert und Beschriftung wechselt"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15592775293843492">
+      <Title language="German" value="wizard control: set panel"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15592777327974448">
+          <Symbol language="German" value="dispose"/>
+          <Title language="German" value="aktuelles Panel löschen"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592775814893688">
+          <Symbol language="German" value="branch"/>
+          <Title language="German" value="Panel zur Auswahl der Turnierart"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592776601504066">
+          <Symbol language="German" value="pet-cat"/>
+          <Title language="German" value="Petanque: Panel zur Auswahl der Turnierform"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592800255726442">
+          <Symbol language="German" value="pet-sup-sel"/>
+          <Title language="German" value="Petanque - Supermelee: Regeln zur Auslosung"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592800745238445">
+          <Symbol language="German" value="pet-com-mov"/>
+          <Title language="German" value="Petanque: Allgemeine Regeln zum Ablauf einer Runde"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15592783807215035">
+      <Title language="German" value="wizard control: roll-back"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15592783807245038">
+          <Symbol language="German" value="dispose"/>
+          <Title language="German" value="aktuelles Panel löschen"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592783808535042">
+          <Symbol language="German" value="branch"/>
+          <Title language="German" value="Panel zur Auswahl der Turnierart"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592783809365045">
+          <Symbol language="German" value="pet-cat"/>
+          <Title language="German" value="Petanque: Panel zur Auswahl der Turnierform"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592807778691380">
+          <Symbol language="German" value="pet-sup-sel"/>
+          <Title language="German" value="Petanque - Supermelee: Regeln zur Auslosung"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592807697570374">
+          <Symbol language="German" value="pet-com-mov"/>
+          <Title language="German" value="Petanque: Allgemeine Regeln zum Ablauf einer Runde"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15595479100807348">
+      <Title language="German" value="wizard control: pause"/>
+    </Action>
+    <Action uId="15592763244431713">
+      <Title language="German" value="display hint"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15592765500002185">
+          <Symbol language="German" value="select"/>
+          <Title language="German" value="Hinweis: Wählen Sie eine Turnierart aus"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="11446800828767967">
+      <Title language="German" value="dispose product"/>
+    </Action>
+    <Action uId="15592816967133124">
+      <Title language="German" value="deliver product"/>
+    </Action>
+    <Action uId="11446800829627977">
+      <Title language="German" value="next step"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15592761572041357">
+          <Symbol language="German" value="branch"/>
+          <Title language="German" value="Auswahl der Turnierart"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592772169973315">
+          <Symbol language="German" value="pet-cat"/>
+          <Title language="German" value="Petanque: Auswahl der Turnierform"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592798015565883">
+          <Symbol language="German" value="pet-sup-sel"/>
+          <Title language="German" value="Petanque - Supermelee: Regeln zur Auslosung"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592799373065886">
+          <Symbol language="German" value="pet-com-mov"/>
+          <Title language="German" value="Petanque: Allgemeine Regeln zum Ablauf einer Runde"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592810213842058">
+          <Symbol language="German" value="depends-on"/>
+          <Title language="German" value="Zwischenzustand, da es mehrere Vorgänger geben kann"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15592762327811628">
+          <Symbol language="German" value="ex"/>
+          <Title language="German" value="Ende der Verarbeitung"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+  </Actions>
+  <Rules lastId="77">
+    <Rule id="38">
+      <ConditionLink link="15595548566918221" conditionState="false"/>
+      <ActionOccurrenceLink link="15592762327811628"/>
+    </Rule>
+    <Rule id="39">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759061040883"/>
+      <ActionOccurrenceLink link="15592761572041357"/>
+      <ActionOccurrenceLink link="15592767406772468"/>
+      <ActionOccurrenceLink link="15592767827282617"/>
+      <ActionOccurrenceLink link="15592767843532627"/>
+      <ConditionLink link="15592778096454637" conditionState="true"/>
+      <ActionOccurrenceLink link="15592775814893688"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="40">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759061040883"/>
+      <ConditionOccurrenceLink link="15592756721120774"/>
+      <ActionOccurrenceLink link="15592762327811628"/>
+      <ActionLink link="11446800828767967"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="41">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759061040883"/>
+      <ConditionOccurrenceLink link="15592756721140776"/>
+      <ActionOccurrenceLink link="15592761572041357"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="42">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759061040883"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionOccurrenceLink link="15592764293151939"/>
+      <ActionOccurrenceLink link="15592761572041357"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ActionOccurrenceLink link="15592765500002185"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="43">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759061040883"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionOccurrenceLink link="15592764293181942"/>
+      <ActionOccurrenceLink link="15592772169973315"/>
+      <ActionOccurrenceLink link="15592777327974448"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="44">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759061040883"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionOccurrenceLink link="15592764293211945"/>
+      <ActionOccurrenceLink link="15592761572041357"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ActionLink link="15595479100807348"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="45">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759061040883"/>
+      <ConditionOccurrenceLink link="15592760976861102"/>
+      <ActionOccurrenceLink link="15592761572041357"/>
+      <ConditionOccurrenceLink link="15592764293151939"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ActionLink link="15595479100807348"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="70">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759061040883"/>
+      <ConditionOccurrenceLink link="15592760976861102"/>
+      <ActionOccurrenceLink link="15592761572041357"/>
+      <ConditionOccurrenceLink link="15592764293181942"/>
+      <ActionOccurrenceLink link="15592767843492623"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionLink link="15595479100807348"/>
+    </Rule>
+    <Rule id="71">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759061040883"/>
+      <ConditionOccurrenceLink link="15592760976861102"/>
+      <ActionOccurrenceLink link="15592761572041357"/>
+      <ConditionOccurrenceLink link="15592764293211945"/>
+      <ActionOccurrenceLink link="15592767843532627"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionLink link="15595479100807348"/>
+    </Rule>
+    <Rule id="48">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759061060885"/>
+      <ActionOccurrenceLink link="15592772169973315"/>
+      <ActionOccurrenceLink link="15592777327974448"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="49">
+      <ConditionOccurrenceLink link="15592755901970687"/>
+      <ConditionOccurrenceLink link="15592759519660890"/>
+      <ActionLink link="15592773916253485"/>
+      <ActionOccurrenceLink link="15592767406772468"/>
+      <ActionOccurrenceLink link="15592767827282617"/>
+      <ActionOccurrenceLink link="15592767843532627"/>
+      <ActionOccurrenceLink link="15592761572041357"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="50">
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="true"/>
+      <ActionOccurrenceLink link="15592776601504066"/>
+      <ActionOccurrenceLink link="15592772169973315"/>
+      <ActionOccurrenceLink link="15592767406772468"/>
+      <ActionOccurrenceLink link="15592767827242613"/>
+      <ActionOccurrenceLink link="15592767843532627"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="51">
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592756721120774"/>
+      <ActionLink link="11446800828767967"/>
+      <ActionOccurrenceLink link="15592762327811628"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="52">
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592756721140776"/>
+      <ActionOccurrenceLink link="15592783809365045"/>
+      <ActionOccurrenceLink link="15592761572041357"/>
+      <ActionOccurrenceLink link="15592777327974448"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="53">
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionOccurrenceLink link="15592790427215328"/>
+      <ActionOccurrenceLink link="15592772169973315"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="54">
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionOccurrenceLink link="15592790427235330"/>
+      <ActionOccurrenceLink link="15592777327974448"/>
+      <ActionOccurrenceLink link="15592798015565883"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="55">
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionOccurrenceLink link="15592796325485335"/>
+      <ActionOccurrenceLink link="15592777327974448"/>
+      <ActionOccurrenceLink link="15592799373065886"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="76">
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionOccurrenceLink link="15618816220026572"/>
+      <ActionOccurrenceLink link="15592767843532627"/>
+      <ActionLink link="15595479100807348"/>
+      <ActionOccurrenceLink link="15592772169973315"/>
+    </Rule>
+    <Rule id="73">
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592760976861102"/>
+      <ActionOccurrenceLink link="15592772169973315"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionLink link="15595479100807348"/>
+      <ConditionOccurrenceLink link="15592790427215328"/>
+      <ActionOccurrenceLink link="15592767843532627"/>
+    </Rule>
+    <Rule id="74">
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592760976861102"/>
+      <ActionOccurrenceLink link="15592772169973315"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionLink link="15595479100807348"/>
+      <ConditionOccurrenceLink link="15592790427235330"/>
+      <ActionOccurrenceLink link="15592767843492623"/>
+    </Rule>
+    <Rule id="75">
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592760976861102"/>
+      <ActionOccurrenceLink link="15592772169973315"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionLink link="15595479100807348"/>
+      <ConditionOccurrenceLink link="15592796325485335"/>
+      <ActionOccurrenceLink link="15592767843492623"/>
+    </Rule>
+    <Rule id="77">
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ConditionOccurrenceLink link="15592755901990689"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592760976861102"/>
+      <ConditionOccurrenceLink link="15618816220026572"/>
+      <ActionOccurrenceLink link="15592767843532627"/>
+      <ActionLink link="15595479100807348"/>
+      <ActionOccurrenceLink link="15592772169973315"/>
+    </Rule>
+    <Rule id="57">
+      <ConditionOccurrenceLink link="15592800341567007"/>
+      <ActionLink link="11446800828767967"/>
+      <ActionOccurrenceLink link="15592762327811628"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="58">
+      <ConditionOccurrenceLink link="15592800594017871"/>
+      <ConditionLink link="15592778096454637" conditionState="true"/>
+      <ActionOccurrenceLink link="15592800745238445"/>
+      <ActionOccurrenceLink link="15592767406772468"/>
+      <ActionOccurrenceLink link="15592767827242613"/>
+      <ActionOccurrenceLink link="15592802820089362"/>
+      <ActionOccurrenceLink link="15592799373065886"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="59">
+      <ConditionOccurrenceLink link="15592800594017871"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592756721120774"/>
+      <ActionLink link="11446800828767967"/>
+      <ActionOccurrenceLink link="15592762327811628"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="60">
+      <ConditionOccurrenceLink link="15592800594017871"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592756721140776"/>
+      <ActionOccurrenceLink link="15592777327974448"/>
+      <ActionOccurrenceLink link="15592807697570374"/>
+      <ActionOccurrenceLink link="15592810213842058"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="61">
+      <ConditionOccurrenceLink link="15592800594017871"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionLink link="15592803879679672" conditionState="true"/>
+      <ConditionLink link="15592811714303086" conditionState="true"/>
+      <ActionLink link="15592814218113110"/>
+      <ActionLink link="15592815208583115"/>
+      <ActionOccurrenceLink link="15592762327811628"/>
+      <ActionLink link="15592816967133124"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="62">
+      <ConditionOccurrenceLink link="15592800594017871"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionLink link="15592803879679672" conditionState="true"/>
+      <ConditionLink link="15592811714303086" conditionState="false"/>
+      <ActionLink link="15592814218113110"/>
+      <ActionOccurrenceLink link="15592762327811628"/>
+      <ActionLink link="15592816967133124"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="63">
+      <ConditionOccurrenceLink link="15592800594017871"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionLink link="15592803879679672" conditionState="false"/>
+      <ConditionLink link="15592811714303086" conditionState="true"/>
+      <ActionLink link="15592815208583115"/>
+      <ActionOccurrenceLink link="15592762327811628"/>
+      <ActionLink link="15592816967133124"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="64">
+      <ConditionOccurrenceLink link="15592800594017871"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592757640560781"/>
+      <ConditionLink link="15592803879679672" conditionState="false"/>
+      <ConditionLink link="15592811714303086" conditionState="false"/>
+      <ActionOccurrenceLink link="15592762327811628"/>
+      <ActionLink link="15592816967133124"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="65">
+      <ConditionOccurrenceLink link="15592800594017871"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592760976861102"/>
+      <ActionOccurrenceLink link="15592799373065886"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="66">
+      <ConditionOccurrenceLink link="15592810911242743"/>
+      <ConditionOccurrenceLink link="15592817795734360"/>
+      <ActionOccurrenceLink link="15592761572041357"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="67">
+      <ConditionOccurrenceLink link="15592810911242743"/>
+      <ConditionOccurrenceLink link="15592817795764363"/>
+      <ActionOccurrenceLink link="15592772169973315"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="68">
+      <ConditionOccurrenceLink link="15592810911242743"/>
+      <ConditionOccurrenceLink link="15592817795794366"/>
+      <ActionOccurrenceLink link="15592798015565883"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+    <Rule id="69">
+      <ConditionOccurrenceLink link="15592810911242743"/>
+      <ConditionOccurrenceLink link="15592817795824369"/>
+      <ActionOccurrenceLink link="15592799373065886"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+    </Rule>
+  </Rules>
+  <Title language="German" value="Hier doppel-klicken um den Titel für die Entscheidungstabelle einzugeben"/>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceName=ITournamentWorker   &lt;br/&gt;// $$InterfaceRulesClassName=TournamentFactoryRulesEngine   &lt;br/&gt;// $$package=org.dos.tournament.application.factory.model   &lt;br/&gt;//    &lt;br/&gt;// $$InterfaceRuleGroups=true&lt;br/&gt;// $$InterfaceRuleMethods=true"/>
+</LFET>

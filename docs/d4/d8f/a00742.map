@@ -1,4 +1,10 @@
-<map id="org.dos.tournament.common.player.utils.NumericAssociationId" name="org.dos.tournament.common.player.utils.NumericAssociationId">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,264,136"/>
-<area shape="rect" id="node2" href="$da/df7/a00739.html" title=" " alt="" coords="5,5,264,47"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTwice" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTwice">
+<area shape="rect" id="node1" title=" " alt="" coords="1548,161,1985,202"/>
+<area shape="rect" id="node2" href="$dc/d85/a00736.html" title=" " alt="" coords="1061,161,1499,202"/>
+<area shape="rect" id="node3" href="$d8/d1c/a00824.html" title=" " alt="" coords="687,87,905,172"/>
+<area shape="rect" id="node4" href="$d8/d64/a00828.html" title=" " alt="" coords="333,36,552,92"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,51,116,77"/>
+<area shape="rect" id="node6" title=" " alt="" coords="368,116,517,143"/>
+<area shape="rect" id="node7" title=" " alt="" coords="409,176,476,203"/>
+<area shape="rect" id="node8" title=" " alt="" coords="763,196,829,223"/>
 </map>

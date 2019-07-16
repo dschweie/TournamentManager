@@ -1,7 +1,26 @@
 var a00504 =
 [
-    [ "SwingActionDeleteLastMatchday", "dc/d1c/a00504.html#a59f0a5ca93ff6e3af21c534914a026c3", null ],
-    [ "actionPerformed", "dc/d1c/a00504.html#a50b80e641068306890a15e26f1926b14", null ],
-    [ "update", "dc/d1c/a00504.html#acb4ff7c2593aad50b7d7afe515c04c96", null ],
-    [ "updateStatus", "dc/d1c/a00504.html#ad9efdb7bc85bc7693faed3cc56905e59", null ]
+    [ "ToggleButton", "dc/d1c/a00504.html#ae267e18a0e37f9c8b91d912150ff7c6b", null ],
+    [ "getFont", "dc/d1c/a00504.html#a20d845706975b7230e10beb8b41f8056", null ],
+    [ "getHeight", "dc/d1c/a00504.html#a04a7b2909ffffcfbcdfce4ac9ca1516c", null ],
+    [ "getPreferredSize", "dc/d1c/a00504.html#a440d9b1b6479168de42ca5fbde3ebfc0", null ],
+    [ "getWidth", "dc/d1c/a00504.html#a5c23919812b6d8bd7d5444a12bd9228e", null ],
+    [ "paintComponent", "dc/d1c/a00504.html#a014c6006a2e35787a04d0b851c51e1d9", null ],
+    [ "setSelected", "dc/d1c/a00504.html#adc93d7d898bff00d6c8ebf45b9710418", null ],
+    [ "setText", "dc/d1c/a00504.html#a01ce4a3e0f35939d848fa35223358f15", null ],
+    [ "black", "dc/d1c/a00504.html#a8d59e1b83b517bb25980a288f0de6a1b", null ],
+    [ "bounds", "dc/d1c/a00504.html#a67ffe649f067d175859d8242e1dead2f", null ],
+    [ "colorBright", "dc/d1c/a00504.html#a1a9e4751ebad8b910a792f967dbe594a", null ],
+    [ "colorDark", "dc/d1c/a00504.html#ae1fb305c3f898101e847246d8f371f0a", null ],
+    [ "falseLabel", "dc/d1c/a00504.html#a2e005a3fc32a6c76552907090fa10dc8", null ],
+    [ "font", "dc/d1c/a00504.html#a09a94852cfc63f8e217c6779c1e48e29", null ],
+    [ "gap", "dc/d1c/a00504.html#af659f259ae3f5ee4378ac88d251eea7c", null ],
+    [ "globalWitdh", "dc/d1c/a00504.html#aa67e468b6148478e15b611b840ea2266", null ],
+    [ "green", "dc/d1c/a00504.html#a5572593c38633339210c40821683c8f9", null ],
+    [ "light", "dc/d1c/a00504.html#ab25bc0210956963de3cba744b6b54f90", null ],
+    [ "max", "dc/d1c/a00504.html#aa704f7741352536e538c30b788ca32ad", null ],
+    [ "red", "dc/d1c/a00504.html#a16d28e9e0fb7a73b6e16d66c33e871b5", null ],
+    [ "thumbBounds", "dc/d1c/a00504.html#a47498262f069c1362e15c5d4837a3c85", null ],
+    [ "trueLabel", "dc/d1c/a00504.html#ab26291cf6da0d03fdd1ac903a1cef150", null ],
+    [ "white", "dc/d1c/a00504.html#a071b2537de971112323920155a82e786", null ]
 ];

@@ -37,11 +37,8 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
   private JScrollPane scrollPaneLeaderboard;
   private JScrollPane scrollPaneResults;
   
-  private UpdateTournament update = new UpdateTournament();
-  
-  
-
-  public PetanqueSuperMeleeViewerPanel(SuperMelee tournament) {
+  public PetanqueSuperMeleeViewerPanel(SuperMelee tournament) 
+  {
     super(tournament);
     setSize(new Dimension(820, 550));
     setMinimumSize(new Dimension(800, 10));
@@ -71,7 +68,6 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
     scrollPaneParticipants.setBorder(null);
     scrollPaneParticipants.setViewportBorder(null);
     scrollPaneParticipants.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-    scrollPaneParticipants.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
     scrollPaneParticipants.setAlignmentY(Component.TOP_ALIGNMENT);
     scrollPaneParticipants.setViewportView(participantTable);
     panelParticipants.add(scrollPaneParticipants);
@@ -97,7 +93,6 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
     scrollPaneResults = new JScrollPane();
     scrollPaneResults.setOpaque(false);
     scrollPaneResults.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-    scrollPaneResults.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
     scrollPaneResults.setBorder(null);
     scrollPaneResults.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
     scrollPaneResults.setAlignmentY(Component.TOP_ALIGNMENT);
@@ -124,7 +119,6 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
     scrollPaneLeaderboard = new JScrollPane();
     scrollPaneLeaderboard.setOpaque(false);
     scrollPaneLeaderboard.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-    scrollPaneLeaderboard.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
     scrollPaneLeaderboard.setBorder(null);
     scrollPaneLeaderboard.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
     scrollPaneLeaderboard.setAlignmentY(Component.TOP_ALIGNMENT);
@@ -135,24 +129,32 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
     
     
     this.revalidate();
+    scrollPaneResults.getVerticalScrollBar().setValue(this.scrollPaneResults.getVerticalScrollBar().getMaximum());
+    this.revalidate();
     
-   }
-
-  
-  private class UpdateTournament implements Runnable {
-    private Thread thread;
-    private int iMillis = 1 * 60 * 1000;
-    private boolean bRunning = false;
-    
-    public UpdateTournament()
-    {
-      this.thread = new Thread(this);
-    }
-    
-    @Override
-    public void run() {
-      // TODO Auto-generated method stub
-      
-    }
   }
+
+  @Override
+  public void updateUI() {
+    try
+    {
+      if(this.scrollPaneLeaderboard.getVerticalScrollBar().isVisible())
+        this.scrollPaneLeaderboard.getVerticalScrollBar().setValue(this.scrollPaneLeaderboard.getVerticalScrollBar().getMinimum());
+      if(this.scrollPaneResults.getVerticalScrollBar().isVisible())
+        this.scrollPaneResults.getVerticalScrollBar().setValue(this.scrollPaneResults.getVerticalScrollBar().getMaximum());
+      if(this.scrollPaneParticipants.getVerticalScrollBar().isVisible())
+      {
+        int _maximum = this.scrollPaneParticipants.getVerticalScrollBar().getMaximum();
+        int _current = this.scrollPaneParticipants.getVerticalScrollBar().getValue();
+        int _size = this.scrollPaneParticipants.getHeight();
+        
+        this.scrollPaneParticipants.getVerticalScrollBar().setValue((_current + Math.round(0.9f * _size)) % _maximum); 
+      }
+    }
+    catch(NullPointerException ne) { /* no problem */ }
+    catch(Exception e) { /* no problem, too */ }
+    super.updateUI();
+  }  
+  
+
 }

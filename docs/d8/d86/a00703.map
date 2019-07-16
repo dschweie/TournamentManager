@@ -1,6 +1,9 @@
-<map id="org.dos.tournament.common.movement.regulations.AbstractCoreRule&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.AbstractCoreRule&lt; T, G, P &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="273,75,596,117"/>
-<area shape="rect" id="node3" href="$dc/d4d/a00620.html" title="Diese Klasse ist Basisklasse im Regelwerk." alt="" coords="800,5,1075,91"/>
-<area shape="rect" id="node4" href="$d4/d6a/a00704.html" title=" " alt="" coords="776,115,1099,171"/>
-<area shape="rect" id="node2" href="$d3/dda/a00712.html" title=" " alt="" coords="5,68,224,124"/>
+<map id="org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam" name="org.dos.tournament.branch.petanque.team.AbstractPetanqueTeam">
+<area shape="rect" id="node1" title=" " alt="" coords="980,39,1251,80"/>
+<area shape="rect" id="node6" href="$da/d6b/a00708.html" title=" " alt="" coords="1299,5,1569,47"/>
+<area shape="rect" id="node7" href="$dc/d14/a00720.html" title=" " alt="" coords="1299,71,1569,112"/>
+<area shape="rect" id="node2" href="$d3/d13/a00836.html" title=" " alt="" coords="701,39,932,80"/>
+<area shape="rect" id="node3" href="$d0/d08/a00832.html" title=" " alt="" coords="423,39,653,80"/>
+<area shape="rect" id="node4" href="$d9/d30/a00848.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="144,39,375,80"/>
+<area shape="rect" id="node5" href="$db/dad/a01616.html" title=" " alt="" coords="5,46,96,73"/>
 </map>

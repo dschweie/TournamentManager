@@ -1,15 +1,14 @@
 var a00778 =
 [
-    [ "close", "d6/d17/a00778.html#a3082f3a863c672358b7d47c6f3e3bd3e", null ],
-    [ "findParticipantAsJoueurIndividuel", "d6/d17/a00778.html#ab9599a1bc92c0ca4b5e056cfee28e159", null ],
-    [ "findParticipantAsJoueurIndividuel", "d6/d17/a00778.html#abcc3ce1f3e083b365756c14a757453a0", null ],
-    [ "findParticipantById", "d6/d17/a00778.html#a95e9080ed06be15890d656aa64e2dd36", null ],
-    [ "getTournamentData", "d6/d17/a00778.html#ae20b3e4fa4f7b7e9136190b8bcf78856", null ],
-    [ "isConnected", "d6/d17/a00778.html#ac2ea2e109e5a9b7e715cfda88c657bd4", null ],
-    [ "isFailed", "d6/d17/a00778.html#ac25438d14fd22ac5480e07e8771fbf22", null ],
-    [ "loadTournament", "d6/d17/a00778.html#adedadf410ecf54695a7738ffc985c9bb", null ],
-    [ "loadTournamentAsDocument", "d6/d17/a00778.html#a2ac0a549c6ebae7008ed8bb1cbd65c21", null ],
-    [ "open", "d6/d17/a00778.html#af62f114cb8ceb470fdbc465b04d913c7", null ],
-    [ "saveParticipant", "d6/d17/a00778.html#a4f42c7f554b8c340729dad567f7bb3c3", null ],
-    [ "saveTournament", "d6/d17/a00778.html#a354d597847b44badf1b1dd0c32316c7b", null ]
+    [ "PetanqueResult", "d6/d17/a00778.html#a5432e1db240bbb2e7ebb9fc0b0d0adc9", null ],
+    [ "compareTo", "d6/d17/a00778.html#a2f1e2f4eb47d8733c3e7b30c70197563", null ],
+    [ "getDifference", "d6/d17/a00778.html#a6d34227c7e203714ba9503d49c345ea3", null ],
+    [ "getOppsScore", "d6/d17/a00778.html#a1af77dde9b2911e49a11aae49bde7ed1", null ],
+    [ "getScore", "d6/d17/a00778.html#ad9f8c9b4639dbe5152213083a24db6f5", null ],
+    [ "isValid", "d6/d17/a00778.html#a72c824c408fda46c956e360fa7673e57", null ],
+    [ "setOppsScore", "d6/d17/a00778.html#aa8bf6348d741e95243ab2cc4d5de915b", null ],
+    [ "setScore", "d6/d17/a00778.html#a36b66521311a982cb3990dd811380a30", null ],
+    [ "toBsonDocument", "d6/d17/a00778.html#a2c90ce2643a8c6de96eee441b669e484", null ],
+    [ "iOppsScore", "d6/d17/a00778.html#ab6d8a7f599c2193950d7a63b402b20a8", null ],
+    [ "iScore", "d6/d17/a00778.html#a568f5a0c936f556f07043f7492cd2afa", null ]
 ];

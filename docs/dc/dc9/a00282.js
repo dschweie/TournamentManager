@@ -1,6 +1,6 @@
 var a00282 =
 [
-    [ "regulations", "d2/d04/a00281.html", "d2/d04/a00281" ],
-    [ "SuperMelee", "d9/d2a/a00654.html", "d9/d2a/a00654" ],
-    [ "SuperMeleeClubChampionship", "d1/d97/a00670.html", "d1/d97/a00670" ]
+    [ "application", "dd/dfe/a00283.html", "dd/dfe/a00283" ],
+    [ "branch", "d5/d0f/a00308.html", "d5/d0f/a00308" ],
+    [ "common", "dd/de2/a00320.html", "dd/de2/a00320" ]
 ];

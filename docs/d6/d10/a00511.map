@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionEnlistAttendee" name="org.dos.tournament.application.petanque.panels.PetanqueSuperMeleePanel.SwingActionEnlistAttendee">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,345,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="121,5,229,32"/>
+<map id="org.dos.tournament.application.common.dialogs.player.DialogAssociationAttendee" name="org.dos.tournament.application.common.dialogs.player.DialogAssociationAttendee">
+<area shape="rect" id="node1" title=" " alt="" coords="117,5,460,47"/>
+<area shape="rect" id="node3" href="$d6/d9c/a00352.html" title=" " alt="" coords="508,5,896,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,13,69,39"/>
 </map>

@@ -1,28 +1,5 @@
 var a00336 =
 [
-    [ "ListenerTimerModification", "dc/d59/a00364.html", "dc/d59/a00364" ],
-    [ "SwingAction_1", "d8/d8e/a00344.html", "d8/d8e/a00344" ],
-    [ "SwingAction_2", "d6/d9c/a00352.html", "d6/d9c/a00352" ],
-    [ "SwingAction_3", "d6/de1/a00356.html", "d6/de1/a00356" ],
-    [ "SwingActionMatchdayTimer", "df/d03/a00348.html", "df/d03/a00348" ],
-    [ "SwingActionPrintMatchday", "df/df1/a00340.html", "df/df1/a00340" ],
-    [ "SwingActionToggleTeamPresentation", "d0/d65/a00360.html", "d0/d65/a00360" ],
-    [ "DefaultMatchdayPanel", "dd/d1d/a00336.html#a759a90d8090c2a24835443d9e44353a3", null ],
-    [ "DefaultMatchdayPanel", "dd/d1d/a00336.html#ad42ba7cdae37ccfad88fc0f70664255e", null ],
-    [ "DefaultMatchdayPanel", "dd/d1d/a00336.html#a11cc60212d1c126e29605551a8d35347", null ],
-    [ "getPrintable", "dd/d1d/a00336.html#a052c8d7e507d2d5a87d0d108890bc320", null ],
-    [ "setStateRuleOpponents", "dd/d1d/a00336.html#ad0ddef7547f9d85b8dab95af8b53eecc", null ],
-    [ "setStateRuleTeammates", "dd/d1d/a00336.html#abedfb7f8a1c980a2a446da7f6448ca87", null ],
-    [ "setStateRuleTriplette", "dd/d1d/a00336.html#a0636bcf044358bad64e4bc0f1dfa1c94", null ],
-    [ "updateUI", "dd/d1d/a00336.html#aace0a65d7e84a242d06f146825ebd231", null ],
-    [ "actionTimer", "dd/d1d/a00336.html#a8d85eb7229bb04508aca5d4d13d52f68", null ],
-    [ "actionToggleTeamPresentation", "dd/d1d/a00336.html#acc1aed5017d90a0564151ee5a99cbe83", null ],
-    [ "btnPrintMatchday", "dd/d1d/a00336.html#a43d1fb096d05b842e9da5ac3f6a1abef", null ],
-    [ "printMatchday", "dd/d1d/a00336.html#ac983730915a3f9ce3507f251dcf6271e", null ],
-    [ "progressBar", "dd/d1d/a00336.html#ac61d62a49d57fe5831d4a93a4cf38fab", null ],
-    [ "scrollPane", "dd/d1d/a00336.html#a350fd0a9e3a3fcb0204a3a43bf7eafaf", null ],
-    [ "stateOpponents", "dd/d1d/a00336.html#a92c8919f37870b7b00de9a7cb3da33aa", null ],
-    [ "stateTeammates", "dd/d1d/a00336.html#a7ffc9b7494db696fd7b9bd654e7bc910", null ],
-    [ "stateTriplette", "dd/d1d/a00336.html#ae99aba5724ad0d1be98b2edecaf0a482", null ],
-    [ "tableMatches", "dd/d1d/a00336.html#a3c86f6b4988f848d681041c563a12d69", null ]
+    [ "ITournamentWorker", "d2/db1/a00730.html", "d2/db1/a00730" ],
+    [ "TournamentFactoryRulesEngine", "d6/dc0/a00734.html", "d6/dc0/a00734" ]
 ];

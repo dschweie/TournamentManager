@@ -1,5 +1,7 @@
 var a00464 =
 [
-    [ "SwingActionDeleteLEquipe", "d2/d9d/a00464.html#a7068ae6e4c7cd34eb666b58ecc58f1a5", null ],
-    [ "actionPerformed", "d2/d9d/a00464.html#a403b04e328785a0d0a7cfbd7da105729", null ]
+    [ "SwingActionUpdateLastRound", "d2/d9d/a00464.html#a89b614ba1a1f60a8ccff219ea13a4ab5", null ],
+    [ "actionPerformed", "d2/d9d/a00464.html#a128ea3177f2712914273cacadf55a330", null ],
+    [ "update", "d2/d9d/a00464.html#a5c79c25044657c1e89d10be31b9ece70", null ],
+    [ "updateStatus", "d2/d9d/a00464.html#a4bb5beaf8e590b4f95efc7c131c00601", null ]
 ];

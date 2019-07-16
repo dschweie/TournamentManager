@@ -1,4 +1,4 @@
 var a00629 =
 [
-    [ "getScore", "da/dd1/a00629.html#a9a21232182bf1a602251cf2461276a65", null ]
+    [ "execute", "da/dd1/a00629.html#a44c7ab5ebad11a4de758ced41e4407b6", null ]
 ];

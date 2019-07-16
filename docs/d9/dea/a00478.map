@@ -1,4 +1,7 @@
-<map id="org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel.SwingActionUpdateLEquipe" name="org.dos.tournament.application.petanque.panels.PetanqueLEquipeFormePanel.SwingActionUpdateLEquipe">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,364,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="131,5,239,32"/>
+<map id="org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleeViewerPanel.UpdateTournament" name="org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleeViewerPanel.UpdateTournament">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,352,136"/>
+<area shape="rect" id="node2" href="$d5/d84/a01612.html" title=" " alt="" coords="22,5,98,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="122,5,161,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="185,5,247,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="271,5,337,32"/>
 </map>

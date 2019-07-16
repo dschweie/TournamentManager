@@ -1,7 +1,6 @@
 var a00642 =
 [
-    [ "RuleSuperMeleeNeverMeetTeammateTwice", "df/dcf/a00642.html#a9a98fd3a4da3eef610b6f4953b7d8eb6", null ],
-    [ "getRuleDescription", "df/dcf/a00642.html#a5a423859a4e32bc1fdb42407f5f36aad", null ],
-    [ "performCheck", "df/dcf/a00642.html#af58f0b255f9fefa79c4619c5a5d2f1a1", null ],
-    [ "performInit", "df/dcf/a00642.html#afd6a8c3b8ca8e9cc1605957638faee9b", null ]
+    [ "SwingActionToggleTeamPresentation", "df/dcf/a00642.html#a0918741f979c28ff8a04f256a65ae758", null ],
+    [ "actionPerformed", "df/dcf/a00642.html#a7c62cfa6e8d96c4c336b8494e9eea99d", null ],
+    [ "updateButton", "df/dcf/a00642.html#adf6016493646618eb94ca37b08e9df9c", null ]
 ];
