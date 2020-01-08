@@ -1,5 +1,4 @@
-<map id="org.dos.tournament.application.branch.petanque.panels.components.tables.SuperMeleeResultsTable" name="org.dos.tournament.application.branch.petanque.panels.components.tables.SuperMeleeResultsTable">
-<area shape="rect" id="node1" title=" " alt="" coords="5,169,465,211"/>
-<area shape="rect" id="node2" href="$d7/db1/a00590.html" title="Die Klasse steht für die Tabelle für Spielpaarungen im Supermelee." alt="" coords="48,80,423,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="206,5,265,32"/>
+<map id="org.dos.tournament.application.branch.petanque.panels.components.tables.SuperMeleeLeaderboardTable" name="org.dos.tournament.application.branch.petanque.panels.components.tables.SuperMeleeLeaderboardTable">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,465,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="206,5,265,32"/>
 </map>

@@ -1,5 +1,5 @@
 var a00482 =
 [
-    [ "SwingActionInactivateAttendee", "db/d8e/a00482.html#a19371d971d1e0dc5f84cea9af9a647c1", null ],
-    [ "actionPerformed", "db/d8e/a00482.html#a0881cefbf42d6f89a5ddd6c78c1925e8", null ]
+    [ "SwingActionUpdateAttendee", "db/d8e/a00482.html#acf055f2224a179d2c482b2f3ffeda4e8", null ],
+    [ "actionPerformed", "db/d8e/a00482.html#a1d86cd8e59262048c650badc5eabf649", null ]
 ];

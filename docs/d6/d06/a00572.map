@@ -1,10 +1,5 @@
-<map id="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournamentDep" name="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournamentDep">
-<area shape="rect" id="node1" title=" " alt="" coords="41,228,413,269"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,117,69,143"/>
-<area shape="rect" id="node3" title=" " alt="" coords="93,117,173,143"/>
-<area shape="rect" id="node4" title=" " alt="" coords="197,117,256,143"/>
-<area shape="rect" id="node5" title=" " alt="" coords="280,117,387,143"/>
-<area shape="rect" id="node6" title=" " alt="" coords="309,5,358,32"/>
-<area shape="rect" id="node7" title=" " alt="" coords="411,109,589,151"/>
-<area shape="rect" id="node8" title=" " alt="" coords="470,5,530,32"/>
+<map id="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournament.SelectTournamentAction" name="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournament.SelectTournamentAction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,377,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="71,5,179,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="203,5,313,32"/>
 </map>

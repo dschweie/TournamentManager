@@ -1,4 +1,11 @@
-<map id="org.dos.tournament.application.TournamentManagerUI.UpdateThread" name="org.dos.tournament.application.TournamentManagerUI.UpdateThread">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,241,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="93,5,154,32"/>
+<map id="org.dos.tournament.application.common.wizard.AbstractRuleEngineWizard" name="org.dos.tournament.application.common.wizard.AbstractRuleEngineWizard">
+<area shape="rect" id="node1" title=" " alt="" coords="731,145,1029,186"/>
+<area shape="rect" id="node2" title=" " alt="" coords="385,5,449,32"/>
+<area shape="rect" id="node3" href="$d7/dc3/a00682.html" title=" " alt="" coords="240,57,593,98"/>
+<area shape="rect" id="node4" title=" " alt="" coords="389,123,445,149"/>
+<area shape="rect" id="node5" href="$da/d31/a00678.html" title=" " alt="" coords="240,174,593,215"/>
+<area shape="rect" id="node6" href="$d8/d73/a00674.html" title=" " alt="" coords="267,239,566,281"/>
+<area shape="rect" id="node7" title=" " alt="" coords="13,247,75,273"/>
+<area shape="rect" id="node8" title=" " alt="" coords="326,305,507,332"/>
+<area shape="rect" id="node9" title=" " alt="" coords="5,305,83,332"/>
 </map>

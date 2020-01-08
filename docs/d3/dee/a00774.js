@@ -1,8 +1,8 @@
 var a00774 =
 [
-    [ "PetanqueMatchResult", "d3/dee/a00774.html#a6d3851132a1254e4153811b22cc16ebf", null ],
-    [ "compareTo", "d3/dee/a00774.html#ac2d36a282bb784baa8c43cd2d9f9141c", null ],
-    [ "compileGameScore", "d3/dee/a00774.html#a0ef554cc882591fa0bf1dfb4cc85f6c8", null ],
-    [ "getMatchScore", "d3/dee/a00774.html#a98478c8e57499ed66231cc05e404bcb5", null ],
-    [ "matchScore", "d3/dee/a00774.html#a7f1f5a09da2784c47f48562f433d1157", null ]
+    [ "UpdateThread", "d3/dee/a00774.html#a83b1910dc733ade6734794dd98e24fb9", null ],
+    [ "run", "d3/dee/a00774.html#adce0a425aa933d79c5fd82cfc91c11a8", null ],
+    [ "setUpdateIntervall", "d3/dee/a00774.html#affea0468d73e8cc5de9fd8c444216b5b", null ],
+    [ "lSleep", "d3/dee/a00774.html#a0c9b17f56c9425509d098bf1ef2da4a6", null ],
+    [ "xInstance", "d3/dee/a00774.html#a2954301652240c7364921244af23ef19", null ]
 ];

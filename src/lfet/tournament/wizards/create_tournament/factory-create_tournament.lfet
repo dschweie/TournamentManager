@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.1.5 (190626a)" language="German" saveDate="2019.06.30 at 10:02:02 CEST" saveUser="dirk.schweier">
+<LFET version="LF-ET 2.1.5 (191219a)" language="German" saveDate="2020.01.03 at 12:55:44 CET" saveUser="dirk.schweier">
   <Conditions>
     <Condition uId="11446800829457960">
       <Title language="German" value="step"/>
@@ -132,6 +132,19 @@
     </Condition>
     <Condition uId="15592803879679672">
       <Title language="German" value="pet-com-mov: time boxed"/>
+    </Condition>
+    <Condition uId="15780474001470168">
+      <Title language="German" value="pet-com-mov: time limit defined"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15780474483550687">
+          <Symbol language="German" value="J"/>
+          <Title language="German" value="Ja"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15780474483570689">
+          <Symbol language="German" value="N"/>
+          <Title language="German" value="Nein"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
     </Condition>
     <Condition uId="15592811714303086">
       <Title language="German" value="pet-com-mov: define tracks by movement"/>
@@ -288,11 +301,7 @@
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="77">
-    <Rule id="38">
-      <ConditionLink link="15595548566918221" conditionState="false"/>
-      <ActionOccurrenceLink link="15592762327811628"/>
-    </Rule>
+  <Rules lastId="84">
     <Rule id="39">
       <ConditionOccurrenceLink link="15592755901970687"/>
       <ConditionOccurrenceLink link="15592759061040883"/>
@@ -580,12 +589,37 @@
       <ActionLink link="15592816967133124"/>
       <ConditionLink link="15595548566918221" conditionState="true"/>
     </Rule>
-    <Rule id="65">
+    <Rule id="83">
       <ConditionOccurrenceLink link="15592800594017871"/>
       <ConditionLink link="15592778096454637" conditionState="false"/>
       <ConditionOccurrenceLink link="15592760976861102"/>
       <ActionOccurrenceLink link="15592799373065886"/>
       <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionLink link="15595479100807348"/>
+      <ConditionLink link="15592803879679672" conditionState="true"/>
+      <ConditionOccurrenceLink link="15780474483550687"/>
+      <ActionOccurrenceLink link="15592767843492623"/>
+    </Rule>
+    <Rule id="81">
+      <ConditionOccurrenceLink link="15592800594017871"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592760976861102"/>
+      <ActionOccurrenceLink link="15592799373065886"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionLink link="15595479100807348"/>
+      <ConditionLink link="15592803879679672" conditionState="true"/>
+      <ConditionOccurrenceLink link="15780474483570689"/>
+      <ActionOccurrenceLink link="15592767843532627"/>
+    </Rule>
+    <Rule id="84">
+      <ConditionOccurrenceLink link="15592800594017871"/>
+      <ConditionLink link="15592778096454637" conditionState="false"/>
+      <ConditionOccurrenceLink link="15592760976861102"/>
+      <ActionOccurrenceLink link="15592799373065886"/>
+      <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionLink link="15595479100807348"/>
+      <ConditionLink link="15592803879679672" conditionState="false"/>
+      <ActionOccurrenceLink link="15592767843492623"/>
     </Rule>
     <Rule id="66">
       <ConditionOccurrenceLink link="15592810911242743"/>
@@ -611,10 +645,14 @@
       <ActionOccurrenceLink link="15592799373065886"/>
       <ConditionLink link="15595548566918221" conditionState="true"/>
     </Rule>
+    <Rule id="38">
+      <ConditionLink link="15595548566918221" conditionState="false"/>
+      <ActionOccurrenceLink link="15592762327811628"/>
+    </Rule>
   </Rules>
   <Title language="German" value="Hier doppel-klicken um den Titel für die Entscheidungstabelle einzugeben"/>
   <UrlsOut>
     <Url title="Ordner" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceName=ITournamentWorker   &lt;br/&gt;// $$InterfaceRulesClassName=TournamentFactoryRulesEngine   &lt;br/&gt;// $$package=org.dos.tournament.application.factory.model   &lt;br/&gt;//    &lt;br/&gt;// $$InterfaceRuleGroups=true&lt;br/&gt;// $$InterfaceRuleMethods=true"/>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceName=ITournamentWorker     &lt;br/&gt;// $$InterfaceRulesClassName=TournamentFactoryRulesEngine     &lt;br/&gt;// $$package=org.dos.tournament.application.factory.model     &lt;br/&gt;//      &lt;br/&gt;// $$InterfaceRuleGroups=true  &lt;br/&gt;// $$InterfaceRuleMethods=false"/>
 </LFET>

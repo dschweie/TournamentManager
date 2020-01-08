@@ -3,13 +3,24 @@
  */
 package org.dos.tournament.common.storage.mongo;
 
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
+import java.security.InvalidKeyException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.UUID;
 import java.util.Vector;
 import java.util.regex.Pattern;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.spec.SecretKeySpec;
 import javax.swing.JOptionPane;
 
 import org.bson.Document;
@@ -21,6 +32,7 @@ import org.dos.tournament.common.storage.SingletonStorage;
 import org.dos.tournament.common.storage.IStorage;
 
 import com.mongodb.MongoClientOptions;
+import com.mongodb.MongoClientURI;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.FindIterable;
 import com.mongodb.Block;
@@ -43,7 +55,7 @@ import com.mongodb.BasicDBList;
  */
 public class DatabaseClient implements IStorage,  ServerMonitorListener
 {
-  static public final String IDENTIFIER = "mongo";
+  static public final String IDENTIFIER = "mongo";  
   
   private MongoClient mongoClient = null;
   private String mongoHost = null;
@@ -51,6 +63,8 @@ public class DatabaseClient implements IStorage,  ServerMonitorListener
   private String mongoCollectionParticipantsName = null;
   private String mongoCollectionTournamentsName = null;
   private int iConnectionStatus = -1;
+
+  private String mongoURI;
   
   public DatabaseClient()
   {
@@ -63,11 +77,29 @@ public class DatabaseClient implements IStorage,  ServerMonitorListener
       this.mongoCollectionParticipantsName = _parameters.getOrDefault("storage.mongo.collection.participants", "participants").toString();
       this.mongoCollectionTournamentsName = _parameters.getOrDefault("storage.mongo.collection.tournaments", "tournaments").toString();
       this.mongoHost =  _parameters.getOrDefault("storage.mongo.host", "127.0.0.1").toString();
+      this.mongoURI = _parameters.getOrDefault("storage.mongo.uri", "undefined").toString();
+      
       MongoClientOptions clientOptions = new MongoClientOptions.Builder()
           .addServerMonitorListener(this)
           .build();
+      
+      if("undefined".equals(this.mongoURI))
+      {
+        this.mongoClient = new MongoClient(new ServerAddress(this.mongoHost, 27017), clientOptions);
+      }
+      else
+      {
+        MongoClientURI _uri = null;
+        if(this.mongoURI.startsWith("mongodb"))
+          this.mongoClient = new MongoClient(new MongoClientURI(this.mongoURI));
+          //       "mongodb+srv://tmSchweier:<password>@boulegg-fg9qv.mongodb.net/test?retryWrites=true&w=majority");
+        else
+          this.mongoClient = new MongoClient(new MongoClientURI(this.getConnectionString()));
+          
 
-      this.mongoClient = new MongoClient(new ServerAddress(this.mongoHost, 27017), clientOptions);
+        //this.mongoClient = new MongoClient(_uri);
+        this.iConnectionStatus = 0;
+      }
       
       
       
@@ -335,4 +367,43 @@ public class DatabaseClient implements IStorage,  ServerMonitorListener
   {
     this.iConnectionStatus = -5;
   }
+
+  
+  //! @cond     CRYPOT
+  /*
+   *    Diese Funktion wird in der generierten Dokumentation nicht aufgeführt,
+   *    da in dieser Methode die Entschlüsselung stattfindet.
+   *    
+   *    Wenn die Property storage.mongo.uri nicht mit mongo beginnt, dann wird
+   *    die Annahme getroffen, dass die URI verschlüsselt ist und durch die 
+   *    Software entschlüsselt werden muss.
+   *    Diese Funktion liefert im Rückgabewert die entschlüsselte URI für die
+   *    Datenbank.
+   *    Es wurde bewusst ein synchrones Verfahren genutzt, da der Sourcecode
+   *    ohnehin Open Source ist.
+   *    Diese Verschlüsselung ist aber ausreichend gut, um URIs für Datenbanken
+   *    weitergeben zu können, ohne dass ein direkter Zugriff über Compass oder
+   *    andere Hilfswerkzeuge von Mongo zugegriffen werden kann.
+   *    Das kann z.B. interessant sein, wenn es eine Vereinsdatenbank gibt, die
+   *    von unterschiedlichen Turnierleitern verwendet werden soll. 
+   */
+  private String getConnectionString()
+  {
+    try {
+      SecretKeySpec secretKeySpec = new SecretKeySpec(Arrays.copyOf(MessageDigest.getInstance("SHA-256").digest("org.dos.tournament.common.storage.mongo.DatabaseClient".getBytes("UTF8")), 32),"AES");
+      Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+      cipher.init(Cipher.DECRYPT_MODE, secretKeySpec);
+      return new String(cipher.doFinal(Base64.getDecoder().decode(this.mongoURI)));
+    } catch (   NoSuchAlgorithmException 
+              | NoSuchPaddingException 
+              | UnsupportedEncodingException 
+              | InvalidKeyException 
+              | IllegalBlockSizeException 
+              | BadPaddingException e) {
+      e.printStackTrace();
+      return null;
+    }
+  }
+  //! @endcond
+
 }

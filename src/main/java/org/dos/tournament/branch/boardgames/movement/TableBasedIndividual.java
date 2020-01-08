@@ -32,8 +32,9 @@ public class TableBasedIndividual
     while((maxIndex > index) && ( -1 != index ))
     {
       int currentRound = index / this.participants +1;
-      int currentTable = ( index % this.participants ) / this.tables;
-      int currentChair = ( index % this.participants ) % this.tables;
+      int currentTable = ( index % this.participants ) / this.chairs;
+      int currentChair = ( index % this.participants ) % this.chairs;
+      int lastSeated = movement[currentRound-1][index % this.participants];
       int currentId = (movement[currentRound-1][index % this.participants] +1) % (this.participants+1);
       boolean isSeated = false;
       
@@ -41,6 +42,7 @@ public class TableBasedIndividual
       { // Schritt vorwärts
         if( this.checkChair(movement, currentRound, currentTable, currentChair, currentId) )
         {
+          lastSeated = currentId;
           this.setChair(movement, currentRound, currentTable, currentChair, currentId);
           isSeated = true;
         }
@@ -52,7 +54,8 @@ public class TableBasedIndividual
         ++index;
       else
       {
-        this.releaseChair(movement, currentRound, currentTable, currentChair, movement[currentRound-1][index % this.participants]);
+        //if(0 < lastSeated)
+          this.releaseChair(movement, currentRound, currentTable, currentChair, lastSeated);
         --index;
       }
       
@@ -82,15 +85,26 @@ public class TableBasedIndividual
 
   private void releaseChair(int[][] movement, int round, int table, int chair, int id)
   {
-    int     firstChair    = (table - 1) * this.chairs;
-    int     currentChair  = (table - 1) * this.chairs + chair; 
+//    int     firstChair    = (table - 1) * this.chairs;
+//    int     currentChair  = (table - 1) * this.chairs + chair; 
+    int     firstChair    = (table) * this.chairs;
+    int     currentChair  = (table) * this.chairs + chair; 
         
-    for(int i = firstChair; i < currentChair; ++i)
-    { // prüfen, ob die Teilnehmer sich nicht begegnet sind
-      this.meetings[ (movement[round-1][i])-1 ][  id-1 ] = 0; 
-      this.meetings[ id-1 ][  (movement[round-1][i])-1 ] = 0;      
+    if((0 < id) && (0<round))
+    {
+      for(int i = firstChair; i < currentChair; ++i)
+      { // prüfen, ob die Teilnehmer sich nicht begegnet sind
+        this.meetings[ (movement[round-1][i])-1 ][  id-1 ] = 0; 
+        this.meetings[ id-1 ][  (movement[round-1][i])-1 ] = 0;      
+      }
+     
+      
+//      movement[round-1][table*this.chairs + chair] = 0;
     }
-    
+    else
+    {
+      System.out.println("WARNUNG");
+    }
     movement[round-1][table*this.chairs + chair] = 0;
   }
   
@@ -122,7 +136,7 @@ public class TableBasedIndividual
   
   public static void main(String[] args)
   {
-    TableBasedIndividual movement = new TableBasedIndividual(16, 4, 4, 3);
+    TableBasedIndividual movement = new TableBasedIndividual(18, 6, 3, 2);
     movement.generateMovement();
   }
 

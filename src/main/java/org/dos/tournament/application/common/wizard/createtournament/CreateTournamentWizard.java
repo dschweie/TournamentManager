@@ -6,6 +6,7 @@ import org.dos.tournament.application.common.panels.AbstractTournamentPanel;
 import org.dos.tournament.application.common.wizard.AbstractRuleEngineWizard;
 import org.dos.tournament.application.common.wizard.createtournament.common.WizardBranchPanel;
 import org.dos.tournament.application.common.wizard.createtournament.petanque.WizardPetanqueCategoryPanel;
+import org.dos.tournament.application.common.wizard.createtournament.petanque.WizardPetanqueTournamentOptions;
 import org.dos.tournament.application.factory.model.ITournamentWorker;
 import org.dos.tournament.application.factory.model.TournamentFactoryRulesEngine;
 
@@ -35,7 +36,7 @@ import java.awt.Component;
 public class CreateTournamentWizard extends AbstractRuleEngineWizard implements ITournamentWorker 
 {
   public static Stack<WizardAction> xSettings = new Stack<WizardAction>();
-  
+ 
   private final AbstractWizardAction actionCancel = new WizardCancelAction();
   private final AbstractWizardAction actionBack = new WizardBackAction();
   private final AbstractWizardAction actionNext = new WizardNextAction();
@@ -43,6 +44,7 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
   
   private Stack<AbstractTournamentWizardPanel> panelStack = new Stack<AbstractTournamentWizardPanel>();
   
+  private WizardStep step = WizardStep.branch;
   
   
   //public CreateTournamentWizard(JFrame owner) 
@@ -119,8 +121,9 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
   @Override
   public boolean isWizardControlEmptyPane() 
   {
-    return this.panelStack.isEmpty()?true:this.scrollPaneWizard.getComponent(0) == this.panelStack.peek();
+    //return this.panelStack.isEmpty()?true:this.scrollPaneWizard.getComponent(0) == this.panelStack.peek();
     //return 0 == this.scrollPaneWizard.getComponentCount();
+    return 0 == this.scrollPaneWizard.getViewport().getComponentCount();
   }
 
   @Override
@@ -188,14 +191,14 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
 
   @Override
   public boolean isPetComMovTimeBoxed() {
-    // TODO Auto-generated method stub
-    return false;
+    Object value = this.getWizardProperty(AbstractTournamentWizardPanel.TIMELIMIT_MATCH);
+    return null==value?false:value.toString().matches("(true)|(\\d+)");
   }
 
   @Override
   public boolean isPetComMovDefineTracksByMovement() {
     // TODO Auto-generated method stub
-    return false;
+    return null!=this.getWizardProperty(AbstractTournamentWizardPanel.SET_COURSES);
   }
 
   @Override
@@ -255,10 +258,17 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
   @Override
   public void doWizardControlSetPanel_Dispose() 
   {
-    this.panelStack.peek().dispose(this);
-    // ((AbstractTournamentWizardPanel) this.scrollPaneWizard.getComponent(0)).dispose(this);
-    this.scrollPaneWizard.setViewport(null);
-    this.panelStack.removeAllElements();
+
+    int _count = this.scrollPaneWizard.getViewport().getComponents().length;
+    int _match = -1;
+    
+    for(int i=0; i<_count; ++i)
+      if(this.scrollPaneWizard.getViewport().getComponent(i) == this.panelStack.peek())
+        _match=i;
+    
+    if(-1 < _match)
+      this.scrollPaneWizard.getViewport().remove(_match);
+    
     this.actionBack.resetPressedFlag();
     this.actionCancel.resetPressedFlag();
     this.actionNext.resetPressedFlag();
@@ -285,11 +295,19 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
 
   @Override
   public void doWizardControlSetPanel_PetCat() {
+    AbstractTournamentWizardPanel _panel = new WizardPetanqueCategoryPanel(this);
+
     this.actionCancel.resetPressedFlag();
     this.actionBack.resetPressedFlag();
     this.actionNext.resetPressedFlag();
-    this.panelStack.add(new WizardPetanqueCategoryPanel(this));
-    this.scrollPaneWizard.add(this.panelStack.peek());
+    this.panelStack.add(_panel);
+    this.scrollPaneWizard.setViewportView(_panel);
+    this.repaint();
+    _panel.setVisible(true);
+    _panel.revalidate();
+//    this.scrollPaneWizard.getViewport().revalidate();
+    this.scrollPaneWizard.revalidate();
+    this.pack();
     this.revalidate();
   }
 
@@ -301,15 +319,37 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
 
   @Override
   public void doWizardControlSetPanel_PetComMov() {
-    // TODO Auto-generated method stub
-    
+    AbstractTournamentWizardPanel _panel = new WizardPetanqueTournamentOptions(this);
+
+    this.actionCancel.resetPressedFlag();
+    this.actionBack.resetPressedFlag();
+    this.actionNext.resetPressedFlag();
+    this.panelStack.add(_panel);
+    this.panelStack.add(_panel);
+    this.scrollPaneWizard.setViewportView(_panel);
+    this.repaint();
+    _panel.setVisible(true);
+    _panel.revalidate();
+//    this.scrollPaneWizard.getViewport().revalidate();
+    this.scrollPaneWizard.revalidate();
+    this.pack();
+    this.revalidate();
   }
 
   @Override
   public void doWizardControlRollBack_Dispose() 
   {
-    this.scrollPaneWizard.getComponent(0).setVisible(false);
-    this.scrollPaneWizard.removeAll();
+    int _count = this.scrollPaneWizard.getComponents().length;
+    int _match = -1;
+    
+    for(int i=0; i<_count; ++i)
+      if(this.scrollPaneWizard.getComponent(i) == this.panelStack.peek())
+        _match=i;
+    
+    if(-1 < _match)
+      this.scrollPaneWizard.remove(_match);
+    //this.scrollPaneWizard.getComponent(0).setVisible(false);
+    //this.scrollPaneWizard.removeAll();
   }
 
   @Override
@@ -414,7 +454,7 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
   public void doWizardControlPause() 
   {
     try {
-      Thread.sleep(1000);
+      Thread.sleep(500);
     } catch (InterruptedException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
@@ -450,6 +490,15 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
       return false;
     }
   }
+
+  @Override
+  public boolean isPetComMovTimeLimitDefined_J() {
+    Object value = this.getWizardProperty(AbstractTournamentWizardPanel.TIMELIMIT_MATCH);
+    return null==value?false:value.toString().matches("\\d+");
+  }
   
+  
+
+
   
 }

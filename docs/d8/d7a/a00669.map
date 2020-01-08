@@ -1,4 +1,6 @@
-<map id="org.dos.tournament.application.common.wizard.common.AbstractWizardRuleEngine" name="org.dos.tournament.application.common.wizard.common.AbstractWizardRuleEngine">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,359,47"/>
-<area shape="rect" id="node2" href="$d6/dc0/a00734.html" title=" " alt="" coords="39,95,325,136"/>
+<map id="org.dos.tournament.application.common.wizard.AbstractRuleEngineWizard" name="org.dos.tournament.application.common.wizard.AbstractRuleEngineWizard">
+<area shape="rect" id="node1" title=" " alt="" coords="407,27,705,69"/>
+<area shape="rect" id="node4" href="$da/d3a/a00694.html" title=" " alt="" coords="753,27,1157,69"/>
+<area shape="rect" id="node2" title=" " alt="" coords="150,5,214,32"/>
+<area shape="rect" id="node3" href="$d7/dc3/a00682.html" title=" " alt="" coords="5,57,359,98"/>
 </map>

@@ -1,6 +1,5 @@
 var a00331 =
 [
-    [ "common", "dc/d50/a00332.html", "dc/d50/a00332" ],
-    [ "createtournament", "d2/d0a/a00333.html", "d2/d0a/a00333" ],
-    [ "AbstractRuleEngineWizard", "dc/df1/a00662.html", "dc/df1/a00662" ]
+    [ "DialogChooseTournament", "d8/da5/a00570.html", "d8/da5/a00570" ],
+    [ "DialogChooseTournamentDep", "d4/d2f/a00582.html", "d4/d2f/a00582" ]
 ];

@@ -1,7 +1,8 @@
 var a00358 =
 [
-    [ "AbstractPetanqueSuperMeleePanel", "df/d73/a00358.html#a90ea126d20f1aaa58d0c2184229b1242", null ],
-    [ "getTournament", "df/d73/a00358.html#afbbffd357625d4605f4627f0cc397b89", null ],
-    [ "setTournament", "df/d73/a00358.html#aec03ca1760bb0c4107bd2729b087890f", null ],
-    [ "tournament", "df/d73/a00358.html#ae52eeedcb0417f0b7108de0159aa091d", null ]
+    [ "competition", "df/df1/a00357.html", "df/df1/a00357" ],
+    [ "movement", "d0/d65/a00360.html", "d0/d65/a00360" ],
+    [ "player", "d7/ddb/a00361.html", "d7/ddb/a00361" ],
+    [ "result", "d9/d9b/a00363.html", "d9/d9b/a00363" ],
+    [ "storage", "dc/d59/a00364.html", "dc/d59/a00364" ]
 ];

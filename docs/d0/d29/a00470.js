@@ -1,5 +1,7 @@
 var a00470 =
 [
-    [ "SwingActionEnlistAttendee", "d0/d29/a00470.html#a5150725d5df431c1878093a707a2ac09", null ],
-    [ "actionPerformed", "d0/d29/a00470.html#a8c89579ea309659d4e88fb7f80f41718", null ]
+    [ "SwingActionDeleteLastMatchday", "d0/d29/a00470.html#a92027f49567d4fb8785969dd6ca7a626", null ],
+    [ "actionPerformed", "d0/d29/a00470.html#a5d43d9ba61950b24418b51590e29f41c", null ],
+    [ "update", "d0/d29/a00470.html#a05db14c6532ffae2ad5389ac84bf790b", null ],
+    [ "updateStatus", "d0/d29/a00470.html#a9b2e971a716bd21b89fc07db86a0451d", null ]
 ];

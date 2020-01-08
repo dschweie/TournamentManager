@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.application.common.dialogs.player.DialogAssociationAttendee.SwingActionOK" name="org.dos.tournament.application.common.dialogs.player.DialogAssociationAttendee.SwingActionOK">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,348,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="123,5,231,32"/>
+<map id="org.dos.tournament.application.common.dialogs.MatchdayProgressMonitor" name="org.dos.tournament.application.common.dialogs.MatchdayProgressMonitor">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,308,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="98,5,215,32"/>
 </map>

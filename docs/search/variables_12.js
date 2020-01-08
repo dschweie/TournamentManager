@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vecattendees',['vecAttendees',['../dd/d5a/a00538.html#a1dd6d9079853077126a948db19b923df',1,'org::dos::tournament::application::common::dialogs::player::DialogAssociationAttendee']]],
-  ['vecheader',['vecHeader',['../d5/dee/a00518.html#a10a15d13a45c2cd01e448ac5f937cd0f',1,'org::dos::tournament::application::branch::petanque::panels::tablemodels::ParticipantsTableModel']]]
+  ['white',['white',['../dd/d5a/a00538.html#a071b2537de971112323920155a82e786',1,'org::dos::tournament::application::common::controls::ToggleButton']]],
+  ['wins',['WINS',['../da/d71/a00814.html#a3c6d045341c8846d3501c457cea496ab',1,'org::dos::tournament::branch::petanque::team::JoueurIndividuel::PetanqueTotalResult']]]
 ];

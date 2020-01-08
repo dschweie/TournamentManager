@@ -1,6 +1,8 @@
 package org.dos.tournament.application.common.wizard.createtournament.petanque;
 
 import org.dos.tournament.application.common.wizard.createtournament.AbstractTournamentWizardPanel;
+import org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard;
+
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
@@ -10,14 +12,30 @@ import java.awt.FlowLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyVetoException;
+import java.beans.VetoableChangeListener;
+import java.util.ResourceBundle;
+
 import javax.swing.border.TitledBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import javax.swing.ButtonGroup;
 
 public class WizardPetanqueTournamentOptions extends AbstractTournamentWizardPanel 
 {
   private JTextField textField;
+  private final ButtonGroup buttonGroupTimelimt = new ButtonGroup();
+  private final ButtonGroup buttonGroupCourts = new ButtonGroup();
+  private JRadioButton rdbtnNoTimelimit;
+  private JRadioButton rdbtnNoDrawOfThePlaces;
   public WizardPetanqueTournamentOptions() {
     GridBagLayout gridBagLayout = new GridBagLayout();
     gridBagLayout.columnWidths = new int[]{0, 0};
@@ -27,7 +45,7 @@ public class WizardPetanqueTournamentOptions extends AbstractTournamentWizardPan
     setLayout(gridBagLayout);
     
     JPanel panelTimeLimit = new JPanel();
-    panelTimeLimit.setBorder(new TitledBorder(null, "Zeitbegrenzung", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+    panelTimeLimit.setBorder(new TitledBorder(null, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.TimeLimit.name"), TitledBorder.LEADING, TitledBorder.TOP, null, null));
     GridBagConstraints gbc_panelTimeLimit = new GridBagConstraints();
     gbc_panelTimeLimit.insets = new Insets(0, 0, 5, 0);
     gbc_panelTimeLimit.fill = GridBagConstraints.BOTH;
@@ -49,30 +67,33 @@ public class WizardPetanqueTournamentOptions extends AbstractTournamentWizardPan
         FormSpecs.RELATED_GAP_ROWSPEC,
         FormSpecs.DEFAULT_ROWSPEC,}));
     
-    JLabel lblFrage = new JLabel("Frage");
-    panelTimeLimit.add(lblFrage, "2, 2");
+    JLabel lblTimelimitQuestion = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.TimeLimit.question"));
+    panelTimeLimit.add(lblTimelimitQuestion, "2, 2");
     
-    JRadioButton rdbtnNoTimelimit = new JRadioButton("nein");
+    rdbtnNoTimelimit = new JRadioButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.No.name"));
+    buttonGroupTimelimt.add(rdbtnNoTimelimit);
     panelTimeLimit.add(rdbtnNoTimelimit, "2, 4");
     
-    JRadioButton rdbtnSetTimelimit = new JRadioButton("New radio button");
+    
+    JRadioButton rdbtnSetTimelimit = new JRadioButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.Yes.name"));
+    buttonGroupTimelimt.add(rdbtnSetTimelimit);
     panelTimeLimit.add(rdbtnSetTimelimit, "2, 6");
     
     textField = new JTextField();
     panelTimeLimit.add(textField, "4, 6, fill, default");
     textField.setColumns(10);
     
-    JLabel lblMinuten = new JLabel("Minuten");
+    JLabel lblMinuten = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.Minutes.name"));
     panelTimeLimit.add(lblMinuten, "6, 6");
     
-    JPanel panel_1 = new JPanel();
-    panel_1.setBorder(new TitledBorder(null, "Auslosung der Pl\u00E4tze", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-    GridBagConstraints gbc_panel_1 = new GridBagConstraints();
-    gbc_panel_1.fill = GridBagConstraints.BOTH;
-    gbc_panel_1.gridx = 0;
-    gbc_panel_1.gridy = 1;
-    add(panel_1, gbc_panel_1);
-    panel_1.setLayout(new FormLayout(new ColumnSpec[] {
+    JPanel panelDrawOfThePlaces = new JPanel();
+    panelDrawOfThePlaces.setBorder(new TitledBorder(null, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.DrawOfThePlaces.name"), TitledBorder.LEADING, TitledBorder.TOP, null, null));
+    GridBagConstraints gbc_panelDrawOfThePlaces = new GridBagConstraints();
+    gbc_panelDrawOfThePlaces.fill = GridBagConstraints.BOTH;
+    gbc_panelDrawOfThePlaces.gridx = 0;
+    gbc_panelDrawOfThePlaces.gridy = 1;
+    add(panelDrawOfThePlaces, gbc_panelDrawOfThePlaces);
+    panelDrawOfThePlaces.setLayout(new FormLayout(new ColumnSpec[] {
         FormSpecs.RELATED_GAP_COLSPEC,
         FormSpecs.DEFAULT_COLSPEC,},
       new RowSpec[] {
@@ -83,14 +104,59 @@ public class WizardPetanqueTournamentOptions extends AbstractTournamentWizardPan
         FormSpecs.RELATED_GAP_ROWSPEC,
         FormSpecs.DEFAULT_ROWSPEC,}));
     
-    JLabel lblFrage_1 = new JLabel("Frage");
-    panel_1.add(lblFrage_1, "2, 2");
+    JLabel lblDrawOfThePlacesQuestion = new JLabel(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.DrawOfThePlaces.question"));
+    panelDrawOfThePlaces.add(lblDrawOfThePlacesQuestion, "2, 2");
     
-    JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("New radio button");
-    panel_1.add(rdbtnNewRadioButton_1, "2, 4");
+    rdbtnNoDrawOfThePlaces = new JRadioButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.No.name"));
+    buttonGroupCourts.add(rdbtnNoDrawOfThePlaces);
+    panelDrawOfThePlaces.add(rdbtnNoDrawOfThePlaces, "2, 4");
     
-    JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("New radio button");
-    panel_1.add(rdbtnNewRadioButton_2, "2, 6");
+    JRadioButton rdbtnSetDrawOfThePlaces = new JRadioButton(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.Yes.name"));
+    buttonGroupCourts.add(rdbtnSetDrawOfThePlaces);
+    panelDrawOfThePlaces.add(rdbtnSetDrawOfThePlaces, "2, 6");
+    
+    this.revalidate();
+    this.setVisible(true);
+  }
+  
+  public WizardPetanqueTournamentOptions(CreateTournamentWizard wizard) 
+  {
+    this();
+    this.xWizard = wizard;
+
+    this.rdbtnNoTimelimit.addChangeListener(new ChangeListener() {
+      @Override
+      public void stateChanged(ChangeEvent e) {
+        WizardPetanqueTournamentOptions.this.xWizard.setWizardProperty(AbstractTournamentWizardPanel.TIMELIMIT_MATCH, WizardPetanqueTournamentOptions.this.rdbtnNoTimelimit.isSelected()?"false":"true");
+      }
+    });
+    this.rdbtnNoTimelimit.setSelected(true);
+    
+    this.rdbtnNoDrawOfThePlaces.addChangeListener(new ChangeListener() {
+      @Override
+      public void stateChanged(ChangeEvent e) {
+        WizardPetanqueTournamentOptions.this.xWizard.setWizardProperty(AbstractTournamentWizardPanel.SET_COURSES, WizardPetanqueTournamentOptions.this.rdbtnNoDrawOfThePlaces.isSelected()?"false":"true");
+      }
+    });
+    this.rdbtnNoDrawOfThePlaces.setSelected(true);
+    
+    this.textField.getDocument().addDocumentListener(new DocumentListener() {
+      public void changedUpdate(DocumentEvent e) {
+        setTimelimit();
+      }
+      public void removeUpdate(DocumentEvent e) {
+        setTimelimit();
+      }
+      public void insertUpdate(DocumentEvent e) {
+        setTimelimit();
+      }
+
+      public void setTimelimit() 
+      {
+        WizardPetanqueTournamentOptions.this.xWizard.setWizardProperty(AbstractTournamentWizardPanel.TIMELIMIT_MATCH, WizardPetanqueTournamentOptions.this.textField.getText().trim());
+      }
+    });
+
   }
 
 }

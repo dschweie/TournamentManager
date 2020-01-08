@@ -113,6 +113,23 @@
           <finalName>TournamentManager/TournamentManager-${TournamentManager.version}</finalName>
         </configuration>
       </plugin>
+      
+      <!-- Robotframework for GUI-Testing -->
+      <plugin>
+        <groupId>org.robotframework</groupId>
+        <artifactId>robotframework-maven-plugin</artifactId>
+        <version>1.5.1</version>
+        <!-- <executions><execution><phase>none</phase></execution></executions>  -->
+        <executions>
+          <execution>
+            <phase></phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      
     </plugins>
     <resources>
       <resource>
@@ -133,6 +150,7 @@
       </resource>
   	</resources>
   </build>
+  
   
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -168,6 +186,13 @@
 	    <artifactId>miglayout</artifactId>
 	    <version>3.5.5</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.robotframework/swinglibrary -->
+    <dependency>
+      <groupId>org.robotframework</groupId>
+      <artifactId>swinglibrary</artifactId>
+      <version>1.9.9</version>
+    </dependency>
+    
   </dependencies>
   
   <reporting>

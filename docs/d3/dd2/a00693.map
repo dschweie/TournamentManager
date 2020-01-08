@@ -1,5 +1,7 @@
-<map id="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard.WizardBackAction" name="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard.WizardBackAction">
-<area shape="rect" id="node1" title=" " alt="" coords="613,5,1017,47"/>
-<area shape="rect" id="node2" href="$df/d9e/a00686.html" title=" " alt="" coords="161,5,565,47"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,13,113,39"/>
+<map id="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard" name="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard">
+<area shape="rect" id="node1" title=" " alt="" coords="753,39,1157,80"/>
+<area shape="rect" id="node2" href="$d1/d97/a00670.html" title=" " alt="" coords="407,5,705,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="150,13,214,39"/>
+<area shape="rect" id="node4" href="$d7/dc3/a00682.html" title=" " alt="" coords="5,67,359,108"/>
+<area shape="rect" id="node5" href="$d4/dfa/a00746.html" title=" " alt="" coords="413,71,699,112"/>
 </map>

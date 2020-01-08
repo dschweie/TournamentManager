@@ -1,6 +1,5 @@
 var a00319 =
 [
-    [ "LeaderboardTableColumnModel", "d6/d52/a00510.html", "d6/d52/a00510" ],
-    [ "LeaderboardTableModel", "d6/d90/a00514.html", "d6/d90/a00514" ],
-    [ "ParticipantsTableModel", "d5/dee/a00518.html", "d5/dee/a00518" ]
+    [ "movement", "d7/df2/a00312.html", "d7/df2/a00312" ],
+    [ "player", "dd/de2/a00320.html", "dd/de2/a00320" ]
 ];

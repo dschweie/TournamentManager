@@ -1,7 +1,8 @@
 var a00382 =
 [
-    [ "SwingActionOK", "dd/df5/a00386.html", "dd/df5/a00386" ],
-    [ "SwingActionOkAndNext", "d9/d0a/a00390.html", "d9/d0a/a00390" ],
-    [ "DialogJoueurIndividuel", "d3/d45/a00382.html#aa8cd943772bd44634868a23fbe56a733", null ],
-    [ "DialogJoueurIndividuel", "d3/d45/a00382.html#a22ac689c2722ae3ca37468d06bc55af9", null ]
+    [ "PreventDuplicatedElements", "d3/d45/a00382.html#ade3a0689f6eeb77cf52f409a1f5c5a91", null ],
+    [ "itemStateChanged", "d3/d45/a00382.html#af43d66253ea061a1def14d918c245709", null ],
+    [ "setDefaultColor", "d3/d45/a00382.html#a8c992458aa5f19ea0e91adf158afa0ed", null ],
+    [ "updateGrid", "d3/d45/a00382.html#a7f9b7ee4576b958597159ca9f647999c", null ],
+    [ "colorDefault", "d3/d45/a00382.html#ab92cbe69256339d275064ae587e841ab", null ]
 ];

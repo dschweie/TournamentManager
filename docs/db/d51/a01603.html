@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TournamentManager: Installation des MongoDB Datenbankservers</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TournamentManager
+   &#160;<span id="projectnumber">0.0.7</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'Suchen');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('db/d51/a01603.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Installation des MongoDB Datenbankservers </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Inhaltsverzeichnis</h3>
+<ul><li class="level1"><a href="#preDownload">Setup für Datenbankserver aus dem Internet herunterladen</a><ul><li class="level2"><a href="#preStep01">Aufruf des Download-Centers von MongoDB</a></li>
+<li class="level2"><a href="#preStep02">Download der Installationsdatei</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#Installation">Setup für den Datenbankserver ausführen</a><ul><li class="level2"><a href="#instStep01">Start des Setup</a></li>
+<li class="level2"><a href="#instStep02">Annehmen der Lizenzbedingungen</a></li>
+<li class="level2"><a href="#instStep03">Auswählen des Funktionsumfangs</a></li>
+<li class="level2"><a href="#instStep04">Konfiguation des Datenbankservers als Dienst</a></li>
+<li class="level2"><a href="#instStep05">Option zur Installation von MongoDB Compass</a></li>
+<li class="level2"><a href="#instStep06">Start der Installation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><p>Auf diesen Seiten wird die Installation des Datenbanksservers für Windows erklärt.</p>
+<p>Für den Fall, dass Sie ein anderes Betriebssystem nutzen, informieren Sie sich auf den Seiten von MongoDB, wie der Datenbanksserver zu installieren ist.</p>
+<h1><a class="anchor" id="preDownload"></a>
+Setup für Datenbankserver aus dem Internet herunterladen</h1>
+<h2><a class="anchor" id="preStep01"></a>
+Aufruf des Download-Centers von MongoDB</h2>
+<p>Öffnen Sie in einem Browser die URL <a href="https://www.mongodb.com/">https://www.mongodb.com/</a>.</p>
+<div class="image">
+<img src="../../download_database_01_mongo_page.png" alt="download_database_01_mongo_page.png"/>
+<div class="caption">
+Aufrufen des Download-Centers</div></div>
+<p> Sie gelangen zu dem Download Center, indem Sie zuerst mit der Maus über "Produkte"<sup>(2)</sup> gehen und dann den Menüpunkt "MongoDB Server"<sup>(3)</sup> anklicken.</p>
+<h2><a class="anchor" id="preStep02"></a>
+Download der Installationsdatei</h2>
+<div class="image">
+<img src="../../download_database_02_download_mongo_server.png" alt="download_database_02_download_mongo_server.png"/>
+<div class="caption">
+Download der Installationsdatei</div></div>
+ <ol>
+<li>
+Stellen Sie sicher, dass der Reiter "Server" ausgewählt ist. </li>
+<li>
+Wählen Sie die Variante "Community Edition", falls sie nicht automatisch ausgewählt ist. </li>
+<li>
+Stellen Sie sicher, dass das ausgewählte Betriebssystem korrekt ist. </li>
+<li>
+Wenn alle Einstellung passen, kann der Download gestartet werden. </li>
+</ol>
+<h1><a class="anchor" id="Installation"></a>
+Setup für den Datenbankserver ausführen</h1>
+<p>Starten Sie die Installation des Datenbankserver mit dem passenden Setup.</p>
+<dl class="section note"><dt>Zu beachten</dt><dd>Die Installation dieser Software benötigt lokale Administrationsrechte.</dd></dl>
+<h2><a class="anchor" id="instStep01"></a>
+Start des Setup</h2>
+<div class="image">
+<img src="../../install_database_01_start_installation.png" alt="install_database_01_start_installation.png"/>
+<div class="caption">
+Startseite des Setup-Wizard</div></div>
+<p> Der Wizard beginnt mit Informationen zu der Version, die installiert werden soll. Klicken Sie auf die Schaltfläche "Next".</p>
+<h2><a class="anchor" id="instStep02"></a>
+Annehmen der Lizenzbedingungen</h2>
+<div class="image">
+<img src="../../install_database_02_end-user-license-agreement.png" alt="install_database_02_end-user-license-agreement.png"/>
+<div class="caption">
+Lizenzbedingungen der MongoDB</div></div>
+ <ol>
+<li>
+Die Installation kann nur fortgesetzt werden, wenn der Haken in der Checkbox gesetzt wird. </li>
+<li>
+Wenn die Schaltfläche "Next" jetzt aktiv ist, können Sie über diese Schaltfläche zum nächsten Schritt gelangen. </li>
+</ol>
+<h2><a class="anchor" id="instStep03"></a>
+Auswählen des Funktionsumfangs</h2>
+<div class="image">
+<img src="../../install_database_03_complete-setup.png" alt="install_database_03_complete-setup.png"/>
+<div class="caption">
+Auswahl der zu installierenden Funktionen</div></div>
+<p> Wählen Sie den vollständigen Funktionsumfang über die Schaltfläche "Complete" aus.</p>
+<dl class="section note"><dt>Zu beachten</dt><dd>Wenn Sie eine eigene Auswahl des Funktionsumfangs auswählen, kann es sein, dass am Ende Funktionen des Datenbankservers nicht installiert werden und der Tournament Manager nur eingeschränkt funktionstüchtig ist.</dd></dl>
+<h2><a class="anchor" id="instStep04"></a>
+Konfiguation des Datenbankservers als Dienst</h2>
+<div class="image">
+<img src="../../install_database_04_service-configuration.png" alt="install_database_04_service-configuration.png"/>
+</div>
+<p> Der Datenbankserver soll unter Windows als Dienst installiert werden. In diesem Fall wird die Datenbank automatisch mit dem Start des Betriebssystems gestartet und der Anwender muss sich nicht um den Start kümmern.</p>
+<p>Es wird empfohlen, die Einstellungen weitestgehend so zu übernehmen, wie es die Installationssoftware vorschlägt.</p>
+<ol>
+<li>
+In diesem Verzeichnis werden die Daten gespeichert. Wenn Sie ein anderes Verzeichnis bevorzugen, können Sie den Vorschlag abändern. </li>
+<li>
+In diesem Verzeichnis werden die Log-Dateien gespeichert. Wenn Sie ein anderes Verzeichnis bevorzugen, können Sie den Vorschlag abändern. </li>
+<li>
+Fahren Sie mit der Installation fort über die Schaltfläche "Next"</li>
+</ol>
+<h2><a class="anchor" id="instStep05"></a>
+Option zur Installation von MongoDB Compass</h2>
+<div class="image">
+<img src="../../install_database_05_install-compass.png" alt="install_database_05_install-compass.png"/>
+<div class="caption">
+optional kann mit Mongo Compass ein Analyse-Werkzeug installiert werden</div></div>
+<p> MongoDB Compass ist eine Software, mit der es möglich ist, die Inhalte in der Datenbank anzuzeigen und zu ändern.</p>
+<p>Entscheiden Sie selbst, ob Sie dieses Werkzeug installieren möchten. Es kann auch zu einem späteren Zeitpunkt über eine gesonderte Installationsdatei installiert werden. Diese finden Sie im Download-Center unter der Kategorie Tools.</p>
+<p>Setzen Sie die Installation über die Schaltfläche "Next" fort.</p>
+<h2><a class="anchor" id="instStep06"></a>
+Start der Installation</h2>
+<div class="image">
+<img src="../../install_database_06_install-components.png" alt="install_database_06_install-components.png"/>
+<div class="caption">
+Start der Installation</div></div>
+<p> Nachdem jetzt alle Schritte der Konfiguration abgeschlossen sind, können Sie über die Schaltfläche "Install" die eigentliche Installation des Datenbanksservers starten.</p>
+<p>Die Installation kann einige Minuten in Anspruch nehmen. Der Wizard informiert über einen Fortschrittsbalken zu welchen Anteil die Schritte abgearbeitet sind.</p>
+<p>Nach Abschluss aller Schritte können Sie mit der Schaltfläche "Finish" die Installation abschließen. </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dc/dd2/a01604.html">Benutzerhandbuch</a></li>
+    <li class="footer">Erzeugt von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

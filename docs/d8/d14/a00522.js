@@ -1,5 +1,6 @@
 var a00522 =
 [
-    [ "SingletonProperties", "d8/d14/a00522.html#ae22c0349ea6915fbcd8399cdb5160a5f", null ],
-    [ "xProperties", "d8/d14/a00522.html#a5bb4b7f6de18ea38734b2537e79bff2d", null ]
+    [ "LeaderboardTableModel", "d8/d14/a00522.html#aef2e187a6a65537504a2f0b3c9700580", null ],
+    [ "isCellEditable", "d8/d14/a00522.html#a6bf395a750ee450ad21fdac62a470436", null ],
+    [ "update", "d8/d14/a00522.html#acc497d50f66457e447498514ea6f1ba3", null ]
 ];

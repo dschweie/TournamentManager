@@ -1,6 +1,8 @@
 var a00363 =
 [
-    [ "SwingActionToggleTeamPresentation", "d9/d9b/a00363.html#a0918741f979c28ff8a04f256a65ae758", null ],
-    [ "actionPerformed", "d9/d9b/a00363.html#a7c62cfa6e8d96c4c336b8494e9eea99d", null ],
-    [ "updateButton", "d9/d9b/a00363.html#adf6016493646618eb94ca37b08e9df9c", null ]
+    [ "AbstractResult", "d2/d6e/a00966.html", "d2/d6e/a00966" ],
+    [ "AbstractTotalResult", "d0/daf/a00970.html", "d0/daf/a00970" ],
+    [ "ConstantScoreResult", "df/dce/a00974.html", "df/dce/a00974" ],
+    [ "IResult", "d2/ddd/a00978.html", "d2/ddd/a00978" ],
+    [ "ITotalResult", "d1/d7a/a00982.html", "d1/d7a/a00982" ]
 ];

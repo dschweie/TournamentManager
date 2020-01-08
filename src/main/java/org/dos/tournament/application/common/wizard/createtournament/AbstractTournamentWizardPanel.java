@@ -18,6 +18,9 @@ public abstract class AbstractTournamentWizardPanel extends JPanel
   public static final String PET_SUPERMELEE     = "supermelee";
   public static final String PET_MONATSTURNIER  = "monatsturnier_gg";
   public static final String PET_DOUBLETTESWISS = "doublette_formee_swiss";
+  
+  public static final String TIMELIMIT_MATCH    = "timelimit_match";
+  public static final String SET_COURSES        = "set_cources";
 
   
   protected AbstractRuleEngineWizard xWizard = null;

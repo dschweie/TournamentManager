@@ -1,4 +1,22 @@
-<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.KeyAdapter" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.KeyAdapter">
-<area shape="rect" id="node1" title="Listener zur Positionierung des Focus in der SuperMeleeMatchdayTable." alt="" coords="5,80,380,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="99,5,286,32"/>
+<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable">
+<area shape="rect" id="node1" title="Die Klasse steht für die Tabelle für Spielpaarungen im Supermelee." alt="" coords="1679,402,2053,443"/>
+<area shape="rect" id="node2" title=" " alt="" coords="1217,80,1276,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="109,145,165,172"/>
+<area shape="rect" id="node6" href="$d2/d79/a00898.html" title=" " alt="" coords="481,182,744,223"/>
+<area shape="rect" id="node4" title=" " alt="" coords="1221,409,1273,436"/>
+<area shape="rect" id="node5" href="$d6/d2f/a00854.html" title=" " alt="" coords="1061,537,1432,578"/>
+<area shape="rect" id="node7" title=" " alt="" coords="93,209,180,236"/>
+<area shape="rect" id="node8" href="$d3/dd1/a00914.html" title="Das Interface dient als allgemeine Schittstelle für Turniere." alt="" coords="5,261,268,302"/>
+<area shape="rect" id="node9" title=" " alt="" coords="403,247,822,289"/>
+<area shape="rect" id="node10" href="$d2/ddd/a00978.html" title=" " alt="" coords="499,313,727,354"/>
+<area shape="rect" id="node11" title=" " alt="" coords="554,379,671,405"/>
+<area shape="rect" id="node12" title=" " alt="" coords="117,973,156,1000"/>
+<area shape="rect" id="node20" href="$dd/db2/a00866.html" title=" " alt="" coords="427,966,798,1007"/>
+<area shape="rect" id="node13" title=" " alt="" coords="582,521,643,548"/>
+<area shape="rect" id="node14" title=" " alt="" coords="557,572,668,599"/>
+<area shape="rect" id="node15" href="$d8/d38/a00926.html" title=" " alt="" coords="381,623,844,694"/>
+<area shape="rect" id="node16" title=" " alt="" coords="579,719,646,745"/>
+<area shape="rect" id="node17" title=" " alt="" coords="452,770,773,811"/>
+<area shape="rect" id="node18" title=" " alt="" coords="416,835,809,877"/>
+<area shape="rect" id="node19" title=" " alt="" coords="472,901,753,942"/>
 </map>

@@ -1,5 +1,6 @@
 var a00332 =
 [
-    [ "AbstractWizardRuleEngine", "d1/d97/a00670.html", "d1/d97/a00670" ],
-    [ "IWizardWorker", "d8/d73/a00674.html", "d8/d73/a00674" ]
+    [ "components", "d2/d0a/a00333.html", "d2/d0a/a00333" ],
+    [ "AbstractTournamentPanel", "da/de4/a00594.html", null ],
+    [ "DefaultMatchdayPanel", "d6/dfa/a00626.html", "d6/dfa/a00626" ]
 ];

@@ -41,7 +41,7 @@ public class TestAttendee
   {
     Assert.assertEquals("Check Attendee Code.", " 15", this.sutAttendee.getCode());
     Assert.assertNotNull("Check presence of ParticipantId.", this.sutAttendee.getParticipantId());
-    Assert.assertEquals("Check class name of ParticipantId.", "org.dos.tournament.player.utils.NumericParticipantId", this.sutAttendee.getParticipantId().getClass().getName());
+    Assert.assertEquals("Check class name of ParticipantId.", "org.dos.tournament.common.player.utils.NumericParticipantId", this.sutAttendee.getParticipantId().getClass().getName());
     Assert.assertEquals("Check code in ParticipantId", " 15", this.sutAttendee.getParticipantId().getCode());
   }
 

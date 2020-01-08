@@ -1,8 +1,15 @@
-<map id="org.dos.tournament.branch.petanque.result.PetanqueMatchResult" name="org.dos.tournament.branch.petanque.result.PetanqueMatchResult">
-<area shape="rect" id="node1" title=" " alt="" coords="144,381,419,423"/>
-<area shape="rect" id="node2" href="$d6/d17/a00778.html" title=" " alt="" coords="5,291,280,332"/>
-<area shape="rect" id="node3" href="$df/d39/a00950.html" title=" " alt="" coords="29,172,257,213"/>
-<area shape="rect" id="node4" href="$df/d88/a00962.html" title=" " alt="" coords="29,81,257,123"/>
-<area shape="rect" id="node5" href="$d4/dfe/a01770.html" title=" " alt="" coords="97,5,188,32"/>
-<area shape="rect" id="node6" title=" " alt="" coords="294,179,333,206"/>
+<map id="org.dos.tournament.application.TournamentManagerUI.UpdateThread" name="org.dos.tournament.application.TournamentManagerUI.UpdateThread">
+<area shape="rect" id="node1" title=" " alt="" coords="815,220,1051,261"/>
+<area shape="rect" id="node2" title=" " alt="" coords="573,130,634,157"/>
+<area shape="rect" id="node3" href="$d8/d4e/a00754.html" title=" " alt="" coords="501,220,705,261"/>
+<area shape="rect" id="node4" href="$d1/da6/a00738.html" title=" " alt="" coords="28,5,309,47"/>
+<area shape="rect" id="node5" title=" " alt="" coords="141,71,197,98"/>
+<area shape="rect" id="node6" title=" " alt="" coords="121,122,216,149"/>
+<area shape="rect" id="node7" title=" " alt="" coords="129,173,209,199"/>
+<area shape="rect" id="node8" title=" " alt="" coords="128,227,209,254"/>
+<area shape="rect" id="node9" title=" " alt="" coords="139,326,198,353"/>
+<area shape="rect" id="node10" title=" " alt="" coords="136,377,201,403"/>
+<area shape="rect" id="node11" title=" " alt="" coords="139,427,199,454"/>
+<area shape="rect" id="node12" href="$d9/db8/a00658.html" title=" " alt="" coords="5,479,332,520"/>
+<area shape="rect" id="node13" title=" " alt="" coords="580,286,627,313"/>
 </map>

@@ -1,7 +1,7 @@
 var a00462 =
 [
-    [ "SwingActionDeleteLastMatchday", "de/dcb/a00462.html#a92027f49567d4fb8785969dd6ca7a626", null ],
-    [ "actionPerformed", "de/dcb/a00462.html#a5d43d9ba61950b24418b51590e29f41c", null ],
-    [ "update", "de/dcb/a00462.html#a05db14c6532ffae2ad5389ac84bf790b", null ],
-    [ "updateStatus", "de/dcb/a00462.html#a9b2e971a716bd21b89fc07db86a0451d", null ]
+    [ "SwingActionUpdateLastRound", "de/dcb/a00462.html#a70c9ef36aa56f9e107dd081167aae2f5", null ],
+    [ "actionPerformed", "de/dcb/a00462.html#a2e0a960ac2ec1eb465c49eb0b071543f", null ],
+    [ "update", "de/dcb/a00462.html#a3ea2e474b3f76e24b0ef523f1228fb4d", null ],
+    [ "updateStatus", "de/dcb/a00462.html#a25e20bddfa2ca5eefd6f70872c619cbf", null ]
 ];

@@ -1,5 +1,7 @@
 package org.dos.tournament.application.factory;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import javax.swing.JDialog;
@@ -14,7 +16,6 @@ import org.dos.tournament.application.branch.petanque.panels.PetanqueSuperMeleeV
 import org.dos.tournament.application.branch.petanque.panels.tablemodels.ParticipantsTableModel;
 import org.dos.tournament.application.common.panels.AbstractTournamentPanel;
 import org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard;
-import org.dos.tournament.application.common.wizard.createtournament.TestDialog;
 import org.dos.tournament.application.factory.model.TournamentFactoryRulesEngine;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship;
@@ -42,6 +43,12 @@ public class FactoryTournament
       }
     }
     
+    Iterator<String> keys = _instance.getWizardProperties().keySet().iterator();
+    while(keys.hasNext())
+    {
+      String key = keys.next();
+      System.out.println(key.concat(" hat den Wert ").concat(_instance.getWizardProperty(key).toString()));
+    }
     //return _instance.getTournamentEnvironment();
     return null;
     

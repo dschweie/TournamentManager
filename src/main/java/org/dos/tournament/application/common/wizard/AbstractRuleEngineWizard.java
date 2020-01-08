@@ -11,7 +11,6 @@ import javax.swing.JFrame;
 
 import org.dos.tournament.application.common.wizard.common.AbstractWizardRuleEngine;
 import org.dos.tournament.application.common.wizard.common.IWizardWorker;
-import org.dos.tournament.application.common.wizard.createtournament.TestDialog;
 import org.dos.tournament.application.factory.model.TournamentFactoryRulesEngine;
 
 public abstract class AbstractRuleEngineWizard extends JDialog implements IWizardWorker
@@ -160,6 +159,11 @@ public abstract class AbstractRuleEngineWizard extends JDialog implements IWizar
     {
       this.mapProperties.replace(key, null);
     }
+  }
+  
+  public HashMap<String,Object> getWizardProperties()
+  {
+    return ( HashMap<String,Object>) this.mapProperties.clone();
   }
   
   protected class RuleEngineThread extends Thread

@@ -1,4 +1,6 @@
 var a00329 =
 [
-    [ "PetanqueTableCellEditor", "d9/db8/a00658.html", "d9/db8/a00658" ]
+    [ "player", "dd/dbb/a00330.html", "dd/dbb/a00330" ],
+    [ "tournament", "d8/df7/a00331.html", "d8/df7/a00331" ],
+    [ "MatchdayProgressMonitor", "d0/ddb/a00542.html", "d0/ddb/a00542" ]
 ];

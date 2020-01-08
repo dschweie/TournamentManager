@@ -1,4 +1,4 @@
 var a00314 =
 [
-    [ "DialogJoueurIndividuel", "d3/d45/a00382.html", "d3/d45/a00382" ]
+    [ "tournament", "d4/d6f/a00315.html", "d4/d6f/a00315" ]
 ];

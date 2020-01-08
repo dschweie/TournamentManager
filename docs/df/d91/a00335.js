@@ -1,5 +1,4 @@
 var a00335 =
 [
-    [ "model", "dd/d1d/a00336.html", "dd/d1d/a00336" ],
-    [ "FactoryTournament", "d6/d59/a00726.html", null ]
+    [ "PetanqueTableCellEditor", "d9/d41/a00666.html", "d9/d41/a00666" ]
 ];

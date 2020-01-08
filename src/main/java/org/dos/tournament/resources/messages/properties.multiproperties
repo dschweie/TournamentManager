@@ -44,6 +44,20 @@
             <Value disabled="false">Abbrechen</Value>
         </Property>
         <Property>
+            <Name>Common.DrawOfThePlaces.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Draw of the places</Value>
+            <Value disabled="false">Auslosung der Plätze</Value>
+        </Property>
+        <Property>
+            <Name>Common.DrawOfThePlaces.question</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Should the places be drawn for each round?</Value>
+            <Value disabled="false">Sollen die Plätze durch für jede Runde ausgelost werden?</Value>
+        </Property>
+        <Property>
             <Name>Common.Finish.name</Name>
             <Disabled>false</Disabled>
             <MultiLine>false</MultiLine>
@@ -63,6 +77,41 @@
             <MultiLine>false</MultiLine>
             <Value disabled="false">OK</Value>
             <Value disabled="false">Übernehmen</Value>
+        </Property>
+        <Property>
+            <Name>Common.Yes.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Yes</Value>
+            <Value disabled="false">ja</Value>
+        </Property>
+        <Property>
+            <Name>Common.No.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">No</Value>
+            <Value disabled="false">nein</Value>
+        </Property>
+        <Property>
+            <Name>Common.Minutes.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">minutes</Value>
+            <Value disabled="false">Minuten</Value>
+        </Property>
+        <Property>
+            <Name>Common.TimeLimit.name</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">time limit</Value>
+            <Value disabled="false">Zeitbegrenzung</Value>
+        </Property>
+        <Property>
+            <Name>Common.TimeLimit.question</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Should the games be limited in time?</Value>
+            <Value disabled="false">Sollen die Spiele zeitlich begrenzt werden?</Value>
         </Property>
         <Property>
             <Name>DefaultMatchdayPanel.footer-toolbar.description.switchToAlpha</Name>
@@ -619,6 +668,13 @@ Beim Supermêlée wird in der Regel ohne Freilos gespielt. Das hat zur Folge, da
             <Value disabled="false">Datei</Value>
         </Property>
         <Property>
+            <Name>TournamentManagerUI.mnExtras.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>true</MultiLine>
+            <Value disabled="false">Extras</Value>
+            <Value disabled="false">Extras</Value>
+        </Property>
+        <Property>
             <Name>TournamentManagerUI.mnRundeErstellen.text</Name>
             <Disabled>false</Disabled>
             <MultiLine>false</MultiLine>
@@ -694,6 +750,13 @@ Beim Supermêlée wird in der Regel ohne Freilos gespielt. Das hat zur Folge, da
             <MultiLine>false</MultiLine>
             <Value disabled="false">Exit</Value>
             <Value disabled="false">Beenden</Value>
+        </Property>
+        <Property>
+            <Name>TournamentManagerUI.mntmViewer.text</Name>
+            <Disabled>false</Disabled>
+            <MultiLine>false</MultiLine>
+            <Value disabled="false">Viewer</Value>
+            <Value disabled="false">Teilnehmer-Modul</Value>
         </Property>
         <Property>
             <Name>TournamentManagerUI.openTournament.name</Name>

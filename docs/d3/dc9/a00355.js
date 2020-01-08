@@ -1,8 +1,5 @@
 var a00355 =
 [
-    [ "AbstractResult", "df/d39/a00950.html", "df/d39/a00950" ],
-    [ "AbstractTotalResult", "d3/dca/a00954.html", "d3/dca/a00954" ],
-    [ "ConstantScoreResult", "df/d9c/a00958.html", "df/d9c/a00958" ],
-    [ "IResult", "df/d88/a00962.html", "df/d88/a00962" ],
-    [ "ITotalResult", "d2/d6e/a00966.html", "d2/d6e/a00966" ]
+    [ "CompetitorPartieResult", "d5/d69/a00878.html", "d5/d69/a00878" ],
+    [ "Partie", "d3/d50/a00882.html", "d3/d50/a00882" ]
 ];

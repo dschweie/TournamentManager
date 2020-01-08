@@ -1,6 +1,6 @@
 var a00323 =
 [
-    [ "player", "d4/d8f/a00324.html", "d4/d8f/a00324" ],
-    [ "tournament", "de/dc8/a00325.html", "de/dc8/a00325" ],
-    [ "MatchdayProgressMonitor", "dc/d20/a00534.html", "dc/d20/a00534" ]
+    [ "ParticipantTable", "d8/d91/a00410.html", "d8/d91/a00410" ],
+    [ "SuperMeleeLeaderboardTable", "de/df7/a00418.html", "de/df7/a00418" ],
+    [ "SuperMeleeResultsTable", "d7/db9/a00426.html", "d7/db9/a00426" ]
 ];

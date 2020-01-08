@@ -1,9 +1,8 @@
 var a00316 =
 [
-    [ "components", "d2/d41/a00318.html", "d2/d41/a00318" ],
-    [ "tablemodels", "de/dab/a00319.html", "de/dab/a00319" ],
-    [ "AbstractPetanqueSuperMeleePanel", "d9/dd1/a00398.html", "d9/dd1/a00398" ],
-    [ "PetanqueLEquipeFormePanel", "d7/db9/a00426.html", "d7/db9/a00426" ],
-    [ "PetanqueSuperMeleePanel", "db/d2c/a00466.html", "db/d2c/a00466" ],
-    [ "PetanqueSuperMeleeViewerPanel", "d4/d1f/a00506.html", "d4/d1f/a00506" ]
+    [ "branch", "da/de0/a00317.html", "da/de0/a00317" ],
+    [ "common", "d8/dfc/a00327.html", "d8/dfc/a00327" ],
+    [ "configuration", "d2/d45/a00342.html", "d2/d45/a00342" ],
+    [ "factory", "d0/dc5/a00343.html", "d0/dc5/a00343" ],
+    [ "TournamentManagerUI", "d8/d4e/a00754.html", "d8/d4e/a00754" ]
 ];
