@@ -1,5 +1,5 @@
 var a00544 =
 [
-    [ "CancelAction", "d2/ddf/a00544.html#a2f58535981d0b721eea671f784c3f899", null ],
-    [ "actionPerformed", "d2/ddf/a00544.html#a9aa37e95439a3092d29b08188ee86ca1", null ]
+    [ "SwingActionSetMatchdayManually", "d2/ddf/a00544.html#ab85e611a436dc4689478490a88551d86", null ],
+    [ "actionPerformed", "d2/ddf/a00544.html#aba3be674ec10c1edae9cb70c82f98f69", null ]
 ];

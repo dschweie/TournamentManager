@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['tablebasedindividual_2ejava',['TableBasedIndividual.java',['../d6/d7d/a00161.html',1,'']]],
-  ['tableheadercolumncontent_2ejava',['TableHeaderColumnContent.java',['../d0/d89/a00071.html',1,'']]],
-  ['togglebutton_2ejava',['ToggleButton.java',['../db/db6/a00074.html',1,'']]],
-  ['tournamentfactoryrulesengine_2ejava',['TournamentFactoryRulesEngine.java',['../d7/d9a/a00152.html',1,'']]],
-  ['tournamentgrid_2ejava',['TournamentGrid.java',['../d5/ddf/a00224.html',1,'']]],
-  ['tournamentmanagerframe_2ejava',['TournamentManagerFrame.java',['../d4/d3a/a00101.html',1,'']]],
-  ['tournamentmanagerui_2ejava',['TournamentManagerUI.java',['../d6/db8/a00158.html',1,'']]],
-  ['tournamentutils_2ejava',['TournamentUtils.java',['../d9/d01/a00227.html',1,'']]],
-  ['triplette_2ejava',['Triplette.java',['../de/df3/a00185.html',1,'']]]
+  ['singletonproperties_2ejava_1266',['SingletonProperties.java',['../da/d24/a00068.html',1,'']]],
+  ['singletonstorage_2ejava_1267',['SingletonStorage.java',['../d3/d93/a00341.html',1,'']]],
+  ['supermelee_2ejava_1268',['SuperMelee.java',['../dd/d52/a00221.html',1,'']]],
+  ['supermeleeclubchampionship_2ejava_1269',['SuperMeleeClubChampionship.java',['../d5/ddf/a00224.html',1,'']]],
+  ['supermeleeleaderboardtable_2ejava_1270',['SuperMeleeLeaderboardTable.java',['../d5/df9/a00044.html',1,'']]],
+  ['supermeleematchdaytable_2ejava_1271',['SuperMeleeMatchdayTable.java',['../d1/dc1/a00092.html',1,'']]],
+  ['supermeleemenufactory_2ejava_1272',['SupermeleeMenuFactory.java',['../d4/d8c/a00035.html',1,'']]],
+  ['supermeleeresultstable_2ejava_1273',['SuperMeleeResultsTable.java',['../d6/d2d/a00047.html',1,'']]],
+  ['swissmatchdaygeneratorrulesengine_2ejava_1274',['SwissMatchdayGeneratorRulesEngine.java',['../d1/da8/a00230.html',1,'']]]
 ];

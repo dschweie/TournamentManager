@@ -1,30 +1,35 @@
 package org.dos.tournament.branch.petanque.team;
 
+import org.dos.tournament.branch.petanque.result.PetanqueTotalResult;
 import org.dos.tournament.common.player.AbstractTeamParticipant;
 import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.player.utils.IParticipantId;
 
 public abstract class AbstractPetanqueTeam extends AbstractTeamParticipant
 {
-  public final static int POINTEUR = 0;
-  public final static int TIREUR = 1;
+  public static final int POINTEUR = 0;
+  public static final int TIREUR = 1;
   public static final int MILIEU = 2;
-  
+
   public AbstractPetanqueTeam(IParticipantId id, IParticipant pointeur, IParticipant tireur)
   {
     this(id, pointeur, null, tireur);
   }
-  
+
   public AbstractPetanqueTeam(IParticipantId id, IParticipant pointeur, IParticipant milieu, IParticipant tireur)
   {
     super();
-    
+
     this.id = id;
-    
-    this.getParticipants().setSize(3);
+
+    for(int i=0; i<3; ++i)
+      this.participants.add(null);
+
     this.setPointeur(pointeur);
     this.setMilieu(milieu);
     this.setTireur(tireur);
+
+    this.result = new PetanqueTeamTotalResult();
   }
 
   /**
@@ -34,7 +39,7 @@ public abstract class AbstractPetanqueTeam extends AbstractTeamParticipant
   {
     return this.getParticipants().get(POINTEUR);
   }
-  
+
   /**
    * @param pointeur the pointeur to set
    */
@@ -42,7 +47,7 @@ public abstract class AbstractPetanqueTeam extends AbstractTeamParticipant
   {
     this.getParticipants().set(POINTEUR, pointeur);
   }
-  
+
   /**
    * @return the milieu
    */
@@ -66,7 +71,7 @@ public abstract class AbstractPetanqueTeam extends AbstractTeamParticipant
   {
     return this.getParticipants().get(TIREUR);
   }
-  
+
   /**
    * @param tireur the tireur to set
    */
@@ -80,7 +85,14 @@ public abstract class AbstractPetanqueTeam extends AbstractTeamParticipant
   public void setName(String name)
   {
     // TODO Auto-generated method stub
-    
+
   }
- 
+
+  public class PetanqueTeamTotalResult extends PetanqueTotalResult
+  {
+    public String getName()
+    {
+      return AbstractPetanqueTeam.this.getName();
+    }
+  }
 }

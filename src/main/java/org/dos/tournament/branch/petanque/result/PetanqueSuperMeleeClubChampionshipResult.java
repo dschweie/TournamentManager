@@ -8,6 +8,7 @@ public class PetanqueSuperMeleeClubChampionshipResult extends PetanqueMatchResul
     super(score, oppsScore);
   }
 
+  @Override
   protected int compileGameScore()
   {
     return (0 < this.getDifference()?3:1);

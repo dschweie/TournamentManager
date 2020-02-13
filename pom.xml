@@ -25,6 +25,53 @@
       </plugins>
     </pluginManagement>
     <plugins>
+      <!-- LF-ET Maven Plugin -->
+      <plugin>
+        <groupId>de.lohrfink</groupId>
+        <artifactId>lfet-maven-plugin</artifactId>
+        <version>0.0.3</version>
+        <dependencies>
+          <dependency>
+            <groupId>de.lohrfink</groupId>
+            <artifactId>license</artifactId>
+            <version>2.1.5</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <inputFolder>${basedir}/src/lfet</inputFolder>
+        </configuration>
+        <executions>
+          <execution>
+            <id>GenSrc</id>
+            <phase>pre-clean</phase>
+            <goals>
+              <goal>GenSrc</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>List</id>
+            <phase>package</phase>
+            <goals>
+              <goal>List</goal>
+            </goals>
+            <configuration>
+              <fileOut>${project.build.directory}/lf-et/${project.artifactId}-${project.version}_LFET-List.xlsx</fileOut>
+            </configuration>
+          </execution>
+          <execution>
+            <id>CAList</id>
+            <phase>package</phase>
+            <goals>
+              <goal>CAList</goal>
+            </goals>
+            <configuration>
+              <fileOut>${project.build.directory}/lf-et/${project.artifactId}-${project.version}_LFET-CAList.xlsx</fileOut>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    
+    
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>

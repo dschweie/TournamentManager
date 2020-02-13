@@ -1,7 +1,8 @@
 var a00392 =
 [
-    [ "TableModel", "d4/d27/a00392.html#acf76dcd47081a5d31f0837d3b14b3e6a", null ],
-    [ "TableModel", "d4/d27/a00392.html#a5d27840f88a7f13fb206bc3af7178f56", null ],
-    [ "compileHeader", "d4/d27/a00392.html#a6e271f00626ed78d594ff1ab2063c60e", null ],
-    [ "update", "d4/d27/a00392.html#a866989ca485244891788d73bd7373470", null ]
+    [ "AbstractPetanqueTeam", "dc/d0a/a00850.html", "dc/d0a/a00850" ],
+    [ "Doublette", "d0/d66/a00858.html", "d0/d66/a00858" ],
+    [ "JoueurIndividuel", "dc/d41/a00862.html", "dc/d41/a00862" ],
+    [ "PetanqueBye", "da/d98/a00870.html", "da/d98/a00870" ],
+    [ "Triplette", "df/d2a/a00874.html", "df/d2a/a00874" ]
 ];

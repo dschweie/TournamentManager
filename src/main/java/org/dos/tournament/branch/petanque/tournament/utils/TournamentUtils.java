@@ -1,19 +1,20 @@
 package org.dos.tournament.branch.petanque.tournament.utils;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.player.utils.ParticipantStatus;
 
 public abstract class TournamentUtils
 {
-  static public Vector<IParticipant> filterParticipantsByStatus(Vector<IParticipant> participants, ParticipantStatus status)
+  public static List<IParticipant> filterParticipantsByStatus(List<IParticipant> participants, ParticipantStatus status)
   {
-    Vector<IParticipant> _retval = new Vector<IParticipant>();
-    
+    ArrayList<IParticipant> _retval = new ArrayList<>();
+
     for(IParticipant it : participants)
       if(status == it.getStatus())
-        _retval.addElement(it);
+        _retval.add(it);
 
     return _retval;
   }

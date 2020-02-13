@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.1.5 (200130a)" language="German" saveDate="2020.02.10 at 07:58:49 CET" saveUser="dirk.schweier">
+  <Conditions>
+    <Condition uId="11446800829457960">
+      <Title language="German" value="erster Spieltag/Runde im Turnier"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15812574026215586">
+          <Symbol language="German" value="J"/>
+          <Title language="German" value="Ja"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isFirstMatchday"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15812574026235588">
+          <Symbol language="German" value="N"/>
+          <Title language="German" value="Nein"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15812573224095534">
+      <Title language="German" value="ist ein Finale definiert"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isFinalsDefined"/>
+    </Condition>
+    <Condition uId="15812573231455535">
+      <Title language="German" value="wurden alle Spieltage/Runden vor der Finalrunge gespielt"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isMatchdaysPlayed"/>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="11446800828767967">
+      <Title language="German" value="erster Spieltag/Runde generieren"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doGenerateFirstMatchday"/>
+    </Action>
+    <Action uId="11446800829627977">
+      <Title language="German" value="weiteren Spieltag/Runde generieren"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doGenerateEnsuingMatchday"/>
+    </Action>
+    <Action uId="15812572436825530">
+      <Title language="German" value="Finalrunde generieren"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doGenerateFinals"/>
+    </Action>
+  </Actions>
+  <Rules lastId="6">
+    <Rule id="3">
+      <ConditionOccurrenceLink link="15812574026215586"/>
+      <ActionLink link="11446800828767967"/>
+    </Rule>
+    <Rule id="4">
+      <ConditionOccurrenceLink link="15812574026235588"/>
+      <ConditionLink link="15812573224095534" conditionState="true"/>
+      <ConditionLink link="15812573231455535" conditionState="true"/>
+      <ActionLink link="15812572436825530"/>
+    </Rule>
+    <Rule id="5">
+      <ConditionOccurrenceLink link="15812574026235588"/>
+      <ConditionLink link="15812573224095534" conditionState="true"/>
+      <ConditionLink link="15812573231455535" conditionState="false"/>
+      <ActionLink link="11446800829627977"/>
+    </Rule>
+    <Rule id="6">
+      <ConditionOccurrenceLink link="15812574026235588"/>
+      <ConditionLink link="15812573224095534" conditionState="false"/>
+      <ActionLink link="11446800829627977"/>
+    </Rule>
+  </Rules>
+  <Title language="German" value="Regelwerk für den Ablauf zum Anlegen einer neuen Runde"/>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceName=IMatchdayGenerator        &lt;br/&gt;// $$InterfaceRulesClassName=MatchdayGeneratorEngine        &lt;br/&gt;// $$package=org.dos.tournament.common.movement.utils"/>
+</LFET>

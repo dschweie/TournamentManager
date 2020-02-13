@@ -2,7 +2,8 @@ package org.dos.tournament.common.player;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Vector;
+import java.util.List;
+import java.util.ArrayList;
 
 import org.bson.Document;
 import org.dos.tournament.common.player.utils.IParticipantId;
@@ -14,7 +15,7 @@ public abstract class AbstractParticipant implements IParticipant
 {
   protected IParticipantId id = null;
   protected ParticipantStatus status = ParticipantStatus.ACTIVE;
-  protected ITotalResult result = null;
+  protected ITotalResult result = null; // das muss ein Vector sein!
   protected IResult trophy =  null;
   protected HashMap<String, Object> attributes = new HashMap<String, Object>();
 
@@ -47,7 +48,7 @@ public abstract class AbstractParticipant implements IParticipant
   {
     return this.id.getName();
   }
-  
+
 
   /* (non-Javadoc)
    * @see org.dos.tournament.players.IParticipant#getDescription()
@@ -57,7 +58,7 @@ public abstract class AbstractParticipant implements IParticipant
   {
     return String.format("%s - %s", this.id.getCode(), this.getName());
   }
-  
+
   /* (non-Javadoc)
    * @see org.dos.tournament.player.IParticipant#addMatchdayResult(int, org.dos.tournament.result.IResult)
    */
@@ -86,17 +87,17 @@ public abstract class AbstractParticipant implements IParticipant
     _aiRetval[0] += ( null==this.trophy?0:this.trophy.getScore() );
     return _aiRetval;
   }
-  
+
   public int getResultValue(int result, int category)
   {
     return ( this.result.getResultValueForCategory(result, category) );
   }
-  
+
   public int getTotalResultValue(int category)
   {
     return ( this.result.getValueForCategory(category) );
   }
-  
+
   /* (non-Javadoc)
    * @see org.dos.tournament.player.IParticipant#getTotalResultIdentifiers()
    */
@@ -110,18 +111,18 @@ public abstract class AbstractParticipant implements IParticipant
   {
     return null != this.trophy;
   }
-  
+
   public void setWinnerOfTheDayTrophy(IResult instance)
   {
     this.trophy = instance;
   }
-  
+
   public void unsetWinnerOfTheDayTrophy()
   {
     this.trophy = null;
   }
-  
-  
+
+
   /* (non-Javadoc)
    * @see org.dos.tournament.player.IParticipant#getStatus()
    */
@@ -172,16 +173,16 @@ public abstract class AbstractParticipant implements IParticipant
   }
 
   @Override
-  public Vector<Object> getParticipantAsRow(Vector<String> header)
+  public List<Object> getParticipantAsRow(ArrayList<String> header)
   {
-    Vector<Object> _retval = new Vector<Object>();
+    ArrayList<Object> _retval = new ArrayList<>();
     for(int i=0; i < header.size(); ++i)
     {
-      _retval.add(this.getElement(header.elementAt(i).toLowerCase()));
+      _retval.add(this.getElement(header.get(i).toLowerCase()));
     }
     return _retval;
   }
-  
+
   /* (non-Javadoc)
    * @see java.lang.Comparable#compareTo(java.lang.Object)
    */
@@ -194,18 +195,17 @@ public abstract class AbstractParticipant implements IParticipant
     }
     catch(Exception e) { return 0; }
   }
-  
+
   /* (non-Javadoc)
    * @see org.dos.tournament.common.player.IParticipant#compareToByResult(org.dos.tournament.common.player.IParticipant, boolean)
    */
   @Override
   public int compareToByResult(IParticipant opponent, boolean includeTiebreaker)
   {
-    // TODO Auto-generated method stub
     return 0;
   }
 
-  
+
 
   protected Object getElement(String id)
   {
@@ -216,24 +216,24 @@ public abstract class AbstractParticipant implements IParticipant
       default:        return null;
     }
   }
-  
+
   public Object getAttribute(String key)
   {
     return this.attributes.get(key);
   }
-  
+
   public void setAttribute(String key, Object value)
   {
     this.attributes.put(key, value);
   }
-  
+
   public boolean hasAttribute(String key)
   {
     return this.attributes.containsKey(key);
   }
-  
+
   @Override
-  public Document toBsonDocument() 
+  public Document toBsonDocument()
   {
     return new Document("_class", this.getClass().getName());
   }

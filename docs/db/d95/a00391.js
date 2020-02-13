@@ -1,5 +1,7 @@
 var a00391 =
 [
-    [ "SwingActionFillUpForm", "db/d95/a00391.html#af732a0cc40f5b7ffad439774e1c9bbff", null ],
-    [ "actionPerformed", "db/d95/a00391.html#afc1e908d20c78f7947495da048d70109", null ]
+    [ "PetanqueMatchResult", "d9/d02/a00834.html", "d9/d02/a00834" ],
+    [ "PetanqueResult", "d2/dc7/a00838.html", "d2/dc7/a00838" ],
+    [ "PetanqueSuperMeleeClubChampionshipResult", "d0/d11/a00842.html", "d0/d11/a00842" ],
+    [ "PetanqueTotalResult", "d9/d87/a00846.html", "d9/d87/a00846" ]
 ];

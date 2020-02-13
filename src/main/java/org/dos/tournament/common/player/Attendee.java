@@ -1,13 +1,11 @@
 package org.dos.tournament.common.player;
 
-import java.util.Vector;
-
 import org.dos.tournament.common.player.utils.NumericParticipantId;
 
 public class Attendee extends AbstractParticipant
 {
   private String name = null;
-  
+
   public Attendee(int id, String name)
   {
     this.setParticipantId(new NumericParticipantId(id));
@@ -20,10 +18,9 @@ public class Attendee extends AbstractParticipant
   @Override
   public String getName()
   {
-    // TODO Auto-generated method stub
     return this.name.toString();
   }
-  
+
   public void setName(String name)
   {
     this.name = name.toString();
@@ -32,21 +29,18 @@ public class Attendee extends AbstractParticipant
   @Override
   public boolean hasAttendees()
   {
-    // TODO Auto-generated method stub
     return false;
   }
 
   @Override
   public IParticipant[] getAttendeesToArray()
   {
-    // TODO Auto-generated method stub
     return null;
   }
-  
+
   @Override
   public boolean contains(IParticipant competitor)
   {
-    // TODO Auto-generated method stub
     return false;
   }
 

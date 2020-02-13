@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.1.5 (200130a)" language="German" saveDate="2020.02.11 at 12:46:03 CET" saveUser="dirk.schweier">
+  <Conditions>
+    <Condition uId="11446800829457960">
+      <Title language="German" value="Regelgruppe"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15814013229981405">
+          <Symbol language="German" value="0"/>
+          <Title language="German" value="Initialisierung"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15814013230001407">
+          <Symbol language="German" value="1"/>
+          <Title language="German" value="Bilden der Lostöpfe"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15814063727373934">
+          <Symbol language="German" value="2"/>
+          <Title language="German" value="Team in Lostopf zuordnen"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15814014246601414">
+          <Symbol language="German" value="3"/>
+          <Title language="German" value="Bearbeiten der Lostöpfe"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15814061912103606">
+      <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=hasNextTeam"/>
+      <Title language="German" value="noch aktive Teams auszuwerten?"/>
+    </Condition>
+    <Condition uId="15814066487585234">
+      <Title language="German" value="alle Spieltage für Team ausgewertet?"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isMatchdayCounterBehindLast"/>
+    </Condition>
+    <Condition uId="15814069112845250">
+      <Title language="German" value="hat Team an Spieltag gewonnen?"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isTeamWinner"/>
+    </Condition>
+    <Condition uId="15814083820166351">
+      <Title language="German" value="Anzahl der Teams im Lostopf"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15814084539876518">
+          <Symbol language="German" value="0"/>
+          <Title language="German" value="Lostopf ist leer"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isPotEmpty"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15814084539896520">
+          <Symbol language="German" value="1"/>
+          <Title language="German" value="noch ein Team im Lostopf"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isOneTeamLeftInPot"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15814084705916525">
+          <Symbol language="German" value="&gt;1"/>
+          <Title language="German" value="zwei oder mehr Teams im Lostopf"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15814013166751362">
+      <Title language="German" value="Zähler Gruppentopf"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15814021299941924">
+          <Symbol language="German" value="=0"/>
+          <Title language="German" value="letzter Topf"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isCounterInLastPot"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15814021299921922">
+          <Symbol language="German" value="&gt;0"/>
+          <Title language="German" value="Topf mit Teams, die mindestens einen Sieg haben"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="11446800828767967">
+      <Title language="German" value="Ermitteln der aktiven Teams"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doReadActiveTeams"/>
+    </Action>
+    <Action uId="15814214040667943">
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doReadAvailableTerrains"/>
+      <Title language="German" value="Ermitteln der verfügbaren Plätze"/>
+    </Action>
+    <Action uId="15814059819883475">
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doCreatePots"/>
+      <Title language="German" value="Erzeugen der Lostöpfe"/>
+    </Action>
+    <Action uId="15814070128585261">
+      <Title language="German" value="Team in ersten Lostopf setzen"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doSetTeamToFirstPot"/>
+    </Action>
+    <Action uId="15814069637635258">
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doPromoteTeamToNextPot"/>
+      <Title language="German" value="Team in höheren Lostopf versetzen"/>
+    </Action>
+    <Action uId="15814085830776683">
+      <Title language="German" value="Heim-Team aus Lostopf ziehen"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doDrawHomeFromPot"/>
+    </Action>
+    <Action uId="15814086012536685">
+      <Title language="German" value="Gast-Team ermitteln"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15814087724546906">
+          <Symbol language="German" value="Pot"/>
+          <Title language="German" value="Gast-Team kommt aus aktuellem Lostopf"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doDrawGuestFromPot"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15814088093236911">
+          <Symbol language="German" value="Pro"/>
+          <Title language="German" value="Gast-Team wird aus niedrigerem Lostopf &quot;hochgelost&quot;"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doDrawGuestPromotedFromPot"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15814088636186914">
+          <Symbol language="German" value="BYE"/>
+          <Title language="German" value="Freilos wird gesetzt"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doSetGuestBye"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15814213065317927">
+      <Title language="German" value="Partie anlegen"/>
+      <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doCreatePartie"/>
+    </Action>
+    <Action uId="15814064385214029">
+      <Title language="German" value="Zähler Matchday"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15814064385244032">
+          <Symbol language="German" value="reset"/>
+          <Title language="German" value="Startwert ist 0"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doResetCounterMatchday"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15814064708634160">
+          <Symbol language="German" value="inc"/>
+          <Title language="German" value="um 1 erhöhen"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doIncreaseCounterMatchday"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15814022880031993">
+      <Title language="German" value="Zähler Lostopf"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15814023655072242">
+          <Symbol language="German" value="init"/>
+          <Title language="German" value="Startwert ist Index des Gruppentopf, in dem Team alle Spiele gewonnen haben"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doInitCounterPot"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15814023261052080">
+          <Symbol language="German" value="dec"/>
+          <Title language="German" value="um 1 verringern"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doDecreaseCounterPot"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="11446800829627977">
+      <Title language="German" value="weiter mit Regelgruppe"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15814019982891792">
+          <Symbol language="German" value="0"/>
+          <Title language="German" value="Initialisierung"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15814019984561795">
+          <Symbol language="German" value="1"/>
+          <Title language="German" value="Bilden der Lostöpfe"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15814065618784400">
+          <Symbol language="German" value="2"/>
+          <Title language="German" value="Team in Lostopf zuordnen"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15814019984921798">
+          <Symbol language="German" value="3"/>
+          <Title language="German" value="Bearbeiten der Lostöpfe"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15814019782231645">
+          <Symbol language="German" value="ex"/>
+          <Title language="German" value="Ende der Verarbeitung"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+  </Actions>
+  <Rules lastId="21">
+    <Rule id="18">
+      <ConditionOccurrenceLink link="15814013229981405"/>
+      <ActionOccurrenceLink link="15814019984561795"/>
+      <ActionLink link="11446800828767967"/>
+      <ActionLink link="15814059819883475"/>
+      <ActionLink link="15814214040667943"/>
+    </Rule>
+    <Rule id="8">
+      <ConditionOccurrenceLink link="15814013230001407"/>
+      <ActionOccurrenceLink link="15814065618784400"/>
+      <ConditionLink link="15814061912103606" conditionState="true"/>
+      <ActionOccurrenceLink link="15814064385244032"/>
+      <ActionLink link="15814070128585261"/>
+    </Rule>
+    <Rule id="9">
+      <ConditionOccurrenceLink link="15814013230001407"/>
+      <ActionOccurrenceLink link="15814019984921798"/>
+      <ActionOccurrenceLink link="15814023655072242"/>
+      <ConditionLink link="15814061912103606" conditionState="false"/>
+    </Rule>
+    <Rule id="10">
+      <ConditionOccurrenceLink link="15814063727373934"/>
+      <ConditionLink link="15814066487585234" conditionState="true"/>
+      <ActionOccurrenceLink link="15814019984561795"/>
+    </Rule>
+    <Rule id="11">
+      <ConditionOccurrenceLink link="15814063727373934"/>
+      <ConditionLink link="15814066487585234" conditionState="false"/>
+      <ActionOccurrenceLink link="15814065618784400"/>
+      <ConditionLink link="15814069112845250" conditionState="true"/>
+      <ActionLink link="15814069637635258"/>
+      <ActionOccurrenceLink link="15814064708634160"/>
+    </Rule>
+    <Rule id="12">
+      <ConditionOccurrenceLink link="15814063727373934"/>
+      <ConditionLink link="15814066487585234" conditionState="false"/>
+      <ActionOccurrenceLink link="15814065618784400"/>
+      <ConditionLink link="15814069112845250" conditionState="false"/>
+      <ActionOccurrenceLink link="15814064708634160"/>
+    </Rule>
+    <Rule id="13">
+      <ConditionOccurrenceLink link="15814014246601414"/>
+      <ActionOccurrenceLink link="15814019782231645"/>
+      <ConditionOccurrenceLink link="15814021299941924"/>
+      <ConditionOccurrenceLink link="15814084539876518"/>
+    </Rule>
+    <Rule id="14">
+      <ConditionOccurrenceLink link="15814014246601414"/>
+      <ActionOccurrenceLink link="15814019984921798"/>
+      <ConditionOccurrenceLink link="15814021299921922"/>
+      <ActionOccurrenceLink link="15814023261052080"/>
+      <ConditionOccurrenceLink link="15814084539876518"/>
+    </Rule>
+    <Rule id="19">
+      <ConditionOccurrenceLink link="15814014246601414"/>
+      <ConditionOccurrenceLink link="15814084539896520"/>
+      <ConditionOccurrenceLink link="15814021299941924"/>
+      <ActionOccurrenceLink link="15814019782231645"/>
+      <ActionLink link="15814085830776683"/>
+      <ActionOccurrenceLink link="15814088636186914"/>
+      <ActionLink link="15814213065317927"/>
+    </Rule>
+    <Rule id="20">
+      <ConditionOccurrenceLink link="15814014246601414"/>
+      <ActionOccurrenceLink link="15814019984921798"/>
+      <ConditionOccurrenceLink link="15814084539896520"/>
+      <ConditionOccurrenceLink link="15814021299921922"/>
+      <ActionLink link="15814085830776683"/>
+      <ActionOccurrenceLink link="15814088093236911"/>
+      <ActionLink link="15814213065317927"/>
+    </Rule>
+    <Rule id="21">
+      <ConditionOccurrenceLink link="15814014246601414"/>
+      <ActionOccurrenceLink link="15814019984921798"/>
+      <ConditionOccurrenceLink link="15814084705916525"/>
+      <ActionLink link="15814085830776683"/>
+      <ActionOccurrenceLink link="15814087724546906"/>
+      <ActionLink link="15814213065317927"/>
+    </Rule>
+  </Rules>
+  <Title language="German" value="Generiert einen Spieltag/Runde nach Schweizer System"/>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+  <Text language="German" value="Im Boule wird gerne das Schweizer System in folgender Weise angewendet:&lt;br/&gt;Es werden nach jeder Runde Gruppen aus den Teams gebildet, die gleiche Anzahl an Siegen haben. Aus diesen Gruppen werden dann die neuen Paarungen ausgelost.&lt;br/&gt;&lt;br/&gt;Dabei sind folgende Dinge zu beachten:&lt;br/&gt;1. Bei ungerader Anzahl von Mannschaften ist ein Freilos anzuwenden. Das Freilos kommt immer in die Gruppe der Teams ohne Sieg.&lt;br/&gt;2. Das Team mit Freilos siegt 13:7&lt;br/&gt;3. Sind in einer Gruppe mit mindestens einem Sieg eine ungerade Anzahl an Teams, dann wird ein zufälliges Team &quot;hoch gelost&quot;.&lt;br/&gt;4. Es wird versucht, zu vermeiden, dass Teams mehrfach gegeneinander spielen."/>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceName=ISwissMatchdayGeneration        &lt;br/&gt;// $$InterfaceRulesClassName=SwissMatchdayGeneratorRulesEngine        &lt;br/&gt;// $$package=org.dos.tournament.branch.petanque.tournament.movement.swisssystem        &lt;br/&gt;//         &lt;br/&gt;// $$InterfaceRuleGroups=true     &lt;br/&gt;// $$InterfaceRuleMethods=false"/>
+</LFET>

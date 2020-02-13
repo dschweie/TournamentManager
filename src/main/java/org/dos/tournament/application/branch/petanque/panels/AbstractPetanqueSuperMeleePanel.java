@@ -8,6 +8,7 @@ public abstract class AbstractPetanqueSuperMeleePanel extends AbstractTournament
 
   private SuperMelee tournament = null;
   
+  
   public AbstractPetanqueSuperMeleePanel(SuperMelee tournament)
   {
     this.tournament = tournament;
@@ -27,4 +28,6 @@ public abstract class AbstractPetanqueSuperMeleePanel extends AbstractTournament
   {
     return this.tournament.getTournamentId().toString();
   }
+
+  
 }

@@ -8,6 +8,6 @@ var dir_a8159e9fd2d97311e5fc77f6696c3e73 =
     [ "utils", "dir_b2adae9973585822d925fc21a01d900e.html", "dir_b2adae9973585822d925fc21a01d900e" ],
     [ "wizard", "dir_b93753b711da150775a3cd92d8ff0101.html", "dir_b93753b711da150775a3cd92d8ff0101" ],
     [ "TournamentManagerFrame.java", "d4/d3a/a00101.html", [
-      [ "TournamentManagerFrame", "dc/df1/a00662.html", null ]
+      [ "TournamentManagerFrame", "d8/dcb/a00706.html", null ]
     ] ]
 ];

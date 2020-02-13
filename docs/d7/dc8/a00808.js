@@ -1,8 +1,8 @@
 var a00808 =
 [
-    [ "DefaultCompetitorResult", "d7/dc8/a00808.html#a37e917a2cec6802a20b60cf1c7080d76", null ],
-    [ "compareTo", "d7/dc8/a00808.html#a359deaef00335e3542b33d5e3cae3dd4", null ],
-    [ "getValue", "d7/dc8/a00808.html#a3d7bcbd5a3601ff0ba24b5f7a1824a89", null ],
-    [ "setValue", "d7/dc8/a00808.html#a4ce7f902f18828aaa7d86ec9fe218ec1", null ],
-    [ "resultValue", "d7/dc8/a00808.html#a09d21bd9e24ae448232d70bf83d0701a", null ]
+    [ "UpdateThread", "d7/dc8/a00808.html#a83b1910dc733ade6734794dd98e24fb9", null ],
+    [ "run", "d7/dc8/a00808.html#adce0a425aa933d79c5fd82cfc91c11a8", null ],
+    [ "setUpdateIntervall", "d7/dc8/a00808.html#affea0468d73e8cc5de9fd8c444216b5b", null ],
+    [ "lSleep", "d7/dc8/a00808.html#a0c9b17f56c9425509d098bf1ef2da4a6", null ],
+    [ "xInstance", "d7/dc8/a00808.html#a2954301652240c7364921244af23ef19", null ]
 ];

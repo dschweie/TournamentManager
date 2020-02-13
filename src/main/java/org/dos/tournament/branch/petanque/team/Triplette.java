@@ -10,11 +10,10 @@ import org.dos.tournament.common.player.utils.IParticipantId;
 
 public class Triplette extends AbstractPetanqueTeam
 {
-  
+
   public Triplette(IParticipantId id, IParticipant pointeur, IParticipant tireur)
   {
     this(id, pointeur, null, tireur);
-    // TODO Auto-generated constructor stub
   }
 
   public Triplette(IParticipantId id, IParticipant pointeur, IParticipant milieu, IParticipant tireur)
@@ -49,12 +48,12 @@ public class Triplette extends AbstractPetanqueTeam
   {
     List<Integer> _numbers = Arrays.asList(Integer.parseInt(this.getPointeur().getCode().trim()), Integer.parseInt(this.getMilieu().getCode().trim()), Integer.parseInt(this.getTireur().getCode().trim()));
     Collections.sort(_numbers);
-    
+
     return String.format("%d, %d, %d",  _numbers.get(0), _numbers.get(1), _numbers.get(2));
   }
-  
+
   @Override
-  public Document toBsonDocument() 
+  public Document toBsonDocument()
   {
     return super.toBsonDocument().append("pointeur", new Integer(this.getTireur().getCode().trim())).append("milieu", new Integer(this.getMilieu().getCode().trim())).append("tireur", new Integer(this.getPointeur().getCode().trim()));
   }

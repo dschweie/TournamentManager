@@ -1,7 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.result.PetanqueResult" name="org.dos.tournament.branch.petanque.result.PetanqueResult">
-<area shape="rect" id="node1" title=" " alt="" coords="99,291,374,332"/>
-<area shape="rect" id="node2" href="$da/d5b/a00868.html" title=" " alt="" coords="5,172,233,213"/>
-<area shape="rect" id="node3" href="$d1/d8f/a00880.html" title=" " alt="" coords="5,81,233,123"/>
-<area shape="rect" id="node4" href="$db/dad/a01616.html" title=" " alt="" coords="74,5,165,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="257,179,296,206"/>
+<map id="org.dos.tournament.application.common.TournamentManagerFrame" name="org.dos.tournament.application.common.TournamentManagerFrame">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,264,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="102,5,167,32"/>
 </map>

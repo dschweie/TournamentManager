@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>TournamentManager: Erklärung des Graphen</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -13,10 +13,6 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -38,7 +34,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.8.15 -->
+<!-- Erzeugt von Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
@@ -67,7 +63,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('graph_legend.html','');});
+$(document).ready(function(){initNavTree('graph_legend.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,9 +87,42 @@ $(document).ready(function(){initNavTree('graph_legend.html','');});
 </div><!--header-->
 <div class="contents">
 <p>Diese Seite erklärt die Interpretation der von doxygen erzeugten Graphen.</p>
-<p>Beispiel: </p><div class="fragment"><div class="line">/*! Wegen Verkürzung unsichtbare Klasse */</div><div class="line">class Invisible { };</div><div class="line"></div><div class="line">/*! Klasse verkürzt dargestellt, Vererbungsbeziehung ist versteckt */</div><div class="line">class Truncated : public Invisible { };</div><div class="line"></div><div class="line">/* Nicht mit doxygen-Kommentaren dokumentierte Klasse */</div><div class="line">class Undocumented { };</div><div class="line"></div><div class="line">/*! Mithilfe öffentlicher Vererbung vererbte Klasse */</div><div class="line">class PublicBase : public Truncated { };</div><div class="line"></div><div class="line">/*! Eine Template-Klasse */</div><div class="line">template&lt;class T&gt; class Templ { };</div><div class="line"></div><div class="line">/*! Mithilfe geschützter Vererbung vererbte Klasse */</div><div class="line">class ProtectedBase { };</div><div class="line"></div><div class="line">/*! Mithilfe privater Vererbung vererbte Klasse */</div><div class="line">class PrivateBase { };</div><div class="line"></div><div class="line">/*! Von der Klasse Inherited benutzte Klasse */</div><div class="line">class Used { };</div><div class="line"></div><div class="line">/*! Superklasse, die von mehreren anderen Klassen erbt */</div><div class="line">class Inherited : public PublicBase,</div><div class="line">                  protected ProtectedBase,</div><div class="line">                  private PrivateBase,</div><div class="line">                  public Undocumented,</div><div class="line">                  public Templ&lt;int&gt;</div><div class="line">{</div><div class="line">  private:</div><div class="line">    Used *m_usedClass;</div><div class="line">};</div></div><!-- fragment --><p> Dies liefert den folgenden Graphen:</p>
-<center><img src="graph_legend.png" alt="" class="inline"/>
-</center><p>Die Rechtecke in obigem Graphen bedeuten: </p>
+<p>Beispiel: </p><div class="fragment"><div class="line"><span class="comment">/*! Wegen Verkürzung unsichtbare Klasse */</span></div>
+<div class="line"><span class="keyword">class </span>Invisible { };</div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*! Klasse verkürzt dargestellt, Vererbungsbeziehung ist versteckt */</span></div>
+<div class="line"><span class="keyword">class </span>Truncated : <span class="keyword">public</span> Invisible { };</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Nicht mit doxygen-Kommentaren dokumentierte Klasse */</span></div>
+<div class="line"><span class="keyword">class </span>Undocumented { };</div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*! Mithilfe öffentlicher Vererbung vererbte Klasse */</span></div>
+<div class="line"><span class="keyword">class </span>PublicBase : <span class="keyword">public</span> Truncated { };</div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*! Eine Template-Klasse */</span></div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span>Templ { };</div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*! Mithilfe geschützter Vererbung vererbte Klasse */</span></div>
+<div class="line"><span class="keyword">class </span>ProtectedBase { };</div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*! Mithilfe privater Vererbung vererbte Klasse */</span></div>
+<div class="line"><span class="keyword">class </span>PrivateBase { };</div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*! Von der Klasse Inherited benutzte Klasse */</span></div>
+<div class="line"><span class="keyword">class </span>Used { };</div>
+<div class="line"><span class="comment"></span> </div>
+<div class="line"><span class="comment">/*! Superklasse, die von mehreren anderen Klassen erbt */</span></div>
+<div class="line"><span class="keyword">class </span>Inherited : <span class="keyword">public</span> PublicBase,</div>
+<div class="line">                  <span class="keyword">protected</span> ProtectedBase,</div>
+<div class="line">                  <span class="keyword">private</span> PrivateBase,</div>
+<div class="line">                  <span class="keyword">public</span> Undocumented,</div>
+<div class="line">                  <span class="keyword">public</span> Templ&lt;int&gt;</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">private</span>:</div>
+<div class="line">    Used *m_usedClass;</div>
+<div class="line">};</div>
+</div><!-- fragment --><p> Dies liefert den folgenden Graphen:</p>
+<center><img src="graph_legend.png" alt="" class="inline"/></center><p>Die Rechtecke in obigem Graphen bedeuten: </p>
 <ul>
 <li>
 Ein grau gefülltes Rechteck stellt die Struktur oder Klasse dar, für die der Graph erzeugt wurde. </li>
@@ -124,7 +153,7 @@ Ein gestrichelter gelber Pfeil kennzeichnet eine Verknüpfung zwischen einer Tem
   <ul>
     <li class="footer">Erzeugt von
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

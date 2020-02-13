@@ -1,5 +1,6 @@
 var a00880 =
 [
-    [ "getScore", "d1/d8f/a00880.html#a9a21232182bf1a602251cf2461276a65", null ],
-    [ "toBsonDocument", "d1/d8f/a00880.html#a78cf3690bfe6ad93f6cdb46ada93fa12", null ]
+    [ "RuleSuperMeleeNeverMeetTeammateTandem", "d1/d8f/a00880.html#afab8907862eae065bdf949db4a5456b3", null ],
+    [ "getRuleDescription", "d1/d8f/a00880.html#a4f1419d6b974b28276b2805194985ddd", null ],
+    [ "performInit", "d1/d8f/a00880.html#ad7f40d2049309b86d8f5732ae9110419", null ]
 ];

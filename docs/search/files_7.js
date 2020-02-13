@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['leaderboardtablecolumnmodel_2ejava',['LeaderboardTableColumnModel.java',['../d3/d8b/a00059.html',1,'']]],
-  ['leaderboardtablemodel_2ejava',['LeaderboardTableModel.java',['../df/d03/a00062.html',1,'']]]
+  ['joueurindividuel_2ejava_1234',['JoueurIndividuel.java',['../de/df3/a00185.html',1,'']]]
 ];

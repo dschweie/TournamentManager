@@ -1,23 +1,26 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$d0/d4a/a01862.html" title=" " alt="" coords="5,161,96,187"/>
-<area shape="rect" id="node2" href="$d5/d69/a00878.html" title=" " alt="" coords="144,23,487,64"/>
-<area shape="rect" id="node3" href="$da/dd8/a00906.html" title=" " alt="" coords="184,88,447,129"/>
-<area shape="rect" id="node4" href="$da/d40/a00946.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="200,153,431,195"/>
-<area shape="rect" id="node13" href="$d2/ddd/a00978.html" title=" " alt="" coords="201,219,429,260"/>
-<area shape="rect" id="node19" href="$d1/d7a/a00982.html" title=" " alt="" coords="201,316,429,357"/>
-<area shape="rect" id="node5" href="$d7/d16/a00930.html" title=" " alt="" coords="535,136,765,177"/>
-<area shape="rect" id="node6" href="$d0/df0/a00934.html" title=" " alt="" coords="835,71,1066,112"/>
-<area shape="rect" id="node10" href="$df/d12/a00942.html" title=" " alt="" coords="835,136,1066,177"/>
-<area shape="rect" id="node7" href="$d5/dcd/a00802.html" title=" " alt="" coords="1138,71,1409,112"/>
-<area shape="rect" id="node8" href="$d0/dad/a00806.html" title=" " alt="" coords="1469,5,1739,47"/>
-<area shape="rect" id="node9" href="$d3/d60/a00818.html" title=" " alt="" coords="1469,71,1739,112"/>
-<area shape="rect" id="node11" href="$d5/d54/a00938.html" title=" " alt="" coords="1158,136,1389,177"/>
-<area shape="rect" id="node12" href="$d4/dfd/a00810.html" title=" " alt="" coords="1469,136,1739,177"/>
-<area shape="rect" id="node14" href="$d2/d6e/a00966.html" title=" " alt="" coords="536,201,764,243"/>
-<area shape="rect" id="node18" href="$df/dce/a00974.html" title=" " alt="" coords="536,267,764,308"/>
-<area shape="rect" id="node15" href="$d5/d12/a00794.html" title=" " alt="" coords="813,201,1088,243"/>
-<area shape="rect" id="node16" href="$d3/daf/a00790.html" title=" " alt="" coords="1136,201,1411,243"/>
-<area shape="rect" id="node17" href="$de/d79/a00798.html" title=" " alt="" coords="1459,201,1749,243"/>
-<area shape="rect" id="node20" href="$d0/daf/a00970.html" title=" " alt="" coords="536,332,764,373"/>
-<area shape="rect" id="node21" href="$da/d71/a00814.html" title=" " alt="" coords="815,332,1086,373"/>
+<area shape="rect" id="node1" href="$d4/dae/a01994.html" title=" " alt="" coords="5,242,96,269"/>
+<area shape="rect" id="node2" href="$d3/dca/a00954.html" title=" " alt="" coords="144,104,487,145"/>
+<area shape="rect" id="node3" href="$dd/d7a/a00990.html" title=" " alt="" coords="184,169,447,211"/>
+<area shape="rect" id="node4" href="$d4/d56/a01042.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="200,235,431,276"/>
+<area shape="rect" id="node14" href="$dd/df1/a01082.html" title=" " alt="" coords="201,300,429,341"/>
+<area shape="rect" id="node20" href="$d9/df5/a01086.html" title=" " alt="" coords="201,365,429,407"/>
+<area shape="rect" id="node5" href="$de/d02/a01026.html" title=" " alt="" coords="535,201,765,243"/>
+<area shape="rect" id="node6" href="$de/d41/a01030.html" title=" " alt="" coords="835,104,1066,145"/>
+<area shape="rect" id="node11" href="$d4/dbc/a01038.html" title=" " alt="" coords="835,201,1066,243"/>
+<area shape="rect" id="node7" href="$dc/d0a/a00850.html" title=" " alt="" coords="1158,87,1429,128"/>
+<area shape="rect" id="node8" href="$d0/d66/a00858.html" title=" " alt="" coords="1509,5,1779,47"/>
+<area shape="rect" id="node9" href="$da/d98/a00870.html" title=" " alt="" coords="1509,71,1779,112"/>
+<area shape="rect" id="node10" href="$df/d2a/a00874.html" title=" " alt="" coords="1509,136,1779,177"/>
+<area shape="rect" id="node12" href="$de/d91/a01034.html" title=" " alt="" coords="1178,201,1409,243"/>
+<area shape="rect" id="node13" href="$dc/d41/a00862.html" title=" " alt="" coords="1509,201,1779,243"/>
+<area shape="rect" id="node15" href="$d5/d67/a01070.html" title=" " alt="" coords="536,267,764,308"/>
+<area shape="rect" id="node19" href="$db/dba/a01078.html" title=" " alt="" coords="536,332,764,373"/>
+<area shape="rect" id="node16" href="$d2/dc7/a00838.html" title=" " alt="" coords="813,267,1088,308"/>
+<area shape="rect" id="node17" href="$d9/d02/a00834.html" title=" " alt="" coords="1156,267,1431,308"/>
+<area shape="rect" id="node18" href="$d0/d11/a00842.html" title=" " alt="" coords="1499,267,1789,308"/>
+<area shape="rect" id="node21" href="$d7/df7/a01074.html" title=" " alt="" coords="536,397,764,439"/>
+<area shape="rect" id="node22" href="$d9/d87/a00846.html" title=" " alt="" coords="813,397,1088,439"/>
+<area shape="rect" id="node23" href="$d6/d2f/a00854.html" title=" " alt="" coords="1136,364,1451,405"/>
+<area shape="rect" id="node24" href="$dd/db2/a00866.html" title=" " alt="" coords="1158,429,1429,471"/>
 </map>

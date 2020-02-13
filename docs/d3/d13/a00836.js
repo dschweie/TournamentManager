@@ -1,11 +1,12 @@
 var a00836 =
 [
-    [ "AbstractTeamParticipant", "d3/d13/a00836.html#ac03161fa6c9d5c7cd6568e863e1266d7", null ],
-    [ "contains", "d3/d13/a00836.html#a9b1a728efa7d5929d444cf1af49d28ac", null ],
-    [ "countAttendees", "d3/d13/a00836.html#a3dddc76b55a8a54dea3421e4faaee7cd", null ],
-    [ "getAttendeesToArray", "d3/d13/a00836.html#a2db3f94c11aaeff7473113f605a375cc", null ],
-    [ "getParticipants", "d3/d13/a00836.html#aa05dc5fe12666ce0d81edafb83efafca", null ],
-    [ "hasAttendees", "d3/d13/a00836.html#af582ca4b3e675f4053d9d2ba62cd2216", null ],
-    [ "setParticipants", "d3/d13/a00836.html#a99e96c85cfdda197338544d5e906043c", null ],
-    [ "participants", "d3/d13/a00836.html#a1e027a2951e472a459d1699f3094d6e0", null ]
+    [ "AbstractPetanqueTeam", "d3/d13/a00836.html#a9b7db95195074fe58def6e4416c35067", null ],
+    [ "AbstractPetanqueTeam", "d3/d13/a00836.html#a470276946b03bbee5f1e8bc3afd4e5d4", null ],
+    [ "getMilieu", "d3/d13/a00836.html#a79866d423ef443f4e6510fad0397346b", null ],
+    [ "getPointeur", "d3/d13/a00836.html#a7677b114495937f0119472d1ff0ae805", null ],
+    [ "getTireur", "d3/d13/a00836.html#a70e8a92ef067d1c24645c2e71bcf4bde", null ],
+    [ "setMilieu", "d3/d13/a00836.html#afc40335f620f63ffdb453aafa739cb7f", null ],
+    [ "setName", "d3/d13/a00836.html#a5defa2c410830fe74ddd3e02a1a055d4", null ],
+    [ "setPointeur", "d3/d13/a00836.html#adb352762f29aad8bcfb7faffc5b36775", null ],
+    [ "setTireur", "d3/d13/a00836.html#a38a668089c888443fd0bc9f324f05ebd", null ]
 ];

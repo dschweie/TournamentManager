@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<LFET version="LF-ET 2.1.5 (191219a)" language="German" saveDate="2020.01.03 at 12:55:44 CET" saveUser="dirk.schweier">
+<LFET version="LF-ET 2.1.5 (191219a)" language="German" saveDate="2020.01.11 at 15:53:16 CET" saveUser="dirk.schweier">
   <Conditions>
     <Condition uId="11446800829457960">
       <Title language="German" value="step"/>
@@ -160,6 +160,22 @@
     <Action uId="15592815208583115">
       <Title language="German" value="petanque: define tracks by movement"/>
     </Action>
+    <Action uId="15787540771557111">
+      <Title language="German" value="petanque: create tournament instance"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15787543236838230">
+          <Symbol language="German" value="supermelee"/>
+          <Title language="German" value="Allgemeines Supermelee"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15787543236868233">
+          <Symbol language="German" value="sup-monat"/>
+          <Title language="German" value="Monatsturnier nach Regeln von Groß-Gerau"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15787541518727114">
+      <Title language="German" value="petanque: delete tournament instance"/>
+    </Action>
     <Action uId="15592763290841714">
       <Title language="German" value="wizard control: status cancel"/>
       <ActionOccurrences>
@@ -301,7 +317,7 @@
       </ActionOccurrences>
     </Action>
   </Actions>
-  <Rules lastId="84">
+  <Rules lastId="88">
     <Rule id="39">
       <ConditionOccurrenceLink link="15592755901970687"/>
       <ConditionOccurrenceLink link="15592759061040883"/>
@@ -419,15 +435,16 @@
       <ActionOccurrenceLink link="15592767843532627"/>
       <ConditionLink link="15595548566918221" conditionState="true"/>
     </Rule>
-    <Rule id="51">
+    <Rule id="85">
       <ConditionOccurrenceLink link="15592755901990689"/>
       <ConditionLink link="15592778096454637" conditionState="false"/>
       <ConditionOccurrenceLink link="15592756721120774"/>
       <ActionLink link="11446800828767967"/>
       <ActionOccurrenceLink link="15592762327811628"/>
       <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionLink link="15787541518727114"/>
     </Rule>
-    <Rule id="52">
+    <Rule id="86">
       <ConditionOccurrenceLink link="15592755901990689"/>
       <ConditionLink link="15592778096454637" conditionState="false"/>
       <ConditionOccurrenceLink link="15592756721140776"/>
@@ -435,6 +452,7 @@
       <ActionOccurrenceLink link="15592761572041357"/>
       <ActionOccurrenceLink link="15592777327974448"/>
       <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionLink link="15787541518727114"/>
     </Rule>
     <Rule id="53">
       <ConditionOccurrenceLink link="15592755901990689"/>
@@ -444,7 +462,7 @@
       <ActionOccurrenceLink link="15592772169973315"/>
       <ConditionLink link="15595548566918221" conditionState="true"/>
     </Rule>
-    <Rule id="54">
+    <Rule id="87">
       <ConditionOccurrenceLink link="15592755901990689"/>
       <ConditionLink link="15592778096454637" conditionState="false"/>
       <ConditionOccurrenceLink link="15592757640560781"/>
@@ -452,8 +470,9 @@
       <ActionOccurrenceLink link="15592777327974448"/>
       <ActionOccurrenceLink link="15592798015565883"/>
       <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionOccurrenceLink link="15787543236838230"/>
     </Rule>
-    <Rule id="55">
+    <Rule id="88">
       <ConditionOccurrenceLink link="15592755901990689"/>
       <ConditionLink link="15592778096454637" conditionState="false"/>
       <ConditionOccurrenceLink link="15592757640560781"/>
@@ -461,6 +480,7 @@
       <ActionOccurrenceLink link="15592777327974448"/>
       <ActionOccurrenceLink link="15592799373065886"/>
       <ConditionLink link="15595548566918221" conditionState="true"/>
+      <ActionOccurrenceLink link="15787543236868233"/>
     </Rule>
     <Rule id="76">
       <ConditionLink link="15595548566918221" conditionState="true"/>
@@ -650,9 +670,10 @@
       <ActionOccurrenceLink link="15592762327811628"/>
     </Rule>
   </Rules>
-  <Title language="German" value="Hier doppel-klicken um den Titel für die Entscheidungstabelle einzugeben"/>
+  <Title language="German" value="Steuerung der Schritte durch den Wizard zum Anlegen von Turnieren"/>
   <UrlsOut>
     <Url title="Ordner" url="file:///./"/>
   </UrlsOut>
-  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceName=ITournamentWorker     &lt;br/&gt;// $$InterfaceRulesClassName=TournamentFactoryRulesEngine     &lt;br/&gt;// $$package=org.dos.tournament.application.factory.model     &lt;br/&gt;//      &lt;br/&gt;// $$InterfaceRuleGroups=true  &lt;br/&gt;// $$InterfaceRuleMethods=false"/>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$InterfaceName=ITournamentWorker       &lt;br/&gt;// $$InterfaceRulesClassName=TournamentFactoryRulesEngine       &lt;br/&gt;// $$package=org.dos.tournament.application.factory.model       &lt;br/&gt;//        &lt;br/&gt;// $$InterfaceRuleGroups=true    &lt;br/&gt;// $$InterfaceRuleMethods=false"/>
+  <Text language="German" value="Hierbei handelt es sich um den Text in der Entscheidungstabelle. &lt;br/&gt;Man darf gespannt sein, ob der in der generierten Quelle auffindbar ist."/>
 </LFET>

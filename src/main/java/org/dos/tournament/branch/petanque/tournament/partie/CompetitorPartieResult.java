@@ -4,9 +4,9 @@ import org.dos.tournament.common.player.IParticipant;
 
 public class CompetitorPartieResult implements Comparable<CompetitorPartieResult>
 {
-  public final static int SCORE_PARTIE_WON  = 1;
-  public final static int SCORE_PARTIE_LOST = 0;
-  
+  public static final int SCORE_PARTIE_WON  = 1;
+  public static final int SCORE_PARTIE_LOST = 0;
+
   private int           partieScore;
   private int           competitorValue;
   private int           opponentValue;
@@ -16,12 +16,12 @@ public class CompetitorPartieResult implements Comparable<CompetitorPartieResult
   {
     this.competitorValue = competitorValue;
     this.opponentValue = opponentValue;
-    
+
     this.partieScore = competitorValue>opponentValue?SCORE_PARTIE_WON:SCORE_PARTIE_LOST;
-    
+
     this.opponent = opponent;
   }
-  
+
   /**
    * @return the partieScore
    */
@@ -74,16 +74,16 @@ public class CompetitorPartieResult implements Comparable<CompetitorPartieResult
   {
     return this.competitorValue - this.opponentValue;
   }
-  
-  
+
+
   public IParticipant getOpponent()
   {
     return this.opponent;
   }
 
-  
-  
-  
+
+
+
   @Override
   public int compareTo(CompetitorPartieResult o)
   {

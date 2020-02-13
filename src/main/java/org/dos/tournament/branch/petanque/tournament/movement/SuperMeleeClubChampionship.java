@@ -1,7 +1,6 @@
 package org.dos.tournament.branch.petanque.tournament.movement;
 
 import java.util.ArrayList;
-import java.util.Vector;
 
 import org.bson.Document;
 import org.dos.tournament.branch.petanque.result.PetanqueSuperMeleeClubChampionshipResult;
@@ -26,55 +25,55 @@ import com.mongodb.BasicDBList;
 
 /**
  *  \brief      Diese Klasse bildet das monatliche Super Melee-Turnier der Bouleabteilung von Blau-Gelb Groß-Gerau ab.
- *  
+ *
  *  Die Bouleabteilung bietet einmal im Monat ein Super Melee-Turnier an, das
  *  für alle Spieler offen ist.
- *  
- *  Für die Abrechnung ist besonders, dass jeder Spieler für jede Runde 
+ *
+ *  Für die Abrechnung ist besonders, dass jeder Spieler für jede Runde
  *  (Matchday) an der er teilnimmt, einen Punkt bekommt und einen weiteren
  *  für jedes Spiel, dass er gewinnt.
- *  
- *  Zusätzlich gibt es drei Punkte für den Tagessieger. 
- *  
+ *
+ *  Zusätzlich gibt es drei Punkte für den Tagessieger.
+ *
  *  Die Wertung der Monatsturniere wird aufaddiert zu einer Jahreswertung.
- *   
+ *
  *  @author     dschweie
  *
  */
 public class SuperMeleeClubChampionship extends SuperMelee
 {
   protected int iWinnerOfTheDay;
-  
+
   public SuperMeleeClubChampionship()
   {
     super();
-    
+
     this.regulations = new CoreRuleSuperMeleeAllIndicesUnique();
     this.regulations = new RuleSuperMeleeNeverMeetTeammateTwice(this.regulations, true, false);
     this.regulations = new RuleSuperMeleeNeverPlayTripletteTandem(this.regulations, true, true);
     this.regulations = new RuleSuperMeleeNeverMeetOpponentTandem(this.regulations, true, true);
     this.regulations = new RuleSuperMeleeNeverPlayTripletteTwice(this.regulations, true, true);
     this.regulations = new RuleSuperMeleeNeverMeetOpponentTwice(this.regulations, true, true);
-    
+
     this.xTrophy = new ConstantScoreResult(3);
-    
+
     this.iWinnerOfTheDay = -1;
   }
-  
-  public SuperMeleeClubChampionship(Document data) 
+
+  public SuperMeleeClubChampionship(Document data)
   {
     this();
-    
+
     if(null != data.get("tid"))
       this.setTournamentId(data.getString("tid"));
-    
+
     if(null != data.get("name"))
       this.setTitle(data.getString("name"));
-    
+
     this.importParticipants(data);
     this.importMatchdays(data);
   }
-  
+
   private void importParticipants(Document data)
   {
     if(null != data.get("participants"))
@@ -90,7 +89,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
       }
     }
   }
-  
+
   private void importMatchdays(Document data)
   {
     if(null != data.get("matchdays"))
@@ -99,24 +98,24 @@ public class SuperMeleeClubChampionship extends SuperMelee
       for(Document _currMatchday: _matchdays)
       {
         this.matchdays.add(new Matchday());
-        
+
         ArrayList<Document> _matches = (ArrayList<Document>) _currMatchday.get("matches");
         for(Document _currMatch: _matches)
         {
           IParticipant _home  = null;
           IParticipant _guest = null;
-          
+
           switch(((Document)_currMatch.get("home")).getString("_class"))
           {
             case "org.dos.tournament.branch.petanque.team.Doublette":
-                            _home = new Doublette(    new NumericParticipantId(idxTeam++), 
-                                                      this.getCompetitorByCode(((Document)_currMatch.get("home")).getInteger("pointeur", -1)), 
+                            _home = new Doublette(    new NumericParticipantId(idxTeam++),
+                                                      this.getCompetitorByCode(((Document)_currMatch.get("home")).getInteger("pointeur", -1)),
                                                       this.getCompetitorByCode(((Document)_currMatch.get("home")).getInteger("tireur", -1)));
                             break;
             case "org.dos.tournament.branch.petanque.team.Triplette":
-                            _home = new Triplette(    new NumericParticipantId(idxTeam++), 
-                                                      this.getCompetitorByCode(((Document)_currMatch.get("home")).getInteger("pointeur", -1)), 
-                                                      this.getCompetitorByCode(((Document)_currMatch.get("home")).getInteger("milieu", -1)), 
+                            _home = new Triplette(    new NumericParticipantId(idxTeam++),
+                                                      this.getCompetitorByCode(((Document)_currMatch.get("home")).getInteger("pointeur", -1)),
+                                                      this.getCompetitorByCode(((Document)_currMatch.get("home")).getInteger("milieu", -1)),
                                                       this.getCompetitorByCode(((Document)_currMatch.get("home")).getInteger("tireur", -1)));
                             break;
             default:
@@ -124,56 +123,57 @@ public class SuperMeleeClubChampionship extends SuperMelee
           switch(((Document)_currMatch.get("guest")).getString("_class"))
           {
             case "org.dos.tournament.branch.petanque.team.Doublette":
-                            _guest = new Doublette(   new NumericParticipantId(idxTeam++), 
-                                                      this.getCompetitorByCode(((Document)_currMatch.get("guest")).getInteger("pointeur", -1)), 
+                            _guest = new Doublette(   new NumericParticipantId(idxTeam++),
+                                                      this.getCompetitorByCode(((Document)_currMatch.get("guest")).getInteger("pointeur", -1)),
                                                       this.getCompetitorByCode(((Document)_currMatch.get("guest")).getInteger("tireur", -1)));
                             break;
             case "org.dos.tournament.branch.petanque.team.Triplette":
-                            _guest = new Triplette(   new NumericParticipantId(idxTeam++), 
-                                                      this.getCompetitorByCode(((Document)_currMatch.get("guest")).getInteger("pointeur", -1)), 
-                                                      this.getCompetitorByCode(((Document)_currMatch.get("guest")).getInteger("milieu", -1)), 
+                            _guest = new Triplette(   new NumericParticipantId(idxTeam++),
+                                                      this.getCompetitorByCode(((Document)_currMatch.get("guest")).getInteger("pointeur", -1)),
+                                                      this.getCompetitorByCode(((Document)_currMatch.get("guest")).getInteger("milieu", -1)),
                                                       this.getCompetitorByCode(((Document)_currMatch.get("guest")).getInteger("tireur", -1)));
                             break;
             default:
           }
-          
+
           Partie _currPartie = new Partie(_home, _guest);
-          this.matchdays.lastElement().addPartie(_currPartie);
+          this.matchdays.get(this.matchdays.size()-1).addPartie(_currPartie);
           this.parties.add(_currPartie);
-          
+
           if(null != _currMatch.get("score"))
-            this.setResult(   this.matchdays.size()-1, 
-                              this.matchdays.lastElement().countMatches()-1, 
-                              ((Document)_currMatch.get("score")).getInteger("score", 0), 
-                              ((Document)_currMatch.get("score")).getInteger("oppsScore", 0));          
-          
+            this.setResult(   this.matchdays.size()-1,
+                              this.matchdays.get(this.matchdays.size()-1).countMatches()-1,
+                              ((Document)_currMatch.get("score")).getInteger("score", 0),
+                              ((Document)_currMatch.get("score")).getInteger("oppsScore", 0));
+
         }
       }
     }
-    
+
   }
 
-  private IParticipant getCompetitorByCode(int code) 
+  private IParticipant getCompetitorByCode(int code)
   {
     String _code = String.valueOf(code);
     IParticipant _retval = null;
-    
+
     for(IParticipant it:this.competitors)
     {
       if(_code.equals(it.getCode().trim()))
         _retval = it;
     }
-    
+
     return _retval;
   }
 
+  @Override
   public void setResult(int iMatchdayIndex, int iMatchIndex, int iHome, int iGuest)
   {
     PetanqueSuperMeleeClubChampionshipResult _home  = new PetanqueSuperMeleeClubChampionshipResult(iHome, iGuest);
     PetanqueSuperMeleeClubChampionshipResult _guest = new PetanqueSuperMeleeClubChampionshipResult(iGuest, iHome);
-    
+
     this.getMatchday(iMatchdayIndex).getMatch(iMatchIndex).setResult(_home);
-    
+
     IParticipant[] _homeAttendees = ((AbstractPetanqueTeam)this.getMatchday(iMatchdayIndex).getMatch(iMatchIndex).getCompetitor(0)).getAttendeesToArray();
     for(int i=0; i < _homeAttendees.length; ++i)
       _homeAttendees[i].addResultOfMatchday(iMatchdayIndex, _home);
@@ -181,9 +181,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
     IParticipant[] _guestAttendees = ((AbstractPetanqueTeam)this.getMatchday(iMatchdayIndex).getMatch(iMatchIndex).getCompetitor(1)).getAttendeesToArray();
     for(int i=0; i < _guestAttendees.length; ++i)
       _guestAttendees[i].addResultOfMatchday(iMatchdayIndex, _guest);
-    
-    // this.updateWinnerOfTheDay();
-    
+
     this.setChanged();
     this.notifyObservers();
     this.clearChanged();
@@ -192,7 +190,7 @@ public class SuperMeleeClubChampionship extends SuperMelee
   protected void updateWinnerOfTheDay()
   {
     int _iLeaderIndex = -1;
-    
+
     for(int i=0; i<this.competitors.size(); ++i)
     {
       this.competitors.get(i).unsetWinnerOfTheDayTrophy();
@@ -206,5 +204,5 @@ public class SuperMeleeClubChampionship extends SuperMelee
     }
     this.competitors.get(_iLeaderIndex).setWinnerOfTheDayTrophy(null);
   }
-  
+
 }

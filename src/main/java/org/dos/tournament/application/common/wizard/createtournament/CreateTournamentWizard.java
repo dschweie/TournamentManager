@@ -2,6 +2,8 @@
 
 import javax.swing.JFrame;
 
+import org.dos.tournament.application.TournamentManagerUI;
+import org.dos.tournament.application.common.config.SingletonProperties;
 import org.dos.tournament.application.common.panels.AbstractTournamentPanel;
 import org.dos.tournament.application.common.wizard.AbstractRuleEngineWizard;
 import org.dos.tournament.application.common.wizard.createtournament.common.WizardBranchPanel;
@@ -9,6 +11,7 @@ import org.dos.tournament.application.common.wizard.createtournament.petanque.Wi
 import org.dos.tournament.application.common.wizard.createtournament.petanque.WizardPetanqueTournamentOptions;
 import org.dos.tournament.application.factory.model.ITournamentWorker;
 import org.dos.tournament.application.factory.model.TournamentFactoryRulesEngine;
+import org.dos.tournament.common.competition.ITournament;
 
 import javax.swing.BoxLayout;
 import java.awt.BorderLayout;
@@ -20,7 +23,8 @@ import javax.swing.JDialog;
 import javax.swing.AbstractAction;
 import java.awt.event.ActionEvent;
 import java.util.ResourceBundle;
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 import javax.swing.Action;
 import java.awt.GridLayout;
@@ -33,26 +37,25 @@ import java.awt.Dialog.ModalityType;
 import java.awt.ComponentOrientation;
 import java.awt.Component;
 
-public class CreateTournamentWizard extends AbstractRuleEngineWizard implements ITournamentWorker 
+public class CreateTournamentWizard extends AbstractRuleEngineWizard implements ITournamentWorker
 {
-  public static Stack<WizardAction> xSettings = new Stack<WizardAction>();
- 
+  public static Deque<WizardAction> xSettings = new ArrayDeque<>();
+
   private final AbstractWizardAction actionCancel = new WizardCancelAction();
   private final AbstractWizardAction actionBack = new WizardBackAction();
   private final AbstractWizardAction actionNext = new WizardNextAction();
   private JScrollPane scrollPaneWizard;
-  
-  private Stack<AbstractTournamentWizardPanel> panelStack = new Stack<AbstractTournamentWizardPanel>();
-  
+
+  private Deque<AbstractTournamentWizardPanel> panelStack = new ArrayDeque<>();
+  private ITournament product = null;
+
   private WizardStep step = WizardStep.branch;
-  
-  
-  //public CreateTournamentWizard(JFrame owner) 
-  public CreateTournamentWizard() 
+
+
+  public CreateTournamentWizard()
   {
     super();
-    //super(owner);
-    
+
     setModal(true);
     setModalityType(ModalityType.APPLICATION_MODAL);
     setPreferredSize(new Dimension(600, 400));
@@ -60,86 +63,84 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
     setResizable(false);
     setTitle("Create Tournament");
     getContentPane().setLayout(new BorderLayout(0, 0));
-    
+
     JPanel mainPanel = new JPanel();
     getContentPane().add(mainPanel, BorderLayout.CENTER);
     mainPanel.setLayout(new BorderLayout(0, 0));
-    
+
     scrollPaneWizard = new JScrollPane();
     scrollPaneWizard.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
     mainPanel.add(scrollPaneWizard, BorderLayout.CENTER);
     scrollPaneWizard.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
     scrollPaneWizard.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
     scrollPaneWizard.setPreferredSize(new Dimension(600, 300));
-    
+
     JPanel panelNavigation = new JPanel();
     mainPanel.add(panelNavigation, BorderLayout.SOUTH);
     panelNavigation.setPreferredSize(new Dimension(600, 35));
     panelNavigation.setLayout(new FlowLayout(FlowLayout.RIGHT, 5, 5));
-    
+
     JButton btnCancel = new JButton("New button");
     btnCancel.setAction(actionCancel);
     panelNavigation.add(btnCancel);
-    
+
     JButton btnBack = new JButton("New button");
     btnBack.setAction(actionBack);
     panelNavigation.add(btnBack);
-    
+
     JButton btnNext = new JButton("New button");
     btnNext.setAction(actionNext);
     panelNavigation.add(btnNext);
-    
+
     panelNavigation.setVisible(true);
     mainPanel.setVisible(true);
-    
+
     this.setVisible(false);
     this.pack();
     this.revalidate();
-    
+
     this.xEngine = new TournamentFactoryRulesEngine();
   }
 
   @Override
-  public boolean isPropertiesBranch_Null() 
+  public boolean isPropertiesBranch_Null()
   {
     try
     {
-      return true;
+      return null == SingletonProperties.getProperty(AbstractTournamentWizardPanel.BRANCH);
     }
     catch(NullPointerException e)
     {
-      return true; 
+      return false;
     }
   }
 
   @Override
-  public boolean isPropertiesBranch_Petanque() {
-    return false;
-    //return this.panelStack.isEmpty()?null:AbstractTournamentWizardPanel.PETANQUE.equals(this.panelStack.peek().getValue(AbstractTournamentWizardPanel.BRANCH));
+  public boolean isPropertiesBranch_Petanque()
+  {
+    return AbstractTournamentWizardPanel.PETANQUE.equals(SingletonProperties.getOrDefault(AbstractTournamentWizardPanel.BRANCH, "none"));
   }
 
   @Override
-  public boolean isWizardControlEmptyPane() 
+  public boolean isWizardControlEmptyPane()
   {
-    //return this.panelStack.isEmpty()?true:this.scrollPaneWizard.getComponent(0) == this.panelStack.peek();
-    //return 0 == this.scrollPaneWizard.getComponentCount();
     return 0 == this.scrollPaneWizard.getViewport().getComponentCount();
   }
 
   @Override
-  public boolean isWizardControlCommand_Cancel() 
+  public boolean isWizardControlCommand_Cancel()
   {
     return this.actionCancel.isPressed();
   }
 
   @Override
-  public boolean isWizardControlCommand_Back() 
+  public boolean isWizardControlCommand_Back()
   {
     return this.actionBack.isPressed();
   }
 
   @Override
-  public boolean isWizardControlCommand_Next() 
+  public boolean isWizardControlCommand_Next()
   {
     return this.actionNext.isPressed();
   }
@@ -183,7 +184,7 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
   @Override
   public boolean isPetCatTournamentCategory_Supermelee() {
     try {
-      return AbstractTournamentWizardPanel.PET_SUPERMELEE.equals((String)this.getWizardProperty(AbstractTournamentWizardPanel.MOVEMENT));
+      return AbstractTournamentWizardPanel.PETANQUE_SUPERMELEE.equals((String)this.getWizardProperty(AbstractTournamentWizardPanel.MOVEMENT));
     } catch (Exception e) {
       return false;
     }
@@ -197,26 +198,25 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
 
   @Override
   public boolean isPetComMovDefineTracksByMovement() {
-    // TODO Auto-generated method stub
     return null!=this.getWizardProperty(AbstractTournamentWizardPanel.SET_COURSES);
   }
 
   @Override
   public void doDisposeSelectedBranchFromProperties() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
   public void doPetanqueTimeBoxedMatchday() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
   public void doPetanqueDefineTracksByMovement() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
@@ -245,40 +245,40 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
   }
 
   @Override
-  public void doWizardControlStatusNext_Disabled() 
+  public void doWizardControlStatusNext_Disabled()
   {
     this.actionNext.setEnabled(false);
   }
 
   @Override
   public void doWizardControlStatusNext_To_Finish() {
-    this.actionNext.putValue(Action.NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.Finish.name"));
+    this.actionNext.putValue(Action.NAME, ResourceBundle.getBundle(TournamentManagerUI.MESSAGES).getString("Common.Finish.name"));
   }
 
   @Override
-  public void doWizardControlSetPanel_Dispose() 
+  public void doWizardControlSetPanel_Dispose()
   {
 
     int _count = this.scrollPaneWizard.getViewport().getComponents().length;
     int _match = -1;
-    
+
     for(int i=0; i<_count; ++i)
       if(this.scrollPaneWizard.getViewport().getComponent(i) == this.panelStack.peek())
         _match=i;
-    
+
     if(-1 < _match)
       this.scrollPaneWizard.getViewport().remove(_match);
-    
+
     this.actionBack.resetPressedFlag();
     this.actionCancel.resetPressedFlag();
     this.actionNext.resetPressedFlag();
   }
 
   @Override
-  public void doWizardControlSetPanel_Branch() 
+  public void doWizardControlSetPanel_Branch()
   {
     AbstractTournamentWizardPanel _panel = new WizardBranchPanel(this);
-    
+
     this.actionCancel.resetPressedFlag();
     this.actionBack.resetPressedFlag();
     this.actionNext.resetPressedFlag();
@@ -305,7 +305,6 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
     this.repaint();
     _panel.setVisible(true);
     _panel.revalidate();
-//    this.scrollPaneWizard.getViewport().revalidate();
     this.scrollPaneWizard.revalidate();
     this.pack();
     this.revalidate();
@@ -314,7 +313,7 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
   @Override
   public void doWizardControlSetPanel_PetSupSel() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
@@ -330,154 +329,146 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
     this.repaint();
     _panel.setVisible(true);
     _panel.revalidate();
-//    this.scrollPaneWizard.getViewport().revalidate();
     this.scrollPaneWizard.revalidate();
     this.pack();
     this.revalidate();
   }
 
   @Override
-  public void doWizardControlRollBack_Dispose() 
+  public void doWizardControlRollBack_Dispose()
   {
     int _count = this.scrollPaneWizard.getComponents().length;
     int _match = -1;
-    
+
     for(int i=0; i<_count; ++i)
       if(this.scrollPaneWizard.getComponent(i) == this.panelStack.peek())
         _match=i;
-    
+
     if(-1 < _match)
       this.scrollPaneWizard.remove(_match);
-    //this.scrollPaneWizard.getComponent(0).setVisible(false);
-    //this.scrollPaneWizard.removeAll();
   }
 
   @Override
   public void doWizardControlRollBack_Branch() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
   public void doWizardControlRollBack_PetCat() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
   public void doWizardControlRollBack_PetSupSel() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
   public void doWizardControlRollBack_PetComMov() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
   public void doDisplayHint_Select() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
   public void doDisposeProduct() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
   public void doDeliverProduct() {
     // TODO Auto-generated method stub
-    
+
   }
 
-  
+
   private abstract class AbstractWizardAction extends AbstractAction
   {
     protected boolean bPressed = false;
 
-    public boolean isPressed() 
+    public boolean isPressed()
     {
       return bPressed;
     }
-    
+
     public void resetPressedFlag()
     {
       this.bPressed = false;
     }
 
-    public void actionPerformed(ActionEvent e) 
+    public void actionPerformed(ActionEvent e)
     {
       this.bPressed = true;
     }
   }
 
   private class WizardCancelAction extends AbstractWizardAction {
-    
-    public WizardCancelAction() 
+
+    public WizardCancelAction()
     {
-      putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.Cancel.name"));
-      // putValue(SHORT_DESCRIPTION, "Some short description");
+      putValue(NAME, ResourceBundle.getBundle(TournamentManagerUI.MESSAGES).getString("Common.Cancel.name"));
       this.enabled = false;
     }
   }
-  
+
   private class WizardBackAction extends AbstractWizardAction {
-    
-    public WizardBackAction() 
+
+    public WizardBackAction()
     {
-      putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.Back.name"));
-      //putValue(SHORT_DESCRIPTION, "Some short description");
+      putValue(NAME, ResourceBundle.getBundle(TournamentManagerUI.MESSAGES).getString("Common.Back.name"));
       this.enabled = false;
     }
   }
-  
+
   private class WizardNextAction extends AbstractWizardAction {
-    
-    public WizardNextAction() 
+
+    public WizardNextAction()
     {
-      putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Common.Next.name"));
+      putValue(NAME, ResourceBundle.getBundle(TournamentManagerUI.MESSAGES).getString("Common.Next.name"));
       // putValue(SHORT_DESCRIPTION, "Some short description");
       this.enabled = false;
     }
   }
 
   public AbstractTournamentPanel getTournamentEnvironment() {
-    // TODO Auto-generated method stub
-    return null;
+    return null!=this.product?this.product.getManagementPanel():null;
   }
 
   @Override
-  public void doWizardControlPause() 
+  public void doWizardControlPause()
   {
     try {
-      Thread.sleep(500);
+      Thread.sleep(250);
     } catch (InterruptedException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
-    
+
   }
 
   @Override
-  public boolean isWizardControlWizardVisible() 
+  public boolean isWizardControlWizardVisible()
   {
     return this.isWizardControlEmptyPane()&&this.xThread.isAlive()?true:this.isVisible();
-    //return true;
-    //return this.isVisible();
   }
 
   @Override
   public void createRuleEngine() {
     // TODO Auto-generated method stub
-    
+
   }
 
   @Override
-  protected void execute() 
+  protected void execute()
   {
     this.xEngine.execute((ITournamentWorker)this);
   }
@@ -485,7 +476,7 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
   @Override
   public boolean isPetCatTournamentCategory_SupMonat() {
     try {
-      return AbstractTournamentWizardPanel.PET_MONATSTURNIER.equals((String)this.getWizardProperty(AbstractTournamentWizardPanel.MOVEMENT));
+      return AbstractTournamentWizardPanel.PETANQUE_MONATSTURNIER.equals((String)this.getWizardProperty(AbstractTournamentWizardPanel.MOVEMENT));
     } catch (Exception e) {
       return false;
     }
@@ -496,9 +487,24 @@ public class CreateTournamentWizard extends AbstractRuleEngineWizard implements 
     Object value = this.getWizardProperty(AbstractTournamentWizardPanel.TIMELIMIT_MATCH);
     return null==value?false:value.toString().matches("\\d+");
   }
-  
-  
+
+  @Override
+  public void doPetanqueCreateTournamentInstance_Supermelee() {
+    this.product = new org.dos.tournament.branch.petanque.tournament.movement.SuperMelee();
+  }
+
+  @Override
+  public void doPetanqueCreateTournamentInstance_SupMonat() {
+    this.product = new org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship();
+  }
+
+  @Override
+  public void doPetanqueDeleteTournamentInstance() {
+    this.product = null;
+  }
 
 
-  
+
+
+
 }

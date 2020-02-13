@@ -1,6 +1,7 @@
 var a00732 =
 [
-    [ "RuleSuperMeleeNeverMeetOpponentTandem", "d4/db8/a00732.html#a8b2d7fa248e4f2ad79cdc7f86ee358b8", null ],
-    [ "getRuleDescription", "d4/db8/a00732.html#a9c74384421f4789fba5fb3980991726e", null ],
-    [ "performInit", "d4/db8/a00732.html#a25e78b54c6b19209f84547c8398941b5", null ]
+    [ "actionPerformed", "d4/db8/a00732.html#af58a9de0772c48fa2b7c1b61d7a97c34", null ],
+    [ "isPressed", "d4/db8/a00732.html#a64635a8ff60283639c120191ca061c35", null ],
+    [ "resetPressedFlag", "d4/db8/a00732.html#a6abc4542610f6720df18fdb51ea24b3c", null ],
+    [ "bPressed", "d4/db8/a00732.html#a0ed7b53a334f129c18ed020a20d35522", null ]
 ];

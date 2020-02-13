@@ -1,5 +1,6 @@
 var a00374 =
 [
-    [ "SwingActionCreateMatchday", "d5/db5/a00374.html#ab6abb5372587893228a5d6775d1d2c26", null ],
-    [ "actionPerformed", "d5/db5/a00374.html#ac74912408317058e51e0653ac44407ae", null ]
+    [ "components", "dd/dcb/a00375.html", "dd/dcb/a00375" ],
+    [ "AbstractTournamentPanel", "d1/daa/a00638.html", null ],
+    [ "DefaultMatchdayPanel", "d1/d97/a00670.html", "d1/d97/a00670" ]
 ];

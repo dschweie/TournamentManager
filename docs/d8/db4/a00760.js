@@ -1,6 +1,8 @@
 var a00760 =
 [
-    [ "MatchdayUpdate", "d8/db4/a00760.html#a0feb2fd89002596f5cc1b2a6f5139e61", null ],
-    [ "getMatchday", "d8/db4/a00760.html#a3e7e4cf84e343ff57f67ab94a22f284f", null ],
-    [ "matchday", "d8/db4/a00760.html#a0fef9966304e8edb75cbe5e44cc51c6e", null ]
+    [ "WizardAction", "d8/db4/a00760.html#a0e631112c5c27b60c2357a5de788cc46", null ],
+    [ "getAction", "d8/db4/a00760.html#acf8a098da1f4af28b4972fda7cce30ed", null ],
+    [ "getStatus", "d8/db4/a00760.html#a2131897da204a99b1c9a3b170b89f3a6", null ],
+    [ "strStatus", "d8/db4/a00760.html#a1d883c23727dfbed040d3953e19a167f", null ],
+    [ "xAction", "d8/db4/a00760.html#a2e494123aa52ddd59c362138589e6a09", null ]
 ];

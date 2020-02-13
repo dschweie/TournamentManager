@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public abstract class AbstractTotalResult implements ITotalResult
 {
-  protected HashMap<Integer,IResult> mapResults = new HashMap<Integer,IResult>();
+  protected HashMap<Integer,IResult> mapResults = new HashMap<>();
 
   /* (non-Javadoc)
    * @see org.dos.tournament.result.ITotalResult#addResultOfMatchday(int, org.dos.tournament.result.IResult)

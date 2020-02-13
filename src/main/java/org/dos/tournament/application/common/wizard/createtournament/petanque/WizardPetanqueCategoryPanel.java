@@ -78,7 +78,7 @@ public class WizardPetanqueCategoryPanel extends AbstractTournamentWizardPanel {
       @Override
       public void actionPerformed(ActionEvent e) 
       {
-        WizardPetanqueCategoryPanel.this.xWizard.setWizardProperty(AbstractTournamentWizardPanel.MOVEMENT, AbstractTournamentWizardPanel.PET_SUPERMELEE);
+        WizardPetanqueCategoryPanel.this.xWizard.setWizardProperty(AbstractTournamentWizardPanel.MOVEMENT, AbstractTournamentWizardPanel.PETANQUE_SUPERMELEE);
         WizardPetanqueCategoryPanel.this.textInformation.setText(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Glossary.Tournament.Petanque.Supermelee.description"));
         WizardPetanqueCategoryPanel.this.textInformation.setRows(17);
       }
@@ -91,7 +91,7 @@ public class WizardPetanqueCategoryPanel extends AbstractTournamentWizardPanel {
       @Override
       public void actionPerformed(ActionEvent e) 
       {
-        WizardPetanqueCategoryPanel.this.xWizard.setWizardProperty(AbstractTournamentWizardPanel.MOVEMENT, AbstractTournamentWizardPanel.PET_MONATSTURNIER);
+        WizardPetanqueCategoryPanel.this.xWizard.setWizardProperty(AbstractTournamentWizardPanel.MOVEMENT, AbstractTournamentWizardPanel.PETANQUE_MONATSTURNIER);
         WizardPetanqueCategoryPanel.this.textInformation.setText(ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("Glossary.Tournament.Petanque.Monatsturnier.description"));
         WizardPetanqueCategoryPanel.this.textInformation.setRows(27);
         

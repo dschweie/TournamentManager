@@ -1,5 +1,7 @@
 var a00496 =
 [
-    [ "SingletonProperties", "d3/dad/a00496.html#ae22c0349ea6915fbcd8399cdb5160a5f", null ],
-    [ "xProperties", "d3/dad/a00496.html#a5bb4b7f6de18ea38734b2537e79bff2d", null ]
+    [ "SwingActionUpdateLastRound", "d3/dad/a00496.html#a70c9ef36aa56f9e107dd081167aae2f5", null ],
+    [ "actionPerformed", "d3/dad/a00496.html#a2e0a960ac2ec1eb465c49eb0b071543f", null ],
+    [ "update", "d3/dad/a00496.html#a3ea2e474b3f76e24b0ef523f1228fb4d", null ],
+    [ "updateStatus", "d3/dad/a00496.html#a25e20bddfa2ca5eefd6f70872c619cbf", null ]
 ];

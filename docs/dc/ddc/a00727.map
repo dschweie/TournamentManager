@@ -1,5 +1,7 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique">
-<area shape="rect" id="node1" title="Diese Klasse ist Basisklasse im Regelwerk." alt="" coords="579,20,1016,61"/>
-<area shape="rect" id="node2" href="$dc/d00/a00820.html" title=" " alt="" coords="272,5,531,76"/>
-<area shape="rect" id="node3" href="$d8/d64/a00828.html" title=" " alt="" coords="5,13,224,69"/>
+<map id="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard" name="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard">
+<area shape="rect" id="node1" title=" " alt="" coords="753,39,1157,80"/>
+<area shape="rect" id="node2" href="$d4/d6a/a00704.html" title=" " alt="" coords="407,5,705,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="150,13,214,39"/>
+<area shape="rect" id="node4" href="$d2/d94/a00716.html" title=" " alt="" coords="5,67,359,108"/>
+<area shape="rect" id="node5" href="$de/d42/a00780.html" title=" " alt="" coords="413,71,699,112"/>
 </map>

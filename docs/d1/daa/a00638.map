@@ -1,7 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTwice" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.RuleSuperMeleeNeverMeetTeammateTwice">
-<area shape="rect" id="node1" title=" " alt="" coords="1024,27,1461,69"/>
-<area shape="rect" id="node5" href="$d4/d10/a00635.html" title=" " alt="" coords="1509,27,1947,69"/>
-<area shape="rect" id="node2" href="$d5/de3/a00631.html" title=" " alt="" coords="539,27,976,69"/>
-<area shape="rect" id="node3" href="$de/d4c/a00711.html" title=" " alt="" coords="272,5,491,91"/>
-<area shape="rect" id="node4" href="$d3/d3b/a00715.html" title=" " alt="" coords="5,20,224,76"/>
+<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.KeyAdapter" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.KeyAdapter">
+<area shape="rect" id="node1" title="Listener zur Positionierung des Focus in der SuperMeleeMatchdayTable." alt="" coords="5,80,380,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="99,5,286,32"/>
 </map>

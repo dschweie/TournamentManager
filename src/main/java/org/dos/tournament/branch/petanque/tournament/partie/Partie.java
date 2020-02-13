@@ -1,12 +1,8 @@
 package org.dos.tournament.branch.petanque.tournament.partie;
 
-import java.util.Iterator;
-import java.util.Set;
-
 import org.bson.Document;
 import org.dos.tournament.branch.petanque.result.PetanqueResult;
 import org.dos.tournament.common.competition.AbstractEncounter;
-import org.dos.tournament.common.competition.DefaultCompetitorResult;
 import org.dos.tournament.common.player.AbstractTeamParticipant;
 import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.result.IResult;
@@ -18,7 +14,7 @@ public class Partie extends AbstractEncounter
   {
     super();
   }
-  
+
   public Partie(IParticipant home, IParticipant guest)
   {
     super();
@@ -37,19 +33,22 @@ public class Partie extends AbstractEncounter
   public IParticipant getRank(int i)
   {
     IParticipant _retval = null;
-    
+
     if(null != this.result)
     {
-      // TODO Prüfung implementieren
+      if(((PetanqueResult )this.result).getScore() > ((PetanqueResult )this.result).getOppsScore())
+        _retval = this.competitors.get(0);
+      else
+        _retval = this.competitors.get(this.competitors.size()-1);
     }
-    
+
     return _retval;
   }
-  
+
   public boolean wereOpponents(IParticipant first, IParticipant second)
   {
     Object[] _teams =  this.competitors.toArray();
-   
+
     return (      (((AbstractTeamParticipant)_teams[0]).contains(first) && ((AbstractTeamParticipant)_teams[1]).contains(second))
               ||  (((AbstractTeamParticipant)_teams[1]).contains(first) && ((AbstractTeamParticipant)_teams[0]).contains(second)) );
   }
@@ -61,43 +60,43 @@ public class Partie extends AbstractEncounter
   public String toString()
   {
     String _retval = "";
-    
-    if(0 < this.getCompetitors().size())
+
+    if(!this.getCompetitors().isEmpty())
     {
-      IParticipant[] _competitors = (IParticipant[]) this.competitors.toArray();
-      
+      Object[] _competitors = this.competitors.toArray();
+
       switch ( _competitors.length )
       {
-        case 1:   _retval = _retval.concat(_competitors[0].getCode())
+        case 1:   _retval = _retval.concat(((IParticipant)_competitors[0]).getCode())
                                   .concat(" -  ?   ")
                                   .concat(this.isScored()?String.format("%2d", ((PetanqueResult)this.result).getScore()):"__")
                                   .concat(":__");
                   break;
-        case 2:   _retval = _retval.concat(_competitors[0].getCode())
+        case 2:   _retval = _retval.concat(((IParticipant)_competitors[0]).getCode())
                                   .concat(" - ")
-                                  .concat(_competitors[1].getCode())
+                                  .concat(((IParticipant)_competitors[1]).getCode())
                                   .concat("  ")
                                   .concat(this.isScored()?String.format("%2d", ((PetanqueResult)this.result).getScore()):"__")
                                   .concat(":")
                                   .concat(this.isScored()?String.format("%2d", ((PetanqueResult)this.result).getOppsScore()):"__");
                   break;
-        default:  _retval = _retval.concat(" ?  -  ?   __:__");      
+        default:  _retval = _retval.concat(" ?  -  ?   __:__");
       }
     }
-    else 
+    else
       _retval = _retval.concat(" ?  -  ?   __:__");
-    
+
     return _retval;
   }
 
   public String toStringWithNames()
   {
     String _retval = "";
-    
-    if(0 < this.getCompetitors().size())
+
+    if(!this.getCompetitors().isEmpty())
     {
-      IParticipant[] _competitors = (IParticipant[]) this.competitors.toArray();
-      
+      IParticipant[] _competitors = this.competitors.toArray(new IParticipant[this.competitors.size()]);
+
       switch ( _competitors.length )
       {
         case 1:   _retval = _retval.concat(_competitors[0].getDescription())
@@ -113,12 +112,12 @@ public class Partie extends AbstractEncounter
                                   .concat(":")
                                   .concat(this.isScored()?String.format("%2d", ((PetanqueResult)this.result).getOppsScore()):"__");
                   break;
-        default:  _retval = _retval.concat(" ?  -  ?   __:__");      
+        default:  _retval = _retval.concat(" ?  -  ?   __:__");
       }
     }
-    else 
+    else
       _retval = _retval.concat(" ?  -  ?   __:__");
-    
+
     return _retval;
   }
 
@@ -162,25 +161,24 @@ public class Partie extends AbstractEncounter
     // TODO Auto-generated method stub
     return "xyz";
   }
-  
+
   public Document toBsonDocument()
   {
     Document _retval = new Document();
     _retval.append("home", this.competitors.get(0).toBsonDocument()).append("guest", this.competitors.get(1).toBsonDocument());
     if(this.isScored())
       _retval.append("score", this.result.toBsonDocument());
-      
+
     return _retval;
   }
 
-  public int getHomeScore() 
+  public int getHomeScore()
   {
     return ((PetanqueResult)this.result).getScore();
   }
 
-  public int getGuestScore() 
+  public int getGuestScore()
   {
-    // TODO Auto-generated method stub
     return ((PetanqueResult)this.result).getOppsScore();
   }
 }

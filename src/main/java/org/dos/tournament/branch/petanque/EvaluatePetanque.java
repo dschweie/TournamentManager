@@ -1,51 +1,14 @@
 package org.dos.tournament.branch.petanque;
 
-import org.dos.tournament.branch.petanque.team.Doublette;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMeleeClubChampionship;
-import org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult;
-import org.dos.tournament.branch.petanque.tournament.partie.Partie;
-import org.dos.tournament.common.competition.DefaultCompetitorResult;
 import org.dos.tournament.common.player.Attendee;
-import org.dos.tournament.common.player.utils.NumericAssociationId;
 
 public class EvaluatePetanque
 {
 
   public static void main(String[] args)
   {
-    /*
-    Doublette team = new Doublette(new NumericAssociationId("GG1", "Blau-Gelb Groﬂ-Gerau 1", null), 
-        new Attendee(1, "Gerhard Olschewski"), 
-        new Attendee(2, "Klaus Franz"));
-    Doublette opps = new Doublette(new NumericAssociationId("TVC", "TV Crumstadt 1", null), 
-        new Attendee(1, "Hans Meister"), 
-        new Attendee(2, "Fritz Boule"));
-    System.out.println(team);
-    System.out.println(team.getCode());
-    System.out.println(team.getName());
-    System.out.println(team.getDescription());
-    System.out.println("Status des Legers : " + team.getPointeur().getStatus().toString());
-    
-    
-    Partie freundschaftsspiel = new Partie();
-    System.out.println(freundschaftsspiel);
-    freundschaftsspiel.addParticipant(team);
-    System.out.println(freundschaftsspiel);
-    freundschaftsspiel.addParticipant(opps);
-    System.out.println(freundschaftsspiel);
-    
-    freundschaftsspiel.setResult(team, new DefaultCompetitorResult(4));
-    freundschaftsspiel.setResult(opps, new DefaultCompetitorResult(5));
-
-    System.out.println(freundschaftsspiel);
-    System.out.println("Sieger:    ".concat(freundschaftsspiel.getWinner().getName()));
-    System.out.println("Rang 1:    ".concat(freundschaftsspiel.getRank(1).getName()));
-    System.out.println("Verlierer: ".concat(freundschaftsspiel.getRank(2).getName()));
-    
-    CompetitorPartieResult teamResult = freundschaftsspiel.getCompetitorResult(team);
-    System.out.println("Ergebnis:  ".concat(teamResult.toString()));
-    */
     SuperMelee _tournament = new SuperMeleeClubChampionship();
     _tournament.addCompetitor(new Attendee( 1, "Gerd Lipp"));
     _tournament.addCompetitor(new Attendee( 2, "Frank Graf"));
@@ -62,14 +25,14 @@ public class EvaluatePetanque
     _tournament.addCompetitor(new Attendee(13, "Dirk Schweier"));
     _tournament.addCompetitor(new Attendee(14, "Ben Weiland"));
     _tournament.addCompetitor(new Attendee(15, "Gerhard Scherer"));
-    
+
     _tournament.generateNextMatchday(null);
     System.out.println("Runde 1:\n" +_tournament.getMatchdayAsString(1));
     _tournament.generateNextMatchday(null);
     System.out.println("\nRunde 2:\n" + _tournament.getMatchdayAsString(2));
     _tournament.generateNextMatchday(null);
     System.out.println("\nRunde 3:\n" + _tournament.getMatchdayAsString(3));
-   
+
     _tournament.getCompetitorByParticipantIdCode("  4").inactivateParticipant();
     _tournament.getCompetitorByParticipantIdCode("  8").inactivateParticipant();
     _tournament.getCompetitorByParticipantIdCode("  2").inactivateParticipant();

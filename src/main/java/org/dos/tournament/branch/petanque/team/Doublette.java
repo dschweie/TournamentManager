@@ -1,19 +1,17 @@
 package org.dos.tournament.branch.petanque.team;
 
-import java.util.Vector;
-
 import org.bson.Document;
 import org.dos.tournament.common.player.IParticipant;
 import org.dos.tournament.common.player.utils.IParticipantId;
 
 public class Doublette extends AbstractPetanqueTeam
 {
-  
+
   public Doublette(IParticipantId id, IParticipant pointeur, IParticipant tireur)
   {
     super(id, pointeur, tireur);
   }
-  
+
   /* (non-Javadoc)
    * @see org.dos.tournament.players.AbstractParticipant#getDescription()
    */
@@ -40,18 +38,18 @@ public class Doublette extends AbstractPetanqueTeam
   {
     int _pointer = Integer.parseInt(this.getPointeur().getCode().trim());
     int _tireur = Integer.parseInt(this.getTireur().getCode().trim());
-    
+
     return String.format("%d, %d", Math.min(_pointer, _tireur), Math.max(_pointer, _tireur));
   }
 
   @Override
-  public Document toBsonDocument() 
+  public Document toBsonDocument()
   {
     return super.toBsonDocument().append("pointeur", new Integer(this.getTireur().getCode().trim())).append("tireur", new Integer(this.getPointeur().getCode().trim()));
   }
 
 
 
-  
+
 }
 

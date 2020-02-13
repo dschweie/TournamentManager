@@ -1,5 +1,7 @@
 var a00398 =
 [
-    [ "SwingActionOkAndNext", "d9/dd1/a00398.html#aad0bbc0f54152953b9ba351081505386", null ],
-    [ "actionPerformed", "d9/dd1/a00398.html#a68a05d1e46a583bc7981902487160460", null ]
+    [ "CompetitorPartieResult", "d3/dca/a00954.html", "d3/dca/a00954" ],
+    [ "Partie", "df/d9c/a00958.html", "df/d9c/a00958" ],
+    [ "PartieTerrain", "df/d88/a00962.html", "df/d88/a00962" ],
+    [ "Terrain", "d2/d6e/a00966.html", "d2/d6e/a00966" ]
 ];

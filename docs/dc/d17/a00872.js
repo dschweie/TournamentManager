@@ -1,7 +1,6 @@
 var a00872 =
 [
-    [ "addResultOfMatchday", "dc/d17/a00872.html#aa6debe76433a7292b2f896c47b7fbca1", null ],
-    [ "countMatches", "dc/d17/a00872.html#a00d577c0edd33cebae1d73ba1452c462", null ],
-    [ "getResultOfMatchday", "dc/d17/a00872.html#a6cb8c2005928ed41202aa5ec989b6deb", null ],
-    [ "mapResults", "dc/d17/a00872.html#ae19086040b770a41937c754bc1a1abff", null ]
+    [ "RuleSuperMeleeNeverMeetOpponentTandem", "dc/d17/a00872.html#a8b2d7fa248e4f2ad79cdc7f86ee358b8", null ],
+    [ "getRuleDescription", "dc/d17/a00872.html#a9c74384421f4789fba5fb3980991726e", null ],
+    [ "performInit", "dc/d17/a00872.html#a25e78b54c6b19209f84547c8398941b5", null ]
 ];

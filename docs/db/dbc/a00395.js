@@ -1,7 +1,9 @@
 var a00395 =
 [
-    [ "SwingActionOK", "d1/d53/a00399.html", "d1/d53/a00399" ],
-    [ "SwingActionOkAndNext", "d0/da0/a00403.html", "d0/da0/a00403" ],
-    [ "DialogJoueurIndividuel", "db/dbc/a00395.html#aa33036682cb89f2d70cf31ec1fcced0a", null ],
-    [ "DialogJoueurIndividuel", "db/dbc/a00395.html#ada025f36ddc0f09d5577001cbe8c86b0", null ]
+    [ "regulations", "d9/da1/a00396.html", "d9/da1/a00396" ],
+    [ "swisssystem", "d7/d93/a00397.html", "d7/d93/a00397" ],
+    [ "FormeeSwissSystem", "d3/d50/a00882.html", "d3/d50/a00882" ],
+    [ "SuperMelee", "d0/ddf/a00918.html", "d0/ddf/a00918" ],
+    [ "SuperMeleeClubChampionship", "d5/d54/a00938.html", "d5/d54/a00938" ],
+    [ "TwoFinals", "df/d39/a00950.html", null ]
 ];

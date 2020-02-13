@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TournamentManager: org.dos.tournament.application.configuration.ConfigurationEngine Klassenreferenz</title>
+<title>TournamentManager: org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel Klassenreferenz</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -13,10 +13,6 @@
 <script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -38,7 +34,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.8.15 -->
+<!-- Erzeugt von Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "../../search",false,'Suchen');
@@ -67,7 +63,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('db/ddc/a00636.html','../../');});
+$(document).ready(function(){initNavTree('db/ddc/a00636.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -88,32 +84,491 @@ $(document).ready(function(){initNavTree('db/ddc/a00636.html','../../');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pro-methods">Geschützte Methoden</a> &#124;
+<a href="#pro-attribs">Geschützte Attribute</a> &#124;
+<a href="#pri-attribs">Private Attribute</a> &#124;
 <a href="../../d9/d1d/a00633.html">Aufstellung aller Elemente</a>  </div>
   <div class="headertitle">
-<div class="title">org.dos.tournament.application.configuration.ConfigurationEngine Klassenreferenz</div>  </div>
+<div class="title">org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel Klassenreferenz</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Klassendiagramm für org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d10/a00635.png" border="0" usemap="#org_8dos_8tournament_8application_8common_8panels_8components_8_super_melee_matchday_table_8_table_model_inherit__map" alt="Inheritance graph"/></div>
+<map name="org_8dos_8tournament_8application_8common_8panels_8components_8_super_melee_matchday_table_8_table_model_inherit__map" id="org_8dos_8tournament_8application_8common_8panels_8components_8_super_melee_matchday_table_8_table_model_inherit__map">
+<area shape="rect" title=" " alt="" coords="181,23,556,65"/>
+<area shape="rect" href="../../d2/d9d/a00464.html" title=" " alt="" coords="604,23,1064,65"/>
+<area shape="rect" title=" " alt="" coords="5,5,133,32"/>
+<area shape="rect" title=" " alt="" coords="33,56,106,83"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">Legende</a>]</span></center></div>
+<div class="dynheader">
+Zusammengehörigkeiten von org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/de4/a00634.png" border="0" usemap="#org_8dos_8tournament_8application_8common_8panels_8components_8_super_melee_matchday_table_8_table_model_coll__map" alt="Collaboration graph"/></div>
+<map name="org_8dos_8tournament_8application_8common_8panels_8components_8_super_melee_matchday_table_8_table_model_coll__map" id="org_8dos_8tournament_8application_8common_8panels_8components_8_super_melee_matchday_table_8_table_model_coll__map">
+<area shape="rect" title=" " alt="" coords="1479,213,1853,254"/>
+<area shape="rect" title=" " alt="" coords="1101,5,1229,32"/>
+<area shape="rect" title=" " alt="" coords="1129,56,1202,83"/>
+<area shape="rect" href="../../da/dd6/a00896.html" title=" " alt="" coords="980,551,1351,593"/>
+<area shape="rect" href="../../de/d49/a00952.html" title=" " alt="" coords="400,317,663,358"/>
+<area shape="rect" title=" " alt="" coords="322,958,741,999"/>
+<area shape="rect" title=" " alt="" coords="5,891,65,917"/>
+<area shape="rect" title=" " alt="" coords="371,382,692,423"/>
+<area shape="rect" title=" " alt="" coords="335,565,728,606"/>
+<area shape="rect" title=" " alt="" coords="391,893,672,934"/>
+<area shape="rect" title=" " alt="" coords="812,1083,931,1109"/>
+<area shape="rect" href="../../d9/dce/a01052.html" title=" " alt="" coords="417,447,645,489"/>
+<area shape="rect" title=" " alt="" coords="473,513,590,540"/>
+<area shape="rect" title=" " alt="" coords="16,165,55,192"/>
+<area shape="rect" href="../../d0/d85/a00908.html" title=" " alt="" coords="346,158,717,199"/>
+<area shape="rect" title=" " alt="" coords="501,631,562,657"/>
+<area shape="rect" title=" " alt="" coords="476,681,587,708"/>
+<area shape="rect" href="../../d1/d51/a00628.html" title=" " alt="" coords="381,733,681,774"/>
+<area shape="rect" href="../../d2/d4c/a00984.html" title=" " alt="" coords="300,798,763,869"/>
+<area shape="rect" title=" " alt="" coords="498,1024,565,1051"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">Legende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
-<tr class="memitem:a44c7ab5ebad11a4de758ced41e4407b6"><td class="memItemLeft" align="right" valign="top">final void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#a44c7ab5ebad11a4de758ced41e4407b6">execute</a> (<a class="el" href="../../dc/d62/a00640.html">IConfigurableApplication</a> iface)</td></tr>
-<tr class="separator:a44c7ab5ebad11a4de758ced41e4407b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a3eb41f700fed34c1cd4affd21c8a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#ac9a3eb41f700fed34c1cd4affd21c8a9">TableModel</a> (int matchday)</td></tr>
+<tr class="separator:ac9a3eb41f700fed34c1cd4affd21c8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109398bcae6e4059c1a8a3e8a45f192d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#a109398bcae6e4059c1a8a3e8a45f192d">update</a> (Observable o, Object arg)</td></tr>
+<tr class="separator:a109398bcae6e4059c1a8a3e8a45f192d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f7fbd2c523170e3715add2d19322962"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#a5f7fbd2c523170e3715add2d19322962">setValueAt</a> (Object aValue, int row, int column)</td></tr>
+<tr class="memdesc:a5f7fbd2c523170e3715add2d19322962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methode übernimmt einen erfassten Wert in GUI und Datenmodell der Tabelle.  <a href="../../db/ddc/a00636.html#a5f7fbd2c523170e3715add2d19322962">Mehr ...</a><br /></td></tr>
+<tr class="separator:a5f7fbd2c523170e3715add2d19322962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07c3eb8767e157364eeecd3fb15748a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#aa07c3eb8767e157364eeecd3fb15748a">isCellEditable</a> (int row, int column)</td></tr>
+<tr class="memdesc:aa07c3eb8767e157364eeecd3fb15748a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methode liefert die Information, ob der Zelleninhalt editiert werden darf.  <a href="../../db/ddc/a00636.html#aa07c3eb8767e157364eeecd3fb15748a">Mehr ...</a><br /></td></tr>
+<tr class="separator:aa07c3eb8767e157364eeecd3fb15748a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee46c474a589d86076923fa79821bb94"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#aee46c474a589d86076923fa79821bb94">toggleOutputParticipants</a> ()</td></tr>
+<tr class="memdesc:aee46c474a589d86076923fa79821bb94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mit der Methode wird das Ausgabeformat der Paarungen umgeschaltet.  <a href="../../db/ddc/a00636.html#aee46c474a589d86076923fa79821bb94">Mehr ...</a><br /></td></tr>
+<tr class="separator:aee46c474a589d86076923fa79821bb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2adfa1246702ec8266f6f2851b72025b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#a2adfa1246702ec8266f6f2851b72025b">getColumnIndexOf</a> (String header)</td></tr>
+<tr class="memdesc:a2adfa1246702ec8266f6f2851b72025b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter-Methode liefert den Spaltenindex zu einem speziellen Spaltencode.  <a href="../../db/ddc/a00636.html#a2adfa1246702ec8266f6f2851b72025b">Mehr ...</a><br /></td></tr>
+<tr class="separator:a2adfa1246702ec8266f6f2851b72025b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Geschützte Methoden</h2></td></tr>
+<tr class="memitem:a74388419f11b0b9315e2ecc451572bd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#a74388419f11b0b9315e2ecc451572bd1">update</a> (<a class="el" href="../../da/dd6/a00896.html">SuperMelee</a> tournament, Object arg)</td></tr>
+<tr class="separator:a74388419f11b0b9315e2ecc451572bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d238ea389dbb99816f7c9b478b634a3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#a6d238ea389dbb99816f7c9b478b634a3">matchdayChanged</a> (Object cause)</td></tr>
+<tr class="separator:a6d238ea389dbb99816f7c9b478b634a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee368c87b24c67b534c27c0d5147f6ef"><td class="memItemLeft" align="right" valign="top">Vector&lt; <a class="el" href="../../dc/d40/a00568.html">TableHeaderColumnContent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#aee368c87b24c67b534c27c0d5147f6ef">compileHeader</a> ()</td></tr>
+<tr class="memdesc:aee368c87b24c67b534c27c0d5147f6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methode erzeugt die Kopfzeile der Tabelle mit den Texten, die in der GUI angezeigt werden.  <a href="../../db/ddc/a00636.html#aee368c87b24c67b534c27c0d5147f6ef">Mehr ...</a><br /></td></tr>
+<tr class="separator:aee368c87b24c67b534c27c0d5147f6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Geschützte Attribute</h2></td></tr>
+<tr class="memitem:a878b0326a56ee16e57c62f3517aa7979"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dd6/a00896.html">SuperMelee</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#a878b0326a56ee16e57c62f3517aa7979">xTournament</a> = null</td></tr>
+<tr class="separator:a878b0326a56ee16e57c62f3517aa7979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabeccfba98562d6e75c3c20e0b19bc3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#adabeccfba98562d6e75c3c20e0b19bc3">bOutputNumeric</a> = true</td></tr>
+<tr class="separator:adabeccfba98562d6e75c3c20e0b19bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa673187241bd94ea4f75dcf555a9a611"><td class="memItemLeft" align="right" valign="top">Vector&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#aa673187241bd94ea4f75dcf555a9a611">astrHeader</a> = null</td></tr>
+<tr class="separator:aa673187241bd94ea4f75dcf555a9a611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:a2730f50ee14afc8a3e45797569c4e9c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#a2730f50ee14afc8a3e45797569c4e9c9">iMatchdayIndex</a></td></tr>
+<tr class="memdesc:a2730f50ee14afc8a3e45797569c4e9c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">In diesem Attribut wird die Information gehalten zu welcher Runde des Turniers das Panel gehört.  <a href="../../db/ddc/a00636.html#a2730f50ee14afc8a3e45797569c4e9c9">Mehr ...</a><br /></td></tr>
+<tr class="separator:a2730f50ee14afc8a3e45797569c4e9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4ff2a89821fde3161ab83149e382cf"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/ddc/a00636.html#ade4ff2a89821fde3161ab83149e382cf">bInit</a> = true</td></tr>
+<tr class="separator:ade4ff2a89821fde3161ab83149e382cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
-<a id="a44c7ab5ebad11a4de758ced41e4407b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44c7ab5ebad11a4de758ced41e4407b6">&#9670;&nbsp;</a></span>execute()</h2>
+<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="ac9a3eb41f700fed34c1cd4affd21c8a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a3eb41f700fed34c1cd4affd21c8a9">&#9670;&nbsp;</a></span>TableModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">final void org.dos.tournament.application.configuration.ConfigurationEngine.execute </td>
+          <td class="memname">org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.TableModel </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dc/d62/a00640.html">IConfigurableApplication</a>&#160;</td>
-          <td class="paramname"><em>iface</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>matchday</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="../../d2/d9d/a00464.html#a5d27840f88a7f13fb206bc3af7178f56">org.dos.tournament.application.branch.petanque.panels.components.tables.SuperMeleeResultsTable.TableModel</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="aee368c87b24c67b534c27c0d5147f6ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee368c87b24c67b534c27c0d5147f6ef">&#9670;&nbsp;</a></span>compileHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;<a class="el" href="../../dc/d40/a00568.html">TableHeaderColumnContent</a>&gt; org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.compileHeader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Methode erzeugt die Kopfzeile der Tabelle mit den Texten, die in der GUI angezeigt werden. </p>
+<p>In der internen Struktur SuperMeleeMatchdayTable.astrHeader werden nur die Konstanten der jeweiligen Spalten hinterlegt. Mit dieser Methode wird die Kopfzeile der Tabelle mit den Spaltennamen erzeugt, die dann in der GUI dargestellt werden.</p>
+<dl class="todo"><dt><b><a class="el" href="../../d8/d8e/a00344.html#_todo000002">Noch zu erledigen:</a></b></dt><dd>Die Bezeichner werden aktuell noch nicht aus den Properties gelesen.</dd></dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Die Methode liefert die Kopfzeile als Vector zurück. </dd></dl>
+
+<p>Erneute Implementation in <a class="el" href="../../d2/d9d/a00464.html#a6e271f00626ed78d594ff1ab2063c60e">org.dos.tournament.application.branch.petanque.panels.components.tables.SuperMeleeResultsTable.TableModel</a>.</p>
+
+</div>
+</div>
+<a id="a2adfa1246702ec8266f6f2851b72025b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2adfa1246702ec8266f6f2851b72025b">&#9670;&nbsp;</a></span>getColumnIndexOf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.getColumnIndexOf </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>header</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter-Methode liefert den Spaltenindex zu einem speziellen Spaltencode. </p>
+<p>In der Tabelle kann es eine variable Anzahl von Spalten geben. Somit kann ein Spalte nicht über einen konstanten Spaltenindex referenziert werden.</p>
+<p>Jede Tabelle hat mit dem Vector astrHeader einen Ort, an dem die Spalten dokumentiert sind.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>In diesem Parameter ist eine Spaltenkennung zu übergeben, zu der der Spaltenindex zurückgegeben werden soll.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Die Methode liefert den Spaltenindex als <code>int</code> zurück. Wenn die Spalte nicht ermittelt werden kann, da diese nicht eingeblendet oder unbekannt ist, wird der Wert -1 zurückgegeben. </dd></dl>
+
+</div>
+</div>
+<a id="aa07c3eb8767e157364eeecd3fb15748a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07c3eb8767e157364eeecd3fb15748a">&#9670;&nbsp;</a></span>isCellEditable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.isCellEditable </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Methode liefert die Information, ob der Zelleninhalt editiert werden darf. </p>
+<p>Der Anwender darf in der Tabelle nur die Spalten editieren, in denen Spielergebnnisse der Teams einer Spielpaarung erfasst werden sollen. Alle anderen Zellen sollen nicht geändert werden dürfen.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>In dem Parameter wird der Zeilenindex der Zelle übergeben, für die angefragt werden soll, ob der Anwender den Inhalt ändern darf. </td></tr>
+    <tr><td class="paramname">column</td><td>In dem Parameter wird der Spaltenindex der Zelle übergeben, für die angefragt werden soll, ob der Anwender den Inhalt ändern darf</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Die Methode liefert im Rückgabewert den Wert <code>true</code>, wenn der Anwender den Zelleninhalt bearbeiten darf. </dd></dl>
+
+</div>
+</div>
+<a id="a6d238ea389dbb99816f7c9b478b634a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d238ea389dbb99816f7c9b478b634a3">&#9670;&nbsp;</a></span>matchdayChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.matchdayChanged </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>cause</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f7fbd2c523170e3715add2d19322962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f7fbd2c523170e3715add2d19322962">&#9670;&nbsp;</a></span>setValueAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.setValueAt </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>aValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>column</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Methode übernimmt einen erfassten Wert in GUI und Datenmodell der Tabelle. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aValue</td><td>In dem Paramter ist das Ergebnis zu übergeben. </td></tr>
+    <tr><td class="paramname">row</td><td>In diesem Parameter wird der Zeilenindex der Zelle übergeben, die geändert werden soll. </td></tr>
+    <tr><td class="paramname">column</td><td>In diesem Parameter wird der Spaltenindex der Zelle übergeben, die geändert werden soll.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="../../d8/d8e/a00344.html#_todo000001">Noch zu erledigen:</a></b></dt><dd>In dieser Methode fehlt noch ein ordentliches Handling von fehlerhaften Eingaben, wie z.B. nicht numerische Eingaben.</dd></dl>
+<dl class="section see"><dt>Siehe auch</dt><dd>javax.swing.table.DefaultTableModel::setValueAt(java.lang.Object, int, int) </dd></dl>
+
+</div>
+</div>
+<a id="aee46c474a589d86076923fa79821bb94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee46c474a589d86076923fa79821bb94">&#9670;&nbsp;</a></span>toggleOutputParticipants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.toggleOutputParticipants </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mit der Methode wird das Ausgabeformat der Paarungen umgeschaltet. </p>
+<p>In der Tabelle werden Spielpaarungen und Spielergebnisse auf der GUI ausgegeben. Für die Paarungen können entweder die Nummern oder Namen der Spieler der Teams angezeigt werden.</p>
+<p>Mit dieser Methode kann die Darstellung umgeschaltet werden.</p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Die Methode liefert den Wert <code>true</code>, wenn die Darstellung auch Nummern umgeschaltet wurde. Andernfalls wird der Wert <code>false</code> zurückgegeben. </dd></dl>
+
+</div>
+</div>
+<a id="a109398bcae6e4059c1a8a3e8a45f192d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a109398bcae6e4059c1a8a3e8a45f192d">&#9670;&nbsp;</a></span>update() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.update </td>
+          <td>(</td>
+          <td class="paramtype">Observable&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74388419f11b0b9315e2ecc451572bd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74388419f11b0b9315e2ecc451572bd1">&#9670;&nbsp;</a></span>update() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/dd6/a00896.html">SuperMelee</a>&#160;</td>
+          <td class="paramname"><em>tournament</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="../../d2/d9d/a00464.html#a866989ca485244891788d73bd7373470">org.dos.tournament.application.branch.petanque.panels.components.tables.SuperMeleeResultsTable.TableModel</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="aa673187241bd94ea4f75dcf555a9a611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa673187241bd94ea4f75dcf555a9a611">&#9670;&nbsp;</a></span>astrHeader</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;String&gt; org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.astrHeader = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade4ff2a89821fde3161ab83149e382cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4ff2a89821fde3161ab83149e382cf">&#9670;&nbsp;</a></span>bInit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.bInit = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adabeccfba98562d6e75c3c20e0b19bc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabeccfba98562d6e75c3c20e0b19bc3">&#9670;&nbsp;</a></span>bOutputNumeric</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.bOutputNumeric = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2730f50ee14afc8a3e45797569c4e9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2730f50ee14afc8a3e45797569c4e9c9">&#9670;&nbsp;</a></span>iMatchdayIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.iMatchdayIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>In diesem Attribut wird die Information gehalten zu welcher Runde des Turniers das Panel gehört. </p>
+<p>In der Applikation wird für jede Spielrunde/Spieltag ein Panel angezeigt. Über dieses Attribut weiß die Instanz, welche Daten des Turnieres für sie entscheidend sind. </p>
+
+</div>
+</div>
+<a id="a878b0326a56ee16e57c62f3517aa7979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a878b0326a56ee16e57c62f3517aa7979">&#9670;&nbsp;</a></span>xTournament</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/dd6/a00896.html">SuperMelee</a> org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel.xTournament = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -123,10 +578,10 @@ $(document).ready(function(){initNavTree('db/ddc/a00636.html','../../');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d0/dcd/a00280.html">org</a></li><li class="navelem"><a class="el" href="../../d2/d04/a00281.html">dos</a></li><li class="navelem"><a class="el" href="../../dc/dc9/a00282.html">tournament</a></li><li class="navelem"><a class="el" href="../../dd/dfe/a00283.html">application</a></li><li class="navelem"><a class="el" href="../../d8/d17/a00304.html">configuration</a></li><li class="navelem"><a class="el" href="../../db/ddc/a00636.html">ConfigurationEngine</a></li>
+    <li class="navelem"><a class="el" href="../../d2/daf/a00346.html">org</a></li><li class="navelem"><a class="el" href="../../d1/dc6/a00347.html">dos</a></li><li class="navelem"><a class="el" href="../../df/d03/a00348.html">tournament</a></li><li class="navelem"><a class="el" href="../../d7/dfc/a00349.html">application</a></li><li class="navelem"><a class="el" href="../../d0/d65/a00360.html">common</a></li><li class="navelem"><a class="el" href="../../dd/db5/a00365.html">panels</a></li><li class="navelem"><a class="el" href="../../d2/d3e/a00366.html">components</a></li><li class="navelem"><a class="el" href="../../d4/d2a/a00632.html">SuperMeleeMatchdayTable</a></li><li class="navelem"><a class="el" href="../../db/ddc/a00636.html">TableModel</a></li>
     <li class="footer">Erzeugt von
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

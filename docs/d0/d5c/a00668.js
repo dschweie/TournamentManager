@@ -1,5 +1,5 @@
 var a00668 =
 [
-    [ "CreateFridayTournamentAction", "d0/d5c/a00668.html#a80c0dd74347c489e051dfcf6a4ca995e", null ],
-    [ "actionPerformed", "d0/d5c/a00668.html#a6c79188a502fc487ad7fc496a193e444", null ]
+    [ "SwingAction_1", "d0/d5c/a00668.html#a9ac255da0ff334d9492ee4672810293e", null ],
+    [ "actionPerformed", "d0/d5c/a00668.html#a178b846c60bb6682edb7647e44537df4", null ]
 ];

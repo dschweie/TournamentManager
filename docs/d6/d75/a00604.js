@@ -1,16 +1,16 @@
 var a00604 =
 [
-    [ "SwingActionMatchdayTimer", "d6/d75/a00604.html#adb56aa75efa11b2906a25a8405eb7eee", null ],
-    [ "actionPerformed", "d6/d75/a00604.html#a8cc8ba6cbcd08c8b840f6e5dbbd31751", null ],
-    [ "increaseDurationInMinutes", "d6/d75/a00604.html#a523a806c9af1de35bd1b0a5aead4183d", null ],
-    [ "join", "d6/d75/a00604.html#ac2b2ef4b9686cabd90fa9e02559d3cf9", null ],
-    [ "run", "d6/d75/a00604.html#abb486623b8b95522aab686e903fd4d25", null ],
-    [ "setDurationInMillis", "d6/d75/a00604.html#aeae76e6932b13ab2ec4af10e023377ec", null ],
-    [ "updateProgressbar", "d6/d75/a00604.html#aed3f130440a7dc71e7b370eb189a6d8b", null ],
-    [ "bRunning", "d6/d75/a00604.html#ac346ba50a7260b63dccaa2c46734803e", null ],
-    [ "clip", "d6/d75/a00604.html#aa6966be2af1d5a771ee34aaf1174f833", null ],
-    [ "iMillis", "d6/d75/a00604.html#a9f06cc4b553f9f31e2309a62a3d6afef", null ],
-    [ "thread", "d6/d75/a00604.html#aa65dbeea5ac0699cbb457f20ebe9fdcf", null ],
-    [ "xStart", "d6/d75/a00604.html#a2ad678e1f24799d4b5cbb2866b41501c", null ],
-    [ "xStop", "d6/d75/a00604.html#a1a0bb22044ff6034d437fb3512b3e9de", null ]
+    [ "CancelAction", "d0/d8d/a00612.html", "d0/d8d/a00612" ],
+    [ "SelectTournamentAction", "d4/d14/a00608.html", "d4/d14/a00608" ],
+    [ "DialogChooseTournament", "d6/d75/a00604.html#a1ef955c2dad17e85c0c98431a4539c0c", null ],
+    [ "getList", "d6/d75/a00604.html#a25d6e95008a759a96fd8dd7c8601d11a", null ],
+    [ "getSelectedTournamentId", "d6/d75/a00604.html#acbb7f8712ef502b897bdb4d1ee8ca8a3", null ],
+    [ "getTextArea", "d6/d75/a00604.html#a546341e322cb8c49b728e4a199d26305", null ],
+    [ "isTournamentSelected", "d6/d75/a00604.html#a01532c38d940bcb19100bdd8f52d4d28", null ],
+    [ "bChoiceDone", "d6/d75/a00604.html#a2c68fe7024afb7bb335cbc6942e35a51", null ],
+    [ "cancelAction", "d6/d75/a00604.html#aa7490bc37d9c01da96a13983c0633936", null ],
+    [ "list", "d6/d75/a00604.html#abdb14c2db8f1629a1e2a6432f1444d6a", null ],
+    [ "listTournamentData", "d6/d75/a00604.html#a63fe3a87e060dede90f9682b8af5d095", null ],
+    [ "selectTournament", "d6/d75/a00604.html#a44de46acb4126cb79f60fc75f24e7211", null ],
+    [ "txtTournamentDescription", "d6/d75/a00604.html#ae558639639317a61043943f536244fee", null ]
 ];

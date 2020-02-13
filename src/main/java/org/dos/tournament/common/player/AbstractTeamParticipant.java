@@ -1,15 +1,15 @@
 package org.dos.tournament.common.player;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 public abstract class AbstractTeamParticipant extends AbstractParticipant
 {
-  private Vector<IParticipant> participants;
-  
+  protected ArrayList<IParticipant> participants;
+
   /**
    * @return the participants
    */
-  protected Vector<IParticipant> getParticipants()
+  protected ArrayList<IParticipant> getParticipants()
   {
     return participants;
   }
@@ -17,27 +17,26 @@ public abstract class AbstractTeamParticipant extends AbstractParticipant
   /**
    * @param participants the participants to set
    */
-  protected void setParticipants(Vector<IParticipant> participants)
+  protected void setParticipants(ArrayList<IParticipant> participants)
   {
     this.participants = participants;
   }
 
   public AbstractTeamParticipant()
   {
-    this.participants = new Vector<IParticipant>();
+    this.participants = new ArrayList<>();
   }
- 
+
   public IParticipant[] getAttendeesToArray()
   {
-    return (IParticipant[]) this.participants.toArray();
-    // return (0<this.participants.size())?(IParticipant[])this.participants.toArray():null;
+    return this.participants.toArray(new IParticipant[this.participants.size()]);
   }
-  
+
   public boolean contains(IParticipant participant)
   {
     return this.participants.contains(participant);
   }
-  
+
   public int countAttendees()
   {
     int retval = 0;
@@ -45,7 +44,7 @@ public abstract class AbstractTeamParticipant extends AbstractParticipant
       retval += null!=this.participants.get(i)?1:0;
     return retval;
   }
-  
+
   public boolean hasAttendees()
   {
     return 0 < this.countAttendees();

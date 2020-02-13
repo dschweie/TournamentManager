@@ -1,6 +1,7 @@
 package org.dos.tournament.branch.petanque.tournament.movement.regulations;
 
-import java.util.Vector;
+import java.util.ArrayList;
+
 
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.common.competition.AbstractTournament.Slot;
@@ -10,17 +11,17 @@ import org.dos.tournament.common.player.IParticipant;
 
 /**
  *  \brief      Diese Klasse ist Basisklasse im Regelwerk
- *  
+ *
  *  Diese Basisklasse stellt sicher, dass ein Teilnehmer nur genau einmal in
  *  der Runde eingeplant wird.
- *  
+ *
  *  @author dschweie
  *
  */
-public class CoreRuleSuperMeleeAllIndicesUnique extends AbstractCoreRule<SuperMelee, Vector<Vector<Slot>>, IParticipant>
+public class CoreRuleSuperMeleeAllIndicesUnique extends AbstractCoreRule<SuperMelee, ArrayList<ArrayList<Slot>>, IParticipant>
 {
   @Override
-  public boolean isValid(int[] pointer, Vector<Vector<Vector<Slot>>> grid, Vector<IParticipant> participants) 
+  public boolean isValid(int[] pointer, ArrayList<ArrayList<ArrayList<Slot>>> grid, ArrayList<IParticipant> participants)
   {
     int _idxParticipant = grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).getNumber().intValue();
     boolean _retval = false;
@@ -32,16 +33,16 @@ public class CoreRuleSuperMeleeAllIndicesUnique extends AbstractCoreRule<SuperMe
   }
 
   @Override
-  public void init(SuperMelee tournament, int round, Vector<IParticipant> participants) 
+  public void init(SuperMelee tournament, int round, ArrayList<IParticipant> participants)
   {
     // Diese Methode ist leer, da nichts zu tun ist.
   }
-  
+
   @Override
-  public String toString() {
-    // TODO Auto-generated method stub
+  public String toString()
+  {
     return "Regel: Kein Spieler darf mehrfach geteilt sein (fest)";
   }
 
-  
+
 }

@@ -1,9 +1,9 @@
 /**
- * 
+ *
  */
 package org.dos.tournament.branch.petanque.tournament.movement.regulations;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 import org.dos.tournament.branch.petanque.tournament.matchday.Matchday;
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
@@ -16,27 +16,27 @@ import org.dos.tournament.common.player.IParticipant;
  * @author dos
  *
  */
-public class RuleSuperMeleeNeverPlayTripletteTwice extends AbstractRegulationDecorator<SuperMelee, Vector<Vector<Slot>>, IParticipant> 
+public class RuleSuperMeleeNeverPlayTripletteTwice extends AbstractRegulationDecorator<SuperMelee, ArrayList<ArrayList<Slot>>, IParticipant>
 {
 
   protected boolean[] abTriplettePlayed;
 
 
-  public RuleSuperMeleeNeverPlayTripletteTwice(Regulation<SuperMelee, Vector<Vector<Slot>>, IParticipant> innerRegulation, boolean effective, boolean suspendable) {
+  public RuleSuperMeleeNeverPlayTripletteTwice(Regulation<SuperMelee, ArrayList<ArrayList<Slot>>, IParticipant> innerRegulation, boolean effective, boolean suspendable) {
     super(innerRegulation, effective, suspendable);
   }
 
   @Override
-  protected boolean performCheck(int[] pointer, Vector<Vector<Vector<Slot>>> grid, Vector<IParticipant> participants) 
+  protected boolean performCheck(int[] pointer, ArrayList<ArrayList<ArrayList<Slot>>> grid, ArrayList<IParticipant> participants)
   {
     return (3 == grid.get(pointer[0]).get(pointer[1]).size())?(!this.abTriplettePlayed[grid.get(pointer[0]).get(pointer[1]).get(pointer[2]).getNumber().intValue()]):true;
   }
 
   @Override
-  protected void performInit(SuperMelee tournament, int round, Vector<IParticipant> participants) 
+  protected void performInit(SuperMelee tournament, int round, ArrayList<IParticipant> participants)
   {
     this.initTriplettePlayed(participants.size(), false);
-    
+
     for(int md=0; md < round; ++md)
     {
       Matchday _matchday = tournament.getMatchday(md);
@@ -45,7 +45,7 @@ public class RuleSuperMeleeNeverPlayTripletteTwice extends AbstractRegulationDec
       {
         IParticipant[] _home = _matchday.getMatch(_idxPartie).getCompetitor(0).getAttendeesToArray();
         IParticipant[] _guest = _matchday.getMatch(_idxPartie).getCompetitor(1).getAttendeesToArray();
-        
+
         if(3==_home.length)
           for(int i=0; i<3; ++i)
             if(-1 < participants.indexOf(_home[i]))
@@ -54,11 +54,11 @@ public class RuleSuperMeleeNeverPlayTripletteTwice extends AbstractRegulationDec
           for(int i=0; i<3; ++i)
             if(-1 < participants.indexOf(_guest[i]))
               this.abTriplettePlayed[participants.indexOf(_guest[i])] = true;
-        
+
       }
     }
   }
-  
+
   protected void initTriplettePlayed(int size, boolean defaultValue)
   {
     this.abTriplettePlayed = new boolean[size];
@@ -69,8 +69,8 @@ public class RuleSuperMeleeNeverPlayTripletteTwice extends AbstractRegulationDec
 
   @Override
   protected void performTeardown() {
-    
-    
+
+
   }
 
   protected String getRuleDescription() {

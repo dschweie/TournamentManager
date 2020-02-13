@@ -18,13 +18,13 @@ public abstract class AbstractRuleEngineWizard extends JDialog implements IWizar
 
   private String strTrace = null;
   private String strTraceCount = null;
-  
+
   protected AbstractWizardRuleEngine xEngine = null;
-  
+
   protected RuleEngineThread xThread = new RuleEngineThread();
-  private HashMap<String,Object> mapProperties = new HashMap<String,Object>();
-  
-  public AbstractRuleEngineWizard(JFrame owner) 
+  private HashMap<String,Object> mapProperties = new HashMap<>();
+
+  public AbstractRuleEngineWizard(JFrame owner)
   {
     super(owner);
   }
@@ -92,7 +92,7 @@ public abstract class AbstractRuleEngineWizard extends JDialog implements IWizar
   public AbstractRuleEngineWizard(Window owner) {
     super(owner);
   }
-  
+
   protected abstract void execute();
 
   public void doTrace(String dtName, String version, int rules, int rule) {
@@ -122,37 +122,34 @@ public abstract class AbstractRuleEngineWizard extends JDialog implements IWizar
   }
 
   @Override
-  public void setVisible(boolean b) 
+  public void setVisible(boolean b)
   {
     if(b)
     {
       if(!this.xThread.isAlive())
       {
         this.xThread.setDaemon(true);
-        //_thread.run();
         xThread.start();
         super.setVisible(true);
       }
     }
     else
     {
-      //if(this._thread.isAlive())
-      //  this._thread.stop();
       super.setVisible(b);
     }
 
   }
-  
+
   public void setWizardProperty(String key, Object value)
   {
     this.mapProperties.put(key, value);
   }
-  
+
   public Object getWizardProperty(String key)
   {
     return this.mapProperties.containsKey(key)?this.mapProperties.get(key):null;
   }
-  
+
   public void revertWizardProperty(String key)
   {
     if(this.mapProperties.containsKey(key))
@@ -160,45 +157,24 @@ public abstract class AbstractRuleEngineWizard extends JDialog implements IWizar
       this.mapProperties.replace(key, null);
     }
   }
-  
+
   public HashMap<String,Object> getWizardProperties()
   {
     return ( HashMap<String,Object>) this.mapProperties.clone();
   }
-  
+
   protected class RuleEngineThread extends Thread
   {
-//    @Override
-//    public synchronized void start() 
-//    {
-//      super.start();
-//      this.run();
-//    }
 
     @Override
     public void run() {
-      //if(!this.isAlive())
-      //  this.start();
-      
-//      while(!AbstractRuleEngineWizard.this.isVisible())
-//      {
-//        try {
-//          Thread.sleep(500);
-//        } catch (InterruptedException e) {
-//          // TODO Auto-generated catch block
-//          e.printStackTrace();
-//        }
-//      }
-      
-      //AbstractRuleEngineWizard.super.setVisible(true);
       AbstractRuleEngineWizard.this.setModal(true);
       AbstractRuleEngineWizard.this.execute();
       AbstractRuleEngineWizard.this.setVisible(false);
-      //AbstractRuleEngineWizard.this.xEngine.execute(AbstractRuleEngineWizard.this);
-    }  
-    
+    }
+
   }
-  
-  
+
+
 
 }

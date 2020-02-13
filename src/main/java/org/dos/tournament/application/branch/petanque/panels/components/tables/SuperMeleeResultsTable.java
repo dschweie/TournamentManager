@@ -1,6 +1,7 @@
 package org.dos.tournament.application.branch.petanque.panels.components.tables;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.dos.tournament.application.common.controls.TableHeaderColumnContent;
 import org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable;
@@ -9,16 +10,16 @@ import org.dos.tournament.application.common.panels.components.SuperMeleeMatchda
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import org.dos.tournament.branch.petanque.tournament.partie.Partie;
 
-public class SuperMeleeResultsTable extends SuperMeleeMatchdayTable 
+public class SuperMeleeResultsTable extends SuperMeleeMatchdayTable
 {
   final static public String COL_ROUND        = "ROUND";
 
-  public SuperMeleeResultsTable(SuperMelee tournament) 
+  public SuperMeleeResultsTable(SuperMelee tournament)
   {
     this(tournament, 0);
   }
 
-  public SuperMeleeResultsTable(SuperMelee tournament, int matchday) 
+  public SuperMeleeResultsTable(SuperMelee tournament, int matchday)
   {
     super(tournament);
     TableModel _model = new TableModel();
@@ -28,11 +29,11 @@ public class SuperMeleeResultsTable extends SuperMeleeMatchdayTable
   }
 
   @Override
-  public boolean isCellEditable(int row, int column) 
+  public boolean isCellEditable(int row, int column)
   {
     return false;
   }
-  
+
   @Override
   protected void setTableCellRenderer() {
     // TODO Auto-generated method stub
@@ -45,7 +46,7 @@ public class SuperMeleeResultsTable extends SuperMeleeMatchdayTable
   private class TableModel extends org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableModel
   {
 
-    public TableModel() 
+    public TableModel()
     {
       this(0);
     }
@@ -55,24 +56,24 @@ public class SuperMeleeResultsTable extends SuperMeleeMatchdayTable
       this.astrHeader.add(0, SuperMeleeResultsTable.COL_ROUND);
       // TODO Auto-generated constructor stub
     }
-    
+
     protected void update(SuperMelee tournament, Object arg)
     {
       this.xTournament = tournament;
 
-      Vector<Vector<String>> _matchdayData = new Vector<Vector<String>>();
+      ArrayList<ArrayList<String>> _matchdayData = new ArrayList<>();
 
       //if((0 == this.getDataVector().size()) || this.matchdayChanged(arg))
       for(int iMD=0; iMD<tournament.countMatchdays(); ++iMD)
       {
         int iMatches = tournament.getMatchday(iMD).countMatches();
-    
+
         for(int i=0; i<iMatches; ++i)
         {
-          Vector<String> _row = new Vector<String>();
+          ArrayList<String> _row = new ArrayList<>();
 
           for(String _column : this.astrHeader)
-          { 
+          {
             Partie _match = this.xTournament.getMatchday(iMD).getMatch(i);
             switch(_column)
             {
@@ -94,27 +95,30 @@ public class SuperMeleeResultsTable extends SuperMeleeMatchdayTable
           }
           _matchdayData.add(_row);
         }
-        
-        
-        Vector<TableHeaderColumnContent> _header = this.compileHeader();
-        this.setDataVector(_matchdayData, _header);
-        
+
+
+        ArrayList<TableHeaderColumnContent> _header = (ArrayList<TableHeaderColumnContent>) this.compileHeader();
+        Object[][] _matchdayArray = new Object[_matchdayData.size()][_matchdayData.get(0).size()];
+        for(int i=0; i<_matchdayData.size(); ++i)
+          _matchdayArray[i] = _matchdayData.get(i).toArray(_matchdayArray[i]);
+        this.setDataVector(_matchdayArray, _header.toArray());
+
         for(int i=0; i < _header.size(); ++i)
           SuperMeleeResultsTable.this.getTableHeader().getColumnModel().getColumn(i).setHeaderValue(_header.get(i));
-        
-        
+
+
         SuperMeleeResultsTable.this.updateColumnSize();
         SuperMeleeResultsTable.this.setTableCellRenderer();
 
         this.fireTableDataChanged();
       }
-    } 
+    }
 
     @Override
-    protected Vector<TableHeaderColumnContent> compileHeader()
+    protected List<TableHeaderColumnContent> compileHeader()
     {
-      Vector<TableHeaderColumnContent> _header = new Vector<TableHeaderColumnContent>();
-      
+      ArrayList<TableHeaderColumnContent> _header = new ArrayList<>();
+
       for(String _column : this.astrHeader)
       {
         switch(_column)
@@ -131,7 +135,7 @@ public class SuperMeleeResultsTable extends SuperMeleeMatchdayTable
           default                         : _header.add(new TableHeaderColumnContent("", "", 100));
         }
       }
-      
+
       return _header;
     }
   }

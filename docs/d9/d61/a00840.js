@@ -1,9 +1,8 @@
 var a00840 =
 [
-    [ "AssociationAttendee", "d9/d61/a00840.html#a2b03304761fc1cf564f652de0422baba", null ],
-    [ "AssociationAttendee", "d9/d61/a00840.html#a36e9c72c1eed931b92ec42d79a581365", null ],
-    [ "getAssociation", "d9/d61/a00840.html#ae771bffdb63ecd8b4f8a2523ae7e9d99", null ],
-    [ "getElement", "d9/d61/a00840.html#a3c98af4cc3dc68150a70771e57ef3a1d", null ],
-    [ "setAssociation", "d9/d61/a00840.html#afc2f6d7e453aaf5e696508eaa6b1cb90", null ],
-    [ "association", "d9/d61/a00840.html#a548f382b96382c9abd14d2aae488510a", null ]
+    [ "Doublette", "d9/d61/a00840.html#a74e99f3fbb7999c30a0c451e8cb1c61a", null ],
+    [ "getAttendeesToArray", "d9/d61/a00840.html#a4ba871b41349a62ce93ca4fc84a6ce51", null ],
+    [ "getDescription", "d9/d61/a00840.html#a213a0c48bf0116a1cbffac3e871dcad6", null ],
+    [ "getDescriptionByCode", "d9/d61/a00840.html#aacfda61270916d22afc1be1eb4e3270c", null ],
+    [ "toBsonDocument", "d9/d61/a00840.html#a37a9d12806d675cb12e9ae66db640f85", null ]
 ];

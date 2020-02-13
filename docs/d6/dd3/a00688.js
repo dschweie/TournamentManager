@@ -1,7 +1,6 @@
 var a00688 =
 [
-    [ "setTournamentId", "d6/dd3/a00688.html#adb500b1f95da196b5263d8ef5a5bfd46", null ],
-    [ "setTournamentId", "d6/dd3/a00688.html#af62c6d1cf66150cb0247dfd82486f3f0", null ],
-    [ "toBsonDocument", "d6/dd3/a00688.html#af7a585bb4f36e12ead828f56a12b9698", null ],
-    [ "tid", "d6/dd3/a00688.html#a6f2b2f360290efaaf76ebb9420ae64f8", null ]
+    [ "doPop", "d6/dd3/a00688.html#a76452fe9c4c74f6f2ab00be57feef9cc", null ],
+    [ "mousePressed", "d6/dd3/a00688.html#a6d643a85054363fd2b1e9243f14e6e60", null ],
+    [ "mouseReleased", "d6/dd3/a00688.html#aafd5d8f3f6d97b564506b3d6bba52660", null ]
 ];

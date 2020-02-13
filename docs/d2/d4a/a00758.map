@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MatchdayUpdate" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.MatchdayUpdate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,376,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="171,5,210,32"/>
+<map id="org.dos.tournament.application.common.wizard.createtournament.WizardAction" name="org.dos.tournament.application.common.wizard.createtournament.WizardAction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,409,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="135,5,191,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="221,5,281,32"/>
 </map>

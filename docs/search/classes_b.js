@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['opentournamentaction',['OpenTournamentAction',['../d0/d7e/a00770.html',1,'org::dos::tournament::application::TournamentManagerUI']]],
-  ['openvieweraction',['OpenViewerAction',['../d6/d17/a00778.html',1,'org::dos::tournament::application::TournamentManagerUI']]]
+  ['numericassociationid_1054',['NumericAssociationId',['../d5/d4c/a01058.html',1,'org::dos::tournament::common::player::utils']]],
+  ['numericparticipantid_1055',['NumericParticipantId',['../d4/d8a/a01062.html',1,'org::dos::tournament::common::player::utils']]]
 ];

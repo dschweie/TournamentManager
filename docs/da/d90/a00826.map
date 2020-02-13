@@ -1,4 +1,7 @@
-<map id="org.dos.tournament.common.movement.regulations.Regulation&lt; T, G, P &gt;" name="org.dos.tournament.common.movement.regulations.Regulation&lt; T, G, P &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,139,328,180"/>
-<area shape="rect" id="node2" title=" " alt="" coords="111,5,222,32"/>
+<map id="org.dos.tournament.branch.petanque.result.PetanqueResult" name="org.dos.tournament.branch.petanque.result.PetanqueResult">
+<area shape="rect" id="node1" title=" " alt="" coords="99,291,374,332"/>
+<area shape="rect" id="node2" href="$db/d14/a01040.html" title=" " alt="" coords="5,172,233,213"/>
+<area shape="rect" id="node3" href="$d9/dce/a01052.html" title=" " alt="" coords="5,81,233,123"/>
+<area shape="rect" id="node4" href="$d0/d59/a01956.html" title=" " alt="" coords="74,5,165,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="257,179,296,206"/>
 </map>

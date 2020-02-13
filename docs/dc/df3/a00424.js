@@ -1,7 +1,7 @@
 var a00424 =
 [
-    [ "SwingActionUpdateLastRound", "dc/df3/a00424.html#a70c9ef36aa56f9e107dd081167aae2f5", null ],
-    [ "actionPerformed", "dc/df3/a00424.html#a2e0a960ac2ec1eb465c49eb0b071543f", null ],
-    [ "update", "dc/df3/a00424.html#a3ea2e474b3f76e24b0ef523f1228fb4d", null ],
-    [ "updateStatus", "dc/df3/a00424.html#a25e20bddfa2ca5eefd6f70872c619cbf", null ]
+    [ "SwingActionOK", "d4/dd3/a00428.html", "d4/dd3/a00428" ],
+    [ "SwingActionOkAndNext", "d9/dd5/a00432.html", "d9/dd5/a00432" ],
+    [ "DialogJoueurIndividuel", "dc/df3/a00424.html#aa8cd943772bd44634868a23fbe56a733", null ],
+    [ "DialogJoueurIndividuel", "dc/df3/a00424.html#a22ac689c2722ae3ca37468d06bc55af9", null ]
 ];

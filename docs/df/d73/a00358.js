@@ -1,8 +1,8 @@
 var a00358 =
 [
-    [ "competition", "df/df1/a00357.html", "df/df1/a00357" ],
-    [ "movement", "d0/d65/a00360.html", "d0/d65/a00360" ],
-    [ "player", "d7/ddb/a00361.html", "d7/ddb/a00361" ],
-    [ "result", "d9/d9b/a00363.html", "d9/d9b/a00363" ],
-    [ "storage", "dc/d59/a00364.html", "dc/d59/a00364" ]
+    [ "branch", "d4/def/a00359.html", "d4/def/a00359" ],
+    [ "common", "df/dee/a00369.html", "df/dee/a00369" ],
+    [ "configuration", "d2/d56/a00384.html", "d2/d56/a00384" ],
+    [ "factory", "d5/d05/a00385.html", "d5/d05/a00385" ],
+    [ "TournamentManagerUI", "de/d79/a00798.html", "de/d79/a00798" ]
 ];

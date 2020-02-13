@@ -1,5 +1,6 @@
 var a00556 =
 [
-    [ "SwingAction_1", "d6/d95/a00556.html#a0d508f356e7ac05b7c35ddc3e507295b", null ],
-    [ "actionPerformed", "d6/d95/a00556.html#a9fc501c0d50614c43fbcfc910e8f9f56", null ]
+    [ "LeaderboardTableModel", "d6/d95/a00556.html#aef2e187a6a65537504a2f0b3c9700580", null ],
+    [ "isCellEditable", "d6/d95/a00556.html#a6bf395a750ee450ad21fdac62a470436", null ],
+    [ "update", "d6/d95/a00556.html#acc497d50f66457e447498514ea6f1ba3", null ]
 ];

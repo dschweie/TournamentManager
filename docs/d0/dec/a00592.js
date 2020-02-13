@@ -1,28 +1,5 @@
 var a00592 =
 [
-    [ "ListenerTimerModification", "dc/d4d/a00620.html", "dc/d4d/a00620" ],
-    [ "SwingAction_1", "d1/d8c/a00600.html", "d1/d8c/a00600" ],
-    [ "SwingAction_2", "d4/d14/a00608.html", "d4/d14/a00608" ],
-    [ "SwingAction_3", "d0/d8d/a00612.html", "d0/d8d/a00612" ],
-    [ "SwingActionMatchdayTimer", "d6/d75/a00604.html", "d6/d75/a00604" ],
-    [ "SwingActionPrintMatchday", "dc/d25/a00596.html", "dc/d25/a00596" ],
-    [ "SwingActionToggleTeamPresentation", "db/db5/a00616.html", "db/db5/a00616" ],
-    [ "DefaultMatchdayPanel", "d0/dec/a00592.html#a759a90d8090c2a24835443d9e44353a3", null ],
-    [ "DefaultMatchdayPanel", "d0/dec/a00592.html#ad42ba7cdae37ccfad88fc0f70664255e", null ],
-    [ "DefaultMatchdayPanel", "d0/dec/a00592.html#a11cc60212d1c126e29605551a8d35347", null ],
-    [ "getPrintable", "d0/dec/a00592.html#a052c8d7e507d2d5a87d0d108890bc320", null ],
-    [ "setStateRuleOpponents", "d0/dec/a00592.html#ad0ddef7547f9d85b8dab95af8b53eecc", null ],
-    [ "setStateRuleTeammates", "d0/dec/a00592.html#abedfb7f8a1c980a2a446da7f6448ca87", null ],
-    [ "setStateRuleTriplette", "d0/dec/a00592.html#a0636bcf044358bad64e4bc0f1dfa1c94", null ],
-    [ "updateUI", "d0/dec/a00592.html#aace0a65d7e84a242d06f146825ebd231", null ],
-    [ "actionTimer", "d0/dec/a00592.html#a8d85eb7229bb04508aca5d4d13d52f68", null ],
-    [ "actionToggleTeamPresentation", "d0/dec/a00592.html#acc1aed5017d90a0564151ee5a99cbe83", null ],
-    [ "btnPrintMatchday", "d0/dec/a00592.html#a43d1fb096d05b842e9da5ac3f6a1abef", null ],
-    [ "printMatchday", "d0/dec/a00592.html#ac983730915a3f9ce3507f251dcf6271e", null ],
-    [ "progressBar", "d0/dec/a00592.html#ac61d62a49d57fe5831d4a93a4cf38fab", null ],
-    [ "scrollPane", "d0/dec/a00592.html#a350fd0a9e3a3fcb0204a3a43bf7eafaf", null ],
-    [ "stateOpponents", "d0/dec/a00592.html#a92c8919f37870b7b00de9a7cb3da33aa", null ],
-    [ "stateTeammates", "d0/dec/a00592.html#a7ffc9b7494db696fd7b9bd654e7bc910", null ],
-    [ "stateTriplette", "d0/dec/a00592.html#ae99aba5724ad0d1be98b2edecaf0a482", null ],
-    [ "tableMatches", "d0/dec/a00592.html#a3c86f6b4988f848d681041c563a12d69", null ]
+    [ "SwingActionOkAndNext", "d0/dec/a00592.html#adff931e592e61cb9c3b5ce51be81e96f", null ],
+    [ "actionPerformed", "d0/dec/a00592.html#a2a03bee3ae38c82d65495ef712da3a7b", null ]
 ];

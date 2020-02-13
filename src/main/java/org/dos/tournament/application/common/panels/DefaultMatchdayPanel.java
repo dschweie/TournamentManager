@@ -51,7 +51,7 @@ import java.io.IOException;
 import java.io.InputStream;
 /**
  * \brief       Diese Klasse repräsentiert die GUI für einen Spieltag
- * 
+ *
  * @author dirk.schweier
  */
 public class DefaultMatchdayPanel extends JPanel
@@ -66,7 +66,7 @@ public class DefaultMatchdayPanel extends JPanel
   private ToggleButton stateTriplette = new ToggleButton("T", "0", false);
   private JScrollPane scrollPane;
   private JButton btnPrintMatchday;
-  
+
 
   /**
    * Create the panel.
@@ -74,41 +74,31 @@ public class DefaultMatchdayPanel extends JPanel
   public DefaultMatchdayPanel()
   {
     setLayout(new BorderLayout(0, 0));
-    
+
     JToolBar toolBar = new JToolBar();
     add(toolBar, BorderLayout.SOUTH);
-    
+
     btnPrintMatchday = toolBar.add(printMatchday);
-    
-    /*
-    toolBar.add(this.stateTeammates);
-    toolBar.add(this.stateOpponents);
-    toolBar.add(this.stateTriplette);
-    this.stateTeammates.setToolTipText("Regel: Keine Runde mit dem gleichen Partner.");
-    this.stateOpponents.setToolTipText("Regel: Keine Runde gegen den gleichen Gegner.");
-    this.stateTriplette.setToolTipText("Regel: Keine zwei Runden im Triplette.");
-     */
-    
+
     Component horizontalStrut = Box.createHorizontalStrut(10);
     horizontalStrut.setMinimumSize(new Dimension(10, 10));
     horizontalStrut.setMaximumSize(new Dimension(32000, 10));
     toolBar.add(horizontalStrut);
-    
+
     JButton btnNewButton = new JButton("");
     btnNewButton.setAction(actionToggleTeamPresentation);
     toolBar.add(btnNewButton);
-    
+
     JButton btnTimer = toolBar.add(actionTimer);
-    
+
     progressBar = new JProgressBar();
-    //progressBar.setString("0:50");
     progressBar.setStringPainted(true);
     progressBar.setMinimumSize(new Dimension(64, 32));
     progressBar.setMaximumSize(new Dimension(64, 32));
     progressBar.addMouseListener(new ListenerTimerModification());
     toolBar.add(progressBar);
     this.actionTimer.updateProgressbar();
-    
+
     scrollPane = new JScrollPane();
     add(scrollPane, BorderLayout.CENTER);
   }
@@ -117,17 +107,17 @@ public class DefaultMatchdayPanel extends JPanel
   {
     this();
   }
-  
+
   public DefaultMatchdayPanel(SuperMelee tournament, int matchday)
   {
     this();
-    
+
     this.tableMatches = new SuperMeleeMatchdayTable(tournament, matchday);
     this.tableMatches.getTableHeader().setReorderingAllowed( false );
-    
-    
+
+
     this.btnPrintMatchday.setToolTipText("<html><p width=\"650\">" +tournament.getRegulationState().replaceAll("\n", "<br/>")+"</p></html>");
-        
+
     scrollPane.setViewportView(tableMatches);
   }
 
@@ -136,21 +126,21 @@ public class DefaultMatchdayPanel extends JPanel
     this.stateTeammates.setSelected(state);
     this.stateTeammates.repaint();
   }
-  
+
   public void setStateRuleOpponents(boolean state)
   {
     this.stateOpponents.setSelected(state);
     this.stateOpponents.repaint();
   }
-  
+
   public void setStateRuleTriplette(boolean state)
   {
     this.stateTriplette.setSelected(state);
     this.stateTriplette.repaint();
   }
-  
-  
-  
+
+
+
   /* (non-Javadoc)
    * @see javax.swing.JPanel#updateUI()
    */
@@ -177,24 +167,23 @@ public class DefaultMatchdayPanel extends JPanel
       putValue(NAME, "SwingAction");
       putValue(SHORT_DESCRIPTION, "prints the current data of this matchday");
     }
-    public void actionPerformed(ActionEvent e) 
+    public void actionPerformed(ActionEvent e)
     {
       PrinterJob _printJob = PrinterJob.getPrinterJob();
       PageFormat _page = new PageFormat();
-      
+
       _page.setOrientation(PageFormat.LANDSCAPE);
-      
+
       _printJob.setPrintable(DefaultMatchdayPanel.this.getPrintable(), _page);
-      
+
       if(_printJob.printDialog())
       {
         try
         {
           _printJob.print();
-        } 
+        }
         catch (PrinterException e1)
         {
-          // TODO Auto-generated catch block
           e1.printStackTrace();
         }
       }
@@ -205,12 +194,12 @@ public class DefaultMatchdayPanel extends JPanel
       putValue(NAME, "SwingAction_1");
       putValue(SHORT_DESCRIPTION, "Some short description");
     }
-    
-    public void actionPerformed(ActionEvent e) 
+
+    public void actionPerformed(ActionEvent e)
     {
     }
   }
-  
+
   private class SwingActionMatchdayTimer extends AbstractAction implements Runnable {
     private Thread thread;
     private GregorianCalendar xStart;
@@ -219,7 +208,7 @@ public class DefaultMatchdayPanel extends JPanel
     private boolean bRunning = false;
     private Clip clip;
 
-   
+
     public SwingActionMatchdayTimer() {
       putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_18-Time_2123866.png")));
       putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.timer.name")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -237,31 +226,28 @@ public class DefaultMatchdayPanel extends JPanel
         // Open audio clip and load samples from the audio input stream.
         clip.open(audioIn);
       } catch (LineUnavailableException e) {
-        // TODO Auto-generated catch block
         e.printStackTrace();
       } catch (IOException e) {
-        // TODO Auto-generated catch block
         e.printStackTrace();
       } catch (UnsupportedAudioFileException e) {
-        // TODO Auto-generated catch block
         e.printStackTrace();
       }
     }
-    
+
     public void actionPerformed(ActionEvent e) {
-      
+
       if(! this.thread.isAlive())
       { //  Thread is not running and should be started
         this.bRunning = true;
         this.xStart = new GregorianCalendar();
         this.xStop = (GregorianCalendar) this.xStart.clone();
-        this.xStop.add(GregorianCalendar.SECOND, (int)(Math.round(this.iMillis / 1000.0f))); 
+        this.xStop.add(GregorianCalendar.SECOND, (int)(Math.round(this.iMillis / 1000.0f)));
         DefaultMatchdayPanel.this.progressBar.setMaximum(this.iMillis);
         DefaultMatchdayPanel.this.progressBar.setOrientation(JProgressBar.HORIZONTAL);
         DefaultMatchdayPanel.this.progressBar.setIndeterminate(false);
         //  this.setEnabled(false);
         this.thread.start();
-        
+
         //  update the button
         this.putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_180-Time_2123970.png")));
         this.putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.timer.running.name")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -272,17 +258,17 @@ public class DefaultMatchdayPanel extends JPanel
         this.putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_18-Time_2123866.png")));
         this.putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.timer.name")); //$NON-NLS-1$ //$NON-NLS-2$
         this.putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.timer.short description")); //$NON-NLS-1$ //$NON-NLS-2$
-        
+
         this.bRunning = false;
         //this.thread.interrupt();
       }
     }
-    
+
     @Override
     public void run()
     {
       GregorianCalendar _now = new GregorianCalendar();
-      
+
       while(_now.before(this.xStop) && this.bRunning)
       {
         try
@@ -300,7 +286,7 @@ public class DefaultMatchdayPanel extends JPanel
           e.printStackTrace();
         }
       }
-    
+
       //  Abspielen der Sounddatei
       // Open an audio input stream.
       this.clip.loop(3);
@@ -309,7 +295,7 @@ public class DefaultMatchdayPanel extends JPanel
       try {
         for(int i=0; i<3; ++i)
         {
-          
+
           clip.start();
           try {
             Thread.sleep(500);
@@ -330,26 +316,26 @@ public class DefaultMatchdayPanel extends JPanel
         DefaultMatchdayPanel.this.progressBar.repaint();
         DefaultMatchdayPanel.this.progressBar.validate();
       }
-      
+
       this.thread = new Thread(this);
- 
+
       this.putValue(SMALL_ICON, new ImageIcon(DefaultMatchdayPanel.class.getResource("/org/dos/tournament/resources/icons/if_18-Time_2123866.png")));
       this.putValue(NAME, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.timer.name")); //$NON-NLS-1$ //$NON-NLS-2$
       this.putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.timer.short description")); //$NON-NLS-1$ //$NON-NLS-2$
     }
-    
+
     public final void join() throws InterruptedException
     {
       this.thread.join();
     }
-    
+
     public void setDurationInMillis(int time)
     {
       this.iMillis = time;
       if(!this.thread.isAlive())
         this.updateProgressbar();
     }
-    
+
     public void increaseDurationInMinutes(int minutes)
     {
       if(!this.thread.isAlive())
@@ -359,7 +345,7 @@ public class DefaultMatchdayPanel extends JPanel
         this.updateProgressbar();
       }
     }
-    
+
     public void updateProgressbar()
     {
       if(null != DefaultMatchdayPanel.this.progressBar)
@@ -394,7 +380,7 @@ public class DefaultMatchdayPanel extends JPanel
       putValue(NAME, "");
       putValue(SHORT_DESCRIPTION, "Some short description");
     }
-    
+
     private void updateButton(boolean numeric)
     {
       if(numeric)
@@ -410,13 +396,13 @@ public class DefaultMatchdayPanel extends JPanel
         putValue(SHORT_DESCRIPTION, ResourceBundle.getBundle("org.dos.tournament.resources.messages.messages").getString("DefaultMatchdayPanel.footer-toolbar.description.switchToNumeric"));
       }
     }
-    
+
     public void actionPerformed(ActionEvent e) {
       this.updateButton(((SuperMeleeMatchdayTable) DefaultMatchdayPanel.this.tableMatches).toggleOutputParticipants());
     }
   }
-  
-  private class ListenerTimerModification extends MouseAdapter 
+
+  private class ListenerTimerModification extends MouseAdapter
   {
     public void mousePressed(MouseEvent e)
     {
@@ -437,7 +423,7 @@ public class DefaultMatchdayPanel extends JPanel
           else if ( 2 == e.getClickCount() )
             DefaultMatchdayPanel.this.actionTimer.increaseDurationInMinutes(4);
         }
-          
+
       }
     }
 
@@ -450,12 +436,12 @@ public class DefaultMatchdayPanel extends JPanel
     private void doPop(MouseEvent e){
         //PopUpDemo menu = new PopUpDemo();
         //menu.show(e.getComponent(), e.getX(), e.getY());
-    } 
+    }
   }
 
   public Printable getPrintable()
   {
     return this.tableMatches.getPrintable(PrintMode.FIT_WIDTH, new MessageFormat(String.format("Runde %d", ((SuperMeleeMatchdayTable) this.tableMatches).getMatchdayIndex()+1)), new MessageFormat(String.format("Tournament Manager %1$s               %2$td.%2$tm.%2$tY               Seite {0}", ResourceBundle.getBundle("org.dos.tournament.resources.config").getString("TournamentManager.version"), GregorianCalendar.getInstance())));
   }
-  
+
 }

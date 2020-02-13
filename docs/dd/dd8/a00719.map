@@ -1,7 +1,7 @@
-<map id="org.dos.tournament.branch.petanque.team.Triplette" name="org.dos.tournament.branch.petanque.team.Triplette">
-<area shape="rect" id="node1" title=" " alt="" coords="5,363,276,404"/>
-<area shape="rect" id="node2" href="$d4/d6a/a00704.html" title=" " alt="" coords="5,273,276,315"/>
-<area shape="rect" id="node3" href="$d3/d13/a00836.html" title=" " alt="" coords="25,184,256,225"/>
-<area shape="rect" id="node4" href="$d0/d08/a00832.html" title=" " alt="" coords="25,95,256,136"/>
-<area shape="rect" id="node5" href="$d9/d30/a00848.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="25,5,256,47"/>
+<map id="org.dos.tournament.application.common.wizard.createtournament.AbstractTournamentWizardPanel" name="org.dos.tournament.application.common.wizard.createtournament.AbstractTournamentWizardPanel">
+<area shape="rect" id="node1" title=" " alt="" coords="115,71,519,112"/>
+<area shape="rect" id="node3" href="$d0/d72/a00724.html" title=" " alt="" coords="568,5,1027,47"/>
+<area shape="rect" id="node4" href="$dd/d5c/a00752.html" title=" " alt="" coords="567,71,1028,112"/>
+<area shape="rect" id="node5" href="$d9/d77/a00756.html" title=" " alt="" coords="567,136,1028,177"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,78,67,105"/>
 </map>

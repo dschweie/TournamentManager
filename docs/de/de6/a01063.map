@@ -1,4 +1,5 @@
-<map id="Runnable" name="Runnable">
-<area shape="rect" id="node2" href="$dc/ded/a00252.html" title="org.dos.tournament.application.common.panels.\lDefaultMatchdayPanel.SwingActionMatchdayTimer" alt="" coords="156,5,473,47"/>
-<area shape="rect" id="node3" href="$df/d38/a00468.html" title="org.dos.tournament.branch.petanque.tournament.movement.\lSuperMelee.MonitoringThread" alt="" coords="129,71,500,112"/>
+<map id="org.dos.tournament.common.storage.mongo.DatabaseClient" name="org.dos.tournament.common.storage.mongo.DatabaseClient">
+<area shape="rect" id="node1" title=" " alt="" coords="91,95,374,136"/>
+<area shape="rect" id="node2" href="$d5/d16/a01060.html" title="Diese Schnittstelle ist Fassade für unterschiedliche Implementierungen zum Speichern von Daten." alt="" coords="5,5,244,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="269,13,415,39"/>
 </map>

@@ -8,6 +8,8 @@ import org.dos.tournament.application.branch.petanque.panels.components.tables.S
 import org.dos.tournament.branch.petanque.tournament.movement.SuperMelee;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.Font;
+
 import javax.swing.JSplitPane;
 import java.awt.Dimension;
 import javax.swing.border.EtchedBorder;
@@ -36,8 +38,8 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
   private SuperMeleeLeaderboardTable leaderboardTable;
   private JScrollPane scrollPaneLeaderboard;
   private JScrollPane scrollPaneResults;
-  
-  public PetanqueSuperMeleeViewerPanel(SuperMelee tournament) 
+
+  public PetanqueSuperMeleeViewerPanel(SuperMelee tournament)
   {
     super(tournament);
     setSize(new Dimension(820, 550));
@@ -48,7 +50,7 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
     gridBagLayout.columnWeights = new double[]{0.3, 0.4, 0.3};
     gridBagLayout.rowWeights = new double[]{1.0};
     setLayout(gridBagLayout);
-        
+
     panelParticipants = new JPanel();
     panelParticipants.setPreferredSize(new Dimension(15, 15));
     panelParticipants.setBorder(new TitledBorder(null, "Teilnehmer", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -62,6 +64,8 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
     panelParticipants.setLayout(new BoxLayout(panelParticipants, BoxLayout.X_AXIS));
 
     participantTable = new ParticipantTable(tournament);
+    participantTable.setFont(new Font("Verdana", Font.PLAIN, 24));
+    participantTable.setRowHeight(28);
 
     scrollPaneParticipants = new JScrollPane();
     scrollPaneParticipants.setOpaque(false);
@@ -85,10 +89,12 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
     gbc_panelResults.gridy = 0;
     add(panelResults, gbc_panelResults);
     panelResults.setLayout(new BoxLayout(panelResults, BoxLayout.X_AXIS));
-    
+
     this.resultsTable = new SuperMeleeResultsTable(tournament, 1);
     resultsTable.setFillsViewportHeight(false);
     resultsTable.setDragEnabled(false);
+    resultsTable.setFont(new Font("Verdana", Font.PLAIN, 24));
+    resultsTable.setRowHeight(28);
 
     scrollPaneResults = new JScrollPane();
     scrollPaneResults.setOpaque(false);
@@ -98,7 +104,7 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
     scrollPaneResults.setAlignmentY(Component.TOP_ALIGNMENT);
     scrollPaneResults.setViewportView(resultsTable);
     panelResults.add(scrollPaneResults);
-    
+
     panelLeaderboard = new JPanel();
     panelLeaderboard.setPreferredSize(new Dimension(30, 30));
     panelLeaderboard.setAlignmentY(Component.TOP_ALIGNMENT);
@@ -110,12 +116,13 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
     gbc_panelLeaderboard.gridy = 0;
     add(panelLeaderboard, gbc_panelLeaderboard);
     panelLeaderboard.setLayout(new BoxLayout(panelLeaderboard, BoxLayout.X_AXIS));
-    
+
     this.leaderboardTable = new SuperMeleeLeaderboardTable(tournament);
     leaderboardTable.setFillsViewportHeight(false);
     leaderboardTable.setDragEnabled(false);
-    
-    
+    leaderboardTable.setFont(new Font("Verdana", Font.PLAIN, 24));
+    leaderboardTable.setRowHeight(28);
+
     scrollPaneLeaderboard = new JScrollPane();
     scrollPaneLeaderboard.setOpaque(false);
     scrollPaneLeaderboard.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -126,12 +133,12 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
     scrollPaneLeaderboard.setBorder(null);
     scrollPaneLeaderboard.setViewportView(leaderboardTable);
     panelLeaderboard.add(scrollPaneLeaderboard);
-    
-    
+
+
     this.revalidate();
     scrollPaneResults.getVerticalScrollBar().setValue(this.scrollPaneResults.getVerticalScrollBar().getMaximum());
     this.revalidate();
-    
+
   }
 
   @Override
@@ -147,14 +154,14 @@ public class PetanqueSuperMeleeViewerPanel extends AbstractPetanqueSuperMeleePan
         int _maximum = this.scrollPaneParticipants.getVerticalScrollBar().getMaximum();
         int _current = this.scrollPaneParticipants.getVerticalScrollBar().getValue();
         int _size = this.scrollPaneParticipants.getHeight();
-        
-        this.scrollPaneParticipants.getVerticalScrollBar().setValue((_current + Math.round(0.9f * _size)) % _maximum); 
+
+        this.scrollPaneParticipants.getVerticalScrollBar().setValue((_current + Math.round(0.9f * _size)) % _maximum);
       }
     }
     catch(NullPointerException ne) { /* no problem */ }
     catch(Exception e) { /* no problem, too */ }
     super.updateUI();
-  }  
-  
+  }
+
 
 }
