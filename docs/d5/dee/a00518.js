@@ -1,4 +1,27 @@
 var a00518 =
 [
-    [ "update", "d5/dee/a00518.html#a54abf57fecbaf98cdab7e5c15d5b8115", null ]
+    [ "SwingActionActivateAttendee", "da/d7e/a00530.html", "da/d7e/a00530" ],
+    [ "SwingActionCreateNewMatchday", "d0/ddb/a00542.html", "d0/ddb/a00542" ],
+    [ "SwingActionDeleteAttendee", "dd/d5a/a00538.html", "dd/d5a/a00538" ],
+    [ "SwingActionDeleteLastMatchday", "de/de7/a00550.html", "de/de7/a00550" ],
+    [ "SwingActionEnlistAttendee", "d8/d14/a00522.html", "d8/d14/a00522" ],
+    [ "SwingActionInactivateAttendee", "dc/d20/a00534.html", "dc/d20/a00534" ],
+    [ "SwingActionSetMatchdayManually", "dc/df9/a00554.html", "dc/df9/a00554" ],
+    [ "SwingActionUpdateAttendee", "d0/d35/a00526.html", "d0/d35/a00526" ],
+    [ "SwingActionUpdateLastRound", "dc/d2b/a00546.html", "dc/d2b/a00546" ],
+    [ "PetanqueSuperMeleePanel", "d5/dee/a00518.html#a0f2956014086094bfc9b2fa154887614", null ],
+    [ "action", "d5/dee/a00518.html#a9859a936ede51cbd8f5453604ad773c3", null ],
+    [ "activateAttendee", "d5/dee/a00518.html#ae506a1941eafebc0dc78feae7a5b4753", null ],
+    [ "createNewMatchday", "d5/dee/a00518.html#a7d03ecb387d94261686630528203409c", null ],
+    [ "deleteAttendee", "d5/dee/a00518.html#acd9ae380efec364d6c4c864e0958edeb", null ],
+    [ "deleteLastMatchday", "d5/dee/a00518.html#ae2c87d828f5a8f6334b7bae7319dc9fd", null ],
+    [ "enlistAttendee", "d5/dee/a00518.html#aad62a8443b27b5499cb772fbe7aeeb14", null ],
+    [ "inactivateAttendee", "d5/dee/a00518.html#a0bd81242fbbd53e6716b86c09872b2dd", null ],
+    [ "replaceLastMatchday", "d5/dee/a00518.html#a8a417e3554d115c2523164fcacedbb58", null ],
+    [ "tabbedPaneMatchdays", "d5/dee/a00518.html#a54d27cb40de9975cd20928600c84d681", null ],
+    [ "table", "d5/dee/a00518.html#a7f177bc910aa17bf72ef244a1edc7a3e", null ],
+    [ "tableAttendees", "d5/dee/a00518.html#a2e371e371a4241cf34c058c99f92d049", null ],
+    [ "tableCourts", "d5/dee/a00518.html#ae3e1a0113a35bc60b97f2d709728a229", null ],
+    [ "tableLeaderboard", "d5/dee/a00518.html#a49779e4e03a13fe997220fb1c71f2283", null ],
+    [ "updateAttendee", "d5/dee/a00518.html#a645fae8d18a1a7637a952ff90a3e2963", null ]
 ];

@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.application.common.TournamentManagerFrame" name="org.dos.tournament.application.common.TournamentManagerFrame">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,264,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="102,5,167,32"/>
+<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableCellRendererGuestColumn" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableCellRendererGuestColumn">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,380,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="109,5,276,32"/>
 </map>

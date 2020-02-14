@@ -1,6 +1,4 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique" name="org.dos.tournament.branch.petanque.tournament.movement.regulations.CoreRuleSuperMeleeAllIndicesUnique">
-<area shape="rect" id="node1" title="Diese Klasse ist Basisklasse im Regelwerk." alt="" coords="909,43,1347,85"/>
-<area shape="rect" id="node2" href="$d0/ddf/a00918.html" title=" " alt="" coords="601,29,860,99"/>
-<area shape="rect" id="node3" href="$d8/d38/a00926.html" title=" " alt="" coords="333,36,552,92"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,51,116,77"/>
+<map id="org.dos.tournament.branch.boardgames.movement.TableBasedIndividual" name="org.dos.tournament.branch.boardgames.movement.TableBasedIndividual">
+<area shape="rect" id="node1" title=" " alt="" coords="5,153,324,195"/>
+<area shape="rect" id="node2" title=" " alt="" coords="145,5,184,32"/>
 </map>

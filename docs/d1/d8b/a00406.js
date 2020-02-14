@@ -1,8 +1,9 @@
 var a00406 =
 [
-    [ "AbstractPetanqueSuperMeleePanel", "d1/d8b/a00406.html#a90ea126d20f1aaa58d0c2184229b1242", null ],
-    [ "getTournament", "d1/d8b/a00406.html#afbbffd357625d4605f4627f0cc397b89", null ],
-    [ "getTournamentIdAsString", "d1/d8b/a00406.html#a4ba68de82876d9dfb82be4ddeed0df1f", null ],
-    [ "setTournament", "d1/d8b/a00406.html#aec03ca1760bb0c4107bd2729b087890f", null ],
-    [ "tournament", "d1/d8b/a00406.html#ae52eeedcb0417f0b7108de0159aa091d", null ]
+    [ "ByeParticipantId", "da/d17/a01046.html", "da/d17/a01046" ],
+    [ "EmptyParticipantId", "d9/d8e/a01050.html", "d9/d8e/a01050" ],
+    [ "IParticipantId", "dd/d57/a01054.html", "dd/d57/a01054" ],
+    [ "NumericAssociationId", "d5/d4c/a01058.html", "d5/d4c/a01058" ],
+    [ "NumericParticipantId", "d4/d8a/a01062.html", "d4/d8a/a01062" ],
+    [ "ParticipantStatus", "d0/dfb/a01066.html", "d0/dfb/a01066" ]
 ];

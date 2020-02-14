@@ -1,9 +1,6 @@
 var a00402 =
 [
-    [ "TableModel", "d1/d8b/a00406.html", "d1/d8b/a00406" ],
-    [ "ParticipantTable", "d4/d6d/a00402.html#a743251dc13f4a5110f19e217d4b736f1", null ],
-    [ "isCellEditable", "d4/d6d/a00402.html#a90dde496eba20cafd6bbef3c99b98a17", null ],
-    [ "updateColumnSize", "d4/d6d/a00402.html#a404cba0d8135068d0d33f35ff72599e7", null ],
-    [ "tableModel", "d4/d6d/a00402.html#a005aa30d40bddf493ccf47d63564b1d1", null ],
-    [ "tournament", "d4/d6d/a00402.html#a4fa8cf90a53379f4da477069be2f4eb8", null ]
+    [ "regulations", "d0/da0/a00403.html", "d0/da0/a00403" ],
+    [ "utils", "d9/de6/a00404.html", "d9/de6/a00404" ],
+    [ "IFinals", "d2/dd5/a01002.html", null ]
 ];

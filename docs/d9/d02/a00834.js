@@ -1,10 +1,8 @@
 var a00834 =
 [
-    [ "RuleSuperMeleeNeverMeetOpponentTwice", "d9/d02/a00834.html#ac0412e30cbb70d9718b746082a7b5c92", null ],
-    [ "getRuleDescription", "d9/d02/a00834.html#acc6b78d6943f6f78e49ce4e2cbb7eadb", null ],
-    [ "initParticipantTable", "d9/d02/a00834.html#a885686fd17211f7d7e329b008ab8d922", null ],
-    [ "performCheck", "d9/d02/a00834.html#aa0a65839cb56c9cee2f62d9e8ffa307d", null ],
-    [ "performInit", "d9/d02/a00834.html#a1f8654b7b6e0d743333941704d523f41", null ],
-    [ "performTeardown", "d9/d02/a00834.html#a39424046b2249ea932b674c621b8551d", null ],
-    [ "aiParticipantTable", "d9/d02/a00834.html#abafb0b085a12a0c694ee3b5d36db8150", null ]
+    [ "PetanqueMatchResult", "d9/d02/a00834.html#a6d3851132a1254e4153811b22cc16ebf", null ],
+    [ "compareTo", "d9/d02/a00834.html#ac2d36a282bb784baa8c43cd2d9f9141c", null ],
+    [ "compileGameScore", "d9/d02/a00834.html#a0ef554cc882591fa0bf1dfb4cc85f6c8", null ],
+    [ "getMatchScore", "d9/d02/a00834.html#a98478c8e57499ed66231cc05e404bcb5", null ],
+    [ "matchScore", "d9/d02/a00834.html#a7f1f5a09da2784c47f48562f433d1157", null ]
 ];

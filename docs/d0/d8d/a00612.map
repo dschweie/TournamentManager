@@ -1,4 +1,12 @@
-<map id="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableCellRendererHomeColumn" name="org.dos.tournament.application.common.panels.components.SuperMeleeMatchdayTable.TableCellRendererHomeColumn">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,380,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="109,5,276,32"/>
+<map id="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournament" name="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournament">
+<area shape="rect" id="node1" title=" " alt="" coords="592,154,964,195"/>
+<area shape="rect" id="node2" title=" " alt="" coords="288,5,352,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="280,56,360,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="291,108,349,135"/>
+<area shape="rect" id="node5" title=" " alt="" coords="267,159,373,185"/>
+<area shape="rect" id="node6" title=" " alt="" coords="18,157,67,184"/>
+<area shape="rect" id="node7" title=" " alt="" coords="249,210,391,251"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,217,80,244"/>
+<area shape="rect" id="node9" title=" " alt="" coords="265,276,375,303"/>
+<area shape="rect" id="node10" title=" " alt="" coords="287,327,353,353"/>
 </map>

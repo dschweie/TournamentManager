@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.application.branch.petanque.panels.PetanqueLEquipeFormePanel.SwingActionUpdateLEquipe" name="org.dos.tournament.application.branch.petanque.panels.PetanqueLEquipeFormePanel.SwingActionUpdateLEquipe">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,364,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="131,5,239,32"/>
+<map id="org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel.SwingActionOkAndNext" name="org.dos.tournament.application.branch.petanque.dialogs.player.DialogJoueurIndividuel.SwingActionOkAndNext">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,393,136"/>
+<area shape="rect" id="node2" title=" " alt="" coords="79,5,187,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="211,5,321,32"/>
 </map>

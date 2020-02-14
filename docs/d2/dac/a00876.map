@@ -1,7 +1,5 @@
-<map id="org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult" name="org.dos.tournament.branch.petanque.tournament.partie.CompetitorPartieResult">
-<area shape="rect" id="node1" title=" " alt="" coords="568,99,911,140"/>
-<area shape="rect" id="node2" href="$d0/d4a/a01862.html" title=" " alt="" coords="161,5,361,47"/>
-<area shape="rect" id="node3" title=" " alt="" coords="241,106,280,133"/>
-<area shape="rect" id="node4" href="$da/d40/a00946.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="145,157,376,199"/>
-<area shape="rect" id="node5" href="$d0/d4a/a01862.html" title=" " alt="" coords="5,165,96,191"/>
+<map id="org.dos.tournament.branch.petanque.tournament.matchday.Matchday" name="org.dos.tournament.branch.petanque.tournament.matchday.Matchday">
+<area shape="rect" id="node1" title=" " alt="" coords="25,228,393,269"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,124,412,165"/>
+<area shape="rect" id="node3" title=" " alt="" coords="171,5,246,32"/>
 </map>

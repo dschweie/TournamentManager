@@ -1,5 +1,8 @@
 var a00401 =
 [
-    [ "SwingActionUpdateLEquipe", "d7/d00/a00401.html#acacfb37b872138b45c624c53dd4d4f9e", null ],
-    [ "actionPerformed", "d7/d00/a00401.html#a0a6380414495b4bf5cf8c2a5affc6f68", null ]
+    [ "competition", "d9/d95/a00400.html", "d9/d95/a00400" ],
+    [ "movement", "d4/d6d/a00402.html", "d4/d6d/a00402" ],
+    [ "player", "de/de8/a00405.html", "de/de8/a00405" ],
+    [ "result", "d1/d98/a00407.html", "d1/d98/a00407" ],
+    [ "storage", "dd/dea/a00408.html", "dd/dea/a00408" ]
 ];

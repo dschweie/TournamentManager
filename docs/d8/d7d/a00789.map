@@ -1,8 +1,5 @@
-<map id="org.dos.tournament.branch.petanque.result.PetanqueMatchResult" name="org.dos.tournament.branch.petanque.result.PetanqueMatchResult">
-<area shape="rect" id="node1" title=" " alt="" coords="1019,5,1293,47"/>
-<area shape="rect" id="node6" href="$de/d79/a00798.html" title=" " alt="" coords="1341,5,1632,47"/>
-<area shape="rect" id="node2" href="$d5/d12/a00794.html" title=" " alt="" coords="696,5,971,47"/>
-<area shape="rect" id="node3" href="$d2/d6e/a00966.html" title=" " alt="" coords="420,5,648,47"/>
-<area shape="rect" id="node4" href="$d2/ddd/a00978.html" title=" " alt="" coords="144,5,372,47"/>
-<area shape="rect" id="node5" href="$d0/d4a/a01862.html" title=" " alt="" coords="5,13,96,39"/>
+<map id="org.dos.tournament.application.factory.model.ITournamentWorker" name="org.dos.tournament.application.factory.model.ITournamentWorker">
+<area shape="rect" id="node1" title=" " alt="" coords="407,5,693,47"/>
+<area shape="rect" id="node3" href="$d1/da6/a00738.html" title=" " alt="" coords="741,5,1145,47"/>
+<area shape="rect" id="node2" href="$d6/d59/a00726.html" title=" " alt="" coords="5,5,359,47"/>
 </map>

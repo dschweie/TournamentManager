@@ -1,4 +1,7 @@
-<map id="org.dos.tournament.common.result.ITotalResult" name="org.dos.tournament.common.result.ITotalResult">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,233,121"/>
-<area shape="rect" id="node2" href="$d0/d4a/a01862.html" title=" " alt="" coords="74,5,165,32"/>
+<map id="org.dos.tournament.common.competition.AbstractTournament" name="org.dos.tournament.common.competition.AbstractTournament">
+<area shape="rect" id="node1" title=" " alt="" coords="208,109,471,151"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,13,92,39"/>
+<area shape="rect" id="node3" href="$d9/d9a/a00998.html" title="Das Interface dient als allgemeine Schittstelle für Turniere." alt="" coords="116,5,379,47"/>
+<area shape="rect" id="node4" title=" " alt="" coords="403,13,459,39"/>
+<area shape="rect" id="node5" title=" " alt="" coords="484,13,536,39"/>
 </map>

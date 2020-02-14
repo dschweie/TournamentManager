@@ -1,4 +1,4 @@
-<map id="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournamentDep" name="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournamentDep">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,377,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="159,5,223,32"/>
+<map id="org.dos.tournament.application.common.controls.ToggleButton" name="org.dos.tournament.application.common.controls.ToggleButton">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,313,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="105,5,214,32"/>
 </map>

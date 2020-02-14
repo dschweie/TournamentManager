@@ -1,6 +1,7 @@
-<map id="org.dos.tournament.application.factory.model.ITournamentWorker" name="org.dos.tournament.application.factory.model.ITournamentWorker">
-<area shape="rect" id="node1" title=" " alt="" coords="407,39,693,80"/>
-<area shape="rect" id="node3" href="$d7/dc3/a00682.html" title=" " alt="" coords="741,5,1145,47"/>
-<area shape="rect" id="node4" href="$dd/d85/a00702.html" title=" " alt="" coords="741,71,1145,112"/>
-<area shape="rect" id="node2" href="$d8/d73/a00674.html" title=" " alt="" coords="5,39,359,80"/>
+<map id="org.dos.tournament.application.common.wizard.createtournament.AbstractTournamentWizardPanel" name="org.dos.tournament.application.common.wizard.createtournament.AbstractTournamentWizardPanel">
+<area shape="rect" id="node1" title=" " alt="" coords="115,71,519,112"/>
+<area shape="rect" id="node3" href="$d6/dc0/a00734.html" title=" " alt="" coords="568,5,1027,47"/>
+<area shape="rect" id="node4" href="$df/d5f/a00762.html" title=" " alt="" coords="567,71,1028,112"/>
+<area shape="rect" id="node5" href="$d4/d13/a00766.html" title=" " alt="" coords="567,136,1028,177"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,78,67,105"/>
 </map>

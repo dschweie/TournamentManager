@@ -1,6 +1,5 @@
 var a00686 =
 [
-    [ "dispose", "df/d9e/a00686.html#a81e324402679cfb65e37bf03a80dd854", null ],
-    [ "properties", "df/d9e/a00686.html#a19fe1fe90f79d3f9d0775602b97dbd7a", null ],
-    [ "xWizard", "df/d9e/a00686.html#a09fc758f15942ba8e708b6d9104cbb60", null ]
+    [ "SwingAction_2", "df/d9e/a00686.html#aabb31a5ed0e1cafc47c5b6052162550e", null ],
+    [ "actionPerformed", "df/d9e/a00686.html#ac8c2182d88e33e22a80b867d2790e2d8", null ]
 ];

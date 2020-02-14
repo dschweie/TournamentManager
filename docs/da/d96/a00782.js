@@ -1,14 +1,16 @@
 var a00782 =
 [
-    [ "TableBasedIndividual", "da/d96/a00782.html#ab709110f3f600cf117ab857c7a965e68", null ],
-    [ "checkChair", "da/d96/a00782.html#a5f39a2d122ea4399c44c841b048713c0", null ],
-    [ "generateMovement", "da/d96/a00782.html#a50296c565fc66b8bdf6e301af6de66f7", null ],
-    [ "printMovement", "da/d96/a00782.html#a502c25d548581f050c9171d8eec0b8d8", null ],
-    [ "releaseChair", "da/d96/a00782.html#a1e35a50fd50314ef6a8ff5dfcb2c9a80", null ],
-    [ "setChair", "da/d96/a00782.html#ae29c7cf457a8bd01b8e1b83facb1c344", null ],
-    [ "chairs", "da/d96/a00782.html#a611bba1afdae9f6739f440732e8f33bc", null ],
-    [ "meetings", "da/d96/a00782.html#ad54575272e78fc5f1aa4ef0b6e2b8bfc", null ],
-    [ "participants", "da/d96/a00782.html#a5bc29b8b291a2d40169c640460e61d93", null ],
-    [ "rounds", "da/d96/a00782.html#a146c35bc4eeae374804e664fcbc07572", null ],
-    [ "tables", "da/d96/a00782.html#a20a72d1880b5a8a2063ba7b12d1e85bf", null ]
+    [ "_doCloseApplication", "da/d96/a00782.html#a8f1a569089a016db3145b12bcb082b7c", null ],
+    [ "_doDisplayErrorMessage", "da/d96/a00782.html#ad905c49d9de0e21fc8e16b14d703d794", null ],
+    [ "_doLoadTournament", "da/d96/a00782.html#adf289b0541bf03eb1d4c019162b89cbd", null ],
+    [ "_doSelectTournament", "da/d96/a00782.html#a98d4464de353d407c81f0137079581f3", null ],
+    [ "_doSetDefaultExitMode_EXIT", "da/d96/a00782.html#a71d7cb6cc16b6ee14f0ee6fd31956eb9", null ],
+    [ "_doSetDefaultExitMode_HIDE", "da/d96/a00782.html#ae56fdddf9d1427011846a7d396d7f301", null ],
+    [ "_doSetFileMenuVisible_False", "da/d96/a00782.html#a430f26d92ee197e5b8e661f2e50360ba", null ],
+    [ "_doSetFileMenuVisible_True", "da/d96/a00782.html#a365fb39864f6a4a0042fcec4c3844f40", null ],
+    [ "_doTrace", "da/d96/a00782.html#a27c02da62944474059674796a11fc323", null ],
+    [ "_isOpenedInSateliteMode", "da/d96/a00782.html#abe6572beb16970af9659372ca9777b18", null ],
+    [ "_isTournamentDataValid", "da/d96/a00782.html#a93cb399105869a9ab4ac22d5b043799a", null ],
+    [ "_isTournamentIDExists", "da/d96/a00782.html#a7d7ee8e178aac38963b85ae7c0145a8e", null ],
+    [ "_isViewParameterExists", "da/d96/a00782.html#a40f292d92a0a52e50e3725abc78509d4", null ]
 ];

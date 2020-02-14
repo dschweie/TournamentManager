@@ -1,6 +1,5 @@
-<map id="org.dos.tournament.application.common.wizard.common.IWizardWorker" name="org.dos.tournament.application.common.wizard.common.IWizardWorker">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,359,80"/>
-<area shape="rect" id="node2" href="$d1/d97/a00670.html" title=" " alt="" coords="407,5,705,47"/>
-<area shape="rect" id="node4" href="$d4/dfa/a00746.html" title=" " alt="" coords="413,71,699,112"/>
-<area shape="rect" id="node3" href="$da/d3a/a00694.html" title=" " alt="" coords="753,39,1157,80"/>
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.SwingActionMatchdayTimer">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,323,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="53,5,161,32"/>
+<area shape="rect" id="node3" href="$d3/dc4/a01990.html" title=" " alt="" coords="185,5,261,32"/>
 </map>

@@ -1,4 +1,7 @@
-<map id="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.AssociatedVector&lt; E &gt;" name="org.dos.tournament.branch.petanque.tournament.movement.SuperMelee.AssociatedVector&lt; E &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,376,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="117,5,265,32"/>
+<map id="org.dos.tournament.branch.petanque.team.PetanqueBye" name="org.dos.tournament.branch.petanque.team.PetanqueBye">
+<area shape="rect" id="node1" title=" " alt="" coords="5,363,276,404"/>
+<area shape="rect" id="node2" href="$dc/d0a/a00850.html" title=" " alt="" coords="5,273,276,315"/>
+<area shape="rect" id="node3" href="$de/d41/a01030.html" title=" " alt="" coords="25,184,256,225"/>
+<area shape="rect" id="node4" href="$de/d02/a01026.html" title=" " alt="" coords="25,95,256,136"/>
+<area shape="rect" id="node5" href="$d4/d56/a01042.html" title="Dieses ist das zentrale Interface für Teilnehmer oder Teams im Turnier." alt="" coords="25,5,256,47"/>
 </map>

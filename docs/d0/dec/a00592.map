@@ -1,5 +1,4 @@
-<map id="org.dos.tournament.application.common.panels.AbstractTournamentPanel" name="org.dos.tournament.application.common.panels.AbstractTournamentPanel">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,305,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="15,13,77,39"/>
-<area shape="rect" id="node3" href="$d9/db8/a00658.html" title=" " alt="" coords="101,5,428,47"/>
+<map id="org.dos.tournament.application.common.dialogs.player.DialogAssociationAttendee.SwingActionOK" name="org.dos.tournament.application.common.dialogs.player.DialogAssociationAttendee.SwingActionOK">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,348,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="123,5,231,32"/>
 </map>

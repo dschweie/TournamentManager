@@ -1,5 +1,7 @@
-<map id="org.dos.tournament.branch.petanque.tournament.partie.Partie" name="org.dos.tournament.branch.petanque.tournament.partie.Partie">
-<area shape="rect" id="node1" title=" " alt="" coords="5,184,348,225"/>
-<area shape="rect" id="node2" href="$dc/dfa/a00894.html" title=" " alt="" coords="45,95,308,136"/>
-<area shape="rect" id="node3" href="$d4/d12/a00910.html" title=" " alt="" coords="45,5,308,47"/>
+<map id="org.dos.tournament.branch.petanque.tournament.movement.FormeeSwissSystem" name="org.dos.tournament.branch.petanque.tournament.movement.FormeeSwissSystem">
+<area shape="rect" id="node1" title=" " alt="" coords="647,61,1017,102"/>
+<area shape="rect" id="node2" href="$d1/d7a/a00982.html" title=" " alt="" coords="326,27,589,69"/>
+<area shape="rect" id="node3" title=" " alt="" coords="93,5,180,32"/>
+<area shape="rect" id="node4" href="$d9/d9a/a00998.html" title="Das Interface dient als allgemeine Schittstelle für Turniere." alt="" coords="5,57,268,98"/>
+<area shape="rect" id="node5" href="$d3/d08/a01018.html" title=" " alt="" coords="316,93,599,134"/>
 </map>

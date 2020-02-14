@@ -1,5 +1,9 @@
-<map id="org.dos.tournament.common.player.utils.NumericParticipantId" name="org.dos.tournament.common.player.utils.NumericParticipantId">
-<area shape="rect" id="node1" title=" " alt="" coords="92,109,351,151"/>
-<area shape="rect" id="node2" href="$df/d39/a00950.html" title=" " alt="" coords="5,5,264,47"/>
-<area shape="rect" id="node3" title=" " alt="" coords="289,13,327,39"/>
+<map id="org.dos.tournament.branch.petanque.tournament.partie.Partie" name="org.dos.tournament.branch.petanque.tournament.partie.Partie">
+<area shape="rect" id="node1" title=" " alt="" coords="1059,71,1401,112"/>
+<area shape="rect" id="node2" href="$d2/ddd/a00978.html" title=" " alt="" coords="747,71,1009,112"/>
+<area shape="rect" id="node3" href="$d4/dd0/a00994.html" title=" " alt="" coords="347,5,609,47"/>
+<area shape="rect" id="node4" href="$dd/df1/a01082.html" title=" " alt="" coords="364,71,592,112"/>
+<area shape="rect" id="node5" href="$d4/dae/a01994.html" title=" " alt="" coords="5,78,96,105"/>
+<area shape="rect" id="node6" title=" " alt="" coords="331,136,625,177"/>
+<area shape="rect" id="node7" title=" " alt="" coords="13,143,88,170"/>
 </map>

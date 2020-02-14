@@ -1,8 +1,7 @@
 var a00806 =
 [
-    [ "Doublette", "d0/dad/a00806.html#a74e99f3fbb7999c30a0c451e8cb1c61a", null ],
-    [ "getAttendeesToArray", "d0/dad/a00806.html#a4ba871b41349a62ce93ca4fc84a6ce51", null ],
-    [ "getDescription", "d0/dad/a00806.html#a213a0c48bf0116a1cbffac3e871dcad6", null ],
-    [ "getDescriptionByCode", "d0/dad/a00806.html#aacfda61270916d22afc1be1eb4e3270c", null ],
-    [ "toBsonDocument", "d0/dad/a00806.html#a37a9d12806d675cb12e9ae66db640f85", null ]
+    [ "CreateTournamentAction", "d0/dad/a00806.html#aaa2eaa4d76a512ab0ba821b81ea70795", null ],
+    [ "actionPerformed", "d0/dad/a00806.html#adba1eda86a64e1d033843b5912a2bb6f", null ],
+    [ "updateApplicationFrame", "d0/dad/a00806.html#a8c2c3bbe2b433798c3dd4c6d9954354a", null ],
+    [ "frmApplication", "d0/dad/a00806.html#a78d6602a40ee3ce581e1c599bf8333c2", null ]
 ];

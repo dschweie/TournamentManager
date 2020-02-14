@@ -1,7 +1,4 @@
-<map id="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard.AbstractWizardAction" name="org.dos.tournament.application.common.wizard.createtournament.CreateTournamentWizard.AbstractWizardAction">
-<area shape="rect" id="node1" title=" " alt="" coords="161,71,565,112"/>
-<area shape="rect" id="node3" href="$d8/dcb/a00706.html" title=" " alt="" coords="613,5,1017,47"/>
-<area shape="rect" id="node4" href="$dd/d85/a00702.html" title=" " alt="" coords="613,71,1017,112"/>
-<area shape="rect" id="node5" href="$d4/deb/a00710.html" title=" " alt="" coords="613,136,1017,177"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,78,113,105"/>
+<map id="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.ListenerTimerModification" name="org.dos.tournament.application.common.panels.DefaultMatchdayPanel.ListenerTimerModification">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,308,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="103,5,210,32"/>
 </map>

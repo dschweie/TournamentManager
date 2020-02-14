@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TournamentManager: org.dos.tournament.common.result.IResult Schnittstellenreferenz</title>
+<title>TournamentManager: org.dos.tournament.common.competition.AbstractEncounter Klassenreferenz</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -13,10 +13,6 @@
 <script type="text/javascript" src="../../resize.js"></script>
 <script type="text/javascript" src="../../navtreedata.js"></script>
 <script type="text/javascript" src="../../navtree.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(initResizable);
-/* @license-end */</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
@@ -30,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TournamentManager
-   &#160;<span id="projectnumber">0.0.7</span>
+   &#160;<span id="projectnumber">0.0.9-preview</span>
    </div>
   </td>
  </tr>
@@ -38,7 +34,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.8.15 -->
+<!-- Erzeugt von Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "../../search",false,'Suchen');
@@ -67,7 +63,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('d2/ddd/a00978.html','../../');});
+$(document).ready(function(){initNavTree('d2/ddd/a00978.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -88,51 +84,151 @@ $(document).ready(function(){initNavTree('d2/ddd/a00978.html','../../');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pro-methods">Geschützte Methoden</a> &#124;
+<a href="#pro-attribs">Geschützte Attribute</a> &#124;
 <a href="../../db/dbf/a00975.html">Aufstellung aller Elemente</a>  </div>
   <div class="headertitle">
-<div class="title">org.dos.tournament.common.result.IResult Schnittstellenreferenz</div>  </div>
+<div class="title">org.dos.tournament.common.competition.AbstractEncounter Klassenreferenz<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-Klassendiagramm für org.dos.tournament.common.result.IResult:</div>
+Klassendiagramm für org.dos.tournament.common.competition.AbstractEncounter:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d5/d6c/a00977.png" border="0" usemap="#org_8dos_8tournament_8common_8result_8_i_result_inherit__map" alt="Inheritance graph"/></div>
-<map name="org_8dos_8tournament_8common_8result_8_i_result_inherit__map" id="org_8dos_8tournament_8common_8result_8_i_result_inherit__map">
-<area shape="rect"  title=" " alt="" coords="144,39,372,80"/>
-<area shape="rect"  href="../../d2/d6e/a00966.html" title=" " alt="" coords="420,5,648,47"/>
-<area shape="rect"  href="../../df/dce/a00974.html" title=" " alt="" coords="420,71,648,112"/>
-<area shape="rect"  href="../../d0/d4a/a01862.html" title=" " alt="" coords="5,46,96,73"/>
-<area shape="rect"  href="../../d5/d12/a00794.html" title=" " alt="" coords="696,5,971,47"/>
-<area shape="rect"  href="../../d3/daf/a00790.html" title=" " alt="" coords="1019,5,1293,47"/>
-<area shape="rect"  href="../../de/d79/a00798.html" title=" " alt="" coords="1341,5,1632,47"/>
+<div class="center"><img src="../../d5/d6c/a00977.png" border="0" usemap="#org_8dos_8tournament_8common_8competition_8_abstract_encounter_inherit__map" alt="Inheritance graph"/></div>
+<map name="org_8dos_8tournament_8common_8competition_8_abstract_encounter_inherit__map" id="org_8dos_8tournament_8common_8competition_8_abstract_encounter_inherit__map">
+<area shape="rect" title=" " alt="" coords="45,95,308,136"/>
+<area shape="rect" href="../../df/d9c/a00958.html" title=" " alt="" coords="5,184,348,225"/>
+<area shape="rect" href="../../d4/dd0/a00994.html" title=" " alt="" coords="45,5,308,47"/>
+<area shape="rect" href="../../df/d88/a00962.html" title=" " alt="" coords="5,273,348,315"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">Legende</a>]</span></center></div>
 <div class="dynheader">
-Zusammengehörigkeiten von org.dos.tournament.common.result.IResult:</div>
+Zusammengehörigkeiten von org.dos.tournament.common.competition.AbstractEncounter:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d0/d85/a00976.png" border="0" usemap="#org_8dos_8tournament_8common_8result_8_i_result_coll__map" alt="Collaboration graph"/></div>
-<map name="org_8dos_8tournament_8common_8result_8_i_result_coll__map" id="org_8dos_8tournament_8common_8result_8_i_result_coll__map">
-<area shape="rect"  title=" " alt="" coords="5,80,233,121"/>
-<area shape="rect"  href="../../d0/d4a/a01862.html" title=" " alt="" coords="74,5,165,32"/>
+<div class="center"><img src="../../d0/d85/a00976.png" border="0" usemap="#org_8dos_8tournament_8common_8competition_8_abstract_encounter_coll__map" alt="Collaboration graph"/></div>
+<map name="org_8dos_8tournament_8common_8competition_8_abstract_encounter_coll__map" id="org_8dos_8tournament_8common_8competition_8_abstract_encounter_coll__map">
+<area shape="rect" title=" " alt="" coords="747,71,1009,112"/>
+<area shape="rect" href="../../d4/dd0/a00994.html" title=" " alt="" coords="347,5,609,47"/>
+<area shape="rect" href="../../dd/df1/a01082.html" title=" " alt="" coords="364,71,592,112"/>
+<area shape="rect" href="../../d4/dae/a01994.html" title=" " alt="" coords="5,78,96,105"/>
+<area shape="rect" title=" " alt="" coords="331,136,625,177"/>
+<area shape="rect" title=" " alt="" coords="13,143,88,170"/>
 </map>
 <center><span class="legend">[<a target="top" href="../../graph_legend.html">Legende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
-<tr class="memitem:a9a21232182bf1a602251cf2461276a65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#a9a21232182bf1a602251cf2461276a65">getScore</a> ()</td></tr>
-<tr class="separator:a9a21232182bf1a602251cf2461276a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78cf3690bfe6ad93f6cdb46ada93fa12"><td class="memItemLeft" align="right" valign="top">Document&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#a78cf3690bfe6ad93f6cdb46ada93fa12">toBsonDocument</a> ()</td></tr>
-<tr class="separator:a78cf3690bfe6ad93f6cdb46ada93fa12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5e4d6df93478128d615d67d629d280"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#a5f5e4d6df93478128d615d67d629d280">AbstractEncounter</a> ()</td></tr>
+<tr class="separator:a5f5e4d6df93478128d615d67d629d280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c6558d0d222d39a1b87fa1c5d04d32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#a08c6558d0d222d39a1b87fa1c5d04d32">addParticipant</a> (<a class="el" href="../../d4/d56/a01042.html">IParticipant</a> competitor)</td></tr>
+<tr class="separator:a08c6558d0d222d39a1b87fa1c5d04d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24581eedee460958b6b092dc3fa49db4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#a24581eedee460958b6b092dc3fa49db4">setResult</a> (<a class="el" href="../../dd/df1/a01082.html">IResult</a> <a class="el" href="../../d2/ddd/a00978.html#a126f07dcf4b4b6a5aeec0c152b633d03">result</a>)</td></tr>
+<tr class="memdesc:a24581eedee460958b6b092dc3fa49db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter-Methode für das Ergebnis der Begegnung.  <a href="../../d2/ddd/a00978.html#a24581eedee460958b6b092dc3fa49db4">Mehr ...</a><br /></td></tr>
+<tr class="separator:a24581eedee460958b6b092dc3fa49db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af028f2a9e305a91bb3b45e4a22ec6149"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#af028f2a9e305a91bb3b45e4a22ec6149">isComplete</a> ()</td></tr>
+<tr class="memdesc:af028f2a9e305a91bb3b45e4a22ec6149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Methode liefert die Information, ob die Begegnung vollständig ist.  <a href="../../d2/ddd/a00978.html#af028f2a9e305a91bb3b45e4a22ec6149">Mehr ...</a><br /></td></tr>
+<tr class="separator:af028f2a9e305a91bb3b45e4a22ec6149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a150ffbf5407ca851f28d3cfa42301cf3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#a150ffbf5407ca851f28d3cfa42301cf3">isScored</a> ()</td></tr>
+<tr class="memdesc:a150ffbf5407ca851f28d3cfa42301cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Methode liefert die Information, ob ein Ergebnis erfasst ist.  <a href="../../d2/ddd/a00978.html#a150ffbf5407ca851f28d3cfa42301cf3">Mehr ...</a><br /></td></tr>
+<tr class="separator:a150ffbf5407ca851f28d3cfa42301cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6dab942c19b5a3db31fec51ce9ad4ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d56/a01042.html">IParticipant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#ac6dab942c19b5a3db31fec51ce9ad4ec">getWinner</a> ()</td></tr>
+<tr class="separator:ac6dab942c19b5a3db31fec51ce9ad4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a012d58ba2013f86ee0358182e3b95"><td class="memItemLeft" align="right" valign="top">Document&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#a20a012d58ba2013f86ee0358182e3b95">toBsonDocument</a> ()</td></tr>
+<tr class="separator:a20a012d58ba2013f86ee0358182e3b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_a00994"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00994')"><img src="../../closed.png" alt="-"/>&#160;Öffentliche Methoden geerbt von <a class="el" href="../../d4/dd0/a00994.html">org.dos.tournament.common.competition.IEncounter</a></td></tr>
+<tr class="memitem:a6f35f8cf68bd83fe68ea895ad1fa1fb7 inherit pub_methods_a00994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df1/a01082.html">IResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd0/a00994.html#a6f35f8cf68bd83fe68ea895ad1fa1fb7">getResult</a> ()</td></tr>
+<tr class="memdesc:a6f35f8cf68bd83fe68ea895ad1fa1fb7 inherit pub_methods_a00994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Methode liefert das Ergebnis der Begegnung aus Sicht der Heimmannschaft.  <a href="../../d4/dd0/a00994.html#a6f35f8cf68bd83fe68ea895ad1fa1fb7">Mehr ...</a><br /></td></tr>
+<tr class="separator:a6f35f8cf68bd83fe68ea895ad1fa1fb7 inherit pub_methods_a00994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac25bbf28f283c0163764e509be0e3d20 inherit pub_methods_a00994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df1/a01082.html">IResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd0/a00994.html#ac25bbf28f283c0163764e509be0e3d20">getCompetitorResult</a> (<a class="el" href="../../d4/d56/a01042.html">IParticipant</a> competitor)</td></tr>
+<tr class="memdesc:ac25bbf28f283c0163764e509be0e3d20 inherit pub_methods_a00994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Methode liefert das Ergebnis aus Sicht einer Teilnehmers.  <a href="../../d4/dd0/a00994.html#ac25bbf28f283c0163764e509be0e3d20">Mehr ...</a><br /></td></tr>
+<tr class="separator:ac25bbf28f283c0163764e509be0e3d20 inherit pub_methods_a00994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a167583b2a6779f6ee6069bbe8a93bd69 inherit pub_methods_a00994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d56/a01042.html">IParticipant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd0/a00994.html#a167583b2a6779f6ee6069bbe8a93bd69">getRank</a> (int i)</td></tr>
+<tr class="separator:a167583b2a6779f6ee6069bbe8a93bd69 inherit pub_methods_a00994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Geschützte Methoden</h2></td></tr>
+<tr class="memitem:afab4e14ca6d67cbf377ba6a633931836"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; <a class="el" href="../../d4/d56/a01042.html">IParticipant</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#afab4e14ca6d67cbf377ba6a633931836">getCompetitors</a> ()</td></tr>
+<tr class="separator:afab4e14ca6d67cbf377ba6a633931836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Geschützte Attribute</h2></td></tr>
+<tr class="memitem:a04dcd85489f660b5c902369891350101"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; <a class="el" href="../../d4/d56/a01042.html">IParticipant</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#a04dcd85489f660b5c902369891350101">competitors</a></td></tr>
+<tr class="separator:a04dcd85489f660b5c902369891350101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126f07dcf4b4b6a5aeec0c152b633d03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/df1/a01082.html">IResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/ddd/a00978.html#a126f07dcf4b4b6a5aeec0c152b633d03">result</a></td></tr>
+<tr class="separator:a126f07dcf4b4b6a5aeec0c152b633d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a5f5e4d6df93478128d615d67d629d280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5e4d6df93478128d615d67d629d280">&#9670;&nbsp;</a></span>AbstractEncounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">org.dos.tournament.common.competition.AbstractEncounter.AbstractEncounter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
-<a id="a9a21232182bf1a602251cf2461276a65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a21232182bf1a602251cf2461276a65">&#9670;&nbsp;</a></span>getScore()</h2>
+<a id="a08c6558d0d222d39a1b87fa1c5d04d32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08c6558d0d222d39a1b87fa1c5d04d32">&#9670;&nbsp;</a></span>addParticipant()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int org.dos.tournament.common.result.IResult.getScore </td>
+          <td class="memname">void org.dos.tournament.common.competition.AbstractEncounter.addParticipant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d56/a01042.html">IParticipant</a>&#160;</td>
+          <td class="paramname"><em>competitor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementiert <a class="el" href="../../d4/dd0/a00994.html#a0a2c0b82582f3572b04794a4b9893911">org.dos.tournament.common.competition.IEncounter</a>.</p>
+
+</div>
+</div>
+<a id="afab4e14ca6d67cbf377ba6a633931836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab4e14ca6d67cbf377ba6a633931836">&#9670;&nbsp;</a></span>getCompetitors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;<a class="el" href="../../d4/d56/a01042.html">IParticipant</a>&gt; org.dos.tournament.common.competition.AbstractEncounter.getCompetitors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6dab942c19b5a3db31fec51ce9ad4ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6dab942c19b5a3db31fec51ce9ad4ec">&#9670;&nbsp;</a></span>getWinner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d56/a01042.html">IParticipant</a> org.dos.tournament.common.competition.AbstractEncounter.getWinner </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -140,18 +236,27 @@ Zusammengehörigkeiten von org.dos.tournament.common.result.IResult:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Implementiert in <a class="el" href="../../d5/d12/a00794.html#ad9f8c9b4639dbe5152213083a24db6f5">org.dos.tournament.branch.petanque.result.PetanqueResult</a> und <a class="el" href="../../df/dce/a00974.html#a00651219d5640da6b4b3783cf213c409">org.dos.tournament.common.result.ConstantScoreResult</a>.</p>
+<p>Implementiert <a class="el" href="../../d4/dd0/a00994.html#a16b76f8f2318165e2fdd3cffe372d11f">org.dos.tournament.common.competition.IEncounter</a>.</p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d2/ddd/a00978_ac6dab942c19b5a3db31fec51ce9ad4ec_cgraph.png" border="0" usemap="#d2/ddd/a00978_ac6dab942c19b5a3db31fec51ce9ad4ec_cgraph" alt=""/></div>
+<map name="d2/ddd/a00978_ac6dab942c19b5a3db31fec51ce9ad4ec_cgraph" id="d2/ddd/a00978_ac6dab942c19b5a3db31fec51ce9ad4ec_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,268,47"/>
+<area shape="rect" href="../../d4/dd0/a00994.html#a167583b2a6779f6ee6069bbe8a93bd69" title=" " alt="" coords="316,5,579,47"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a78cf3690bfe6ad93f6cdb46ada93fa12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78cf3690bfe6ad93f6cdb46ada93fa12">&#9670;&nbsp;</a></span>toBsonDocument()</h2>
+<a id="af028f2a9e305a91bb3b45e4a22ec6149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af028f2a9e305a91bb3b45e4a22ec6149">&#9670;&nbsp;</a></span>isComplete()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Document org.dos.tournament.common.result.IResult.toBsonDocument </td>
+          <td class="memname">boolean org.dos.tournament.common.competition.AbstractEncounter.isComplete </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -159,7 +264,126 @@ Zusammengehörigkeiten von org.dos.tournament.common.result.IResult:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Implementiert in <a class="el" href="../../d5/d12/a00794.html#a2c90ce2643a8c6de96eee441b669e484">org.dos.tournament.branch.petanque.result.PetanqueResult</a>, <a class="el" href="../../df/dce/a00974.html#a6d40b68b43f36f803475788872d20f95">org.dos.tournament.common.result.ConstantScoreResult</a> und <a class="el" href="../../d2/d6e/a00966.html#a3119752ed656c5cf612beb45cc266584">org.dos.tournament.common.result.AbstractResult</a>.</p>
+<p>Die Methode liefert die Information, ob die Begegnung vollständig ist. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Die Methode liefert den Wert <code>false</code>, wenn weitere Teilnehmer zu der Begegnung hinzugefügt werden müssen. Andernfalls wird <code>true</code> zurückgegeben. </dd></dl>
+
+<p>Implementiert <a class="el" href="../../d4/dd0/a00994.html#ace2da7f715ca9b0fa2841ed6f1a79120">org.dos.tournament.common.competition.IEncounter</a>.</p>
+
+<p>Erneute Implementation in <a class="el" href="../../df/d9c/a00958.html#a0d39d02a3a150537aeea6f791d75c764">org.dos.tournament.branch.petanque.tournament.partie.Partie</a>.</p>
+
+</div>
+</div>
+<a id="a150ffbf5407ca851f28d3cfa42301cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a150ffbf5407ca851f28d3cfa42301cf3">&#9670;&nbsp;</a></span>isScored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean org.dos.tournament.common.competition.AbstractEncounter.isScored </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Die Methode liefert die Information, ob ein Ergebnis erfasst ist. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Die Methode liefert den Wert <code>true</code>, wenn ein Ergebnis für die Begegnung vorliegt. </dd></dl>
+
+<p>Implementiert <a class="el" href="../../d4/dd0/a00994.html#a8be6844ee9175cfb5e91e50c393d215a">org.dos.tournament.common.competition.IEncounter</a>.</p>
+
+</div>
+</div>
+<a id="a24581eedee460958b6b092dc3fa49db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24581eedee460958b6b092dc3fa49db4">&#9670;&nbsp;</a></span>setResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void org.dos.tournament.common.competition.AbstractEncounter.setResult </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/df1/a01082.html">IResult</a>&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter-Methode für das Ergebnis der Begegnung. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementiert <a class="el" href="../../d4/dd0/a00994.html#ac9444f0654bfe9243ebb1ca95c9c68b6">org.dos.tournament.common.competition.IEncounter</a>.</p>
+
+</div>
+</div>
+<a id="a20a012d58ba2013f86ee0358182e3b95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a012d58ba2013f86ee0358182e3b95">&#9670;&nbsp;</a></span>toBsonDocument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Document org.dos.tournament.common.competition.AbstractEncounter.toBsonDocument </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erneute Implementation in <a class="el" href="../../df/d9c/a00958.html#a9d5350501dd2469ed80f468728659673">org.dos.tournament.branch.petanque.tournament.partie.Partie</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a04dcd85489f660b5c902369891350101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04dcd85489f660b5c902369891350101">&#9670;&nbsp;</a></span>competitors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArrayList&lt;<a class="el" href="../../d4/d56/a01042.html">IParticipant</a>&gt; org.dos.tournament.common.competition.AbstractEncounter.competitors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a126f07dcf4b4b6a5aeec0c152b633d03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126f07dcf4b4b6a5aeec0c152b633d03">&#9670;&nbsp;</a></span>result</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/df1/a01082.html">IResult</a> org.dos.tournament.common.competition.AbstractEncounter.result</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -168,10 +392,10 @@ Zusammengehörigkeiten von org.dos.tournament.common.result.IResult:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dd/db3/a00313.html">org</a></li><li class="navelem"><a class="el" href="../../d0/d39/a00314.html">dos</a></li><li class="navelem"><a class="el" href="../../d4/d6f/a00315.html">tournament</a></li><li class="navelem"><a class="el" href="../../df/d73/a00358.html">common</a></li><li class="navelem"><a class="el" href="../../d9/d9b/a00363.html">result</a></li><li class="navelem"><a class="el" href="../../d2/ddd/a00978.html">IResult</a></li>
+    <li class="navelem"><a class="el" href="../../d3/dc9/a00355.html">org</a></li><li class="navelem"><a class="el" href="../../d6/de1/a00356.html">dos</a></li><li class="navelem"><a class="el" href="../../df/df1/a00357.html">tournament</a></li><li class="navelem"><a class="el" href="../../d7/d00/a00401.html">common</a></li><li class="navelem"><a class="el" href="../../d9/d95/a00400.html">competition</a></li><li class="navelem"><a class="el" href="../../d2/ddd/a00978.html">AbstractEncounter</a></li>
     <li class="footer">Erzeugt von
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

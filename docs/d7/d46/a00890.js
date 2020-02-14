@@ -1,8 +1,6 @@
 var a00890 =
 [
-    [ "DefaultCompetitorResult", "d7/d46/a00890.html#a37e917a2cec6802a20b60cf1c7080d76", null ],
-    [ "compareTo", "d7/d46/a00890.html#a359deaef00335e3542b33d5e3cae3dd4", null ],
-    [ "getValue", "d7/d46/a00890.html#a3d7bcbd5a3601ff0ba24b5f7a1824a89", null ],
-    [ "setValue", "d7/d46/a00890.html#a4ce7f902f18828aaa7d86ec9fe218ec1", null ],
-    [ "resultValue", "d7/d46/a00890.html#a09d21bd9e24ae448232d70bf83d0701a", null ]
+    [ "init", "d7/d46/a00890.html#aa08a32e9085ee1adb47c6e83130d27e2", null ],
+    [ "isValid", "d7/d46/a00890.html#a8ab417b131fa9a97aefcdd99b38bccdf", null ],
+    [ "toString", "d7/d46/a00890.html#a10f2f6446bff6b0d616e8506c36e8d0c", null ]
 ];

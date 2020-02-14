@@ -1,0 +1,4 @@
+<map id="org.dos.tournament.application.branch.petanque.dialogs.movement.DialogSetRoundManually.PreventDuplicatedElements.itemStateChanged" name="org.dos.tournament.application.branch.petanque.dialogs.movement.DialogSetRoundManually.PreventDuplicatedElements.itemStateChanged">
+<area shape="rect" id="node1" title="Die Methode prüft den neuen Wert der ComboBox auf Eindeutigkeit." alt="" coords="5,5,447,47"/>
+<area shape="rect" id="node2" href="$d7/db9/a00426.html#a7f9b7ee4576b958597159ca9f647999c" title="Die Methode übernimmt den ausgewählten Spieler von der ComboBox in die Grid&#45;Struktur." alt="" coords="495,5,907,47"/>
+</map>

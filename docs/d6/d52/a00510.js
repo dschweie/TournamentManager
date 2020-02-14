@@ -1,5 +1,5 @@
 var a00510 =
 [
-    [ "SwingActionSetMatchdayManually", "d6/d52/a00510.html#ab85e611a436dc4689478490a88551d86", null ],
-    [ "actionPerformed", "d6/d52/a00510.html#aba3be674ec10c1edae9cb70c82f98f69", null ]
+    [ "SwingActionAddParticipantsToDatabase", "d6/d52/a00510.html#a5f2a401ef5bb947f95f69ea6eeca095b", null ],
+    [ "actionPerformed", "d6/d52/a00510.html#a5eec4995dbfade33fc2cf1bdd72a2529", null ]
 ];

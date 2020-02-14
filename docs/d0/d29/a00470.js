@@ -1,7 +1,8 @@
 var a00470 =
 [
-    [ "SwingActionDeleteLastMatchday", "d0/d29/a00470.html#a92027f49567d4fb8785969dd6ca7a626", null ],
-    [ "actionPerformed", "d0/d29/a00470.html#a5d43d9ba61950b24418b51590e29f41c", null ],
-    [ "update", "d0/d29/a00470.html#a05db14c6532ffae2ad5389ac84bf790b", null ],
-    [ "updateStatus", "d0/d29/a00470.html#a9b2e971a716bd21b89fc07db86a0451d", null ]
+    [ "TableModel", "d5/d26/a00474.html", "d5/d26/a00474" ],
+    [ "SuperMeleeResultsTable", "d0/d29/a00470.html#a1398aea6d34a2ea14817337e3d197aca", null ],
+    [ "SuperMeleeResultsTable", "d0/d29/a00470.html#aab295fa2f7ff3c52148ebb0ec84225a9", null ],
+    [ "isCellEditable", "d0/d29/a00470.html#aa841b95837297c5065214b14a1c0ee19", null ],
+    [ "setTableCellRenderer", "d0/d29/a00470.html#af1090d52412f7281c46b1d8fea4762a5", null ]
 ];

@@ -1,0 +1,10 @@
+<map id="org.dos.tournament.common.movement.utils.MatchdayGeneratorEngine.execute" name="org.dos.tournament.common.movement.utils.MatchdayGeneratorEngine.execute">
+<area shape="rect" id="node1" title=" " alt="" coords="5,201,288,243"/>
+<area shape="rect" id="node2" href="$d3/d08/a01018.html#a7c9ea0c147c410e002f8c3abce876698" title="A02: weiteren Spieltag/Runde generieren &#160;&#160;&#160;Java StmtSeq für A02 &#160;&#160;&#160;$$MN=doGenerateEnsuingMatchday" alt="" coords="336,5,651,47"/>
+<area shape="rect" id="node3" href="$d3/d08/a01018.html#a59d7d686c974d41aeb86e7e49f90e494" title="A03: Finalrunde generieren &#160;&#160;&#160;Java StmtSeq für A03 &#160;&#160;&#160;$$MN=doGenerateFinals" alt="" coords="352,71,635,112"/>
+<area shape="rect" id="node4" href="$d3/d08/a01018.html#a052562ef87f15f784f771844561fddea" title="A01: erster Spieltag/Runde generieren &#160;&#160;&#160;Java StmtSeq für A01 &#160;&#160;&#160;$$MN=doGenerateFirstMatchday" alt="" coords="347,136,640,177"/>
+<area shape="rect" id="node5" href="$d3/d08/a01018.html#a2a3ef03d3a2647be31deb02716820449" title=" " alt="" coords="352,201,635,243"/>
+<area shape="rect" id="node6" href="$d3/d08/a01018.html#aafb4dad75c5dc0b296f1a70879a5af17" title="B02: ist ein Finale definiert &#160;&#160;&#160;Java LogArg für B02 &#160;&#160;&#160;$$MN=isFinalsDefined" alt="" coords="352,267,635,308"/>
+<area shape="rect" id="node7" href="$d3/d08/a01018.html#aec0ab668395b0dbdfa0b852fb97f3ce0" title="B01: erster Spieltag/Runde im Turnier &#160;&#160;&#160;B01/01: J &#45; Ja &#160;&#160;&#160;Java LogArg für B01/01: J &#160;&#160;&#160;$$MN=isFirstM..." alt="" coords="352,332,635,373"/>
+<area shape="rect" id="node8" href="$d3/d08/a01018.html#a0704f67c4449daa4eef58e9533386c29" title="B03: wurden alle Spieltage/Runden vor der Finalrunge gespielt &#160;&#160;&#160;Java LogArg für B03 &#160;&#160;&#160;$$MN=isMatchd..." alt="" coords="352,397,635,439"/>
+</map>

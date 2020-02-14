@@ -1,12 +1,10 @@
 var a00898 =
 [
-    [ "Slot", "d5/dd3/a00902.html", "d5/dd3/a00902" ],
-    [ "AbstractTournament", "d2/d79/a00898.html#a780fc3cd3f474b092242e43cfdc82a65", null ],
-    [ "getTournamentId", "d2/d79/a00898.html#a1424bf9fb98437c1be2cf801d0845c03", null ],
-    [ "setTitle", "d2/d79/a00898.html#a99ae2f5e60a2492cfa7b0242eadc6533", null ],
-    [ "setTournamentId", "d2/d79/a00898.html#adb500b1f95da196b5263d8ef5a5bfd46", null ],
-    [ "setTournamentId", "d2/d79/a00898.html#af62c6d1cf66150cb0247dfd82486f3f0", null ],
-    [ "toBsonDocument", "d2/d79/a00898.html#af7a585bb4f36e12ead828f56a12b9698", null ],
-    [ "tid", "d2/d79/a00898.html#a6f2b2f360290efaaf76ebb9420ae64f8", null ],
-    [ "title", "d2/d79/a00898.html#a641eae1c22bb762b7806273b647a5b26", null ]
+    [ "RuleSuperMeleeNeverMeetOpponentTwice", "d2/d79/a00898.html#ac0412e30cbb70d9718b746082a7b5c92", null ],
+    [ "getRuleDescription", "d2/d79/a00898.html#acc6b78d6943f6f78e49ce4e2cbb7eadb", null ],
+    [ "initParticipantTable", "d2/d79/a00898.html#a885686fd17211f7d7e329b008ab8d922", null ],
+    [ "performCheck", "d2/d79/a00898.html#a9f5ecfc0f529aae1476bf5ae6b8af907", null ],
+    [ "performInit", "d2/d79/a00898.html#a55310dc47d6179c7d6df59a2f515a046", null ],
+    [ "performTeardown", "d2/d79/a00898.html#a39424046b2249ea932b674c621b8551d", null ],
+    [ "aiParticipantTable", "d2/d79/a00898.html#abafb0b085a12a0c694ee3b5d36db8150", null ]
 ];

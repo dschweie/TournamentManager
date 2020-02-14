@@ -1,5 +1,8 @@
 var a00770 =
 [
-    [ "OpenTournamentAction", "d0/d7e/a00770.html#a9e9af505cf6c909ce5375ec4efaaab48", null ],
-    [ "actionPerformed", "d0/d7e/a00770.html#ad0f7eeef87e02075f6ae080b6d2ce745", null ]
+    [ "WizardAction", "d0/d7e/a00770.html#a0e631112c5c27b60c2357a5de788cc46", null ],
+    [ "getAction", "d0/d7e/a00770.html#acf8a098da1f4af28b4972fda7cce30ed", null ],
+    [ "getStatus", "d0/d7e/a00770.html#a2131897da204a99b1c9a3b170b89f3a6", null ],
+    [ "strStatus", "d0/d7e/a00770.html#a1d883c23727dfbed040d3953e19a167f", null ],
+    [ "xAction", "d0/d7e/a00770.html#a2e494123aa52ddd59c362138589e6a09", null ]
 ];

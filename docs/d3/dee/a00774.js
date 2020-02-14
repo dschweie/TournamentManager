@@ -1,8 +1,8 @@
 var a00774 =
 [
-    [ "UpdateThread", "d3/dee/a00774.html#a83b1910dc733ade6734794dd98e24fb9", null ],
-    [ "run", "d3/dee/a00774.html#adce0a425aa933d79c5fd82cfc91c11a8", null ],
-    [ "setUpdateIntervall", "d3/dee/a00774.html#affea0468d73e8cc5de9fd8c444216b5b", null ],
-    [ "lSleep", "d3/dee/a00774.html#a0c9b17f56c9425509d098bf1ef2da4a6", null ],
-    [ "xInstance", "d3/dee/a00774.html#a2954301652240c7364921244af23ef19", null ]
+    [ "branch", "d3/dee/a00774.html#a8d4a680758cf729d2db96c3ce3fa7967", null ],
+    [ "depends_on", "d3/dee/a00774.html#afd70d5886910a90cd63d229973b3aa74", null ],
+    [ "pet_cat", "d3/dee/a00774.html#ad314b61e4adb224b3c548a7d398a73ea", null ],
+    [ "pet_com_mov", "d3/dee/a00774.html#ad966f56f93205fdfb3a6c557bfdf6709", null ],
+    [ "pet_sup_sel", "d3/dee/a00774.html#add4e42cb267982fccac01e8dc5b208a1", null ]
 ];

@@ -1,7 +1,6 @@
 var a00698 =
 [
-    [ "actionPerformed", "df/dbb/a00698.html#af58a9de0772c48fa2b7c1b61d7a97c34", null ],
-    [ "isPressed", "df/dbb/a00698.html#a64635a8ff60283639c120191ca061c35", null ],
-    [ "resetPressedFlag", "df/dbb/a00698.html#a6abc4542610f6720df18fdb51ea24b3c", null ],
-    [ "bPressed", "df/dbb/a00698.html#a0ed7b53a334f129c18ed020a20d35522", null ]
+    [ "doPop", "df/dbb/a00698.html#a76452fe9c4c74f6f2ab00be57feef9cc", null ],
+    [ "mousePressed", "df/dbb/a00698.html#a6d643a85054363fd2b1e9243f14e6e60", null ],
+    [ "mouseReleased", "df/dbb/a00698.html#aafd5d8f3f6d97b564506b3d6bba52660", null ]
 ];

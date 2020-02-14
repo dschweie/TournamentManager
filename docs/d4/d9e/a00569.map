@@ -1,4 +1,5 @@
-<map id="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournament" name="org.dos.tournament.application.common.dialogs.tournament.DialogChooseTournament">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,377,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="159,5,223,32"/>
+<map id="org.dos.tournament.application.branch.petanque.panels.tablemodels.ParticipantsTableModel" name="org.dos.tournament.application.branch.petanque.panels.tablemodels.ParticipantsTableModel">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,425,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="89,5,217,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="241,5,315,32"/>
 </map>

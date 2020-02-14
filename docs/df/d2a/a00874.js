@@ -1,11 +1,9 @@
 var a00874 =
 [
-    [ "SuperMeleeClubChampionship", "df/d2a/a00874.html#ad123513b2c7c402c6dea5e986762892a", null ],
-    [ "SuperMeleeClubChampionship", "df/d2a/a00874.html#aaf273eb068af2b8e3e1e661b7f26417b", null ],
-    [ "getCompetitorByCode", "df/d2a/a00874.html#a1da3d30cb58d6294d28df0b968cae95b", null ],
-    [ "importMatchdays", "df/d2a/a00874.html#a61c85225a97bc079be1f42c92f3ae139", null ],
-    [ "importParticipants", "df/d2a/a00874.html#a74926e018f9fcb218118d1aac88e5d2a", null ],
-    [ "setResult", "df/d2a/a00874.html#a1a79d79a2a583876e3e89e5a09e9261f", null ],
-    [ "updateWinnerOfTheDay", "df/d2a/a00874.html#a03b47ee48f29b85ca76ef0cf676f2664", null ],
-    [ "iWinnerOfTheDay", "df/d2a/a00874.html#aa08255ab8b5a5c699efbaf29318e73f3", null ]
+    [ "Triplette", "df/d2a/a00874.html#a13debc34316c4e0e82ea435085dd2801", null ],
+    [ "Triplette", "df/d2a/a00874.html#aa46ac1ad1074d0bcff2e7e6d315f6510", null ],
+    [ "getAttendeesToArray", "df/d2a/a00874.html#a806b04e7c2cbeb9ecf027fe03faa539d", null ],
+    [ "getDescription", "df/d2a/a00874.html#a5a9ca92f389278e17c17a548babc78b1", null ],
+    [ "getDescriptionByCode", "df/d2a/a00874.html#a97ff031256f6f2b4134f03ef111b2b89", null ],
+    [ "toBsonDocument", "df/d2a/a00874.html#a3206bd64477f41ee782a81b5ecc5820c", null ]
 ];
